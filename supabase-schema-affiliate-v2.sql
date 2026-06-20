@@ -44,3 +44,32 @@ create index if not exists idx_payouts_status on affiliate_payouts(status);
 
 -- RLS
 alter table affiliate_payouts enable row level security;
+
+-- ─── RPC: cộng commission vào affiliate sau khi đơn completed ────────────────
+create or replace function affiliate_add_commission(
+  p_affiliate_id uuid,
+  p_amount       bigint
+) returns void language plpgsql security definer as $$
+begin
+  update affiliates
+  set
+    total_commission    = total_commission    + p_amount,
+    pending_commission  = pending_commission  + p_amount,
+    total_referrals     = total_referrals     + 1
+  where id = p_affiliate_id;
+end;
+$$;
+
+-- ─── RPC: trừ pending và cộng paid khi payout được duyệt ─────────────────────
+create or replace function affiliate_process_payout(
+  p_affiliate_id uuid,
+  p_gross_amount bigint
+) returns void language plpgsql security definer as $$
+begin
+  update affiliates
+  set
+    pending_commission = pending_commission - p_gross_amount,
+    paid_commission    = paid_commission    + p_gross_amount
+  where id = p_affiliate_id;
+end;
+$$;

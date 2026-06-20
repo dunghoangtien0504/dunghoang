@@ -133,12 +133,23 @@ export async function POST(req: NextRequest) {
 
     // Hoa hồng affiliate
     if (order.affiliate_code) {
-      const pct = order.commission ?? 20
-      const commissionAmt = Math.round((received * pct) / 100)
-      await supabaseAdmin
-        .from('orders')
-        .update({ commission: commissionAmt })
-        .eq('order_code', orderCode)
+      const { data: affRow } = await supabaseAdmin
+        .from('affiliates')
+        .select('id, commission_pct')
+        .eq('ref_code', order.affiliate_code)
+        .single()
+
+      if (affRow) {
+        const commissionAmt = Math.round((received * affRow.commission_pct) / 100)
+        await supabaseAdmin
+          .from('orders')
+          .update({ commission: commissionAmt })
+          .eq('order_code', orderCode)
+        await supabaseAdmin.rpc('affiliate_add_commission', {
+          p_affiliate_id: affRow.id,
+          p_amount:       commissionAmt,
+        })
+      }
     }
 
     console.log(`[sepay] ${orderCode} (${order.course_name}) — kích hoạt cho ${email}`)

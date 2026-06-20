@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { X, Copy, Check, ExternalLink, Loader2, CheckCircle, AlertCircle } from 'lucide-react'
 import { formatVND, PRODUCTS } from '@/lib/products'
 import { trackPurchase, trackInitiateCheckout } from '@/lib/fbq'
+import { getCookie } from '@/lib/cookies'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface OrderData {
@@ -89,10 +90,11 @@ export default function CheckoutModal({ productId, open, onClose, prefillEmail =
     if (!name.trim() || !email.trim()) { setErr('Bạn điền tên và email để mình tạo đơn nha.'); return }
     setLoading(true); setErr('')
     try {
+      const refCode = getCookie('dh_ref')
       const res  = await fetch('/api/orders/create', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ productId, name: name.trim(), email: email.trim() }),
+        body:    JSON.stringify({ productId, name: name.trim(), email: email.trim(), refCode }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Lỗi tạo đơn')
