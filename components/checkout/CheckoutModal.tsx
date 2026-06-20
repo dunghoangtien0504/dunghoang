@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
 import { X, Copy, Check, ExternalLink, Loader2, CheckCircle, AlertCircle } from 'lucide-react'
-import { formatVND } from '@/lib/products'
+import { formatVND, PRODUCTS } from '@/lib/products'
+import { trackPurchase, trackInitiateCheckout } from '@/lib/fbq'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface OrderData {
@@ -40,6 +42,7 @@ function CopyBtn({ value }: { value: string }) {
 
 // ── Main Modal ────────────────────────────────────────────────────────────────
 export default function CheckoutModal({ productId, open, onClose, prefillEmail = '', prefillName = '' }: Props) {
+  const router                = useRouter()
   const [step, setStep]       = useState<Step>('form')
   const [name, setName]       = useState(prefillName)
   const [email, setEmail]     = useState(prefillEmail)
@@ -51,6 +54,16 @@ export default function CheckoutModal({ productId, open, onClose, prefillEmail =
   useEffect(() => {
     if (open) { setStep('form'); setErr(''); setOrder(null) }
   }, [open])
+
+  // Redirect + track Purchase khi thanh toán xong
+  useEffect(() => {
+    if (step !== 'paid') return
+    const product = PRODUCTS[productId]
+    if (product) {
+      trackPurchase(product.price)
+      setTimeout(() => router.push(product.successUrl), 1500)
+    }
+  }, [step, productId, router])
 
   // Poll trạng thái đơn hàng mỗi 5s
   const pollStatus = useCallback(async (code: string) => {
@@ -85,6 +98,7 @@ export default function CheckoutModal({ productId, open, onClose, prefillEmail =
       if (!res.ok) throw new Error(data.error || 'Lỗi tạo đơn')
       setOrder(data)
       setStep('qr')
+      trackInitiateCheckout(data.amount)
       pollStatus(data.orderCode)
     } catch (e: unknown) {
       setErr(e instanceof Error ? e.message : 'Có lỗi rồi, thử lại giúp mình nha.')

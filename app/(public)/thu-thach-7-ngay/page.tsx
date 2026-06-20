@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { CheckCircle, Clock, ChevronRight, Star, ArrowRight, Lock } from 'lucide-react'
+import { trackLead } from '@/lib/fbq'
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 const DAYS = [
@@ -43,6 +44,7 @@ function OptinForm({ variant = 'hero' }: { variant?: 'hero' | 'bottom' }) {
         body: JSON.stringify({ name: name.trim(), email: email.trim() }),
       })
       if (!res.ok) throw new Error()
+      trackLead({ content_name: 'thuthach_7ngay' })
       router.push('/cam-on')
     } catch {
       setError('Có lỗi gì đó rồi. Bạn thử lại giúp mình nha.')

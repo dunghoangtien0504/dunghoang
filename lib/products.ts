@@ -1,8 +1,9 @@
 export interface Product {
-  id:       string
-  name:     string
-  price:    number     // đồng
-  codePrefix: string   // prefix cho order code
+  id:         string
+  name:       string
+  price:      number
+  codePrefix: string
+  successUrl: string
 }
 
 export const PRODUCTS: Record<string, Product> = {
@@ -11,18 +12,21 @@ export const PRODUCTS: Record<string, Product> = {
     name:       'Mini — Trang Bán Hàng 1 Giờ',
     price:      368000,
     codePrefix: 'DH-MINI',
+    successUrl: '/cam-on-mini',
   },
   khoa1_686: {
     id:         'khoa1_686',
     name:       'Khóa 1 — Bản Tự Lập (25 Skill AI)',
     price:      686868,
     codePrefix: 'DH-K1',
+    successUrl: '/cam-on-khoa-1',
   },
   khoa2_2768: {
     id:         'khoa2_2768',
     name:       'Khóa 2 — Bản Có Đội Trưởng',
     price:      2768686,
     codePrefix: 'DH-K2',
+    successUrl: '/cam-on-khoa-2',
   },
 }
 

@@ -1,3 +1,10 @@
+import MetaPixel from '@/components/MetaPixel'
+
 export default function PublicLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <MetaPixel />
+      {children}
+    </>
+  )
 }
