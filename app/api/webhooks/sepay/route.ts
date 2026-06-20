@@ -2,8 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
 import { sendEmail } from '@/lib/resend'
 import { getWelcomeEmail } from '@/lib/emails/welcome'
+import { formatVND } from '@/lib/products'
 
-// Sepay gửi POST này mỗi khi có tiền vào tài khoản với mã DH-xxx
+// Sepay gửi POST này mỗi khi có tiền vào tài khoản
 export async function POST(req: NextRequest) {
   try {
     // Xác thực API Key từ Sepay
@@ -13,18 +14,16 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json()
-
-    // Sepay payload: { id, gateway, transactionDate, accountNumber, subAccount,
-    //   code, content, transferType, transferAmount, referenceCode, description }
     const { content, transferAmount, referenceCode, id: sepayId } = body
 
-    // Tìm mã đơn hàng trong nội dung chuyển khoản (format: DH-368-001)
-    const orderCodeMatch = content?.match(/DH[-\s]?\w+/i)
+    // Tìm mã đơn hàng trong nội dung chuyển khoản (DH-MINI-XXXXX | DH-K1-XXXXX | DH-K2-XXXXX)
+    const orderCodeMatch = content?.match(/DH-(?:MINI|K1|K2|K3)-[A-Z0-9]+/i)
     if (!orderCodeMatch) {
-      return NextResponse.json({ message: 'Không tìm thấy mã đơn hàng' }, { status: 200 })
+      console.log('[sepay] Không có mã DH trong nội dung:', content)
+      return NextResponse.json({ message: 'Bỏ qua — không có mã đơn hàng' }, { status: 200 })
     }
 
-    const orderCode = orderCodeMatch[0].replace(/\s/g, '-').toUpperCase()
+    const orderCode = orderCodeMatch[0].toUpperCase()
 
     // Tìm đơn hàng trong database
     const { data: order } = await supabaseAdmin
@@ -34,61 +33,96 @@ export async function POST(req: NextRequest) {
       .single()
 
     if (!order) {
-      // Đơn chưa có trong DB — tạo mới từ thông tin Sepay
-      // (trường hợp khách chuyển khoản thẳng không qua form)
+      // Đơn chưa có — ghi lại để admin xem
       await supabaseAdmin.from('orders').insert({
         order_code: orderCode,
-        amount: transferAmount,
-        status: 'completed',
-        sepay_ref: referenceCode || sepayId,
-        paid_at: new Date().toISOString(),
+        email:      'unknown@sepay.vn',
+        amount:     transferAmount,
+        status:     'pending',
+        sepay_ref:  referenceCode || sepayId,
+        paid_at:    new Date().toISOString(),
       })
-      return NextResponse.json({ message: 'Đơn hàng mới từ CK trực tiếp — đã lưu' })
+      return NextResponse.json({ message: 'Mã không khớp đơn nào — đã ghi lại để kiểm tra' })
     }
 
-    // Cập nhật trạng thái đơn hàng thành completed
+    // Đơn đã xử lý rồi
+    if (order.status === 'completed') {
+      return NextResponse.json({ message: `Đơn ${orderCode} đã xử lý trước đó` })
+    }
+
+    const email = (order.subscribers as { email: string; name: string } | null)?.email || order.email
+    const name  = (order.subscribers as { email: string; name: string } | null)?.name  || order.name || 'bạn'
+
+    // ── Kiểm tra số tiền ──────────────────────────────────────────────
+    const expected = order.amount
+    const received = transferAmount
+
+    if (received < expected) {
+      const shortfall = expected - received
+      // Gửi email báo thiếu tiền
+      await sendEmail({
+        to:      email,
+        subject: `[DungHoang.com] Đơn ${orderCode} — còn thiếu ${formatVND(shortfall)}`,
+        html: `
+          <div style="font-family:sans-serif;max-width:540px;margin:0 auto;color:#0D2B1A">
+            <p>Bạn ơi,</p>
+            <p>Mình nhận được chuyển khoản <strong>${formatVND(received)}</strong> cho đơn hàng <strong>${orderCode}</strong> rồi.</p>
+            <p>Nhưng đơn của bạn là <strong>${order.course_name}</strong> — ${formatVND(expected)}.</p>
+            <p>Còn thiếu <strong style="color:#C0390E">${formatVND(shortfall)}</strong> nữa bạn nhé.</p>
+            <p>Bạn chuyển thêm đúng số tiền còn thiếu, với cùng nội dung chuyển khoản <strong>${orderCode}</strong> là mình kích hoạt ngay.</p>
+            <p>Hoặc liên hệ mình qua Telegram <a href="https://t.me/kenthoang">@kenthoang</a> để được hỗ trợ nhanh hơn nhé.</p>
+            <p>Cảm ơn bạn,<br/>Dũng Hoàng</p>
+          </div>
+        `,
+      })
+
+      // Ghi lại số tiền đã nhận để tracking
+      await supabaseAdmin
+        .from('orders')
+        .update({ sepay_ref: referenceCode || sepayId })
+        .eq('order_code', orderCode)
+
+      console.log(`[sepay] ${orderCode} thiếu ${formatVND(shortfall)} — đã gửi email ${email}`)
+      return NextResponse.json({ message: `Thiếu ${formatVND(shortfall)} — đã gửi email nhắc` })
+    }
+
+    // ── Đủ tiền → kích hoạt ──────────────────────────────────────────
     await supabaseAdmin
       .from('orders')
-      .update({ status: 'completed', paid_at: new Date().toISOString(), sepay_ref: referenceCode })
+      .update({ status: 'completed', paid_at: new Date().toISOString(), sepay_ref: referenceCode || sepayId })
       .eq('order_code', orderCode)
 
-    // Lấy thông tin subscriber
-    const sub = order.subscribers as { email: string; name: string } | null
-    const email = sub?.email || order.email
-    const name  = sub?.name  || order.name || 'bạn'
-
     if (email) {
-      // 1. Tạo hoặc lấy Supabase Auth user cho học viên
+      // Tạo hoặc lấy Supabase Auth user
       const { data: existingUsers } = await supabaseAdmin.auth.admin.listUsers()
       let userId = existingUsers?.users.find(u => u.email === email)?.id
 
       if (!userId) {
         const { data: newUser } = await supabaseAdmin.auth.admin.createUser({
           email,
-          email_confirm: true, // không cần verify email — đã mua rồi
+          email_confirm: true,
           user_metadata: { name },
         })
         userId = newUser?.user?.id
       }
 
-      // 2. Ghi enrollment — cho phép học viên vào khu học
+      // Ghi enrollment
       if (userId && order.course_id) {
         await supabaseAdmin.from('enrollments').upsert({
-          user_id: userId,
-          course_id: order.course_id,
+          user_id:     userId,
+          course_id:   order.course_id,
           enrolled_at: new Date().toISOString(),
         }, { onConflict: 'user_id,course_id' })
       }
 
-      // 3. Gửi email welcome + link magic login vào khu học
+      // Gửi email welcome
       const welcome = getWelcomeEmail(name, order.course_id, order.course_name)
       await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
 
-      // 4. Tag subscriber "đã mua" + dừng chuỗi challenge
-      if (sub && order.subscriber_id) {
+      // Tag subscriber "đã mua" + dừng chuỗi challenge
+      if (order.subscriber_id) {
         const tag = `da_mua_${order.course_id}`
         await supabaseAdmin.rpc('append_tag', { subscriber_id: order.subscriber_id, tag })
-
         await supabaseAdmin
           .from('email_sequences')
           .update({ status: 'paused' })
@@ -97,25 +131,19 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Tính hoa hồng affiliate nếu có
+    // Hoa hồng affiliate
     if (order.affiliate_code) {
-      const commissionAmt = Math.round((transferAmount * (order.commission || 20)) / 100)
-      await supabaseAdmin
-        .from('affiliates')
-        .update({
-          total_referrals: supabaseAdmin.rpc('increment', { x: 1 }) as unknown as number,
-          total_revenue: supabaseAdmin.rpc('increment', { x: transferAmount }) as unknown as number,
-          pending_commission: supabaseAdmin.rpc('increment', { x: commissionAmt }) as unknown as number,
-        })
-        .eq('ref_code', order.affiliate_code)
-
+      const pct = order.commission ?? 20
+      const commissionAmt = Math.round((received * pct) / 100)
       await supabaseAdmin
         .from('orders')
         .update({ commission: commissionAmt })
         .eq('order_code', orderCode)
     }
 
+    console.log(`[sepay] ${orderCode} (${order.course_name}) — kích hoạt cho ${email}`)
     return NextResponse.json({ success: true, message: `Đơn ${orderCode} đã xử lý` })
+
   } catch (err) {
     console.error('[sepay-webhook]', err)
     return NextResponse.json({ error: 'Server error' }, { status: 500 })
