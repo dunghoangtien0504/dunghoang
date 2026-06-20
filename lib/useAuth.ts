@@ -14,14 +14,14 @@ export function useAuth(redirectIfNoAuth = true) {
     supabase!.auth.getSession().then(({ data }) => {
       const u = data.session?.user ?? null
       setUser(u)
-      if (!u && redirectIfNoAuth) router.replace('/hoc-vien/login')
+      if (!u && redirectIfNoAuth) router.replace('/portal/login')
       setLoading(false)
     })
 
     const { data: sub } = supabase!.auth.onAuthStateChange((_e, session) => {
       const u = session?.user ?? null
       setUser(u)
-      if (!u && redirectIfNoAuth) router.replace('/hoc-vien/login')
+      if (!u && redirectIfNoAuth) router.replace('/portal/login')
     })
     return () => sub.subscription.unsubscribe()
   }, [router, redirectIfNoAuth])

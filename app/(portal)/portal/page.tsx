@@ -61,7 +61,7 @@ export default function DashboardPage() {
           <span className="text-sm font-bold text-[#0d2b1a] tracking-wide">DungHoang.com</span>
           <div className="flex items-center gap-4">
             <span className="text-xs text-gray-400 hidden sm:block">{user?.email}</span>
-            <button onClick={() => supabase!.auth.signOut().then(() => router.push('/hoc-vien/login'))} className="text-xs text-gray-400 hover:text-gray-600">Đăng xuất</button>
+            <button onClick={() => supabase!.auth.signOut().then(() => router.push('/portal/login'))} className="text-xs text-gray-400 hover:text-gray-600">Đăng xuất</button>
           </div>
         </div>
       </nav>
@@ -84,7 +84,7 @@ export default function DashboardPage() {
             return (
               <a
                 key={e.course_id}
-                href={`/hoc-vien/${e.course_id}`}
+                href={`/portal/${e.course_id}`}
                 className="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden"
               >
                 <div className={`h-28 bg-gradient-to-br ${color} flex items-center justify-center relative`}>

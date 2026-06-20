@@ -77,7 +77,7 @@ export default function LessonPage() {
       {/* Main content */}
       <div className="lg:col-span-2 space-y-4">
         {/* Back */}
-        <button onClick={() => router.push(`/hoc-vien/${slug}`)} className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600">
+        <button onClick={() => router.push(`/portal/${slug}`)} className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600">
           <ChevronLeft size={16} /> Danh sách bài
         </button>
 
@@ -137,7 +137,7 @@ export default function LessonPage() {
         <div className="flex items-center gap-3">
           {prevLesson ? (
             <button
-              onClick={() => router.push(`/hoc-vien/${slug}/${prevLesson.id}`)}
+              onClick={() => router.push(`/portal/${slug}/${prevLesson.id}`)}
               className="flex-1 flex items-center gap-2 bg-white border border-gray-100 rounded-xl px-4 py-3 text-sm text-gray-600 hover:border-[#1D9E75]/30 hover:text-[#1D9E75] transition-all"
             >
               <ChevronLeft size={16} />
@@ -147,7 +147,7 @@ export default function LessonPage() {
 
           {nextLesson && (
             <button
-              onClick={() => { markComplete(); router.push(`/hoc-vien/${slug}/${nextLesson.id}`) }}
+              onClick={() => { markComplete(); router.push(`/portal/${slug}/${nextLesson.id}`) }}
               className="flex-1 flex items-center justify-end gap-2 bg-[#0d2b1a] text-white rounded-xl px-4 py-3 text-sm hover:bg-[#1D9E75] transition-all"
             >
               <span className="truncate">{nextLesson.title}</span>
@@ -168,7 +168,7 @@ export default function LessonPage() {
             return (
               <button
                 key={l.id}
-                onClick={() => router.push(`/hoc-vien/${slug}/${l.id}`)}
+                onClick={() => router.push(`/portal/${slug}/${l.id}`)}
                 className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors ${
                   isActive ? 'bg-[#1D9E75]/5 border-l-2 border-[#1D9E75]' : 'hover:bg-gray-50'
                 }`}

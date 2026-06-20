@@ -1,10 +1,10 @@
 import { emailLayout } from './layout'
 
 const COURSE_INFO: Record<string, { name: string; drive_link: string; telegram_link: string }> = {
-  mini_368:   { name: 'Mini — Trang Bán Hàng 1 Giờ',       drive_link: 'https://drive.google.com/LINK_MINI',   telegram_link: 'https://t.me/DungHoangAI' },
-  khoa1_686:  { name: 'Khóa 1 — Bản Tự Lập (25 Skill AI)', drive_link: 'https://drive.google.com/LINK_KHOA1',  telegram_link: 'https://t.me/DungHoangAI' },
-  khoa2_2768: { name: 'Khóa 2 — Bản Có Đội Trưởng',        drive_link: 'https://drive.google.com/LINK_KHOA2',  telegram_link: 'https://t.me/DungHoangAI' },
-  '1kem1':    { name: '1 Kèm 1 — Dũng Cầm Tay Chỉ Việc',  drive_link: '',                                     telegram_link: 'https://t.me/DungHoangAI' },
+  mini_368:   { name: 'Mini — Trang Bán Hàng 1 Giờ',       drive_link: 'https://dunghoang.com/portal',   telegram_link: 'https://t.me/DungHoangAI' },
+  khoa1_686:  { name: 'Khóa 1 — Bản Tự Lập (25 Skill AI)', drive_link: 'https://dunghoang.com/portal',  telegram_link: 'https://t.me/DungHoangAI' },
+  khoa2_2768: { name: 'Khóa 2 — Bản Có Đội Trưởng',        drive_link: 'https://dunghoang.com/portal',  telegram_link: 'https://t.me/DungHoangAI' },
+  '1kem1':    { name: '1 Kèm 1 — Dũng Cầm Tay Chỉ Việc',  drive_link: 'https://dunghoang.com/portal',  telegram_link: 'https://t.me/DungHoangAI' },
 }
 
 export function getWelcomeEmail(name: string, courseId: string, courseName?: string): { subject: string; html: string } {

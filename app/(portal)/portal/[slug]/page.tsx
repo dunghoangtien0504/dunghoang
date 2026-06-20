@@ -116,7 +116,7 @@ export default function CoursePage() {
           return (
             <div
               key={lesson.id}
-              onClick={() => canAccess && router.push(`/hoc-vien/${slug}/${lesson.id}`)}
+              onClick={() => canAccess && router.push(`/portal/${slug}/${lesson.id}`)}
               className={`flex items-center gap-4 px-6 py-4 transition-colors ${
                 canAccess ? 'hover:bg-gray-50 cursor-pointer' : 'opacity-60 cursor-not-allowed'
               }`}

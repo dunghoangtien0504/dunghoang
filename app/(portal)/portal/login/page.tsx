@@ -16,7 +16,7 @@ export default function LoginPage() {
 
     const { error } = await supabase!.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: `${window.location.origin}/hoc-vien` }
+      options: { emailRedirectTo: `${window.location.origin}/portal` }
     })
 
     if (error) {
