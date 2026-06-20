@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Money Model — Biệt Đội AI Agent</title>
+<style>
+:root{
+  --bg:#F6F0E4;--card:#fff;--border:#e0d8c8;--text:#3A3D38;--muted:#888780;
+  --blue:#378ADD;--blue-bg:#E6F1FB;--blue-dark:#0C447C;
+  --gold:#BA7517;--gold-bg:#FAEEDA;--gold-dark:#412402;
+  --orange:#EF9F27;--orange-bg:#FBF0DC;--orange-dark:#854F0B;
+  --green:#1D9E75;--green-bg:#E1F5EE;--green-dark:#085041;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#1a1a18;--card:#252523;--border:#3a3a38;--text:#d4d2c8;--muted:#888780;
+  --blue-bg:#042C53;--blue-dark:#B5D4F4;--gold-bg:#412402;--gold-dark:#FAC775;
+  --orange-bg:#3a2a08;--orange-dark:#fac77a;--green-bg:#04342C;--green-dark:#9FE1CB;}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);padding:16px;max-width:920px;margin:0 auto;line-height:1.5}
+h1{font-size:19px;font-weight:700}
+.sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.col{border-radius:12px;padding:10px;min-height:60px}
+.col.blue{background:var(--blue-bg)}.col.gold{background:var(--gold-bg)}
+.col.orange{background:var(--orange-bg)}.col.green{background:var(--green-bg)}
+.col h2{font-size:12px;letter-spacing:.04em;margin-bottom:8px;text-align:center}
+.col.blue h2{color:var(--blue-dark)}.col.gold h2{color:var(--gold-dark)}
+.col.orange h2{color:var(--orange-dark)}.col.green h2{color:var(--green-dark)}
+.item{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:9px 10px;margin-bottom:8px}
+.item.b{border-left:3px solid var(--blue)}.item.g{border-left:3px solid var(--gold)}
+.item.o{border-left:3px solid var(--orange)}.item.gr{border-left:3px solid var(--green)}
+.item .nm{font-size:12.5px;font-weight:700;line-height:1.3;margin-bottom:3px}
+.item .pr{font-size:14px;font-weight:700}
+.item.b .pr{color:var(--blue-dark)}.item.g .pr{color:var(--gold-dark)}
+.item.o .pr{color:var(--orange-dark)}.item.gr .pr{color:var(--green-dark)}
+.item .rl{font-size:10.5px;color:var(--muted);margin-top:3px}
+.item .aff{font-size:10px;font-weight:600;margin-top:4px;display:inline-block;background:var(--bg);border-radius:10px;padding:1px 7px}
+.tag{font-size:9px;font-weight:700;border-radius:8px;padding:1px 5px;letter-spacing:.03em}
+.new{background:#FCEBEB;color:#A32D2D;font-size:9px;font-weight:700;border-radius:8px;padding:1px 5px;margin-left:4px}
+.note{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:10px;padding:12px 14px;margin-top:14px;font-size:13px}
+.note b{color:var(--gold-dark)}
+.flow{font-size:12px;color:var(--muted);text-align:center;margin:12px 0}
+@media(max-width:720px){.cols{grid-template-columns:1fr 1fr}}
+@media(max-width:430px){.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<h1>Money Model — Biệt Đội AI Agent</h1>
+<p class="sub">ASSP Agent 04/12 · 4 loại offer Hormozi · giá đã chốt 19/06/2026</p>
+
+<div class="flow">Người lạ → 🟦 Attraction → 🟨 Upsell → 🟧 Downsell (vớt) → 🟩 Continuity (thu đều)</div>
+<div class="note" style="margin:0 0 12px"><b>⭐ Tiểu Hà Mã kèm 24/7 qua Telegram trong MỌI khóa</b> (Mini, Khóa 1, Khóa 2). Chỉ gói 1-kèm-1 là Dũng làm trực tiếp (không bot). Khác biệt giữa các khóa = độ sâu hướng dẫn.</div>
+
+<div class="cols">
+  <div class="col blue">
+    <h2>🟦 ATTRACTION<br>biến người lạ thành khách</h2>
+    <div class="item b">
+      <div class="nm">Thử thách 7 ngày</div>
+      <div class="pr">0đ</div>
+      <span class="tag" style="background:var(--blue-bg);color:var(--blue-dark)">Free Goodwill</span>
+      <div class="rl">Lấy Zalo/email → lead. Quảng cáo đẩy về đây.</div>
+    </div>
+    <div class="item b">
+      <div class="nm">Mini "Trang Bán Hàng 1 Giờ"</div>
+      <div class="pr">368.000đ</div>
+      <span class="tag" style="background:var(--blue-bg);color:var(--blue-dark)">Tripwire</span>
+      <div class="rl">Người trả tiền lần đầu, gỡ tiền ads. Chỉ riêng skill landing page.</div>
+      <span class="aff">Aff 20% ~73.600đ</span>
+    </div>
+  </div>
+
+  <div class="col gold">
+    <h2>🟨 UPSELL<br>tăng giá trị sau khi mua</h2>
+    <div class="item g">
+      <div class="nm">Khóa 1 "Bản Tự Lập" (25 skill)</div>
+      <div class="pr">686.868đ</div>
+      <span class="tag" style="background:var(--gold-bg);color:var(--gold-dark)">Rollover</span>
+      <div class="rl">Trừ 368k đã trả. Lõi tầng thấp, rẻ hơn combo 997k đối thủ.</div>
+      <span class="aff">Aff 20% ~137.374đ</span>
+    </div>
+    <div class="item g">
+      <div class="nm">🫀 Khóa 2 "Bản Có Đội Trưởng"</div>
+      <div class="pr">2.768.686đ</div>
+      <span class="tag" style="background:var(--gold-bg);color:var(--gold-dark)">Classic</span>
+      <div class="rl">Xương sống lợi nhuận. 25 skill + bộ SOP từng bước + Tiểu Hà Mã kèm sát 24/7 qua Telegram.</div>
+      <span class="aff">Aff 10% ~276.869đ</span>
+    </div>
+    <div class="item g">
+      <div class="nm">Nâng cấp 1-kèm-1 (Dũng làm trực tiếp, không bot)</div>
+      <div class="pr">6.868.686đ</div>
+      <span class="tag" style="background:var(--gold-bg);color:var(--gold-dark)">Anchor</span>
+      <div class="rl">Mỏ neo ~2.5× Khóa 2 → Khóa 2 trông hời. Gói DUY NHẤT không qua Telegram.</div>
+      <span class="aff">Aff 10% ~686.869đ</span>
+    </div>
+  </div>
+
+  <div class="col orange">
+    <h2>🟧 DOWNSELL<br>biến "không" thành "có" <span class="new">NGHIÊN CỨU LẠI</span></h2>
+    <div class="item o">
+      <div class="nm">Hạ xuống Khóa 1 (vũ khí chính)</div>
+      <div class="pr">686.868đ</div>
+      <span class="tag" style="background:var(--orange-bg);color:var(--orange-dark)">Feature</span>
+      <div class="rl">Bỏ bộ SOP + kèm sát, vẫn đủ 25 skill + Hà Mã hỏi-đáp. "Lấy Bản Tự Lập trước cũng được."</div>
+    </div>
+    <div class="item o">
+      <div class="nm">Trả góp Khóa 2</div>
+      <div class="pr">2 × 1.386.868đ</div>
+      <span class="tag" style="background:var(--orange-bg);color:var(--orange-dark)">Payment Plan</span>
+      <div class="rl">Cùng giá trị, chia nhỏ. Vớt người thích nhưng ngại trả 1 lần.</div>
+    </div>
+  </div>
+
+  <div class="col green">
+    <h2>🟩 CONTINUITY<br>thu tiền đều mỗi tháng</h2>
+    <div class="item gr">
+      <div class="nm">CLB Solopreneur <span class="new" style="background:var(--orange-bg);color:var(--orange-dark)">GIAI ĐOẠN 2</span></div>
+      <div class="pr">299.000đ/tháng</div>
+      <span class="tag" style="background:var(--green-bg);color:var(--green-dark)">Continuity Bonus</span>
+      <div class="rl">Mở sau ~50 học viên. Skill mới + họp mặt + Hà Mã cập nhật.</div>
+      <span class="aff">Aff 20% tháng đầu</span>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <b>🔗 Chuỗi Rollover:</b> tiền đã trả cộng dồn lên bậc trên — Mini 368k → trừ vào Khóa 1 → trừ tiếp vào Khóa 2. Khách luôn thấy "không mất gì khi đi lên" nên bước từng nấc rất nhẹ.
+</div>
+<div class="note">
+  <b>💰 Thu hồi vốn 30 ngày:</b> Mini 368k + Khóa 1 686k gỡ tiền quảng cáo gần như ngay. Nhờ vậy mọi đồng từ Khóa 2 trở lên gần như là lời ròng — chỗ Dũng thắng đối thủ bán một món một giá.
+</div>
+
+<div style="text-align:center;font-size:11px;color:var(--muted);margin-top:14px">Được thiết kế bởi ASSP Framework · file đầy đủ: 04-money-model.md</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offer Khóa 2 — Biệt Đội AI Agent</title>
+<style>
+:root{
+  --bg:#F6F0E4;--card:#fff;--border:#e0d8c8;--text:#3A3D38;--muted:#888780;
+  --green:#1D9E75;--green-bg:#EAF3DE;--green-tx:#3B6D11;
+  --red:#E24B4A;--red-bg:#FCEBEB;--red-tx:#A32D2D;
+  --amber:#EF9F27;--amber-bg:#FAEEDA;--amber-tx:#854F0B;
+  --gold:#BA7517;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#1a1a18;--card:#252523;--border:#3a3a38;--text:#d4d2c8;--muted:#888780;
+  --green-bg:#0c2e16;--green-tx:#a7d98b;--red-bg:#3a1110;--red-tx:#f3b4b2;
+  --amber-bg:#3a2a08;--amber-tx:#fac77a;}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);padding:16px;max-width:760px;margin:0 auto;line-height:1.55}
+h1{font-size:20px;font-weight:700;line-height:1.2}
+.sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.promise{font-size:15px;font-style:italic;background:var(--green-bg);color:var(--green-tx);border-radius:12px;padding:14px 16px;margin-bottom:14px;border-left:4px solid var(--green)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.g{border-left:4px solid var(--green)}.a{border-left:4px solid var(--amber)}.r{border-left:4px solid var(--red)}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.stack{width:100%;border-collapse:collapse;font-size:13px}
+.stack td{padding:7px 4px;border-bottom:1px solid var(--border)}
+.stack td:last-child{text-align:right;font-weight:600;white-space:nowrap}
+.stack .core td:last-child{color:var(--gold)}
+.stack .tot td{font-weight:700;border-top:2px solid var(--border)}
+.price{text-align:center;margin:14px 0}
+.price .old{font-size:13px;color:var(--muted);text-decoration:line-through}
+.price .now{font-size:30px;font-weight:800;color:var(--green)}
+.price .pay{font-size:12px;color:var(--muted);margin-top:3px}
+.tag{display:inline-block;font-size:10px;font-weight:700;border-radius:8px;padding:2px 7px;margin-left:4px}
+.tag.ok{background:var(--green-bg);color:var(--green-tx)}
+.tag.make{background:var(--amber-bg);color:var(--amber-tx)}
+ul{margin:4px 0 0 17px;font-size:13px}li{margin-bottom:6px}
+.obj td{font-size:12.5px;padding:6px 4px;vertical-align:top}
+.obj .q{color:var(--red-tx);font-weight:600;width:42%}
+table.obj{width:100%;border-collapse:collapse}
+table.obj td{border-bottom:1px solid var(--border)}
+.ve{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12.5px}
+.ve div{background:var(--bg);border-radius:8px;padding:8px 10px}
+.confirm{background:var(--amber-bg);color:var(--amber-tx);border-radius:10px;padding:10px 12px;font-size:12.5px;margin-top:6px;border-left:3px solid var(--amber)}
+.btns{display:flex;gap:8px;position:sticky;bottom:0;padding:12px 0;background:linear-gradient(transparent,var(--bg) 30%)}
+.btn{flex:1;padding:12px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
+.btn.p{background:var(--green);color:#fff}.btn.gh{background:var(--card);color:var(--text);border:1px solid var(--border)}
+@media(max-width:480px){.ve{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<h1>Offer — Khóa 2 "Bản Có Đội Trưởng"</h1>
+<p class="sub">ASSP Agent 05/12 · Godfather Strategy · xương sống lợi nhuận</p>
+
+<div class="promise">“Trong 30 ngày, bạn dựng xong một hệ thống tự chạy - content tự đăng, khách tự được trả lời, đơn tự về - với đội trưởng Tiểu Hà Mã kèm bạn từng bước 24/7 trên Telegram.”</div>
+
+<div class="card a">
+  <div class="lbl">⚠️ Uy tín (chưa có học viên → không bịa số)</div>
+  <ul>
+    <li>Dũng vận hành thật bằng hệ thống này: homestay 100-120tr/tháng, Airbnb Top 1% Super Host.</li>
+    <li>Bằng chứng sống: bot Tiểu Hà Mã đang chat với khách = do hệ thống này tạo ra.</li>
+    <li>Tư thế "mình từng vấp, đi cùng bạn" - không xưng thầy.</li>
+  </ul>
+  <div class="confirm">📌 Thu 3-5 lời chứng học viên đầu tiên ngay khi có người mua → thay vào đây.</div>
+</div>
+
+<div class="card g">
+  <div class="lbl">Kiểm tra giá trị (Value Equation) — điểm yếu nhất: NIỀM TIN</div>
+  <div class="ve">
+    <div>🟢 <b>Kết quả mơ ước:</b> mạnh - "đơn về lúc ngủ"</div>
+    <div>🟠 <b>Niềm tin:</b> cần bù → bảo hành + demo bot thật</div>
+    <div>🟢 <b>Thời gian chờ:</b> ngắn - wow trong 7 ngày</div>
+    <div>🟢 <b>Công sức:</b> ít - SOP + Hà Mã kèm + template</div>
+  </div>
+</div>
+
+<div class="card g">
+  <div class="lbl">🎁 Xếp chồng giá trị (Value Stack)</div>
+  <div style="font-size:11px;color:var(--muted);margin-bottom:8px">Quy ra <b>tiền lương thật nếu tự thuê người</b> — 1 skill ≈ thay 1 nhân sự/tháng.</div>
+  <table class="stack">
+    <tr class="core"><td><b>25 skill AI (Biệt Đội)</b><br><span style="font-size:11px;color:var(--muted)">thay 5-7 nhân sự</span></td><td>~50.000.000đ/tháng</td></tr>
+    <tr class="core"><td><b>Bộ SOP dựng hệ thống 30 ngày</b><br><span style="font-size:11px;color:var(--muted)">thuê chuyên gia setup trọn gói</span></td><td>~20.000.000đ</td></tr>
+    <tr class="core"><td><b>Tiểu Hà Mã kèm 24/7 Telegram</b><br><span style="font-size:11px;color:var(--muted)">nhân viên trực 24/7 (2-3 ca)</span></td><td>~20.000.000đ/tháng</td></tr>
+    <tr><td>🎁 489 Tiêu Đề Thu Hút Khách <span class="tag ok">có sẵn</span></td><td>686.000đ</td></tr>
+    <tr><td>🎁 File Nạp Giọng BRAND_DNA <span class="tag ok">có sẵn</span></td><td>686.000đ</td></tr>
+    <tr><td>🎁 27 Yếu Tố Triệu View (tóm tắt) <span class="tag ok">có sẵn</span></td><td>686.000đ</td></tr>
+    <tr><td>🎁 Ma Trận Nội Dung <span class="tag ok">có sẵn</span></td><td>868.000đ</td></tr>
+    <tr><td>🎁 Buổi Soi Hệ Thống/tháng <span class="tag ok">có sẵn</span></td><td>686.000đ</td></tr>
+    <tr class="tot"><td>Tổng nếu tự lo (riêng tháng đầu)</td><td>~90.000.000đ+</td></tr>
+  </table>
+  <div style="margin-top:10px;font-size:13px;font-style:italic;background:var(--green-bg);color:var(--green-tx);border-radius:8px;padding:10px 12px">
+    “Thuê một bạn chỉ ngồi làm landing page thôi đã 8-10 triệu/tháng, mà tháng làm được 5-10 cái. Đây là cả đội lo 25 đầu việc, chạy cả khi mình ngủ, trả một lần chưa tới 3 triệu.”
+  </div>
+</div>
+
+<div class="price">
+  <div class="old">Tự thuê người ~90tr/tháng đầu · neo 1-kèm-1 6.868.686đ</div>
+  <div class="now">2.768.686đ</div>
+  <div class="pay">hoặc trả góp 2 × 1.386.868đ</div>
+</div>
+
+<div class="card g">
+  <div class="lbl">🛡️ Bảo hành (đè bẹp đối thủ 3 ngày)</div>
+  <div style="font-size:14px;font-weight:600">“Cam Kết Dựng Xong Trợ Lý AI Đầu Tiên Trong 14 Ngày - Không Thì Hoàn 100%”</div>
+  <ul>
+    <li>Điều kiện: làm đủ SOP 3 lớp + check-in với Hà Mã đủ mốc.</li>
+    <li>Làm đủ mà chưa ra trợ lý AI đầu tiên trong 14 ngày → hoàn 100%.</li>
+  </ul>
+  <div class="confirm">⚠️ Cần Dũng xác nhận: có sẵn tiền hoàn không? Chịu được nếu ~20% đòi hoàn tháng đầu? (tốt thì thường &lt;5%)</div>
+</div>
+
+<div class="card a">
+  <div class="lbl">Khan hiếm + Thúc giục (lý do thật)</div>
+  <ul>
+    <li><b>Khan hiếm:</b> mỗi đợt chỉ nhận <b>20 người</b> - vì Hà Mã kèm sát + Dũng soi tay từng hệ thống.</li>
+    <li><b>Thúc giục:</b> đóng đăng ký đợt này ngày [điền]; giá mở bán sớm cho 20 người đầu.</li>
+  </ul>
+</div>
+
+<div class="card r">
+  <div class="lbl">Bịt mọi lý do từ chối</div>
+  <table class="obj">
+    <tr><td class="q">"Không rành công nghệ"</td><td>SOP bấm từng nút có hình + Hà Mã kèm 24/7</td></tr>
+    <tr><td class="q">"Mua rồi để đó như mấy lần"</td><td>Bảo hành 14 ngày + có người kèm tới khi chạy</td></tr>
+    <tr><td class="q">"Thầy nào cũng hứa hay"</td><td>Bot đang phục vụ chính họ + Dũng vận hành thật</td></tr>
+    <tr><td class="q">"Mấy triệu có đáng?"</td><td>Neo thuê người 5-7tr/tháng + quà ~3.79tr</td></tr>
+  </table>
+</div>
+
+<div class="card g">
+  <div class="lbl">⭐ Tên trang bán (gợi ý)</div>
+  <div style="font-size:13.5px">“Biệt Đội AI Agent - Dựng Hệ Thống Bán Hàng Tự Chạy Cho Người Làm Một Mình Trong 30 Ngày, Có Đội Trưởng Hà Mã Kèm 24/7”</div>
+  <div style="font-size:12px;color:var(--muted);margin-top:6px">Tên gọi ngắn (ads): “Biệt Đội AI Agent Cho Người Làm Một Mình - Tự Chạy Trong 30 Ngày”.</div>
+</div>
+
+<div class="btns">
+  <button class="btn p" onclick="dl()">📥 Tải offer .md</button>
+  <button class="btn gh" onclick="cp()">📋 Copy tóm tắt</button>
+</div>
+
+<script>
+const T=`OFFER KHOA 2 "BAN CO DOI TRUONG" - tom tat
+LOI HUA: Trong 30 ngay dung xong he thong tu chay (content tu dang + tu tra khach + don tu ve), co doi truong Tieu Ha Ma kem 24/7 Telegram.
+GIA: 2.768.686d (hoac 2 x 1.386.868d). NEO BANG LUONG THAT: 25 skill ~50tr/thang (5-7 nhan su); SOP ~20tr; Ha Ma 24/7 ~20tr/thang. Tu lo thang dau ~90tr+. Neo 1-kem-1 6.868.686d.
+QUA TANG (~3.612.000d, TAT CA CO SAN): 489 Tieu De Thu Hut Khach | File Nap Giong BRAND_DNA | 27 Yeu To Trieu View (tom tat) | Ma Tran Noi Dung | Buoi Soi He Thong/thang.
+BAO HANH: "Dung xong tro ly AI dau tien trong 14 ngay - khong thi hoan 100%" (dieu kien: lam du SOP 3 lop + check-in Ha Ma).
+KHAN HIEM: moi dot 20 nguoi (Ha Ma kem sat + Dung soi tay). THUC GIUC: dong dang ky [ngay].
+DIEM YEU CAN FIX: NIEM TIN -> don luc vao bao hanh + demo bot chay that.
+TEN TRANG BAN: "Biet Doi AI Agent - Dung He Thong Ban Hang Tu Chay Cho Nguoi Lam Mot Minh Trong 30 Ngay, Co Doi Truong Ha Ma Kem 24/7".
+* File day du: 05-offer-khoa2-v1.md`;
+function dl(){const b=new Blob([T],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='offer-khoa2.md';a.click();}
+function cp(){navigator.clipboard.writeText(T).then(()=>{event.target.textContent='✓ Đã copy';setTimeout(()=>event.target.textContent='📋 Copy tóm tắt',1500);});}
+</script>
+</body>
+</html>

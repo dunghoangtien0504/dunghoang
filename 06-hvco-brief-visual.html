@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVCO Brief — Thử Thách 7 Ngày AI Viết Bài</title>
+<style>
+:root{
+  --bg:#F6F0E4;--card:#fff;--border:#e0d8c8;--text:#3A3D38;--muted:#888780;
+  --green:#1D9E75;--green-bg:#EAF3DE;--green-tx:#3B6D11;
+  --red:#E24B4A;--red-bg:#FCEBEB;--red-tx:#A32D2D;
+  --amber:#EF9F27;--amber-bg:#FAEEDA;--amber-tx:#854F0B;
+  --gold:#BA7517;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1a1a18;--card:#252523;--border:#3a3a38;--text:#d4d2c8;--muted:#888780;
+  --green-bg:#0c2e16;--green-tx:#a7d98b;--red-bg:#3a1110;--red-tx:#f3b4b2;
+  --amber-bg:#3a2a08;--amber-tx:#fac77a;
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);padding:16px;max-width:760px;margin:0 auto;line-height:1.55}
+h1{font-size:20px;font-weight:700;line-height:1.2}
+.sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.g{border-left:4px solid var(--green)}.a{border-left:4px solid var(--amber)}.r{border-left:4px solid var(--red)}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.badge{display:inline-block;font-size:11px;font-weight:700;border-radius:8px;padding:3px 8px;margin-right:4px;margin-bottom:4px}
+.badge.ok{background:var(--green-bg);color:var(--green-tx)}
+.badge.need{background:var(--amber-bg);color:var(--amber-tx)}
+.timeline{margin-top:4px}
+.day{display:grid;grid-template-columns:56px 1fr;gap:0;margin-bottom:10px;align-items:start}
+.day-num{width:48px;height:48px;border-radius:12px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;margin-top:2px}
+.day-body{background:var(--bg);border-radius:10px;padding:10px 12px;margin-left:8px}
+.day-body h3{font-size:13.5px;font-weight:700;margin-bottom:4px}
+.day-body p{font-size:12px;color:var(--muted);margin-bottom:3px}
+.day-body .result{font-size:11.5px;background:var(--green-bg);color:var(--green-tx);border-radius:6px;padding:4px 8px;display:inline-block;margin-top:4px}
+.day-body .neo{font-size:11px;font-style:italic;color:var(--gold);margin-top:4px}
+.wow{background:var(--amber);color:#fff;border-radius:6px;padding:2px 7px;font-size:10px;font-weight:700;margin-left:6px}
+ul{margin:4px 0 0 16px;font-size:13px}li{margin-bottom:5px}
+.titles table{width:100%;border-collapse:collapse;font-size:12.5px}
+.titles td{padding:6px 4px;border-bottom:1px solid var(--border);vertical-align:top}
+.titles td:first-child{width:28px;font-weight:700;color:var(--green)}
+.rec{background:var(--green-bg);color:var(--green-tx);border-radius:6px;padding:2px 7px;font-size:10px;font-weight:700;margin-left:6px}
+.bullets li{font-size:12px;color:var(--muted);margin-bottom:6px;font-style:italic}
+.flow{display:flex;gap:6px;align-items:center;font-size:12.5px;flex-wrap:wrap;margin-top:8px}
+.flow .box{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:6px 10px;white-space:nowrap}
+.flow .arrow{color:var(--green);font-weight:700}
+.checklist li{font-size:12.5px;margin-bottom:5px;list-style:none}
+.checklist li::before{margin-right:6px}
+.checklist li.ok::before{content:"✅"}
+.checklist li.no::before{content:"⏳"}
+.btns{display:flex;gap:8px;position:sticky;bottom:0;padding:12px 0;background:linear-gradient(transparent,var(--bg) 30%)}
+.btn{flex:1;padding:12px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
+.btn.p{background:var(--green);color:#fff}.btn.gh{background:var(--card);color:var(--text);border:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<h1>HVCO — Thử Thách 7 Ngày AI Viết Bài</h1>
+<p class="sub">ASSP Agent 06/12 · Lead magnet · Dẫn vào Mini 368k hoặc Khóa 1 686.868đ</p>
+
+<div class="card g">
+  <div class="lbl">Tên & Format</div>
+  <div style="font-size:15px;font-weight:700;margin-bottom:6px">"Thử Thách 7 Ngày: Dạy AI Viết Bài Đúng Giọng Bạn"</div>
+  <div style="font-size:12.5px;color:var(--muted)">Format: email hàng ngày · 1 task/ngày · 15–25 phút/ngày · Miễn phí</div>
+  <div class="flow">
+    <div class="box">Đăng ký email</div>
+    <div class="arrow">→</div>
+    <div class="box">7 ngày làm thật</div>
+    <div class="arrow">→</div>
+    <div class="box">Wow moment</div>
+    <div class="arrow">→</div>
+    <div class="box" style="background:var(--green-bg);color:var(--green-tx);font-weight:700">Mini 368k / Khóa 1 686k</div>
+  </div>
+</div>
+
+<div class="card a">
+  <div class="lbl">Wow moment được thiết kế</div>
+  <div style="font-size:13px">Avatar "Minh" từng mua combo AI rồi để đó. HVCO này cho anh ấy <b>tự tay làm được thứ gì đó trong 7 ngày</b> — không xem PDF, không nghe lý thuyết — và cảm thấy <b>"ồ, mình làm được!"</b></div>
+  <div style="font-size:12px;color:var(--muted);margin-top:6px">Wow lần 1: Ngày 1–2 — AI viết đúng giọng họ lần đầu<br>Wow lần 2: Ngày 7 — thấy Tiểu Hà Mã tự trả khách</div>
+</div>
+
+<div class="card g">
+  <div class="lbl">🗓️ 7 Ngày — Nội Dung & Kết Quả</div>
+  <div class="timeline">
+
+    <div class="day">
+      <div class="day-num">1</div>
+      <div class="day-body">
+        <h3>Nạp Giọng Bạn Vào AI <span class="wow">WOW #1</span></h3>
+        <p>Task: Điền file BRAND_DNA mẫu vào Claude/ChatGPT → test → thấy AI nói giọng bạn</p>
+        <div class="result">✅ AI lần đầu nói đúng giọng bạn · 15 phút</div>
+        <div style="font-size:11px;color:var(--green-tx);background:var(--green-bg);border-radius:6px;padding:3px 8px;margin-top:4px;display:inline-block">📸 Giao: File BRAND_DNA + 3–5 ảnh chụp màn hình có mũi tên (Canva, ~10 phút làm)</div>
+        <div class="neo">Neo giá: "Thuê người viết content 5–8tr/tháng. Bạn cài xong trong 15 phút."</div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">2</div>
+      <div class="day-body">
+        <h3>Bài Facebook Đầu Tiên Do AI Viết <span class="wow">WOW #2</span></h3>
+        <p>Task: Yêu cầu AI viết bài Facebook về sản phẩm bạn → chỉnh nhỏ → đăng luôn</p>
+        <div class="result">✅ Bài đúng giọng, đăng được ngay · 20 phút</div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">3</div>
+      <div class="day-body">
+        <h3>10 Tiêu Đề Thu Hút Trong 10 Phút</h3>
+        <p>Task: AI tạo 10 tiêu đề cho sản phẩm bạn đang bán → chọn 1–2 → đăng thử</p>
+        <div class="result">✅ Kho tiêu đề dùng cả tháng · Tặng: 489 tiêu đề mẫu</div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">4</div>
+      <div class="day-body">
+        <h3>Caption Ảnh Sản Phẩm Trong 5 Phút</h3>
+        <p>Task: Lấy 1 ảnh → mô tả ngắn → AI viết caption → đăng</p>
+        <div class="result">✅ Caption thu hút · không mất 30 phút ngồi nghĩ</div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">5</div>
+      <div class="day-body">
+        <h3>Script Video 30 Giây Cho TikTok/Reels</h3>
+        <p>Task: AI viết script hook-body-CTA cho 1 video ngắn → đọc → quay thử</p>
+        <div class="result">✅ Script sẵn, không phải nghĩ trước camera · 15 phút</div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num">6</div>
+      <div class="day-body">
+        <h3>Lịch Đăng Bài Cả Tuần Trong 30 Phút</h3>
+        <p>Task: AI lên lịch 7 bài (giáo dục + bán hàng + kết nối) cho tuần tới → duyệt → lên lịch</p>
+        <div class="result">✅ Lịch nội dung cả tuần · Tặng: Ma Trận Nội Dung</div>
+        <div class="neo">Neo giá: "Thuê người lên lịch nội dung: 3–5tr/tháng. Bạn làm xong trong 30 phút."</div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num" style="background:var(--gold)">7</div>
+      <div class="day-body" style="border:1px solid var(--amber)">
+        <h3>Gặp Tiểu Hà Mã — Đội Trưởng AI <span class="wow" style="background:var(--gold)">BRIDGE</span></h3>
+        <p>Task: Xem 1–2 ảnh chụp màn hình Telegram thật — Hà Mã đang tự trả khách lúc 2h14 sáng + 1 câu caption của Dũng giải thích</p>
+        <div class="result">✅ Thấy "cả đội AI tự chạy" — không chỉ 1 skill</div>
+        <div style="font-size:11px;color:var(--green-tx);background:var(--green-bg);border-radius:6px;padding:3px 8px;margin-top:4px;display:inline-block">📸 Chụp màn hình Telegram thật · ~2 phút · không cần quay gì</div>
+        <div class="neo">Neo giá: "Tiểu Hà Mã 24/7 ≈ 2–3 nhân viên ca kíp tốn 20tr+/tháng. Bot chạy cả khi bạn ngủ."</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="card g">
+  <div class="lbl">🎯 5 Gợi Ý Tiêu Đề (ít nhất 2 góc)</div>
+  <div class="titles">
+    <table>
+      <tr><td>1</td><td><b>"7 Ngày Dạy AI Viết Bài Đúng Giọng Bạn — Dù Bạn Chưa Biết Gì Về AI"</b><span class="rec">Khuyến nghị</span><br><span style="font-size:11px;color:var(--muted)">Góc nỗi đau · Công thức 3 (kết quả + thời gian + điều kiện khó) · Rõ nhất, dễ test ads nhất</span></td></tr>
+      <tr><td>2</td><td>"5 Điều Các Thầy Dạy AI Không Nói Khi Bạn Thấy AI Cứ Viết Sai Giọng"<br><span style="font-size:11px;color:var(--muted)">Góc nỗi đau · Công thức 4 (thứ người khác không nói)</span></td></tr>
+      <tr><td>3</td><td>"Nhìn Qua Màn Hình Của Mình: 1 Buổi Sáng AI Viết 7 Bài Facebook Thay Mình"<br><span style="font-size:11px;color:var(--muted)">Góc tò mò / nhìn trộm · Hay viral, nhiều người muốn xem</span></td></tr>
+      <tr><td>4</td><td>"Mình Đã Dùng AI Viết Bài 7 Ngày Liên Tục — Đây Là Kết Quả Thật"<br><span style="font-size:11px;color:var(--muted)">Góc chứng minh / case study · Tốt cho người hoài nghi</span></td></tr>
+      <tr><td style="border:none">5</td><td style="border:none">"Tại Sao Mình Không Còn Tự Viết Bài Nữa — Và Content Lại Đều Hơn"<br><span style="font-size:11px;color:var(--muted)">Góc phản trực giác · Tò mò cao khi thị trường đã bão hòa HVCO thông thường</span></td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="card a">
+  <div class="lbl">✨ Fascination Bullets — Trang Opt-In</div>
+  <ul class="bullets">
+    <li>"Cách dạy AI viết bài đúng giọng bạn trong 15 phút đầu tiên — không cần viết lại mỗi lần nữa..."</li>
+    <li>"1 file nhỏ gọi là BRAND_DNA — cài vào là AI biết bạn là ai, viết như bạn, nhớ giọng bạn..."</li>
+    <li>"Ngày 2 bạn sẽ có bài Facebook đầu tiên AI viết hoàn toàn — đọc xong bạn sẽ hỏi 'ủa sao nó giống mình vậy?'..."</li>
+    <li>"Ngày 6: AI lên lịch 7 bài cho cả tuần trong 30 phút — bạn chỉ cần duyệt và bấm đăng..."</li>
+    <li>"Ngày 7 bạn sẽ thấy thứ ít ai làm được: bot AI sống trực 24/7 tự trả khách thay bạn..."</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="lbl">Checklist Sẵn Sàng Deliver</div>
+  <ul class="checklist">
+    <li class="ok">File BRAND_DNA mẫu — có sẵn</li>
+    <li class="ok">Template Ma Trận Nội Dung — có sẵn trong Notion</li>
+    <li class="ok">489 Tiêu Đề — có sẵn trong Notion</li>
+    <li class="no">3–5 ảnh chụp màn hình Ngày 1 có mũi tên (Canva) — ~10 phút</li>
+    <li class="no">1–2 ảnh chụp màn hình Telegram Hà Mã trả khách thật (Ngày 7) — ~2 phút</li>
+    <li class="no">7 email thách thức viết đúng giọng Dũng → Agent 10 (Email Closer)</li>
+    <li class="no">Trang opt-in nhận email → Agent 07 (Funnel) + Landing Page skill</li>
+  </ul>
+</div>
+
+<div class="btns">
+  <button class="btn p" onclick="dl()">📥 Tải brief .md</button>
+  <button class="btn gh" onclick="cp()">📋 Copy tóm tắt</button>
+</div>
+
+<script>
+const T=`HVCO BRIEF — "Thu Thach 7 Ngay AI Viet Bai" (Tom tat)
+FORMAT: Email hang ngay · 1 task/ngay · 15-25 phut/ngay · Mien phi
+DAN VAO: Mini 368k hoac Khoa 1 686.868d
+
+7 NGAY:
+N1: Nap giong (BRAND_DNA) → AI noi giong ban - 15 phut. Neo gia: thue viet content 5-8tr/thang.
+N2: Bai Facebook dau do AI viet → dang ngay - 20 phut. WOW: "ủa sao giong minh vay?"
+N3: 10 tieu de thu hut trong 10 phut → tang 489 tieu de mau.
+N4: Caption anh san pham trong 5 phut.
+N5: Script video 30 giay TikTok/Reels - 15 phut.
+N6: Lich dang bai ca tuan trong 30 phut → tang Ma Tran Noi Dung. Neo: thue len lich 3-5tr/thang.
+N7: Demo Tieu Ha Ma tu tra khach 24/7 → bridge sang Khoa 1. Neo: Ha Ma 24/7 = 2-3 nhan vien ca kip 20tr+/thang.
+
+TEN HVCO KHUYEN NGHI: "7 Ngay Day AI Viet Bai Dung Giong Ban — Du Ban Chua Biet Gi Ve AI"
+PHUONG AN KHAC: Nhin trom (viral), Case study, Phan truc giac.
+
+CO SAN: File BRAND_DNA, Ma Tran Noi Dung, 489 Tieu De.
+CAN TAO: 2 video (Ngay 1 + Ngay 7), 7 email, trang opt-in.
+
+BUOC TIEP: Agent 07 Funnel Strategist → ve hanh trinh khach tu opt-in → mua Khoa 1.
+File day du: 06-hvco-brief-v1.md`;
+function dl(){const b=new Blob([T],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='hvco-brief-thu-thach-7-ngay.md';a.click();}
+function cp(){navigator.clipboard.writeText(T).then(()=>{event.target.textContent='✓ Đã copy';setTimeout(()=>event.target.textContent='📋 Copy tóm tắt',1500);});}
+</script>
+</body>
+</html>

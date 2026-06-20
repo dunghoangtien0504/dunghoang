@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funnel Blueprint — Biệt Đội AI Agent</title>
+<style>
+:root{
+  --bg:#F6F0E4;--card:#fff;--border:#e0d8c8;--text:#3A3D38;--muted:#888780;
+  --green:#1D9E75;--green-bg:#EAF3DE;--green-tx:#3B6D11;
+  --amber:#EF9F27;--amber-bg:#FAEEDA;--amber-tx:#854F0B;
+  --red:#E24B4A;--red-bg:#FCEBEB;--red-tx:#A32D2D;
+  --blue:#378ADD;--blue-bg:#E6F1FB;--blue-tx:#0C447C;
+  --purple:#7F77DD;--purple-bg:#EEEDFE;--purple-tx:#3C3489;
+  --gold:#BA7517;--gold-bg:#FDF3E0;--gold-tx:#7A4A00;
+  --teal:#1D9E75;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1a1a18;--card:#252523;--border:#3a3a38;--text:#d4d2c8;--muted:#888780;
+  --green-bg:#0c2e16;--green-tx:#a7d98b;
+  --amber-bg:#3a2a08;--amber-tx:#fac77a;
+  --red-bg:#3a1110;--red-tx:#f3b4b2;
+  --blue-bg:#042C53;--blue-tx:#B5D4F4;
+  --purple-bg:#26215C;--purple-tx:#CECBF6;
+  --gold-bg:#3a2800;--gold-tx:#fac77a;
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);padding:14px;max-width:760px;margin:0 auto;line-height:1.5}
+h1{font-size:18px;font-weight:700;margin-bottom:3px}
+.sub{font-size:11px;color:var(--muted);margin-bottom:14px}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:11px}
+.leg{display:flex;align-items:center;gap:4px}
+.dot{width:9px;height:9px;border-radius:2px;flex-shrink:0}
+/* FLOW */
+.flow{display:flex;flex-direction:column;align-items:center;gap:0}
+.node{width:100%;border-radius:10px;padding:9px 14px;margin:3px 0;border:1px solid transparent;position:relative}
+.node.traffic{background:var(--amber-bg);border-color:#f0d090;color:var(--amber-tx)}
+.node.optin{background:var(--blue-bg);border-color:#b8d5f5;color:var(--blue-tx)}
+.node.email{background:var(--green-bg);border-color:#c5e3b8;color:var(--green-tx)}
+.node.sales{background:var(--purple-bg);border-color:#c8c5f5;color:var(--purple-tx)}
+.node.ty{background:var(--card);border-color:var(--border);color:var(--text)}
+.node.upsell{background:var(--gold-bg);border-color:#f0d090;color:var(--gold-tx)}
+.node.onboard{background:var(--green-bg);border-color:#c5e3b8;color:var(--green-tx)}
+.node.cold{background:var(--red-bg);border-color:#f5c5c5;color:var(--red-tx)}
+.node-title{font-size:13px;font-weight:700;margin-bottom:2px}
+.node-sub{font-size:11px;opacity:.85}
+.node-rate{font-size:10px;font-weight:600;background:rgba(0,0,0,.08);display:inline-block;border-radius:4px;padding:1px 5px;margin-top:3px}
+.arrow{font-size:16px;color:var(--muted);margin:1px 0;line-height:1}
+.arrow-label{font-size:10px;color:var(--muted);text-align:center;margin-top:-3px;margin-bottom:1px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;margin:3px 0}
+.split-arrow{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+.split-arrow>div{text-align:center;font-size:16px;color:var(--muted)}
+/* TABLES */
+.section{margin-top:16px;margin-bottom:6px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:12px}
+td,th{padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top;text-align:left}
+th{font-size:10px;font-weight:700;letter-spacing:.04em;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:none}
+.pri{display:inline-block;font-size:10px;font-weight:700;border-radius:5px;padding:1px 6px}
+.pri.hot{background:var(--red-bg);color:var(--red-tx)}
+.pri.med{background:var(--amber-bg);color:var(--amber-tx)}
+.pri.lo{background:var(--green-bg);color:var(--green-tx)}
+.econ-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.econ-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.econ-label{font-size:10px;color:var(--muted);margin-bottom:3px}
+.econ-val{font-size:17px;font-weight:800;color:var(--green)}
+.econ-note{font-size:10px;color:var(--muted);margin-top:2px}
+.tag{font-size:10px;font-weight:700;border-radius:5px;padding:1px 6px;display:inline-block}
+.tag.g{background:var(--green-bg);color:var(--green-tx)}
+.tag.a{background:var(--amber-bg);color:var(--amber-tx)}
+.tag.b{background:var(--blue-bg);color:var(--blue-tx)}
+.tag.p{background:var(--purple-bg);color:var(--purple-tx)}
+.btns{display:flex;gap:8px;position:sticky;bottom:0;padding:12px 0;background:linear-gradient(transparent,var(--bg) 30%)}
+.btn{flex:1;padding:11px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
+.btn.p{background:var(--green);color:#fff}.btn.gh{background:var(--card);color:var(--text);border:1px solid var(--border)}
+@media(max-width:480px){.split,.split-arrow{grid-template-columns:1fr}.econ-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<h1>Funnel Blueprint — Biệt Đội AI Agent</h1>
+<p class="sub">ASSP 07/12 · Hybrid: Challenge + Tripwire + HVCO Nurture · Xương sống: Khóa 2 (2.768.686đ)</p>
+
+<div class="legend">
+  <div class="leg"><div class="dot" style="background:var(--amber)"></div> Traffic / Ads</div>
+  <div class="leg"><div class="dot" style="background:var(--blue)"></div> Thu thập (opt-in)</div>
+  <div class="leg"><div class="dot" style="background:var(--green)"></div> Nurture (email)</div>
+  <div class="leg"><div class="dot" style="background:var(--purple)"></div> Bán (sales page)</div>
+  <div class="leg"><div class="dot" style="background:var(--gold)"></div> Upsell</div>
+</div>
+
+<!-- FLOW -->
+<div class="flow">
+
+  <div class="node traffic">
+    <div class="node-title">📣 Facebook Ads (cold) + TikTok Organic (warm)</div>
+    <div class="node-sub">Hook: nỗi đau "mua combo về tự bấm" · tò mò "nhìn màn hình mình" · kết quả "7 ngày dạy AI viết bài"</div>
+  </div>
+  <div class="arrow">↓</div>
+
+  <div class="node optin">
+    <div class="node-title">📩 Opt-in Page — "Thử Thách 7 Ngày AI Viết Bài"</div>
+    <div class="node-sub">Đổi email lấy thử thách miễn phí · Không bán gì · Form: tên + email</div>
+    <div class="node-rate">Target: 25–35% opt-in rate</div>
+  </div>
+  <div class="arrow">↓</div>
+
+  <div class="node ty">
+    <div class="node-title">✅ Thank You #1 — Xác nhận + Soft Sell Mini</div>
+    <div class="node-sub">Check email · Giới thiệu nhẹ Mini 368k cho 3% hyper-buyer · Không ép</div>
+  </div>
+  <div class="arrow">↓</div>
+
+  <div class="node email">
+    <div class="node-title">📧 7 Email Thử Thách (Brevo Automation)</div>
+    <div class="node-sub">N1: Cài BRAND_DNA · N2: Bài FB đầu tiên · N3: 10 tiêu đề · N4: Caption ảnh · N5: Script video · N6: Lịch bài cả tuần · N7: Demo Hà Mã + invite</div>
+    <div class="node-rate">Mở email: ~35–50% · Click: ~15–25%</div>
+  </div>
+  <div class="arrow">↓</div>
+  <div class="arrow-label">Sau Ngày 7 — khách tự chọn bậc phù hợp</div>
+
+  <div class="split">
+    <div class="node sales" style="margin:0">
+      <div class="node-title">🛒 Sales Page Mini — 368k</div>
+      <div class="node-sub">Tripwire · Skill landing page · 1 giờ tự tạo trang bán · Lọc buyer thật</div>
+      <div class="node-rate">Target: 8–12% từ lead</div>
+    </div>
+    <div class="node sales" style="margin:0">
+      <div class="node-title">🛒 Sales Page Khóa 1 — 686.868đ</div>
+      <div class="node-sub">25 skill + Hà Mã hỏi-đáp · Tự xếp đội hình · Aff 20%</div>
+      <div class="node-rate">Target: 5–8% từ lead</div>
+    </div>
+  </div>
+  <div class="split-arrow">
+    <div>↓</div><div>↓</div>
+  </div>
+
+  <div class="split">
+    <div class="node upsell" style="margin:0">
+      <div class="node-title">⬆️ TY #2 + Upsell Khóa 1</div>
+      <div class="node-sub">368k đã trả → tính vào · Chỉ cần thêm 318.868đ · Trong 24h</div>
+    </div>
+    <div class="node upsell" style="margin:0">
+      <div class="node-title">⬆️ TY #3 + Upsell Khóa 2</div>
+      <div class="node-sub">686k đã trả → tính vào · Thêm 2.082.686đ · Countdown 24h</div>
+    </div>
+  </div>
+  <div class="arrow">↓ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↓</div>
+
+  <div class="node sales">
+    <div class="node-title">🛒 Sales Page Khóa 2 — 2.768.686đ (XƯƠNG SỐNG)</div>
+    <div class="node-sub">25 skill + SOP từng bước + Hà Mã kèm sát 24/7 · Scarcity 20 suất/đợt · Trả góp 2×1.386.868đ · Bảo hành 14 ngày · Aff 10%</div>
+    <div class="node-rate">Value neo: tự lo ~90tr+/tháng vs trả 1 lần 2.768.686đ</div>
+  </div>
+  <div class="arrow">↓</div>
+
+  <div class="node onboard">
+    <div class="node-title">🎉 TY #4 + Onboarding Khóa 2</div>
+    <div class="node-sub">Link khu học + Link Telegram Hà Mã · SOP Ngày 1 trong 20 phút · Sau 14 ngày: testimonial + mời affiliate</div>
+  </div>
+  <div class="arrow">↓</div>
+
+  <div class="node upsell">
+    <div class="node-title">⚓ Neo 1-kèm-1 — 6.868.686đ</div>
+    <div class="node-sub">Không quảng cáo direct · Nhắc trong email Khóa 2 (sau 30 ngày) + khu học · Application Page: Tally/Typeform miễn phí</div>
+  </div>
+
+  <div style="width:100%;margin:8px 0;border-top:1px dashed var(--border)"></div>
+
+  <div class="node cold">
+    <div class="node-title">❄️ Không mua sau 7 ngày → Follow-Up Engine</div>
+    <div class="node-sub">Email N10: hỏi cảm nhận (không bán) · N14: story Hà Mã 2h sáng · N21: xử lý objection "mua rồi để đó" + bảo hành</div>
+  </div>
+
+</div>
+
+<!-- UNIT ECONOMICS -->
+<div class="section">Unit Economics — Ước Tính Giai Đoạn 1</div>
+<div class="econ-grid">
+  <div class="econ-card">
+    <div class="econ-label">CPL (giá mỗi lead)</div>
+    <div class="econ-val">25–45k</div>
+    <div class="econ-note">Facebook Ads VN, cold traffic</div>
+  </div>
+  <div class="econ-card">
+    <div class="econ-label">Budget mục tiêu/tháng</div>
+    <div class="econ-val">5–10tr</div>
+    <div class="econ-note">Thu hồi từ Mini + Khóa 1</div>
+  </div>
+  <div class="econ-card">
+    <div class="econ-label">Leads cần để có 5 Khóa 2</div>
+    <div class="econ-val">~250</div>
+    <div class="econ-note">Tỷ lệ mua Khóa 2 từ lead ~2%</div>
+  </div>
+  <div class="econ-card">
+    <div class="econ-label">LTV trung bình 1 khách</div>
+    <div class="econ-val">~2.5–4tr</div>
+    <div class="econ-note">Cả rollover chain</div>
+  </div>
+</div>
+<p style="font-size:11px;color:var(--muted);margin-bottom:12px">⚠️ Số ước tính — validate sau khi chạy thật. Mục tiêu: Mini + Khóa 1 tự cover chi phí ads → Khóa 2 là profit.</p>
+
+<!-- BUILD ORDER -->
+<div class="section">Thứ Tự Build — Ưu Tiên</div>
+<table>
+  <tr><th>#</th><th>Trang / Thứ cần làm</th><th>Agent viết</th><th>Ưu tiên</th></tr>
+  <tr><td>1</td><td>Opt-in Page + Brevo setup</td><td>Agent 08 + Landing Page</td><td><span class="pri hot">Ngay</span></td></tr>
+  <tr><td>2</td><td>7 Email Thử Thách</td><td>Agent 10 (Email Closer)</td><td><span class="pri hot">Ngay</span></td></tr>
+  <tr><td>3</td><td>Sales Page Khóa 2</td><td>Agent 08 + Landing Page</td><td><span class="pri hot">Ngay</span></td></tr>
+  <tr><td>4</td><td>Sales Page Khóa 1</td><td>Agent 08 + Landing Page</td><td><span class="pri med">Tuần 2</span></td></tr>
+  <tr><td>5</td><td>Thank You Pages (#1, #2, #3)</td><td>Agent 08</td><td><span class="pri med">Tuần 2</span></td></tr>
+  <tr><td>6</td><td>Sales Page Mini 368k</td><td>Agent 08 + Landing Page</td><td><span class="pri med">Tuần 2</span></td></tr>
+  <tr><td>7</td><td>Facebook/TikTok Ads copy</td><td>Agent 08 (Ad Copy Machine)</td><td><span class="pri med">Tuần 2</span></td></tr>
+  <tr><td>8</td><td>Follow-up 3 email (cold leads)</td><td>Agent 11 (Follow-Up Engine)</td><td><span class="pri lo">Tuần 3</span></td></tr>
+  <tr><td>9</td><td>Application Page 1-kèm-1</td><td>Tally (miễn phí)</td><td><span class="pri lo">Sau</span></td></tr>
+</table>
+
+<!-- TECH STACK -->
+<div class="section">Tech Stack Gợi Ý</div>
+<table>
+  <tr><th>Cần làm gì</th><th>Tool</th><th>Chi phí</th></tr>
+  <tr><td>Email automation</td><td>Brevo</td><td>Miễn phí đến 300 email/ngày</td></tr>
+  <tr><td>Thanh toán VN</td><td>PayOS (VNPay)</td><td>1.3%/giao dịch</td></tr>
+  <tr><td>Khu học</td><td>Teachable hoặc HTML+Gumroad</td><td>Miễn phí đến 10 SP</td></tr>
+  <tr><td>Landing page</td><td>HTML tự build (Landing Page skill)</td><td>Miễn phí</td></tr>
+  <tr><td>Application form</td><td>Tally hoặc Typeform</td><td>Miễn phí</td></tr>
+  <tr><td>Affiliate tracking</td><td>Google Sheet + UTM (giai đoạn 1)</td><td>Miễn phí</td></tr>
+  <tr><td>Telegram bot</td><td>GoClaw (Tiểu Hà Mã — đã có)</td><td>Có sẵn</td></tr>
+</table>
+
+<div class="btns">
+  <button class="btn p" onclick="dl()">📥 Tải blueprint .md</button>
+  <button class="btn gh" onclick="cp()">📋 Copy tóm tắt</button>
+</div>
+
+<script>
+const T=`FUNNEL BLUEPRINT — BIET DOI AI AGENT (Tom tat)
+LOAI FUNNEL: Hybrid = Challenge (7 ngay) + Tripwire (368k) + HVCO Nurture Email
+XUONG SONG: Khoa 2 — 2.768.686d
+
+FLOW:
+FB Ads / TikTok → Opt-in Page (doi email) → TY #1 (soft sell Mini)
+→ 7 Email Thu Thach (N1: BRAND_DNA, N2: Bai FB, N3: Tieu de, N4: Caption, N5: Script, N6: Lich bai, N7: Demo Ha Ma + invite)
+→ SPLIT: Mua Mini 368k (TY+Upsell K1) HOAC Mua Khoa 1 686.868d (TY+Upsell K2)
+→ Sales Page Khoa 2 2.768.686d (20 suat/dot, bao hanh 14 ngay, tra gop 2x)
+→ TY + Onboarding SOP + Telegram Ha Ma
+→ Neo 1-kem-1 6.868.686d (Application Page, khong ads direct)
+→ Cold leads (chua mua): 3 email FU (N10/14/21)
+
+TECH: Brevo (email mien phi) + PayOS (TT VN) + Teachable/HTML (khu hoc) + Tally (form)
+AFFILIATE: Link UTM rieng, GSheet theo doi, tra sau 14 ngay bao hanh
+
+THU TU BUILD: 1) Opt-in + Brevo  2) 7 email thu thach  3) Sales Khoa 2  4) Sales Khoa 1
+5) TY Pages  6) Sales Mini  7) Ads copy  8) Follow-up emails  9) Application Page
+
+File day du: 07-funnel-blueprint-v1.md`;
+function dl(){const b=new Blob([T],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='funnel-blueprint.md';a.click();}
+function cp(){navigator.clipboard.writeText(T).then(()=>{event.target.textContent='✓ Đã copy';setTimeout(()=>event.target.textContent='📋 Copy tóm tắt',1500);});}
+</script>
+</body>
+</html>

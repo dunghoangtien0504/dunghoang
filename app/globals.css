@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables ──────────────────────────────────────────── */
+:root {
+  --brand-dark:   #0D2B1A;
+  --brand-bg:     #F6F0E4;
+  --brand-accent: #C0390E;
+  --brand-olive:  #88860B;
+  --brand-border: #3D6B4A;
+  --sidebar-width: 224px;
+  --sidebar-collapsed: 60px;
+  --header-height: 52px;
+}
+
+/* ─── Base reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { color-scheme: light; }
+
+body {
+  background-color: #F6F0E4;
+  color: #0D2B1A;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #EDE8DC; }
+::-webkit-scrollbar-thumb { background: #C4BCA8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3D6B4A; }
+
+/* ─── Component Classes ──────────────────────────────────────── */
+@layer components {
+
+  /* Cards */
+  .card {
+    @apply bg-surface border border-border rounded-xl p-4 shadow-card;
+  }
+  .card-hover {
+    @apply hover:shadow-card-md hover:border-brand-border/30 transition-all duration-200;
+  }
+  .stat-card {
+    @apply bg-surface border border-border rounded-xl p-5 flex flex-col gap-3 shadow-card;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-brand-accent text-white font-semibold px-4 py-2 rounded-lg
+           hover:bg-primary-dark active:scale-[0.98]
+           shadow-btn hover:shadow-btn-hover
+           transition-all duration-150 cursor-pointer text-sm
+           inline-flex items-center gap-2 select-none;
+  }
+  .btn-secondary {
+    @apply bg-surface border border-border text-text-primary px-4 py-2 rounded-lg
+           hover:bg-surface-2 hover:border-brand-border/40
+           transition-all duration-150 cursor-pointer text-sm
+           inline-flex items-center gap-2 shadow-card;
+  }
+  .btn-ghost {
+    @apply text-text-secondary px-3 py-1.5 rounded-lg
+           hover:bg-surface-3 hover:text-text-primary
+           transition-all duration-150 cursor-pointer text-sm
+           inline-flex items-center gap-1.5;
+  }
+  .btn-dark {
+    @apply bg-brand-dark text-text-on-dark font-semibold px-4 py-2 rounded-lg
+           hover:bg-sidebar-hover
+           transition-colors duration-150 cursor-pointer text-sm
+           inline-flex items-center gap-2;
+  }
+
+  /* Sidebar items */
+  .sidebar-item {
+    @apply flex items-center gap-2.5 px-3 py-2 rounded-lg
+           text-text-on-dark-2 text-sm
+           hover:bg-sidebar-hover hover:text-text-on-dark
+           transition-all duration-150 cursor-pointer;
+  }
+  .sidebar-item-active {
+    @apply bg-sidebar-active text-text-on-dark font-medium;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-success {
+    @apply badge bg-success-light text-success border border-success/20;
+  }
+  .badge-danger {
+    @apply badge bg-danger-light text-danger border border-danger/20;
+  }
+  .badge-warning {
+    @apply badge bg-warning-light text-brand-olive border border-brand-olive/20;
+  }
+  .badge-blue {
+    @apply badge bg-info-light text-info border border-info/20;
+  }
+  .badge-gray {
+    @apply badge bg-surface-3 text-text-muted border border-border;
+  }
+  .badge-olive {
+    @apply badge bg-warning-light text-brand-olive border border-brand-olive/30;
+  }
+  .badge-dark {
+    @apply badge bg-brand-dark text-text-on-dark;
+  }
+
+  /* Form inputs */
+  .input-field {
+    @apply bg-surface border border-border rounded-lg px-3 py-2
+           text-text-primary text-sm placeholder:text-text-muted
+           focus:outline-none focus:border-brand-border focus:ring-2 focus:ring-brand-border/10
+           transition-all duration-150 w-full shadow-inner;
+  }
+
+  /* Table */
+  .table-header {
+    @apply text-text-muted text-xs font-semibold uppercase tracking-wider
+           px-4 py-3 text-left bg-surface-2 border-b border-border;
+  }
+  .table-cell {
+    @apply px-4 py-3 text-text-secondary text-sm border-b border-border/50;
+  }
+  .table-row {
+    @apply hover:bg-surface-2 transition-colors duration-100;
+  }
+
+  /* Typography helpers */
+  .section-title   { @apply text-text-primary font-semibold text-base; }
+  .section-subtitle { @apply text-text-muted text-xs; }
+  .metric-value    { @apply text-2xl font-bold text-text-primary font-mono; }
+  .metric-label    { @apply text-xs text-text-muted; }
+
+  /* Progress */
+  .progress-bar  { @apply h-1.5 rounded-full bg-surface-3 overflow-hidden; }
+  .progress-fill { @apply h-full rounded-full transition-all duration-500; }
+
+  /* Page wrapper */
+  .page-wrapper  { @apply p-5 space-y-5 animate-fade-in; }
+  .page-header   { @apply flex items-center justify-between; }
+  .page-title    { @apply text-text-primary font-bold text-xl; }
+  .page-subtitle { @apply text-text-muted text-xs mt-0.5; }
+
+  /* Divider */
+  .divider { @apply border-t border-border my-3; }
+
+  /* Tag / chip */
+  .chip {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs
+           bg-surface-3 text-text-secondary border border-border font-medium;
+  }
+}
+
+/* ─── Shimmer animation (Skeleton) ──────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Recharts overrides (light theme) ───────────────────────── */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #DDD8CB !important;
+}
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #FFFFFF !important;
+  border: 1px solid #DDD8CB !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 12px rgba(13,43,26,0.10) !important;
+}

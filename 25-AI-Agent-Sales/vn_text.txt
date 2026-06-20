@@ -1,0 +1,1162 @@
+,{onSubmit:Y,className:
+
+?parseFloat(a)/100*(s.max-s.min):a}function ar(a,s,l){const r=l??a;rg(a.x,og(s.x,r.x),s.scaleX,s.scale,s.originX),rg(a.y,og(s.y,r.y),s.scaleY,s.scale,s.originY)}function h0(a,s){return o0(rj(a.getBoundingClientRect(),s))}function cj(a,s,l){const r=h0(a,l),{scroll:h}=s;return h&&(We(r.x,h.offset.x),We(r.y,h.offset.y)),r}const uj={x:
+
+giải phóng hoàn toàn sức lao động
+
+Bạn định trả bao nhiêu lương cho bộ máy cồng kềnh này mỗi tháng?
+
+Bạn thong thả <mark class=
+
+. Nếu sau 5 phút vẫn chưa nhận, nhắn tin
+
+TẠI SAO CHÚNG LẠI THÔNG MINH ĐẾN THẾ?
+
+12 SIÊU ĐẶC VỤ AI Agent
+
+Gánh nặng chi phí vận hành khi hiệu suất không tỷ lệ thuận với chi phí.
+
+LỘ TRÌNH 3 NGÀY ĐỂ HỆ THỐNG VẬN HÀNH
+
+Chuẩn hóa hơn 1.500 từ cho kịch bản <span class=
+
+chủ doanh nghiệp, Founder, chuyên gia expert, solo entrepreneur và Freelancer thực chiến
+
+LỰA CHỌN CUỐI CÙNG: ĐẦU TƯ CHO TƯƠNG LAI HAY GIỮ LẠI SỰ TRÌ HOÃN?
+
+Viết Email Chăm Sóc
+
+Tôi là Founder của
+
+>Sử dụng không giới hạn:</span> Vận hành toàn bộ Hệ thống AI Agent thực chiến bán hàng 24/7 mà không tốn thêm bất kỳ chi phí gia hạn nào.
+
+Nhưng để có được vị thế ngày hôm nay, tôi đã phải trả giá bằng
+
+Hình founder vẽ sơ đồ trên giấy / ngồi trước laptop
+
+>món hời quá lớn</span> và sẽ thật tiếc nuối nếu bỏ qua.
+
+>vòng lặp lợi nhuận</span> và các gói sản phẩm theo mô hình mới, giúp <span class=
+
+>tử huyệt tâm lý</span>: Tò mò, Tham vọng, Bằng chứng... đè bẹp hiệu suất của cả một đội ngũ viết lách truyền thống.
+
+Tôi từ chối cung cấp công cụ chốt đơn mạnh mẽ này cho những
+
+Tạo lại đơn hàng
+
+, khác biệt hoàn toàn với những công cụ AI thông thường?
+
+, thì đây là giải pháp dành cho bạn.
+
+sở hữu vĩnh viễn
+
+rơi thẳng vào tay đối thủ ngay trong đêm nay.
+
+>Ưu tiên hỗ trợ kỹ thuật:</span> Được đội ngũ hỗ trợ nhanh chóng qua Email/Fanpage khi có bất kỳ thắc mắc nào.
+
+Bạn muốn scale nhưng e ngại thuê nhân sự vì <strong>khó quản lý và chi phí cao</strong>?
+
+)eo(t)?(i=pa(t,i),e.tag=1,e=zd(null,e,t,i,n)):(e.tag=0,e=Ko(null,e,t,i,n));else{if(t!=null){var o=t.$$typeof;if(o===Y){e.tag=11,e=kd(null,e,t,i,n);break t}else if(o===Q){e.tag=14,e=Cd(null,e,t,i,n);break t}}throw e=vt(t)||t,Error(r(306,e,
+
+Tôi, Dương Trọng Nghĩa, hoàn toàn thấu hiểu cái cảm giác
+
+;const h=a.x.translate/s.x,d=a.y.translate/s.y,f=(l==null?void 0:l.z)||0;if((h||d||f)&&(r=`translate3d(${h}px, ${d}px, ${f}px) `),(s.x!==1||s.y!==1)&&(r+=`scale(${1/s.x}, ${1/s.y}) `),l){const{transformPerspective:g,rotate:b,rotateX:v,rotateY:N,skewX:w,skewY:T}=l;g&&(r=`perspective(${g}px) ${r}`),b&&(r+=`rotate(${b}deg) `),v&&(r+=`rotateX(${v}deg) `),N&&(r+=`rotateY(${N}deg) `),w&&(r+=`skewX(${w}deg) `),T&&(r+=`skewY(${T}deg) `)}const p=a.x.scale*s.x,x=a.y.scale*s.y;return(p!==1||x!==1)&&(r+=`scale(${p}, ${x})`),r||
+
+cho chính cái cơ ngơi của mình.
+
+Để bạn không có kỳ vọng sai, tôi muốn nói thẳng:
+
+Mở Khoá Trọn Bộ 12 Đặc Vụ AI Agent Ngay!
+
+Số điện thoại (Telegram/Zalo) *
+
+chứa cấu trúc tư duy chuyên sâu, bạn chỉ cần upload vào ChatGPT/Claude của mình, gõ yêu cầu → AI sẽ làm việc theo đúng quy trình của một chuyên gia marketing đã có
+
+Khách vào bài quảng cáo xong đi đâu? Con Agent này sẽ bày sẵn cho bạn cấu trúc của một <span class=
+
+?t.ownerDocument.body:t,n.stateNode),oi(t)):Ym(Vt,n.stateNode));break;case 4:i=Vt,o=de,Vt=n.stateNode.containerInfo,de=!0,pn(t,e,n),Vt=i,de=o;break;case 0:case 11:case 14:case 15:_n(2,n,e),Qt||_n(4,n,e),pn(t,e,n);break;case 1:Qt||(Ie(n,e),i=n.stateNode,typeof i.componentWillUnmount==
+
+>Video hướng dẫn:</span> Tặng kèm video hướng dẫn sử dụng Agent để bạn làm chủ hệ thống nhanh nhất.
+
+, và sẵn sàng đón doanh thu về.
+
+);function qe(t,e){df.set(t,e),ea(e,[t])}var Ys=typeof reportError==
+
+Hãy thực tế một chút: Khoản đầu tư
+
+>mở hệ thống AI Agent lên</mark>.
+
+, không ai đo lường chi phí nhặt nhạnh.
+
+Bạn nhập offer + tệp khách. Agent vạch ra trong 15 phút: Sơ đồ funnel A-Z (từ traffic lạnh đến khách trung thành) · Mồi nhử nào phù hợp · Trang đích viết theo cấu trúc nào · Upsell, downsell, cross-sell ở đâu · Email nurture mấy bước.
+
+Tâm lý hành vi khách hàng
+
+Bạn mò mẫm tự làm phễu, tự làm website, tự nhắn tin CSKH.
+
+Có lẽ bạn đã từng thử dùng
+
+HÃY TƯỞNG TƯỢNG SÁNG NGÀY MAI KHI BẠN THỨC DẬY...
+
+)};function q(){}q.prototype=k.prototype;function G(S,L,F){this.props=S,this.context=L,this.refs=H,this.updater=F||T}var Y=G.prototype=new q;Y.constructor=G,z(Y,k.prototype),Y.isPureReactComponent=!0;var X=Array.isArray;function nt(){}var Q={H:null,A:null,T:null,S:null},W=Object.prototype.hasOwnProperty;function lt(S,L,F){var I=F.ref;return{$$typeof:a,type:S,key:L,ref:I!==void 0?I:null,props:F}}function et(S,L){return lt(S.type,L,S.props)}function dt(S){return typeof S==
+
+Buổi sáng cùng đội quân AI
+
+Nhập email của bạn
+
+3 template theo loại business: vật lý / dịch vụ / sản phẩm số.
+
+hệ thống vận hành thực chiến
+
+Bạn nhập offer + thông tin khách. Agent viết kịch bản VSL chuẩn <mark class=
+
+. Tại sao? Vì chính tôi đã từng bị nhấn chìm trong cái
+
+Kể cả với báo giá rẻ nhất của một Agency, bạn cũng đang chi
+
+Tiết lộ lời giải từ The KP3:
+
+Sẽ mất bao lâu để tôi thấy được những kết quả số liệu đầu tiên sau khi mua?
+
+12 Agent tinh nhuệ nhất, không thiếu bất kỳ khâu nào từ nghiên cứu đến chốt đơn.
+
+Bạn chỉ cần ném cho các Agent 1 cái ý tưởng. Dưới 10 phút,
+
+QR hết hạn sau:
+
+Nỗi sợ - Tham vọng - Sự từ chối
+
+DÀNH CHO: CHỦ DOANH NGHIỆP, FREELANCER, CHUYÊN GIA EXPERT VÀ SOLO ENTREPRENEUR
+
+Khởi Nghiệp Kiến Quốc
+
+HỆ THỐNG TỰ VẬN HÀNH
+
+,-0,0),o);break t}hm(i,n,ge,jl,rc,e,Ee,xa,ti,On,u,null,-0,0)}}break}while(!0);Je(t)}function hm(t,e,n,i,o,u,m,y,j,M,V,U,D,O){if(t.timeoutHandle=-1,U=e.subtreeFlags,U&8192||(U&16785408)===16785408){U={stylesheets:null,count:0,imgCount:0,imgBytes:0,suspenseyImages:[],waitingForImages:!0,waitingForViewTransition:!1,unsuspend:an},am(e,u,U);var J=(u&62914560)===u?vl-be():(u&4194048)===u?rm-be():0;if(J=nv(U,J),J!==null){bn=u,t.cancelPendingCommit=J(bm.bind(null,t,e,u,n,i,o,m,y,j,V,U,null,D,O)),Bn(t,u,m,!M);return}}bm(t,e,u,n,i,o,m,y,j)}function yb(t){for(var e=t;;){var n=e.tag;if((n===0||n===11||n===15)&&e.flags&16384&&(n=e.updateQueue,n!==null&&(n=n.stores,n!==null)))for(var i=0;i<n.length;i++){var o=n[i],u=o.getSnapshot;o=o.value;try{if(!je(u(),o))return!1}catch{return!1}}if(n=e.child,e.subtreeFlags&16384&&n!==null)n.return=e,e=n;else{if(e===t)break;for(;e.sibling===null;){if(e.return===null||e.return===t)return!0;e=e.return}e.sibling.return=e.return,e=e.sibling}}return!0}function Bn(t,e,n,i){e&=~lc,e&=~xa,t.suspendedLanes|=e,t.pingedLanes&=~e,i&&(t.warmLanes|=e),i=t.expirationTimes;for(var o=e;0<o;){var u=31-Ne(o),m=1<<u;i[u]=-1,o&=~m}n!==0&&vh(t,n,e)}function wl(){return(St&6)===0?(es(0),!1):!0}function hc(){if(pt!==null){if(At===0)var t=pt.return;else t=pt,on=oa=null,Eo(t),Xa=null,Hi=0,t=pt;for(;t!==null;)qd(t.alternate,t),t=t.return;pt=null}}function ni(t,e){var n=t.timeoutHandle;n!==-1&&(t.timeoutHandle=-1,Bb(n)),n=t.cancelPendingCommit,n!==null&&(t.cancelPendingCommit=null,n()),bn=0,hc(),Dt=t,pt=n=ln(t.current,null),xt=e,At=0,Ae=null,On=!1,Wa=vi(t,e),sc=!1,ti=Ee=lc=xa=zn=Bt=0,ge=Wi=null,rc=!1,(e&8)!==0&&(e|=e&32);var i=t.entangledLanes;if(i!==0)for(t=t.entanglements,i&=e;0<i;){var o=31-Ne(i),u=1<<o;e|=t[o],i&=~u}return yn=e,Ks(),n}function fm(t,e){ct=null,R.H=Fi,e===Fa||e===$s?(e=kf(),At=3):e===po?(e=kf(),At=4):At=e===Yo?8:e!==null&&typeof e==
+
+. Hệ thống Agent của chúng tôi không viết nội dung dựa trên cảm hứng, mà dựa trên
+
+vòng lặp tồi tệ
+
+Địa chỉ Email *
+
+Hệ thống là Định mệnh:
+
+Bạn chọn sở hữu lợi thế, hay đứng nhìn thị trường bị chiếm lĩnh?
+
+Tiền thanh toán chưa đến 1 triệu VNĐ thật sao? Chạy một thời gian rồi lại ép tôi phải nạp tiền mua thêm Lượt (Credit) đúng không?
+
+mệnh lệnh duy nhất
+
+nhưng kết quả nhận về chỉ là những
+
+Đang chờ chuyển khoản...
+
+Phát triển một doanh nghiệp là một cuộc chiến đầy cam go. Vì vậy, chúng tôi ở đây làm cho mọi thứ trở nên dễ dàng hơn, dễ đoán hơn, ít căng thẳng hơn và thú vị hơn.
+
+Nhưng 978k này sẽ mua lại cho bạn
+
+(huấn luyện) ra một hệ thống gồm
+
+trực tiếp nhúng tay vào sự khốc liệt nhất của thị trường
+
+Bí mật nằm ở đây: Tôi đã thay thế những quy trình cũ kỹ bằng các
+
+, những người đang cần một giải pháp công nghệ mạnh mẽ để tối ưu lợi nhuận và giải phóng sức lao động.
+
+Và tốc độ làm việc của các Agent...
+
+CHẠY THỰC CHIẾN
+
+kịch bản video bán hàng
+
+công nghệ phải đẻ ra tiền
+
+Khơi gợi nỗi đau ➔ Thấu hiểu vấn đề ➔ Đưa ra giải pháp ➔ Chứng minh hiệu quả ➔ Thúc đẩy hành động.
+
+KHÔNG PHẢI là phần mềm đòi hỏi kiến thức code hay prompt engineering.
+
+Kinh doanh sản phẩm kém chất lượng hoặc vi phạm pháp luật:
+
+TRƯỚC KHI ĐỌC TIẾP, HÃY HIỂU RÕ
+
+trực Messenger fanpage 24/7
+
+Đừng để doanh nghiệp của mình bị tụt lại phía sau trong khi đối thủ đã bắt đầu sử dụng AI để
+
+>biên độ lợi nhuận của bạn tăng trưởng bền vững</span>.
+
+Nhập SĐT của bạn
+
+Đã đăng ký thành công!
+
+. Bạn cũng tải ChatGPT về. Bạn lưu hàng rổ
+
+fanpage tự chạy 24/7
+
+Biến AI thành <span class=
+
+Đội Quân 12 Nhân Sự AI
+
+Hình founder ngồi suy ngẫm bên biển hoặc cửa sổ
+
+Bạn đã thử dùng ChatGPT/Claude nhưng output ra <strong>văn mẫu cứng nhắc</strong>, <mark class=
+
+The KP3, đơn vị tiên phong về Landing Page
+
+Chốt 200 suất – Đóng cổng
+
+Nếu bạn vẫn muốn duy trì bộ máy nhân sự đông đúc, họp hành phức tạp thay vì sự
+
+. Ngay sau khi nhận file và nạp vào Agent vào nền tảng AI bạn đang dùng, bạn chỉ mất khoảng 2 phút để máy tạo ra 5-10 mẫu quảng cáo chất lượng. Bạn có thể copy và đăng ngay lên Facebook hoặc Google để bắt đầu thu hút khách hàng và thấy chỉ số thay đổi tức thì.
+
+HÃY THẲNG THẮN NHÌN VÀO CÁI VÒNG LẶP TỒI TỆ
+
+Bạn còn đang chờ gì nữa?
+
+>Hỗ trợ trực tiếp qua Telegram:</span> Group kín dành riêng cho khách hàng ASSP, đảm bảo mọi vấn đề kỹ thuật được hỗ trợ xử lý.
+
+không đòi tăng lương. Không xin nghỉ phép. Không cãi sếp. Không có drama công sở.
+
+Nhập thông tin thanh toán
+
+Trong khi đối thủ của bạn vẫn đang loay hoay với những câu hỏi vô thưởng vô phạt, bạn đã sở hữu 12
+
+Đối tác chiến lược LadiPage từ năm 2017
+
+chiếm lĩnh thị trường
+
+và hàng đống tiền
+
+từ ngón tay của bạn.
+
+Đến lúc này, bạn bắt đầu nghĩ đến việc
+
+Đủ rồi. Dừng lại đi!
+
+Hình founder thuyết trình hoặc ngồi trước dashboard có biểu đồ
+
+tiền lương. Đó là chưa cộng tiền thuê mặt bằng, tiền mua máy tính, bảo hiểm, và cái rủi ro nhân sự
+
++a:a}function Yw(a,s){_.useContext(D0).strict}function Kw(a){const s=R0(),{drag:l,layout:r}=s;if(!l&&!r)return{};const h={...l,...r};return{MeasureLayout:l!=null&&l.isEnabled(a)||r!=null&&r.isEnabled(a)?h.MeasureLayout:void 0,ProjectionNode:h.ProjectionNode}}function Fw(a,s){if(typeof Proxy>
+
+đóng gói sản phẩm hấp dẫn
+
+, thậm chí chưa bằng một bữa ăn gia đình, sẽ không làm bạn nghèo đi. Nhưng cái giá của sự chần chừ chính là việc bạn đang đứng nhìn
+
+Sau khi đăng ký, đây là những gì bạn sẽ làm trong 3 ngày tới:
+
+. Bạn làm 14 tiếng/ngày. Bạn kiệt sức. Bạn không còn là Chủ doanh nghiệp nữa, bạn
+
+Bạn chuyển dữ liệu đó sang <strong>Agent Ad Copy Machine</strong>. Chỉ với <mark class=
+
+>bóc tách mọi nỗi đau, khao khát thầm kín nhất</span> của thị trường. Nó thấu hiểu điều gì khiến khách hàng trăn trở lúc 3h sáng để đưa ra thông điệp chạm đúng <span class=
+
+Chưa đầy 10 phút
+
+Tháng này tôi bán được bao nhiêu đơn?
+
+KÍCH HOẠT HỆ THỐNG 12 AI AGENT!
+
+Nghiên Cứu Khách Hàng
+
+Không nghỉ, không ốm, không tăng lương
+
+Bạn nhập sản phẩm + insight khách. Agent tạo ra <mark class=
+
+Xây dựng cấu trúc Offer <span class=
+
++v,children:x,containerInfo:g,implementation:b}}var f=a.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;function p(x,g){if(x===
+
+ĐẺ RA TIỀN CHO BẠN.
+
+này sẽ cày cuốc cho bạn mỗi ngày. Hãy tưởng tượng bạn phải trả bao nhiêu tiền lương để thuê được những con người này ngoài đời thực.
+
+){const Y=z++;return T(g(k.image,k.raw),Y,
+
+mớ bòng bong công việc tay chân
+
+>ngân sách dưới 10 triệu/tháng</mark>?
+
+Cuối ngày 2: Bạn có offer mạnh + funnel rõ ràng, đã sẵn sàng để chạy Ads.
+
+:Yn=null;break;case
+
+>phong cách hành văn đặc trưng</span> của bạn, từ gai góc, sâu sắc đến hóm hỉnh.
+
+>Sở hữu trọn bộ 12 Agent:</span> Bạn nhận toàn bộ
+
+KHÔNG PHẢI là một chatbot mà bạn phải chat hỏi đáp đi hỏi đáp lại mỗi lần.
+
+Bảo mật tuyệt đối
+
+,this.handlePointerUp)),p&&this.startScrollTracking(p)}startScrollTracking(s){let l=s.parentElement;for(;l;){const r=getComputedStyle(l);(Ug.has(r.overflowX)||Ug.has(r.overflowY))&&this.scrollPositions.set(l,{x:l.scrollLeft,y:l.scrollTop}),l=l.parentElement}this.scrollPositions.set(window,{x:window.scrollX,y:window.scrollY}),window.addEventListener(
+
+Không thấy email? Kiểm tra hộp
+
+Hâm nóng lại tệp khách hàng cũ đã
+
+AI chỉ là công cụ giúp bạn làm việc nhanh hơn
+
+trong tuần tới thôi, nó đã dư sức hoàn vốn gấp cả chục, cả trăm lần rồi!
+
+Bạn ra lệnh cho <strong>Agent Avatar Builder</strong> phân tích tâm lý khách hàng cho sản phẩm bạn đang kinh doanh. Trong nháy mắt, hệ thống trả về chính xác những <mark class=
+
+Cơ hội để sở hữu hệ thống với mức giá ưu đãi đang khép lại rất nhanh. Hãy quyết định ngay bây giờ để giải phóng sức lao động và tối ưu dòng tiền của bạn!
+
+Rồi bạn nghe thiên hạ đồn về
+
+:return Yn=us(Yn,t,e,n,i,o),!0;case
+
+ĐẶC VỤ AI AGENTS NGAY
+
+TỔNG GIÁ TRỊ THỰC TẾ BẠN SỞ HỮU:
+
+. Nhận lại những báo cáo đầy thuật ngữ đẹp đẽ: Reach, Impression, Awareness...
+
+vạch sơ đồ phễu A-Z
+
+Facebook — Dương Trọng Nghĩa
+
+viết 5-10 mẫu quảng cáo
+
+?document.querySelector(a):a;if(!r)return;const h=r.getBoundingClientRect().top+window.scrollY+0;window.scrollTo({top:h,behavior:
+
+để được hỗ trợ.
+
+tự biến mình thành
+
+định hình giọng văn của riêng bạn
+
+ĐÚNG 1 KHÁCH HÀNG MỚI
+
+&&(v=v.trim(),Xu(v))){const N=qx(v,l.current);N!==void 0&&(s[b]=N),b===s.length-1&&(this.finalKeyframe=v)}}if(this.resolveNoneKeyframes(),!Kx.has(r)||s.length!==2)return;const[h,d]=s,f=Zp(h),p=Zp(d),x=Op(h),g=Op(d);if(x!==g&&Zn[r]){this.needsMeasurement=!0;return}if(f!==p)if(Yp(f)&&Yp(p))for(let b=0;b<s.length;b++){const v=s[b];typeof v==
+
+Một Hệ thống làm việc bằng AI Agent. Sức mạnh tương đương cả một biệt đội Marketing tinh nhuệ gộp lại, nằm gọn trong tay bạn, với khoản đầu tư chưa bằng một chầu nhậu cuối tuần.
+
+, nó không phải là phép màu thay thế hoàn toàn sức lao động và tư duy kinh doanh của bạn.
+
+Hiểu Khách Hàng Như Hiểu Mình
+
+BẠN RẤT GIỎI NGHỀ CỦA MÌNH... NHƯNG TÀI KHOẢN NGÂN HÀNG LẠI ĐANG
+
+)}catch(J){Et(t,t.return,J)}}i&4&&t.stateNode!=null&&(o=t.memoizedProps,Wo(t,o,n!==null?n.memoizedProps:o)),i&1024&&(nc=!0);break;case 6:if(me(e,t),pe(t),i&4){if(t.stateNode===null)throw Error(r(162));i=t.memoizedProps,n=t.stateNode;try{n.nodeValue=i}catch(J){Et(t,t.return,J)}}break;case 3:if(Ol=null,o=Ye,Ye=Rl(e.containerInfo),me(e,t),Ye=o,pe(t),i&4&&n!==null&&n.memoizedState.isDehydrated)try{oi(e.containerInfo)}catch(J){Et(t,t.return,J)}nc&&(nc=!1,em(t));break;case 4:i=Ye,Ye=Rl(t.stateNode.containerInfo),me(e,t),pe(t),Ye=i;break;case 12:me(e,t),pe(t);break;case 31:me(e,t),pe(t),i&4&&(i=t.updateQueue,i!==null&&(t.updateQueue=null,yl(t,i)));break;case 13:me(e,t),pe(t),t.child.flags&8192&&t.memoizedState!==null!=(n!==null&&n.memoizedState!==null)&&(vl=be()),i&4&&(i=t.updateQueue,i!==null&&(t.updateQueue=null,yl(t,i)));break;case 22:o=t.memoizedState!==null;var j=n!==null&&n.memoizedState!==null,M=mn,V=Qt;if(mn=M||o,Qt=V||j,me(e,t),Qt=V,mn=M,pe(t),i&8192)t:for(e=t.stateNode,e._visibility=o?e._visibility&-2:e._visibility|1,o&&(n===null||j||mn||Qt||ga(t)),n=null,e=t;;){if(e.tag===5||e.tag===26){if(n===null){j=n=e;try{if(u=j.stateNode,o)m=u.style,typeof m.setProperty==
+
+Bạn thuê copywriter 5-10 triệu/script. Đợi 1 tuần. Sửa qua sửa lại. Đôi khi vẫn không hiệu quả.
+
+?Vt.ownerDocument.body:Vt).removeChild(n.stateNode)}catch(u){Et(n,e,u)}else try{Vt.removeChild(n.stateNode)}catch(u){Et(n,e,u)}break;case 18:Vt!==null&&(de?(t=Vt,Ym(t.nodeType===9?t.body:t.nodeName===
+
+;case Y:var e=t.render;return t=t.displayName,t||(t=e.displayName||e.name||
+
+tạo cơ chế độc quyền
+
+){Yw();const H=Kw(N);v=H.MeasureLayout,T.visualElement=Uw(a,z,N,h,H.ProjectionNode,d)}return c.jsxs(vr.Provider,{value:T,children:[v&&T.visualElement?c.jsx(v,{visualElement:T.visualElement,...N}):null,_w(a,g,Lw(z,T.visualElement,b),z,w,s,d)]})}p.displayName=`motion.${typeof a==
+
+BẤM VÀO ĐÂY ĐỂ SỞ HỮU
+
+>nhâm nhi ly cà phê đầu ngày</mark>. Thay vì đối mặt với những cuộc họp căng thẳng hay thúc giục team Marketing, bạn chỉ cần <mark class=
+
+){v.callback=ut,Y(R),K=!0;break e}v===l(x)&&r(x),Y(R)}else r(x);v=l(x)}if(v!==null)K=!0;else{var S=l(g);S!==null&&Nt(X,S.startTime-R),K=!1}}break t}finally{v=null,N=P,w=!1}K=void 0}}finally{K?Z():nt=!1}}}var Z;if(typeof G==
+
+. Phương pháp này đã thành công trong hàng chục năm qua trên mọi lĩnh vực.
+
+Hiệu suất tức thì
+
+chạm đúng tử huyệt cảm xúc
+
+kịch bản chốt đơn
+
+hàng ngàn giờ làm việc tự do
+
+tuyệt đối không thể khiến khách hàng
+
+Cơ chế thông minh của 12 Agent
+
+KHÔNG PHẢI là gói subscription, bạn trả 1 lần và sử dụng trọn đời.
+
+Nhập Họ & Tên của bạn
+
+Bạn đang chơi một trò chơi mà luật lệ đã thay đổi từ lâu.
+
+>hệ thống Phễu (Funnel) từ A-Z</span>. Mồi nhử là gì, trang đích viết sao, Upsell thế nào để hút sạch data và <span class=
+
+Flow 3 bước đơn giản cho người mới
+
+Nhưng sự thật là: Sáng mai thức dậy, doanh nghiệp của bạn vẫn không có gì thay đổi. Bạn lại tiếp tục quay cuồng trong
+
+Bá Khương Trịnh
+
+AGENT ĐỂ TIẾP TỤC
+
+){const f=eh(this.props,l,(d=this.presenceContext)==null?void 0:d.custom);f&&(r=f[s])}if(l&&r!==void 0)return r;const h=this.getBaseTargetFromProps(this.props,s);return h!==void 0&&!se(h)?h:this.initialValues[s]!==void 0&&r===void 0?void 0:this.baseTarget[s]}on(s,l){return this.events[s]||(this.events[s]=new Yu),this.events[s].add(l)}notify(s,...l){this.events[s]&&this.events[s].notify(...l)}scheduleRenderMicrotask(){ih.render(this.render)}}class r0 extends sj{constructor(){super(...arguments),this.KeyframeResolver=_N}sortInstanceNodePosition(s,l){return s.compareDocumentPosition(l)&2?1:-1}getBaseTargetFromProps(s,l){const r=s.style;return r?r[l]:void 0}removeValueFromRenderState(s,{vars:l,style:r}){delete l[s],delete r[s]}handleChildMotionValue(){this.childSubscription&&(this.childSubscription(),delete this.childSubscription);const{children:s}=this.props;se(s)&&(this.childSubscription=s.on(
+
+>bản sao hoàn hảo</span> của chính bạn. Không còn những câu chữ vô hồn, Agent này sẽ học chính xác <span class=
+
+Hơn 210 người tham gia đã
+
+Thuê người làm 12 đầu việc
+
+Tầng 9, toà nhà VNO, Số 124 Điện Biên Phủ, Phường Tân Định, Thành Phố Hồ Chí Minh
+
+hơi thở con người
+
+>bị bỏ lại phía sau</mark>, nhưng chưa biết bắt đầu từ đâu?
+
+Bạn có toàn bộ insight để viết content trúng tâm lý, sau 1 ly cà phê.
+
+chuyên biệt này để cào Lead, tạo Mồi Nhử, viết Quảng Cáo, dọn sẵn Funnel và tư vấn chốt khách thay bạn. Chúng làm việc ngày đêm với tốc độ gấp 10 lần sức người, dựa trên Framework tỷ đô đã được kiểm chứng!
+
+Tự mình xoay sở với đống công việc không tên thay vì tập trung vào chiến lược.
+
+in t?-t.wheelDeltaY:
+
+, đây là 12 khung tư duy đã được đóng gói sẵn theo công thức marketing đã kiểm chứng.
+
+Đối tượng không phù hợp
+
+bất lực đến phát điên
+
+thực tế và thấu hiểu bài học xương máu mà không giáo trình hay giáo sư nào dạy:
+
+</strong> với <mark class=
+
+DỪNG NGAY VIỆC ĐỐT TIỀN CHO NHÂN SỰ LƯỜI BIẾNG VÀ QUẢNG CÁO VÔ NGHĨA!
+
+?t:null,t!==null&&(e.memoizedState={dehydrated:t,treeContext:Sn!==null?{id:Ze,overflow:Pe}:null,retryLane:536870912,hydrationErrors:null},n=gf(t),n.return=e,e.child=n,te=e,_t=null)):t=null,t===null)throw An(e);return e.lanes=536870912,null}return dl(e,i)}var u=t.memoizedState;if(u!==null){var m=u.dehydrated;if(jo(e),o)if(e.flags&256)e.flags&=-257,e=_d(t,e,n);else if(e.memoizedState!==null)e.child=t.child,e.flags|=128,e=null;else throw Error(r(558));else if(Xt||qa(t,e,n,!1),o=(n&t.childLanes)!==0,Xt||o){if(i=Dt,i!==null&&(m=jh(i,n),m!==0&&m!==u.retryLane))throw u.retryLane=m,sa(t,m),xe(i,t,m),Yo;Sl(),e=_d(t,e,n)}else t=u.treeContext,_t=Be(m.nextSibling),te=e,bt=!0,Tn=null,Ve=!1,t!==null&&bf(e,t),e=dl(e,i),e.flags|=4096;return e}return t=ln(t.child,{mode:i.mode,children:i.children}),t.ref=e.ref,e.child=t,t.return=e,t}function ml(t,e){var n=e.ref;if(n===null)t!==null&&t.ref!==null&&(e.flags|=4194816);else{if(typeof n!=
+
+. Tôi có thể tự do đi chơi khắp thế giới, từ Nga, Trung Quốc đến Singapore, trong khi ở nhà,
+
+Bạn kích hoạt 6 agent còn lại:
+
+Bạn cắn bút 2 tiếng để viết 1 caption Facebook Ads. Đăng lên, không hiệu quả. Sửa lại. Đăng lại. Thuê freelancer 5tr/tháng, chất lượng không ổn định.
+
+HỆ THỐNG NÀY DÀNH CHO AI?
+
+HƠN 122 TRIỆU VNĐ
+
+huấn luyện sẵn những
+
+>Meta AI Fanpage Playbook Agent:</span> setup luồng kịch bản Meta AI chat, tăng tỉ lệ chốt đơn.
+
+Lưu ý: bộ Agent sẽ được gửi về email của bạn, hãy điền chính xác email bạn đang sử dụng. Nếu có trục trặc trong khâu thanh toán, hãy nhắn tin Fanpage.
+
+&&(Vn===null||!Vn.has(u))))return n.flags|=65536,o&=-o,n.lanes|=o,o=Ad(o),Ed(o,t,n,i),yo(n,o),!1}n=n.return}while(n!==null);return!1}var Yo=Error(r(461)),Xt=!1;function ne(t,e,n,i){e.child=t===null?Df(e,null,n,i):da(e,t.child,n,i)}function kd(t,e,n,i,o){n=n.render;var u=e.ref;if(
+
+X10 hiệu suất – Giảm nhân sự
+
+>trăn trở sâu kín</mark>, những điều khách hàng quan tâm nhất, điều mà nhân viên thông thường <mark class=
+
+>chuỗi 7 Email chăm sóc khách hàng chuyên sâu</span>. Biến những người đăng ký mới còn đang đắn đo thành những khách hàng <span class=
+
+Khách hàng tiếp theo sẽ đến từ đâu?
+
+Đây là điểm khác biệt lớn nhất: Chúng tôi cung cấp cho bạn
+
+kích hoạt và sử dụng ngay lập tức!
+
+Cắm là chạy. Không cần học cách viết prompt phức tạp.
+
+Làm kinh doanh là làm bài toán đầu tư. Người sành sỏi
+
+RỦI RO LỚN NHẤT CỦA BẠN CHÍNH LÀ SỰ TRÌ HOÃN
+
+,s)}on(s,l){this.events[s]||(this.events[s]=new Yu);const r=this.events[s].add(l);return s===
+
+Quyền quyết định đột phá doanh thu chưa bao giờ thuộc về
+
+trở thành những
+
+, hệ thống này không phù hợp với bạn.
+
+🔴 NGÃ RẼ SỐ 1: Bạn bấm nút [X] và thoát khỏi trang web này.
+
+thay bạn? Agent này dạy bạn setup Meta Business AI (AI native miễn phí của Facebook)
+
+Bạn đang muốn dành nhiều thời gian hơn cho <strong>gia đình, sức khoẻ</strong>, hoặc các dự án lớn hơn, thay vì <mark class=
+
+>tỉ lệ chốt đơn sẽ tăng rõ rệt</mark>.
+
+Tôi không ngồi một chỗ chỉ để nói. Tôi đã
+
+Bộ dữ liệu đầu vào 4 nhóm cần thu trước khi viết content.
+
+150 triệu mỗi tháng
+
+}function Yb(t,e){var n=t.ownerDocument;if(t.data===
+
+chiếm lĩnh thị phần của bạn
+
+20 - 30 triệu/tháng
+
+Mỗi sáng thức dậy, thay vì tập trung vào chuyên môn, bạn lại phải bóp trán với câu hỏi ám ảnh:
+
+KHAO KHÁT X10 DOANH SỐ, MÀ KHÔNG BỊ PHÌNH QUỸ LƯƠNG NHÂN SỰ.
+
+Chọn gói trợ lý phù hợp
+
+Chương trình: Giải mã E-learning - Chìa khóa chuyển đổi số giáo dục Việt Nam
+
+Có lead rồi nhưng Sale chốt xịt? Đặc vụ này sẽ phân tích sản phẩm của bạn và đẻ ra một <span class=
+
+>bộ kịch bản chốt Sale, kịch bản xử lý từ chối, kịch bản Telesale sắc lẹm</span> để team Sales của bạn chỉ việc đọc theo là khách quẹt thẻ.
+
+KHÔNG MỘT AI BIẾT TỚI BẠN CẢ!
+
+Nhưng câu hỏi duy nhất bạn cần lời đáp,
+
+Hệ thống tư duy chuẩn Marketing
+
+phân tích sâu tệp khách hàng mục tiêu
+
+Setup đúng 1 lần, fanpage tự chạy 24/7. Một consultant setup Meta AI ngoài thị trường tính 5-15tr, bạn nhận trong gói ASSP này.
+
+Giờ đây, tôi mang tất cả những bài học xương máu từ các dự án triệu đô đó gói gọn vào giải pháp này cho bạn. Bạn muốn tiếp tục làm
+
+. Nó chưa bằng một nửa số tiền bạn lỡ tay set nhầm cắm Camp Facebook Ads dở tệ tuần qua.
+
+làm việc chính xác theo quy trình để tối ưu lợi nhuận. Đó mới là lợi thế thực sự.
+
+Không trả lương
+
+Tự động tạo ra <span class=
+
+Nếu bạn ra ngoài kia, đăng tin tuyển dụng để ráp một team 12 người làm chừng này việc. Bạn sẽ mất bao nhiêu?
+
+này không phải là mớ prompt rời rạc để lưu cho đầy máy, mà là một
+
+).concat(ns));function _m(t,e){e=(e&4)!==0;for(var n=0;n<t.length;n++){var i=t[n],o=i.event;i=i.listeners;t:{var u=void 0;if(e)for(var m=i.length-1;0<=m;m--){var y=i[m],j=y.instance,M=y.currentTarget;if(y=y.listener,j!==u&&o.isPropagationStopped())break t;u=y,o.currentTarget=M;try{u(o)}catch(V){Ys(V)}o.currentTarget=null,u=j}else for(m=0;m<i.length;m++){if(y=i[m],j=y.instance,M=y.currentTarget,y=y.listener,j!==u&&o.isPropagationStopped())break t;u=y,o.currentTarget=M;try{u(o)}catch(V){Ys(V)}o.currentTarget=null,u=j}}}}function gt(t,e){var n=e[Mr];n===void 0&&(n=e[Mr]=new Set);var i=t+
+
+Các Agent không phải là phần mềm thông thường. Các Agent là một
+
+?b[T]:z(b[T],g);if(H){const G=H.length;for(let Y=0;Y<G;Y++)f[H[Y]]=q}else k?this.options.visualElement.renderState.vars[T]=q:f[T]=q}this.options.layoutId&&(f.pointerEvents=g===this?ir(p==null?void 0:p.pointerEvents)||
+
+Để sở hữu trọn đời đội quân 12 agent ai tinh nhuệ này, khoản đầu tư duy nhất của bạn chỉ là:
+
+Temu Khó Thắng Shopee, TikTok Shop
+
+vì concept học tập mới lạ độc đáo với AI Agent và kết quả thực chiến ngoài mong đợi.
+
+?setImmediate:null;function Y(R){for(var K=l(g);K!==null;){if(K.callback===null)r(g);else if(K.startTime<=R)r(g),K.sortIndex=K.expirationTime,s(x,K);else break;K=l(g)}}function X(R){if(z=!1,Y(R),!T)if(l(x)!==null)T=!0,nt||(nt=!0,Z());else{var K=l(g);K!==null&&Nt(X,K.startTime-R)}}var nt=!1,Q=-1,W=5,lt=-1;function et(){return H?!0:!(a.unstable_now()-lt<W)}function dt(){if(H=!1,nt){var R=a.unstable_now();lt=R;var K=!0;try{t:{T=!1,z&&(z=!1,q(Q),Q=-1),w=!0;var P=N;try{e:{for(Y(R),v=l(x);v!==null&&!(v.expirationTime>R&&et());){var rt=v.callback;if(typeof rt==
+
+mô hình kinh doanh thiếu tử tế
+
+Nếu bạn biết dùng Zalo, Facebook hay gửi Email, bạn hoàn toàn có thể vận hành hệ thống này. Cách thức cực kỳ đơn giản: Bạn up file .md lên nền tảng AI bạn đang dùng. Sau đó, bạn chỉ cần nhập nhiệm vụ bạn cần nó làm thay ứng với kỹ năng của từng agent và bấm Enter. Không cần viết code, không cần học câu lệnh phức tạp. Mọi thứ đã được tối ưu để bạn
+
+>sa lầy vào việc nhỏ hàng ngày</mark>?
+
+Từ việc đồng sáng lập thương hiệu thời trang thể thao với hệ thống cửa hàng đa chi nhánh liên tỉnh.
+
+13 năm kinh nghiệm thực chiến
+
+Penthouse Camelia Lumiere, Vinhomes Grand Park | Nguyễn Xiển, Phường Long Bình, HCM
+
+Thậm chí, uy tín của tôi đã được khẳng định trên sóng
+
+này cho bạn. Việc duy nhất bạn cần làm là
+
+, được nạp sẵn hàng ngàn giờ kinh nghiệm thực chiến từ những bộ óc xuất sắc nhất, sẵn sàng phục vụ bạn 24/7.
+
+Bạn chỉ việc đứng trước camera đọc.
+
+];function m0(a,{attrX:s,attrY:l,attrScale:r,pathLength:h,pathSpacing:d=1,pathOffset:f=0,...p},x,g,b){if(ch(a,p,g),x){a.style.viewBox&&(a.attrs.viewBox=a.style.viewBox);return}a.attrs=a.style,a.style={};const{attrs:v,style:N}=a;v.transform&&(N.transform=v.transform,delete v.transform),(N.transform||v.transformOrigin)&&(N.transformOrigin=v.transformOrigin??
+
+Nếu không tạo ra chuyển đổi, bạn sẽ không có gì cả
+
+Thiết Kế Offer Và Phễu Bán Hàng
+
+ĐÃ ĐẾN LÚC CHẤM DỨT VIỆC CHI TIỀN CHO NHỮNG QUY TRÌNH VẬN HÀNH KÉM HIỆU QUẢ.
+
+Bọn nó chỉ đang chờ một
+
+}),f.current=!1;return}const mt=window.SEPAY_CONFIG||{},vt=(rt=mt.packageProductIds)==null?void 0:rt[a.package];if(!vt){g({message:
+
+&&(Y=f)),G=en(0,1,et)*p}let X;q?(this.delayState.value=b[0],X=this.delayState):X=Y.next(G),d&&!q&&(X.value=d(X.value));let{done:nt}=X;!q&&x!==null&&(nt=this.playbackSpeed>=0?this.currentTime>=h:this.currentTime<=0);const Q=this.holdTime===null&&(this.state===
+
+Chỉ thanh toán một lần duy nhất, không phí duy trì, không ràng buộc!
+
+Bạn tin rằng năm 2026 không dùng AI sẽ <mark class=
+
+>2 cú click</mark>, 5-10 mẫu quảng cáo phù hợp đúng tâm lý khách đã sẵn sàng.
+
+Nguyễn Hữu Thông
+
+khi sở hữu trọn bộ ASSP trong hôm nay.
+
+Sản phẩm của tôi là ngách rất hẹp và đặc thù, AI làm sao mà hiểu được Business của tôi?
+
+Xử lý trong vài phút
+
+:O=Yh;break;case
+
+ĐẶT CỌC GIỮ CHỖ NGAY
+
+một bữa ăn cuối tuần của gia đình bạn
+
+,O=Yr;break;case
+
+>Video chuyển đổi (VSL)</span>. Tỷ lệ chốt đơn qua Video của Agent này <span class=
+
+>Cơ Chế Độc Quyền</mark> của bạn, một phương pháp mà đối thủ không thể sao chép.
+
+re-engage tệp lạnh
+
+&&t!==null)switch(t.$$typeof){case G:m=10;break t;case q:m=9;break t;case Y:m=11;break t;case Q:m=14;break t;case W:m=16,i=null;break t}m=29,n=Error(r(130,t===null?
+
+và tuyển nhân sự mới vô định. Tôi đã từng phát điên khi nhìn các nhân sự Marketing công ty mình ngồi ngáp ngắn ngáp dài, trong khi mình phải
+
+Bạn thuê agency 20-30 triệu để vẽ funnel. Đợi 1 tháng. Nhận về một sơ đồ Miro phức tạp. Không biết bắt đầu từ đâu.
+
+đau đầu dạy dỗ con máy mỗi ngày
+
+và sử dụng không giới hạn lượt bài viết trong nhiều năm tới mà không phải trả thêm bất kỳ đồng phí gia hạn nào. Sự minh bạch là tôn chỉ của The KP3.
+
+Quy trình 9 bước cấu hình Meta Business Suite từ con số 0.
+
+1 AGENT = 1 KỸ NĂNG CHUYÊN SÂU (Skill) =
+
+in r?r.getBBox()[s]:r[l],YN=a0(
+
+thiết kế mồi nhử miễn phí
+
+Nó phải moi được ví khách hàng ngay lập tức (Direct-Response).
+
+MỞ KHOÁ TRỌN BỘ 12
+
+khối lượng công việc của cả một phòng ban
+
+tự động hóa toàn bộ quy trình
+
+. Chúng trực tiếp tạo ra kịch bản Video, viết nội dung quảng cáo để bạn sử dụng ngay, thay vì bắt bạn ngồi nghe hàng chục giờ video bài giảng.
+
+hàng trăm khách hàng tiềm năng
+
+... → câu trả lời trở nên mơ hồ.
+
+. Chúng tôi giới hạn 200 suất không phải để
+
+Hệ thống này KHÔNG phải là gì
+
+>sẵn sàng quẹt thẻ</span>.
+
+Biến một sản phẩm đại trà thành một <span class=
+
+bot vẫn báo ting ting tiền về liên tục
+
+Template System Prompt 7 mục chuẩn, paste là chạy.
+
+Ở The KP3, chúng tôi không dùng AI để hỏi đáp lặt vặt. Chúng tôi đã
+
+lèo tèo vài cái like
+
+TRƯỚC KHI ĐỌC TIẾP, HÃY HIỂU RÕ HỆ THỐNG NÀY KHÔNG PHẢI LÀ GÌ
+
+Hôm nay chỉ đầu tư 1 lần
+
+Thị trường không bão hòa vì công cụ, nó chỉ bão hòa với những ai dùng AI hời hợt.
+
+);var t=Vi;Vi=null,Ya=0,Ka=null;for(var e=0;e<t.length;e++)(0,t[e])()}}function tb(t,e){var n=[],i={status:
+
+đoạn văn chung chung, sáo rỗng và khô khan như robot trả bài
+
+về làm lính đánh thuê cho mình.
+
+:switch(X0()){case gh:return 2;case xh:return 8;case ks:case Q0:return 32;case yh:return 268435456;default:return 32}default:return 32}}var Bc=!1,Gn=null,qn=null,Yn=null,os=new Map,cs=new Map,Kn=[],rv=
+
+AI không đợi ai. Người biết dùng AI đang tiến xa hơn mỗi ngày.
+
+>5-10 mẫu quảng cáo khác nhau</mark> trong 2 phút, mỗi mẫu khai thác một góc tâm lý khác (tò mò, tham vọng, bằng chứng, sợ mất, nhu cầu hiện tại).
+
+Viết Kịch Bản Video Bán Hàng (VSL)
+
+>5-10 biến thể quảng cáo chuyên nghiệp</span> cho Google/Facebook chỉ trong 2 phút. Nó xoáy sâu vào các <span class=
+
+>lấn át mọi rào cản</span>. Cách sắp xếp quà tặng và giá trị bổ sung khéo léo khiến khách hàng cảm thấy mình đang nhận được một <span class=
+
+)var jt=Jh;else if(Ph(D))if($h)jt=Yy;else{jt=Gy;var tt=Uy}else O=D.nodeName,!O||O.toLowerCase()!==
+
+,n=null;do e+=Y0(t,n),n=t,t=t.return;while(t);return e}catch(i){return`
+Error generating stack: `+i.message+`
+`+i.stack}}var Sr=Object.prototype.hasOwnProperty,Tr=a.unstable_scheduleCallback,Ar=a.unstable_cancelCallback,K0=a.unstable_shouldYield,F0=a.unstable_requestPaint,be=a.unstable_now,X0=a.unstable_getCurrentPriorityLevel,gh=a.unstable_ImmediatePriority,xh=a.unstable_UserBlockingPriority,ks=a.unstable_NormalPriority,Q0=a.unstable_LowPriority,yh=a.unstable_IdlePriority,Z0=a.log,P0=a.unstable_setDisableYieldValue,bi=null,ve=null;function Nn(t){if(typeof Z0==
+
+,this.onWindowScroll)}}handleScroll(s){const l=this.scrollPositions.get(s);if(!l)return;const r=s===window,h=r?{x:window.scrollX,y:window.scrollY}:{x:s.scrollLeft,y:s.scrollTop},d={x:h.x-l.x,y:h.y-l.y};d.x===0&&d.y===0||(r?this.lastMoveEventInfo&&(this.lastMoveEventInfo.point.x+=d.x,this.lastMoveEventInfo.point.y+=d.y):this.history.length>0&&(this.history[0].x-=d.x,this.history[0].y-=d.y),this.scrollPositions.set(s,h),Rt.update(this.updatePoint,!0))}updateHandlers(s){this.handlers=s}end(){this.removeListeners&&this.removeListeners(),this.removeScrollListeners&&this.removeScrollListeners(),this.scrollPositions.clear(),In(this.updatePoint)}}function Il(a,s){return s?{point:s(a.point)}:a}function Gg(a,s){return{x:a.x-s.x,y:a.y-s.y}}function ou({point:a},s){return{point:a,delta:Gg(a,G0(s)),offset:Gg(a,Ww(s)),velocity:tS(s,.1)}}function Ww(a){return a[0]}function G0(a){return a[a.length-1]}function tS(a,s){if(a.length<2)return{x:0,y:0};let l=a.length-1,r=null;const h=G0(a);for(;l>=0&&(r=a[l],!(h.timestamp-r.timestamp>Ce(s)));)l--;if(!r)return{x:0,y:0};r===a[0]&&a.length>2&&h.timestamp-r.timestamp>Ce(s)*2&&(r=a[1]);const d=Ue(h.timestamp-r.timestamp);if(d===0)return{x:0,y:0};const f={x:(h.x-r.x)/d,y:(h.y-r.y)/d};return f.x===1/0&&(f.x=0),f.y===1/0&&(f.y=0),f}function eS(a,{min:s,max:l},r){return s!==void 0&&a<s?a=r?zt(s,a,r.min):Math.max(a,s):l!==void 0&&a>l&&(a=r?zt(l,a,r.max):Math.min(a,l)),a}function qg(a,s,l){return{min:s!==void 0?a.min+s:void 0,max:l!==void 0?a.max+l-(a.max-a.min):void 0}}function nS(a,{top:s,left:l,bottom:r,right:h}){return{x:qg(a.x,l,h),y:qg(a.y,s,r)}}function Yg(a,s){let l=s.min-a.min,r=s.max-a.max;return s.max-s.min<a.max-a.min&&([l,r]=[r,l]),{min:l,max:r}}function aS(a,s){return{x:Yg(a.x,s.x),y:Yg(a.y,s.y)}}function iS(a,s){let l=.5;const r=ue(a),h=ue(s);return h>r?l=bs(s.min,s.max-r,a.min):r>h&&(l=bs(a.min,a.max-h,s.min)),en(0,1,l)}function sS(a,s){const l={};return s.min!==void 0&&(l.min=s.min-a.min),s.max!==void 0&&(l.max=s.max-a.min),l}const Vu=.35;function lS(a=Vu){return a===!1?a=0:a===!0&&(a=Vu),{x:Kg(a,
+
+, thì lại không có số cụ thể. Hoặc nhận về câu trả lời quen thuộc:
+
+Bạn lập form khảo sát Google. Phỏng vấn 10-20 khách. Đọc ngàn comment Facebook. Mất 1-2 tuần để rút ra insight cơ bản. Mà nhiều khi chỉ là cảm tính.
+
+Marketing không tạo ra tiền tươi thóc thật thì chỉ là
+
+12 Agent đã lo phần hậu trường, nhưng còn ai
+
+Bạn đã có 12 Agent Marketing lo phần hậu trường, nhưng khâu tiếp khách trực tiếp trên Messenger fanpage thì sao? Trước giờ chỉ có 2 lựa chọn: thuê người trực 24/7 (đốt tiền) hoặc dùng chatbot cứng cũ (mất khách). Giờ Meta vừa mở Beta Business AI, AI native của Facebook, miễn phí, học từ data thật. Vấn đề: 95% chủ fanpage VN setup sai, AI nói lung tung, báo giá lung tung, mất khách hơn không có.
+
+>cao gấp nhiều lần</span> so với bài viết thông thường. Bạn chỉ việc đứng trước máy và đọc theo là xong!
+
+&&this.holdTime===null&&(this.currentTime=h);let G=this.currentTime,Y=r;if(v){const W=Math.min(this.currentTime,h)/p;let lt=Math.floor(W),et=W%1;!et&&W>=1&&(et=1),et===1&&lt--,lt=Math.min(lt,v+1),!!(lt%2)&&(N===
+
+Trả một lần - Dùng trọn đời
+
+Quyền Linh Đinh
+
+, thay cả một consultant 5-15tr ngoài thị trường.
+
+Người muốn làm giàu nhanh mà không làm gì:
+
+6 case test bắt buộc trước go-live + 6 rủi ro thường gặp + cách fix.
+
+>đốt hàng chục triệu</mark> cho Ads và agency nhưng đơn hàng không về?
+
+Pattern deflect giá, AI từ chối báo giá nhưng vẫn kéo khách về sales page.
+
+. Kết quả? Một bộ máy tinh gọn dưới 10 người nhưng tạo ra
+
+đo lường giá trị sinh lời
+
+?(w=a.presenceContext)==null?void 0:w.custom:void 0);if(N){const{transition:T,transitionEnd:z,...H}=N;b={...b,...H,...z}}return b};function f(g){s=g(a)}function p(g){const{props:b}=a,v=y0(a.parent)||{},N=[],w=new Set;let T={},z=1/0;for(let k=0;k<Sj;k++){const q=wj[k],G=l[q],Y=b[q]!==void 0?b[q]:v[q],X=Ns(Y),nt=q===g?G.isActive:null;nt===!1&&(z=k);let Q=Y===v[q]&&Y!==b[q]&&X;if(Q&&(r||h)&&a.manuallyAnimateOnMount&&(Q=!1),G.protectedKeys={...T},!G.isActive&&nt===null||!Y&&!G.prevProp||yr(Y)||typeof Y==
+
+cho một vài bài post, chưa tính hiệu quả.
+
+quăng qua cửa sổ
+
+Hệ thống này được thiết lập để làm một việc duy nhất:
+
+. Bạn không cần phải đi học cách viết quảng cáo hay làm phễu nữa. Khi sở hữu bộ Agent này, bạn đang sở hữu
+
+Bạn có blueprint sẵn sàng triển khai, không cần thuê agency.
+
+Toàn bộ viết theo phong cách kể chuyện, không phải newsletter công ty cứng nhắc.
+
+Hiệu suất gấp 10 lần nhân sự xuất sắc
+
+- TÔI MUỐN THAM GIA
+
+đối thủ biết dùng công nghệ nhanh hơn bạn
+
+TRƯỚC VÀ SAU KHI CÓ 12 AGENT
+
+Bạn gửi bộ kịch bản từ <strong>Agent Sales Call Script</strong> cho nhân viên tư vấn, dặn:<br/><span class=
+
+>kịch bản Zalo/SMS được cá nhân hóa</span>, Agent này sẽ mang về những lượt <span class=
+
+, đọc cứng ngắc như robot trả bài. Bạn lại phải xắn tay áo lên sửa lại từ đầu. Thà tự viết cho nhanh!
+
+}function Y0(t,e){switch(t.tag){case 26:case 27:case 5:return Wn(t.type);case 16:return Wn(
+
+Bạn sẽ kích hoạt 2 agent đầu tiên:
+
+Vậy điều gì khiến
+
+Hãy hình dung Hệ thống Agent thực chiến này hoạt động vào sáng sớm mai thế này.
+
+)}finishAnimation(){this.currentAnimation&&(this.mixTargetDelta&&this.mixTargetDelta(Zj),this.currentAnimation.stop()),this.completeAnimation()}applyTransformsToTarget(){const f=this.getLead();let{targetWithTransforms:p,target:x,layout:g,latestValues:b}=f;if(!(!p||!x||!g)){if(this!==f&&this.layout&&g&&k0(this.options.animationType,this.layout.layoutBox,g.layoutBox)){x=this.target||It();const v=ue(this.layout.layoutBox.x);x.x.min=f.target.x.min,x.x.max=x.x.min+v;const N=ue(this.layout.layoutBox.y);x.y.min=f.target.y.min,x.y.max=x.y.min+N}Fe(p,x),ar(p,b),xs(this.projectionDeltaWithTransform,this.layoutCorrected,p,b)}}registerSharedNode(f,p){this.sharedNodes.has(f)||this.sharedNodes.set(f,new Qj),this.sharedNodes.get(f).add(p);const g=p.options.initialPromotionConfig;p.promote({transition:g?g.transition:void 0,preserveFollowOpacity:g&&g.shouldPreserveFollowOpacity?g.shouldPreserveFollowOpacity(p):void 0})}isLead(){const f=this.getStack();return f?f.lead===this:!0}getLead(){var p;const{layoutId:f}=this.options;return f?((p=this.getStack())==null?void 0:p.lead)||this:this}getPrevLead(){var p;const{layoutId:f}=this.options;return f?(p=this.getStack())==null?void 0:p.prevLead:void 0}getStack(){const{layoutId:f}=this.options;if(f)return this.root.sharedNodes.get(f)}promote({needsReset:f,transition:p,preserveFollowOpacity:x}={}){const g=this.getStack();g&&g.promote(this,x),f&&(this.projectionDelta=void 0,this.needsReset=!0),p&&this.setOptions({transition:p})}relegate(){const f=this.getStack();return f?f.relegate(this):!1}resetSkewAndRotation(){const{visualElement:f}=this.options;if(!f)return;let p=!1;const{latestValues:x}=f;if((x.z||x.rotate||x.rotateX||x.rotateY||x.rotateZ||x.skewX||x.skewY)&&(p=!0),!p)return;const g={};x.z&&su(
+
+Đơn hàng đã quá 5 phút chưa nhận được thanh toán. Vui lòng tạo lại đơn để tiếp tục.
+
+Fanpage Dương Trọng Nghĩa
+
+Rủi ro của sự trì hoãn
+
+Bạn đã mua nhiều khoá học nhưng không có thời gian xem hết, <strong>kết quả vẫn dậm chân tại chỗ</strong>?
+
+Bạn muốn có một <strong>
+
+,{dangerouslySetInnerHTML:{__html:a.replace(/KHÔNG PHẢI/g,
+
+là lựa chọn hoàn hảo dành cho bạn.
+
+,u=jd,m=wd,y=Sd,j=null;return n!=null&&(n.unstable_strictMode===!0&&(i=!0),n.identifierPrefix!==void 0&&(o=n.identifierPrefix),n.onUncaughtError!==void 0&&(u=n.onUncaughtError),n.onCaughtError!==void 0&&(m=n.onCaughtError),n.onRecoverableError!==void 0&&(y=n.onRecoverableError),n.formState!==void 0&&(j=n.formState)),e=ap(t,1,!0,e,n??null,i,o,j,u,m,y,mp),e.context=ip(null),n=e.current,i=ke(),i=kr(i),o=Cn(i),o.callback=null,Mn(n,o,i),n=i,e.current.lanes=n,Ni(e,n),Je(e),t[Ta]=e.current,vc(t),new Yl(e)},fs.version=
+
+Bạn là một chuyên gia. Bạn có thể là một bác sĩ mở phòng khám, một chủ spa tâm huyết, một founder startup, hay một freelancer cứng cựa.
+
+Đốt tiền cho nhân sự & quảng cáo vô nghĩa
+
+Bạn không còn so sánh giá nữa, bạn so sánh giá trị độc nhất.
+
+TINH GỌN TƯ DUY
+
+Sự thật là: 12 bộ AI Agents
+
+AGENT AD COPY MACHINE
+
+🎁 Bonus tặng kèm
+
+Mỗi ngày trôi qua mà không có hệ thống tự động, là thêm một ngày bạn phải:
+
+Bộ Playbook này hướng dẫn bạn setup ĐÚNG ngay từ đầu, áp dụng cho mọi loại fanpage:
+
+Nhập mã giảm giá (nếu có)
+
+Bạn cắn bút 2 tiếng mới viết xong 1 bài Facebook mà <strong>tương tác vẫn lèo tèo</strong>?
+
+)return qs(e)}function Yy(t,e){if(t===
+
+Đây là trọn bộ kho vũ khí bạn sẽ sở hữu để đạt mức
+
+Đã đến lúc dùng 12
+
+Hệ thống dành cho ai
+
+}}break;case 5:case 26:case 27:case 6:case 4:case 17:break;default:if((t&1024)!==0)throw Error(r(163))}if(t=e.sibling,t!==null){t.return=e.return,$t=t;break}$t=e.return}}function Pd(t,e,n){var i=n.flags;switch(n.tag){case 0:case 11:case 15:gn(t,n),i&4&&Zi(5,n);break;case 1:if(gn(t,n),i&4)if(t=n.stateNode,e===null)try{t.componentDidMount()}catch(m){Et(n,n.return,m)}else{var o=pa(n.type,e.memoizedProps);e=e.memoizedState;try{t.componentDidUpdate(o,e,t.__reactInternalSnapshotBeforeUpdate)}catch(m){Et(n,n.return,m)}}i&64&&Yd(n),i&512&&Pi(n,n.return);break;case 3:if(gn(t,n),i&64&&(t=n.updateQueue,t!==null)){if(e=null,n.child!==null)switch(n.child.tag){case 27:case 5:e=n.child.stateNode;break;case 1:e=n.child.stateNode}try{_f(t,e)}catch(m){Et(n,n.return,m)}}break;case 27:e===null&&i&4&&Qd(n);case 26:case 5:gn(t,n),e===null&&i&4&&Fd(n),i&512&&Pi(n,n.return);break;case 12:gn(t,n);break;case 31:gn(t,n),i&4&&$d(t,n);break;case 13:gn(t,n),i&4&&Wd(t,n),i&64&&(t=n.memoizedState,t!==null&&(t=t.dehydrated,t!==null&&(n=wb.bind(null,n),Yb(t,n))));break;case 22:if(i=n.memoizedState!==null||mn,!i){e=e!==null&&e.memoizedState!==null||Qt,o=mn;var u=Qt;mn=i,(Qt=e)&&!u?xn(t,n,(n.subtreeFlags&8772)!==0):gn(t,n),mn=o,Qt=u}break;case 30:break;default:gn(t,n)}}function Id(t){var e=t.alternate;e!==null&&(t.alternate=null,Id(e)),t.child=null,t.deletions=null,t.sibling=null,t.tag===5&&(e=t.stateNode,e!==null&&Dr(e)),t.stateNode=null,t.return=null,t.dependencies=null,t.memoizedProps=null,t.memoizedState=null,t.pendingProps=null,t.stateNode=null,t.updateQueue=null}var Vt=null,de=!1;function pn(t,e,n){for(n=n.child;n!==null;)Jd(t,e,n),n=n.sibling}function Jd(t,e,n){if(ve&&typeof ve.onCommitFiberUnmount==
+
+Đó là lý do nội dung mà hệ thống KP3 tạo ra luôn mang đậm
+
+không phải trả 10 triệu.
+
+Cuối ngày 3: Toàn bộ hệ thống đã chạy. Bạn ngồi quan sát số liệu, không phải ngồi làm.
+
+Giải pháp sở hữu hệ thống tự động hóa toàn diện giúp các chủ doanh nghiệp và Start-up đột phá hiệu suất Marketing tức thì mà không cần lo lắng về chi phí hay gánh nặng nhân sự.
+
+Bạn đang đứng trước hai ngã rẽ và quyết định hoàn toàn thuộc về bạn:
+
+),Y=Symbol.for(
+
+chưa đến 1 triệu đồng
+
+Lộ trình 3 ngày triển khai
+
+ôm đồm cả núi việc tay chân
+
+ĐĂNG KÝ SỞ HỮU HỆ THỐNG AI AGENT
+
+?`left: ${H}`:`right: ${k}`,Y=r===
+
+Năm 2012, tôi chọn một lối đi riêng đầy mạo hiểm: dấn thân vào nền tảng Affiliate Network đầu tiên tại Việt Nam. Đó là nơi tôi nhận về những
+
+Cứ bám sát quy trình này, <mark class=
+
+BỘ AI AGENT SUPER POWER NÀY KHÔNG DÀNH CHO AI
+
+Mệt mỏi vì phải viết nội dung mỗi ngày mà không biết có hiệu quả hay không.
+
+12 Agent AI của chúng tôi
+
+Vận Hành Và Đo Lường
+
+Với cái giá hời này, nếu tất cả mọi người đều sở hữu nó thì thị trường sẽ bão hòa mất thì sao?
+
+Đến việc tư vấn chiến lược thực chiến cho hơn 32 ngành nghề tại 4 quốc gia.
+
+Bạn không cần phải
+
+Chấm dứt việc đoán mò sở thích khách hàng. Chỉ cần ném tên sản phẩm, nó sẽ <span class=
+
+}function Ym(t,e){var n=e,i=0;do{var o=n.nextSibling;if(t.removeChild(n),o&&o.nodeType===8)if(n=o.data,n===
+
+Câu hỏi thường gặp
+
+Thiết kế những <span class=
+
+Người thích quản lý kiểu cũ, cồng kềnh:
+
+?s!==a:Array.isArray(s)?!b0(s,a):!1}function ya(a=!1){return{isActive:a,protectedKeys:{},needsAnimating:{},prevResolvedValues:{}}}function ug(){return{animate:ya(!0),whileInView:ya(),whileHover:ya(),whileTap:ya(),whileDrag:ya(),whileFocus:ya(),exit:ya()}}function zu(a,s){a.min=s.min,a.max=s.max}function Fe(a,s){zu(a.x,s.x),zu(a.y,s.y)}function hg(a,s){a.translate=s.translate,a.scale=s.scale,a.originPoint=s.originPoint,a.origin=s.origin}const v0=1e-4,kj=1-v0,Cj=1+v0,N0=.01,Mj=0-N0,Dj=0+N0;function ue(a){return a.max-a.min}function Rj(a,s,l){return Math.abs(a-s)<=l}function fg(a,s,l,r=.5){a.origin=r,a.originPoint=zt(s.min,s.max,a.origin),a.scale=ue(l)/ue(s),a.translate=zt(l.min,l.max,a.origin)-a.originPoint,(a.scale>=kj&&a.scale<=Cj||isNaN(a.scale))&&(a.scale=1),(a.translate>=Mj&&a.translate<=Dj||isNaN(a.translate))&&(a.translate=0)}function xs(a,s,l,r){fg(a.x,s.x,l.x,r?r.originX:void 0),fg(a.y,s.y,l.y,r?r.originY:void 0)}function dg(a,s,l,r=0){const h=r?zt(l.min,l.max,r):l.min;a.min=h+s.min,a.max=a.min+ue(s)}function _j(a,s,l,r){dg(a.x,s.x,l.x,r==null?void 0:r.x),dg(a.y,s.y,l.y,r==null?void 0:r.y)}function mg(a,s,l,r=0){const h=r?zt(l.min,l.max,r):l.min;a.min=s.min-h,a.max=a.min+ue(s)}function dr(a,s,l,r){mg(a.x,s.x,l.x,r==null?void 0:r.x),mg(a.y,s.y,l.y,r==null?void 0:r.y)}function pg(a,s,l,r,h){return a-=s,a=fr(a,1/l,r),h!==void 0&&(a=fr(a,1/h,r)),a}function Oj(a,s=0,l=1,r=.5,h,d=a,f=a){if(tn.test(s)&&(s=parseFloat(s),s=zt(f.min,f.max,s/100)-f.min),typeof s!=
+
+Bạn có 5-10 ad creative để A/B test, chứ không phải đoán mò.
+
+AI Agent tự hành
+
+. Dù bạn kinh doanh thiết bị y tế, phụ tùng cơ khí hay dịch vụ ngách, bộ khung (Prompt) trong file .md sẽ đặt ra các câu hỏi để khai thác dữ liệu từ chính bạn. Sau đó, máy sẽ xử lý dữ liệu đó dựa trên các quy luật tâm lý cốt lõi:
+
+(định dạng .md). Bạn chỉ cần nạp file này vào nền tảng AI cá nhân (như ChatGPT, Claude...). Bạn có quyền
+
+doanh thu triệu đô
+
+Tôi mù tịt về công nghệ và lập trình, liệu việc thiết lập có quá sức với tôi không?
+
+Cơ Chế Độc Quyền
+
+🟢 NGÃ RẼ SỐ 2: Trao cho bạn một tương lai hoàn toàn khác.
+
+Nếu bạn gật đầu với bất kỳ câu hỏi nào dưới đây, thì
+
+Tham gia cộng đồng kiếm tiền từ Agent ASSP
+
+Tuyệt đối không giao sinh mệnh doanh nghiệp cho cảm xúc thất thường của con người.
+
+trò đốt tiền mua vui
+
+đống tin nhắn rác
+
+Thanh toán đơn hàng
+
+Bạn nhập tên sản phẩm + ngách. Agent trả lời sau 5 phút: 5 nỗi đau sâu nhất của khách hàng · 3 mong muốn thầm kín · 7 câu hỏi khách hỏi lúc 3h sáng · 4 câu phản đối thường gặp + cách xử lý.
+
+thuê ngoài với kỳ vọng được
+
+Đừng đứng mãi ở ngã ba đường để nhìn cơ hội trôi đi. Đội quân AI đã được nạp đạn đầy đủ.
+
+Lương trung bình 15 triệu/người. Thấp nhất bạn cũng phải gánh
+
+Mã QR đã hết hạn
+
+?Yi(e):e,t=t.useState()[0],(kt!==null?kt.memoizedState:null)!==t&&(ct.flags|=1024),e}function To(){var t=sl!==0;return sl=0,t}function Ao(t,e,n){e.updateQueue=t.updateQueue,e.flags&=-2053,t.lanes&=~n}function Eo(t){if(il){for(t=t.memoizedState;t!==null;){var e=t.queue;e!==null&&(e.pending=null),t=t.next}il=!1}un=0,Ft=kt=ct=null,Za=!1,qi=sl=0,Pa=null}function oe(){var t={memoizedState:null,baseState:null,baseQueue:null,queue:null,next:null};return Ft===null?ct.memoizedState=Ft=t:Ft=Ft.next=t,Ft}function qt(){if(kt===null){var t=ct.alternate;t=t!==null?t.memoizedState:null}else t=kt.next;var e=Ft===null?ct.memoizedState:Ft.next;if(e!==null)Ft=e,kt=t;else{if(t===null)throw ct.alternate===null?Error(r(467)):Error(r(310));kt=t,t={memoizedState:kt.memoizedState,baseState:kt.baseState,baseQueue:kt.baseQueue,queue:kt.queue,next:null},Ft===null?ct.memoizedState=Ft=t:Ft=Ft.next=t}return Ft}function ll(){return{lastEffect:null,events:null,stores:null,memoCache:null}}function Yi(t){var e=qi;return qi+=1,Pa===null&&(Pa=[]),t=Ef(Pa,t,e),e=ct,(Ft===null?e.memoizedState:Ft.next)===null&&(e=e.alternate,R.H=e===null||e.memoizedState===null?yd:Lo),t}function rl(t){if(t!==null&&typeof t==
+
+Trong khi bạn đang làm việc bằng cơm, và lóng ngóng dùng AI như một món đồ chơi hỏi đáp... thì ngoài kia, đối thủ của bạn đang dùng AI để
+
+Không cần nạp thêm Credit
+
+mất thời gian học cách viết
+
+COPYRIGHT © 2026 KP3® | DIRECT RESPONSE DIGITAL MARKETING
+
+})),this.animation.onfinish=null,s&&Y2()?(this.animation.timeline=s,l&&(this.animation.rangeStart=l),r&&(this.animation.rangeEnd=r),Ge):h(this)}}const Lx={anticipate:mx,backInOut:dx,circInOut:gx};function X2(a){return a in Lx}function Q2(a){typeof a.ease==
+
+Đăng ký sở hữu hệ thống
+
+làm việc dở tệ rồi nghỉ ngang
+
+>tối đa hóa vòng đời khách hàng (LTV)</span>.
+
+mà bạn đang mắc kẹt mỗi ngày.
+
+)]);const nt=[];if(N!==q){let W=[...N];for(let lt=0;lt<Y.length;lt++){const et=Y[lt],dt=Pl(et);w.includes(dt)||(W.splice(lt,0,et),nt.push(et))}return d===
+
+Không chi phí ẩn, không phí duy trì
+
+cho chính công ty mình, hay muốn sở hữu một hệ thống AI Agent tự hành giúp bạn
+
+toàn bộ phễu Marketing của bạn đã sẵn sàng hoạt động!
+
+Nhưng... sự thật tàn nhẫn là:
+
+Bây giờ, hãy làm một bài toán thực tế của người làm kinh doanh nhé.
+
+Đã đến lúc bạn ngừng việc
+
+Nhưng khi bạn gõ lệnh, AI nhả ra một đống
+
+, mà để lọc ra những người thực sự nghiêm túc muốn tạo ra kết quả.
+
+Hết 200 suất này, giá sẽ tăng theo đúng giá trị thực hoặc đóng cổng để tập trung cho nhóm tinh anh.
+
+Hãy nghĩ xem: Nếu hệ thống này chỉ giúp bạn kiếm về thêm
+
+trong những tháng tới.
+
+Sản phẩm của bạn rất ngon. Tay nghề của bạn không phải bàn cãi. Khách hàng nào làm việc với bạn xong cũng khen nức nở.
+
+Cuối ngày 1: Bạn có toàn bộ insight về khách hàng + phong cách riêng, sẵn sàng cho mọi chiến dịch sau này.
+
+Khác biệt nằm ở chỗ: Các khóa học bán cho bạn Lý thuyết (Theory), còn chúng tôi đưa cho bạn
+
+Lưu ý: Mức giá ưu đãi này chỉ dành cho 200 khách hàng đầu tiên. Nhanh tay nâng cấp hiệu suất doanh nghiệp của bạn ngay bây giờ!
+
+Bạn từng <mark class=
+
+Bạn kích hoạt thêm 4 agent:
+
+để đổi lấy vài đồng bạc lẻ
+
+cảm xúc</span>.
+
+NGHE NHỮNG FEEDBACK NÓI THẬT VỀ KP3
+
+Phân Tích Đối Thủ + Định Vị
+
+HÌNH DUNG SỰ KHÁC BIỆT CỤ THỂ,
+
+* Chỉ tặng kèm khi mua Gói VVIP Pro.
+
+HÌNH DUNG SỰ KHÁC BIỆT CỤ THỂ, TRƯỚC VÀ SAU KHI CÓ 12 AGENT
+
+Content là Lưỡi Dao:
+
+>chốt cọc bất ngờ</span> từ những dữ liệu mà bạn tưởng chừng đã bỏ đi.
+
+12 bộ não AI đỉnh cao
+
+bạn đã sở hữu. Link truy cập
+
+số đông hay do dự!
+
+Chưa đầy 1 phút để tạo ra <span class=
+
+Siêu chiến binh thực chiến
+
+giậm chân tại chỗ mãi mãi
+
+Trị giá: 5.000.000 VNĐ
+
+lời chào hàng không thể từ chối
+
+){if(Hc(i||n)===null)continue;break}var u=Ea(n);u!==null&&(t.splice(e,3),e-=3,Vo(u,{pending:!0,data:o,method:n.method,action:i},i,o))}}))}function oi(t){function e(j){return Gl(j,t)}Gn!==null&&Gl(Gn,t),qn!==null&&Gl(qn,t),Yn!==null&&Gl(Yn,t),os.forEach(e),cs.forEach(e);for(var n=0;n<Kn.length;n++){var i=Kn[n];i.blockedOn===t&&(i.blockedOn=null)}for(;0<Kn.length&&(n=Kn[0],n.blockedOn===null);)hp(n),n.blockedOn===null&&Kn.shift();if(n=(t.ownerDocument||t).$$reactFormReplay,n!=null)for(i=0;i<n.length;i+=3){var o=n[i],u=n[i+1],m=o[he]||null;if(typeof u==
+
+Trong khi đối thủ vẫn loay hoay trong những group chat báo cáo không hồi kết, thì bạn đã hoàn thành
+
+>1.500 từ</mark> trong 10 phút, có timestamp, có gợi ý hình ảnh, có cấu trúc tâm lý chuẩn.
+
+chuỗi 7 email nurture
+
+, kéo khách về sales page. Setup đúng 1 lần,
+
+vào từng câu lệnh. Mỗi Đặc vụ đều được lập trình để suy nghĩ theo cấu trúc tâm lý khách hàng:
+
+)try{o.componentDidMount()}catch(M){Et(i,i.return,M)}if(i=u,o=i.updateQueue,o!==null){var y=i.stateNode;try{var j=o.shared.hiddenCallbacks;if(j!==null)for(o.shared.hiddenCallbacks=null,o=0;o<j.length;o++)Rf(j[o],y)}catch(M){Et(i,i.return,M)}}n&&m&64&&Yd(u),Pi(u,u.return);break;case 27:Qd(u);case 26:case 5:xn(o,u,n),n&&i===null&&m&4&&Fd(u),Pi(u,u.return);break;case 12:xn(o,u,n);break;case 31:xn(o,u,n),n&&m&4&&$d(o,u);break;case 13:xn(o,u,n),n&&m&4&&Wd(o,u);break;case 22:u.memoizedState===null&&xn(o,u,n),Pi(u,u.return);break;case 30:break;default:xn(o,u,n)}e=e.sibling}}function ac(t,e){var n=null;t!==null&&t.memoizedState!==null&&t.memoizedState.cachePool!==null&&(n=t.memoizedState.cachePool.pool),t=null,e.memoizedState!==null&&e.memoizedState.cachePool!==null&&(t=e.memoizedState.cachePool.pool),t!==n&&(t!=null&&t.refCount++,n!=null&&zi(n))}function ic(t,e){t=null,e.alternate!==null&&(t=e.alternate.memoizedState.cache),e=e.memoizedState.cache,e!==t&&(e.refCount++,t!=null&&zi(t))}function Ke(t,e,n,i){if(e.subtreeFlags&10256)for(e=e.child;e!==null;)nm(t,e,n,i),e=e.sibling}function nm(t,e,n,i){var o=e.flags;switch(e.tag){case 0:case 11:case 15:Ke(t,e,n,i),o&2048&&Zi(9,e);break;case 1:Ke(t,e,n,i);break;case 3:Ke(t,e,n,i),o&2048&&(t=null,e.alternate!==null&&(t=e.alternate.memoizedState.cache),e=e.memoizedState.cache,e!==t&&(e.refCount++,t!=null&&zi(t)));break;case 12:if(o&2048){Ke(t,e,n,i),t=e.stateNode;try{var u=e.memoizedProps,m=u.id,y=u.onPostCommit;typeof y==
+
+Hãy thẳng thắn nhìn vào cái
+
+Bật âm thanh — mở video
+
+>toàn bộ hệ thống bán hàng</mark> của công ty bạn đã vào guồng vận hành.
+
+không phải trả 30 triệu.
+
+THE GODFATHER OFFER: SỨC MẠNH CỦA ĐỘI QUÂN 12 AGENT
+
+. Những đoạn text đó có thể đọc được, nhưng
+
+không phải trả 150 triệu.
+
+KHÔNG PHẢI là một khoá học với 40-50 video bạn phải dành 3-6 tháng mới xem hết.
+
+hơn 20 lần thất bại đau đớn
+
+Bạn nhập tệp khách + offer. Agent viết trong 5 phút: Chuỗi 7 email chăm sóc sau opt-in · Email onboarding sau khi mua · Email upsell sản phẩm cao cấp hơn · Email re-engage tệp đã ngủ quên.
+
+. Thay vì để AI tự do nói nhảm, chúng tôi đã
+
+Bạn ôm khư khư nhiều nhất 978k trong túi. Bạn giữ lại được số tiền đó.
+
+Đây là 6 use case thực tế. So sánh thẳng cách làm hiện tại của bạn với cách làm khi có 12 AI Agent.
+
+6 use case: trước & sau khi có 12 Agent
+
+(câu lệnh) phức tạp
+
+Flow 3 bước đơn giản cho người mới:
+
+Câu trả lời nằm ở
+
+📷 Ảnh sẽ được cập nhật
+
+Bạn bỏ ra một khoản đầu tư nhỏ nhoi, đổi lại, bạn nhận ngay lập tức
+
+GIẢI ĐÁP NHỮNG THẮC MẮC TRƯỚC KHI BẠN BẮT ĐẦU
+
+SỞ HỮU 12 AI AGENT SUPER POWER
+
+Chúng tôi nói KHÔNG với chi phí ẩn.
+
+, và có thể mang về cho bạn
+
+File gốc chứa cấu trúc tư duy
+
+đóng gói sẵn kinh nghiệm từ những bộ óc kinh doanh hàng đầu thế giới
+
+nói đúng giọng thương hiệu, không báo giá lung tung
+
+:O=Yr;break;case
+
+Đằng nào bạn cũng phải học cách làm chủ AI. Hoặc là bạn bắt đầu ngay bây giờ để dẫn đầu thị trường với chi phí chưa tới 1 triệu đồng. Hoặc là chờ thêm một năm nữa, khi đối thủ đã dùng AI chiếm hết khách hàng, lúc đó bạn mới bắt đầu tìm hiểu thì đã quá muộn!
+
+,children:c.jsx(Yv,{className:
+
+Chân lý của tôi cực kỳ đơn giản:
+
+Chỉ có 200 suất với giá khuyến mãi này
+
+🎁 Bonus đặc biệt
+
+của khách hàng.
+
+Sở hữu 12 Nhân sự AI thực chiến - Không tăng quỹ lương
+
+)[0].trim()):!1,Y1=/var\(--(?:[\w-]+\s*|[\w-]+\s*,(?:\s*[^)(\s]|\s*\((?:[^)(]|\([^)(]*\))*\))+\s*)\)$/iu;function Op(a){return typeof a!=
+
+HỆ THỐNG NÀY KHÔNG PHẢI LÀ GÌ
+
+)}function Uw(a,s,l,r,h,d){var G,Y;const{visualElement:f}=_.useContext(vr),p=_.useContext(D0),x=_.useContext(gr),g=_.useContext(hh),b=g.reducedMotion,v=g.skipAnimations,N=_.useRef(null),w=_.useRef(!1);r=r||p.renderer,!N.current&&r&&(N.current=r(a,{visualState:s,parent:f,props:l,presenceContext:x,blockInitialAnimation:x?x.initial===!1:!1,reducedMotionConfig:b,skipAnimations:v,isSVG:d}),w.current&&N.current&&(N.current.manuallyAnimateOnMount=!0));const T=N.current,z=_.useContext(H0);T&&!T.projection&&h&&(T.type===
+
+Không lộ bí mật kinh doanh
+
+&&l(),s(a.YT)},!document.querySelector(
+
+. Với <span class=
+
+Hệ thống này chỉ dành cho:
+
+đối tác chiến lược của LadiPage từ năm 2017
+
+Bí mật nằm ở đây: Đừng dùng AI để
+
+Một thời gian sau…
+
+Bạn lướt Facebook đối thủ 1 buổi. Cảm tính ghi chép. Không biết làm sao để khác biệt.
+
+;case W:e=t._payload,t=t._init;try{return vt(t(e))}catch{}}return null}var Nt=Array.isArray,R=s.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,K=l.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,P={pending:!1,data:null,method:null,action:null},rt=[],ut=-1;function S(t){return{current:t}}function L(t){0>ut||(t.current=rt[ut],rt[ut]=null,ut--)}function F(t,e){ut++,rt[ut]=t.current,t.current=e}var I=S(null),it=S(null),ft=S(null),Tt=S(null);function re(t,e){switch(F(ft,e),F(it,t),F(I,null),e.nodeType){case 9:case 11:t=(t=e.documentElement)&&(t=t.namespaceURI)?Lm(t):0;break;default:if(t=e.tagName,e=e.namespaceURI)e=Lm(e),t=Um(e,t);else switch(t){case
+
+vũng lầy lừa bịp
+
+đã được gửi về email của bạn.
+
+Bộ setup Meta Business AI cho fanpage từ A đến Z
+
+Xây Hệ Thống Phễu
+
+(Đúng, chín-trăm-bảy-mươi-tám-nghìn-đồng. Không có phí ẩn. Không thu phí duy trì hàng tháng).
+
+Khoản tiền này chưa bằng
+
+Công cụ thực thi (Done-for-you)
+
+hàng trăm triệu doanh thu
+
+Biệt Đội Marketing Tinh Nhuệ
+
+dòng tiền của mình bốc hơi mỗi ngày
+
+>không bán được hàng</mark>?
+
+. Tôi không xuất hiện ở đó để nói đạo lý, tôi ở đó để nói về sự thật, cái sự thật
+
+Bạn nhập sản phẩm + 3 đối thủ. Agent phân tích và đặt tên cho <mark class=
+
+khi bạn đang đứng nhìn
+
+tinh gọn và tự động hóa
+
+Nhưng hôm nay, bạn
+
+:`Phát video: ${s}`,children:c.jsx(
+
+HIỆU SUẤT CỦA 5-10 CON NGƯỜI CỘNG LẠI
+
+Bạn lóc cóc lên mạng học viết content. Cắn bút cả buổi sáng viết được một bài, đăng lên
+
+Không nói suông. Hãy nhìn thẳng vào những gì
+
+tối ưu lợi nhuận lâu dài
+
+,i.digest=m,Oi({value:i,source:null,stack:null}),e=Po(t,e,n)}else if(Xt||qa(t,e,n,!1),m=(n&t.childLanes)!==0,Xt||m){if(m=Dt,m!==null&&(i=jh(m,n),i!==0&&i!==j.retryLane))throw j.retryLane=i,sa(t,i),xe(m,t,i),Yo;kc(y)||Sl(),e=Po(t,e,n)}else kc(y)?(e.flags|=192,e.child=t.child,e=null):(t=j.treeContext,_t=Be(y.nextSibling),te=e,bt=!0,Tn=null,Ve=!1,t!==null&&bf(e,t),e=Zo(e,i.children),e.flags|=4096);return e}return o?(Rn(),y=i.fallback,o=e.mode,j=t.child,M=j.sibling,i=ln(j,{mode:
+
+. Bạn tiếp tục bóp trán vì không có khách. Và bạn ngậm ngùi đứng nhìn dòng tiền đổ hết vào tay những
+
+Ly cà phê vẫn còn nóng, nhưng <mark class=
+
+>phải mất cả tuần</mark> để tìm hiểu.
+
+&&!u.alternate&&!bt)return Ot(e),null}else 2*be()-i.renderingStartTime>Nl&&n!==536870912&&(e.flags|=128,o=!0,Qi(i,!1),e.lanes=4194304);i.isBackwards?(u.sibling=e.child,e.child=u):(t=i.last,t!==null?t.sibling=u:e.child=u,i.last=u)}return i.tail!==null?(t=i.tail,i.rendering=t,i.tail=t.sibling,i.renderingStartTime=be(),t.sibling=null,n=Gt.current,F(Gt,o?n&1|2:n&1),bt&&rn(e,i.treeForkCount),t):(Ot(e),null);case 22:case 23:return Te(e),No(),i=e.memoizedState!==null,t!==null?t.memoizedState!==null!==i&&(e.flags|=8192):i&&(e.flags|=8192),i?(n&536870912)!==0&&(e.flags&128)===0&&(Ot(e),e.subtreeFlags&6&&(e.flags|=8192)):Ot(e),n=e.updateQueue,n!==null&&gl(e,n.retryQueue),n=null,t!==null&&t.memoizedState!==null&&t.memoizedState.cachePool!==null&&(n=t.memoizedState.cachePool.pool),i=null,e.memoizedState!==null&&e.memoizedState.cachePool!==null&&(i=e.memoizedState.cachePool.pool),i!==n&&(e.flags|=2048),t!==null&&L(ua),null;case 24:return n=null,t!==null&&(n=t.memoizedState.cache),e.memoizedState.cache!==n&&(e.flags|=2048),cn(Kt),Ot(e),null;case 25:return null;case 30:return null}throw Error(r(156,e.tag))}function db(t,e){switch(so(e),e.tag){case 1:return t=e.flags,t&65536?(e.flags=t&-65537|128,e):null;case 3:return cn(Kt),Ut(),t=e.flags,(t&65536)!==0&&(t&128)===0?(e.flags=t&-65537|128,e):null;case 26:case 27:case 5:return Es(e),null;case 31:if(e.memoizedState!==null){if(Te(e),e.alternate===null)throw Error(r(340));ra()}return t=e.flags,t&65536?(e.flags=t&-65537|128,e):null;case 13:if(Te(e),t=e.memoizedState,t!==null&&t.dehydrated!==null){if(e.alternate===null)throw Error(r(340));ra()}return t=e.flags,t&65536?(e.flags=t&-65537|128,e):null;case 19:return L(Gt),null;case 4:return Ut(),null;case 10:return cn(e.type),null;case 22:case 23:return Te(e),No(),t!==null&&L(ua),t=e.flags,t&65536?(e.flags=t&-65537|128,e):null;case 24:return cn(Kt),null;case 25:return null;default:return null}}function qd(t,e){switch(so(e),e.tag){case 3:cn(Kt),Ut();break;case 26:case 27:case 5:Es(e);break;case 4:Ut();break;case 31:e.memoizedState!==null&&Te(e);break;case 13:Te(e);break;case 19:L(Gt);break;case 10:cn(e.type);break;case 22:case 23:Te(e),No(),t!==null&&L(ua);break;case 24:cn(Kt)}}function Zi(t,e){try{var n=e.updateQueue,i=n!==null?n.lastEffect:null;if(i!==null){var o=i.next;n=o;do{if((n.tag&t)===t){i=void 0;var u=n.create,m=n.inst;i=u(),m.destroy=i}n=n.next}while(n!==o)}}catch(y){Et(e,e.return,y)}}function _n(t,e,n){try{var i=e.updateQueue,o=i!==null?i.lastEffect:null;if(o!==null){var u=o.next;i=u;do{if((i.tag&t)===t){var m=i.inst,y=m.destroy;if(y!==void 0){m.destroy=void 0,o=e;var j=n,M=y;try{M()}catch(V){Et(o,j,V)}}}i=i.next}while(i!==u)}}catch(V){Et(e,e.return,V)}}function Yd(t){var e=t.updateQueue;if(e!==null){var n=t.stateNode;try{_f(e,n)}catch(i){Et(t,t.return,i)}}}function Kd(t,e,n){n.props=pa(t.type,t.memoizedProps),n.state=t.memoizedState;try{n.componentWillUnmount()}catch(i){Et(t,e,i)}}function Pi(t,e){try{var n=t.ref;if(n!==null){switch(t.tag){case 26:case 27:case 5:var i=t.stateNode;break;case 30:i=t.stateNode;break;default:i=t.stateNode}typeof n==
+
+Lựa chọn cuối cùng
+
+Thay đổi tư duy thu tiền một lần cũ kỹ. Agent này thiết kế <span class=
+
+Cắt bỏ quỹ lương hàng tháng
+
+)?rN(s[1]):lN:cN;function Yx(a,s){if(a!=null&&a.inherit&&s){const{inherit:l,...r}=a;return{...s,...r}}return a}function Wu(a,s){const l=(a==null?void 0:a[s])??(a==null?void 0:a.default)??a;return l!==a?Yx(l,a):l}const hN=new Set([
+
+Sau khi khách opt-in, bạn không biết viết gì. Mở Mailchimp ra... rồi đóng lại. Không có email = không có chuyển đổi tăng thêm.
+
+Tôi không xây dựng một đội ngũ làm thuê, tôi xây dựng một
+
+THIẾT KẾ HỆ THỐNG
+
+Nội dung CK cần khớp với mã đơn hàng để hệ thống xác nhận thanh toán tự động.
+
+Bạn cắn răng nạp tiền chạy Facebook Ads. Đốt vài triệu, kết quả trả về là một
+
+12 nhân sự làm việc hộ mình
+
+Nguyễn Đức Phát
+
+một nhân sự xuất sắc nhất mà bạn từng biết.
+

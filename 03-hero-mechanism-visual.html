@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biệt Đội AI Agent — Hero Mechanism</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--gold:#c9a84c;--text:#f0f0f0;--card:#141414;--border:#2a2a2a;--muted:#9a9a92}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);padding:18px;max-width:760px;margin:0 auto;line-height:1.6}
+.badge{display:inline-block;font-size:10px;letter-spacing:.12em;color:var(--gold);border:1px solid var(--border);border-radius:20px;padding:4px 10px;margin-bottom:14px}
+h1{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:var(--gold);font-size:34px;line-height:1.1;margin-bottom:6px}
+.alt{font-size:13px;color:var(--muted);letter-spacing:.04em;margin-bottom:14px}
+.one{font-size:16px;font-style:italic;border-left:3px solid var(--gold);padding:10px 14px;margin-bottom:8px;color:#e8e2cf}
+.simple{font-size:13px;color:var(--muted);margin-bottom:20px;padding-left:14px}
+.sec{font-size:11px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin:22px 0 10px}
+.step{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px;border-left:3px solid var(--gold);position:relative}
+.step .n{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);font-size:22px;margin-bottom:4px}
+.step h3{font-size:15px;margin-bottom:6px}
+.step p{font-size:13px;color:#d8d8d2;margin-bottom:5px}
+.step .vs{font-size:12px;color:var(--gold)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.off{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.off .t{color:var(--gold);font-weight:700;font-size:14px;margin-bottom:6px}
+.off .lay{font-size:11px;color:var(--muted);margin-bottom:6px}
+.off p{font-size:12.5px;color:#d8d8d2}
+.list{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 16px}
+.list li{font-size:13px;margin:0 0 6px 16px}
+.list li b{color:var(--gold)}
+.map li{font-size:12.5px;margin:0 0 6px 16px;color:#d8d8d2}
+.map li b{color:#f0f0f0}
+.btns{display:flex;gap:8px;position:sticky;bottom:0;padding:14px 0;background:linear-gradient(transparent,var(--bg) 35%)}
+.btn{flex:1;padding:12px;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans'}
+.btn.p{background:var(--gold);color:#0a0a0a}.btn.g{background:var(--card);color:var(--text);border:1px solid var(--border)}
+.foot{text-align:center;font-size:11px;color:var(--muted);margin:18px 0 6px}
+@media(max-width:480px){.grid2{grid-template-columns:1fr}h1{font-size:28px}}
+</style>
+</head>
+<body>
+
+<span class="badge">HERO MECHANISM · ASSP 03/12</span>
+<h1>Biệt Đội AI Agent</h1>
+<div class="alt">Hệ Thống 3 Lớp Tự Chạy — Dũng Hoàng</div>
+
+<div class="one">“Cách giúp người làm một mình có cả một đội nhân viên AI biết tự làm việc — nói đúng giọng của bạn, có đội trưởng Tiểu Hà Mã trực 24/7 — để việc tự chạy kể cả khi bạn ngủ, mà không cần rành công nghệ.”</div>
+<div class="simple">Người khác bán cho bạn một thùng đồ nghề rồi để bạn tự mò. Dũng giúp bạn tuyển một biệt đội AI, dạy cả đội nói tiếng của bạn, xếp đội hình, rồi giao bạn một đội trưởng (Tiểu Hà Mã) chỉ huy cả đội thay bạn.</div>
+
+<div class="sec">3 Lớp Tự Chạy</div>
+
+<div class="step">
+  <div class="n">01</div>
+  <h3>Nạp Giọng — huấn luyện cả đội nói tiếng của bạn</h3>
+  <p>Dạy AI nói đúng giọng Dũng trước khi cho làm việc. Content ra đơn là content nghe ra chính bạn, không phải giọng máy.</p>
+  <div class="vs">👉 Đối thủ bỏ qua — phát prompt chung, ai xài cũng giống nhau.</div>
+</div>
+<div class="step">
+  <div class="n">02</div>
+  <h3>Xếp Đội Hình — lắp 25 skill thành một dây chuyền</h3>
+  <p>Ráp 25 skill thành dây chuyền: hiểu khách → offer → trang bán → content → email. Mỗi skill một nhiệm vụ trong phễu.</p>
+  <div class="vs">👉 Đối thủ bán “32 agent rời” — khách phải tự nghĩ ráp sao rồi để đó.</div>
+</div>
+<div class="step">
+  <div class="n">03</div>
+  <h3>Thả Đội Trưởng Hà Mã — nhân viên AI sống trên Telegram</h3>
+  <p>Tiểu Hà Mã chạy trên GoClaw, trực 24/7: tự viết bài, tự trả khách, tự báo đơn &amp; hoa hồng.</p>
+  <div class="vs">👉 Không đối thủ giá rẻ nào giao một con bot sống biết tự làm việc.</div>
+</div>
+
+<div class="sec">Vì sao hoạt động &amp; điểm đối thủ không có</div>
+<div class="list">
+  <ul>
+    <li><b>Vận hành thật:</b> Dũng đang chạy homestay + AI Agent cho công ty 1 người — bàn giao thứ đang chạy thật.</li>
+    <li><b>Đi cùng, không dạy đời:</b> “mình từng vấp, đứng dậy, chia sẻ lại” — khách tin theo kiểu bạn bè.</li>
+    <li><b>Không bỏ rơi:</b> bảo hành 14 ngày + Khóa 2 cài tận tay (đối thủ 3 ngày, hỗ trợ mỏng).</li>
+    <li><b>Đội trưởng AI sống Hà Mã</b> + <b>nạp giọng riêng</b> — hai thứ đối thủ giá rẻ không có.</li>
+  </ul>
+</div>
+
+<div class="sec">Cơ chế theo từng khóa</div>
+<div class="grid2">
+  <div class="off">
+    <div class="t">Khóa 1 — Bản Tự Lập · 686.868đ</div>
+    <div class="lay">Dùng Lớp 1 + 2 + Hà Mã hỏi-đáp</div>
+    <p>Tự nạp giọng + tự xếp đội hình 25 skill (video chỉ tay + cộng đồng + Hà Mã phụ khi kẹt). Bài đầu đúng giọng bạn trong 7 ngày.</p>
+  </div>
+  <div class="off">
+    <div class="t">Khóa 2 — Bản Có Đội Trưởng · 2.768.686đ</div>
+    <div class="lay">Dùng cả 3 Lớp</div>
+    <p>Thêm bộ SOP từng bước + đội trưởng Tiểu Hà Mã kèm sát 24/7 qua Telegram (cầm tay chỉ việc). Dựng xong hệ thống tự chạy trong 30 ngày.</p>
+  </div>
+</div>
+
+<div class="sec">Bản đồ dùng trong marketing</div>
+<div class="list map">
+  <ul>
+    <li><b>Offer:</b> “tại sao chọn Dũng” = có Biệt Đội + đội trưởng Hà Mã; bảo hành gắn 3 lớp.</li>
+    <li><b>Quảng cáo:</b> hook nhắc tên + nỗi đau “mua combo về tự bấm”.</li>
+    <li><b>VSL:</b> story kiệt sức → 3 lớp bằng hình → đóng đinh tên.</li>
+    <li><b>Email:</b> mỗi email một lớp; email bán nhấn “đội trưởng chỉ có ở Khóa 2”.</li>
+    <li><b>Sales call:</b> “Lớp 3 — đội trưởng Hà Mã — thiết kế đúng cho lúc bạn ôm hết một mình”.</li>
+  </ul>
+</div>
+
+<div class="btns">
+  <button class="btn p" onclick="dl()">📥 Tải hero-mechanism.md</button>
+  <button class="btn g" onclick="cp()">📋 Copy text thô</button>
+</div>
+<div class="foot">Được thiết kế bởi ASSP Framework</div>
+
+<script>
+const T=`=== HERO MECHANISM — DUNG HOANG ===
+TEN CO CHE: BIET DOI AI AGENT (He Thong 3 Lop Tu Chay)
+MO TA: Cach giup nguoi lam mot minh co ca mot doi nhan vien AI biet tu lam viec - noi dung giong cua ban, co doi truong Tieu Ha Ma truc 24/7 - de viec tu chay ke ca khi ban ngu, ma khong can ranh cong nghe.
+
+CAC LOP:
+1. NAP GIONG - huan luyen ca doi noi tieng cua ban (doi thu bo qua, phat prompt chung).
+2. XEP DOI HINH - lap 25 skill thanh mot day chuyen ban hang (doi thu ban 32 agent roi, khach de do).
+3. THA DOI TRUONG HA MA - nhan vien AI song tren Telegram/GoClaw, truc 24/7 (doi thu khong co bot song).
+
+VI SAO HOAT DONG: Dung van hanh that (homestay + AI Agent cong ty 1 nguoi); "minh tung vap, di cung ban khong day doi"; khong bo roi (bao hanh 14 ngay + Khoa 2 cai tan tay).
+DIEM KHAC DOI THU: nap giong rieng + doi truong Ha Ma song + tu the ngang hang + di cung sau ban.
+
+THEO TUNG KHOA:
+- Khoa 1 "Ban Tu Lap" (Lop 1+2): tu nap giong + tu xep 25 skill. Bai dau dung giong trong 7 ngay.
+- Khoa 2 "Ban Co Doi Truong" (ca 3 Lop): Dung tha Tieu Ha Ma tan tay tren Telegram. Co AI song 24/7 trong 30 ngay.
+
+* File day du: 03-hero-mechanism.md`;
+function dl(){const b=new Blob([T],{type:'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='hero-mechanism.txt';a.click();}
+function cp(){navigator.clipboard.writeText(T).then(()=>{event.target.textContent='✓ Đã copy';setTimeout(()=>event.target.textContent='📋 Copy text thô',1500);});}
+</script>
+</body>
+</html>
