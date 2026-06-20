@@ -61,6 +61,7 @@ export default function DashboardPage() {
           <span className="text-sm font-bold text-[#0d2b1a] tracking-wide">DungHoang.com</span>
           <div className="flex items-center gap-4">
             <span className="text-xs text-gray-400 hidden sm:block">{user?.email}</span>
+            <a href="/portal/tai-khoan" className="text-xs text-gray-400 hover:text-[#0d2b1a] transition-colors">Tài khoản</a>
             <button onClick={() => supabase!.auth.signOut().then(() => router.push('/portal/login'))} className="text-xs text-gray-400 hover:text-gray-600">Đăng xuất</button>
           </div>
         </div>
