@@ -317,9 +317,14 @@ export const CHALLENGE_EMAILS = [day1, day2, day3, day4, day5, day6, day7]
 
 export function getChallengeEmail(
   day: number,
-  name: string
+  name: string,
+  email?: string
 ): { subject: string; html: string } | null {
   const fn = CHALLENGE_EMAILS[day - 1]
   if (!fn) return null
-  return fn(name)
+  const result = fn(name)
+  if (email) {
+    result.html = result.html.replace('{{email}}', encodeURIComponent(email))
+  }
+  return result
 }

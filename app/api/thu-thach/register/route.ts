@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
     })
 
     // ── 3. Gửi email ngày 1 ngay lập tức ────────────────────────
-    const email1 = getChallengeEmail(1, cleanName)
+    const email1 = getChallengeEmail(1, cleanName, cleanEmail)
     if (email1) {
       const { error: mailError } = await sendEmail({
         to:      cleanEmail,

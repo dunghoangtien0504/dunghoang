@@ -59,7 +59,7 @@ export async function GET(req: NextRequest) {
       continue
     }
 
-    const emailContent = getChallengeEmail(nextDay, sub.name ?? 'bạn')
+    const emailContent = getChallengeEmail(nextDay, sub.name ?? 'bạn', sub.email)
     if (!emailContent) continue
 
     try {
