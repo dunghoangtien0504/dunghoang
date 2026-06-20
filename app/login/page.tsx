@@ -30,9 +30,25 @@ export default function LoginPage() {
     if (!email || !password) { setError('Vui lòng nhập đầy đủ thông tin.'); return }
     setLoading(true)
     setError('')
-    await new Promise(r => setTimeout(r, 900))
-    setLoading(false)
-    window.location.href = '/admin'
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: email, password })
+      })
+      const data = await res.json()
+      if (res.ok && data.success) {
+        const params = new URLSearchParams(window.location.search)
+        const redirectPath = params.get('from') || '/admin'
+        window.location.href = redirectPath
+      } else {
+        setError(data.error || 'Đăng nhập không thành công.')
+      }
+    } catch (err) {
+      setError('Đã xảy ra lỗi kết nối với máy chủ.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -225,19 +241,7 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <div className="flex items-center gap-3 my-5">
-            <div className="flex-1 h-px bg-border" />
-            <span className="text-text-muted text-xs">hoặc</span>
-            <div className="flex-1 h-px bg-border" />
-          </div>
-
-          <Link
-            href="/admin"
-            className="w-full flex items-center justify-center gap-2 h-11 bg-surface border border-border rounded-lg text-sm text-text-secondary hover:border-brand-border/40 hover:text-text-primary hover:bg-surface-2 transition-all shadow-card"
-          >
-            <BookOpen size={14} className="text-text-muted" />
-            Xem demo (không cần tài khoản)
-          </Link>
+          {/* Đã gỡ bỏ nút demo tự do để bảo mật hệ thống */}
 
           <p className="text-center text-text-muted text-xs mt-6">
             Chưa có tài khoản?{' '}

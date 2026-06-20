@@ -27,10 +27,8 @@ export function middleware(request: NextRequest) {
   if (isProtected) {
     const token = request.cookies.get(AUTH_COOKIE)?.value
 
-    // TODO: Khi tích hợp Supabase/NextAuth, thay thế check này bằng session thật
-    // Hiện tại bypass cho development — REMOVE khi production
-    const isDev = process.env.NODE_ENV === 'development'
-    if (!token && !isDev) {
+    // Yêu cầu token phải tồn tại và có giá trị khớp
+    if (token !== 'authenticated') {
       const loginUrl = new URL('/login', request.url)
       loginUrl.searchParams.set('from', pathname)
       return NextResponse.redirect(loginUrl)
