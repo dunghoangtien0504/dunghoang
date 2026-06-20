@@ -1,10 +1,10 @@
 ---
-name: assp-ad-copy-machine
+name: aafb-ad-copy-machine
 description: Write copy for each page in the funnel — ads, opt-in page, thank you page, sales page, VSL script, email sequences, upsell page, HVCO content. Use when the user wants to "write ads", "write copy", "write a sales page", "write emails", "write a VSL", "write in a storytelling style", "write in Hormozi/Sabri style", "write brand story", "origin story", "sales page storytelling", or after having a Funnel Blueprint from Funnel Strategist (07). Always ask about writing style first — even when a blueprint exists — because the same offer written in different styles attracts different people.
 ---
 
-# ASSP — Ad Copy Machine
-## Agent 08/12 · ASSP Framework
+# AAFB — Ad Copy Machine
+## Agent 08/12 · AAFB Framework
 
 ---
 
@@ -128,7 +128,7 @@ After each file → ask: *"Done. Continue writing [next page]?"*
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** Ad Copy Machine (08) — Write copy for each funnel page
 

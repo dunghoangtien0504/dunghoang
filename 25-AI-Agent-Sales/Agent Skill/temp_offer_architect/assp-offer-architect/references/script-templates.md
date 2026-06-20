@@ -121,7 +121,7 @@ Sau khi qua đủ các bước và danh sách kiểm tra, tổng hợp theo form
 ```
 ═══════════════════════════════════════════════════
 [TÊN SẢN PHẨM — theo công thức M-A-G-I-C]
-Được thiết kế bởi ASSP Framework
+Được thiết kế bởi AAFB Framework
 ═══════════════════════════════════════════════════
 
 ▸ LỜI HỨA CỐT LÕI
@@ -220,14 +220,14 @@ Tạo một HTML artifact hiển thị toàn bộ lời đề nghị theo thiế
 - Label/tag: monospace nhỏ, uppercase
 
 **Layout:**
-- Header nổi bật: tên sản phẩm (M-A-G-I-C) + badge "ASSP by ASSP"
+- Header nổi bật: tên sản phẩm (M-A-G-I-C) + badge "AAFB by AAFB"
 - Lời hứa cốt lõi: text lớn, nổi bật nhất trang — đây là thứ khách đọc đầu tiên
 - Bảng giá trị: layout 2 cột — tính năng bên trái, giá trị bên phải, tổng được highlight
 - Quà tặng: mỗi cái là một card riêng với icon 🎁
 - Cam kết: box riêng viền vàng, nền tối hơn — phải nổi bật
 - Khan hiếm + Thúc giục: badge đỏ/cam — tạo urgency
 - Gói giá: 3 card cạnh nhau, gói chính được highlight
-- Footer: "Được thiết kế bởi ASSP Framework"
+- Footer: "Được thiết kế bởi AAFB Framework"
 
 **Tính năng:**
 - Nút "📋 Copy Text Thô" ở góc trên phải — click để copy toàn bộ text sang clipboard
@@ -242,7 +242,7 @@ Sau visual, xuất file markdown hoàn chỉnh:
 ```
 # OFFER — [TÊN SẢN PHẨM]
 ## Loại: [Attraction / Classic Upsell / Rollover / Payment Plan / ...]
-## ASSP Framework — offer-[tên-viết-tắt]-v1.md
+## AAFB Framework — offer-[tên-viết-tắt]-v1.md
 
 [Toàn bộ lời đề nghị dạng markdown]
 [Dùng ## cho các section lớn, - cho bullet points]

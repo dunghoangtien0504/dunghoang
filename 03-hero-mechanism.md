@@ -1,5 +1,5 @@
 # HERO MECHANISM — DŨNG HOÀNG
-### ASSP Agent 03/12 · "Biệt Đội AI Agent" · Ngày tạo 19/06/2026
+### AAFB Agent 03/12 · "Biệt Đội AI Agent" · Ngày tạo 19/06/2026
 > Cơ chế độc quyền khiến khách **không thể so sánh Dũng với đối thủ**. Nạp file này vào Agent 04 (Money Model), 05 (Offer), 08 (Ad Copy), 09 (VSL), 10 (Email). Mọi nội dung phải nhắc đúng tên "Biệt Đội AI Agent" và 3 lớp.
 
 ---

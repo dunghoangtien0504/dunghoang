@@ -1,5 +1,5 @@
 # FUNNEL BLUEPRINT — Biệt Đội AI Agent
-## ASSP Agent 07/12 · funnel-blueprint-biet-doi-ai-agent-v1.md
+## AAFB Agent 07/12 · funnel-blueprint-biet-doi-ai-agent-v1.md
 
 ---
 
@@ -12,7 +12,7 @@
 - **Thanh toán:** Sepay (đã có sẵn — dùng luôn)
 - **Khu học:** Google Drive + YouTube riêng tư (giai đoạn đầu, miễn phí, đủ dùng < 50 học viên); nâng lên Teachable khi sẵn sàng
 - **Application form 1-kèm-1:** Google Form (đủ dùng, miễn phí)
-- **Affiliate:** Tự build trang admin riêng (làm sau khi hoàn thành ASSP 08-12); giai đoạn đầu dùng Google Sheet theo dõi thủ công
+- **Affiliate:** Tự build trang admin riêng (làm sau khi hoàn thành AAFB 08-12); giai đoạn đầu dùng Google Sheet theo dõi thủ công
 
 ---
 
@@ -290,7 +290,7 @@
 - Khóa 1 + Mini: 20% hoa hồng
 - Khóa 2 + 1-kèm-1: 10% hoa hồng
 
-**Giai đoạn 2:** Tự build trang admin affiliate (xem danh sách affiliate, đơn hàng, tổng hoa hồng) — làm sau khi hoàn thành ASSP 08-12
+**Giai đoạn 2:** Tự build trang admin affiliate (xem danh sách affiliate, đơn hàng, tổng hoa hồng) — làm sau khi hoàn thành AAFB 08-12
 
 ---
 

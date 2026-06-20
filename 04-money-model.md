@@ -1,5 +1,5 @@
 # MONEY MODEL — DŨNG HOÀNG ("Biệt Đội AI Agent")
-### ASSP Agent 04/12 · Ngày tạo 19/06/2026
+### AAFB Agent 04/12 · Ngày tạo 19/06/2026
 > Bản đồ toàn bộ dòng tiền. Nạp file này vào Agent 05 (Offer Architect) để xây chi tiết từng offer. Money Model là tài liệu sống — soát lại mỗi 3-6 tháng.
 
 ---

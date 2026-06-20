@@ -1,10 +1,10 @@
 ---
-name: assp-offer-architect
+name: aafb-offer-architect
 description: Build an irresistible offer for a product/service — using Sabri Suby + Hormozi's packaging and pricing formulas. Use when the user wants to "create an offer", "how to sell more", "my offer is weak", "customers won't buy", "how to increase close rate", "build offer for each type in money model", or after having Money Model from Money Model Architect (04). Run AFTER Money Model Architect (04). Build one offer at a time — never all at once.
 ---
 
-# ASSP — Offer Architect
-## Agent 05/12 · ASSP Framework
+# AAFB — Offer Architect
+## Agent 05/12 · AAFB Framework
 
 ---
 
@@ -154,7 +154,7 @@ File naming: `offer-[short-name]-v1.md`
 
 **2 required parts:**
 
-1. **HTML visual** following ASSP standards (see presentation guidelines below)
+1. **HTML visual** following AAFB standards (see presentation guidelines below)
 2. **.md file** to save and paste into the next agent
 
 ---
@@ -168,7 +168,7 @@ Do not use English marketing terms when a Vietnamese equivalent exists.
 
 ## Result Presentation Guidelines — Required
 
-When outputting final results → always create an HTML visual following ASSP standards:
+When outputting final results → always create an HTML visual following AAFB standards:
 
 - Background: `var(--color-background-primary/secondary)`
 - Text: CSS variables — do not hardcode colors
@@ -180,7 +180,7 @@ When outputting final results → always create an HTML visual following ASSP st
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** Offer Architect (05) — Build each offer in the Money Model in detail
 

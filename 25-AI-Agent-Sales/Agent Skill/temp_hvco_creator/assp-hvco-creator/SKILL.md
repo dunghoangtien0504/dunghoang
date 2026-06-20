@@ -1,10 +1,10 @@
 ---
-name: assp-hvco-creator
+name: aafb-hvco-creator
 description: Research and brainstorm HVCO (High Value Content Offer — free lead magnet) ideas matching the offer and avatar — outputs a detailed brief for copywriting agents to write the content. Use when the user wants to "create a free lead magnet", "lead magnet", "attract strangers", "increase leads", "HVCO", "create free content for ads", or after having Offer Architect (05). Run AFTER Avatar Builder (01) and Offer Architect (05), BEFORE Ad Copy Machine (08) and Funnel Strategist (07). This agent generates ideas and writes the brief — does NOT write HVCO content or opt-in page copy.
 ---
 
-# ASSP — HVCO Creator
-## Agent 06/12 · ASSP Framework
+# AAFB — HVCO Creator
+## Agent 06/12 · AAFB Framework
 
 ---
 
@@ -140,7 +140,7 @@ Selection criteria:
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** HVCO Creator (06) — Research and brief lead magnet ideas
 

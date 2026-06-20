@@ -1,5 +1,5 @@
 # OFFER — KHÓA 2 "BẢN CÓ ĐỘI TRƯỞNG"
-### ASSP Agent 05/12 · Lời đề nghị không thể từ chối · Ngày tạo 19/06/2026
+### AAFB Agent 05/12 · Lời đề nghị không thể từ chối · Ngày tạo 19/06/2026
 > Xương sống lợi nhuận. Nạp file này vào Agent 08 (Ad Copy), 09 (VSL), 10 (Email). Mọi câu chữ hướng khách phải giữ giọng Dũng (xem 02-voice-profile.md): văn nói, không em-dash, không cụm copywriter, không CTA mệnh lệnh.
 
 ---

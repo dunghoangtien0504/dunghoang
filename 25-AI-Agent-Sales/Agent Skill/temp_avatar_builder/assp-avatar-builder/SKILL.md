@@ -1,10 +1,10 @@
 ---
-name: assp-avatar-builder
+name: aafb-avatar-builder
 description: Build a complete Dream Buyer Avatar. Use when the user wants to "understand customers", "build avatar", "find ICP", "research target audience", "find pain points", "know what customers think", "write copy for the right person", or prepare for any marketing activity. This is the FIRST required step before writing ads, offers, VSLs, or funnels.
 ---
 
-# ASSP — Avatar Builder
-## Agent 01/12 · ASSP Framework
+# AAFB — Avatar Builder
+## Agent 01/12 · AAFB Framework
 
 ---
 
@@ -98,7 +98,7 @@ Always create an HTML visual when outputting results:
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** Avatar Builder (01) — Build a complete customer profile
 

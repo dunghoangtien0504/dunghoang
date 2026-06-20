@@ -1,5 +1,5 @@
 # OPT-IN PAGE COPY — THỬ THÁCH 7 NGÀY AI VIẾT BÀI
-## ASSP Agent 08/12 · URL: dunghoang.com/thu-thach-7-ngay · Ngày tạo: 20/06/2026
+## AAFB Agent 08/12 · URL: dunghoang.com/thu-thach-7-ngay · Ngày tạo: 20/06/2026
 > Mục tiêu: 25-35% opt-in rate. Chưa bán gì. Chỉ thu email đổi lấy thử thách miễn phí.
 > Giọng: nhẹ, tâm sự, không CTA mệnh lệnh. KHÔNG đặt giá, KHÔNG nút mua.
 > Form: Tên + Email → "Gửi cho tôi ngay"

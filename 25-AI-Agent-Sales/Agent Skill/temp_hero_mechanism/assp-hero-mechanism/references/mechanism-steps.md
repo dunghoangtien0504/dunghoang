@@ -110,7 +110,7 @@ Ví dụ: "Hệ Thống 3 Tầng Nặn Bánh Hình Thú Cô Ngọc"
 [Tên riêng bạn đặt] + [Mô tả ngắn]
 Ví dụ: "Phương Pháp Hình Thú — Cách Nặn Bánh Không Cần Năng Khiếu"
         "Hệ Thống KP3 — Từ Expert Đến E-Learning Business Trong 90 Ngày"
-        "Công Thức ASSP — Bán Hàng Bằng AI Mà Không Cần Học Marketing"
+        "Công Thức AAFB — Bán Hàng Bằng AI Mà Không Cần Học Marketing"
 ```
 
 **Công thức 3 — Viết tắt có nghĩa:**
@@ -276,7 +276,7 @@ SALES CALL (Email Closer (10)):
 
 ### Phần 1 — Visual HTML đẹp
 
-Tạo HTML artifact hiển thị Hero Mechanism theo thiết kế ASSP:
+Tạo HTML artifact hiển thị Hero Mechanism theo thiết kế AAFB:
 
 **Màu sắc & Brand:**
 - Nền: #0a0a0a (đen sâu)
@@ -292,12 +292,12 @@ Tạo HTML artifact hiển thị Hero Mechanism theo thiết kế ASSP:
 - Tên mechanism: to, vàng gold, nổi bật nhất trang
 
 **Layout:**
-- Header: Tên mechanism lớn + badge "ASSP by ASSP"
+- Header: Tên mechanism lớn + badge "AAFB by AAFB"
 - Một câu mô tả: italic, to, ở dưới tên
 - Các bước mechanism: timeline hoặc card dọc với số thứ tự vàng gold
 - Phần mechanism theo offer: accordion hoặc tab — mỗi offer một card
 - Bản đồ sử dụng: checklist có icon
-- Footer: "Được thiết kế bởi ASSP Framework"
+- Footer: "Được thiết kế bởi AAFB Framework"
 
 **Tính năng:**
 - Nút "📋 Copy Text Thô" góc trên phải
@@ -307,7 +307,7 @@ Tạo HTML artifact hiển thị Hero Mechanism theo thiết kế ASSP:
 
 ```
 === HERO MECHANISM — [TÊN DOANH NGHIỆP] ===
-Được thiết kế bởi ASSP Framework
+Được thiết kế bởi AAFB Framework
 
 TÊN MECHANISM: [...]
 MÔ TẢ: [...]

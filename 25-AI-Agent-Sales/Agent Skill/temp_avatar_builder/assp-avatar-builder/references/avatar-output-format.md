@@ -4,8 +4,8 @@ Sau khi thu thập đủ 9 câu hỏi, tạo output đầy đủ theo format sau
 
 ```
 ═══════════════════════════════════════════════════
-ASSP DREAM BUYER AVATAR — [TÊN DOANH NGHIỆP]
-Được thiết kế bởi ASSP Framework
+AAFB DREAM BUYER AVATAR — [TÊN DOANH NGHIỆP]
+Được thiết kế bởi AAFB Framework
 ═══════════════════════════════════════════════════
 
 📊 NGUỒN DATA ĐƯỢC DÙNG:

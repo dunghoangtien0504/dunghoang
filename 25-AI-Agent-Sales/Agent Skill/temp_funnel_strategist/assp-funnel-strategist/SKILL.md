@@ -1,10 +1,10 @@
 ---
-name: assp-funnel-strategist
+name: aafb-funnel-strategist
 description: Map out a complete customer journey blueprint — show all funnel theory, suggest the best fit, confirm with the user, and output a blueprint complete enough for Ad Copy Machine to write copy for the entire funnel immediately. Use when the user wants to "map a funnel", "customer journey", "design a sales funnel", "funnel for a course", "flow from ads to sales", "funnel blueprint", or after having a Money Model and Offer. Run AFTER Money Model Architect (04) and Offer Architect (05), BEFORE Ad Copy Machine (08) and VSL Scriptwriter (09). This agent maps the blueprint — does NOT write copy. The blueprint contains enough detail for Ad Copy Machine (08) to write all funnel copy without asking further questions.
 ---
 
-# ASSP — Funnel Strategist
-## Agent 07/12 · ASSP Framework
+# AAFB — Funnel Strategist
+## Agent 07/12 · AAFB Framework
 
 ---
 
@@ -150,7 +150,7 @@ Do not use English marketing terms when a Vietnamese equivalent exists.
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** Funnel Strategist (07) — Map the customer journey blueprint
 

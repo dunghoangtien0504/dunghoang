@@ -1,10 +1,10 @@
 ---
-name: assp-sales-call-script
+name: aafb-sales-call-script
 description: Write a closing call script — call structure from opening to close, deep-dive questions, objection handling, how to state price confidently. Use when the user wants "call script", "sales call script", "how to close over the phone", "student interview script", "sales call script", "how to handle objections", "how to state price", "phone consultation", or after having an Application Funnel from Funnel Strategist (07). Script follows the "sell like a doctor" philosophy — diagnose first, prescribe later. All outputs in natural Vietnamese.
 ---
 
-# ASSP — Sales Call Script
-## Agent 12/12 · ASSP Framework
+# AAFB — Sales Call Script
+## Agent 12/12 · AAFB Framework
 
 ---
 
@@ -137,7 +137,7 @@ File includes:
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** Sales Call Script (12) — Script for closing calls
 

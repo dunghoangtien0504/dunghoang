@@ -1,5 +1,5 @@
 # ADS COPY — BIỆT ĐỘI AI AGENT
-## ASSP Agent 08/12 · Facebook Cold Traffic · Ngày tạo: 20/06/2026
+## AAFB Agent 08/12 · Facebook Cold Traffic · Ngày tạo: 20/06/2026
 > File này chứa 9 ad angle cho 3 sản phẩm trong phễu.
 > Giọng: tâm sự bạn thân, mở bằng cảnh đời thường + giờ cụ thể, xưng "mình"/gọi "bạn".
 > Style: Story Selling + giọng cá nhân tự nhiên.

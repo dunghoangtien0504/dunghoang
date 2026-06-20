@@ -1,10 +1,10 @@
 ---
-name: assp-vsl-scriptwriter
+name: aafb-vsl-scriptwriter
 description: Write a complete video sales letter (VSL) script — from the first hook to the final CTA. Use when the user wants to "write a video script", "write a VSL", "sales video", "script for a long-form video ad", "product explainer video", "landing page video", or after having a Sales Page from Ad Copy Machine (08). Receives offer file + sales page (if available) → asks about VSL type and length → writes a complete script with timestamps + visual suggestions. Different from Ad Copy Machine (08) which writes text — this agent writes scripts to be spoken on camera or as voiceover.
 ---
 
-# ASSP — VSL Scriptwriter
-## Agent 09/12 · ASSP Framework
+# AAFB — VSL Scriptwriter
+## Agent 09/12 · AAFB Framework
 
 ---
 
@@ -194,7 +194,7 @@ Do not use English marketing terms when a Vietnamese equivalent exists.
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** VSL Scriptwriter (09) — Write video sales letter scripts
 

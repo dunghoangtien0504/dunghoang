@@ -1,3 +1,3 @@
 window.config = {
-  apiUrl: 'https://theallinplan.com/api'
+  apiUrl: 'https://dunghoang.com/api'
 };

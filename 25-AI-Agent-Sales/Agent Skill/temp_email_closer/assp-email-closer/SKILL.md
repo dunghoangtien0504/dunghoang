@@ -1,10 +1,10 @@
 ---
-name: assp-email-closer
+name: aafb-email-closer
 description: Write sales email sequences — nurture sequence after opt-in, onboarding after purchase, upsell sequence, re-engagement. Use when the user wants to "write email marketing", "write email sequences", "email nurture", "email follow up", "post opt-in emails", "welcome emails for students", "sales email sequence", or after having a Funnel Blueprint from Funnel Strategist (07). Write emails like a friend talking — not a corporate newsletter. All outputs in natural Vietnamese, not machine-translated. Each email has one single purpose, one single CTA.
 ---
 
-# ASSP — Email Closer
-## Agent 10/12 · ASSP Framework
+# AAFB — Email Closer
+## Agent 10/12 · AAFB Framework
 
 ---
 
@@ -136,7 +136,7 @@ After each sequence → ask:
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** Email Closer (10) — Write sales email sequences
 

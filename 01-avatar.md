@@ -1,4 +1,4 @@
-# ASSP DREAM BUYER AVATAR — DŨNG HOÀNG (DungHoang.com)
+# AAFB DREAM BUYER AVATAR — DŨNG HOÀNG (DungHoang.com)
 ### Agent 01/12 · Nền tảng cho mọi copy, offer, ads, funnel phía sau
 > Đây là **avatar giả định có cơ sở** (chưa có khách mua thật). Xây từ: nghiên cứu thị trường + phân tích đối thủ chung tệp. **PHẢI kiểm chứng** bằng 5–10 cuộc bán tay thật rồi cập nhật lại file này.
 
@@ -7,7 +7,7 @@
 ## 📊 NGUỒN DATA ĐƯỢC DÙNG
 
 - ✅ **Data thật:** mô tả sản phẩm của Dũng Hoàng (25 skill, 2 khóa, Tiểu Hà Mã/GoClaw, affiliate); xác nhận của Dũng Hoàng rằng 5 đối thủ gửi kèm là **chung tệp khách hàng mục tiêu**.
-- 🔍 **AI Research:** phân tích trang bán 4 đối thủ (Âu Văn Chiều combo 32 agent 997k; ASSP; Teamwork AI Kesflow 5–7tr; Tuấn Hà/AI SOLO 199k) + tìm kiếm web về nỗi đau của người kinh doanh một mình & người học khóa AI.
+- 🔍 **AI Research:** phân tích trang bán 4 đối thủ (Âu Văn Chiều combo 32 agent 997k; AAFB; Teamwork AI Kesflow 5–7tr; Tuấn Hà/AI SOLO 199k) + tìm kiếm web về nỗi đau của người kinh doanh một mình & người học khóa AI.
 - ⚠️ **Giả định (cần validate):** tên/tuổi/thu nhập nhân vật, quote ngôn ngữ cụ thể (đang là *paraphrase* tổng hợp, chưa phải quote nguyên văn có nguồn), cảm xúc sâu nhất. → Hỏi 5 khách thật để thay bằng lời nói nguyên văn của họ.
 
 ---

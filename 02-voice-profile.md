@@ -1,5 +1,5 @@
 # VOICE PROFILE — DŨNG HOÀNG
-### ASSP Agent 02/12 · Phiên bản 1.0 · Ngày tạo: 19/06/2026
+### AAFB Agent 02/12 · Phiên bản 1.0 · Ngày tạo: 19/06/2026
 > Chắt lọc từ **Brand DNA** gốc của Dũng Hoàng. Nạp file này vào đầu cuộc trò chuyện với mọi Agent viết copy (08 Ad Copy, 09 VSL, 10 Email, 11 Follow-up, 12 Sales Call) + 10X Content System. Yêu cầu: *"Viết đúng giọng trong Voice Profile này."*
 
 ---

@@ -1,5 +1,5 @@
 # HVCO BRIEF — Thử Thách 7 Ngày AI Viết Bài
-## Bước 6/12 · ASSP Framework · hvco-brief-thu-thach-7-ngay-v1.md
+## Bước 6/12 · AAFB Framework · hvco-brief-thu-thach-7-ngay-v1.md
 
 ---
 

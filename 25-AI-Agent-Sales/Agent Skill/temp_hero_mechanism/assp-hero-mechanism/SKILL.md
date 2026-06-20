@@ -1,10 +1,10 @@
 ---
-name: assp-hero-mechanism
+name: aafb-hero-mechanism
 description: Build a proprietary mechanism for your business — the thing that makes customers unable to compare you to competitors. Use when the user wants to "create differentiation", "why should they choose me", "competitors do the same thing", "need clearer positioning", "need a name for my method", "unique mechanism", "proprietary method", or has Avatar Builder (01) and wants to name/systematize their approach. Run AFTER Avatar Builder (01), BEFORE Money Model Architect (04) and Offer Architect (05).
 ---
 
-# ASSP — Hero Mechanism Builder
-## Agent 03/12 · ASSP Framework
+# AAFB — Hero Mechanism Builder
+## Agent 03/12 · AAFB Framework
 
 ---
 
@@ -94,7 +94,7 @@ Do not use English marketing terms when a Vietnamese equivalent exists.
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** Hero Mechanism Builder (03) — Create a proprietary mechanism that can't be compared
 

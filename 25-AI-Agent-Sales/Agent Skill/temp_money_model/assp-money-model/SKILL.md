@@ -1,10 +1,10 @@
 ---
-name: assp-money-model
+name: aafb-money-model
 description: Map out the complete revenue model for an entire business using Hormozi's 4 offer types (Attraction, Upsell, Downsell, Continuity) with 16 specific offer types. Use when the user wants to "build a systematic business", "have multiple revenue streams", "get customers to buy repeatedly", "scale revenue", "map out money model", "offer map", or after having Hero Mechanism. Run AFTER Hero Mechanism Builder (03), BEFORE Offer Architect (05).
 ---
 
-# ASSP — Money Model Architect
-## Agent 04/12 · ASSP Framework
+# AAFB — Money Model Architect
+## Agent 04/12 · AAFB Framework
 
 ---
 
@@ -113,7 +113,7 @@ Do not use English marketing terms when a Vietnamese equivalent exists.
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** Money Model Architect (04) — Map out the complete revenue model
 

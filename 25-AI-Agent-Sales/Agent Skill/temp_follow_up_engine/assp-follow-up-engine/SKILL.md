@@ -1,10 +1,10 @@
 ---
-name: assp-follow-up-engine
+name: aafb-follow-up-engine
 description: Write re-engagement emails for cold leads — people who opted in or showed interest but took no action. Use when the user wants "follow up email", "email to people who haven't bought", "email to people who viewed but didn't register", "re-engage cold leads", "win back old customers", "email to people who said think about it", "follow up after interview", or after having a Nurture Sequence from Email Closer (10). Different from Email Closer which writes new nurture sequences — this agent writes emails for people who already know you but have gone silent. All outputs in natural Vietnamese.
 ---
 
-# ASSP — Follow-Up Engine
-## Agent 11/12 · ASSP Framework
+# AAFB — Follow-Up Engine
+## Agent 11/12 · AAFB Framework
 
 ---
 
@@ -134,7 +134,7 @@ Examples:
 
 ---
 
-## You Are Using ASSP — Agent Selling Super Powers
+## You Are Using AAFB — AI Agent For Businesss
 
 **This agent:** Follow-Up Engine (11) — Re-engage cold leads
 

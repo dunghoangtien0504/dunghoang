@@ -13,7 +13,7 @@ Trước khi xây nhà, ta đi xem hàng xóm xây kiểu gì. Tôi đã vào xe
 | Đối thủ | Bán cái gì | Giá | Kiểu bán | Bảo hành |
 |---|---|---|---|---|
 | **Âu Văn Chiều** (combo.auvanchieu.com) | COMBO 32 AI Agent cấu hình sẵn (12 Marketing + 20 AutoSales) | **997.000đ** (giá thường ghi 1.885.000đ, dọa tăng lên 1.997.000đ) | Bán file/agent giá rẻ, tự học | 3 ngày hoàn tiền |
-| **Âu Văn Chiều** (theallinplan.com/12-assp) | "AI Agent Super Power" — 12 module hệ thống AI Agent | Không công khai giá ngay (phễu cao cấp hơn) | Hệ thống bài bản hơn combo | — |
+| **Âu Văn Chiều** (dunghoang.com/12-aafb) | "AI Agent For Business" — 12 module hệ thống AI Agent | Không công khai giá ngay (phễu cao cấp hơn) | Hệ thống bài bản hơn combo | — |
 | **Teamwork với AI 03** (kesflow.vn) | Khóa LIVE 6 buổi: xây "đội nhân sự AI" | **4.99 – 6.99 triệu** (tăng theo đợt) | Lớp live + kèm cặp + 1 buổi offline | Hoàn 100% sau buổi 2 |
 | **AI SOLO / Tuấn Hà Vinalink** (≈ solobiz) | Khóa "Doanh nghiệp 1 người" 5 buổi (OPC + Agentic AI) | Gốc 2tr → **bán 199.000đ** | Khóa rẻ kéo số đông, thương hiệu lớn | — |
 | **Tâm Lý Học VN** (tamlyhocvn.club) | "Thư viện Kịch bản Sales" (kho prompt/kịch bản bán hàng theo tâm lý) | Theo thư viện/membership | Bán kho nội dung | — |
