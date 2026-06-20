@@ -5,16 +5,16 @@ import Link from 'next/link'
 import { Eye, EyeOff, ArrowRight, BookOpen, Users, BarChart3, Mail, Shield } from 'lucide-react'
 
 const FEATURES = [
-  { icon: BookOpen,  text: 'Quan ly khoa hoc & hoc vien' },
-  { icon: BarChart3, text: 'Analytics & bao cao doanh thu' },
-  { icon: Mail,      text: 'Email marketing automation' },
-  { icon: Users,     text: 'CRM & pipeline ban hang' },
+  { icon: BookOpen,  text: 'Quản lý khoá học & học viên' },
+  { icon: BarChart3, text: 'Analytics & báo cáo doanh thu' },
+  { icon: Mail,      text: 'Email marketing tự động' },
+  { icon: Users,     text: 'CRM & pipeline bán hàng' },
 ]
 
 const STATS = [
-  { value: '605+', label: 'Hoc vien' },
+  { value: '605+', label: 'Học viên' },
   { value: '809M', label: 'Doanh thu' },
-  { value: '5',    label: 'Khoa hoc' },
+  { value: '5',    label: 'Khoá học' },
 ]
 
 export default function LoginPage() {
@@ -27,21 +27,18 @@ export default function LoginPage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!email || !password) { setError('Vui long nhap day du thong tin.'); return }
+    if (!email || !password) { setError('Vui lòng nhập đầy đủ thông tin.'); return }
     setLoading(true)
     setError('')
-    // TODO: replace with real auth (Supabase / NextAuth)
     await new Promise(r => setTimeout(r, 900))
     setLoading(false)
-    // Demo: any credentials pass
     window.location.href = '/admin'
   }
 
   return (
     <div className="min-h-dvh flex">
-      {/* ── Left panel: brand ────────────────────────────────── */}
+      {/* ── Cột trái: brand ────────────────────────────────── */}
       <div className="hidden lg:flex lg:w-[52%] bg-brand-dark flex-col justify-between p-12 relative overflow-hidden">
-        {/* Decorative circles */}
         <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-brand-accent/5" />
         <div className="absolute -bottom-40 -left-20 w-80 h-80 rounded-full bg-white/3" />
         <div className="absolute top-1/2 right-0 w-px h-32 bg-white/10" />
@@ -54,7 +51,7 @@ export default function LoginPage() {
             </div>
             <div>
               <p className="text-text-on-dark font-bold text-lg leading-tight">DungHoang.com</p>
-              <p className="text-text-on-dark-2 text-xs">Nen tang khoa hoc All-In-One</p>
+              <p className="text-text-on-dark-2 text-xs">Nền tảng khoá học All-In-One</p>
             </div>
           </div>
         </div>
@@ -64,15 +61,15 @@ export default function LoginPage() {
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 bg-brand-accent/15 border border-brand-accent/20 rounded-full px-3 py-1.5 text-xs text-brand-accent font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-accent animate-pulse" />
-              Platform cho nguoi Viet
+              Nền tảng cho người Việt
             </div>
             <h1 className="text-4xl font-bold text-text-on-dark leading-tight tracking-tight">
-              Quan ly toan bo<br />
-              <span className="text-brand-accent">kinh doanh so</span><br />
-              trong mot noi
+              Quản lý toàn bộ<br />
+              <span className="text-brand-accent">kinh doanh số</span><br />
+              trong một nơi
             </h1>
             <p className="text-text-on-dark-2 text-base leading-relaxed max-w-sm">
-              Tu khoa hoc den CRM, email marketing den affiliate. Thay the 8+ cong cu voi chi phi gan bang $0.
+              Từ khoá học đến CRM, email marketing đến affiliate. Thay thế 8+ công cụ với chi phí gần bằng $0.
             </p>
           </div>
 
@@ -91,7 +88,7 @@ export default function LoginPage() {
             })}
           </ul>
 
-          {/* Stats strip */}
+          {/* Stats */}
           <div className="flex items-center gap-6 pt-2 border-t border-white/10">
             {STATS.map((s) => (
               <div key={s.label}>
@@ -102,24 +99,24 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {/* Bottom quote */}
+        {/* Quote */}
         <div className="relative z-10 bg-white/5 border border-white/10 rounded-2xl p-4">
           <p className="text-text-on-dark-2 text-sm leading-relaxed italic">
-            "Tu khi dung DungHoang.com, doanh thu tang 300% chi trong 3 thang."
+            "Từ khi dùng DungHoang.com, doanh thu tăng 300% chỉ trong 3 tháng."
           </p>
           <div className="flex items-center gap-2.5 mt-3">
             <div className="w-7 h-7 rounded-full bg-brand-accent flex items-center justify-center">
               <span className="text-white text-xs font-bold">MT</span>
             </div>
             <div>
-              <p className="text-text-on-dark text-xs font-semibold">Minh Tuan</p>
+              <p className="text-text-on-dark text-xs font-semibold">Minh Tuấn</p>
               <p className="text-text-on-dark-2 text-[10px]">Affiliate Marketer</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ── Right panel: form ─────────────────────────────────── */}
+      {/* ── Cột phải: form đăng nhập ─────────────────────────────────── */}
       <div className="flex-1 flex items-center justify-center p-6 bg-background">
         <div className="w-full max-w-sm">
           {/* Mobile logo */}
@@ -131,8 +128,8 @@ export default function LoginPage() {
           </div>
 
           <div className="mb-8">
-            <h2 className="text-text-primary text-2xl font-bold tracking-tight">Dang nhap</h2>
-            <p className="text-text-muted text-sm mt-1">Truy cap vao bang dieu khien cua ban</p>
+            <h2 className="text-text-primary text-2xl font-bold tracking-tight">Đăng nhập</h2>
+            <p className="text-text-muted text-sm mt-1">Truy cập vào bảng điều khiển của bạn</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4" noValidate>
@@ -149,18 +146,17 @@ export default function LoginPage() {
                 onChange={e => setEmail(e.target.value)}
                 placeholder="ban@example.com"
                 className="input-field h-11 text-sm"
-                aria-required="true"
               />
             </div>
 
-            {/* Password */}
+            {/* Mật khẩu */}
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <label htmlFor="password" className="text-text-secondary text-xs font-medium">
-                  Mat khau <span className="text-brand-accent">*</span>
+                  Mật khẩu <span className="text-brand-accent">*</span>
                 </label>
                 <Link href="/forgot-password" className="text-text-muted text-xs hover:text-brand-accent transition-colors">
-                  Quen mat khau?
+                  Quên mật khẩu?
                 </Link>
               </div>
               <div className="relative">
@@ -170,22 +166,21 @@ export default function LoginPage() {
                   autoComplete="current-password"
                   value={password}
                   onChange={e => setPassword(e.target.value)}
-                  placeholder="Nhap mat khau"
+                  placeholder="Nhập mật khẩu"
                   className="input-field h-11 text-sm pr-10"
-                  aria-required="true"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(v => !v)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-primary transition-colors p-1"
-                  aria-label={showPassword ? 'An mat khau' : 'Hien mat khau'}
+                  aria-label={showPassword ? 'Ẩn mật khẩu' : 'Hiện mật khẩu'}
                 >
                   {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
                 </button>
               </div>
             </div>
 
-            {/* Remember me */}
+            {/* Ghi nhớ */}
             <label className="flex items-center gap-2.5 cursor-pointer group">
               <div className="relative flex-shrink-0">
                 <input
@@ -205,10 +200,10 @@ export default function LoginPage() {
                   )}
                 </div>
               </div>
-              <span className="text-text-secondary text-sm select-none">Ghi nho dang nhap</span>
+              <span className="text-text-secondary text-sm select-none">Ghi nhớ đăng nhập</span>
             </label>
 
-            {/* Error */}
+            {/* Lỗi */}
             {error && (
               <div className="flex items-center gap-2 bg-danger-light border border-danger/20 rounded-lg px-3 py-2.5" role="alert">
                 <Shield size={13} className="text-danger flex-shrink-0" />
@@ -216,7 +211,7 @@ export default function LoginPage() {
               </div>
             )}
 
-            {/* Submit */}
+            {/* Nút đăng nhập */}
             <button
               type="submit"
               disabled={loading}
@@ -225,33 +220,29 @@ export default function LoginPage() {
               {loading ? (
                 <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
               ) : (
-                <>
-                  Dang nhap <ArrowRight size={15} />
-                </>
+                <>Đăng nhập <ArrowRight size={15} /></>
               )}
             </button>
           </form>
 
-          {/* Divider */}
           <div className="flex items-center gap-3 my-5">
             <div className="flex-1 h-px bg-border" />
-            <span className="text-text-muted text-xs">hoac</span>
+            <span className="text-text-muted text-xs">hoặc</span>
             <div className="flex-1 h-px bg-border" />
           </div>
 
-          {/* Demo access */}
           <Link
             href="/admin"
             className="w-full flex items-center justify-center gap-2 h-11 bg-surface border border-border rounded-lg text-sm text-text-secondary hover:border-brand-border/40 hover:text-text-primary hover:bg-surface-2 transition-all shadow-card"
           >
             <BookOpen size={14} className="text-text-muted" />
-            Xem demo (khong can tai khoan)
+            Xem demo (không cần tài khoản)
           </Link>
 
           <p className="text-center text-text-muted text-xs mt-6">
-            Chua co tai khoan?{' '}
+            Chưa có tài khoản?{' '}
             <Link href="/register" className="text-brand-accent hover:underline font-medium">
-              Dang ky mien phi
+              Đăng ký miễn phí
             </Link>
           </p>
         </div>
