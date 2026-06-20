@@ -28,6 +28,13 @@ export const PRODUCTS: Record<string, Product> = {
     codePrefix: 'DH-K2',
     successUrl: '/cam-on-khoa-2',
   },
+  challenge_368: {
+    id:         'challenge_368',
+    name:       'Bí Quyết 7 Ngày Đưa AI Vào Business — Cọc 368k',
+    price:      368000,
+    codePrefix: 'DH-CHAL',
+    successUrl: '/cam-on-thu-thach',
+  },
 }
 
 /** Tạo order code ngẫu nhiên: DH-MINI-A3F9K2 */

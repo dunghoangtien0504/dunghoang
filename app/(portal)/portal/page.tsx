@@ -130,6 +130,21 @@ export default function DashboardPage() {
         </div>
       )}
 
+      {/* Challenge 7 ngày */}
+      <div className="bg-white rounded-2xl border border-gray-100 p-6 flex items-start gap-4">
+        <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center flex-shrink-0">
+          <span className="text-lg">🏆</span>
+        </div>
+        <div className="flex-1">
+          <h3 className="font-bold text-[#0d2b1a] text-sm">Thử Thách 7 Ngày — Bí Quyết Đưa AI Vào Business</h3>
+          <p className="text-xs text-gray-400 mt-0.5">Đóng cọc 368k · Hoàn thành đúng hạn → hoàn tiền</p>
+        </div>
+        <a href="/portal/thu-thach"
+          className="flex-shrink-0 text-xs bg-[#0d2b1a] text-white px-4 py-2 rounded-xl hover:bg-[#1D9E75] transition-colors font-medium">
+          Vào xem →
+        </a>
+      </div>
+
       {/* Checklist gợi ý */}
       {enrollments.length > 0 && (
         <div className="bg-white rounded-2xl border border-gray-100 p-6">
