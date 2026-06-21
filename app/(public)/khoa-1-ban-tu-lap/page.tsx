@@ -269,7 +269,7 @@ export default function Khoa1Page() {
               { icon:'🏡', text:'Đang vận hành homestay + khoá học + tư vấn AI một mình — 25 skill này đang chạy thật trong business mình' },
               { icon:'👥', text:'605+ học viên đã học — từ chủ shop, coach, freelancer đến solopreneur nhiều ngành' },
               { icon:'📅', text:'SOP được test 2 năm trong thực tế — không phải viết từ sách hay copy từ người khác' },
-              { icon:'🔄', text:'Khóa 1 là bước đệm — mua xong muốn nâng, 868.686đ trừ vào Khóa 2 (2.768.686đ)' },
+              { icon:'🔄', text:'Khóa 1 là bước đệm — mua xong muốn nâng, 868.686đ trừ vào Khóa 2 (3.868.686đ)' },
             ].map(a => (
               <div key={a.icon} className="flex items-start gap-3">
                 <span className="text-xl flex-shrink-0 mt-0.5">{a.icon}</span>

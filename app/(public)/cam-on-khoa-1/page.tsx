@@ -83,8 +83,8 @@ export default function CamOnKhoa1Page() {
 
   const openCheckout = useCallback(() => setCheckoutOpen(true), [])
 
-  // Rollover: Khóa 1 686.868đ trừ vào Khóa 2 2.768.686đ
-  const extraNeeded = (2768686 - 686868).toLocaleString('vi-VN') // 2.081.818
+  // Rollover: Khóa 1 868.686đ trừ vào Khóa 2 3.868.686đ
+  const extraNeeded = (3868686 - 868686).toLocaleString('vi-VN') // 3.000.000
 
   return (
     <div className="min-h-dvh bg-[#F6F0E4] font-sans">
@@ -167,7 +167,7 @@ export default function CamOnKhoa1Page() {
             <div className="bg-[#FAF7F2] border border-[#DDD8CB] rounded-2xl p-4 space-y-3">
               <div className="flex justify-between items-center text-sm">
                 <span className="text-[#7A8C7E]">Giá Khóa 2 đầy đủ</span>
-                <span className="line-through text-[#7A8C7E]">2.768.686đ</span>
+                <span className="line-through text-[#7A8C7E]">3.868.686đ</span>
               </div>
               <div className="flex justify-between items-center text-sm">
                 <span className="text-[#3D6B4A]">Bạn đã trả (Khóa 1)</span>
@@ -201,7 +201,7 @@ export default function CamOnKhoa1Page() {
             {/* Neo giá */}
             <div className="bg-[#EAF5EF] border border-[#2D7A4F]/20 rounded-xl p-4 text-sm text-[#3D6B4A] leading-relaxed">
               Nếu thuê đủ: 25 skill (50tr/tháng) + SOP (20tr) + đội trưởng kèm sát (20tr) = 90tr+ tự lo.
-              Bạn trả một lần 2.768.686đ. Phần còn lại sau khi trừ Khóa 1 chỉ là {extraNeeded}đ.
+              Bạn trả một lần 3.868.686đ. Phần còn lại sau khi trừ Khóa 1 chỉ là {extraNeeded}đ.
             </div>
 
             {/* CTA */}

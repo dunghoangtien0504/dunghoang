@@ -42,7 +42,7 @@ const PRODUCTS = [
     badgeColor: 'bg-[#F0EDF8] text-[#5B3DA8]',
     name: 'Có Đội — 25 Skill + Tiểu Hà Mã',
     desc: '25 skill + Tiểu Hà Mã kèm sát 24/7. Cam kết 30 ngày có hệ thống tự chạy.',
-    price: '2.768.686đ',
+    price: '3.868.686đ',
     cta: 'Xem chi tiết',
     href: '/khoa-2-ban-co-doi-truong',
     icon: <Users className="w-5 h-5" />,

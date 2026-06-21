@@ -34,7 +34,7 @@ export const PRODUCTS: Record<string, Product> = {
   khoa2_2768: {
     id:         'khoa2_2768',
     name:       'Có Đội — 25 Skill + Tiểu Hà Mã',
-    price:      2768686,
+    price:      3868686,
     codePrefix: 'DH-K2',
     successUrl: '/cam-on-khoa-2',
   },

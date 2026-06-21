@@ -12,7 +12,7 @@ const FAQS = [
   { q:'30 ngày cam kết là cam kết gì?',
     a:'Trong 30 ngày bạn sẽ dựng xong hệ thống: content tự đăng, khách tự được trả lời, đơn tự về. Mình kèm sát qua Telegram, không để bạn kẹt ở bước nào. Nếu làm đủ theo SOP mà không đạt, mình ngồi review lại và sửa cùng bạn.' },
   { q:'Rollover từ Khóa 1 thế nào?',
-    a:'Nếu đã mua Khóa 1 (868.686đ), số tiền đó được trừ vào Khóa 2. Bạn chỉ cần thêm 1.900.000đ để có toàn bộ Khóa 2 kèm Tiểu Hà Mã. Liên hệ mình qua Telegram để áp dụng.' },
+    a:'Nếu đã mua Khóa 1 (868.686đ), số tiền đó được trừ vào Khóa 2. Bạn chỉ cần thêm 3.000.000đ để có toàn bộ Khóa 2 kèm Tiểu Hà Mã. Liên hệ mình qua Telegram để áp dụng.' },
   { q:'Chỉ 20 suất/đợt là thật không?',
     a:'Thật. Tiểu Hà Mã cần mình thiết lập riêng và kèm sát từng người. Mình không thể kèm cùng lúc quá nhiều người mà vẫn đảm bảo chất lượng. Mỗi đợt 20 suất, hết là đóng đăng ký.' },
   { q:'Bảo hành thế nào?',
@@ -72,7 +72,7 @@ export default function Khoa2Page() {
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <span className="text-[#F6F0E4] font-black font-mono text-sm">DungHoang.com</span>
           <button onClick={open} className="bg-[#C0390E] hover:bg-[#a02e0a] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors">
-            Giữ suất · 2.768.686đ →
+            Giữ suất · 3.868.686đ →
           </button>
         </div>
       </nav>
@@ -95,14 +95,14 @@ export default function Khoa2Page() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <button onClick={open}
               className="h-14 px-8 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-lg shadow-red-900/30">
-              Giữ Suất · 2.768.686đ →
+              Giữ Suất · 3.868.686đ →
             </button>
             <a href="#30-ngay"
               className="h-14 px-8 border border-[#F6F0E4]/20 text-[#F6F0E4]/70 hover:text-[#F6F0E4] text-sm font-medium rounded-2xl flex items-center justify-center transition-colors">
               Xem kế hoạch 30 ngày →
             </a>
           </div>
-          <p className="text-[#F6F0E4]/40 text-xs">Đã mua Khóa 1 (868.686đ)? Chỉ cần thêm 1.900.000đ · Bảo hành 14 ngày hoàn 100%</p>
+          <p className="text-[#F6F0E4]/40 text-xs">Đã mua Khóa 1 (868.686đ)? Chỉ cần thêm 3.000.000đ · Bảo hành 14 ngày hoàn 100%</p>
         </div>
       </section>
 
@@ -314,16 +314,16 @@ export default function Khoa2Page() {
             <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
               <div>
                 <p className="font-bold text-[#0D2B1A]">Trả 1 lần, dùng mãi</p>
-                <p className="text-xs text-[#3D6B4A]">Đã mua Khóa 1 (868.686đ)? Chỉ thêm 1.900.000đ</p>
+                <p className="text-xs text-[#3D6B4A]">Đã mua Khóa 1 (868.686đ)? Chỉ thêm 3.000.000đ</p>
               </div>
-              <p className="text-3xl font-black text-[#0D2B1A]">2.768.686đ</p>
+              <p className="text-3xl font-black text-[#0D2B1A]">3.868.686đ</p>
             </div>
           </div>
 
           <div className="space-y-3">
             <button onClick={open}
               className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-lg font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
-              Giữ Suất · 2.768.686đ →
+              Giữ Suất · 3.868.686đ →
             </button>
             <p className="text-center text-xs text-gray-400">Chuyển khoản · Xác nhận 5-10 phút · Bảo hành 14 ngày hoàn 100%</p>
           </div>
@@ -473,7 +473,7 @@ export default function Khoa2Page() {
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A] border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
           <div className="min-w-0">
             <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 2 · Có Đội Trưởng · {slots} suất</p>
-            <p className="text-[#F6F0E4]/50 text-xs">2.768.686đ · 30 ngày · Tiểu Hà Mã 24/7</p>
+            <p className="text-[#F6F0E4]/50 text-xs">3.868.686đ · 30 ngày · Tiểu Hà Mã 24/7</p>
           </div>
           <button onClick={open}
             className="flex-shrink-0 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-bold px-4 h-11 rounded-xl text-sm transition-colors whitespace-nowrap">

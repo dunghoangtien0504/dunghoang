@@ -213,7 +213,7 @@ export function getKhoa1EmailDay5(name: string): EmailContent {
 
 <p><strong>3. Buổi Soi Hệ Thống 1-kèm-1:</strong> Mình ngồi cùng bạn xem bạn đang ở đâu, thiếu gì, nên thêm skill nào tiếp theo.</p>
 
-<div class="neo-price">💡 Đã mua Khóa 1 (868.686đ)? Nâng lên Khóa 2 chỉ cần thêm <strong>1.900.000đ</strong>. Không phải trả lại 2.768.686đ. Số tiền cũ được tính vào hết.</div>
+<div class="neo-price">💡 Đã mua Khóa 1 (868.686đ)? Nâng lên Khóa 2 chỉ cần thêm <strong>3.000.000đ</strong>. Không phải trả lại 3.868.686đ. Số tiền cũ được tính vào hết.</div>
 
 <p>Không phải ai cũng cần Khóa 2. Nếu bạn đang dùng tốt 10-15 skill và chưa cần hệ thống tự chạy thì Khóa 1 là đủ rồi.</p>
 

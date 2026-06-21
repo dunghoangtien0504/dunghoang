@@ -7,14 +7,14 @@ import { CheckCircle, ArrowRight, DollarSign, Users, TrendingUp, ShieldCheck } f
 const COMMISSIONS = [
   { product: 'Mini — Trang Bán Hàng Làm Trong 1 Buổi', price: '686.868đ',   pct: '20%', earn: '137.374đ' },
   { product: 'Khóa 1 — 24 Skill AI (Bản Tự Lập)',      price: '868.686đ',   pct: '20%', earn: '173.737đ' },
-  { product: 'Khóa 2 — Bản Có Đội Trưởng',             price: '2.768.686đ', pct: '10%', earn: '276.869đ' },
+  { product: 'Khóa 2 — Bản Có Đội Trưởng',             price: '3.868.686đ', pct: '10%', earn: '386.869đ' },
 ]
 
 const SCENARIOS = [
   { label: '3 người/tháng mua Mini',     earn: '412.122đ/tháng',  detail: '3 × 137.374đ' },
   { label: '2 người/tháng mua Khóa 1',  earn: '347.474đ/tháng',  detail: '2 × 173.737đ' },
-  { label: '1 người/tháng mua Khóa 2',  earn: '276.869đ/tháng',  detail: '1 × 276.869đ' },
-  { label: 'Combo 3 Mini + 1 Khóa 2',   earn: '688.991đ/tháng',  detail: '412.122đ + 276.869đ' },
+  { label: '1 người/tháng mua Khóa 2',  earn: '386.869đ/tháng',  detail: '1 × 386.869đ' },
+  { label: 'Combo 3 Mini + 1 Khóa 2',   earn: '798.991đ/tháng',  detail: '412.122đ + 386.869đ' },
 ]
 
 export default function CongTacVienPage() {
