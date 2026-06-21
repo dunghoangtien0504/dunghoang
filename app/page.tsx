@@ -30,7 +30,7 @@ const PRODUCTS = [
   {
     badge: 'Bộ đầy đủ',
     badgeColor: 'bg-[#EAF5EF] text-[#2D7A4F]',
-    name: 'Khóa 1 — 25 Skill AI',
+    name: 'Tự Chiến — 24 Skill AI',
     desc: 'Toàn bộ 24 skill tự học. Tặng kèm Content System + Landing Page skill.',
     price: '868.686đ',
     cta: 'Xem chi tiết',
@@ -40,7 +40,7 @@ const PRODUCTS = [
   {
     badge: 'Có đội trưởng',
     badgeColor: 'bg-[#F0EDF8] text-[#5B3DA8]',
-    name: 'Khóa 2 — Bản Có Đội Trưởng',
+    name: 'Có Đội — 25 Skill + Tiểu Hà Mã',
     desc: '25 skill + Tiểu Hà Mã kèm sát 24/7. Cam kết 30 ngày có hệ thống tự chạy.',
     price: '2.768.686đ',
     cta: 'Xem chi tiết',

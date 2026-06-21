@@ -26,14 +26,14 @@ export const PRODUCTS: Record<string, Product> = {
   // ── KHÓA 1 — 25 skill, gồm trang bán hàng + tặng Content System ─────────────
   khoa1_686: {
     id:         'khoa1_686',
-    name:       'Khóa 1 — 25 Skill AI (Bản Đầy Đủ)',
+    name:       'Tự Chiến — 24 Skill AI',
     price:      868686,
     codePrefix: 'DH-K1',
     successUrl: '/cam-on-khoa-1',
   },
   khoa2_2768: {
     id:         'khoa2_2768',
-    name:       'Khóa 2 — Bản Có Đội Trưởng',
+    name:       'Có Đội — 25 Skill + Tiểu Hà Mã',
     price:      2768686,
     codePrefix: 'DH-K2',
     successUrl: '/cam-on-khoa-2',
