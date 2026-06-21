@@ -48,14 +48,14 @@ const FAQS = [
 ]
 
 function CountdownBar() {
-  const [time, setTime] = useState('')
+  const [time, setTime] = useState<string | null>(null)
   useEffect(() => {
     function tick() {
-      const now    = new Date()
-      const end    = new Date()
-      end.setDate(end.getDate() + ((7 - now.getDay() + 0) % 7 || 7)) // next Sunday
+      const now = new Date()
+      const end = new Date()
+      end.setDate(end.getDate() + ((7 - now.getDay() + 0) % 7 || 7))
       end.setHours(23, 59, 0, 0)
-      const diff   = end.getTime() - now.getTime()
+      const diff = end.getTime() - now.getTime()
       if (diff <= 0) { setTime(''); return }
       const d = Math.floor(diff / 86400000)
       const h = Math.floor((diff % 86400000) / 3600000)
@@ -67,11 +67,19 @@ function CountdownBar() {
     const id = setInterval(tick, 1000)
     return () => clearInterval(id)
   }, [])
-  return time ? (
+
+  if (time === null) return null // not yet mounted
+  if (time) return (
     <div className="bg-[#C0390E] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
-      🔥 Giá 368k chỉ còn trong đợt này — kết thúc sau <strong className="font-mono">{time}</strong>. Đợt sau giá cao hơn.
+      🔥 Đợt này kết thúc sau <strong className="font-mono">{time}</strong> · Làm đủ 7 ngày → hoàn 100% · Không mất trắng.
     </div>
-  ) : null
+  )
+  // fallback when countdown ends
+  return (
+    <div className="bg-[#88860B] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
+      605+ người đã thử · Làm đủ 7 ngày → hoàn 100% tiền cọc · Bắt đầu bất kỳ ngày nào
+    </div>
+  )
 }
 
 function AccordionItem({ q, a }: { q: string; a: string }) {
@@ -572,12 +580,12 @@ export default function BiQuyet7NgayPage() {
           {/* CTA L5 — final push */}
           <div className="space-y-4 pt-2">
             <div className="text-center space-y-1">
-              <p className="text-sm text-gray-500">Đọc đến đây — bạn đã biết mình cần thay đổi gì.</p>
-              <p className="font-bold text-[#0D2B1A]">Câu hỏi duy nhất còn lại: bắt đầu hôm nay hay đợi thêm 3 tháng nữa?</p>
+              <p className="text-sm text-gray-500">Đọc đến đây là bạn đã biết mình cần thay đổi gì rồi.</p>
+              <p className="font-bold text-[#0D2B1A]">Người làm thật không cần thêm lý do. Người cần thêm lý do sẽ chờ đến tháng sau, rồi tháng sau nữa.</p>
             </div>
             <button onClick={openCheckout}
               className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
-              Quyết Định Hôm Nay — Thay Đổi Cả Năm →
+              Tôi Chọn Làm Thật — Đăng Ký Ngay →
             </button>
             <div className="flex items-center justify-center gap-6 text-xs text-gray-400">
               <span>✓ Xác nhận trong 5-10 phút</span>

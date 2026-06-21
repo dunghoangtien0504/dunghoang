@@ -71,6 +71,11 @@ export default function MiniTrangBanHangPage() {
   return (
     <div className="min-h-screen bg-[#F6F0E4] font-sans">
 
+      {/* [0] ANNOUNCEMENT BAR */}
+      <div className="bg-[#88860B] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
+        686.868đ được trừ thẳng vào Khóa 1 (868.686đ) nếu muốn nâng cấp · Bảo hành 14 ngày hoàn 100%
+      </div>
+
       {/* Nav */}
       <nav className="bg-[#0D2B1A] px-4 py-3 sticky top-0 z-40">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
@@ -406,6 +411,53 @@ export default function MiniTrangBanHangPage() {
         </div>
       </section>
 
+      {/* [12B] SOCIAL PROOF */}
+      <section className="px-4 py-14 bg-[#FAF7F2] border-y border-[#DDD8CB]">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Học viên nói gì</h2>
+          <div className="space-y-4">
+            {[
+              {
+                stars: 5,
+                quote: 'Mình không biết code, không biết thiết kế. Làm theo SOP đúng 1 buổi là có trang thật chạy được. Bài học quan trọng nhất là BRAND_DNA — từ đó viết gì AI cũng ra đúng giọng mình hơn.',
+                name:  'Quỳnh Như',
+                role:  'Bán mỹ phẩm online',
+                result:'Có trang bán hàng trong 1 buổi',
+              },
+              {
+                stars: 5,
+                quote: 'Trước mình trả 2 triệu cho người làm landing page rồi chờ 2 tuần. Giờ mình tự làm trong vài giờ, muốn chỉnh gì sửa ngay. Kèm theo Content System là thứ mình dùng mỗi ngày.',
+                name:  'Hoàng Tuấn',
+                role:  'Coach sức khoẻ',
+                result:'Tiết kiệm 2 triệu + 2 tuần chờ',
+              },
+              {
+                stars: 5,
+                quote: 'Bảo hành 14 ngày nên mình cứ thử. Kết quả là sau 3 ngày đầu mình đã dùng được cả bộ prompt để viết trang bán hàng cho 3 dịch vụ khác nhau.',
+                name:  'Minh Châu',
+                role:  'Freelancer tư vấn marketing',
+                result:'Có prompt dùng được cho 3 sản phẩm',
+              },
+            ].map((t, i) => (
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3">
+                <div className="flex gap-0.5">
+                  {Array(t.stars).fill(0).map((_, j) => <span key={j} className="text-amber-400 text-sm">★</span>)}
+                </div>
+                <p className="text-sm text-gray-700 italic leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-bold text-[#0D2B1A]">{t.name}</p>
+                    <p className="text-xs text-gray-400">{t.role}</p>
+                  </div>
+                  <span className="text-xs bg-[#EAF5EF] text-[#2D7A4F] px-3 py-1 rounded-full font-medium">{t.result}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-gray-400 italic">Kết quả thay đổi tùy người và business. Đây là ví dụ từ học viên thật — không phải cam kết.</p>
+        </div>
+      </section>
+
       {/* [13] CTA FINAL */}
       <section className="px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-6 text-center">
@@ -415,7 +467,7 @@ export default function MiniTrangBanHangPage() {
           <p className="text-gray-500 text-sm">Hoặc tiếp tục giải thích qua inbox với từng khách một.</p>
           <button onClick={open}
             className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
-            Quyết Định Hôm Nay — Bắt Đầu Làm Ngay →
+            Bắt Đầu Ngay — 686.868đ →
           </button>
           <div className="flex items-center justify-center gap-6 text-xs text-gray-400">
             <span>✓ 686.868đ</span>

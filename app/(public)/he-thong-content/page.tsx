@@ -105,6 +105,11 @@ export default function HeThongContentPage() {
   return (
     <div className="min-h-screen bg-[#F6F0E4] font-sans">
 
+      {/* [0] ANNOUNCEMENT BAR */}
+      <div className="bg-[#88860B] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
+        Tặng kèm miễn phí khi mua Trang Bán Hàng (686.868đ) hoặc Khóa 1 (868.686đ) · Bảo hành 14 ngày
+      </div>
+
       {/* Nav */}
       <nav className="bg-[#0D2B1A] px-4 py-3 sticky top-0 z-40">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
@@ -300,8 +305,8 @@ export default function HeThongContentPage() {
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Đầu tư</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">368.686đ — ít hơn 1 bài thuê copywriter</h2>
-            <p className="text-sm text-gray-500">Thuê copywriter viết 1 bài: 300k-1 triệu. Hệ thống này viết cho bạn mãi mãi với 368.686đ.</p>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">368.686đ — ít hơn 1 tuần lương người viết thuê</h2>
+            <p className="text-sm text-gray-500">Thuê người viết content cho bạn: 3-5 triệu/tháng. Hệ thống này viết đúng giọng bạn mãi mãi chỉ với 368.686đ một lần.</p>
           </div>
           <div className="bg-white border border-[#DDD8CB] rounded-2xl overflow-hidden">
             <div className="bg-[#0D2B1A] px-5 py-3">
@@ -407,11 +412,58 @@ export default function HeThongContentPage() {
         </div>
       </section>
 
+      {/* [12B] SOCIAL PROOF */}
+      <section className="px-4 py-14 bg-[#FAF7F2] border-y border-[#DDD8CB]">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Người đang dùng nói gì</h2>
+          <div className="space-y-4">
+            {[
+              {
+                stars: 5,
+                quote: 'Mình từng thử mấy app lên lịch content rồi đều bỏ sau 2 tuần. Cái này khác — AI đọc giọng mình rồi đề xuất ý tưởng đúng thứ mình muốn nói. Không còn nhìn trang trắng hỏi "hôm nay đăng gì" nữa.',
+                name:  'Lan Phương',
+                role:  'Chủ shop thời trang 2 năm',
+                result:'Đăng đều 5-6 bài/tuần trong 2 tháng',
+              },
+              {
+                stars: 5,
+                quote: 'Content System giúp mình tiết kiệm ít nhất 3 tiếng mỗi tuần. Cả tháng 30 bài làm trong 2-3 buổi. Phần còn lại mình dùng để gặp khách và phát triển sản phẩm.',
+                name:  'Trung Kiên',
+                role:  'Solopreneur bán khóa học',
+                result:'30 bài/tháng, tiết kiệm 3h/tuần',
+              },
+              {
+                stars: 5,
+                quote: 'Mình đã có Khóa 1 nên nhận được cái này miễn phí. Nhưng thật ra đây là thứ mình dùng nhiều nhất trong cả bộ. Workspace Notion đang chạy thật, không phải template rỗng.',
+                name:  'Bảo Châu',
+                role:  'Coach kinh doanh',
+                result:'Dùng hằng ngày sau khi nhận miễn phí từ Khóa 1',
+              },
+            ].map((t, i) => (
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3">
+                <div className="flex gap-0.5">
+                  {Array(t.stars).fill(0).map((_, j) => <span key={j} className="text-amber-400 text-sm">★</span>)}
+                </div>
+                <p className="text-sm text-gray-700 italic leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-bold text-[#0D2B1A]">{t.name}</p>
+                    <p className="text-xs text-gray-400">{t.role}</p>
+                  </div>
+                  <span className="text-xs bg-[#EAF5EF] text-[#2D7A4F] px-3 py-1 rounded-full font-medium">{t.result}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-gray-400 italic">Kết quả thay đổi tùy người. Đây là ví dụ từ học viên thật — không phải cam kết.</p>
+        </div>
+      </section>
+
       {/* [13] CTA FINAL */}
       <section className="px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A] leading-tight">
-            Tháng sau bạn vẫn sẽ hỏi<br/>"hôm nay đăng gì" —<br/>
+            Tháng sau bạn vẫn sẽ hỏi<br/>&ldquo;hôm nay đăng gì&rdquo;<br/>
             <span className="text-[#C0390E]">hoặc không cần hỏi nữa.</span>
           </h2>
           <p className="text-gray-500 text-sm">Hệ thống đã có câu trả lời sẵn cho bạn.</p>

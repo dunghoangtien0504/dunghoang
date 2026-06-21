@@ -5,9 +5,16 @@ import Link from 'next/link'
 import { CheckCircle, ArrowRight, DollarSign, Users, TrendingUp, ShieldCheck } from 'lucide-react'
 
 const COMMISSIONS = [
-  { product: 'Mini — Trang Bán Hàng 1 Giờ',       price: '368.000đ',     pct: '20%', earn: '73.600đ' },
-  { product: 'Khóa 1 — 25 Skill AI (Bản Tự Lập)', price: '686.868đ',     pct: '20%', earn: '137.374đ' },
-  { product: 'Khóa 2 — Bản Có Đội Trưởng',        price: '2.768.686đ',   pct: '10%', earn: '276.869đ' },
+  { product: 'Mini — Trang Bán Hàng Làm Trong 1 Buổi', price: '686.868đ',   pct: '20%', earn: '137.374đ' },
+  { product: 'Khóa 1 — 24 Skill AI (Bản Tự Lập)',      price: '868.686đ',   pct: '20%', earn: '173.737đ' },
+  { product: 'Khóa 2 — Bản Có Đội Trưởng',             price: '2.768.686đ', pct: '10%', earn: '276.869đ' },
+]
+
+const SCENARIOS = [
+  { label: '3 người/tháng mua Mini',     earn: '412.122đ/tháng',  detail: '3 × 137.374đ' },
+  { label: '2 người/tháng mua Khóa 1',  earn: '347.474đ/tháng',  detail: '2 × 173.737đ' },
+  { label: '1 người/tháng mua Khóa 2',  earn: '276.869đ/tháng',  detail: '1 × 276.869đ' },
+  { label: 'Combo 3 Mini + 1 Khóa 2',   earn: '688.991đ/tháng',  detail: '412.122đ + 276.869đ' },
 ]
 
 export default function CongTacVienPage() {
@@ -61,15 +68,15 @@ export default function CongTacVienPage() {
         {/* Hero */}
         <div className="text-center space-y-4 max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-[#EAF5EF] text-[#2D7A4F] text-xs font-semibold px-3 py-1.5 rounded-full border border-[#2D7A4F]/20">
-            Hoa hồng lên đến 20%
+            Hoa hồng 10–20% · Cookie 30 ngày · Không giới hạn số đơn
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-[#0D2B1A] leading-tight">
-            Giới thiệu bạn bè học<br />
-            <span className="text-[#3D6B4A]">Nhận hoa hồng tự động</span>
+            Bạn đã học xong.<br />
+            <span className="text-[#3D6B4A]">Giới thiệu người khác — nhận hoa hồng.</span>
           </h1>
-          <p className="text-[#3D6B4A] leading-relaxed">
-            Mỗi người bạn giới thiệu mua khóa học, bạn nhận hoa hồng ngay sau khi đơn hoàn tất.
-            Cookie theo dõi 30 ngày. Không giới hạn số lượng.
+          <p className="text-[#3D6B4A] leading-relaxed max-w-lg mx-auto">
+            Nếu bạn thấy khoá học có giá trị, chia sẻ link cho người khác. Họ mua là bạn nhận tiền tự động.
+            Không cần bán. Không cần thuyết phục. Chỉ cần chia sẻ đúng chỗ.
           </p>
         </div>
 
@@ -86,12 +93,29 @@ export default function CongTacVienPage() {
                   <p className="text-xs text-[#7A8C7E]">Giá bán: {c.price}</p>
                 </div>
                 <div className="text-right flex-shrink-0">
-                  <p className="font-bold text-[#2D7A4F]">{c.earn}</p>
+                  <p className="font-bold text-[#2D7A4F] text-lg">{c.earn}</p>
                   <p className="text-xs text-[#7A8C7E]">{c.pct} / đơn</p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Earnings examples */}
+        <div className="space-y-3">
+          <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-wider text-center">Ví dụ thu nhập thực tế</p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {SCENARIOS.map((s, i) => (
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl px-5 py-4 flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-[#0D2B1A]">{s.label}</p>
+                  <p className="text-xs text-[#7A8C7E] mt-0.5">{s.detail}</p>
+                </div>
+                <p className="text-sm font-black text-[#2D7A4F] flex-shrink-0 ml-3">{s.earn}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-[#7A8C7E]">Cookie theo dõi 30 ngày · Không giới hạn số người giới thiệu · Rút tối thiểu 500k</p>
         </div>
 
         {/* How it works */}
