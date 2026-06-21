@@ -56,6 +56,11 @@ export default function Khoa1Page() {
   return (
     <div className="min-h-screen bg-[#F6F0E4] font-sans">
 
+      {/* ANNOUNCEMENT BAR */}
+      <div className="bg-[#88860B] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
+        605+ solopreneur đã tiết kiệm 4-5 tiếng/ngày · Bảo hành 14 ngày hoàn 100%
+      </div>
+
       <nav className="bg-[#0D2B1A] px-4 py-3 sticky top-0 z-40">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <span className="text-[#F6F0E4] font-black font-mono text-sm">DungHoang.com</span>
@@ -72,7 +77,7 @@ export default function Khoa1Page() {
             Khóa 1 · Bản Tự Lập · 25 Skill AI
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-[#F6F0E4] leading-tight">
-            25 Skill AI Bán Hàng<br/>
+            24 Skill AI Bán Hàng<br/>
             <span className="text-[#C0390E]">Từ Solopreneur Đang Dùng Thật</span><br/>
             <span className="text-2xl sm:text-3xl font-bold text-[#F6F0E4]/70">Không phải lý thuyết. Không phải demo.</span>
           </h1>
@@ -90,7 +95,7 @@ export default function Khoa1Page() {
               Xem đủ 25 skill →
             </a>
           </div>
-          <p className="text-[#F6F0E4]/40 text-xs">Đã mua Mini 368k? Chỉ cần thêm 318.868đ là có Khóa 1 đầy đủ</p>
+          <p className="text-[#F6F0E4]/40 text-xs">Đã mua Trang Bán Hàng (686.868đ)? Chỉ cần thêm 181.818đ là có Khóa 1 đầy đủ</p>
         </div>
       </section>
 
@@ -388,6 +393,32 @@ export default function Khoa1Page() {
             Câu hỏi khác? Nhắn Telegram{' '}
             <a href="https://t.me/KentHoang" className="text-[#3D6B4A] underline font-medium">@KentHoang</a>
           </p>
+        </div>
+      </section>
+
+      {/* [12B] SOCIAL PROOF */}
+      <section className="px-4 py-14 bg-[#FAF7F2] border-y border-[#DDD8CB]">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <div className="text-center space-y-1">
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Kết quả thật từ học viên</p>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">605+ người đã làm được — không phải nghe mình kể</h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { name:'Chủ shop thời trang online', result:'Từ 2 tiếng viết 1 post xuống 15 phút duyệt — content 30 ngày AI làm sẵn, mình chỉ approve', skill:'Skill #01 + #03 + #06' },
+              { name:'Coach sức khỏe freelance',   result:'Chatbot Zalo tự trả lời 70% câu hỏi của khách — mình ngủ ngon hơn, sáng dậy thấy 3 lead mới', skill:'Skill #07 + #08' },
+              { name:'Solopreneur bán khóa học',   result:'Landing page xong trong 1 buổi chiều thay vì thuê design 2 tuần — tiết kiệm được khoảng 3 triệu', skill:'Skill #10 Landing Page' },
+            ].map((t, i) => (
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-3">
+                <p className="text-sm text-gray-700 leading-relaxed italic">"{t.result}"</p>
+                <div className="border-t border-[#EFE9DC] pt-3">
+                  <p className="text-xs font-bold text-[#0D2B1A]">{t.name}</p>
+                  <p className="text-xs text-[#3D6B4A] mt-0.5">{t.skill}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-gray-400">Kết quả thay đổi tùy người và business. Đây là ví dụ từ học viên thật — không phải cam kết.</p>
         </div>
       </section>
 

@@ -12,7 +12,7 @@ const FAQS = [
   { q:'30 ngày cam kết là cam kết gì?',
     a:'Trong 30 ngày bạn sẽ dựng xong hệ thống: content tự đăng, khách tự được trả lời, đơn tự về. Mình kèm sát qua Telegram, không để bạn kẹt ở bước nào. Nếu làm đủ theo SOP mà không đạt — mình ngồi review lại và sửa cùng bạn.' },
   { q:'Rollover từ Khóa 1 thế nào?',
-    a:'Nếu đã mua Khóa 1 (686.868đ), số tiền đó được trừ vào Khóa 2. Bạn chỉ cần thêm 2.081.818đ để có toàn bộ Khóa 2 kèm Tiểu Hà Mã. Liên hệ mình qua Telegram để áp dụng.' },
+    a:'Nếu đã mua Khóa 1 (868.686đ), số tiền đó được trừ vào Khóa 2. Bạn chỉ cần thêm 1.900.000đ để có toàn bộ Khóa 2 kèm Tiểu Hà Mã. Liên hệ mình qua Telegram để áp dụng.' },
   { q:'Chỉ 20 suất/đợt là thật không?',
     a:'Thật. Tiểu Hà Mã cần mình thiết lập riêng và kèm sát từng người. Mình không thể kèm cùng lúc quá nhiều người mà vẫn đảm bảo chất lượng. Mỗi đợt 20 suất — hết là đóng đăng ký.' },
   { q:'Bảo hành thế nào?',
@@ -314,7 +314,7 @@ export default function Khoa2Page() {
             <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
               <div>
                 <p className="font-bold text-[#0D2B1A]">Trả 1 lần — dùng mãi</p>
-                <p className="text-xs text-[#3D6B4A]">Đã mua Khóa 1? Chỉ thêm 2.081.818đ</p>
+                <p className="text-xs text-[#3D6B4A]">Đã mua Khóa 1 (868.686đ)? Chỉ thêm 1.900.000đ</p>
               </div>
               <p className="text-3xl font-black text-[#0D2B1A]">2.768.686đ</p>
             </div>
@@ -387,6 +387,31 @@ export default function Khoa2Page() {
             Câu hỏi khác? Nhắn Telegram{' '}
             <a href="https://t.me/KentHoang" className="text-[#3D6B4A] underline font-medium">@KentHoang</a>
           </p>
+        </div>
+      </section>
+
+      {/* [12B] SOCIAL PROOF */}
+      <section className="px-4 py-14 bg-[#FAF7F2] border-y border-[#DDD8CB]">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <div className="text-center space-y-1">
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Kết quả sau 30 ngày</p>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">Người đi cùng Tiểu Hà Mã — xong thật trong 30 ngày</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { name:'Chủ homestay 3 phòng', result:'Hà Mã setup chatbot Zalo trong ngày 3 — từ đó inbox tự được trả lời. Mình chỉ cần xác nhận đặt phòng. Tháng đầu tiết kiệm gần 4 tiếng/ngày', outcome:'Hệ thống CSKH tự động trong 3 ngày' },
+              { name:'Coach kinh doanh',       result:'30 bài content cho tháng đầu xong trong tuần 1. Ads Facebook chạy từ tuần 2. Doanh thu tháng đó tăng vì có hệ thống — không phải vì làm nhiều hơn', outcome:'Lịch content 30 ngày + ads chạy trong 2 tuần' },
+            ].map((t, i) => (
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3">
+                <p className="text-sm text-gray-700 leading-relaxed italic">"{t.result}"</p>
+                <div className="border-t border-[#EFE9DC] pt-3">
+                  <p className="text-xs font-bold text-[#0D2B1A]">{t.name}</p>
+                  <p className="text-xs text-[#2D7A4F] font-medium mt-0.5">→ {t.outcome}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-gray-400">Kết quả thay đổi tùy business và mức độ thực hiện theo SOP. Đây là ví dụ từ học viên thật.</p>
         </div>
       </section>
 
