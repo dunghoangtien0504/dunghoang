@@ -16,18 +16,29 @@ type Stats = {
   enrollments: number
 }
 
+type ChartData = {
+  revenueByDay:   { date: string; revenue: number; orders: number }[]
+  growthByDay:    { date: string; enrollments: number; newUsers: number }[]
+  comparePeriods: { day: string; current: number; previous: number }[]
+  funnel:         { step: number; label: string; count: number; color: string; text: string }[]
+}
+
 function fmtVND(n: number) { return n.toLocaleString('vi-VN') + '₫' }
 
 export default function AdminPage() {
-  const [stats, setStats]     = useState<Stats | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [stats, setStats]       = useState<Stats | null>(null)
+  const [charts, setCharts]     = useState<ChartData | null>(null)
+  const [loading, setLoading]   = useState(true)
 
   function load() {
     setLoading(true)
-    fetch('/api/admin/stats')
-      .then(r => r.json())
-      .then(d => { setStats(d); setLoading(false) })
-      .catch(() => setLoading(false))
+    Promise.all([
+      fetch('/api/admin/stats').then(r => r.json()),
+      fetch('/api/admin/charts').then(r => r.json()),
+    ])
+      .then(([s, c]) => { setStats(s); setCharts(c) })
+      .catch(() => {})
+      .finally(() => setLoading(false))
   }
   useEffect(() => { load() }, [])
 
@@ -92,9 +103,9 @@ export default function AdminPage() {
       {/* ── Secondary metrics ── */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {[
-          { label: 'Đơn chờ xử lý',  value: loading || !stats ? '...' : String(stats.orders.pending),
+          { label: 'Đơn chờ xử lý',    value: loading || !stats ? '...' : String(stats.orders.pending),
             icon: <ShoppingCart size={14} className="text-brand-olive" /> },
-          { label: 'Đơn hoàn tiền',  value: loading || !stats ? '...' : String(stats.orders.refunded),
+          { label: 'Đơn hoàn tiền',    value: loading || !stats ? '...' : String(stats.orders.refunded),
             icon: <DollarSign size={14} className="text-danger" /> },
           { label: 'Lượt ghi danh khóa', value: loading || !stats ? '...' : String(stats.enrollments),
             icon: <Users size={14} className="text-brand-border" /> },
@@ -111,14 +122,14 @@ export default function AdminPage() {
 
       {/* ── Charts row 1 ── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <RevenueChart />
-        <CompareChart />
+        <RevenueChart data={charts?.revenueByDay} />
+        <CompareChart data={charts?.comparePeriods} />
       </div>
 
       {/* ── Charts row 2 ── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <GrowthChart />
-        <ConversionFunnel />
+        <GrowthChart data={charts?.growthByDay} />
+        <ConversionFunnel data={charts?.funnel} />
       </div>
     </div>
   )

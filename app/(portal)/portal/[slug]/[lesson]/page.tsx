@@ -9,6 +9,7 @@ type Lesson = {
   id: string
   title: string
   description: string
+  content_html: string | null
   video_url: string
   duration: number
   sort_order: number
@@ -115,12 +116,12 @@ export default function LessonPage() {
             </button>
           </div>
 
-          {lesson.description && (
+          {lesson.description && !lesson.content_html && (
             <p className="text-sm text-gray-600 leading-relaxed">{lesson.description}</p>
           )}
 
           {/* Quick actions */}
-          <div className="flex items-center gap-3 pt-2 border-t border-gray-50">
+          <div className="flex items-center gap-3 pt-2 border-t border-gray-50 mt-2">
             <a
               href="https://t.me/KentHoang"
               target="_blank"
@@ -132,6 +133,14 @@ export default function LessonPage() {
             </a>
           </div>
         </div>
+
+        {/* SOP / Bài học HTML */}
+        {lesson.content_html && (
+          <div
+            className="rounded-2xl border border-gray-100 overflow-hidden"
+            dangerouslySetInnerHTML={{ __html: lesson.content_html }}
+          />
+        )}
 
         {/* Prev / Next */}
         <div className="flex items-center gap-3">
