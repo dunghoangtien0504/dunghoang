@@ -40,17 +40,19 @@ const FAQS = [
 function AccordionItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false)
   return (
-    <div className="border border-[#DDD8CB] rounded-xl overflow-hidden">
+    <div className="border border-[#DDD8CB] rounded-xl overflow-hidden bg-white transition-all duration-200 hover:border-brand-border/40 hover:shadow-sm">
       <button onClick={() => setOpen(o => !o)}
         className="w-full text-left px-5 py-4 flex items-start justify-between gap-3 bg-white hover:bg-[#FAF7F2] transition-colors">
-        <span className="font-semibold text-[#0D2B1A] text-sm leading-snug">{q}</span>
-        <span className={`text-[#C0390E] font-bold flex-shrink-0 transition-transform ${open ? 'rotate-45' : ''}`}>+</span>
+        <span className="font-bold text-[#0D2B1A] text-sm leading-snug">{q}</span>
+        <span className={`text-[#C0390E] font-bold flex-shrink-0 text-lg transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
       </button>
-      {open && (
-        <div className="px-5 pb-5 bg-white">
-          <p className="text-sm text-gray-600 leading-relaxed">{a}</p>
+      <div className={`grid transition-all duration-200 ease-in-out ${open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+        <div className="overflow-hidden">
+          <div className="px-5 pb-5 pt-1 text-sm text-gray-600 leading-relaxed bg-white border-t border-gray-50/50">
+            <p>{a}</p>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -80,7 +82,7 @@ export default function MiniTrangBanHangPage() {
       <nav className="bg-[#0D2B1A] px-4 py-3 sticky top-0 z-40">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <span className="text-[#F6F0E4] font-black font-mono text-sm">DungHoang.com</span>
-          <button onClick={open} className="bg-[#C0390E] hover:bg-[#a02e0a] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors">
+          <button onClick={open} className="bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white text-xs font-bold px-4 py-2 rounded-lg transition-all duration-200">
             Đăng ký 686.868đ →
           </button>
         </div>
@@ -103,7 +105,7 @@ export default function MiniTrangBanHangPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <button onClick={open}
-              className="h-14 px-8 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-lg shadow-red-900/30">
+              className="h-14 px-8 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-lg shadow-red-900/30 hover:shadow-xl hover:shadow-red-900/40">
               Bắt Đầu Ngay — 686.868đ →
             </button>
             <a href="#co-gi"
@@ -169,7 +171,7 @@ export default function MiniTrangBanHangPage() {
           </div>
 
           <button onClick={open}
-            className="w-full h-14 bg-[#0D2B1A] hover:bg-[#1a4a2e] text-[#F6F0E4] font-bold rounded-2xl transition-colors">
+            className="w-full h-14 bg-[#0D2B1A] hover:bg-[#153f27] active:scale-[0.97] hover:scale-[1.01] text-[#F6F0E4] font-bold rounded-2xl transition-all duration-200 shadow-md">
             Tôi Muốn Có Trang Bán Hàng Của Mình →
           </button>
         </div>
@@ -439,7 +441,7 @@ export default function MiniTrangBanHangPage() {
                 result:'Có prompt dùng được cho 3 sản phẩm',
               },
             ].map((t, i) => (
-              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3">
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3 transition-all duration-200 hover:shadow-md hover:border-brand-border/20 hover:translate-y-[-2px]">
                 <div className="flex gap-0.5">
                   {Array(t.stars).fill(0).map((_, j) => <span key={j} className="text-amber-400 text-sm">★</span>)}
                 </div>
@@ -466,7 +468,7 @@ export default function MiniTrangBanHangPage() {
           </h2>
           <p className="text-gray-500 text-sm">Hoặc tiếp tục giải thích qua inbox với từng khách một.</p>
           <button onClick={open}
-            className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
+            className="w-full h-16 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.02] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-xl shadow-red-900/25 hover:shadow-2xl hover:shadow-red-900/40">
             Bắt Đầu Ngay — 686.868đ →
           </button>
           <div className="flex items-center justify-center gap-6 text-xs text-gray-400">
@@ -494,13 +496,13 @@ export default function MiniTrangBanHangPage() {
 
       {/* STICKY */}
       {showSticky && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A] border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A]/95 backdrop-blur-md border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl animate-slide-up">
           <div className="min-w-0">
             <p className="text-[#F6F0E4] font-bold text-sm truncate">Trang Bán Hàng + Content System — 686.868đ</p>
             <p className="text-[#F6F0E4]/50 text-xs">Bảo hành 14 ngày · Có thể trừ vào Khóa 1</p>
           </div>
           <button onClick={open}
-            className="flex-shrink-0 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-bold px-5 h-11 rounded-xl text-sm transition-colors">
+            className="flex-shrink-0 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white font-bold px-5 h-11 rounded-xl text-sm transition-all duration-200">
             Đăng ký →
           </button>
         </div>

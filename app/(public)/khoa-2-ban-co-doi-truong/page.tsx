@@ -31,17 +31,19 @@ const WEEK_PLAN = [
 function AccordionItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false)
   return (
-    <div className="border border-[#DDD8CB] rounded-xl overflow-hidden">
+    <div className="border border-[#DDD8CB] rounded-xl overflow-hidden bg-white transition-all duration-200 hover:border-brand-border/40 hover:shadow-sm">
       <button onClick={() => setOpen(o => !o)}
         className="w-full text-left px-5 py-4 flex items-start justify-between gap-3 bg-white hover:bg-[#FAF7F2] transition-colors">
-        <span className="font-semibold text-[#0D2B1A] text-sm leading-snug">{q}</span>
-        <span className={`text-[#C0390E] font-bold flex-shrink-0 transition-transform ${open ? 'rotate-45' : ''}`}>+</span>
+        <span className="font-bold text-[#0D2B1A] text-sm leading-snug">{q}</span>
+        <span className={`text-[#C0390E] font-bold flex-shrink-0 text-lg transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
       </button>
-      {open && (
-        <div className="px-5 pb-5 bg-white">
-          <p className="text-sm text-gray-600 leading-relaxed">{a}</p>
+      <div className={`grid transition-all duration-200 ease-in-out ${open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+        <div className="overflow-hidden">
+          <div className="px-5 pb-5 pt-1 text-sm text-gray-600 leading-relaxed bg-white border-t border-gray-50/50">
+            <p>{a}</p>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -71,7 +73,7 @@ export default function Khoa2Page() {
       <nav className="bg-[#0D2B1A] px-4 py-3 sticky top-0 z-40">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <span className="text-[#F6F0E4] font-black font-mono text-sm">DungHoang.com</span>
-          <button onClick={open} className="bg-[#C0390E] hover:bg-[#a02e0a] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors">
+          <button onClick={open} className="bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white text-xs font-bold px-4 py-2 rounded-lg transition-all duration-200">
             Giữ suất · 3.868.686đ →
           </button>
         </div>
@@ -94,7 +96,7 @@ export default function Khoa2Page() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <button onClick={open}
-              className="h-14 px-8 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-lg shadow-red-900/30">
+              className="h-14 px-8 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-lg shadow-red-900/30 hover:shadow-xl hover:shadow-red-900/40">
               Giữ Suất · 3.868.686đ →
             </button>
             <a href="#30-ngay"
@@ -144,7 +146,7 @@ export default function Khoa2Page() {
               { icon:'⚠️', head:'Kẹt vì không biết thứ tự',   body:'25 skill, bắt đầu từ đâu? Cái nào phụ thuộc cái nào? Setup sai thứ tự là mất thêm 2 tuần.' },
               { icon:'⚠️', head:'Kẹt vì không có template',   body:'Prompt người khác dùng được không có nghĩa là phù hợp với business của bạn. Cần ai customize lại cho bạn.' },
             ].map((p, i) => (
-              <div key={i} className="bg-white border border-[#DDD8CB] rounded-xl p-4 flex items-start gap-3">
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-xl p-4 flex items-start gap-3 transition-all duration-200 hover:shadow-md hover:border-brand-border/20 hover:translate-y-[-2px]">
                 <span className="text-lg flex-shrink-0">{p.icon}</span>
                 <div>
                   <p className="font-bold text-[#0D2B1A] text-sm">{p.head}</p>
@@ -154,7 +156,7 @@ export default function Khoa2Page() {
             ))}
           </div>
           <button onClick={open}
-            className="w-full h-14 bg-[#0D2B1A] hover:bg-[#1a4a2e] text-[#F6F0E4] font-bold rounded-2xl transition-colors">
+            className="w-full h-14 bg-[#0D2B1A] hover:bg-[#153f27] active:scale-[0.97] hover:scale-[1.01] text-[#F6F0E4] font-bold rounded-2xl transition-all duration-200 shadow-md">
             Tôi Muốn Có Người Đi Cùng →
           </button>
         </div>
@@ -185,7 +187,7 @@ export default function Khoa2Page() {
           </div>
           <div className="space-y-3">
             {WEEK_PLAN.map(w => (
-              <div key={w.w} className="bg-white border border-[#DDD8CB] rounded-2xl overflow-hidden">
+              <div key={w.w} className="bg-white border border-[#DDD8CB] rounded-2xl overflow-hidden transition-all duration-200 hover:shadow-md hover:border-brand-border/30 hover:translate-y-[-2px]">
                 <div className="bg-[#0D2B1A] px-5 py-3 flex items-center gap-3">
                   <span className="text-[#C0390E] font-black text-xs font-mono">{w.w}</span>
                   <span className="text-[#F6F0E4] font-bold text-sm">{w.head}</span>
@@ -402,7 +404,7 @@ export default function Khoa2Page() {
               { name:'Chủ homestay 3 phòng', result:'Hà Mã setup chatbot Zalo trong ngày 3. Từ đó inbox tự được trả lời. Mình chỉ cần xác nhận đặt phòng. Tháng đầu tiết kiệm gần 4 tiếng/ngày', outcome:'Hệ thống CSKH tự động trong 3 ngày' },
               { name:'Coach kinh doanh',       result:'30 bài content cho tháng đầu xong trong tuần 1. Ads Facebook chạy từ tuần 2. Doanh thu tháng đó tăng vì có hệ thống, không phải vì làm nhiều hơn', outcome:'Lịch content 30 ngày + ads chạy trong 2 tuần' },
             ].map((t, i) => (
-              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3">
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3 transition-all duration-200 hover:shadow-md hover:border-brand-border/20 hover:translate-y-[-2px]">
                 <p className="text-sm text-gray-700 leading-relaxed italic">"{t.result}"</p>
                 <div className="border-t border-[#EFE9DC] pt-3">
                   <p className="text-xs font-bold text-[#0D2B1A]">{t.name}</p>
@@ -442,7 +444,7 @@ export default function Khoa2Page() {
 
           <div className="space-y-3">
             <button onClick={open}
-              className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
+              className="w-full h-16 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.02] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-xl shadow-red-900/25 hover:shadow-2xl hover:shadow-red-900/40">
               Quyết Định Hôm Nay · Giữ Suất Trước Khi Hết →
             </button>
             <div className="flex items-center justify-center gap-4 text-xs text-gray-400 flex-wrap">
@@ -470,13 +472,13 @@ export default function Khoa2Page() {
       </footer>
 
       {showSticky && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A] border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A]/95 backdrop-blur-md border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl animate-slide-up">
           <div className="min-w-0">
             <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 2 · Có Đội Trưởng · {slots} suất</p>
             <p className="text-[#F6F0E4]/50 text-xs">3.868.686đ · 30 ngày · Tiểu Hà Mã 24/7</p>
           </div>
           <button onClick={open}
-            className="flex-shrink-0 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-bold px-4 h-11 rounded-xl text-sm transition-colors whitespace-nowrap">
+            className="flex-shrink-0 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white font-bold px-4 h-11 rounded-xl text-sm transition-all duration-200 whitespace-nowrap">
             Giữ suất →
           </button>
         </div>

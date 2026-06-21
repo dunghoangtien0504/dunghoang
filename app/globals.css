@@ -166,6 +166,48 @@ body {
   100% { background-position: -200% 0; }
 }
 
+/* ─── Blog prose styles ─────────────────────────────────────── */
+.prose-dh {
+  color: #1a2e1f;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.prose-dh p { margin-bottom: 1.25rem; }
+.prose-dh h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0D2B1A;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.prose-dh h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0D2B1A;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.prose-dh ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.25rem;
+  space-y: 0.5rem;
+}
+.prose-dh ul li {
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+.prose-dh ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #3D6B4A;
+  font-weight: 600;
+}
+.prose-dh strong { color: #0D2B1A; font-weight: 700; }
+.prose-dh a { color: #3D6B4A; text-decoration: underline; }
+
 /* ─── Recharts overrides (light theme) ───────────────────────── */
 .recharts-cartesian-grid-horizontal line,
 .recharts-cartesian-grid-vertical line {
@@ -177,3 +219,14 @@ body {
   border-radius: 10px !important;
   box-shadow: 0 4px 12px rgba(13,43,26,0.10) !important;
 }
+
+/* ─── UI/UX Custom Animations ───────────────────────────────── */
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
