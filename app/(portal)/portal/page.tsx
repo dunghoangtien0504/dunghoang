@@ -4,166 +4,171 @@ import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/lib/useAuth'
-import { BookOpen, Play, CheckCircle, Lock } from 'lucide-react'
+import { BookOpen, Lock, CheckCircle, ChevronRight } from 'lucide-react'
 
 type Enrollment = {
-  course_id: string
+  course_id:   string
   enrolled_at: string
-  course_products: {
-    id: string
-    name: string
-    description: string
-  }
+  course_products: { id: string; name: string; description: string }
+}
+
+const COURSE_ACCENT: Record<string, string> = {
+  content_368: 'bg-amber-500',
+  mini_368:    'bg-emerald-600',
+  khoa1_686:   'bg-blue-600',
+  khoa2_2768:  'bg-purple-600',
+  '1kem1':     'bg-orange-600',
+}
+
+const COURSE_EMOJI: Record<string, string> = {
+  content_368: '✍️',
+  mini_368:    '🛒',
+  khoa1_686:   '⚡',
+  khoa2_2768:  '🤝',
+  '1kem1':     '🎯',
 }
 
 export default function DashboardPage() {
   const router = useRouter()
   const { user, loading: authLoading } = useAuth()
   const [enrollments, setEnrollments] = useState<Enrollment[]>([])
-  const [loading, setLoading]         = useState(true)
+  const [loading,     setLoading]     = useState(true)
 
   useEffect(() => {
     async function load() {
       const { data: { user } } = await supabase!.auth.getUser()
       if (!user) return
-
       const { data } = await supabase!
         .from('enrollments')
         .select('course_id, enrolled_at, course_products(id, name, description)')
         .eq('user_id', user.id)
-
       setEnrollments((data as unknown as Enrollment[]) || [])
       setLoading(false)
     }
     load()
   }, [])
 
-  const COURSE_COLORS: Record<string, string> = {
-    mini_368:   'from-emerald-500 to-teal-600',
-    khoa1_686:  'from-blue-500 to-indigo-600',
-    khoa2_2768: 'from-purple-500 to-pink-600',
-    '1kem1':    'from-orange-500 to-red-600',
-  }
-
   if (authLoading || loading) {
     return (
-      <div className="min-h-screen bg-[#f5f5f0] flex items-center justify-center">
+      <div className="flex items-center justify-center min-h-screen bg-[#F6F0E4]">
         <div className="w-6 h-6 border-2 border-[#1D9E75] border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-[#f5f5f0]">
+    <div className="min-h-screen bg-[#F6F0E4]">
+
       {/* Nav */}
-      <nav className="bg-white border-b border-gray-100 sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-          <span className="text-sm font-bold text-[#0d2b1a] tracking-wide">DungHoang.com</span>
+      <nav className="bg-[#0D2B1A] sticky top-0 z-40">
+        <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
+          <span className="text-[#F6F0E4] font-black font-mono text-sm">DungHoang.com</span>
           <div className="flex items-center gap-4">
-            <span className="text-xs text-gray-400 hidden sm:block">{user?.email}</span>
-            <a href="/portal/tai-khoan" className="text-xs text-gray-400 hover:text-[#0d2b1a] transition-colors">Tài khoản</a>
-            <button onClick={() => supabase!.auth.signOut().then(() => router.push('/portal/login'))} className="text-xs text-gray-400 hover:text-gray-600">Đăng xuất</button>
+            <span className="text-[#F6F0E4]/40 text-xs hidden sm:block">{user?.email}</span>
+            <a href="/portal/tai-khoan" className="text-[#F6F0E4]/60 hover:text-[#F6F0E4] text-xs transition-colors">
+              Tài khoản
+            </a>
+            <button
+              onClick={() => supabase!.auth.signOut().then(() => router.push('/portal/login'))}
+              className="text-xs text-[#F6F0E4]/40 hover:text-[#F6F0E4]/70 transition-colors"
+            >
+              Đăng xuất
+            </button>
           </div>
         </div>
       </nav>
-    <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
-      {/* Header */}
-      <div>
-        <h1 className="text-2xl font-bold text-[#0d2b1a]">Khu học của bạn</h1>
-        <p className="text-gray-500 text-sm mt-1">
-          {enrollments.length > 0
-            ? `${enrollments.length} khóa học đang chờ bạn`
-            : 'Chưa có khóa học nào'}
-        </p>
-      </div>
 
-      {/* Enrolled courses */}
-      {enrollments.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {enrollments.map((e) => {
-            const color = COURSE_COLORS[e.course_id] || 'from-gray-500 to-gray-700'
-            return (
-              <a
-                key={e.course_id}
-                href={`/portal/${e.course_id}`}
-                className="group block bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden"
-              >
-                <div className={`h-28 bg-gradient-to-br ${color} flex items-center justify-center relative`}>
-                  <BookOpen size={36} className="text-white/80" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/10">
-                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                      <Play size={20} className="text-white ml-0.5" />
-                    </div>
+      <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
+
+        {/* Header */}
+        <div className="bg-[#0D2B1A] rounded-2xl p-6 space-y-1">
+          <p className="text-[#F6F0E4]/50 text-xs font-mono uppercase tracking-widest">Khu học viên</p>
+          <h1 className="text-xl font-black text-[#F6F0E4]">
+            {enrollments.length > 0
+              ? `${enrollments.length} khóa đang chờ bạn`
+              : 'Chưa có khóa học nào'}
+          </h1>
+        </div>
+
+        {/* Courses */}
+        {enrollments.length > 0 ? (
+          <div className="space-y-2">
+            {enrollments.map(e => {
+              const accent = COURSE_ACCENT[e.course_id] ?? 'bg-gray-600'
+              const emoji  = COURSE_EMOJI[e.course_id]  ?? '📚'
+              return (
+                <a
+                  key={e.course_id}
+                  href={`/portal/${e.course_id}`}
+                  className="group flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-5 hover:border-[#0D2B1A]/20 hover:shadow-sm transition-all"
+                >
+                  <div className={`w-12 h-12 rounded-xl ${accent} flex items-center justify-center flex-shrink-0 text-xl`}>
+                    {emoji}
                   </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-[#0d2b1a] text-sm leading-snug group-hover:text-[#1D9E75] transition-colors">
-                    {e.course_products?.name}
-                  </h3>
-                  <p className="text-xs text-gray-400 mt-1">
-                    Đăng ký {new Date(e.enrolled_at).toLocaleDateString('vi-VN')}
-                  </p>
-                  <div className="mt-4 flex items-center gap-2">
-                    <span className="text-xs bg-[#1D9E75]/10 text-[#1D9E75] px-2.5 py-1 rounded-full font-medium">
-                      Vào học →
-                    </span>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-[#0D2B1A] text-sm leading-snug group-hover:text-[#1D9E75] transition-colors">
+                      {e.course_products?.name}
+                    </p>
+                    <p className="text-xs text-gray-400 mt-0.5">
+                      Đăng ký {new Date(e.enrolled_at).toLocaleDateString('vi-VN')}
+                    </p>
                   </div>
-                </div>
-              </a>
-            )
-          })}
-        </div>
-      ) : (
-        <div className="bg-white rounded-2xl border border-dashed border-gray-200 p-12 text-center">
-          <Lock size={32} className="text-gray-300 mx-auto mb-4" />
-          <h3 className="font-medium text-gray-600 mb-2">Chưa có khóa học nào</h3>
-          <p className="text-sm text-gray-400 mb-6">
-            Tài khoản này chưa được gán khóa học.<br />
-            Nếu bạn đã mua, liên hệ Dũng qua Telegram để được hỗ trợ.
-          </p>
-          <a
-            href="/khoa-1"
-            className="inline-block bg-[#0d2b1a] text-white text-sm px-6 py-2.5 rounded-xl hover:bg-[#1D9E75] transition-colors"
-          >
-            Xem Khóa 1 — 686.868đ
-          </a>
-        </div>
-      )}
-
-      {/* Challenge 7 ngày */}
-      <div className="bg-white rounded-2xl border border-gray-100 p-6 flex items-start gap-4">
-        <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center flex-shrink-0">
-          <span className="text-lg">🏆</span>
-        </div>
-        <div className="flex-1">
-          <h3 className="font-bold text-[#0d2b1a] text-sm">Thử Thách 7 Ngày — Bí Quyết Đưa AI Vào Business</h3>
-          <p className="text-xs text-gray-400 mt-0.5">Đóng cọc 368k · Hoàn thành đúng hạn → hoàn tiền</p>
-        </div>
-        <a href="/portal/thu-thach"
-          className="flex-shrink-0 text-xs bg-[#0d2b1a] text-white px-4 py-2 rounded-xl hover:bg-[#1D9E75] transition-colors font-medium">
-          Vào xem →
-        </a>
-      </div>
-
-      {/* Checklist gợi ý */}
-      {enrollments.length > 0 && (
-        <div className="bg-white rounded-2xl border border-gray-100 p-6">
-          <h3 className="font-bold text-[#0d2b1a] text-sm mb-4">Gợi ý bắt đầu</h3>
-          <div className="space-y-3">
-            {[
-              'Học 1 skill → làm thử ngay → thấy kết quả → học skill tiếp',
-              'Hỏi Tiểu Hà Mã trên Telegram khi bị kẹt bất cứ lúc nào',
-              'Đừng xem hết tất cả cùng 1 lúc — não không hấp thụ được^^',
-            ].map((tip, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <CheckCircle size={15} className="text-[#1D9E75] mt-0.5 flex-shrink-0" />
-                <p className="text-sm text-gray-600">{tip}</p>
-              </div>
-            ))}
+                  <ChevronRight size={16} className="text-gray-300 group-hover:text-[#1D9E75] flex-shrink-0 transition-colors" />
+                </a>
+              )
+            })}
           </div>
-        </div>
-      )}
-    </div>
+        ) : (
+          <div className="bg-white rounded-2xl border border-dashed border-gray-200 p-12 text-center space-y-4">
+            <Lock size={32} className="text-gray-300 mx-auto" />
+            <div>
+              <p className="font-bold text-[#0D2B1A]">Chưa có khóa học nào</p>
+              <p className="text-sm text-gray-400 mt-1">
+                Nếu đã mua, liên hệ Dũng qua Telegram để được cấp quyền.
+              </p>
+            </div>
+            <a href="/khoa-1-ban-tu-lap"
+              className="inline-block bg-[#0D2B1A] text-white text-sm px-6 py-3 rounded-xl hover:bg-[#1D9E75] transition-colors font-bold">
+              Xem Khóa 1 — 868.686đ →
+            </a>
+          </div>
+        )}
+
+        {/* Challenge 7 ngày */}
+        <a href="/portal/thu-thach"
+          className="group flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-5 hover:border-[#0D2B1A]/20 hover:shadow-sm transition-all">
+          <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0 text-xl">
+            🏆
+          </div>
+          <div className="flex-1">
+            <p className="font-bold text-[#0D2B1A] text-sm group-hover:text-[#1D9E75] transition-colors">
+              Thử Thách 7 Ngày — Bí Quyết Đưa AI Vào Business
+            </p>
+            <p className="text-xs text-gray-400 mt-0.5">Cọc 368.000đ · Hoàn thành đúng hạn → hoàn tiền</p>
+          </div>
+          <ChevronRight size={16} className="text-gray-300 group-hover:text-[#1D9E75] flex-shrink-0 transition-colors" />
+        </a>
+
+        {/* Tips */}
+        {enrollments.length > 0 && (
+          <div className="bg-white border border-gray-100 rounded-2xl p-6 space-y-4">
+            <p className="font-bold text-[#0D2B1A] text-sm">Gợi ý bắt đầu</p>
+            <div className="space-y-3">
+              {[
+                'Học 1 skill → làm thử ngay → thấy kết quả → học skill tiếp. Đừng xem hết một lúc.',
+                'Nộp bài từng ngày để Dũng theo dõi và duyệt. Bài được duyệt mới tính hoàn thành.',
+                'Bị kẹt ở đâu? Nhắn Telegram @KentHoang bất cứ lúc nào.',
+              ].map((tip, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle size={15} className="text-[#1D9E75] mt-0.5 flex-shrink-0" />
+                  <p className="text-sm text-gray-600">{tip}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+      </div>
     </div>
   )
 }
