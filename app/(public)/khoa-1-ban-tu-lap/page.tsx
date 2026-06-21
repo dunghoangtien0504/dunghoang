@@ -3,36 +3,9 @@
 import { useState, useEffect, useRef } from 'react'
 import CheckoutModal from '@/components/checkout/CheckoutModal'
 import { PRODUCTS } from '@/lib/products'
+import { SKILLS, SKILL_GROUPS } from '@/lib/skills'
 
 const product = PRODUCTS.khoa1_686
-
-const SKILLS = [
-  { n:'01', name:'BRAND DNA',       desc:'Dạy AI giọng văn của bạn — 1 lần, dùng mãi' },
-  { n:'02', name:'Landing Page',    desc:'Trang bán hàng hoàn chỉnh trong 1 giờ' },
-  { n:'03', name:'Social Caption',  desc:'30 caption Facebook/TikTok trong 30 phút' },
-  { n:'04', name:'Email Marketing', desc:'Chuỗi email chào hàng tự động 5 bước' },
-  { n:'05', name:'Chatbot Zalo',    desc:'Bot trả lời khách tự động 24/7 không cần thuê người' },
-  { n:'06', name:'Sales Message',   desc:'Template tin chốt đơn tự nhiên không cứng nhắc' },
-  { n:'07', name:'Video Script',    desc:'Kịch bản video 60 giây từ brief đơn giản' },
-  { n:'08', name:'Headline AI',     desc:'10 tiêu đề thu hút trong 5 phút' },
-  { n:'09', name:'Content System',  desc:'Lịch 30 ngày đăng bài trong 1 giờ' },
-  { n:'10', name:'Ads Copy',        desc:'Copy quảng cáo Facebook 3 góc độ khác nhau' },
-  { n:'11', name:'Customer Reply',  desc:'AI trả lời bình luận và review theo đúng giọng bạn' },
-  { n:'12', name:'Product Story',   desc:'Story kể về sản phẩm làm khách muốn mua' },
-  { n:'13', name:'Upsell Script',   desc:'Kịch bản bán thêm sau khi khách đã mua' },
-  { n:'14', name:'FAQ Generator',   desc:'Tạo 20 FAQ từ sản phẩm — giảm tin nhắn hỏi 50%' },
-  { n:'15', name:'Review Request',  desc:'Template xin review tự nhiên, tỉ lệ phản hồi cao' },
-  { n:'16', name:'Referral Script', desc:'Script kêu gọi giới thiệu bạn bè' },
-  { n:'17', name:'Flash Sale Copy', desc:'Copy sale ngắn hạn tạo khan hiếm thật' },
-  { n:'18', name:'DM Outreach',     desc:'Tin nhắn tiếp cận lạnh — tỉ lệ reply cao' },
-  { n:'19', name:'Story Highlight', desc:'Caption highlights Instagram chuyên nghiệp' },
-  { n:'20', name:'Bio Optimizer',   desc:'Bio mạng xã hội thu hút đúng khách mục tiêu' },
-  { n:'21', name:'Bundle Offer',    desc:'Đóng gói sản phẩm thành combo tăng giá trị' },
-  { n:'22', name:'Repost System',   desc:'Tái sử dụng 1 content thành 5 dạng khác nhau' },
-  { n:'23', name:'SEO Description', desc:'Mô tả sản phẩm chuẩn SEO viết trong 5 phút' },
-  { n:'24', name:'Testimonial Edit',desc:'Biến review thô thành testimonial chuyên nghiệp' },
-  { n:'25', name:'Monthly SOP',     desc:'Hệ thống chạy cả tháng, bạn chỉ approve' },
-]
 
 const FAQS = [
   { q:'Không biết gì về AI thì học được không?',
@@ -194,25 +167,52 @@ export default function Khoa1Page() {
         </div>
       </section>
 
-      {/* [6] 25 SKILLS */}
+      {/* [6] 25 SKILLS — gom theo 6 nhóm, mô tả output thật */}
       <section id="25-skill" className="px-4 py-14 bg-white border-y border-[#DDD8CB]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Toàn bộ 25 skill</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Mỗi skill = 1 quy trình thực chiến</h2>
-            <p className="text-gray-500 text-sm">Cuối mỗi skill bạn có output thật — không phải bài tập nộp lên</p>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">Mỗi skill cho bạn một thứ cầm được</h2>
+            <p className="text-gray-500 text-sm">Mình ghi rõ skill làm được gì và bạn nhận lại gì — không nói chung chung</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {SKILLS.map(s => (
-              <div key={s.n} className="border border-[#DDD8CB] rounded-xl p-3.5 flex items-start gap-3">
-                <span className="text-xs font-black text-[#C0390E] font-mono flex-shrink-0 w-6">{s.n}</span>
-                <div>
-                  <p className="font-bold text-[#0D2B1A] text-xs">{s.name}</p>
-                  <p className="text-xs text-gray-500 mt-0.5 leading-snug">{s.desc}</p>
+
+          <div className="space-y-5">
+            {SKILL_GROUPS.map((group, gi) => {
+              const items = SKILLS.filter(s => s.group === group)
+              return (
+                <div key={group} className="border border-[#DDD8CB] rounded-2xl overflow-hidden">
+                  <div className="bg-[#0D2B1A] px-5 py-2.5 flex items-center gap-2">
+                    <span className="text-[#C0390E] font-black text-xs font-mono">N{gi + 1}</span>
+                    <span className="text-[#F6F0E4] font-bold text-sm">{group}</span>
+                    <span className="text-[#F6F0E4]/40 text-xs ml-auto">{items.length} skill</span>
+                  </div>
+                  <div className="divide-y divide-[#EFE9DC]">
+                    {items.map(s => (
+                      <div key={s.n} className="px-5 py-3.5 flex items-start gap-3">
+                        <span className="text-xs font-black text-[#C0390E] font-mono flex-shrink-0 w-6 pt-0.5">{s.n}</span>
+                        <div className="min-w-0">
+                          <p className="font-bold text-[#0D2B1A] text-sm flex items-center gap-2 flex-wrap">
+                            {s.name}
+                            {s.proven && <span className="text-[10px] bg-[#EAF5EF] text-[#2D7A4F] px-1.5 py-0.5 rounded-full font-semibold">đã chứng minh ở Challenge</span>}
+                          </p>
+                          <p className="text-xs text-gray-600 mt-1 leading-relaxed">{s.does}</p>
+                          <p className="text-xs text-[#3D6B4A] mt-1"><strong>Bạn nhận:</strong> {s.output}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
+
+          {/* Nói thật về tự động hóa — chống cảm giác bị thổi phồng */}
+          <div className="bg-[#FAF7F2] border border-[#DDD8CB] rounded-xl p-4 text-sm text-gray-600 leading-relaxed">
+            <p><strong className="text-[#0D2B1A]">Mình nói thẳng:</strong> 25 skill là 25 quy trình AI làm phần nặng cho bạn (viết, lên ý tưởng, dựng khung).
+            Bạn vẫn cần đọc lại, chỉnh cho đúng business của mình, và bấm đăng. Không có thứ gì chạy 100% mà bạn không đụng tay.
+            Cái khác biệt là: thay vì mất 2 tiếng viết 1 bài, bạn mất 15 phút duyệt.</p>
+          </div>
+
           <button onClick={open}
             className="w-full h-14 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors shadow-lg shadow-red-900/20">
             Giữ Chỗ — 686.868đ →
