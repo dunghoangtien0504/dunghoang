@@ -8,15 +8,15 @@ const product = PRODUCTS.khoa2_2768
 
 const FAQS = [
   { q:'Tiểu Hà Mã là gì? Khác gì chatbot thường?',
-    a:'Tiểu Hà Mã là AI agent mình cài riêng cho bạn trên Telegram. Không phải chatbot trả lời chung chung — nó biết SOP của bạn, biết sản phẩm của bạn, và kèm bạn theo từng bước. Bạn hỏi đến đâu, nó chỉ đến đó. Mình thiết lập riêng từng người, không dùng chung.' },
+    a:'Tiểu Hà Mã là AI agent mình cài riêng cho bạn trên Telegram. Không phải chatbot trả lời chung chung. Nó biết SOP của bạn, biết sản phẩm của bạn, và kèm bạn theo từng bước. Bạn hỏi đến đâu, nó chỉ đến đó. Mình thiết lập riêng từng người, không dùng chung.' },
   { q:'30 ngày cam kết là cam kết gì?',
-    a:'Trong 30 ngày bạn sẽ dựng xong hệ thống: content tự đăng, khách tự được trả lời, đơn tự về. Mình kèm sát qua Telegram, không để bạn kẹt ở bước nào. Nếu làm đủ theo SOP mà không đạt — mình ngồi review lại và sửa cùng bạn.' },
+    a:'Trong 30 ngày bạn sẽ dựng xong hệ thống: content tự đăng, khách tự được trả lời, đơn tự về. Mình kèm sát qua Telegram, không để bạn kẹt ở bước nào. Nếu làm đủ theo SOP mà không đạt, mình ngồi review lại và sửa cùng bạn.' },
   { q:'Rollover từ Khóa 1 thế nào?',
     a:'Nếu đã mua Khóa 1 (868.686đ), số tiền đó được trừ vào Khóa 2. Bạn chỉ cần thêm 1.900.000đ để có toàn bộ Khóa 2 kèm Tiểu Hà Mã. Liên hệ mình qua Telegram để áp dụng.' },
   { q:'Chỉ 20 suất/đợt là thật không?',
-    a:'Thật. Tiểu Hà Mã cần mình thiết lập riêng và kèm sát từng người. Mình không thể kèm cùng lúc quá nhiều người mà vẫn đảm bảo chất lượng. Mỗi đợt 20 suất — hết là đóng đăng ký.' },
+    a:'Thật. Tiểu Hà Mã cần mình thiết lập riêng và kèm sát từng người. Mình không thể kèm cùng lúc quá nhiều người mà vẫn đảm bảo chất lượng. Mỗi đợt 20 suất, hết là đóng đăng ký.' },
   { q:'Bảo hành thế nào?',
-    a:'14 ngày hoàn 100%. Nếu 14 ngày đầu bạn thấy không phù hợp — nhắn mình, hoàn trong 24 giờ không hỏi lý do.' },
+    a:'14 ngày hoàn 100%. Nếu 14 ngày đầu bạn thấy không phù hợp, nhắn mình, hoàn trong 24 giờ không hỏi lý do.' },
   { q:'Khác gì Khóa 1?',
     a:'Khóa 1 bạn tự học 25 skill, tự áp dụng. Khóa 2 có thêm: bộ SOP dựng cả hệ thống 30 ngày + Tiểu Hà Mã kèm 24/7 qua Telegram. Phù hợp nếu bạn muốn chắc ăn hơn hoặc không muốn tự mày mò.' },
 ]
@@ -65,14 +65,14 @@ export default function Khoa2Page() {
 
       {/* SCARCITY BAR */}
       <div className="bg-[#C0390E] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
-        ⚡ Đợt này chỉ còn <strong className="font-mono">{slots} suất</strong> — Tiểu Hà Mã cần thiết lập riêng, không thể nhận nhiều hơn
+        ⚡ Đợt này chỉ còn <strong className="font-mono">{slots} suất</strong> · Tiểu Hà Mã cần thiết lập riêng, không thể nhận nhiều hơn
       </div>
 
       <nav className="bg-[#0D2B1A] px-4 py-3 sticky top-0 z-40">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <span className="text-[#F6F0E4] font-black font-mono text-sm">DungHoang.com</span>
           <button onClick={open} className="bg-[#C0390E] hover:bg-[#a02e0a] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors">
-            Giữ suất — 2.768.686đ →
+            Giữ suất · 2.768.686đ →
           </button>
         </div>
       </nav>
@@ -86,23 +86,23 @@ export default function Khoa2Page() {
           <h1 className="text-3xl sm:text-5xl font-black text-[#F6F0E4] leading-tight">
             30 Ngày Dựng Xong<br/>
             <span className="text-[#C0390E]">Hệ Thống Bán Hàng Tự Chạy</span><br/>
-            <span className="text-2xl sm:text-3xl font-bold text-[#F6F0E4]/70">Kèm Tiểu Hà Mã — AI Đội Trưởng 24/7</span>
+            <span className="text-2xl sm:text-3xl font-bold text-[#F6F0E4]/70">Kèm Tiểu Hà Mã · AI Đội Trưởng 24/7</span>
           </h1>
           <p className="text-[#F6F0E4]/70 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
             25 skill AI + bộ SOP dựng hệ thống 4 tuần + Tiểu Hà Mã kèm sát qua Telegram.
-            Cam kết: 30 ngày bạn có hệ thống tự chạy — hoặc mình ngồi sửa cùng bạn cho đến khi chạy được.
+            Cam kết: 30 ngày bạn có hệ thống tự chạy, hoặc mình ngồi sửa cùng bạn cho đến khi chạy được.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <button onClick={open}
               className="h-14 px-8 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-lg shadow-red-900/30">
-              Giữ Suất — 2.768.686đ →
+              Giữ Suất · 2.768.686đ →
             </button>
             <a href="#30-ngay"
               className="h-14 px-8 border border-[#F6F0E4]/20 text-[#F6F0E4]/70 hover:text-[#F6F0E4] text-sm font-medium rounded-2xl flex items-center justify-center transition-colors">
               Xem kế hoạch 30 ngày →
             </a>
           </div>
-          <p className="text-[#F6F0E4]/40 text-xs">Đã mua Khóa 1? Chỉ cần thêm 2.081.818đ · Bảo hành 14 ngày hoàn 100%</p>
+          <p className="text-[#F6F0E4]/40 text-xs">Đã mua Khóa 1 (868.686đ)? Chỉ cần thêm 1.900.000đ · Bảo hành 14 ngày hoàn 100%</p>
         </div>
       </section>
 
@@ -136,12 +136,12 @@ export default function Khoa2Page() {
           </div>
           <div className="space-y-3 text-gray-700 leading-relaxed">
             <p>Bạn đã xem video. Đã đọc bài. Biết ChatGPT có thể viết content, biết chatbot có thể trả lời khách.</p>
-            <p>Nhưng cứ đến bước bắt đầu thật là kẹt. "Mình bắt đầu từ đâu?" — "Cái này kết nối với cái kia thế nào?" — "Bước này sai rồi thì sao?"</p>
+            <p>Nhưng cứ đến bước bắt đầu thật là kẹt. "Mình bắt đầu từ đâu?" "Cái này kết nối với cái kia thế nào?" "Bước này sai rồi thì sao?"</p>
           </div>
           <div className="space-y-3">
             {[
-              { icon:'⚠️', head:'Kẹt vì thiếu người đi cùng', body:'Xem video tự học được đến 80% — nhưng 20% còn lại chính là phần khó nhất và không ai chỉ cho bạn.' },
-              { icon:'⚠️', head:'Kẹt vì không biết thứ tự',   body:'25 skill — bắt đầu từ đâu? Cái nào phụ thuộc cái nào? Setup sai thứ tự là mất thêm 2 tuần.' },
+              { icon:'⚠️', head:'Kẹt vì thiếu người đi cùng', body:'Xem video tự học được đến 80%. Nhưng 20% còn lại chính là phần khó nhất và không ai chỉ cho bạn.' },
+              { icon:'⚠️', head:'Kẹt vì không biết thứ tự',   body:'25 skill, bắt đầu từ đâu? Cái nào phụ thuộc cái nào? Setup sai thứ tự là mất thêm 2 tuần.' },
               { icon:'⚠️', head:'Kẹt vì không có template',   body:'Prompt người khác dùng được không có nghĩa là phù hợp với business của bạn. Cần ai customize lại cho bạn.' },
             ].map((p, i) => (
               <div key={i} className="bg-white border border-[#DDD8CB] rounded-xl p-4 flex items-start gap-3">
@@ -168,10 +168,10 @@ export default function Khoa2Page() {
             Không phải thêm bài học.<br/>Là người đi cùng bạn trong 30 ngày.
           </h2>
           <div className="space-y-4 text-[#F6F0E4]/75 text-sm sm:text-base leading-relaxed">
-            <p>Mình đã kèm đủ loại business qua Khóa 1 — từ chủ shop thời trang đến coach, freelancer, homestay.</p>
+            <p>Mình đã kèm đủ loại business qua Khóa 1: từ chủ shop thời trang đến coach, freelancer, homestay.</p>
             <p>Điểm chung: ai cũng biết AI có thể giúp gì. Điểm khác nhau: ai có người đi cùng thì xong trong 30 ngày. Ai không có thì vẫn đang "sắp làm" sau 3 tháng.</p>
             <p className="text-[#F6F0E4]"><strong>Tiểu Hà Mã là đội trưởng AI mình cài riêng cho bạn trên Telegram.</strong> Nó biết SOP của bạn, biết sản phẩm của bạn, và trả lời câu hỏi của bạn bất kể 2h sáng hay 11h đêm.</p>
-            <p className="text-[#F6F0E4]/60 italic">Khác chatbot chung chung ở chỗ: Tiểu Hà Mã được cài riêng cho business của bạn — mình setup tay từng cái một.</p>
+            <p className="text-[#F6F0E4]/60 italic">Khác chatbot chung chung ở chỗ: Tiểu Hà Mã được cài riêng cho business của bạn, mình setup tay từng cái một.</p>
           </div>
         </div>
       </section>
@@ -181,7 +181,7 @@ export default function Khoa2Page() {
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Kế hoạch 30 ngày</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Tuần nào làm gì — rõ từng bước</h2>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">Tuần nào làm gì, rõ từng bước</h2>
           </div>
           <div className="space-y-3">
             {WEEK_PLAN.map(w => (
@@ -203,7 +203,7 @@ export default function Khoa2Page() {
           </div>
           <button onClick={open}
             className="w-full h-14 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors shadow-lg shadow-red-900/20">
-            Giữ Suất — Bắt Đầu 30 Ngày →
+            Giữ Suất · Bắt Đầu 30 Ngày →
           </button>
         </div>
       </section>
@@ -211,12 +211,12 @@ export default function Khoa2Page() {
       {/* [7] EMOTION */}
       <section className="bg-white border-y border-[#DDD8CB] px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-6">
-          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Ngày 30 — hệ thống xong</h2>
+          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Ngày 30: hệ thống xong</h2>
           <div className="bg-[#0D2B1A] rounded-2xl p-6 space-y-4 text-[#F6F0E4]/80 text-sm leading-relaxed">
-            <p>Sáng thứ Hai. Bạn không phải nghĩ hôm nay đăng gì — lịch content đã có sẵn.</p>
+            <p>Sáng thứ Hai. Bạn không phải nghĩ hôm nay đăng gì. Lịch content đã có sẵn.</p>
             <p>Inbox có 15 tin nhắn. Tiểu Hà Mã đã trả lời 12 cái. 3 cái cần bạn confirm, Hà Mã draft sẵn câu trả lời rồi.</p>
             <p className="text-[#F6F0E4]"><strong>Business chạy trong khi bạn ngủ.</strong></p>
-            <p>Đó không phải mục tiêu viễn tưởng. Đó là thứ 605 người học trước bạn đã làm được — và 30 ngày là đủ.</p>
+            <p>Đó không phải mục tiêu viễn tưởng. Đó là thứ 605 người học trước bạn đã làm được. Và 30 ngày là đủ.</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
             {[
@@ -240,10 +240,10 @@ export default function Khoa2Page() {
           <h2 className="text-2xl font-black text-[#F6F0E4]">Mình kèm bạn như thế này</h2>
           <div className="space-y-4">
             {[
-              { icon:'🤖', head:'Tiểu Hà Mã — cài riêng cho bạn', body:'Không dùng chung với ai. Mình setup riêng cho business của bạn — biết sản phẩm, biết giọng bạn, biết SOP của bạn.' },
-              { icon:'📱', head:'Kèm qua Telegram 24/7', body:'Bạn kẹt bước nào, nhắn Tiểu Hà Mã. Nó trả lời ngay — không cần đợi mình online.' },
+              { icon:'🤖', head:'Tiểu Hà Mã · cài riêng cho bạn', body:'Không dùng chung với ai. Mình setup riêng cho business của bạn: biết sản phẩm, biết giọng bạn, biết SOP của bạn.' },
+              { icon:'📱', head:'Kèm qua Telegram 24/7', body:'Bạn kẹt bước nào, nhắn Tiểu Hà Mã. Nó trả lời ngay, không cần đợi mình online.' },
               { icon:'📋', head:'SOP 30 ngày chi tiết từng bước', body:'Không phải "làm theo cảm giác". Mỗi ngày biết rõ hôm nay làm gì, tại sao, theo thứ tự nào.' },
-              { icon:'🔍', head:'Review hệ thống cuối tháng', body:'Tuần 4 mình review lại toàn bộ cùng bạn. Cái gì chưa chạy tốt — tối ưu lại ngay.' },
+              { icon:'🔍', head:'Review hệ thống cuối tháng', body:'Tuần 4 mình review lại toàn bộ cùng bạn. Cái gì chưa chạy tốt, tối ưu lại ngay.' },
             ].map(a => (
               <div key={a.icon} className="flex items-start gap-4 bg-[#F6F0E4]/5 rounded-xl p-4">
                 <span className="text-2xl flex-shrink-0">{a.icon}</span>
@@ -287,7 +287,7 @@ export default function Khoa2Page() {
 
           <div className="bg-white border border-[#DDD8CB] rounded-2xl overflow-hidden">
             <div className="bg-[#0D2B1A] px-5 py-3">
-              <p className="text-[#F6F0E4] font-bold text-sm">Khóa 2 — Bản Có Đội Trưởng</p>
+              <p className="text-[#F6F0E4] font-bold text-sm">Khóa 2 · Bản Có Đội Trưởng</p>
             </div>
             <div className="divide-y divide-[#DDD8CB]">
               {[
@@ -313,7 +313,7 @@ export default function Khoa2Page() {
             </div>
             <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
               <div>
-                <p className="font-bold text-[#0D2B1A]">Trả 1 lần — dùng mãi</p>
+                <p className="font-bold text-[#0D2B1A]">Trả 1 lần, dùng mãi</p>
                 <p className="text-xs text-[#3D6B4A]">Đã mua Khóa 1 (868.686đ)? Chỉ thêm 1.900.000đ</p>
               </div>
               <p className="text-3xl font-black text-[#0D2B1A]">2.768.686đ</p>
@@ -323,7 +323,7 @@ export default function Khoa2Page() {
           <div className="space-y-3">
             <button onClick={open}
               className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-lg font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
-              Giữ Suất — 2.768.686đ →
+              Giữ Suất · 2.768.686đ →
             </button>
             <p className="text-center text-xs text-gray-400">Chuyển khoản · Xác nhận 5-10 phút · Bảo hành 14 ngày hoàn 100%</p>
           </div>
@@ -395,12 +395,12 @@ export default function Khoa2Page() {
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-1">
             <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Kết quả sau 30 ngày</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Người đi cùng Tiểu Hà Mã — xong thật trong 30 ngày</h2>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">Người đi cùng Tiểu Hà Mã: xong thật trong 30 ngày</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { name:'Chủ homestay 3 phòng', result:'Hà Mã setup chatbot Zalo trong ngày 3 — từ đó inbox tự được trả lời. Mình chỉ cần xác nhận đặt phòng. Tháng đầu tiết kiệm gần 4 tiếng/ngày', outcome:'Hệ thống CSKH tự động trong 3 ngày' },
-              { name:'Coach kinh doanh',       result:'30 bài content cho tháng đầu xong trong tuần 1. Ads Facebook chạy từ tuần 2. Doanh thu tháng đó tăng vì có hệ thống — không phải vì làm nhiều hơn', outcome:'Lịch content 30 ngày + ads chạy trong 2 tuần' },
+              { name:'Chủ homestay 3 phòng', result:'Hà Mã setup chatbot Zalo trong ngày 3. Từ đó inbox tự được trả lời. Mình chỉ cần xác nhận đặt phòng. Tháng đầu tiết kiệm gần 4 tiếng/ngày', outcome:'Hệ thống CSKH tự động trong 3 ngày' },
+              { name:'Coach kinh doanh',       result:'30 bài content cho tháng đầu xong trong tuần 1. Ads Facebook chạy từ tuần 2. Doanh thu tháng đó tăng vì có hệ thống, không phải vì làm nhiều hơn', outcome:'Lịch content 30 ngày + ads chạy trong 2 tuần' },
             ].map((t, i) => (
               <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3">
                 <p className="text-sm text-gray-700 leading-relaxed italic">"{t.result}"</p>
@@ -420,9 +420,9 @@ export default function Khoa2Page() {
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A] leading-tight">
-              Còn {slots} suất đợt này.<br/>Khi hết — đóng đăng ký.
+              Còn {slots} suất đợt này.<br/>Khi hết, đóng đăng ký.
             </h2>
-            <p className="text-gray-500 text-sm">Tiểu Hà Mã cần setup riêng — mình không thể nhận thêm.</p>
+            <p className="text-gray-500 text-sm">Tiểu Hà Mã cần setup riêng. Mình không thể nhận thêm.</p>
           </div>
 
           <div className="bg-[#0D2B1A] rounded-2xl p-5 space-y-3">
@@ -430,11 +430,11 @@ export default function Khoa2Page() {
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <span className="text-[#C0390E] text-lg">A</span>
-                <p className="text-[#F6F0E4]/70 text-sm">Đăng ký hôm nay — 30 ngày có hệ thống chạy được</p>
+                <p className="text-[#F6F0E4]/70 text-sm">Đăng ký hôm nay: 30 ngày có hệ thống chạy được</p>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-[#C0390E] text-lg">B</span>
-                <p className="text-[#F6F0E4]/70 text-sm">Chờ thêm — và tiếp tục làm thủ công trong lúc đó</p>
+                <p className="text-[#F6F0E4]/70 text-sm">Chờ thêm, và tiếp tục làm thủ công trong lúc đó</p>
               </div>
             </div>
             <p className="text-[#88860B] text-sm italic">Cả hai đều là lựa chọn hợp lệ. Nhưng B có chi phí thực: thời gian bạn mất đi mỗi ngày không có AI hỗ trợ.</p>
@@ -443,7 +443,7 @@ export default function Khoa2Page() {
           <div className="space-y-3">
             <button onClick={open}
               className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
-              Quyết Định Hôm Nay — Giữ Suất Trước Khi Hết →
+              Quyết Định Hôm Nay · Giữ Suất Trước Khi Hết →
             </button>
             <div className="flex items-center justify-center gap-4 text-xs text-gray-400 flex-wrap">
               <span>✓ 30 ngày có hệ thống</span>
@@ -472,7 +472,7 @@ export default function Khoa2Page() {
       {showSticky && (
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A] border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
           <div className="min-w-0">
-            <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 2 — Có Đội Trưởng · {slots} suất</p>
+            <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 2 · Có Đội Trưởng · {slots} suất</p>
             <p className="text-[#F6F0E4]/50 text-xs">2.768.686đ · 30 ngày · Tiểu Hà Mã 24/7</p>
           </div>
           <button onClick={open}
