@@ -66,15 +66,15 @@ export default function CamOnMiniPage() {
           <div className="p-6 space-y-5">
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-[#0D2B1A]">
-                Bạn đã trả 368k rồi...
+                Bạn đã trả 686.868đ rồi...
               </h2>
               <p className="text-[#3D6B4A] leading-relaxed">
-                Mình có thêm 24 skill nữa trong bộ đầy đủ. Toàn bộ hệ thống
+                Mình có thêm 23 skill nữa trong bộ đầy đủ. Toàn bộ hệ thống
                 bán hàng tự động, không phải chỉ trang bán.
               </p>
               <p className="text-[#3D6B4A] leading-relaxed">
-                Và vì bạn đã mua Mini rồi, 368k đó được trừ thẳng vào Khóa 1.
-                Bạn chỉ cần thêm <strong className="text-[#0D2B1A]">318.868đ</strong> nữa thôi.
+                Và vì bạn đã mua Trang Bán Hàng rồi, 686.868đ đó được trừ thẳng vào Khóa 1.
+                Bạn chỉ cần thêm <strong className="text-[#0D2B1A]">181.818đ</strong> nữa thôi.
               </p>
             </div>
 
@@ -82,16 +82,16 @@ export default function CamOnMiniPage() {
             <div className="bg-[#FAF7F2] border border-[#DDD8CB] rounded-2xl p-4 space-y-3">
               <div className="flex justify-between items-center text-sm">
                 <span className="text-[#7A8C7E]">Giá Khóa 1 đầy đủ</span>
-                <span className="line-through text-[#7A8C7E]">686.868đ</span>
+                <span className="line-through text-[#7A8C7E]">868.686đ</span>
               </div>
               <div className="flex justify-between items-center text-sm">
-                <span className="text-[#3D6B4A]">Bạn đã trả (Mini)</span>
-                <span className="text-[#2D7A4F] font-semibold">-368.000đ</span>
+                <span className="text-[#3D6B4A]">Bạn đã trả (Trang Bán Hàng)</span>
+                <span className="text-[#2D7A4F] font-semibold">-686.868đ</span>
               </div>
               <div className="h-px bg-[#DDD8CB]" />
               <div className="flex justify-between items-center">
                 <span className="font-bold text-[#0D2B1A]">Bạn chỉ cần thêm</span>
-                <span className="font-bold text-[#C0390E] text-xl">318.868đ</span>
+                <span className="font-bold text-[#C0390E] text-xl">181.818đ</span>
               </div>
             </div>
 
@@ -124,9 +124,9 @@ export default function CamOnMiniPage() {
 
             {/* Neo giá nhân sự */}
             <div className="bg-[#EAF5EF] border border-[#2D7A4F]/20 rounded-xl p-4 text-sm text-[#3D6B4A] leading-relaxed">
-              Thuê đủ người làm 25 việc này: khoảng 50 triệu/tháng tiền lương.
-              Bạn trả một lần 686.868đ, dùng mãi, không lương tháng.
-              Phần bạn cần bỏ thêm bây giờ chỉ còn 318.868đ.
+              Thuê đủ người làm 24 việc này: khoảng 50 triệu/tháng tiền lương.
+              Bạn trả một lần 868.686đ, dùng mãi, không lương tháng.
+              Phần bạn cần bỏ thêm bây giờ chỉ còn 181.818đ.
             </div>
 
             {/* CTA */}

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { LucideIcon } from 'lucide-react'
 import {
-  LayoutDashboard, BookOpen, GraduationCap, HelpCircle, FileText, MessageSquare,
+  LayoutDashboard, BookOpen, GraduationCap, HelpCircle, FileText, MessageSquare, CheckCircle2,
   ShoppingCart, Users, Tag, Package, Share2, Megaphone, Star, Bell, Mail,
   Target, BarChart3, TrendingUp, UserCheck, UserCircle, Eye,
   LogOut, ChevronDown, ChevronRight, Zap, Activity, Settings, Trophy,
@@ -36,6 +36,7 @@ const navGroups: NavGroup[] = [
     label: 'NỘI DUNG',
     items: [
       { href: '/admin/courses',      icon: BookOpen,       label: 'Quản lý Khoá học' },
+      { href: '/admin/portal',       icon: CheckCircle2,   label: 'Duyệt bài học viên' },
       { href: '/admin/certificates', icon: GraduationCap,  label: 'Cấp khoá học' },
       { href: '/admin/quizzes',      icon: HelpCircle,     label: 'Quản lý Quiz' },
       { href: '/admin/blog',         icon: FileText,       label: 'Quản lý Blog' },
