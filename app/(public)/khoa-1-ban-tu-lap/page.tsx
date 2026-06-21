@@ -14,8 +14,8 @@ const FAQS = [
     a:'Học online trên khu học dunghoang.com — mở 24/7, học theo tốc độ của bạn. Mỗi skill là 1 module độc lập, có thể học skill nào trước cũng được.' },
   { q:'Mỗi skill mất bao lâu?',
     a:'Khoảng 30-60 phút nếu làm theo SOP. Cuối mỗi skill có output cụ thể bạn có thể dùng ngay — không phải bài tập nộp lên.' },
-  { q:'Đã mua Mini 368k thì sao?',
-    a:'368k bạn đã trả cho Mini được trừ thẳng vào Khóa 1. Thay vì trả 686.868đ, bạn chỉ cần thêm 318.868đ. Liên hệ mình qua Telegram để áp dụng.' },
+  { q:'Đã mua Trang Bán Hàng (686.868đ) thì sao?',
+    a:'686.868đ bạn đã trả được trừ thẳng vào Khóa 1. Chỉ cần thêm 181.818đ là có trọn bộ. Liên hệ mình qua Telegram để áp dụng.' },
   { q:'Bảo hành thế nào?',
     a:'14 ngày hoàn 100%. Mua về học thử, không phù hợp thì nhắn mình. Hoàn trong 24 giờ, không hỏi lý do.' },
   { q:'Có khác gì so với Khóa 2?',
@@ -60,7 +60,7 @@ export default function Khoa1Page() {
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <span className="text-[#F6F0E4] font-black font-mono text-sm">DungHoang.com</span>
           <button onClick={open} className="bg-[#C0390E] hover:bg-[#a02e0a] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors">
-            Đăng ký 686k →
+            Đăng ký 868k →
           </button>
         </div>
       </nav>
@@ -83,7 +83,7 @@ export default function Khoa1Page() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <button onClick={open}
               className="h-14 px-8 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-lg shadow-red-900/30">
-              Đăng Ký — 686.868đ →
+              Đăng Ký — 868.686đ →
             </button>
             <a href="#25-skill"
               className="h-14 px-8 border border-[#F6F0E4]/20 text-[#F6F0E4]/70 hover:text-[#F6F0E4] text-sm font-medium rounded-2xl flex items-center justify-center transition-colors">
@@ -141,7 +141,7 @@ export default function Khoa1Page() {
           </div>
           <div className="border-l-4 border-[#C0390E] pl-4">
             <p className="text-gray-700 leading-relaxed italic">
-              "25 skill trong khóa này tương đương <strong className="not-italic text-[#0D2B1A]">25 nhân sự AI không bao giờ xin nghỉ</strong> — bạn trả 1 lần 686.868đ, dùng mãi."
+              "25 skill trong khóa này tương đương <strong className="not-italic text-[#0D2B1A]">25 nhân sự AI không bao giờ xin nghỉ</strong> — bạn trả 1 lần 868.686đ, dùng mãi."
             </p>
           </div>
           <button onClick={open}
@@ -224,7 +224,7 @@ export default function Khoa1Page() {
 
           <button onClick={open}
             className="w-full h-14 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors shadow-lg shadow-red-900/20">
-            Giữ Chỗ — 686.868đ →
+            Giữ Chỗ — 868.686đ →
           </button>
         </div>
       </section>
@@ -264,7 +264,7 @@ export default function Khoa1Page() {
               { icon:'🏡', text:'Đang vận hành homestay + khoá học + tư vấn AI một mình — 25 skill này đang chạy thật trong business mình' },
               { icon:'👥', text:'605+ học viên đã học — từ chủ shop, coach, freelancer đến solopreneur nhiều ngành' },
               { icon:'📅', text:'SOP được test 2 năm trong thực tế — không phải viết từ sách hay copy từ người khác' },
-              { icon:'🔄', text:'Khóa 1 là bước đệm — mua xong muốn nâng, 686.868đ trừ vào Khóa 2 (2.768.686đ)' },
+              { icon:'🔄', text:'Khóa 1 là bước đệm — mua xong muốn nâng, 868.686đ trừ vào Khóa 2 (2.768.686đ)' },
             ].map(a => (
               <div key={a.icon} className="flex items-start gap-3">
                 <span className="text-xl flex-shrink-0 mt-0.5">{a.icon}</span>
@@ -280,7 +280,7 @@ export default function Khoa1Page() {
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Đầu tư</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">686.868đ — thay vì 25 triệu/tháng thuê người</h2>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">868.686đ — thay vì 25 triệu/tháng thuê người</h2>
           </div>
           <div className="bg-white border border-[#DDD8CB] rounded-2xl overflow-hidden">
             <div className="bg-[#0D2B1A] px-5 py-3">
@@ -288,11 +288,12 @@ export default function Khoa1Page() {
             </div>
             <div className="divide-y divide-[#DDD8CB]">
               {[
-                { item:'25 SOP AI thực chiến (30-60 phút/skill)', value:'12.500.000đ' },
-                { item:'Khu học online 24/7 dunghoang.com',        value:'Miễn phí' },
-                { item:'Bộ prompt AI cho từng skill',              value:'2.500.000đ' },
-                { item:'BONUS: Vault 30 Prompt dùng ngay',         value:'299.000đ', bonus:true },
-                { item:'BONUS: File BRAND_DNA — dạy AI giọng bạn', value:'199.000đ', bonus:true },
+                { item:'24 SOP AI thực chiến (30-60 phút/skill)',      value:'12.000.000đ' },
+                { item:'Skill Landing Page — Làm Trang Bán Hàng',      value:'690.000đ' },
+                { item:'Khu học online 24/7 dunghoang.com',            value:'Miễn phí' },
+                { item:'Bộ prompt AI cho từng skill',                  value:'2.500.000đ' },
+                { item:'🎁 File BRAND_DNA — dạy AI giọng bạn',         value:'199.000đ', bonus:true },
+                { item:'🎁 Content Không Cần Cảm Hứng (Notion)',       value:'368.686đ', bonus:true },
               ].map((r, i) => (
                 <div key={i} className={`px-5 py-3 flex justify-between items-center ${r.bonus ? 'bg-[#EAF5EF]' : ''}`}>
                   <p className={`text-sm ${r.bonus ? 'font-semibold text-[#2D7A4F]' : 'text-gray-700'}`}>
@@ -303,26 +304,26 @@ export default function Khoa1Page() {
               ))}
             </div>
             <div className="px-5 py-4 bg-[#FAF7F2] flex justify-between items-center">
-              <p className="font-bold text-[#0D2B1A]">Giá trị thực</p>
-              <p className="text-xl font-black text-gray-400 line-through">15.498.000đ</p>
+              <p className="font-bold text-[#0D2B1A]">Tổng giá trị</p>
+              <p className="text-xl font-black text-gray-400 line-through">15.757.686đ</p>
             </div>
             <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
               <div>
                 <p className="font-bold text-[#0D2B1A]">Học phí</p>
-                <p className="text-xs text-[#3D6B4A]">Đã mua Mini 368k? Chỉ cần thêm 318.868đ</p>
+                <p className="text-xs text-[#3D6B4A]">Đã mua Trang Bán Hàng (686.868đ)? Chỉ thêm 181.818đ</p>
               </div>
-              <p className="text-3xl font-black text-[#0D2B1A]">686.868đ</p>
+              <p className="text-3xl font-black text-[#0D2B1A]">868.686đ</p>
             </div>
           </div>
 
           <div className="bg-[#0D2B1A]/5 rounded-xl p-4 text-sm text-gray-600">
-            <p><strong className="text-[#0D2B1A]">So sánh nhanh:</strong> 1 nhân viên content tối thiểu 8 triệu/tháng. Khóa 1 là 686.868đ trả 1 lần — dùng mãi.</p>
+            <p><strong className="text-[#0D2B1A]">So sánh nhanh:</strong> 1 nhân viên content tối thiểu 8 triệu/tháng. Khóa 1 là 868.686đ trả 1 lần — dùng mãi.</p>
           </div>
 
           <div className="space-y-3">
             <button onClick={open}
               className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-lg font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
-              Đăng Ký Ngay — 686.868đ →
+              Đăng Ký Ngay — 868.686đ →
             </button>
             <p className="text-center text-xs text-gray-400">Chuyển khoản · Xác nhận 5-10 phút · Bảo hành 14 ngày</p>
           </div>
@@ -396,7 +397,7 @@ export default function Khoa1Page() {
           <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A] leading-tight">
             Bạn đang trả lương cho 1 mình bạn<br/>nhưng làm việc của 4-5 người.
           </h2>
-          <p className="text-gray-500 text-sm">686.868đ có thể thay đổi điều đó — và trả 1 lần, dùng mãi.</p>
+          <p className="text-gray-500 text-sm">868.686đ có thể thay đổi điều đó — và trả 1 lần, dùng mãi.</p>
           <button onClick={open}
             className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-base font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
             Quyết Định Hôm Nay — Xây Đội AI Của Mình →
@@ -427,7 +428,7 @@ export default function Khoa1Page() {
       {showSticky && (
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A] border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
           <div className="min-w-0">
-            <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 1 Bản Tự Lập — 686.868đ</p>
+            <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 1 Bản Tự Lập — 868.686đ</p>
             <p className="text-[#F6F0E4]/50 text-xs">25 skill AI · Bảo hành 14 ngày</p>
           </div>
           <button onClick={open}

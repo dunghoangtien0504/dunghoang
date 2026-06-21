@@ -7,17 +7,27 @@ export interface Product {
 }
 
 export const PRODUCTS: Record<string, Product> = {
+  // ── KHÓA PHỄU — entry product, cũng là quà tặng kèm hai khóa trên ──────────
+  content_368: {
+    id:         'content_368',
+    name:       'Content Không Cần Cảm Hứng',
+    price:      368686,
+    codePrefix: 'DH-CT',
+    successUrl: '/cam-on-content',
+  },
+  // ── TRANG BÁN HÀNG — skill Landing Page, tặng kèm Content System ────────────
   mini_368: {
     id:         'mini_368',
-    name:       'Mini — Trang Bán Hàng 1 Giờ',
-    price:      368000,
+    name:       'Trang Bán Hàng — Làm Trong 1 Buổi',
+    price:      686868,
     codePrefix: 'DH-MINI',
     successUrl: '/cam-on-mini',
   },
+  // ── KHÓA 1 — 25 skill, gồm trang bán hàng + tặng Content System ─────────────
   khoa1_686: {
     id:         'khoa1_686',
-    name:       'Khóa 1 — Bản Tự Lập (25 Skill AI)',
-    price:      686868,
+    name:       'Khóa 1 — 25 Skill AI (Bản Đầy Đủ)',
+    price:      868686,
     codePrefix: 'DH-K1',
     successUrl: '/cam-on-khoa-1',
   },
