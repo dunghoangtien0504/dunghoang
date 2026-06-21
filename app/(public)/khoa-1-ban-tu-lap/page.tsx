@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import CheckoutModal from '@/components/checkout/CheckoutModal'
 import { PRODUCTS } from '@/lib/products'
-import { SKILLS, SKILL_GROUPS } from '@/lib/skills'
+import { KHOA1_SKILLS, SKILL_GROUPS } from '@/lib/skills'
 
 const product = PRODUCTS.khoa1_686
 
@@ -19,7 +19,7 @@ const FAQS = [
   { q:'Bảo hành thế nào?',
     a:'14 ngày hoàn 100%. Mua về học thử, không phù hợp thì nhắn mình. Hoàn trong 24 giờ, không hỏi lý do.' },
   { q:'Có khác gì so với Khóa 2?',
-    a:'Khóa 1 bạn tự học và tự áp dụng 25 skill. Khóa 2 có thêm Tiểu Hà Mã kèm 24/7 qua Telegram và bộ SOP dựng cả hệ thống 30 ngày. Phù hợp nếu bạn muốn chắc ăn hơn.' },
+    a:'Khóa 1 có 24 skill tự học theo SOP. Khóa 2 có đủ 25 skill (gồm skill #23 Build App kỹ thuật) + Tiểu Hà Mã kèm sát 24/7 qua Telegram + SOP dựng cả hệ thống 30 ngày. Skill #23 cần kèm tay mới làm xong trơn tru nên mình để riêng ở Khóa 2.' },
 ]
 
 function AccordionItem({ q, a }: { q: string; a: string }) {
@@ -171,14 +171,14 @@ export default function Khoa1Page() {
       <section id="25-skill" className="px-4 py-14 bg-white border-y border-[#DDD8CB]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Toàn bộ 25 skill</p>
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">24 skill trong Khóa 1</p>
             <h2 className="text-2xl font-black text-[#0D2B1A]">Mỗi skill cho bạn một thứ cầm được</h2>
             <p className="text-gray-500 text-sm">Mình ghi rõ skill làm được gì và bạn nhận lại gì — không nói chung chung</p>
           </div>
 
           <div className="space-y-5">
             {SKILL_GROUPS.map((group, gi) => {
-              const items = SKILLS.filter(s => s.group === group)
+              const items = KHOA1_SKILLS.filter(s => s.group === group)
               return (
                 <div key={group} className="border border-[#DDD8CB] rounded-2xl overflow-hidden">
                   <div className="bg-[#0D2B1A] px-5 py-2.5 flex items-center gap-2">
@@ -206,9 +206,18 @@ export default function Khoa1Page() {
             })}
           </div>
 
+          {/* Skill #23 chỉ có Khóa 2 */}
+          <div className="bg-[#FFF8F0] border border-[#F5D8B8] rounded-xl p-4 text-sm leading-relaxed flex gap-3">
+            <span className="text-lg flex-shrink-0">🔒</span>
+            <div>
+              <p className="font-bold text-[#0D2B1A] mb-1">Skill #23 — Tự Build App Đăng Bài: chỉ có ở Khóa 2</p>
+              <p className="text-gray-600">Skill này cần nhiều bước kỹ thuật (Facebook API, Cursor, deploy Vercel). Mình không đưa vào Khóa 1 vì làm một mình dễ bị kẹt giữa chừng. Ở Khóa 2 mình kèm sát tới khi app chạy được.</p>
+            </div>
+          </div>
+
           {/* Nói thật về tự động hóa — chống cảm giác bị thổi phồng */}
           <div className="bg-[#FAF7F2] border border-[#DDD8CB] rounded-xl p-4 text-sm text-gray-600 leading-relaxed">
-            <p><strong className="text-[#0D2B1A]">Mình nói thẳng:</strong> 25 skill là 25 quy trình AI làm phần nặng cho bạn (viết, lên ý tưởng, dựng khung).
+            <p><strong className="text-[#0D2B1A]">Mình nói thẳng:</strong> 24 skill là 24 quy trình AI làm phần nặng cho bạn (viết, lên ý tưởng, dựng khung).
             Bạn vẫn cần đọc lại, chỉnh cho đúng business của mình, và bấm đăng. Không có thứ gì chạy 100% mà bạn không đụng tay.
             Cái khác biệt là: thay vì mất 2 tiếng viết 1 bài, bạn mất 15 phút duyệt.</p>
           </div>

@@ -11,9 +11,9 @@
 //
 // Phân bổ khóa:
 //   - Mini 368k     : chỉ skill #10 (Landing Page) + tặng kèm BRAND_DNA (#2).
-//   - Khóa 1 686k   : đủ 25 skill, tự học theo SOP + Tiểu Hà Mã hỏi-đáp Telegram.
-//   - Khóa 2 2.768k : đủ 25 skill + SOP từng bước dựng cả hệ thống + Tiểu Hà Mã
-//                     kèm sát 24/7 + 1 buổi 1-kèm-1 soi hệ thống.
+//   - Khóa 1 686k   : 24 skill (trừ #23), tự học theo SOP + Tiểu Hà Mã hỏi-đáp Telegram.
+//   - Khóa 2 2.768k : đủ 25 skill (gồm #23 Build App kỹ thuật) + SOP từng bước dựng
+//                     cả hệ thống + Tiểu Hà Mã kèm sát 24/7 + 1 buổi 1-kèm-1.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export type SkillGroup =
@@ -32,8 +32,9 @@ export interface Skill {
   does:     string          // skill này làm được gì (mô tả thật)
   output:   string          // học viên cầm được gì sau khi làm
   auto:     string          // tự động tới đâu — minh bạch phần phải làm tay
-  inMini?:  boolean         // có trong Mini 368k không
-  proven?:  boolean         // đã được chứng minh trong Challenge 7 ngày
+  inMini?:   boolean         // có trong Mini 368k không
+  proven?:   boolean         // đã được chứng minh trong Challenge 7 ngày
+  khoa2Only?: boolean        // chỉ có ở Khóa 2 (quá kỹ thuật để tự học Khóa 1)
 }
 
 export const SKILLS: Skill[] = [
@@ -191,9 +192,10 @@ export const SKILLS: Skill[] = [
   },
   {
     n: '23', name: 'Tự Build App Đăng Bài', agent: 'Meta Auto Post', group: 'Tự động hóa',
-    does: 'Hướng dẫn tự dựng app đăng bài Facebook tự động + chatbot cho Page của riêng bạn.',
-    output: 'App đăng bài + chatbot kết nối Page của bạn.',
-    auto: 'Cần làm theo từng bước kỹ thuật. Khóa 2 được kèm sát phần này.',
+    does: 'Hướng dẫn tự dựng app React đăng bài Facebook tự động (dùng Cursor + Gemini API + Facebook API + Vercel).',
+    output: 'App đăng bài riêng deploy lên Vercel, kết nối Page của bạn. Gõ chủ đề → AI viết đúng giọng → bấm 1 nút → lên Page.',
+    auto: 'Có SOP từng bước chi tiết nhưng gồm nhiều bước kỹ thuật (lấy token, cài Node.js, deploy). Cần được kèm sát mới làm xong trơn tru.',
+    khoa2Only: true,
   },
   {
     n: '24', name: 'Nghiên Cứu Tài Liệu Bằng AI', agent: 'NotebookLM', group: 'Tự động hóa',
@@ -210,9 +212,10 @@ export const SKILLS: Skill[] = [
 ]
 
 // Tiện ích lọc theo khóa ──────────────────────────────────────────────────────
-export const MINI_SKILLS  = SKILLS.filter(s => s.inMini)   // Mini 368k
-export const ALL_SKILLS    = SKILLS                          // Khóa 1 & Khóa 2 (đủ 25)
-export const PROVEN_SKILLS = SKILLS.filter(s => s.proven)   // đã chứng minh trong Challenge
+export const MINI_SKILLS   = SKILLS.filter(s => s.inMini)            // Mini 368k
+export const KHOA1_SKILLS  = SKILLS.filter(s => !s.khoa2Only)        // Khóa 1 (24 skill)
+export const ALL_SKILLS    = SKILLS                                    // Khóa 2 (đủ 25)
+export const PROVEN_SKILLS = SKILLS.filter(s => s.proven)            // đã chứng minh trong Challenge
 
 export const SKILL_GROUPS: SkillGroup[] = [
   'Nền tảng', 'Chiến lược', 'Phễu & Trang bán',
