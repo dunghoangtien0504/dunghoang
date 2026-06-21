@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
 import { sendEmail } from '@/lib/resend'
 import { getWelcomeEmail } from '@/lib/emails/welcome'
+import { getKhoa1EmailDay1 } from '@/lib/emails/khoa1-onboarding'
 import { formatVND } from '@/lib/products'
 import { getFirstUnlock } from '@/lib/challenge-days'
 
@@ -154,9 +155,35 @@ export async function POST(req: NextRequest) {
           }, { onConflict: 'user_id,course_id' })
         }
 
-        // Gửi email welcome
-        const welcome = getWelcomeEmail(name, order.course_id, order.course_name)
-        await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
+        if (order.course_id === 'khoa1_686') {
+          // Khóa 1 → dùng email onboarding riêng + khởi động chuỗi chăm sóc
+          const welcome = getKhoa1EmailDay1(name)
+          await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
+
+          // Đảm bảo subscriber tồn tại để gắn vào email_sequences
+          const { data: subRow } = await supabaseAdmin
+            .from('subscribers')
+            .upsert({ email: email.toLowerCase(), name }, { onConflict: 'email' })
+            .select('id')
+            .single()
+
+          const subscriberId = subRow?.id ?? order.subscriber_id
+          if (subscriberId) {
+            const enrolledAt = new Date().toISOString()
+            await supabaseAdmin.from('email_sequences').insert({
+              subscriber_id:  subscriberId,
+              sequence_name:  'khoa1_onboarding',
+              current_day:    1,           // Email 1 đã gửi ngay → cron xử lý email 2-5
+              status:         'active',
+              started_at:     enrolledAt,
+              last_sent_at:   enrolledAt,
+            })
+          }
+        } else {
+          // Các khóa khác: email welcome chung
+          const welcome = getWelcomeEmail(name, order.course_id, order.course_name)
+          await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
+        }
       }
 
       // Tag subscriber "đã mua" + dừng chuỗi challenge
