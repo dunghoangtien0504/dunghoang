@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ToastProvider } from '@/components/ui/Toast'
+import CookieConsent from '@/components/ui/CookieConsent'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-background text-text-primary antialiased">
         <ToastProvider>
           {children}
+          <CookieConsent />
         </ToastProvider>
       </body>
     </html>
