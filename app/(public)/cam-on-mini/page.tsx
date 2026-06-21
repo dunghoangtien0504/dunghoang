@@ -155,12 +155,12 @@ export default function CamOnMiniPage() {
           <p className="text-sm text-[#7A8C7E]">
             Cần hỗ trợ?{' '}
             <a
-              href="https://t.me/kenthoang"
+              href="https://t.me/KentHoang"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#3D6B4A] underline font-medium"
             >
-              Nhắn @kenthoang trên Telegram
+              Nhắn @KentHoang trên Telegram
             </a>
           </p>
           <p className="text-xs text-[#7A8C7E]">

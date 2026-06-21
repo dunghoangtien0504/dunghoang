@@ -98,7 +98,7 @@ export async function POST(req: NextRequest) {
               </a>
             </div>
 
-            <p style="margin:0;font-size:13px;color:#7A8C7E;">Câu hỏi gì nhắn mình qua <a href="https://t.me/kenthoang" style="color:#3D6B4A;">@kenthoang</a></p>
+            <p style="margin:0;font-size:13px;color:#7A8C7E;">Câu hỏi gì nhắn mình qua <a href="https://t.me/KentHoang" style="color:#3D6B4A;">@KentHoang</a></p>
           </div>
         </div>
       `,

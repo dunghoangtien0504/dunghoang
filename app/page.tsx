@@ -229,8 +229,8 @@ export default function HomePage() {
             <Link href="/thu-thach-7-ngay" className="hover:text-[#3D6B4A]">Thử thách 7 ngày</Link>
             <Link href="/he-thong-content" className="hover:text-[#3D6B4A]">Content System</Link>
             <Link href="/mini-trang-ban-hang" className="hover:text-[#3D6B4A]">Trang Bán Hàng</Link>
-            <Link href="/khoa-1-ban-tu-lap" className="hover:text-[#3D6B4A]">Khóa 1</Link>
-            <Link href="/khoa-2-ban-co-doi-truong" className="hover:text-[#3D6B4A]">Khóa 2</Link>
+            <Link href="/khoa-1-ban-tu-lap" className="hover:text-[#3D6B4A]">Tự Chiến</Link>
+            <Link href="/khoa-2-ban-co-doi-truong" className="hover:text-[#3D6B4A]">Có Đội</Link>
             <Link href="/portal" className="hover:text-[#3D6B4A]">Portal học viên</Link>
           </div>
         </div>

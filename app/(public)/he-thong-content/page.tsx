@@ -309,20 +309,24 @@ export default function HeThongContentPage() {
             </div>
             <div className="divide-y divide-[#DDD8CB]">
               {[
-                { item:'Workspace Notion 3.0 (đang chạy thật)',   value:'Trị giá thực tế' },
-                { item:'Brand DNA + Story Bank đã cài sẵn',        value:'—' },
-                { item:'Hook Library + 600+ mẫu tiêu đề',          value:'—' },
-                { item:'Content Calendar + Analytics DB',           value:'—' },
-                { item:'Quy trình nhân bản 1 bài thành 7+ biến thể', value:'—' },
-                { item:'Visual Brief 7 mục cho mọi bài',           value:'—' },
-                { item:'Ma trận content + Phễu 5 cấp độ',          value:'—' },
-                { item:'Hướng dẫn chuyển giao cho nhân viên',      value:'—' },
+                { item:'Workspace Notion 3.0 (đang chạy thật)',      value:'2.000.000đ' },
+                { item:'Brand DNA + Story Bank đã cài sẵn',          value:'1.500.000đ' },
+                { item:'Hook Library + 600+ mẫu tiêu đề',            value:'800.000đ' },
+                { item:'Content Calendar + Analytics DB',             value:'600.000đ' },
+                { item:'Quy trình nhân bản 1 bài thành 7+ biến thể', value:'1.000.000đ' },
+                { item:'Visual Brief 7 mục cho mọi bài',             value:'500.000đ' },
+                { item:'Ma trận content + Phễu 5 cấp độ',            value:'700.000đ' },
+                { item:'Hướng dẫn chuyển giao cho nhân viên',        value:'400.000đ' },
               ].map((r, i) => (
                 <div key={i} className="px-5 py-3 flex justify-between items-center">
                   <p className="text-sm text-gray-700">{r.item}</p>
-                  <p className="text-sm font-bold text-gray-400 flex-shrink-0 ml-4">{r.value}</p>
+                  <p className="text-sm font-bold text-gray-400 flex-shrink-0 ml-4 line-through">{r.value}</p>
                 </div>
               ))}
+              <div className="px-5 py-3 flex justify-between items-center bg-[#FAF7F0]">
+                <p className="text-sm font-bold text-[#0D2B1A]">Tổng giá trị nếu tự thuê làm</p>
+                <p className="text-sm font-black text-[#3D6B4A] flex-shrink-0 ml-4 line-through">7.500.000đ</p>
+              </div>
             </div>
             <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
               <div>

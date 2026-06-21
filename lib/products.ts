@@ -47,6 +47,21 @@ export const PRODUCTS: Record<string, Product> = {
   },
 }
 
+/** Tên ngắn hiển thị trong admin/portal — nguồn duy nhất, dùng chung mọi nơi */
+export const COURSE_SHORT_NAMES: Record<string, string> = {
+  content_368:   'Content System',
+  mini_368:      'Trang Bán Hàng',
+  khoa1_686:     'Tự Chiến',
+  khoa2_2768:    'Có Đội',
+  challenge_368: 'Thử Thách 7 Ngày',
+  '1kem1':       '1 Kèm 1',
+}
+
+/** Lấy tên ngắn an toàn cho 1 course_id bất kỳ */
+export function courseShortName(courseId: string): string {
+  return COURSE_SHORT_NAMES[courseId] ?? courseId
+}
+
 /** Tạo order code ngẫu nhiên: DH-MINI-A3F9K2 */
 export function genOrderCode(productId: string): string {
   const p = PRODUCTS[productId]

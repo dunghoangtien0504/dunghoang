@@ -46,7 +46,7 @@ function CountdownTimer() {
     return (
       <div className="text-center text-sm text-[#7A8C7E] bg-[#FAF7F2] border border-[#DDD8CB] rounded-xl px-4 py-3">
         Ưu đãi rollover đã hết hạn. Nhắn{' '}
-        <a href="https://t.me/kenthoang" className="text-[#3D6B4A] underline">@kenthoang</a>{' '}
+        <a href="https://t.me/KentHoang" className="text-[#3D6B4A] underline">@KentHoang</a>{' '}
         nếu bạn vẫn muốn nâng cấp.
       </div>
     )
@@ -239,12 +239,12 @@ export default function CamOnKhoa1Page() {
           <p className="text-sm text-[#7A8C7E]">
             Cần hỗ trợ?{' '}
             <a
-              href="https://t.me/kenthoang"
+              href="https://t.me/KentHoang"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#3D6B4A] underline font-medium"
             >
-              Nhắn @kenthoang trên Telegram
+              Nhắn @KentHoang trên Telegram
             </a>
           </p>
           <p className="text-xs text-[#7A8C7E]">

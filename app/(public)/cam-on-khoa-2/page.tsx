@@ -58,7 +58,7 @@ export default function CamOnKhoa2Page() {
                 step: '1',
                 title: 'Vào nhóm Telegram ngay',
                 desc: 'Nhắn "@dunghoangcom đã đăng ký Khóa 2" vào nhóm. Tiểu Hà Mã sẽ chào bạn và bắt đầu quy trình kèm.',
-                cta: { label: 'Vào nhóm Telegram', href: 'https://t.me/kenthoang' },
+                cta: { label: 'Vào nhóm Telegram', href: 'https://t.me/KentHoang' },
               },
               {
                 icon: <Calendar className="w-5 h-5 text-[#2D7A4F]" />,
@@ -121,9 +121,9 @@ export default function CamOnKhoa2Page() {
         <div className="text-center space-y-2 pb-6">
           <p className="text-sm text-[#7A8C7E]">
             Câu hỏi gì?{' '}
-            <a href="https://t.me/kenthoang" target="_blank" rel="noopener noreferrer"
+            <a href="https://t.me/KentHoang" target="_blank" rel="noopener noreferrer"
                className="text-[#3D6B4A] underline font-medium">
-              Nhắn @kenthoang trên Telegram
+              Nhắn @KentHoang trên Telegram
             </a>
           </p>
           <p className="text-xs text-[#7A8C7E]">

@@ -53,7 +53,7 @@ export default function CamOnThuThachPage() {
         </Link>
 
         <p className="text-xs text-[#7A8C7E]">
-          Câu hỏi? Nhắn Telegram <a href="https://t.me/kenthoang" className="underline">@kenthoang</a>
+          Câu hỏi? Nhắn Telegram <a href="https://t.me/KentHoang" className="underline">@KentHoang</a>
         </p>
       </div>
     </div>

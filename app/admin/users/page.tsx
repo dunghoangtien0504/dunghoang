@@ -5,6 +5,7 @@ import {
   Users, Search, Mail, BookOpen, TrendingUp, RefreshCw,
   CheckCircle, AlertCircle, KeyRound,
 } from 'lucide-react'
+import { COURSE_SHORT_NAMES as COURSE_NAMES } from '@/lib/products'
 
 type RealUser = {
   id:           string
@@ -12,13 +13,6 @@ type RealUser = {
   created_at:   string
   last_sign_in: string | null
   enrollments:  { course_id: string; enrolled_at: string }[]
-}
-
-const COURSE_NAMES: Record<string, string> = {
-  mini_368:   'Mini',
-  khoa1_686:  'Khóa 1',
-  khoa2_2768: 'Khóa 2',
-  '1kem1':    '1 kèm 1',
 }
 
 function fmtDate(iso: string | null) {

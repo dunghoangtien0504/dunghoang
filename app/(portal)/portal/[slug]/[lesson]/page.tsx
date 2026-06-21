@@ -122,7 +122,7 @@ export default function LessonPage() {
           {/* Quick actions */}
           <div className="flex items-center gap-3 pt-2 border-t border-gray-50">
             <a
-              href="https://t.me/DungHoangAI"
+              href="https://t.me/KentHoang"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-xs text-gray-500 hover:text-[#1D9E75] transition-colors"

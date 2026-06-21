@@ -1,30 +1,67 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ShoppingCart, Search, Filter, Download, ChevronDown, MoreHorizontal, RefreshCw, DollarSign, CheckCircle, Clock, ExternalLink, Plus } from 'lucide-react'
-import { ORDERS, ORDER_STATUS_CONFIG, PAYMENT_METHOD_CONFIG, KPI } from '@/lib/constants'
+import { Search, Filter, Download, ChevronDown, MoreHorizontal, RefreshCw, DollarSign, CheckCircle, Clock, ExternalLink, Plus } from 'lucide-react'
 import { useToast } from '@/components/ui/Toast'
-import type { Order } from '@/types'
+import { courseShortName } from '@/lib/products'
+
+type RealOrder = {
+  id:             string
+  order_code:     string
+  email:          string
+  name:           string | null
+  amount:         number
+  course_id:      string | null
+  course_name:    string | null
+  status:         'pending' | 'completed' | 'refunded'
+  affiliate_code: string | null
+  commission:     number | null
+  paid_at:        string | null
+  created_at:     string
+}
+
+const STATUS_LABEL: Record<string, { label: string; badge: string }> = {
+  completed: { label: 'Hoàn thành', badge: 'bg-success-light text-success' },
+  pending:   { label: 'Chờ xử lý',  badge: 'bg-brand-olive/10 text-brand-olive' },
+  refunded:  { label: 'Hoàn tiền',  badge: 'bg-danger-light text-danger' },
+}
+
+function fmtDateTime(iso: string | null) {
+  if (!iso) return '-'
+  return new Date(iso).toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
+}
 
 export default function OrdersPage() {
-  const [statusFilter, setStatusFilter] = useState<'all' | Order['status']>('all')
+  const [statusFilter, setStatusFilter] = useState<'all' | RealOrder['status']>('all')
   const [search, setSearch] = useState('')
+  const [orders, setOrders] = useState<RealOrder[]>([])
+  const [loading, setLoading] = useState(true)
   const { toast } = useToast()
 
-  const filtered = ORDERS.filter(o => {
+  function load() {
+    setLoading(true)
+    fetch('/api/admin/orders')
+      .then(r => r.json())
+      .then(d => { setOrders(d.orders ?? []); setLoading(false) })
+      .catch(() => setLoading(false))
+  }
+  useEffect(() => { load() }, [])
+
+  const filtered = orders.filter(o => {
     if (statusFilter !== 'all' && o.status !== statusFilter) return false
-    if (search && !o.customer.toLowerCase().includes(search.toLowerCase()) &&
-        !o.email.toLowerCase().includes(search.toLowerCase()) &&
-        !o.id.toLowerCase().includes(search.toLowerCase())) return false
+    const q = search.toLowerCase()
+    if (q && !(o.name || '').toLowerCase().includes(q) &&
+        !o.email.toLowerCase().includes(q) &&
+        !o.order_code.toLowerCase().includes(q)) return false
     return true
   })
 
   const stats = {
-    revenue:   ORDERS.filter(o => o.status === 'completed').reduce((s, o) => s + o.amount, 0),
-    completed: ORDERS.filter(o => o.status === 'completed').length,
-    pending:   ORDERS.filter(o => o.status === 'pending').length,
-    refunded:  ORDERS.filter(o => o.status === 'refunded').length,
+    revenue:   orders.filter(o => o.status === 'completed').reduce((s, o) => s + Number(o.amount), 0),
+    completed: orders.filter(o => o.status === 'completed').length,
+    pending:   orders.filter(o => o.status === 'pending').length,
+    refunded:  orders.filter(o => o.status === 'refunded').length,
   }
 
   return (
@@ -33,14 +70,11 @@ export default function OrdersPage() {
       <div className="page-header">
         <div>
           <h1 className="page-title">Quản lý Đơn hàng</h1>
-          <p className="page-subtitle">{KPI.orders} đơn hàng tháng này</p>
+          <p className="page-subtitle">{orders.length} đơn hàng · dữ liệu thật từ Supabase</p>
         </div>
         <div className="flex items-center gap-2">
-          <button
-            className="btn-secondary text-xs py-1.5"
-            onClick={() => toast.success('Dang xuat...', 'File Excel se tai xuong trong giay lat')}
-          >
-            <Download size={12} />Xuất Excel
+          <button className="btn-secondary text-xs py-1.5" onClick={load}>
+            <RefreshCw size={12} />Làm mới
           </button>
           <button
             className="btn-primary text-xs py-1.5"
@@ -94,7 +128,7 @@ export default function OrdersPage() {
                 statusFilter === f ? 'bg-brand-dark text-text-on-dark' : 'text-text-muted hover:text-text-primary'
               }`}
             >
-              {f === 'all' ? 'Tất cả' : ORDER_STATUS_CONFIG[f].label}
+              {f === 'all' ? 'Tất cả' : STATUS_LABEL[f].label}
             </button>
           ))}
         </div>
@@ -113,29 +147,34 @@ export default function OrdersPage() {
                 <th className="table-header">Khách hàng</th>
                 <th className="table-header">Khoá học</th>
                 <th className="table-header text-right">Số tiền</th>
-                <th className="table-header">Thanh toán</th>
                 <th className="table-header">Trạng thái</th>
                 <th className="table-header">Thời gian</th>
                 <th className="table-header"></th>
               </tr>
             </thead>
             <tbody>
+              {loading && (
+                <tr><td colSpan={7} className="table-cell text-center text-text-muted py-10 text-sm">Đang tải...</td></tr>
+              )}
+              {!loading && filtered.length === 0 && (
+                <tr><td colSpan={7} className="table-cell text-center text-text-muted py-10 text-sm">
+                  {search || statusFilter !== 'all' ? 'Không tìm thấy đơn nào.' : 'Chưa có đơn hàng nào.'}
+                </td></tr>
+              )}
               {filtered.map((order) => {
-                const sc = ORDER_STATUS_CONFIG[order.status]
-                const mc = PAYMENT_METHOD_CONFIG[order.method]
+                const sc = STATUS_LABEL[order.status] ?? STATUS_LABEL.pending
                 return (
                   <tr key={order.id} className="table-row">
                     <td className="table-cell">
-                      <span className="text-text-primary text-xs font-mono font-semibold">{order.id}</span>
+                      <span className="text-text-primary text-xs font-mono font-semibold">{order.order_code}</span>
                     </td>
                     <td className="table-cell">
-                      {/* Cross-link → CRM */}
                       <Link
                         href={`/admin/crm/contacts?search=${encodeURIComponent(order.email)}`}
                         className="group"
                       >
                         <p className="text-text-primary text-xs font-medium group-hover:text-brand-accent transition-colors">
-                          {order.customer}
+                          {order.name || '(chưa rõ tên)'}
                         </p>
                         <p className="text-text-muted text-[10px] flex items-center gap-1">
                           {order.email}
@@ -144,20 +183,19 @@ export default function OrdersPage() {
                       </Link>
                     </td>
                     <td className="table-cell">
-                      <span className="text-text-secondary text-xs truncate max-w-[200px] block">{order.courseTitle}</span>
+                      <span className="text-text-secondary text-xs truncate max-w-[200px] block">
+                        {order.course_id ? courseShortName(order.course_id) : (order.course_name || '-')}
+                      </span>
                     </td>
                     <td className="table-cell text-right">
                       <span className="text-brand-accent font-mono font-semibold text-xs">
-                        {order.amount.toLocaleString('vi-VN')}₫
+                        {Number(order.amount).toLocaleString('vi-VN')}₫
                       </span>
-                    </td>
-                    <td className="table-cell">
-                      <span className={`badge text-[10px] ${mc.badge}`}>{order.method}</span>
                     </td>
                     <td className="table-cell">
                       <span className={`badge text-[10px] ${sc.badge}`}>{sc.label}</span>
                     </td>
-                    <td className="table-cell text-text-muted text-[11px]">{order.createdAt}</td>
+                    <td className="table-cell text-text-muted text-[11px]">{fmtDateTime(order.paid_at || order.created_at)}</td>
                     <td className="table-cell">
                       <button className="btn-ghost p-1"><MoreHorizontal size={13} /></button>
                     </td>
@@ -168,14 +206,7 @@ export default function OrdersPage() {
           </table>
         </div>
         <div className="mt-3 pt-3 border-t border-border flex items-center justify-between text-xs text-text-muted">
-          <span>Hiển thị {filtered.length} / {KPI.orders} đơn hàng</span>
-          <div className="flex items-center gap-1">
-            {[1,2,3,'…',57].map((p, i) => (
-              <button key={i} className={`w-7 h-7 rounded flex items-center justify-center text-xs transition-colors ${p === 1 ? 'bg-brand-dark text-text-on-dark font-medium' : 'hover:bg-surface-3 text-text-muted'}`}>
-                {p}
-              </button>
-            ))}
-          </div>
+          <span>Hiển thị {filtered.length} / {orders.length} đơn hàng</span>
         </div>
       </div>
     </div>

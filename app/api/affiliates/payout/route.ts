@@ -69,7 +69,7 @@ export async function POST(req: NextRequest) {
               <tr><td style="padding:8px 0;font-weight:700;">Thực nhận</td><td style="padding:8px 0;text-align:right;font-weight:700;font-size:16px;">${net.toLocaleString('vi-VN')}đ</td></tr>
             </table>
             <p style="margin:0 0 4px;font-size:13px;color:#7A8C7E;">Chuyển vào: <strong>${bank_name.trim()}</strong> — <strong>${bank_account.trim()}</strong></p>
-            <p style="margin:16px 0 0;font-size:13px;color:#7A8C7E;">Mình sẽ xử lý trong 3-5 ngày làm việc. Câu hỏi gì nhắn <a href="https://t.me/kenthoang" style="color:#3D6B4A;">@kenthoang</a>.</p>
+            <p style="margin:16px 0 0;font-size:13px;color:#7A8C7E;">Mình sẽ xử lý trong 3-5 ngày làm việc. Câu hỏi gì nhắn <a href="https://t.me/KentHoang" style="color:#3D6B4A;">@KentHoang</a>.</p>
           </div>
         </div>
       `,

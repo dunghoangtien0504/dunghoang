@@ -18,7 +18,8 @@ export async function POST(req: NextRequest) {
     const { content, transferAmount, referenceCode, id: sepayId } = body
 
     // Tìm mã đơn hàng trong nội dung chuyển khoản
-    const orderCodeMatch = content?.match(/DH-(?:MINI|K1|K2|K3|CHAL)-[A-Z0-9]+/i)
+    // Prefix khớp với codePrefix trong lib/products.ts: DH-CT, DH-MINI, DH-K1, DH-K2, DH-CHAL
+    const orderCodeMatch = content?.match(/DH-(?:CT|MINI|K1|K2|CHAL)-[A-Z0-9]+/i)
     if (!orderCodeMatch) {
       console.log('[sepay] Không có mã DH trong nội dung:', content)
       return NextResponse.json({ message: 'Bỏ qua — không có mã đơn hàng' }, { status: 200 })
@@ -71,7 +72,7 @@ export async function POST(req: NextRequest) {
             <p>Nhưng đơn của bạn là <strong>${order.course_name}</strong> — ${formatVND(expected)}.</p>
             <p>Còn thiếu <strong style="color:#C0390E">${formatVND(shortfall)}</strong> nữa bạn nhé.</p>
             <p>Bạn chuyển thêm đúng số tiền còn thiếu, với cùng nội dung chuyển khoản <strong>${orderCode}</strong> là mình kích hoạt ngay.</p>
-            <p>Hoặc liên hệ mình qua Telegram <a href="https://t.me/kenthoang">@kenthoang</a> để được hỗ trợ nhanh hơn nhé.</p>
+            <p>Hoặc liên hệ mình qua Telegram <a href="https://t.me/KentHoang">@KentHoang</a> để được hỗ trợ nhanh hơn nhé.</p>
             <p>Cảm ơn bạn,<br/>Dũng Hoàng</p>
           </div>
         `,
@@ -138,7 +139,7 @@ export async function POST(req: NextRequest) {
               <p>Ngày 1 sẽ mở lúc: <strong>${firstUnlockStr}</strong></p>
               <p>Vào khu học tại: <a href="${process.env.NEXT_PUBLIC_SITE_URL}/portal/thu-thach" style="color:#1D9E75">${process.env.NEXT_PUBLIC_SITE_URL}/portal/thu-thach</a></p>
               <p><strong>Nhắc lại luật hoàn cọc:</strong> Nộp bài đúng hạn cả 7 ngày → mình hoàn đủ ${formatVND(received)} trong 48h sau ngày 7.</p>
-              <p>Câu hỏi? Telegram <a href="https://t.me/kenthoang">@kenthoang</a></p>
+              <p>Câu hỏi? Telegram <a href="https://t.me/KentHoang">@KentHoang</a></p>
               <p>Chúc bạn thành công,<br/>Dũng Hoàng</p>
             </div>
           `,
