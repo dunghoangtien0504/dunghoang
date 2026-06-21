@@ -8,16 +8,6 @@ export const metadata = {
 
 const PRODUCTS = [
   {
-    badge: 'Miễn phí',
-    badgeColor: 'bg-[#EAF5EF] text-[#2D7A4F]',
-    name: 'Thử Thách 7 Ngày AI',
-    desc: 'Dạy AI viết bài đúng giọng bạn. Mỗi ngày 15-25 phút, 7 ngày là có kết quả.',
-    price: null,
-    cta: 'Tham gia miễn phí',
-    href: '/thu-thach-7-ngay',
-    icon: <Zap className="w-5 h-5" />,
-  },
-  {
     badge: 'Vào cửa',
     badgeColor: 'bg-[#FFF8E6] text-[#7A6000]',
     name: 'Content Không Cần Cảm Hứng',
