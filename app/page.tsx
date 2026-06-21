@@ -18,21 +18,31 @@ const PRODUCTS = [
     icon: <Zap className="w-5 h-5" />,
   },
   {
-    badge: 'Phổ biến nhất',
+    badge: 'Vào cửa',
     badgeColor: 'bg-[#FFF8E6] text-[#7A6000]',
-    name: 'Mini — Trang Bán Hàng 1 Giờ',
-    desc: 'Skill làm trang bán hàng. Không cần code. AI làm hết phần kỹ thuật.',
-    price: '368.000đ',
+    name: 'Content Không Cần Cảm Hứng',
+    desc: 'Workspace Notion + AI viết đúng giọng bạn. Gõ "viết bài" là có bài sẵn để đăng.',
+    price: '368.686đ',
+    cta: 'Xem chi tiết',
+    href: '/he-thong-content',
+    icon: <BookOpen className="w-5 h-5" />,
+  },
+  {
+    badge: 'Phổ biến nhất',
+    badgeColor: 'bg-[#EDF3FF] text-[#2B5BB8]',
+    name: 'Trang Bán Hàng — Làm Trong 1 Buổi',
+    desc: 'Skill 08B Landing Page. Không cần code. AI làm hết kỹ thuật. Tặng kèm Content System.',
+    price: '686.868đ',
     cta: 'Xem chi tiết',
     href: '/mini-trang-ban-hang',
     icon: <BookOpen className="w-5 h-5" />,
   },
   {
     badge: 'Bộ đầy đủ',
-    badgeColor: 'bg-[#EDF3FF] text-[#2B5BB8]',
+    badgeColor: 'bg-[#EAF5EF] text-[#2D7A4F]',
     name: 'Khóa 1 — 25 Skill AI',
-    desc: 'Toàn bộ 25 skill thành hệ thống bán hàng tự động. Tự học, tự chạy.',
-    price: '686.868đ',
+    desc: 'Toàn bộ 24 skill tự học. Tặng kèm Content System + Landing Page skill.',
+    price: '868.686đ',
     cta: 'Xem chi tiết',
     href: '/khoa-1-ban-tu-lap',
     icon: <BookOpen className="w-5 h-5" />,
@@ -227,7 +237,8 @@ export default function HomePage() {
           </div>
           <div className="flex items-center gap-4">
             <Link href="/thu-thach-7-ngay" className="hover:text-[#3D6B4A]">Thử thách 7 ngày</Link>
-            <Link href="/mini-trang-ban-hang" className="hover:text-[#3D6B4A]">Mini 368k</Link>
+            <Link href="/he-thong-content" className="hover:text-[#3D6B4A]">Content System</Link>
+            <Link href="/mini-trang-ban-hang" className="hover:text-[#3D6B4A]">Trang Bán Hàng</Link>
             <Link href="/khoa-1-ban-tu-lap" className="hover:text-[#3D6B4A]">Khóa 1</Link>
             <Link href="/khoa-2-ban-co-doi-truong" className="hover:text-[#3D6B4A]">Khóa 2</Link>
             <Link href="/portal" className="hover:text-[#3D6B4A]">Portal học viên</Link>
