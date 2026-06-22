@@ -24,7 +24,8 @@ const orderCode = process.argv[2] || 'DH-K1-TEST1234'
 const amount = Number(process.argv[3]) || 868686
 
 async function run() {
-  const webhookUrl = `${env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/webhooks/sepay`
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  const webhookUrl = `${siteUrl}/api/webhooks/sepay`
   const secret = env.SEPAY_WEBHOOK_SECRET || 'DH_SEPAY_2026'
 
   console.log(`🚀 Đang giả lập webhook Sepay tới: ${webhookUrl}`)
