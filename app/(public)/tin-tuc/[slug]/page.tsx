@@ -36,24 +36,6 @@ export default function PostPage({ params }: Props) {
   return (
     <div className="min-h-dvh bg-[#F6F0E4] font-sans">
 
-      {/* Header */}
-      <header className="border-b border-[#DDD8CB] bg-[#F6F0E4]/90 backdrop-blur-sm sticky top-0 z-40">
-        <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#0D2B1A] flex items-center justify-center">
-              <span className="text-[#F6F0E4] font-bold text-sm font-mono">DH</span>
-            </div>
-            <span className="font-bold text-[#0D2B1A] text-sm">DungHoang.com</span>
-          </Link>
-          <nav className="hidden sm:flex items-center gap-5 text-sm">
-            <Link href="/khoa-1-ban-tu-lap" className="text-[#3D6B4A] font-medium hover:text-[#0D2B1A]">Khóa học</Link>
-            <Link href="/tin-tuc" className="text-[#0D2B1A] font-semibold">Tin tức</Link>
-            <Link href="/cong-tac-vien" className="text-[#7A8C7E] hover:text-[#3D6B4A]">Cộng tác viên</Link>
-            <Link href="/portal" className="text-[#7A8C7E] hover:text-[#3D6B4A]">Đăng nhập</Link>
-          </nav>
-        </div>
-      </header>
-
       <article className="max-w-2xl mx-auto px-4 py-12">
 
         {/* Back */}

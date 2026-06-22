@@ -56,40 +56,6 @@ export default function HomePage() {
   return (
     <div className="min-h-dvh bg-[#F6F0E4] font-sans">
 
-      {/* ── Header ─────────────────────────────────────────────── */}
-      <header className="border-b border-[#DDD8CB] bg-[#F6F0E4]/90 backdrop-blur-sm sticky top-0 z-40">
-        <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#0D2B1A] flex items-center justify-center">
-              <span className="text-[#F6F0E4] font-bold text-sm font-mono">DH</span>
-            </div>
-            <span className="font-bold text-[#0D2B1A] text-sm">DungHoang.com</span>
-          </div>
-          <nav className="flex items-center gap-1 sm:gap-4">
-            <Link href="/khoa-1-ban-tu-lap"
-              className="hidden sm:block text-sm text-[#3D6B4A] font-medium hover:text-[#0D2B1A] transition-colors px-2 py-1 rounded-lg hover:bg-[#EAF5EF]">
-              Khóa học
-            </Link>
-            <Link href="/tin-tuc"
-              className="hidden sm:block text-sm text-[#3D6B4A] font-medium hover:text-[#0D2B1A] transition-colors px-2 py-1 rounded-lg hover:bg-[#EAF5EF]">
-              Tin tức
-            </Link>
-            <Link href="/cong-tac-vien"
-              className="hidden sm:block text-sm text-[#7A8C7E] hover:text-[#3D6B4A] transition-colors px-2 py-1 rounded-lg hover:bg-[#EAF5EF]">
-              Cộng tác viên
-            </Link>
-            <Link href="/thu-thach-7-ngay"
-              className="text-sm font-semibold text-white bg-[#C0390E] hover:bg-[#A0300B] px-3 py-1.5 rounded-lg transition-colors">
-              Thử miễn phí
-            </Link>
-            <Link href="/portal"
-              className="text-sm text-[#7A8C7E] hover:text-[#3D6B4A] transition-colors px-2 py-1">
-              Đăng nhập
-            </Link>
-          </nav>
-        </div>
-      </header>
-
       {/* ── Hero ───────────────────────────────────────────────── */}
       <section className="max-w-4xl mx-auto px-4 py-16 text-center space-y-6">
         <div className="inline-flex items-center gap-2 bg-[#EAF5EF] text-[#2D7A4F] text-xs font-semibold px-3 py-1.5 rounded-full border border-[#2D7A4F]/20">

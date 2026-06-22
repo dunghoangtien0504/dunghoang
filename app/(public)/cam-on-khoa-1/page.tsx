@@ -95,16 +95,6 @@ export default function CamOnKhoa1Page() {
         onClose={() => setCheckoutOpen(false)}
       />
 
-      {/* ── Header ─────────────────────────────────────────────── */}
-      <header className="border-b border-[#DDD8CB] bg-[#F6F0E4]/90 backdrop-blur-sm">
-        <div className="max-w-2xl mx-auto px-4 h-14 flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-[#0D2B1A] flex items-center justify-center">
-            <span className="text-[#F6F0E4] font-bold text-sm font-mono">DH</span>
-          </div>
-          <span className="font-bold text-[#0D2B1A] text-sm">DungHoang.com</span>
-        </div>
-      </header>
-
       <div
         className={`max-w-2xl mx-auto px-4 py-12 space-y-8 transition-all duration-700 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'

@@ -48,21 +48,6 @@ export default function CongTacVienPage() {
   return (
     <div className="min-h-dvh bg-[#F6F0E4] font-sans">
 
-      {/* Header */}
-      <header className="border-b border-[#DDD8CB] bg-[#F6F0E4]/90 backdrop-blur-sm sticky top-0 z-40">
-        <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#0D2B1A] flex items-center justify-center">
-              <span className="text-[#F6F0E4] font-bold text-sm font-mono">DH</span>
-            </div>
-            <span className="font-bold text-[#0D2B1A] text-sm">DungHoang.com</span>
-          </Link>
-          <Link href="/cong-tac-vien/bao-cao" className="text-sm text-[#3D6B4A] font-medium hover:text-[#0D2B1A]">
-            Đã có mã → Xem báo cáo
-          </Link>
-        </div>
-      </header>
-
       <div className="max-w-4xl mx-auto px-4 py-12 space-y-12">
 
         {/* Hero */}

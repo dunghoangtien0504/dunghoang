@@ -70,14 +70,6 @@ export default function Khoa2Page() {
         ⚡ Đợt này chỉ còn <strong className="font-mono">{slots} suất</strong> · Tiểu Hà Mã cần thiết lập riêng, không thể nhận nhiều hơn
       </div>
 
-      <nav className="bg-[#0D2B1A] px-4 py-3 sticky top-0 z-40">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <span className="text-[#F6F0E4] font-black font-mono text-sm">DungHoang.com</span>
-          <button onClick={open} className="bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white text-xs font-bold px-4 py-2 rounded-lg transition-all duration-200">
-            Giữ suất · 3.868.686đ →
-          </button>
-        </div>
-      </nav>
 
       {/* [1] HERO */}
       <section ref={heroRef} className="bg-[#0D2B1A] px-4 pt-14 pb-16">
