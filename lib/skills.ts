@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// NGUỒN SỰ THẬT — 25 SKILL AI CỦA DŨNG HOÀNG
+// NGUỒN SỰ THẬT — 24 SKILL AI CỦA DŨNG HOÀNG
 //
 // Mỗi skill ở đây là MỘT QUY TRÌNH (SOP) CÓ THẬT, làm được bằng AI (ChatGPT/Claude)
 // cộng công cụ phổ thông (Canva, Google Docs, Telegram...). KHÔNG bịa khả năng.
@@ -11,9 +11,8 @@
 //
 // Phân bổ khóa:
 //   - Mini 368k     : chỉ skill #10 (Landing Page) + tặng kèm BRAND_DNA (#2).
-//   - Khóa 1 686k   : 24 skill (trừ #23), tự học theo SOP + Tiểu Hà Mã hỏi-đáp Telegram.
-//   - Khóa 2 2.768k : đủ 25 skill (gồm #23 Build App kỹ thuật) + SOP từng bước dựng
-//                     cả hệ thống + Tiểu Hà Mã kèm sát 24/7 + 1 buổi 1-kèm-1.
+//   - Khóa 1 686k   : 24 skill, tự học theo SOP + Tiểu Hà Mã hỏi-đáp Telegram.
+//   - Khóa 2 2.768k : đủ 24 skill + SOP từng bước dựng cả hệ thống + Tiểu Hà Mã kèm sát 24/7 + 1 buổi 1-kèm-1.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export type SkillGroup =
@@ -191,20 +190,13 @@ export const SKILLS: Skill[] = [
     auto: 'Bot trả tự động phần lớn; câu khó chuyển cho bạn. Cần Page Facebook.',
   },
   {
-    n: '23', name: 'Tự Build App Đăng Bài', agent: 'Meta Auto Post', group: 'Tự động hóa',
-    does: 'Hướng dẫn tự dựng app React đăng bài Facebook tự động (dùng Cursor + Gemini API + Facebook API + Vercel).',
-    output: 'App đăng bài riêng deploy lên Vercel, kết nối Page của bạn. Gõ chủ đề → AI viết đúng giọng → bấm 1 nút → lên Page.',
-    auto: 'Có SOP từng bước chi tiết nhưng gồm nhiều bước kỹ thuật (lấy token, cài Node.js, deploy). Cần được kèm sát mới làm xong trơn tru.',
-    khoa2Only: true,
-  },
-  {
-    n: '24', name: 'Nghiên Cứu Tài Liệu Bằng AI', agent: 'NotebookLM', group: 'Tự động hóa',
+    n: '23', name: 'Nghiên Cứu Tài Liệu Bằng AI', agent: 'NotebookLM', group: 'Tự động hóa',
     does: 'Đưa tài liệu vào AI để tóm tắt, hỏi đáp, tạo podcast/quiz/mindmap từ tài liệu.',
     output: 'Bản tóm tắt, podcast, quiz... tạo từ tài liệu của bạn.',
     auto: 'Dùng công cụ NotebookLM miễn phí của Google. Có hướng dẫn từng bước.',
   },
   {
-    n: '25', name: 'Trợ Lý AI Tiểu Hà Mã (Telegram)', agent: 'GoClaw Agent', group: 'Tự động hóa',
+    n: '24', name: 'Trợ Lý AI Tiểu Hà Mã (Telegram)', agent: 'GoClaw Agent', group: 'Tự động hóa',
     does: 'Trợ lý AI trên Telegram trả lời thắc mắc khi bạn học và làm, theo SOP của khóa.',
     output: 'Một nơi hỏi 24/7 khi bị kẹt, không phải chờ.',
     auto: 'Khóa 1: hỏi-đáp khi học. Khóa 2: Dũng cài Tiểu Hà Mã riêng, kèm sát theo business của bạn.',
@@ -213,8 +205,8 @@ export const SKILLS: Skill[] = [
 
 // Tiện ích lọc theo khóa ──────────────────────────────────────────────────────
 export const MINI_SKILLS   = SKILLS.filter(s => s.inMini)            // Mini 368k
-export const KHOA1_SKILLS  = SKILLS.filter(s => !s.khoa2Only)        // Khóa 1 (24 skill)
-export const ALL_SKILLS    = SKILLS                                    // Khóa 2 (đủ 25)
+export const KHOA1_SKILLS  = SKILLS                                  // Khóa 1 (24 skill)
+export const ALL_SKILLS    = SKILLS                                  // Khóa 2 (đủ 24)
 export const PROVEN_SKILLS = SKILLS.filter(s => s.proven)            // đã chứng minh trong Challenge
 
 export const SKILL_GROUPS: SkillGroup[] = [

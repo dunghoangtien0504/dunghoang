@@ -18,7 +18,7 @@ const FAQS = [
   { q:'Bảo hành thế nào?',
     a:'14 ngày hoàn 100%. Nếu 14 ngày đầu bạn thấy không phù hợp, nhắn mình, hoàn trong 24 giờ không hỏi lý do.' },
   { q:'Khác gì Khóa 1?',
-    a:'Khóa 1 bạn tự học 25 skill, tự áp dụng. Khóa 2 có thêm: bộ SOP dựng cả hệ thống 30 ngày + Tiểu Hà Mã kèm 24/7 qua Telegram. Phù hợp nếu bạn muốn chắc ăn hơn hoặc không muốn tự mày mò.' },
+    a:'Khóa 1 bạn tự học 24 skill, tự áp dụng. Khóa 2 có thêm: bộ SOP dựng cả hệ thống 30 ngày + Tiểu Hà Mã kèm 24/7 qua Telegram. Phù hợp nếu bạn muốn chắc ăn hơn hoặc không muốn tự mày mò.' },
 ]
 
 const WEEK_PLAN = [
@@ -91,7 +91,7 @@ export default function Khoa2Page() {
             <span className="text-2xl sm:text-3xl font-bold text-[#F6F0E4]/70">Kèm Tiểu Hà Mã · AI Đội Trưởng 24/7</span>
           </h1>
           <p className="text-[#F6F0E4]/70 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            25 skill AI + bộ SOP dựng hệ thống 4 tuần + Tiểu Hà Mã kèm sát qua Telegram.
+            24 skill AI + bộ SOP dựng hệ thống 4 tuần + Tiểu Hà Mã kèm sát qua Telegram.
             Cam kết: 30 ngày bạn có hệ thống tự chạy, hoặc mình ngồi sửa cùng bạn cho đến khi chạy được.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
@@ -143,7 +143,7 @@ export default function Khoa2Page() {
           <div className="space-y-3">
             {[
               { icon:'⚠️', head:'Kẹt vì thiếu người đi cùng', body:'Xem video tự học được đến 80%. Nhưng 20% còn lại chính là phần khó nhất và không ai chỉ cho bạn.' },
-              { icon:'⚠️', head:'Kẹt vì không biết thứ tự',   body:'25 skill, bắt đầu từ đâu? Cái nào phụ thuộc cái nào? Setup sai thứ tự là mất thêm 2 tuần.' },
+              { icon:'⚠️', head:'Kẹt vì không biết thứ tự',   body:'24 skill, bắt đầu từ đâu? Cái nào phụ thuộc cái nào? Setup sai thứ tự là mất thêm 2 tuần.' },
               { icon:'⚠️', head:'Kẹt vì không có template',   body:'Prompt người khác dùng được không có nghĩa là phù hợp với business của bạn. Cần ai customize lại cho bạn.' },
             ].map((p, i) => (
               <div key={i} className="bg-white border border-[#DDD8CB] rounded-xl p-4 flex items-start gap-3 transition-all duration-200 hover:shadow-md hover:border-brand-border/20 hover:translate-y-[-2px]">
@@ -293,7 +293,7 @@ export default function Khoa2Page() {
             </div>
             <div className="divide-y divide-[#DDD8CB]">
               {[
-                { item:'25 SOP AI thực chiến',               value:'12.500.000đ' },
+                { item:'24 SOP AI thực chiến',               value:'12.000.000đ' },
                 { item:'Tiểu Hà Mã cài riêng cho bạn',      value:'5.000.000đ' },
                 { item:'SOP 30 ngày dựng hệ thống chi tiết', value:'3.000.000đ' },
                 { item:'Review + tối ưu hệ thống cuối tháng',value:'2.000.000đ' },

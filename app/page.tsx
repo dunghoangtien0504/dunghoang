@@ -1,9 +1,10 @@
 import Link from 'next/link'
-import { ArrowRight, BookOpen, Zap, Users, CheckCircle } from 'lucide-react'
+import { ArrowRight, BookOpen, Users, CheckCircle, Newspaper } from 'lucide-react'
+import { getRecentPosts } from '@/lib/posts'
 
 export const metadata = {
-  title: 'DungHoang.com — 25 Skill AI Cho Người Kinh Doanh Một Mình',
-  description: 'Bộ 25 skill AI giúp solopreneur tự vận hành hệ thống bán hàng mà không cần thuê đội ngũ. Thử thách 7 ngày miễn phí.',
+  title: 'DungHoang.com — 24 Skill AI Cho Người Kinh Doanh Một Mình',
+  description: 'Bộ 24 skill AI giúp solopreneur tự vận hành hệ thống bán hàng mà không cần thuê đội ngũ. Thử thách 7 ngày miễn phí.',
 }
 
 const PRODUCTS = [
@@ -40,8 +41,8 @@ const PRODUCTS = [
   {
     badge: 'Có đội trưởng',
     badgeColor: 'bg-[#F0EDF8] text-[#5B3DA8]',
-    name: 'Có Đội — 25 Skill + Tiểu Hà Mã',
-    desc: '25 skill + Tiểu Hà Mã kèm sát 24/7. Cam kết 30 ngày có hệ thống tự chạy.',
+    name: 'Có Đội — 24 Skill + Tiểu Hà Mã',
+    desc: '24 skill + Tiểu Hà Mã kèm sát 24/7. Cam kết 30 ngày có hệ thống tự chạy.',
     price: '3.868.686đ',
     cta: 'Xem chi tiết',
     href: '/khoa-2-ban-co-doi-truong',
@@ -50,6 +51,8 @@ const PRODUCTS = [
 ]
 
 export default function HomePage() {
+  const recentPosts = getRecentPosts(3)
+
   return (
     <div className="min-h-dvh bg-[#F6F0E4] font-sans">
 
@@ -62,20 +65,28 @@ export default function HomePage() {
             </div>
             <span className="font-bold text-[#0D2B1A] text-sm">DungHoang.com</span>
           </div>
-          <div className="flex items-center gap-3">
-            <Link
-              href="/thu-thach-7-ngay"
-              className="text-sm text-[#3D6B4A] font-medium hover:text-[#0D2B1A] transition-colors"
-            >
-              Thử thách miễn phí
+          <nav className="flex items-center gap-1 sm:gap-4">
+            <Link href="/khoa-1-ban-tu-lap"
+              className="hidden sm:block text-sm text-[#3D6B4A] font-medium hover:text-[#0D2B1A] transition-colors px-2 py-1 rounded-lg hover:bg-[#EAF5EF]">
+              Khóa học
             </Link>
-            <Link
-              href="/portal"
-              className="text-sm text-[#7A8C7E] hover:text-[#3D6B4A] transition-colors"
-            >
+            <Link href="/tin-tuc"
+              className="hidden sm:block text-sm text-[#3D6B4A] font-medium hover:text-[#0D2B1A] transition-colors px-2 py-1 rounded-lg hover:bg-[#EAF5EF]">
+              Tin tức
+            </Link>
+            <Link href="/cong-tac-vien"
+              className="hidden sm:block text-sm text-[#7A8C7E] hover:text-[#3D6B4A] transition-colors px-2 py-1 rounded-lg hover:bg-[#EAF5EF]">
+              Cộng tác viên
+            </Link>
+            <Link href="/thu-thach-7-ngay"
+              className="text-sm font-semibold text-white bg-[#C0390E] hover:bg-[#A0300B] px-3 py-1.5 rounded-lg transition-colors">
+              Thử miễn phí
+            </Link>
+            <Link href="/portal"
+              className="text-sm text-[#7A8C7E] hover:text-[#3D6B4A] transition-colors px-2 py-1">
               Đăng nhập
             </Link>
-          </div>
+          </nav>
         </div>
       </header>
 
@@ -85,7 +96,7 @@ export default function HomePage() {
           Hơn 600 solopreneur đang dùng
         </div>
         <h1 className="text-3xl sm:text-5xl font-bold text-[#0D2B1A] leading-tight">
-          25 Skill AI cho người
+          24 Skill AI cho người
           <br />
           <span className="text-[#3D6B4A]">kinh doanh một mình</span>
         </h1>
@@ -105,7 +116,7 @@ export default function HomePage() {
             href="/khoa-1-ban-tu-lap"
             className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-white hover:bg-[#FAF7F2] text-[#0D2B1A] font-semibold rounded-xl border border-[#DDD8CB] transition-colors"
           >
-            Xem 25 skill
+            Xem 24 skill
           </Link>
         </div>
       </section>
@@ -153,7 +164,7 @@ export default function HomePage() {
           </p>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
-              ['25 skill', 'Mỗi skill thay 1 nhân sự. Cả bộ thay cả đội.'],
+              ['24 skill', 'Mỗi skill thay 1 nhân sự. Cả bộ thay cả đội.'],
               ['30 ngày', 'Cam kết Khóa 2: dựng xong hệ thống tự chạy hoặc mình sửa cùng.'],
               ['14 ngày BH', 'Hoàn 100% không hỏi lý do nếu không phù hợp.'],
             ].map(([num, desc], i) => (
@@ -186,7 +197,7 @@ export default function HomePage() {
             build DungHoang.com, và dùng AI để làm phần lớn những việc mà trước đây cần cả đội.
           </p>
           <p className="text-[#3D6B4A] leading-relaxed text-sm">
-            25 skill này là những gì mình đang dùng thật. Mình chia sẻ lại vì nghĩ người kinh doanh
+            24 skill này là những gì mình đang dùng thật. Mình chia sẻ lại vì nghĩ người kinh doanh
             một mình deserves biết những công cụ này. Không phải để "học AI cho vui" mà để dùng
             ngay vào việc kinh doanh thật.
           </p>
@@ -214,6 +225,39 @@ export default function HomePage() {
           Tham gia thử thách 7 ngày miễn phí
           <ArrowRight className="w-5 h-5" />
         </Link>
+      </section>
+
+      {/* ── Blog preview ───────────────────────────────────────── */}
+      <section className="max-w-5xl mx-auto px-4 pb-16 space-y-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Newspaper className="w-4 h-4 text-[#3D6B4A]" />
+            <h2 className="font-bold text-[#0D2B1A]">Bài viết mới nhất</h2>
+          </div>
+          <Link href="/tin-tuc" className="text-sm text-[#3D6B4A] font-medium hover:text-[#0D2B1A] flex items-center gap-1">
+            Xem tất cả <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-4">
+          {recentPosts.map(post => (
+            <Link
+              key={post.slug}
+              href={`/tin-tuc/${post.slug}`}
+              className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3 hover:border-[#3D6B4A]/40 hover:shadow-sm transition-all group flex flex-col"
+            >
+              <span className="text-xs text-[#3D6B4A] bg-[#EAF5EF] px-2.5 py-1 rounded-full self-start">
+                {post.category}
+              </span>
+              <p className="font-bold text-[#0D2B1A] text-sm leading-snug flex-1 group-hover:text-[#3D6B4A] transition-colors">
+                {post.title}
+              </p>
+              <div className="flex items-center justify-between text-xs text-[#7A8C7E]">
+                <span>{post.readMin} phút đọc</span>
+                <ArrowRight className="w-3.5 h-3.5 text-[#3D6B4A]" />
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
 
       {/* ── Footer ─────────────────────────────────────────────── */}

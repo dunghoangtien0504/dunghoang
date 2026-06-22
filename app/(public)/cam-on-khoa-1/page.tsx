@@ -118,7 +118,7 @@ export default function CamOnKhoa1Page() {
           </div>
           <div className="space-y-2">
             <h1 className="text-2xl font-bold text-[#0D2B1A]">
-              Bộ 25 skill của bạn đã sẵn sàng.
+              Bộ 24 skill của bạn đã sẵn sàng.
             </h1>
             <p className="text-[#3D6B4A] leading-relaxed">
               Mình vừa gửi email kích hoạt về hộp thư của bạn.
@@ -154,7 +154,7 @@ export default function CamOnKhoa1Page() {
                 </h2>
               </div>
               <p className="text-[#3D6B4A] leading-relaxed text-sm">
-                Vừa xong Khóa 1 bạn có đủ 25 skill rồi. Nhưng nếu muốn có người
+                Vừa xong Khóa 1 bạn có đủ 24 skill rồi. Nhưng nếu muốn có người
                 kèm từng bước cho đến khi hệ thống thật sự tự chạy, đó là Khóa 2.
               </p>
               <p className="text-[#3D6B4A] leading-relaxed text-sm">
@@ -200,7 +200,7 @@ export default function CamOnKhoa1Page() {
 
             {/* Neo giá */}
             <div className="bg-[#EAF5EF] border border-[#2D7A4F]/20 rounded-xl p-4 text-sm text-[#3D6B4A] leading-relaxed">
-              Nếu thuê đủ: 25 skill (50tr/tháng) + SOP (20tr) + đội trưởng kèm sát (20tr) = 90tr+ tự lo.
+              Nếu thuê đủ: 24 skill (50tr/tháng) + SOP (20tr) + đội trưởng kèm sát (20tr) = 90tr+ tự lo.
               Bạn trả một lần 3.868.686đ. Phần còn lại sau khi trừ Khóa 1 chỉ là {extraNeeded}đ.
             </div>
 

@@ -19,7 +19,7 @@ const FAQS = [
   { q:'Bảo hành thế nào?',
     a:'14 ngày hoàn 100%. Mua về học thử, không phù hợp thì nhắn mình. Hoàn trong 24 giờ, không hỏi lý do.' },
   { q:'Có khác gì so với Khóa 2?',
-    a:'Khóa 1 có 24 skill tự học theo SOP. Khóa 2 có đủ 25 skill (gồm skill #23 Build App kỹ thuật) + Tiểu Hà Mã kèm sát 24/7 qua Telegram + SOP dựng cả hệ thống 30 ngày. Skill #23 cần kèm tay mới làm xong trơn tru nên mình để riêng ở Khóa 2.' },
+    a:'Khóa 1 bạn tự học 24 skill. Khóa 2 có thêm: bộ SOP dựng cả hệ thống 30 ngày + Tiểu Hà Mã kèm sát 24/7 qua Telegram giúp bạn triển khai thực tế trơn tru, không lo bị kẹt.' },
 ]
 
 function AccordionItem({ q, a }: { q: string; a: string }) {
@@ -76,7 +76,7 @@ export default function Khoa1Page() {
       <section ref={heroRef} className="bg-[#0D2B1A] px-4 pt-14 pb-16">
         <div className="max-w-3xl mx-auto text-center space-y-5">
           <div className="inline-block bg-[#C0390E]/20 text-[#E87C5E] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
-            Khóa 1 · Bản Tự Lập · 25 Skill AI
+            Khóa 1 · Bản Tự Lập · 24 Skill AI
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-[#F6F0E4] leading-tight">
             24 Skill AI Bán Hàng<br/>
@@ -84,7 +84,7 @@ export default function Khoa1Page() {
             <span className="text-2xl sm:text-3xl font-bold text-[#F6F0E4]/70">Không phải lý thuyết. Không phải demo.</span>
           </h1>
           <p className="text-[#F6F0E4]/70 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            Bộ 25 skill đang chạy trong business của mình mỗi ngày — đóng gói thành SOP từng bước cho bạn tự làm theo.
+            Bộ 24 skill đang chạy trong business của mình mỗi ngày — đóng gói thành SOP từng bước cho bạn tự làm theo.
             Tiết kiệm 4-5 tiếng/ngày, không cần thuê thêm người.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
@@ -92,9 +92,9 @@ export default function Khoa1Page() {
               className="h-14 px-8 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-lg shadow-red-900/30 hover:shadow-xl hover:shadow-red-900/40">
               Đăng Ký — 868.686đ →
             </button>
-            <a href="#25-skill"
+            <a href="#24-skill"
               className="h-14 px-8 border border-[#F6F0E4]/20 text-[#F6F0E4]/70 hover:text-[#F6F0E4] text-sm font-medium rounded-2xl flex items-center justify-center transition-colors">
-              Xem đủ 25 skill →
+              Xem đủ 24 skill →
             </a>
           </div>
           <p className="text-[#F6F0E4]/40 text-xs">Đã mua Trang Bán Hàng (686.868đ)? Chỉ cần thêm 181.818đ là có Khóa 1 đầy đủ</p>
@@ -107,7 +107,7 @@ export default function Khoa1Page() {
           <div className="grid grid-cols-4 gap-4 text-center">
             {[
               { n:'605+', label:'học viên' },
-              { n:'25',   label:'skill AI' },
+              { n:'24',   label:'skill AI' },
               { n:'4-5h', label:'tiết kiệm/ngày' },
               { n:'14n',  label:'bảo hành' },
             ].map(s => (
@@ -148,7 +148,7 @@ export default function Khoa1Page() {
           </div>
           <div className="border-l-4 border-[#C0390E] pl-4">
             <p className="text-gray-700 leading-relaxed italic">
-              "25 skill trong khóa này tương đương <strong className="not-italic text-[#0D2B1A]">25 nhân sự AI không bao giờ xin nghỉ</strong> — bạn trả 1 lần 868.686đ, dùng mãi."
+              "24 skill trong khóa này tương đương <strong className="not-italic text-[#0D2B1A]">24 nhân sự AI không bao giờ xin nghỉ</strong> — bạn trả 1 lần 868.686đ, dùng mãi."
             </p>
           </div>
           <button onClick={open}
@@ -163,19 +163,19 @@ export default function Khoa1Page() {
         <div className="max-w-2xl mx-auto space-y-5">
           <p className="text-xs font-bold text-[#88860B] uppercase tracking-widest">Cách mình đến đây</p>
           <h2 className="text-2xl sm:text-3xl font-black text-[#F6F0E4] leading-tight">
-            2 năm thử sai → 25 skill AI thực chiến
+            2 năm thử sai → 24 skill AI thực chiến
           </h2>
           <div className="space-y-4 text-[#F6F0E4]/75 text-sm sm:text-base leading-relaxed">
             <p>Mình không bắt đầu từ expert. Mình bắt đầu từ một người vận hành mọi thứ một mình và không đủ tiền thuê team.</p>
             <p>Mình thử dùng AI cho từng việc một. Fail. Chỉnh. Làm lại. Đến khi nào có output dùng được thì mình mới đóng thành SOP.</p>
-            <p className="text-[#F6F0E4]"><strong>Kết quả sau 2 năm: 25 SOP chạy được trong business mình thật sự.</strong> Tiết kiệm 4-5 tiếng mỗi ngày. 605 học viên đã làm được điều tương tự.</p>
-            <p className="text-[#F6F0E4]/60 italic">Bộ 25 skill trong Khóa 1 là chính xác những gì mình đang dùng — không phải bộ lý thuyết được viết để dạy.</p>
+            <p className="text-[#F6F0E4]"><strong>Kết quả sau 2 năm: 24 SOP chạy được trong business mình thật sự.</strong> Tiết kiệm 4-5 tiếng mỗi ngày. 605 học viên đã làm được điều tương tự.</p>
+            <p className="text-[#F6F0E4]/60 italic">Bộ 24 skill trong Khóa 1 là chính xác những gì mình đang dùng — không phải bộ lý thuyết được viết để dạy.</p>
           </div>
         </div>
       </section>
 
-      {/* [6] 25 SKILLS — gom theo 6 nhóm, mô tả output thật */}
-      <section id="25-skill" className="px-4 py-14 bg-white border-y border-[#DDD8CB]">
+      {/* [6] 24 SKILLS — gom theo 6 nhóm, mô tả output thật */}
+      <section id="24-skill" className="px-4 py-14 bg-white border-y border-[#DDD8CB]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">24 skill trong Khóa 1</p>
@@ -213,15 +213,6 @@ export default function Khoa1Page() {
             })}
           </div>
 
-          {/* Skill #23 chỉ có Khóa 2 */}
-          <div className="bg-[#FFF8F0] border border-[#F5D8B8] rounded-xl p-4 text-sm leading-relaxed flex gap-3">
-            <span className="text-lg flex-shrink-0">🔒</span>
-            <div>
-              <p className="font-bold text-[#0D2B1A] mb-1">Skill #23 — Tự Build App Đăng Bài: chỉ có ở Khóa 2</p>
-              <p className="text-gray-600">Skill này cần nhiều bước kỹ thuật (Facebook API, Cursor, deploy Vercel). Mình không đưa vào Khóa 1 vì làm một mình dễ bị kẹt giữa chừng. Ở Khóa 2 mình kèm sát tới khi app chạy được.</p>
-            </div>
-          </div>
-
           {/* Nói thật về tự động hóa — chống cảm giác bị thổi phồng */}
           <div className="bg-[#FAF7F2] border border-[#DDD8CB] rounded-xl p-4 text-sm text-gray-600 leading-relaxed">
             <p><strong className="text-[#0D2B1A]">Mình nói thẳng:</strong> 24 skill là 24 quy trình AI làm phần nặng cho bạn (viết, lên ý tưởng, dựng khung).
@@ -244,7 +235,7 @@ export default function Khoa1Page() {
             <p>6h sáng. Bạn mở điện thoại. Chatbot đã trả lời 12 tin nhắn đêm qua. 3 người hỏi giá, 1 người đặt cọc.</p>
             <p>Bạn mở lịch content. AI đã có 30 bài cho tháng sau — bạn chỉ cần đọc và approve 10 phút.</p>
             <p className="text-[#F6F0E4]"><strong>Business vẫn chạy. Bạn không phải là bottleneck nữa.</strong></p>
-            <p className="text-[#88860B]">25 skill là 25 nhân sự AI làm việc song song — bạn chỉ cần quản lý output.</p>
+            <p className="text-[#88860B]">24 skill là 24 nhân sự AI làm việc song song — bạn chỉ cần quản lý output.</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
             {[
@@ -268,7 +259,7 @@ export default function Khoa1Page() {
           <h2 className="text-2xl font-black text-[#F6F0E4]">Tại sao học từ mình?</h2>
           <div className="space-y-3">
             {[
-              { icon:'🏡', text:'Đang vận hành homestay + khoá học + tư vấn AI một mình — 25 skill này đang chạy thật trong business mình' },
+              { icon:'🏡', text:'Đang vận hành homestay + khoá học + tư vấn AI một mình — 24 skill này đang chạy thật trong business mình' },
               { icon:'👥', text:'605+ học viên đã học — từ chủ shop, coach, freelancer đến solopreneur nhiều ngành' },
               { icon:'📅', text:'SOP được test 2 năm trong thực tế — không phải viết từ sách hay copy từ người khác' },
               { icon:'🔄', text:'Khóa 1 là bước đệm — mua xong muốn nâng, 868.686đ trừ vào Khóa 2 (3.868.686đ)' },
@@ -365,7 +356,7 @@ export default function Khoa1Page() {
                 {[
                   'Solopreneur, chủ shop online, coach, freelancer muốn tự làm marketing bằng AI',
                   'Người đang làm 1 mình nhưng muốn kết quả như có team',
-                  'Đã mua Mini và muốn nâng lên đủ bộ 25 skill',
+                  'Đã mua Mini và muốn nâng lên đủ bộ 24 skill',
                   'Sẵn sàng bỏ 30-60 phút/skill để có công cụ dùng mãi',
                 ].map((t, i) => <p key={i} className="text-sm text-gray-700 leading-snug">• {t}</p>)}
               </div>
@@ -436,7 +427,7 @@ export default function Khoa1Page() {
             Quyết Định Hôm Nay — Xây Đội AI Của Mình →
           </button>
           <div className="flex items-center justify-center gap-4 text-xs text-gray-400 flex-wrap">
-            <span>✓ 25 skill thực chiến</span>
+            <span>✓ 24 skill thực chiến</span>
             <span>✓ Bảo hành 14 ngày</span>
             <span>✓ Có thể nâng lên Khóa 2</span>
           </div>
@@ -462,7 +453,7 @@ export default function Khoa1Page() {
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A]/95 backdrop-blur-md border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl animate-slide-up">
           <div className="min-w-0">
             <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 1 Bản Tự Lập — 868.686đ</p>
-            <p className="text-[#F6F0E4]/50 text-xs">25 skill AI · Bảo hành 14 ngày</p>
+            <p className="text-[#F6F0E4]/50 text-xs">24 skill AI · Bảo hành 14 ngày</p>
           </div>
           <button onClick={open}
             className="flex-shrink-0 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white font-bold px-5 h-11 rounded-xl text-sm transition-all duration-200">
