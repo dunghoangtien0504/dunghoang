@@ -27,10 +27,6 @@ export default function SiteNav() {
             className="text-sm text-[#3D6B4A] font-medium px-3 py-1.5 rounded-lg hover:bg-[#EAF5EF] hover:text-[#0D2B1A] transition-colors">
             Tin tức
           </Link>
-          <Link href="/cong-tac-vien"
-            className="text-sm text-[#7A8C7E] px-3 py-1.5 rounded-lg hover:bg-[#EAF5EF] hover:text-[#3D6B4A] transition-colors">
-            Cộng tác viên
-          </Link>
         </nav>
 
         {/* Right CTAs */}

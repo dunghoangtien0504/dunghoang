@@ -65,6 +65,9 @@ export default function DashboardPage() {
           <span className="text-[#F6F0E4] font-black font-mono text-sm">DungHoang.com</span>
           <div className="flex items-center gap-4">
             <span className="text-[#F6F0E4]/40 text-xs hidden sm:block">{user?.email}</span>
+            <a href="/portal/cong-tac-vien" className="text-[#F6F0E4]/60 hover:text-[#F6F0E4] text-xs transition-colors">
+              Cộng tác viên
+            </a>
             <a href="/portal/tai-khoan" className="text-[#F6F0E4]/60 hover:text-[#F6F0E4] text-xs transition-colors">
               Tài khoản
             </a>
@@ -145,6 +148,21 @@ export default function DashboardPage() {
               Thử Thách 7 Ngày — Bí Quyết Đưa AI Vào Business
             </p>
             <p className="text-xs text-gray-400 mt-0.5">Cọc 368.000đ · Hoàn thành đúng hạn → hoàn tiền</p>
+          </div>
+          <ChevronRight size={16} className="text-gray-300 group-hover:text-[#1D9E75] flex-shrink-0 transition-colors" />
+        </a>
+
+        {/* Cộng tác viên */}
+        <a href="/portal/cong-tac-vien"
+          className="group flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-5 hover:border-[#0D2B1A]/20 hover:shadow-sm transition-all">
+          <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0 text-xl text-[#2D7A4F]">
+            🤝
+          </div>
+          <div className="flex-1">
+            <p className="font-bold text-[#0D2B1A] text-sm group-hover:text-[#1D9E75] transition-colors">
+              Chương trình Cộng tác viên
+            </p>
+            <p className="text-xs text-gray-400 mt-0.5">Giới thiệu khóa học — Nhận hoa hồng 10–20%</p>
           </div>
           <ChevronRight size={16} className="text-gray-300 group-hover:text-[#1D9E75] flex-shrink-0 transition-colors" />
         </a>
