@@ -101,9 +101,11 @@ export default function Sidebar({ collapsed = false }: { collapsed?: boolean }) 
 
   return (
     <aside
+      className={clsx(
+        "fixed left-0 top-0 h-screen bg-sidebar-bg border-r border-sidebar-border flex flex-col z-50 transition-all duration-300 shadow-sidebar",
+        collapsed ? "-translate-x-full md:translate-x-0" : "translate-x-0"
+      )}
       style={{ width: collapsed ? 'var(--sidebar-collapsed)' : 'var(--sidebar-width)' }}
-      className="fixed left-0 top-0 h-screen bg-sidebar-bg border-r border-sidebar-border
-                 flex flex-col z-40 transition-all duration-300 shadow-sidebar"
     >
       {/* ── Logo ── */}
       <div className="flex items-center gap-2.5 px-4 py-4 border-b border-white/10">

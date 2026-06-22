@@ -87,7 +87,7 @@ export default function AdsDashboardPage() {
       {/* Inputs */}
       <div className="card card-hover">
         <h3 className="section-title mb-4">Thông số đầu vào</h3>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
             <label className="block text-xs text-text-muted mb-1.5">Ngân sách ads/tháng</label>
             <div className="relative">
@@ -126,7 +126,7 @@ export default function AdsDashboardPage() {
       </div>
 
       {/* 3 scenario summary cards */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {scenarios.map(s => (
           <div key={s.label} className={`rounded-xl border p-5 ${s.bg} ${s.border}`}>
             <p className={`text-xs font-bold uppercase tracking-wide ${s.color} mb-3`}>{s.label}</p>
@@ -235,7 +235,7 @@ export default function AdsDashboardPage() {
       </div>
 
       {/* Key insights */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[
           {
             icon: ShoppingCart,

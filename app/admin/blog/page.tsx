@@ -68,7 +68,7 @@ export default function BlogPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {[
           { label: 'Tong bai viet',   value: String(stats.total),                       icon: FileText,  color: 'text-info',         bg: 'bg-info-light' },
           { label: 'Da xuat ban',     value: String(stats.published),                   icon: Globe,     color: 'text-success',      bg: 'bg-success-light' },

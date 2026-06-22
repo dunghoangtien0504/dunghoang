@@ -86,7 +86,7 @@ export default function OrdersPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {[
           { label: 'Tổng doanh thu',  value: `${(stats.revenue/1_000_000).toFixed(0)}M₫`, icon: DollarSign,   color: 'text-brand-accent', bg: 'bg-brand-accent/10' },
           { label: 'Đơn hoàn thành', value: String(stats.completed),                        icon: CheckCircle,  color: 'text-success',      bg: 'bg-success-light' },

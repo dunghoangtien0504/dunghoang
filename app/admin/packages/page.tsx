@@ -62,7 +62,7 @@ export default function PackagesPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {[
           { label:'Tong goi',     value:String(stats.total),                          icon:Package,    color:'text-info',        bg:'bg-info-light' },
           { label:'Dang ban',     value:String(stats.active),                         icon:CheckCircle,color:'text-success',     bg:'bg-success-light' },

@@ -1,22 +1,40 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Sidebar from '@/components/sidebar/Sidebar'
 import NotificationPanel from '@/components/layout/NotificationPanel'
 import SearchModal, { useSearch } from '@/components/ui/SearchModal'
 import { Search, PanelLeftClose, PanelLeft, Command } from 'lucide-react'
+import { clsx } from 'clsx'
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const [collapsed, setCollapsed] = useState(false)
   const { isOpen: searchOpen, open: openSearch, close: closeSearch } = useSearch()
 
+  useEffect(() => {
+    // Collapse sidebar by default on mobile screens
+    if (window.innerWidth < 768) {
+      setCollapsed(true)
+    }
+  }, [])
+
   return (
     <div className="flex h-screen overflow-hidden bg-background">
+      {/* Mobile Sidebar Backdrop */}
+      {!collapsed && (
+        <div 
+          className="fixed inset-0 bg-black/40 z-40 md:hidden"
+          onClick={() => setCollapsed(true)}
+        />
+      )}
+
       <Sidebar collapsed={collapsed} />
 
       <div
-        className="flex-1 flex flex-col overflow-hidden transition-all duration-300"
-        style={{ marginLeft: collapsed ? 'var(--sidebar-collapsed)' : 'var(--sidebar-width)' }}
+        className={clsx(
+          "flex-1 flex flex-col overflow-hidden transition-all duration-300",
+          collapsed ? "ml-0 md:ml-[60px]" : "ml-0 md:ml-[224px]"
+        )}
       >
         {/* ── Top Header ── */}
         <header

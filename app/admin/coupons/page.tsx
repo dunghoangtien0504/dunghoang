@@ -44,7 +44,7 @@ export default function CouponsPage() {
         <button onClick={()=>setShowForm(v=>!v)} className="btn-primary text-xs py-2"><Plus size={13}/>Tao ma moi</button>
       </div>
 
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {[
           { label:'Tong ma',      value:String(stats.total),                          icon:Tag,         color:'text-info',        bg:'bg-info-light' },
           { label:'Dang HD',      value:String(stats.active),                         icon:CheckCircle, color:'text-success',     bg:'bg-success-light' },
@@ -64,7 +64,7 @@ export default function CouponsPage() {
             <div className="w-7 h-7 rounded-lg bg-brand-accent/10 flex items-center justify-center"><Tag size={14} className="text-brand-accent"/></div>
             <h3 className="section-title">Tao ma giam gia moi</h3>
           </div>
-          <div className="grid grid-cols-3 gap-3 mb-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
             <div><label className="text-text-muted text-xs mb-1.5 block">Ma coupon <span className="text-brand-accent">*</span></label><input placeholder="VD: SALE50" className="input-field text-xs font-mono uppercase"/></div>
             <div>
               <label className="text-text-muted text-xs mb-1.5 block">Loai giam</label>

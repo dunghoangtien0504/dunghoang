@@ -41,7 +41,7 @@ export default function CoursesPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {[
           { label: 'Tổng khoá học',  value: String(COURSES.length), icon: BookOpen,     color: 'text-info',         bg: 'bg-info-light' },
           { label: 'Tổng học viên',  value: String(totals.students), icon: Users,        color: 'text-success',      bg: 'bg-success-light' },
@@ -78,7 +78,7 @@ export default function CoursesPage() {
 
       {/* Grid View */}
       {viewMode === 'grid' && (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((course) => (
             <div key={course.id} className="card card-hover group flex flex-col gap-3">
               {/* Thumbnail */}

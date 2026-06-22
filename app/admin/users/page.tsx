@@ -89,7 +89,7 @@ export default function UsersPage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {[
           { label: 'Tổng accounts', value: stats.total,      icon: Users,     color: 'text-info',         bg: 'bg-info-light' },
           { label: 'Có khóa học',   value: stats.withCourse, icon: BookOpen,  color: 'text-success',      bg: 'bg-success-light' },

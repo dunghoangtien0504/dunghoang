@@ -66,7 +66,7 @@ export default function AffiliatePage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {[
           { label: 'Tổng Affiliate',     value: String(stats.total),                          icon: Users,        color: 'text-info',         bg: 'bg-info-light' },
           { label: 'Doanh thu từ Aff.',  value: `${(stats.revenue/1_000_000).toFixed(0)}M₫`,  icon: DollarSign,   color: 'text-brand-accent', bg: 'bg-brand-accent/10' },
@@ -107,7 +107,7 @@ export default function AffiliatePage() {
           <h3 className="section-title">Cài đặt hoa hồng</h3>
           <button className="btn-ghost text-xs">Chỉnh sửa</button>
         </div>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { label: 'Khóa cao (Khóa 2, 1-kèm-1)', value: '10%',     color: 'text-brand-accent' },
             { label: 'Khóa thấp (Mini, Khóa 1)',    value: '20%',     color: 'text-success' },
