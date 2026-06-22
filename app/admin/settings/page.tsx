@@ -1,34 +1,34 @@
 'use client'
 
 import { useState } from 'react'
-import { User, Bell, Shield, CreditCard, Globe, Palette, Save, Eye, EyeOff, CheckCircle } from 'lucide-react'
+import { User, Bell, Shield, CreditCard, Globe, Save, Eye, EyeOff, CheckCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 type Tab = 'profile' | 'notifications' | 'security' | 'billing' | 'integrations'
 
 const TABS: { key: Tab; label: string; icon: typeof User }[] = [
-  { key: 'profile',       label: 'Ho so',         icon: User    },
-  { key: 'notifications', label: 'Thong bao',     icon: Bell    },
-  { key: 'security',      label: 'Bao mat',       icon: Shield  },
-  { key: 'billing',       label: 'Thanh toan',    icon: CreditCard },
-  { key: 'integrations',  label: 'Tich hop',      icon: Globe   },
+  { key: 'profile',       label: 'Hồ sơ',      icon: User       },
+  { key: 'notifications', label: 'Thông báo',   icon: Bell       },
+  { key: 'security',      label: 'Bảo mật',     icon: Shield     },
+  { key: 'billing',       label: 'Thanh toán',  icon: CreditCard },
+  { key: 'integrations',  label: 'Tích hợp',    icon: Globe      },
 ]
 
 const NOTIF_SETTINGS = [
-  { key: 'new_order',    label: 'Don hang moi',         desc: 'Khi co don hang thanh toan thanh cong',     email: true,  push: true  },
-  { key: 'new_student',  label: 'Hoc vien moi',         desc: 'Khi co hoc vien dang ky khoa hoc moi',     email: true,  push: false },
-  { key: 'email_sent',   label: 'Campaign gui xong',    desc: 'Sau khi email campaign gui hoan tat',      email: true,  push: false },
-  { key: 'deal_won',     label: 'Deal chot thanh cong', desc: 'Khi mot deal duoc chuyen sang Won',        email: true,  push: true  },
-  { key: 'refund',       label: 'Yeu cau hoan tien',    desc: 'Khi co khach hang yeu cau hoan tien',      email: true,  push: true  },
-  { key: 'affiliate',    label: 'Hoa hong Affiliate',   desc: 'Bao cao hoa hong hang tuan',               email: true,  push: false },
+  { key: 'new_order',   label: 'Đơn hàng mới',          desc: 'Khi có đơn hàng thanh toán thành công',    email: true,  push: true  },
+  { key: 'new_student', label: 'Học viên mới',           desc: 'Khi có học viên đăng ký khóa học mới',    email: true,  push: false },
+  { key: 'email_sent',  label: 'Campaign gửi xong',      desc: 'Sau khi email campaign gửi hoàn tất',     email: true,  push: false },
+  { key: 'deal_won',    label: 'Deal chốt thành công',   desc: 'Khi một deal được chuyển sang Won',       email: true,  push: true  },
+  { key: 'refund',      label: 'Yêu cầu hoàn tiền',      desc: 'Khi có khách hàng yêu cầu hoàn tiền',    email: true,  push: true  },
+  { key: 'affiliate',   label: 'Hoa hồng Affiliate',     desc: 'Báo cáo hoa hồng hàng tuần',             email: true,  push: false },
 ]
 
 const INTEGRATIONS = [
-  { name: 'Supabase',   status: 'Chua ket noi', color: 'text-text-muted', desc: 'Database & Authentication',       href: 'https://supabase.com' },
-  { name: 'Resend',     status: 'Chua ket noi', color: 'text-text-muted', desc: 'Email delivery service',          href: 'https://resend.com' },
-  { name: 'Meta Pixel', status: 'Chua ket noi', color: 'text-text-muted', desc: 'Facebook Ads tracking + CAPI',    href: '#' },
-  { name: 'Zalo OA',    status: 'Chua ket noi', color: 'text-text-muted', desc: 'Zalo Official Account + ZNS',     href: '#' },
-  { name: 'Sepay/PayOS',status: 'Chua ket noi', color: 'text-text-muted', desc: 'QR payment gateway Vietnam-native',href:'#' },
+  { name: 'Supabase',    status: 'Chưa kết nối', color: 'text-text-muted', desc: 'Database & Authentication',        href: 'https://supabase.com' },
+  { name: 'Resend',      status: 'Chưa kết nối', color: 'text-text-muted', desc: 'Email delivery service',           href: 'https://resend.com'   },
+  { name: 'Meta Pixel',  status: 'Chưa kết nối', color: 'text-text-muted', desc: 'Facebook Ads tracking + CAPI',     href: '#'                    },
+  { name: 'Zalo OA',     status: 'Chưa kết nối', color: 'text-text-muted', desc: 'Zalo Official Account + ZNS',      href: '#'                    },
+  { name: 'Sepay/PayOS', status: 'Chưa kết nối', color: 'text-text-muted', desc: 'QR payment gateway Vietnam-native', href: '#'                   },
 ]
 
 function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
@@ -52,9 +52,9 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<Tab>('profile')
-  const [showPw, setShowPw] = useState(false)
-  const [saved, setSaved] = useState(false)
-  const [notifs, setNotifs] = useState(NOTIF_SETTINGS)
+  const [showPw, setShowPw]       = useState(false)
+  const [saved, setSaved]         = useState(false)
+  const [notifs, setNotifs]       = useState(NOTIF_SETTINGS)
 
   const handleSave = () => {
     setSaved(true)
@@ -69,11 +69,14 @@ export default function SettingsPage() {
     <div className="page-wrapper">
       <div className="page-header">
         <div>
-          <h1 className="page-title">Cai dat</h1>
-          <p className="page-subtitle">Quan ly tai khoan, bao mat va tich hop</p>
+          <h1 className="page-title">Cài đặt</h1>
+          <p className="page-subtitle">Quản lý tài khoản, bảo mật và tích hợp</p>
         </div>
         <button onClick={handleSave} className="btn-primary text-xs py-2">
-          {saved ? <><CheckCircle size={13} />Da luu!</> : <><Save size={13} />Luu thay doi</>}
+          {saved
+            ? <><CheckCircle size={13} /> Đã lưu!</>
+            : <><Save size={13} /> Lưu thay đổi</>
+          }
         </button>
       </div>
 
@@ -104,12 +107,12 @@ export default function SettingsPage() {
 
         {/* Content */}
         <div className="flex-1 space-y-4">
+
           {/* Profile */}
           {activeTab === 'profile' && (
             <>
               <div className="card card-hover">
-                <h3 className="section-title mb-4">Thong tin ca nhan</h3>
-                {/* Avatar */}
+                <h3 className="section-title mb-4">Thông tin cá nhân</h3>
                 <div className="flex items-center gap-4 mb-5 pb-5 border-b border-border">
                   <div className="w-16 h-16 rounded-2xl bg-brand-dark flex items-center justify-center">
                     <span className="text-text-on-dark font-bold text-xl">DH</span>
@@ -117,25 +120,39 @@ export default function SettingsPage() {
                   <div>
                     <p className="text-text-primary font-semibold">Dung Hoang</p>
                     <p className="text-text-muted text-xs">admin@dunghoang.com</p>
-                    <button className="btn-ghost text-xs mt-1.5 px-2 py-1">Doi anh dai dien</button>
+                    <button className="btn-ghost text-xs mt-1.5 px-2 py-1">Đổi ảnh đại diện</button>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div><label className="text-text-secondary text-xs font-medium block mb-1.5">Ho va ten</label><input defaultValue="Dung Hoang" className="input-field text-sm h-10"/></div>
-                  <div><label className="text-text-secondary text-xs font-medium block mb-1.5">Email</label><input defaultValue="admin@dunghoang.com" type="email" className="input-field text-sm h-10"/></div>
-                  <div><label className="text-text-secondary text-xs font-medium block mb-1.5">So dien thoai</label><input defaultValue="0901234567" type="tel" className="input-field text-sm h-10"/></div>
-                  <div><label className="text-text-secondary text-xs font-medium block mb-1.5">Gia tri thuong hieu</label><input defaultValue="dunghoang.com" className="input-field text-sm h-10"/></div>
-                  <div className="col-span-2"><label className="text-text-secondary text-xs font-medium block mb-1.5">Bio ngan</label>
-                    <textarea defaultValue="Creator, Coach va Affiliate Marketer." rows={3} className="input-field text-sm resize-none"/>
+                  <div>
+                    <label className="text-text-secondary text-xs font-medium block mb-1.5">Họ và tên</label>
+                    <input defaultValue="Dung Hoang" className="input-field text-sm h-10" />
+                  </div>
+                  <div>
+                    <label className="text-text-secondary text-xs font-medium block mb-1.5">Email</label>
+                    <input defaultValue="admin@dunghoang.com" type="email" className="input-field text-sm h-10" />
+                  </div>
+                  <div>
+                    <label className="text-text-secondary text-xs font-medium block mb-1.5">Số điện thoại</label>
+                    <input defaultValue="0901234567" type="tel" className="input-field text-sm h-10" />
+                  </div>
+                  <div>
+                    <label className="text-text-secondary text-xs font-medium block mb-1.5">Giá trị thương hiệu</label>
+                    <input defaultValue="dunghoang.com" className="input-field text-sm h-10" />
+                  </div>
+                  <div className="col-span-2">
+                    <label className="text-text-secondary text-xs font-medium block mb-1.5">Bio ngắn</label>
+                    <textarea defaultValue="Creator, Coach và Affiliate Marketer." rows={3} className="input-field text-sm resize-none" />
                   </div>
                 </div>
               </div>
+
               <div className="card card-hover">
-                <h3 className="section-title mb-1">Ten mien tuy chinh</h3>
-                <p className="text-text-muted text-xs mb-4">Ket noi domain rieng cho platform cua ban</p>
+                <h3 className="section-title mb-1">Tên miền tùy chỉnh</h3>
+                <p className="text-text-muted text-xs mb-4">Kết nối domain riêng cho platform của bạn</p>
                 <div className="flex gap-3">
-                  <input placeholder="academy.dunghoang.com" className="input-field text-sm h-10 flex-1"/>
-                  <button className="btn-primary text-sm py-2 px-4">Ket noi</button>
+                  <input placeholder="academy.dunghoang.com" className="input-field text-sm h-10 flex-1" />
+                  <button className="btn-primary text-sm py-2 px-4">Kết nối</button>
                 </div>
               </div>
             </>
@@ -144,10 +161,10 @@ export default function SettingsPage() {
           {/* Notifications */}
           {activeTab === 'notifications' && (
             <div className="card card-hover">
-              <h3 className="section-title mb-1">Cai dat thong bao</h3>
-              <p className="text-text-muted text-xs mb-5">Chon loai thong bao ban muon nhan</p>
+              <h3 className="section-title mb-1">Cài đặt thông báo</h3>
+              <p className="text-text-muted text-xs mb-5">Chọn loại thông báo bạn muốn nhận</p>
               <div className="grid grid-cols-3 gap-3 text-xs text-text-muted mb-4 px-4">
-                <span>Loai thong bao</span>
+                <span>Loại thông báo</span>
                 <span className="text-center">Email</span>
                 <span className="text-center">Push</span>
               </div>
@@ -174,42 +191,45 @@ export default function SettingsPage() {
           {activeTab === 'security' && (
             <div className="space-y-4">
               <div className="card card-hover">
-                <h3 className="section-title mb-4">Doi mat khau</h3>
+                <h3 className="section-title mb-4">Đổi mật khẩu</h3>
                 <div className="space-y-3 max-w-sm">
                   {[
-                    { label: 'Mat khau hien tai', ph: 'Nhap mat khau hien tai' },
-                    { label: 'Mat khau moi',      ph: 'Toi thieu 8 ky tu' },
-                    { label: 'Xac nhan mat khau', ph: 'Nhap lai mat khau moi' },
+                    { label: 'Mật khẩu hiện tại', ph: 'Nhập mật khẩu hiện tại' },
+                    { label: 'Mật khẩu mới',      ph: 'Tối thiểu 8 ký tự'      },
+                    { label: 'Xác nhận mật khẩu', ph: 'Nhập lại mật khẩu mới'  },
                   ].map((f, i) => (
                     <div key={f.label}>
                       <label className="text-text-secondary text-xs font-medium block mb-1.5">{f.label}</label>
                       <div className="relative">
-                        <input type={showPw ? 'text' : 'password'} placeholder={f.ph} className="input-field text-sm h-10 pr-10"/>
+                        <input type={showPw ? 'text' : 'password'} placeholder={f.ph} className="input-field text-sm h-10 pr-10" />
                         {i === 0 && (
-                          <button type="button" onClick={() => setShowPw(v=>!v)} className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-primary">
-                            {showPw ? <EyeOff size={14}/> : <Eye size={14}/>}
+                          <button type="button" onClick={() => setShowPw(v => !v)}
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-primary">
+                            {showPw ? <EyeOff size={14} /> : <Eye size={14} />}
                           </button>
                         )}
                       </div>
                     </div>
                   ))}
-                  <button className="btn-primary text-sm py-2.5 mt-1">Cap nhat mat khau</button>
+                  <button className="btn-primary text-sm py-2.5 mt-1">Cập nhật mật khẩu</button>
                 </div>
               </div>
+
               <div className="card card-hover">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="section-title">Xac thuc 2 yeu to (2FA)</h3>
-                    <p className="text-text-muted text-xs mt-0.5">Tang cuong bao mat bang OTP qua email hoac SMS</p>
+                    <h3 className="section-title">Xác thực 2 yếu tố (2FA)</h3>
+                    <p className="text-text-muted text-xs mt-0.5">Tăng cường bảo mật bằng OTP qua email hoặc SMS</p>
                   </div>
-                  <button className="btn-secondary text-sm py-2 px-4">Kich hoat</button>
+                  <button className="btn-secondary text-sm py-2 px-4">Kích hoạt</button>
                 </div>
               </div>
+
               <div className="card card-hover border-danger/20 bg-danger-light/20">
-                <h3 className="section-title text-danger mb-1">Vung nguy hiem</h3>
-                <p className="text-text-muted text-xs mb-3">Cac hanh dong nay khong the hoan tac</p>
+                <h3 className="section-title text-danger mb-1">Vùng nguy hiểm</h3>
+                <p className="text-text-muted text-xs mb-3">Các hành động này không thể hoàn tác</p>
                 <button className="text-danger border border-danger/30 bg-danger-light/30 hover:bg-danger/10 rounded-lg px-4 py-2 text-xs font-medium transition-colors">
-                  Xoa tai khoan vinh vien
+                  Xóa tài khoản vĩnh viễn
                 </button>
               </div>
             </div>
@@ -218,31 +238,31 @@ export default function SettingsPage() {
           {/* Billing */}
           {activeTab === 'billing' && (
             <div className="card card-hover">
-              <h3 className="section-title mb-1">Chi phi hien tai</h3>
-              <p className="text-text-muted text-xs mb-5">Tong chi phi hang thang cho tat ca dich vu</p>
+              <h3 className="section-title mb-1">Chi phí hiện tại</h3>
+              <p className="text-text-muted text-xs mb-5">Tổng chi phí hàng tháng cho tất cả dịch vụ</p>
               <div className="space-y-3">
                 {[
-                  { name: 'Supabase Free',  cost: '$0',  note: '500MB database', status: 'active' },
-                  { name: 'Vercel Pro',     cost: '$0',  note: 'Mien phi voi Supabase', status: 'active' },
-                  { name: 'Resend Free',    cost: '$0',  note: '3,000 email/thang', status: 'active' },
-                  { name: 'Domain / SSL',   cost: '~$15',note: 'Gia hang nam', status: 'optional' },
-                ].map(s=>(
+                  { name: 'Supabase Free', cost: '$0',   note: '500MB database',       status: 'active'   },
+                  { name: 'Vercel Pro',    cost: '$0',   note: 'Miễn phí với Supabase', status: 'active'   },
+                  { name: 'Resend Free',   cost: '$0',   note: '3.000 email/tháng',     status: 'active'   },
+                  { name: 'Domain / SSL',  cost: '~$15', note: 'Giá hàng năm',          status: 'optional' },
+                ].map(s => (
                   <div key={s.name} className="flex items-center justify-between p-3 bg-surface-2 border border-border rounded-xl">
                     <div>
                       <p className="text-text-primary text-sm font-medium">{s.name}</p>
                       <p className="text-text-muted text-[10px]">{s.note}</p>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className={`badge text-[10px] ${s.status==='active'?'badge-success':'badge-gray'}`}>
-                        {s.status==='active'?'Active':'Ty chon'}
+                      <span className={`badge text-[10px] ${s.status === 'active' ? 'badge-success' : 'badge-gray'}`}>
+                        {s.status === 'active' ? 'Active' : 'Tùy chọn'}
                       </span>
                       <span className="text-text-primary font-mono font-bold text-sm">{s.cost}</span>
                     </div>
                   </div>
                 ))}
                 <div className="flex items-center justify-between pt-3 border-t border-border">
-                  <span className="text-text-primary font-semibold">Tong cong</span>
-                  <span className="text-brand-accent font-bold font-mono text-xl">~$0-25/thang</span>
+                  <span className="text-text-primary font-semibold">Tổng cộng</span>
+                  <span className="text-brand-accent font-bold font-mono text-xl">~$0-25/tháng</span>
                 </div>
               </div>
             </div>
@@ -251,14 +271,14 @@ export default function SettingsPage() {
           {/* Integrations */}
           {activeTab === 'integrations' && (
             <div className="card card-hover">
-              <h3 className="section-title mb-1">Tich hop he thong</h3>
-              <p className="text-text-muted text-xs mb-5">Ket noi cac dich vu de platform hoat dong day du</p>
+              <h3 className="section-title mb-1">Tích hợp hệ thống</h3>
+              <p className="text-text-muted text-xs mb-5">Kết nối các dịch vụ để platform hoạt động đầy đủ</p>
               <div className="space-y-3">
                 {INTEGRATIONS.map(intg => (
                   <div key={intg.name} className="flex items-center justify-between p-4 bg-surface-2 border border-border rounded-xl hover:border-brand-border/30 transition-colors">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-xl bg-brand-dark/8 border border-border flex items-center justify-center">
-                        <Globe size={15} className="text-text-muted"/>
+                        <Globe size={15} className="text-text-muted" />
                       </div>
                       <div>
                         <p className="text-text-primary text-sm font-semibold">{intg.name}</p>
@@ -267,13 +287,14 @@ export default function SettingsPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="badge badge-gray text-[10px]">{intg.status}</span>
-                      <button className="btn-primary text-xs py-1.5 px-3">Ket noi</button>
+                      <button className="btn-primary text-xs py-1.5 px-3">Kết nối</button>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           )}
+
         </div>
       </div>
     </div>
