@@ -22,10 +22,51 @@ const FAQS = [
 ]
 
 const WEEK_PLAN = [
-  { w:'Tuần 1', head:'Đặt nền móng', items:['Cài BRAND_DNA cho toàn hệ thống','Thiết lập Tiểu Hà Mã trên Telegram','AI viết lịch content 30 ngày đầu tiên','Chatbot Zalo/Facebook tự động trả lời'] },
-  { w:'Tuần 2', head:'Dựng máy bán hàng', items:['Landing page 3 sản phẩm chính','Chuỗi email tự động 5 bước','Template tin chốt đơn theo từng tình huống','Hệ thống xin review tự động'] },
-  { w:'Tuần 3', head:'Kết nối traffic', items:['Copy quảng cáo Facebook 3 góc độ','DM outreach template cho từng nhóm khách','Story Instagram + highlight','Script video 60 giây sẵn sàng quay'] },
-  { w:'Tuần 4', head:'Tự động hóa vận hành', items:['Upsell script cho khách đã mua','Referral system kêu gọi giới thiệu','SOP repost 1 content thành 5 dạng','Review lại toàn hệ thống + tối ưu'] },
+  {
+    w: 'Tuần 1', head: 'Đặt nền móng (Skill 01-04)',
+    items: [
+      'Skill 01 — Chân Dung Khách Hàng: biết đúng khách, mọi thứ sau mới chuẩn',
+      'Skill 02 — BRAND_DNA: dạy AI viết đúng giọng bạn, dùng cho toàn hệ thống',
+      'Skill 03 — Tư Duy Offer Kiểu Hormozi: đóng gói offer giá trị cao hơn giá tiền',
+      'Skill 04 — Tư Duy Vận Hành Một Mình: lên kế hoạch, ưu tiên việc, review tuần',
+      'Setup Tiểu Hà Mã riêng cho business của bạn trên Telegram',
+    ],
+  },
+  {
+    w: 'Tuần 2', head: 'Xây hệ thống bán hàng (Skill 05-12)',
+    items: [
+      'Skill 05 — Cơ Chế Khác Biệt: đặt tên cách bạn làm, khách khó so giá với ai khác',
+      'Skill 06 — Mô Hình Doanh Thu: bậc thang sản phẩm từ rẻ tới đắt để khách mua nhiều lần',
+      'Skill 07 — Thiết Kế Offer: lời đề nghị khó từ chối + bảo hành + đảo ngược rủi ro',
+      'Skill 08 — Mồi Miễn Phí: quà tặng kéo khách lạ để lại liên hệ',
+      'Skill 09 — Vẽ Phễu Bán Hàng: sơ đồ từng bước từ khách lạ tới khách mua',
+      'Skill 10 — Dựng Landing Page: trang bán hàng chạy được ngay, không cần code',
+      'Skill 11 — Làm Đẹp Giao Diện: chỉnh trang đẹp, chuẩn điện thoại, nhìn chuyên nghiệp',
+      'Skill 12 — Viết Bài SEO: bài chuẩn Google để khách tự tìm tới không tốn tiền ads',
+    ],
+  },
+  {
+    w: 'Tuần 3', head: 'Kéo traffic & chốt đơn (Skill 13-17)',
+    items: [
+      'Skill 13 — Quảng Cáo Facebook/TikTok: viết nhiều góc độ để test, giữ mẫu nào ra đơn rẻ',
+      'Skill 14 — Kịch Bản Video Bán Hàng: từ hook đầu tới lời kêu gọi cuối, sẵn để quay',
+      'Skill 15 — Chuỗi Email Bán Hàng: email nuôi dưỡng và chốt sau khi khách để lại email',
+      'Skill 16 — Vớt Khách Nguội: nhắn lại người từng quan tâm nhưng chưa mua',
+      'Skill 17 — Kịch Bản Gọi Chốt Đơn: script tư vấn qua điện thoại + xử lý từ chối',
+    ],
+  },
+  {
+    w: 'Tuần 4', head: 'Tự động hóa vận hành (Skill 18-24)',
+    items: [
+      'Skill 18 — Hệ Thống Content Đa Kênh: 1 nội dung nhân ra nhiều dạng FB/TikTok/YouTube',
+      'Skill 19 — Marketing Việt Nam: framework điền vào là có nội dung đúng nền tảng VN',
+      'Skill 20 — Carousel Instagram: nhiều slide dạy hoặc kể chuyện, caption + hashtag sẵn',
+      'Skill 21 — Tiêu Đề Thu Hút: 10 tiêu đề mỗi lần, nhiều kiểu để chọn cái hiệu quả nhất',
+      'Skill 22 — Chatbot Messenger & Instagram: bot trả lời khách tự động trên Page của bạn',
+      'Skill 23 — Nghiên Cứu Tài Liệu Bằng AI: tóm tắt, hỏi đáp, tạo quiz từ tài liệu thật',
+      'Skill 24 — Tiểu Hà Mã (GoClaw): tối ưu AI đội trưởng theo đúng SOP business bạn đã xây',
+    ],
+  },
 ]
 
 function AccordionItem({ q, a }: { q: string; a: string }) {
