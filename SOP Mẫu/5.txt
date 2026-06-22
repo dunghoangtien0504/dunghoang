@@ -1,0 +1,157 @@
+SOP Ngày 5 — Build Bộ Não Thứ 2
+
+Mục tiêu: Cuối ngày có một database chạy trên máy, lưu kiến thức + data business + brand voice — và dùng AI coding agent để viết bài theo đúng giọng của bạn mỗi ngày.
+
+▤ SOP — Hướng dẫn
+
+SOP Day 5 - Tạo Bộ Não Thứ 2
+🎯 Mục tiêu
+Cuối ngày, bạn có một thư mục my-brain chứa file database brain.db.
+
+Database này sẽ lưu:
+
+Bài học / insight
+Thông tin sản phẩm / khách hàng
+Brand voice / giọng văn của bạn
+Kết quả cần đạt: AI có thể đọc brain.db và viết ra một bài post.txt nghe giống giọng bạn.
+
+Bước 1 - Cài AI Coding Agent
+Chọn agent coding nào bạn đang dùng từ nhiệm vụ 1.
+
+Nếu agent đó hết quota, hãy đổi sang agent khác đang dùng được.
+
+Bước 2 - Tạo thư mục và mở trong agent
+Tạo một thư mục mới trên máy tên:
+
+my-brain
+
+Để thư mục này ở Desktop cho dễ tìm.
+
+Sau đó mở agent vừa cài:
+
+File → Open Folder → chọn thư mục my-brain vừa tạo
+
+Bước 3 - Nhờ AI tạo database
+Mở chat AI trong agent.
+
+Thường là:
+
+Cmd + L trên Mac
+Ctrl + L trên Windows
+Sau đó paste đúng prompt này:
+
+"Tôi muốn tạo một database SQLite tên brain.db để làm bộ não thứ 2. Hãy viết script Python tạo 3 bảng: knowledge (lưu bài học, insight), business (lưu sản phẩm, khách hàng), brand_voice (lưu giọng văn, tone, style). Mỗi bảng có id, title, content, created_at. Thêm 2 dòng mẫu vào mỗi bảng. Sau đó chạy script luôn cho tôi."
+
+AI sẽ tự viết code và chạy.
+
+Bạn chỉ cần bấm đồng ý.
+
+Nếu bị lỗi đỏ
+Đừng hoảng.
+
+Copy toàn bộ thông báo lỗi, paste vào chat AI và nói:
+
+"bị lỗi này, fix giúp tôi."
+
+AI sẽ tự sửa.
+
+Lặp lại cho đến khi chạy được.
+
+Bước 4 - Điền brand voice của bạn
+Đây là bước quan trọng nhất.
+
+Chỉ bạn mới làm được.
+AI không làm thay được.
+
+Paste prompt này vào chat AI và điền vào chỗ trống theo ví dụ gợi ý:
+
+"Hãy thêm vào bảng brand_voice các thông tin sau:
+
+Tone của tôi: [ví dụ: gần gũi, thẳng thắn, không dùng từ hoa mỹ, hay dùng câu ngắn]
+
+Tôi hay dùng những từ như: [ví dụ: 'thật ra', 'đơn giản thôi', 'thử xem', 'không cần phức tạp']
+
+Tôi không bao giờ dùng: [ví dụ: 'synergy', 'leverage', 'tối ưu hóa trải nghiệm', từ quá corporate]
+
+Tôi đang viết cho: [ví dụ: người đi làm 25-35 tuổi muốn bắt đầu bán hàng online nhưng chưa biết bắt đầu từ đâu]
+
+Ví dụ bài viết tôi thấy đúng giọng nhất: [paste 1-2 bài cũ của bạn vào đây - caption, post Facebook, tin nhắn tư vấn khách... bất cứ thứ gì bạn đã viết]"
+
+Điền càng chi tiết, AI càng viết đúng giọng hơn.
+
+Bước 5 - Test: bảo AI viết bài từ database
+Paste prompt này vào chat AI:
+
+"Đọc toàn bộ nội dung trong bảng brand_voice của file brain.db, sau đó viết 1 bài Facebook post về chủ đề '[điền chủ đề bạn muốn]' theo đúng giọng văn đó. Output ra file post.txt."
+
+AI sẽ tự đọc database, tự viết, tự lưu file.
+
+Mở file post.txt trong thư mục my-brain lên đọc.
+
+Bước 6 - Nộp bài
+Bài nộp cần có
+Screenshot agent đang chạy + file brain.db đã có data
+Copy nội dung file post.txt vào bài nộp
+Trả lời 1 câu:
+"Bài này nghe có giống giọng bạn không? Cần bổ sung gì vào brand voice?"
+
+✅ Tiêu chí hoàn thành
+AI viết được 1 bài mà đọc lên thấy:
+
+"Ừ, nghe giống mình."
+
+Dù chưa hoàn hảo 100%.
+
+💡 Mẹo AI-First
+Cả bước 3 và bước 5 bạn không cần hiểu code.
+
+Agent làm hết.
+
+Nhưng brand voice ở bước 4 thì phải tự viết. Đây là thứ không ai làm thay được.
+
+Paste càng nhiều bài thật của bạn vào, AI càng bắt được giọng hơn.
+
+Nếu bài AI viết ra chưa giống, đừng sửa bài.
+
+Hãy quay lại bổ sung thêm ví dụ vào brand voice rồi chạy lại.
+
+🔥 Mẹo của Dũng: Để AI dẫn tay bạn qua từng bước
+Copy toàn bộ SOP này, paste vào agent bạn đang dùng và nói đúng câu này:
+
+"Đây là SOP tôi cần làm. Hãy hướng dẫn tôi từng bước một - mỗi lần chỉ đưa ra 1 bước, chờ tôi làm xong và báo lại, rồi mới đưa bước tiếp theo. Nếu tôi bị lỗi thì fix luôn cho tôi. Bắt đầu đi."
+
+Từ đó bạn không cần đọc SOP nữa.
+
+AI sẽ tự làm MC dẫn chương trình.
+Bạn chỉ cần làm theo.
+
+Bị kẹt chỗ nào thì nói:
+
+"bị kẹt rồi"
+
+AI tự xử.
+
+✅ Điều kiện được duyệt bài
+Bài nộp phải có đủ 3 thứ sau. Thiếu 1 là chưa đạt.
+
+1. Bằng chứng database đang chạy
+Cần có một trong hai:
+
+Screenshot thư mục my-brain có file brain.db bên trong
+Hoặc screenshot agent đang đọc database thành công
+2. Brand voice đã được điền đầy đủ
+Screenshot hoặc copy nội dung bảng brand_voice.
+
+Phải có đủ:
+
+Tone
+Từ hay dùng
+Từ không dùng
+Đối tượng
+Ít nhất 1 ví dụ bài viết thật của bạn
+3. Bài AI viết từ database
+Cần nộp:
+
+Nội dung file post.txt
+Nhận xét của bạn:
+Bài này có nghe giống giọng bạn không? Bạn sẽ bổ sung gì vào brand voice để AI viết đúng hơn?

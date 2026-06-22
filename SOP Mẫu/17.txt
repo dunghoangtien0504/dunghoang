@@ -1,0 +1,600 @@
+Skill Sản Xuất Content + Auto-Post Facebook
+
+⚠️ Lưu ý: Bài này chỉ dành cho thành viên thử thách — KHÔNG share link hướng dẫn ra nhóm hay cho người ngoài.
+
+Hôm nay agent của bạn sẽ tự gen full content (ảnh đẹp + văn bản hoàn chỉnh — hook + body + CTA + hashtag) và đăng lên Page Facebook mỗi sáng — không cần bạn động tay. Đồng thời gen được 3 bộ creative ads (ảnh + ad copy ghép cặp) để paste vào Ads Manager khi muốn chạy chiến dịch.
+
+Mục tiêu cuối ngày:
+
+Skill tao-creative-fb với 2 mode: (1) Content Free — agent tạo full bài đăng Page mỗi sáng, (2) Creative Ads — 3 bộ ảnh + copy khi muốn chạy
+Lịch hẹn tự chạy 9h sáng mỗi ngày → gen ý tưởng → bạn chọn → agent làm full content → bạn duyệt → đăng tự động
+Lần đầu trải nghiệm: dậy sáng thấy Page đã có 1 bài đăng đầy đủ ảnh + văn bản, không phải bạn làm
+⏱ Bài này nhanh thôi — nhanh thì ~15 phút, chậm thì ~30 phút. Phần dễ kẹt nhất là Permanent Page Token, đọc kỹ Troubleshoot ở mỗi bước là qua.
+
+Trước hôm nay bạn (hoặc team bạn) phải vừa nghĩ ý tưởng, vừa viết bài, vừa làm ảnh, vừa đăng FB mỗi ngày — tốn 30-60 phút/ngày, hoặc thuê content creator junior ~8tr/tháng. Sau hôm nay: bạn ngủ, agent làm thay.
+
+▤ SOP — Hướng dẫn
+
+📘 Hướng dẫn đầy đủ
+🔒 Nhắc lại: đừng share link này ra nhóm hay cho người ngoài thử thách.
+
+👉 Mở hướng dẫn Ngày 17 — Skill Sản Xuất Content + Auto-Post Facebook
+
+Mở tab mới (chuột phải → Open in new tab) để vừa đọc vừa thao tác.
+
+🎯 14 bước trong guide
+Lấy OpenAI API key (dh-content-bot)
+Setup project Facebook Developer
+Lấy Permanent Page Token ⚠ phần khó nhất
+Test token với Token Debugger
+Brainstorm content angle theo brand
+Build skill tao-creative-fb Mode 1 (Content Free)
+Build skill Mode 2 (Creative Ads)
+Setup lịch hẹn 9h sáng (cron)
+Test Run Now → Telegram nhận ý tưởng
+Duyệt → preview → đăng 11-14. Kiểm tra + monitoring + fallback
+
+Ngày 17 · Tuần 4
+Skill Sản Xuất Content
+Hoàn Chỉnh + Auto-Post FB
+Hôm nay agent của bạn sẽ tự gen full content (ảnh đẹp + văn bản hoàn chỉnh — hook + body + CTA + hashtag) và đăng lên Page Facebook mỗi sáng — không cần bạn động tay. Đồng thời gen được 3 bộ creative ads (ảnh + ad copy ghép cặp) để bạn paste vào Ads Manager khi muốn chạy chiến dịch.
+
+Mục tiêu cuối ngày
+Cuối hôm nay bạn có:
+
+Skill tao-creative-fb với 2 mode: (1) Content Free — agent tạo full bài (ảnh + caption hoàn chỉnh) đăng Page mỗi sáng, (2) Creative Ads — agent tạo 3 bộ creative (mỗi bộ gồm ảnh + ad copy) khi bạn muốn chạy chiến dịch
+Lịch hẹn tự chạy 9h sáng mỗi ngày — gen ý tưởng → bạn chọn → agent làm full content → bạn duyệt → đăng tự động
+Lần đầu trải nghiệm: dậy sáng thấy Page Facebook đã có 1 bài đăng đầy đủ ảnh + văn bản, không phải bạn làm
+Tại sao đây là moment chuyển hoá
+Trước hôm nay bạn (hoặc team bạn) phải vừa nghĩ ý tưởng, vừa viết bài, vừa làm ảnh, vừa đăng Facebook mỗi ngày — tốn 30-60 phút/ngày. Một content creator junior lương ~8tr/tháng làm việc này.
+
+Sau hôm nay bạn ngủ — agent làm thay. Page có content đều đặn, đúng tone, đẹp visual. Bạn không phải bỏ công, không phải trả lương.
+
+Đọc kỹ trước khi bắt đầu
+Hôm nay có setup Facebook API — đây là phần dễ kẹt nhất chuỗi. Nếu bạn vội, bạn sẽ bỏ cuộc giữa chừng.
+
+Cần 1-2 giờ tập trung, không bị ngắt quãng. Lưu kỹ token vào file đúng vị trí (sẽ hướng dẫn). Nếu kẹt — đọc phần Troubleshoot ở mỗi bước, có lời giải cho 90% lỗi phổ biến.
+
+Quy tắc AI-First xuyên suốt ngày hôm nay
+Đừng tự loay hoay. Mỗi khi gặp lệnh không hiểu, lỗi không biết sửa, hoặc terminal trông lạ — screenshot + paste vào agent coding (Cursor / Antigravity / Claude Code) và bảo nó: "Giải thích cho tôi" hoặc "Chạy giúp tôi, giải thích output". Agent sẽ làm tất cả.
+
+Bạn không cần là dev. Bạn chỉ cần là người chỉ đạo agent. Đây là pattern cốt lõi của Operator — và là lý do khoá này gọi là AI-First Vibe Coding.
+
+Bức tranh tổng thể — 5 phần liên kết với nhau ra sao?
+Trước khi vào việc, đây là logic toàn bộ Ngày 17 — để bạn không bị lost ở giữa đường:
+
+PHẦN 1 (Setup) — Lấy 2 chìa khoá:
+              · OpenAI API key (để gen ảnh + caption)
+              · Facebook Permanent Page Token (để đăng lên Page)
+            ↓
+PHẦN 2 (Skill) — Vibe code skill dùng 2 chìa khoá đó để sản xuất content
+              Test bằng @filename trong agent coding (chưa cần goClaw)
+            ↓
+PHẦN 5 (Done) — Upload skill lên goClaw để agent Telegram dùng được
+              [làm sớm vì PHẦN 3 cần skill đã trên goClaw]
+            ↓
+PHẦN 3 (Auto) — Đặt lịch hẹn 9h sáng → tự gọi skill mỗi ngày
+              Telegram làm "khâu duyệt" — bạn OK mới đăng
+            ↓
+PHẦN 4 (Ads)  — Mode 2 của skill: gen creative ads thủ công khi cần
+              Bạn paste vào Ads Manager (không tự chạy ads)
+Lưu ý thứ tự: Phần 5 (upload goClaw) đặt sau Phần 4 trong tài liệu, nhưng thực hiện trước Phần 3 — vì lịch hẹn cần skill đã có trên goClaw mới chạy được. SOP có warning khi đến Bước 07 nhắc bạn cuộn xuống làm Bước 09 trước.
+
+Phần Một
+Setup OpenAI + Facebook API
+BƯỚC 01
+Đăng ký OpenAI API key
+Một bài đăng Facebook hoàn chỉnh = ảnh + văn bản (caption). Hôm nay agent của bạn sẽ tự sinh ra cả 2 phần trong cùng 1 lần. Phần ảnh dùng GPT Image API của OpenAI (model gen ảnh tốt nhất hiện tại, text trong ảnh viết chuẩn tiếng Việt, giá rẻ). Phần văn bản dùng GPT-4 hoặc Claude (qua chính agent coding của bạn).
+
+1.1 — Tạo tài khoản OpenAI Platform
+Vào https://platform.openai.com (chú ý platform, không phải chatgpt.com).
+Đăng ký tài khoản mới (hoặc đăng nhập nếu đã có).
+Tài khoản mới được tặng $5 free credit — đủ gen ~500-1000 ảnh chất lượng thường (đủ cho ~1 năm content nếu đăng mỗi ngày).
+1.2 — Tạo API key
+Settings (icon ⚙️ góc trên phải) → API keys → Create new secret key → đặt tên dh-content-bot → bấm Create
+Một popup hiện ra với chuỗi key bắt đầu bằng sk-proj-.... Copy ngay và lưu vào file Notepad/notes — popup đóng là không xem lại được, phải tạo key mới.
+
+Kiểm tra điểm
+Bạn có 1 chuỗi bắt đầu bằng sk-proj-, dài khoảng 100-150 ký tự. Đây là OpenAI API key của bạn.
+
+1.3 — Nạp tiền (nếu hết $5 free)
+$5 free đủ làm Ngày 17. Nhưng để dùng lâu dài, có 2 cách nạp:
+
+Visa/Mastercard quốc tế (Vietcombank Visa Debit, Techcombank Mastercard...): vào Settings → Billing → Add payment method → nạp tối thiểu $5.
+Wise / Revolut: nếu thẻ ngân hàng VN bị từ chối (hay xảy ra với account mới), dùng thẻ ảo Wise — nạp VND vào Wise → tạo thẻ ảo USD → add vào OpenAI.
+AI-First — kẹt là hỏi agent
+Nếu màn hình OpenAI khác hướng dẫn (UI thay đổi liên tục), screenshot màn hình → paste vào agent coding + bảo: "Tôi đang ở đây trên OpenAI Platform, muốn tạo API key, bấm tiếp đâu?". Agent đọc ảnh và chỉ chính xác.
+
+⚠️ Troubleshoot — Bước 01
+"Account của tôi bị khoá ngay sau khi đăng ký"
+"Thẻ Visa của tôi bị từ chối"
+"Tôi không thấy $5 free credit"
+BƯỚC 02
+Tạo Facebook Developer App
+Để code Python đăng bài lên Page Facebook, ta cần 1 Facebook Developer App. App này là "chìa khóa" giúp Facebook nhận biết code của bạn.
+
+Hiểu kiểu đơn giản
+Facebook Developer App giống như "thẻ nhân viên" bạn cấp cho code của mình. Có thẻ này, code của bạn được phép vào "tòa nhà Facebook" và làm việc thay bạn — như đăng bài lên Page bạn quản lý.
+2.1 — Tạo App tại Facebook for Developers
+Vào https://developers.facebook.com — đăng nhập bằng tài khoản Facebook cá nhân của bạn (tài khoản mà bạn đang admin Page kinh doanh).
+Nếu chưa từng vào, Facebook sẽ yêu cầu bạn "Register as developer" — đồng ý điều khoản.
+Bấm góc trên phải My Apps → Create App.
+2.2 — Chọn loại App
+Facebook hỏi "What do you want your app to do?". Chọn:
+
+Other → bấm Next → chọn Business → bấm Next
+Quan trọng
+Phải chọn loại Business. Loại "Consumer" hoặc "Gaming" không có Marketing API. Sai loại = phải tạo lại app từ đầu.
+
+2.3 — Đặt tên + tạo
+App name: dh-content-bot (hoặc gì cũng được, không có chữ "facebook" hay "fb").
+Email: email của bạn.
+Business Account: chọn Business Manager nếu có; nếu không, để trống cũng được.
+Bấm Create App — Facebook hỏi password, nhập password Facebook cá nhân.
+Kiểm tra điểm
+Bạn được chuyển vào trang Dashboard của App, thấy tên app + một ID dạng 1234567890123456 (15-16 chữ số) ở phía trên. Đây là App ID — sẽ cần ở Bước 03.
+
+2.4 — Lấy App Secret
+Sidebar trái → App settings → Basic → tìm dòng App Secret → bấm Show → nhập password Facebook → copy chuỗi
+App Secret là chuỗi 32 ký tự. Lưu vào notes cùng với App ID.
+
+Bí mật tuyệt đối
+App Secret giống như mật khẩu — KHÔNG share, KHÔNG commit lên Git. Sẽ lưu vào file .env ở Bước 05.
+
+AI-First — UI Facebook đổi liên tục
+Facebook for Developers cập nhật giao diện rất thường xuyên. Nếu bạn không thấy nút giống mô tả, screenshot màn hình → paste agent coding + hỏi: "Tôi đang ở Facebook Developer App, muốn tạo App Business / lấy App Secret, bấm đâu?". Đừng đoán mò.
+
+⚠️ Troubleshoot — Bước 02
+"Bị block không cho tạo App"
+"Không thấy option Business khi tạo App"
+"Quên App ID/Secret rồi"
+BƯỚC 03
+Lấy Permanent Page Access Token
+Đây là phần khó nhất ngày hôm nay. Đọc kỹ, làm chậm. Mục tiêu cuối: có 1 chuỗi token không bao giờ hết hạn, dùng cho code đăng bài lên Page mãi mãi.
+
+AI-First — luật vàng cho Bước 03
+Bước này có nhiều thuật ngữ kỹ thuật (token, OAuth, curl, JSON...). Đừng cố hiểu hết — chỉ cần làm đúng thứ tự. Mỗi sub-step:
+
+Đọc hướng dẫn 1 lượt
+Có chỗ không hiểu → screenshot + hỏi agent coding "giải thích chỗ này"
+Có lệnh curl → paste nguyên lệnh vào agent + bảo "chạy giúp tôi, in output ra"
+Lỗi → copy error → paste agent + bảo "lỗi này nghĩa là gì, sửa sao"
+Học viên KHÔNG cần là dev. Bạn cần biết bấm "Hỏi AI" đúng lúc.
+
+Tại sao có 4 sub-step nhỏ?
+Facebook cố tình thiết kế phức tạp — vì token có quyền đăng bài thay bạn, không thể cho dễ. Bạn phải "đổi" token 3 lần: ngắn → dài → vĩnh viễn. Mỗi lần đổi là 1 lệnh đơn giản, nhưng phải làm đúng thứ tự.
+3.1 — Lấy Short-lived User Token (sống 1 giờ)
+Vào Graph API Explorer: https://developers.facebook.com/tools/explorer
+Góc phải có dropdown Meta App → chọn app bạn vừa tạo (dh-content-bot).
+Phía dưới có nút Add a Permission — thêm 4 permissions sau (gõ tên trong ô tìm rồi tick):
+pages_manage_posts
+pages_read_engagement
+pages_show_list
+public_profile
+Bấm Generate Access Token (nút xanh dương phía trên).
+Popup hiện ra → Continue as [Tên bạn] → chọn Page bạn muốn đăng (chỉ tick Page kinh doanh, không tick tất cả) → Continue → tick tất cả permissions → Save.
+Bạn được trả về Graph Explorer, ô Access Token bây giờ có 1 chuỗi dài bắt đầu bằng EAA....
+Kiểm tra điểm
+Bạn copy được 1 chuỗi token bắt đầu bằng EAA, dài ~200 ký tự. Token này chỉ sống 1 giờ — phải đổi thành long-lived ngay ở 3.2.
+
+3.2 — Đổi sang Long-lived User Token (sống 60 ngày)
+AI-First — đừng tự gõ terminal
+Từ đây tới hết Bước 03, bạn sẽ thấy nhiều lệnh curl. Không cần biết curl là gì. Mở agent coding (Cursor/Antigravity/Claude Code), paste lệnh + bảo: "Chạy lệnh này giúp tôi, giải thích output trả về." Agent sẽ chạy và dịch kết quả cho bạn.
+
+Cách này cũng an toàn hơn — agent biết thay placeholder thế nào, biết debug nếu lỗi, biết gợi ý nếu bạn paste sai chỗ.
+
+Mở terminal trên máy (Terminal trên Mac, PowerShell/CMD trên Windows), paste lệnh sau — thay 3 chỗ in đậm bằng giá trị thật của bạn:
+
+curl -G "https://graph.facebook.com/v18.0/oauth/access_token" \
+  -d "grant_type=fb_exchange_token" \
+  -d "client_id=APP_ID_CỦA_BẠN" \
+  -d "client_secret=APP_SECRET_CỦA_BẠN" \
+  -d "fb_exchange_token=SHORT_LIVED_TOKEN_TỪ_3.1"
+Trả về JSON kiểu:
+
+Output mong đợi
+{"access_token":"EAAxxxxxx...","token_type":"bearer","expires_in":5183944}
+Copy chuỗi access_token này — đây là Long-lived User Token sống 60 ngày.
+
+3.3 — Đổi sang Permanent Page Token (KHÔNG hết hạn)
+Đây là token cuối cùng — vĩnh viễn. Cần biết User ID của bạn trên Facebook trước.
+
+Lấy User ID:
+curl "https://graph.facebook.com/v18.0/me?access_token=LONG_LIVED_TOKEN_TỪ_3.2"
+Output
+{"name":"Tên Bạn","id":"10223611603830114"}
+Copy id — đây là User ID (chuỗi số dài).
+
+Lấy Permanent Page Token:
+curl "https://graph.facebook.com/v18.0/USER_ID/accounts?access_token=LONG_LIVED_TOKEN"
+Output
+{
+  "data": [
+    {
+      "access_token": "EAAxxxxxxx...",  ← ĐÂY là Permanent Page Token
+      "category": "Brand",
+      "name": "Tên Page của bạn",
+      "id": "123456789012345"          ← ĐÂY là Page ID
+    }
+  ]
+}
+Copy 2 chuỗi:
+
+access_token — đây là Permanent Page Token. KHÔNG bao giờ hết hạn.
+id — đây là Page ID của bạn. Cũng cần lưu.
+3.4 — Kiểm tra token vĩnh viễn
+Để chắc chắn token thật sự không hết hạn, vào Access Token Debugger: https://developers.facebook.com/tools/debug/accesstoken/
+
+Paste Permanent Page Token vào ô.
+Bấm Debug.
+Tìm dòng Expires — phải là Never.
+Kiểm tra điểm — quan trọng nhất
+Nếu thấy Expires: Never — bạn đã thành công. Token này lưu vào file .env là dùng vĩnh viễn.
+
+Nếu thấy thời gian hết hạn — bạn đã làm sai 1 bước. Quay lại 3.2 hoặc 3.3, làm lại cẩn thận.
+
+⚠️ Troubleshoot — Bước 03
+"Token short-lived ở 3.1 không có chuỗi EAA..."
+"3.2 trả về error 'Invalid OAuth access token'"
+"3.3 trả về data trống []"
+"Permanent token vẫn hiện expires"
+"Tôi không quen terminal, làm sao?"
+Phần Hai
+Vibe Code Skill 2 Mode
+BƯỚC 04
+Hiểu skill 2 mode hôm nay
+Skill bạn vibe hôm nay là Cấp 3 (theo phân loại Ngày 16) — có scripts/ chạy code. Skill này có 2 chế độ hoạt động:
+
+Mode 1 · Content Free
+Đăng đều mỗi ngày, không spam
+Agent gen 3 ý tưởng bài đăng organic (chia sẻ giá trị, không hard sell). Bạn chọn 1, agent tạo full content: ảnh đẹp + caption hoàn chỉnh có hook + body + CTA mềm — đăng tự động lên Page. Lịch hẹn 9h sáng mỗi ngày kích hoạt.
+
+Trigger: "Tạo content cho ngày mai", "Gen bài Page", "Content free"
+
+Mode 2 · Creative Ads
+Sản xuất hàng loạt khi chạy chiến dịch
+Agent gen 3 bộ creative hoàn chỉnh — mỗi bộ gồm 1 ảnh ads (visual mạnh) + 1 ad copy (hook + USP + CTA rõ ràng). Bạn copy paste cả 2 phần vào Ads Manager để chạy. Không tự đăng — vì ads cần bạn duyệt budget, target.
+
+Trigger: "Tạo creative ads", "Gen ads cho sản phẩm X", "Cần 3 bộ creative" (mỗi bộ = ảnh + copy)
+
+Tại sao 1 skill 2 mode (không phải 2 skill riêng)?
+Vì cùng dùng chung 1 hạ tầng — cùng OpenAI API, cùng kiến thức brand voice, cùng Python script. Khác biệt chỉ ở prompt engineering (cách viết prompt cho GPT Image) và action cuối (đăng vs để học viên tự dùng). Tách 2 skill = duplicate nhiều code.
+
+BƯỚC 05
+Vibe code skill bằng agent coding
+Mở agent coding (Cursor / Antigravity / Claude Code) trong thư mục my-skills/ bạn đã tạo ở Ngày 16. Paste prompt:
+
+Prompt · Vibe skill tao-creative-fb (AI-First)
+COPY
+Tôi cần tạo 1 Claude Skill Cấp 3 tên là "tao-creative-fb" — sản xuất full content (ảnh + văn bản) cho Facebook business page của tôi.
+
+QUAN TRỌNG: Mỗi output phải gồm CẢ ẢNH VÀ VĂN BẢN — không phải chỉ ảnh. Một bài đăng FB hoàn chỉnh = ảnh + caption. Một creative ads hoàn chỉnh = ảnh ads + ad copy.
+
+Skill này có 2 mode:
+
+MODE 1 — CONTENT FREE (auto-post Page hằng ngày):
+- Trigger: user nói "tạo content cho ngày mai", "gen bài Page", "content free", "content organic"
+- Behavior: 
+  + Bước A: Gen 3 ý tưởng (mỗi ý: tiêu đề + angle ngắn) → gửi cho user chọn
+  + Bước B: User chọn 1 ý → agent gen FULL CONTENT cho ý đó:
+      * 1 ảnh đẹp 1024x1024 bằng GPT Image API (model gpt-image-1, quality low cho rẻ)
+      * 1 caption hoàn chỉnh ~80-150 từ (hook + body + soft CTA) theo brand voice
+  + Bước C: Show preview ảnh + caption cho user duyệt
+  + Bước D: User OK → POST cả ảnh + caption lên Facebook Page qua Graph API endpoint /{page-id}/photos (param: url=image_url, caption=caption_text)
+
+MODE 2 — CREATIVE ADS (gen thủ công, không auto đăng):
+- Trigger: user nói "tạo creative ads", "gen ads", "cần creative cho chiến dịch"
+- Behavior: gen 3 BỘ creative — mỗi bộ là 1 cặp ghép đôi:
+  + 1 ảnh ads (gpt-image-1 quality medium, có khoảng trống cho text overlay nếu cần)
+  + 1 ad copy hoàn chỉnh ~80-150 từ (hook mạnh + USP nổi bật + CTA rõ ràng)
+- 3 bộ phải khác angle: pain point / solution / social proof
+- KHÔNG tự đăng — chỉ trả về cho user paste vào Ads Manager (cả ảnh + copy phải đi cùng nhau)
+
+Cấu trúc skill cần:
+my-skills/tao-creative-fb/
+├── SKILL.md              (instructions chính, có YAML frontmatter chuẩn)
+├── scripts/
+│   ├── gen_image.py       (gọi OpenAI GPT Image API)
+│   ├── gen_caption.py     (viết caption/copy theo brand voice)
+│   ├── post_facebook.py   (post ảnh + caption lên FB Page)
+│   └── env.example        (template env vars)
+└── assets/
+    ├── image-prompt-templates.md  (template prompt cho GPT Image, theo brand)
+    └── caption-templates.md       (template viết caption: hook patterns, CTA mềm cho organic, CTA mạnh cho ads)
+
+Đọc context của tôi:
+1. brain.db trong folder my-brain/ — chứa brand_voice
+2. Đọc 4 Context Files đã tạo Ngày 15 (SOUL.md, USER.md, AGENTS.md, HEARTBEAT.md) — để skill biết tone
+
+Yêu cầu kỹ thuật:
+- Dùng Python 3.10+
+- Lib: openai (pip install openai), requests (pip install requests), python-dotenv
+- Token lưu trong file .env (KHÔNG hard-code):
+    OPENAI_API_KEY=sk-proj-xxx
+    FB_PAGE_ID=123456789
+    FB_PAGE_TOKEN=EAAxxx
+- Có error handling: nếu OpenAI fail → log + retry 1 lần. Nếu FB fail → return error rõ ràng.
+- Có test mode: nếu set DRY_RUN=true thì không thực sự post FB, chỉ in ra console + lưu ảnh + caption ra file local.
+
+YAML frontmatter trong SKILL.md phải có:
+- name: tao-creative-fb
+- description: gồm cả What it does + When to use it + trigger phrases cho cả 2 mode. NHẤN MẠNH skill này tạo CẢ ẢNH VÀ VĂN BẢN.
+
+Làm theo thứ tự:
+1. ĐỌC brain.db, hiểu brand voice
+2. TRÌNH BÀY plan trước khi code (cấu trúc file, logic 2 mode, test approach)
+3. TÔI DUYỆT plan
+4. Code SKILL.md
+5. Code scripts/gen_image.py + scripts/gen_caption.py
+6. Code scripts/post_facebook.py (đảm bảo upload CẢ ảnh và caption cùng lúc qua /photos endpoint)
+7. Code 2 file template trong assets/
+8. Tạo file .env.example với các vars
+9. Test Mode 2 trước (an toàn — không đụng FB): chạy 1 lần, xem có ra đủ 3 BỘ (ảnh + copy ghép cặp) không
+10. Test Mode 1 với DRY_RUN=true — kiểm tra full flow: gen 3 ý tưởng → chọn → gen ảnh + caption → preview (chưa post)
+
+Làm từng bước, chờ tôi xác nhận.
+Sau khi agent vibe xong, bạn sẽ có thư mục skill đầy đủ. Mở đọc qua từng file để hiểu sơ — không cần hiểu hết code, chỉ cần biết file nào làm gì.
+
+Cẩn thận file .env
+File .env chứa OpenAI key + Facebook token — tuyệt đối KHÔNG commit lên Git. Thêm .env vào .gitignore ngay khi tạo. Agent coding sẽ làm giúp nếu bạn nhắc.
+
+BƯỚC 06
+Test skill ngay tại agent coding
+6.1 — Tạo file .env thật
+Trong thư mục skill, tạo file .env (chú ý có dấu chấm đầu) với nội dung:
+
+OPENAI_API_KEY=sk-proj-...   # từ Bước 01
+FB_PAGE_ID=123456789...      # từ Bước 03.3
+FB_PAGE_TOKEN=EAAxxx...      # từ Bước 03.3 (Permanent Page Token)
+DRY_RUN=true                 # bật chế độ test, chưa post thật
+6.2 — Test Mode 2 (Creative Ads — an toàn nhất)
+Trong agent coding, gõ @ → chọn SKILL.md của tao-creative-fb. Sau đó nhập:
+
+Tạo creative ads cho sản phẩm: khoá học Vibe Coding của tôi
+- Giá: 2tr
+- USP: học 21 ngày có hệ thống business chạy 24/7
+- Mục tiêu: lead generation cho landing page
+Cần 3 bộ creative — mỗi bộ gồm 1 ảnh + 1 copy. 3 bộ phải khác angle (pain point / solution / social proof).
+Agent sẽ:
+
+Gọi GPT Image API gen 3 ảnh → lưu vào output/
+Viết 3 ad copy hoàn chỉnh (mỗi cái có hook khác, angle khác, nhưng cùng CTA)
+Show cả 3 bộ ảnh + copy cho bạn duyệt
+Kiểm tra điểm
+Bạn có 3 file ảnh PNG/WEBP trong thư mục output + 3 đoạn copy text (mỗi copy ~50-100 từ). Ảnh và copy phải khớp với nhau — không phải gen riêng rẽ. Copy có đủ: hook (câu mở), body (giá trị), CTA (kêu gọi hành động).
+
+6.3 — Test Mode 1 với DRY_RUN (gen content nhưng chưa post)
+Trong agent coding, nhập:
+
+Tạo content free cho ngày mai. Topic: chia sẻ kinh nghiệm dùng AI agent thay nhân viên.
+Agent sẽ:
+
+Gen 3 ý tưởng (chỉ tiêu đề + tóm tắt nhanh) → bạn chọn 1
+Với ý đã chọn, gen full content: ảnh + caption hoàn chỉnh (hook + body + CTA mềm)
+Vì DRY_RUN=true — chỉ in ra console, KHÔNG post FB thật
+6.4 — Test thật (POST lên Facebook)
+Khi mọi thứ OK ở 6.3, đổi DRY_RUN=false trong .env, chạy lại Mode 1.
+
+Trước khi test thật — đọc kỹ
+Bài đăng sẽ thật sự lên Page Facebook của bạn — public, mọi người thấy được. Nên:
+
+Test ngoài giờ vàng (sáng sớm hoặc đêm khuya) — tránh khách thấy bài lỗi
+Sẵn sàng vào Page xoá ngay nếu bài chưa đẹp (mở Page → bài mới → "..." → Delete)
+Nếu bài đăng chưa hoàn hảo: tinh chỉnh template trong assets/image-prompt-templates.md (cho ảnh) hoặc assets/caption-templates.md (cho văn bản) — bằng cách bảo agent: "Sửa template để ảnh/caption có style [mô tả]". Chạy lại.
+AI-First — đừng tự debug
+Bất kỳ lỗi nào ở Bước 06 (OpenAI, Facebook, Python...): copy nguyên error message → paste vào agent coding + bảo "Lỗi này là gì? Sửa giúp tôi". Đừng google, đừng đoán. Agent biết hết — và biết cả codebase của bạn.
+
+⚠️ Troubleshoot — Bước 06
+"Lỗi 401 từ OpenAI: Invalid API key"
+"Lỗi 429 từ OpenAI: rate limit"
+"Ảnh gen ra xấu/không đúng concept"
+"Caption gen ra quá AI-generic, không giống tôi"
+"Lỗi từ Facebook: (#200) Permissions error"
+"Lỗi (#190) Token expired"
+"Bài đăng lên Page nhưng không có ảnh"
+"Bài đăng thành công nhưng người ngoài / khách không thấy"
+Phần Ba
+Setup Auto-Post Mỗi Sáng
+BƯỚC 07
+Đặt lịch hẹn 9h sáng + duyệt qua Telegram
+Giờ skill chạy tay được rồi. Cần biến nó thành tự chạy mỗi sáng + duyệt qua Telegram trước khi đăng — để bạn kiểm soát, không bị spam Page.
+
+Lịch hẹn — đồng hồ báo thức cho agent
+Lịch hẹn giống như đồng hồ báo thức của agent. Bạn đặt: "9h sáng mỗi ngày, làm việc X". Tới 9h, agent tự thức dậy, làm theo lệnh, gửi kết quả về Telegram cho bạn. Trên Dashboard goClaw, feature này tên là Schedule Tasks (hoặc Scheduled Tasks tùy phiên bản).
+Trước khi làm Bước 07 — upload skill lên goClaw trước
+Lịch hẹn sẽ gọi agent goClaw → agent dùng skill tao-creative-fb. Vì vậy skill phải có sẵn trên goClaw trước khi đặt lịch.
+
+Cuộn xuống làm Bước 09 (Upload skill lên goClaw) trước, rồi quay lại đây làm Bước 07. Hai bước đặt thứ tự như thế này vì lịch hẹn là nội dung chính của Phần 3, upload là setup phụ.
+
+Flow tự động sẽ chạy mỗi sáng
+9h sáng (lịch hẹn kích hoạt) 
+  → Agent gen 3 ý tưởng (mỗi ý: tiêu đề + angle)
+  → Telegram: "Sáng. Đây là 3 ý tưởng cho hôm nay, chọn 1?"
+  → Bạn reply số 1/2/3
+  → Agent gen full content cho ý đó:
+       • 1 ảnh đẹp (1024x1024, theo brand)
+       • 1 caption hoàn chỉnh (hook + body + CTA mềm)
+  → Telegram gửi preview ảnh + caption
+  → Bạn reply OK / Đổi
+  → OK → Agent post cả ảnh + caption lên Page Facebook
+  → Telegram: "Đã đăng. Link: facebook.com/..."
+7.1 — Tạo lịch hẹn mới trong goClaw Dashboard
+Mở Dashboard goClaw (URL như Ngày 14, thường https://app.yourdomain.com). Tìm menu Schedule Tasks trong sidebar:
+
+Sidebar → Schedule Tasks (hoặc Scheduled Tasks) → bấm + New Task (hoặc Add)
+Form có 4 trường chính cần điền:
+
+Form tạo lịch hẹn
+┌─────────────────────────────────────────────┐
+│ Name:         daily-content-fb              │
+│                                             │
+│ Agent:        [chọn agent Telegram của bạn] │
+│                                             │
+│ Schedule Type: ◯ Every  ● Cron  ◯ Once     │
+│   Cron expression: 0 9 * * *                │
+│                                             │
+│ Message:      (khung lớn, viết hướng dẫn   │
+│                cho agent — markdown OK)     │
+└─────────────────────────────────────────────┘
+7.2 — Điền từng trường
+Name — đặt tên dễ nhận: daily-content-fb
+Agent — chọn agent Telegram bạn đã tạo từ Ngày 14
+Schedule Type — có 3 loại, chọn Cron:
+Every — chạy đều theo khoảng thời gian (ví dụ mỗi 30 phút)
+Cron — chạy đúng giờ cố định (cái bạn cần) → điền biểu thức 0 9 * * * nghĩa là 9h sáng mỗi ngày
+Once — chạy 1 lần duy nhất rồi xoá (dùng cho nhắc nhở 1 lần)
+Message — đây là "chỉ thị giao cho agent" mỗi lần lịch hẹn kích hoạt. Paste nội dung này:
+Message · Lịch hẹn 9h sáng
+COPY
+Chào sáng. Dùng skill tao-creative-fb ở mode CONTENT FREE để tạo bài đăng cho Page Facebook hôm nay.
+
+BƯỚC 1: Gen 3 ý tưởng bài đăng (mỗi ý gồm: tiêu đề + angle ngắn 1-2 câu). Topic liên quan business của tôi (đọc brain.db để biết business là gì). Gửi 3 ý tưởng cho tôi qua Telegram, đợi tôi chọn 1 (reply 1/2/3).
+
+BƯỚC 2: Sau khi tôi chọn, gen FULL CONTENT cho ý đó:
+- 1 ảnh đẹp 1024x1024 (theo brand voice từ brand_voice trong brain.db)
+- 1 caption hoàn chỉnh ~80-150 từ (hook hấp dẫn + body kể câu chuyện/giá trị + CTA mềm + 3-5 hashtag)
+
+BƯỚC 3: Gửi preview qua Telegram cho tôi xem (cả ảnh + caption). Đợi tôi reply "OK" hoặc "Đổi".
+
+BƯỚC 4: Khi tôi reply OK, post cả ảnh + caption lên Page Facebook qua skill tao-creative-fb. Sau khi post xong, gửi link bài đăng cho tôi qua Telegram.
+
+Tone tự nhiên, đúng brand voice. Không hard sell.
+AI-First — không cần tự setup nếu lười
+Cách dễ hơn: thay vì điền form, bạn nhắn cho agent Telegram của bạn (qua chat thường):
+
+"Tạo cho tôi 1 lịch hẹn (Schedule Task) chạy 9h sáng mỗi ngày, tên là daily-content-fb. Mỗi lần chạy, dùng skill tao-creative-fb mode CONTENT FREE — gen 3 ý tưởng → tôi chọn 1 → gen full content → tôi duyệt → post Page Facebook."
+
+Agent có tool cron sẽ tự tạo task cho bạn, confirm qua Telegram. Không cần vào Dashboard.
+
+7.3 — Test ngay (đừng đợi mai)
+Sau khi lưu lịch hẹn, tìm cách kích hoạt thủ công để xem nó chạy đúng không:
+
+Schedule Tasks → click vào lịch hẹn vừa tạo → bấm Run Now (hoặc Trigger)
+Trong 1-2 phút, Telegram phải bật:
+
+Tin nhắn từ agent
+Chào sáng! Đây là 3 ý tưởng content cho hôm nay:
+
+1. "Tại sao 80% chủ shop online vẫn tự viết caption tay" 
+   → Hook: shock số liệu | Giá trị: 3 lý do + giải pháp AI
+
+2. "Một ngày bình thường của agent AI làm việc thay tôi"
+   → Hook: kể chuyện | Giá trị: behind-the-scenes
+
+3. "Sai lầm tôi mắc khi mới dùng AI cho business"
+   → Hook: vulnerability | Giá trị: 3 bài học
+
+Bạn chọn ý nào? Reply 1/2/3.
+Reply 1 hoặc 2... agent gen ảnh + caption, gửi preview, đợi bạn duyệt, post.
+
+Đây là moment đáng nhớ nhất hôm nay
+Lần đầu Page Facebook của bạn có bài đăng không phải bạn làm. Bạn chỉ nhắn 1 chữ "OK" qua Telegram — và 30 giây sau Page có bài mới (cả ảnh đẹp + caption đầy đủ).
+
+Nhân với 30 ngày → 30 bài/tháng tự động, không tốn 1 giờ nào. Đây chính là content engine bạn đã xây.
+
+AI-First — goClaw UI khác hướng dẫn
+Mỗi phiên bản goClaw có UI hơi khác — không thấy đúng menu Schedule Tasks hoặc nút Run Now? Screenshot Dashboard → paste agent coding + hỏi: "Tôi đang ở Dashboard goClaw, muốn tạo lịch hẹn (Schedule Task) chạy mỗi sáng 9h, bấm đâu?". Hoặc đơn giản nhất: nhắn agent Telegram tạo lịch hẹn giúp như tip ở 7.2.
+
+Phần Bốn
+Mode Creative Ads — Sản Xuất Theo Yêu Cầu
+BƯỚC 08
+Khi nào dùng Mode Ads
+Mode 1 (content free) chạy auto. Mode 2 (creative ads) không chạy auto — chỉ kích hoạt khi bạn cần. Tại sao?
+
+Ads tốn tiền thật → cần bạn duyệt từng cái
+Mỗi chiến dịch khác nhau (target, USP, ưu đãi) → không gen đại trà được
+Bạn vẫn paste vào Ads Manager → Facebook lo việc chạy/tối ưu
+Khi nào kích hoạt
+Sắp launch sản phẩm mới → cần 5-10 mẫu creative để test
+Ads hiện tại bị fatigue (CTR giảm) → cần creative mới
+Có sự kiện/khuyến mãi → cần ads cho sự kiện đó
+Cách dùng
+Trong Telegram, gõ:
+
+Tạo creative ads cho [sản phẩm]
+- Giá: [giá]
+- USP: [3 điểm khác biệt nổi bật]
+- Audience: [mô tả khách hàng mục tiêu]
+- Mục tiêu: [lead gen / sales / awareness]
+
+Cần 3 bộ creative — mỗi bộ gồm:
+- 1 ảnh ads (visual mạnh, có khoảng trống cho text)
+- 1 ad copy hoàn chỉnh (hook + USP + CTA)
+
+3 bộ phải khác angle nhau:
+- Bộ 1: pain point (khoét nỗi đau)
+- Bộ 2: solution (giải pháp + lợi ích)
+- Bộ 3: social proof (testimonial / kết quả thực)
+Agent gen → gửi qua Telegram. Bạn:
+
+Tải cả 3 ảnh về máy (mỗi ảnh đi với 1 copy tương ứng)
+Copy cả 3 đoạn ad copy (mỗi đoạn ~80-150 từ)
+Mở Facebook Ads Manager → tạo 3 ads riêng — mỗi ad upload 1 ảnh + paste 1 copy tương ứng
+Set budget, audience, chạy. Sau 3 ngày xem ad nào CTR cao nhất → scale ngân sách lên cái đó.
+Mẹo nâng cao
+Yêu cầu agent gen 3 angle khác nhau: pain point + solution + social proof. Test cả 3, bài nào CTR cao nhất sau 3 ngày → scale ngân sách lên cái đó.
+
+Skill này còn nâng cấp được
+Sau Ngày 17, bạn có thể vibe thêm các skill chuyên sâu về advertising: phân tích ads performance, A/B test creative tự động, viết ad copy theo framework AIDA/PAS. Không khó hơn skill hôm nay — cùng pattern, chỉ khác content. Đây là asset của riêng bạn, không ai chia phần.
+
+Phần Năm
+Đưa Lên goClaw + Quan Sát 7 Ngày
+BƯỚC 09
+Upload skill lên goClaw
+Skill đã chạy được trong agent coding. Giờ đưa lên goClaw để agent Telegram của bạn dùng được — đây là lý do lịch hẹn ở Bước 07 hoạt động được.
+
+Mở Dashboard goClaw → Capabilities → Skills.
+Bấm Upload Skill → chọn thư mục tao-creative-fb/ (nén .zip nếu yêu cầu).
+Bật Enabled.
+Vào agent Telegram → tab Skills → tick để cho agent này dùng skill.
+Trong agent config, đảm bảo có environment variables:
+OPENAI_API_KEY
+FB_PAGE_ID
+FB_PAGE_TOKEN
+Tuỳ phiên bản goClaw, có thể thiết lập env vars ở Agent Settings hoặc Workspace Settings.
+Bảo mật trên goClaw
+goClaw lưu env vars mã hoá — nhưng bạn vẫn nên kiểm tra: chỉ admin workspace thấy được giá trị thật. Nếu nghi ngờ, rotate token (tạo mới từ Bước 03) bất cứ lúc nào.
+
+AI-First — không thấy thẻ Skills?
+UI goClaw thay đổi theo phiên bản — nếu không thấy Capabilities → Skills, thử các tên khác: Tools, Extensions, Add-ons. Hoặc screenshot Dashboard → paste agent coding + hỏi: "Tôi muốn upload thư mục skill lên goClaw, bấm đâu?".
+
+Nếu Dashboard không có UI upload skill, bảo agent coding: "SSH lên VPS chạy goClaw, copy thư mục skill vào folder skills của agent, hướng dẫn từng bước."
+
+BƯỚC 10
+Quan sát + Tinh chỉnh trong 7 ngày tới
+Khác với các ngày trước, hôm nay không có bài đăng khoe. Lý do: chất lượng skill chỉ thấy được sau khi nó chạy thật vài ngày. Nhiệm vụ của bạn 7 ngày tới:
+
+Mỗi sáng 9h: Telegram bật, agent gửi 3 ý tưởng. Bạn chọn, duyệt, post.
+Sau 3-4 ngày: review lại các bài đã đăng. Câu hỏi tự hỏi:
+Tone đã đúng giọng business chưa?
+Ảnh có style nhất quán không?
+Caption có quá AI-generic không?
+Tinh chỉnh template: nếu thấy bài chưa đúng, mở agent coding, sửa template trong assets/image-prompt-templates.md (cho ảnh) hoặc assets/caption-templates.md (cho văn bản). AI sẽ làm giúp — chỉ cần nói "Sửa template để bài đăng có style [mô tả]".
+Lưu lại moments đáng khoe: screenshot Page khi có bài auto-post đẹp, screenshot Telegram lúc bạn duyệt — để dành cho Demo Day Ngày 21.
+Demo Day Ngày 21 đang chờ
+Cuối thử thách (Ngày 21), sẽ có buổi meeting trình bày hệ thống bạn đã build. Lúc đó bạn sẽ show cả Page Facebook auto-post hằng ngày như 1 phần của hệ thống — đây là moment khoe ấn tượng nhất, không phải đăng bài rời rạc giữa chừng.
+
+Vậy nên hôm nay tập trung làm cho skill chạy ngon — quà sẽ đến ở Ngày 21.
+
+Mẹo AI-First quan trọng
+Đừng tự tay sửa template hay code — luôn đưa cho agent coding làm. Bạn chỉ nói mong muốn + đưa ví dụ bài đăng đẹp/xấu. Agent sẽ refactor template hoặc viết lại prompt cho bạn.
+
+Đây là pattern xuyên suốt 21 ngày: bạn là người chỉ đạo, AI là người làm. Càng dùng nhiều, càng quen.
+
+FINAL
+Nộp Bài
+Checklist hoàn thành
+Tiêu chí hoàn thành
+Permanent Page Token đã có và verified (Never expires)
+Skill tao-creative-fb chạy được cả 2 mode, output là full content (ảnh + văn bản đi đôi)
+Lịch hẹn 9h sáng đã setup, đã test bằng Run Now
+Page Facebook có ít nhất 1 bài đăng full (ảnh + caption hoàn chỉnh) do agent tự đăng
+Bài nộp có kèm link fanpage đã đăng bài (không nhận link bài lẻ) để reviewer vào kiểm tra trực tiếp
+Đã lưu screenshots cho Demo Day Ngày 21
+Tinh thần Ngày 17
+Hôm nay là ngày setup nặng — tốn công đầu, nhưng từ ngày mai trở đi mọi thứ tự chạy. Đây chính là pattern Operator: chịu khó setup 1 lần, hưởng thành quả mãi mãi.
+
+Nếu hôm nay bạn kẹt ở Bước 03 (Facebook token) — đừng bỏ cuộc. Đọc lại từng sub-step, hỏi agent coding khi không hiểu, kiểm tra Token Debugger sau mỗi lần đổi token. 90% người làm được; bạn chỉ cần kiên nhẫn 1-2 giờ.
+
+"Bạn ngủ — agent đăng bài.
+Bạn dậy — Page đã có content."

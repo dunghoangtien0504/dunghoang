@@ -109,7 +109,7 @@ Ví dụ: "Hệ Thống 3 Tầng Nặn Bánh Hình Thú Cô Ngọc"
 ```
 [Tên riêng bạn đặt] + [Mô tả ngắn]
 Ví dụ: "Phương Pháp Hình Thú — Cách Nặn Bánh Không Cần Năng Khiếu"
-        "Hệ Thống KP3 — Từ Expert Đến E-Learning Business Trong 90 Ngày"
+        "Hệ Thống Tiểu Hà Mã — Từ Expert Đến E-Learning Business Trong 90 Ngày"
         "Công Thức AAFB — Bán Hàng Bằng AI Mà Không Cần Học Marketing"
 ```
 

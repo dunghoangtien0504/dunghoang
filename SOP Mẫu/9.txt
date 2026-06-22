@@ -1,0 +1,59 @@
+Hôm nay bạn sẽ làm 3 thứ:
+
+Tạo "kho dữ liệu" để dạy nhân viên AI Viết kịch bản bán hàng và gắn chatbot vào website Thông báo với thế giới là bạn có nhân viên mới
+
+Tất cả dùng AI làm — bạn chỉ cần copy prompt, bấm đồng ý, và test thử.
+
+▤ SOP — Hướng dẫn
+
+Nhớ lại Ngày 7 — giờ nâng cấp lên Ở Ngày 7 bạn đã dùng agent đọc thư mục để hoạch định công việc. Bạn đã thấy rằng agent thông minh đến đâu phụ thuộc vào data bạn cho nó đọc — giống như nhân viên mới, biết nhiều thông tin về công ty thì tư vấn tốt hơn. Hôm nay làm y chang — nhưng lần này dạy agent bán hàng thay vì hoạch định công việc.
+
+Bước 1 — Tạo kho dữ liệu cho nhân viên AI Mở agent coding → File → Open Folder → chọn thư mục website từ Ngày 2 → paste prompt này:
+
+"Tạo cho tôi các thư mục con trong dự án này: (1) /data/products — lưu thông tin chi tiết từng sản phẩm, (2) /data/faq — lưu câu hỏi khách hay hỏi và câu trả lời, (3) /data/customers — lưu feedback và câu chuyện khách hàng thật, (4) /data/objections — lưu lý do khách hay từ chối và cách xử lý. Sau đó đọc toàn bộ file trong thư mục này và gợi ý nội dung mẫu phù hợp cho từng thư mục dựa trên sản phẩm/dịch vụ bạn thấy trên website. Lưu gợi ý vào từng file tương ứng."
+
+AI sẽ tự tạo thư mục và điền nội dung mẫu. Sau đó đọc lại từng file và chỉnh theo thực tế:
+
+/data/products → thêm giá thật, ưu đãi thật nếu có /data/faq → thêm câu hỏi khách đã hỏi bạn ngoài đời thật /data/customers → thêm feedback thật, lời khen thật từ khách đã mua /data/objections → thêm lý do từ chối thật bạn đã gặp và cách bạn xử lý
+
+Điền càng thật càng tốt — đây là thứ chatbot sẽ học. Garbage in, garbage out. Công thức nhớ mãi: thư mục = bộ nhớ của agent. Bạn nhớ gì, agent biết đó. Bước 2 — Copy brain.db vào thư mục website Trước khi viết kịch bản, cần đưa bộ não thứ 2 vào cùng chỗ với website để agent đọc được cả hai cùng lúc. Vẫn ở thư mục website, paste prompt này:
+
+"Copy file brain.db từ thư mục my-brain vào thư mục website này."
+
+Kiểm tra: nhìn vào cột bên trái trong agent — thấy file brain.db xuất hiện trong thư mục website là thành công. Bước 3 — Nhờ AI viết kịch bản bán hàng Vẫn ở thư mục website, paste prompt này:
+
+"Đọc toàn bộ file trong thư mục /data và brand voice trong file brain.db. Viết cho tôi một kịch bản chatbot bán hàng gồm: (1) Câu chào khách, (2) 10 câu hỏi khách hay hỏi nhất và câu trả lời, (3) Câu chốt đơn khi khách có vẻ quan tâm, (4) Câu hướng khách điền form khi họ chưa sẵn sàng mua ngay. Đúng giọng của tôi, không dùng từ cứng nhắc. Lưu vào file sales_script.md."
+
+Mở sales_script.md đọc lại — chỗ nào chưa đúng thì nói AI chỉnh. Không tự sửa tay. Bước 4 — Gắn chatbot vào website Vẫn ở thư mục website, paste prompt này:
+
+"Thêm vào website này một chatbot nhỏ ở góc dưới bên phải màn hình. Chatbot dùng kịch bản trong file sales_script.md. Khi khách bấm vào thì hiện cửa sổ chat — chatbot tự động chào và trả lời theo kịch bản. Khi khách muốn mua thì hiện nút dẫn đến form danh sách chờ. Màu sắc đồng bộ với website hiện tại."
+
+Sau khi AI làm xong → vào website tự chat thử → kiểm tra chatbot có hiện ra không, có trả lời đúng không, có nút dẫn đến form không. Bị lỗi? Copy nguyên thông báo lỗi → paste vào chat AI → nói "bị lỗi này, fix giúp tôi." Làm lại đến khi chạy được. Bước 5 — Test kỹ trước khi mở cửa Tự đóng vai khách hàng, chat thử 3 tình huống:
+
+Hỏi giá Hỏi sản phẩm có phù hợp với mình không Nói "để tôi nghĩ thêm"
+
+Chatbot trả lời có tự nhiên không? Có đúng giọng không? Chưa ổn thì nói AI chỉnh sales_script.md rồi cập nhật lại chatbot. Bước 6 — Đăng bài thông báo Mở agent → File → Open Folder → chọn thư mục my-brain → paste prompt này:
+
+"Đọc brand voice trong brain.db. Viết 1 bài đăng thông báo website tôi vừa có nhân viên tư vấn tự động 24/7 — khách có thể vào chat hỏi bất cứ lúc nào. Tone vui, gần gũi. Có link website. Lưu vào file day9.txt."
+
+Chỉnh tối đa 5 phút → đăng thật lên ít nhất 2 kênh → cập nhật brain_score.md tối nay. Bước 7 — Nộp bài
+
+Link website có chatbot đang chạy — người review phải vào được và chat thử trực tiếp Link bài đăng trên mạng xã hội — ít nhất 2 kênh, phải là link public xem được Screenshot 4 thư mục /data đã có data thật bên trong Screenshot brain_score.md đã cập nhật hôm nay
+
+✅ Được duyệt khi:
+
+Vào link website thấy chatbot hiện ra và trả lời được ít nhất 3 câu hỏi cơ bản. Link bài đăng mở được — không phải chỉ ảnh chụp màn hình. 4 thư mục /data có data thật, không chỉ data mẫu AI tạo. brain_score.md đã cập nhật.
+
+❌ Chưa đạt khi:
+
+Chỉ nộp ảnh chụp màn hình, không có link Link website không mở được hoặc chatbot không chạy Link bài đăng bị private hoặc không tồn tại Thư mục /data còn trống hoặc chỉ có data mẫu Kịch bản chỉ có chào hỏi, không có câu chốt đơn
+
+⚠️ Nhớ chuỗi 7 ngày đang chạy Hôm nay vẫn phải đăng ít nhất 3 bài kéo người vào danh sách chờ — ngoài bài thông báo chatbot. Cập nhật brain_score.md tối nay.
+
+💡 Mẹo AI-First Chatbot này không cần AI thật bên trong — chỉ là kịch bản cố định. Nhưng vì kịch bản được viết từ data thật và brand voice thật của bạn, nó sẽ nghe tự nhiên hơn bất kỳ chatbot template nào. Sau này khi muốn nâng cấp, chỉ cần thay kịch bản cố định bằng AI thật — website không cần làm lại.
+
+🔥 Mẹo của Dũng: Không muốn đọc SOP? Copy toàn bộ SOP này, paste vào agent đang dùng và nói:
+
+"Đây là SOP tôi cần làm. Hướng dẫn tôi từng bước một — mỗi lần chỉ 1 bước, chờ tôi làm xong báo lại rồi mới đưa bước tiếp. Bị lỗi thì fix luôn. Bắt đầu đi."
+
+Ngày 10 sắp tới: Build SaaS thật + kết nối Sepay để nhận tiền tự động — chuẩn bị tinh thần nhé.

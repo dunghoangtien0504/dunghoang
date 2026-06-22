@@ -420,7 +420,7 @@ thực tế và thấu hiểu bài học xương máu mà không giáo trình ha
 
 </strong> với <mark class=
 
-DỪNG NGAY VIỆC ĐỐT TIỀN CHO NHÂN SỰ LƯỜI BIẾNG VÀ QUẢNG CÁO VÔ NGHĨA!
+DỪNG NGAY VIỆC ĐỐT TIỀN CHO NHÂN SỰ LƯỜI BIẾNG VÀ QUẢNG CÁO VÔ DŨNG!
 
 ?t:null,t!==null&&(e.memoizedState={dehydrated:t,treeContext:Sn!==null?{id:Ze,overflow:Pe}:null,retryLane:536870912,hydrationErrors:null},n=gf(t),n.return=e,e.child=n,te=e,_t=null)):t=null,t===null)throw An(e);return e.lanes=536870912,null}return dl(e,i)}var u=t.memoizedState;if(u!==null){var m=u.dehydrated;if(jo(e),o)if(e.flags&256)e.flags&=-257,e=_d(t,e,n);else if(e.memoizedState!==null)e.child=t.child,e.flags|=128,e=null;else throw Error(r(558));else if(Xt||qa(t,e,n,!1),o=(n&t.childLanes)!==0,Xt||o){if(i=Dt,i!==null&&(m=jh(i,n),m!==0&&m!==u.retryLane))throw u.retryLane=m,sa(t,m),xe(i,t,m),Yo;Sl(),e=_d(t,e,n)}else t=u.treeContext,_t=Be(m.nextSibling),te=e,bt=!0,Tn=null,Ve=!1,t!==null&&bf(e,t),e=dl(e,i),e.flags|=4096;return e}return t=ln(t.child,{mode:i.mode,children:i.children}),t.ref=e.ref,e.child=t,t.return=e,t}function ml(t,e){var n=e.ref;if(n===null)t!==null&&t.ref!==null&&(e.flags|=4194816);else{if(typeof n!=
 
@@ -798,7 +798,7 @@ Hệ thống dành cho ai
 
 }}break;case 5:case 26:case 27:case 6:case 4:case 17:break;default:if((t&1024)!==0)throw Error(r(163))}if(t=e.sibling,t!==null){t.return=e.return,$t=t;break}$t=e.return}}function Pd(t,e,n){var i=n.flags;switch(n.tag){case 0:case 11:case 15:gn(t,n),i&4&&Zi(5,n);break;case 1:if(gn(t,n),i&4)if(t=n.stateNode,e===null)try{t.componentDidMount()}catch(m){Et(n,n.return,m)}else{var o=pa(n.type,e.memoizedProps);e=e.memoizedState;try{t.componentDidUpdate(o,e,t.__reactInternalSnapshotBeforeUpdate)}catch(m){Et(n,n.return,m)}}i&64&&Yd(n),i&512&&Pi(n,n.return);break;case 3:if(gn(t,n),i&64&&(t=n.updateQueue,t!==null)){if(e=null,n.child!==null)switch(n.child.tag){case 27:case 5:e=n.child.stateNode;break;case 1:e=n.child.stateNode}try{_f(t,e)}catch(m){Et(n,n.return,m)}}break;case 27:e===null&&i&4&&Qd(n);case 26:case 5:gn(t,n),e===null&&i&4&&Fd(n),i&512&&Pi(n,n.return);break;case 12:gn(t,n);break;case 31:gn(t,n),i&4&&$d(t,n);break;case 13:gn(t,n),i&4&&Wd(t,n),i&64&&(t=n.memoizedState,t!==null&&(t=t.dehydrated,t!==null&&(n=wb.bind(null,n),Yb(t,n))));break;case 22:if(i=n.memoizedState!==null||mn,!i){e=e!==null&&e.memoizedState!==null||Qt,o=mn;var u=Qt;mn=i,(Qt=e)&&!u?xn(t,n,(n.subtreeFlags&8772)!==0):gn(t,n),mn=o,Qt=u}break;case 30:break;default:gn(t,n)}}function Id(t){var e=t.alternate;e!==null&&(t.alternate=null,Id(e)),t.child=null,t.deletions=null,t.sibling=null,t.tag===5&&(e=t.stateNode,e!==null&&Dr(e)),t.stateNode=null,t.return=null,t.dependencies=null,t.memoizedProps=null,t.memoizedState=null,t.pendingProps=null,t.stateNode=null,t.updateQueue=null}var Vt=null,de=!1;function pn(t,e,n){for(n=n.child;n!==null;)Jd(t,e,n),n=n.sibling}function Jd(t,e,n){if(ve&&typeof ve.onCommitFiberUnmount==
 
-Đó là lý do nội dung mà hệ thống KP3 tạo ra luôn mang đậm
+Đó là lý do nội dung mà hệ thống Tiểu Hà Mã tạo ra luôn mang đậm
 
 không phải trả 10 triệu.
 
@@ -896,7 +896,7 @@ Không cần nạp thêm Credit
 
 mất thời gian học cách viết
 
-COPYRIGHT © 2026 KP3® | DIRECT RESPONSE DIGITAL MARKETING
+COPYRIGHT © 2026 Tiểu Hà Mã® | DIRECT RESPONSE DIGITAL MARKETING
 
 })),this.animation.onfinish=null,s&&Y2()?(this.animation.timeline=s,l&&(this.animation.rangeStart=l),r&&(this.animation.rangeEnd=r),Ge):h(this)}}const Lx={anticipate:mx,backInOut:dx,circInOut:gx};function X2(a){return a in Lx}function Q2(a){typeof a.ease==
 
@@ -948,7 +948,7 @@ Bạn kích hoạt thêm 4 agent:
 
 cảm xúc</span>.
 
-NGHE NHỮNG FEEDBACK NÓI THẬT VỀ KP3
+NGHE NHỮNG FEEDBACK NÓI THẬT VỀ Tiểu Hà Mã
 
 Phân Tích Đối Thủ + Định Vị
 

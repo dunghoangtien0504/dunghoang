@@ -1,0 +1,214 @@
+Làm một cái Landing Page đơn giản
+
+Bạn không biết gì cả, nhưng bạn dùng Antigravity, để bắt AI giúp bạn làm điều đó, hỏi nó mọi câu hỏi, miễn sao bạn tạo ra một landing page đầy đủ thông tin, muốn phong cách gì, thì chụp màn hình dán vào và nói là muốn làm theo phong cách đó, khi Anti làm xong, hãy kêu nó tạo đường link truy cập. Có cái link truy cập thì đem ném lên group telegram xem những người khác có truy cập được không.
+
+▤ SOP — Hướng dẫn
+
+SOP CHI TIẾT: Tự Làm Landing Page Bằng Antigravity AI
+Dành cho người mới, không biết code, không biết làm web, không rành marketing.
+
+🔥 Tư duy cốt lõi: AI-First
+Bạn không phải là người tự ngồi làm từng chi tiết.
+
+Bạn là ông chủ / người kiểm duyệt.
+AI là nhân viên thực thi.
+
+Việc của bạn là:
+
+Ra lệnh rõ ràng
+Kiểm tra kết quả
+Bắt AI sửa đến khi ưng ý
+Không tự ôm việc thủ công
+Đừng cố “biết làm web” trước rồi mới làm.
+Hãy bắt AI làm bản đầu tiên, sau đó bạn chỉnh bằng mắt và bằng cảm giác người mua.
+
+✅ Kết quả cần đạt sau SOP này
+Sau khi làm xong, bạn phải có:
+
+1 landing page có nội dung đầy đủ
+1 giao diện nhìn ổn, có bố cục rõ ràng
+1 đường link live gửi được cho người khác
+1 vòng test thật trên điện thoại
+Danh sách lỗi nếu có và cách yêu cầu AI sửa
+Bước 1 — Cung cấp bối cảnh và viết nội dung
+Người mới thường bị kẹt ngay từ đầu vì không biết landing page cần có những phần nào.
+
+Đừng tự nghĩ quá lâu.
+
+Hãy mở Antigravity AI và paste câu lệnh này:
+
+"Tôi không biết gì về làm web và marketing. Tôi đang muốn tạo một Landing Page để giới thiệu/bán: [Điền tên sản phẩm/dịch vụ của bạn vào đây]. Hãy đóng vai một chuyên gia tạo Landing Page, viết cho tôi toàn bộ nội dung từ trên xuống dưới, bao gồm: Tiêu đề thu hút, Vấn đề khách hàng đang gặp phải, Giải pháp của tôi, Lợi ích, và Nút kêu gọi hành động."
+
+Việc cần làm
+Chờ AI viết xong nội dung.
+
+Sau đó đọc lướt từ trên xuống dưới và tự hỏi:
+
+Người lạ đọc có hiểu mình đang bán gì không?
+Có thấy vấn đề của họ trong đó không?
+Có biết bấm nút nào để mua / liên hệ / đăng ký không?
+Có đoạn nào nghe quá chung chung không?
+Nếu chưa ổn, yêu cầu AI sửa tiếp.
+
+Ví dụ:
+
+"Viết lại phần tiêu đề cho ngắn gọn, dễ hiểu và có lực bán hàng hơn."
+
+Hoặc:
+
+"Phần này nghe chung chung quá. Viết lại theo kiểu người mới đọc vào hiểu ngay lợi ích thực tế."
+
+Bước 2 — Sao chép phong cách thiết kế bằng hình ảnh
+Đừng mô tả kiểu:
+
+"Tôi muốn trang web hiện đại, đẹp, chuyên nghiệp."
+
+Câu đó quá mơ hồ. AI rất dễ hiểu sai.
+
+Cách nhanh hơn là dùng hình ảnh mẫu.
+
+Việc cần làm
+Hành động 1
+Lên một trong các nơi sau:
+
+Google
+Pinterest
+Website đối thủ
+Landing page bạn thấy đẹp
+Template landing page trên mạng
+Tìm một giao diện bạn thấy hợp mắt.
+
+Hành động 2
+Chụp màn hình giao diện đó.
+
+Ưu tiên chụp phần đầu trang, nơi có:
+
+Hero section
+Tiêu đề chính
+Hình ảnh minh họa
+Nút kêu gọi hành động
+Màu sắc tổng thể
+Hành động 3
+Tải ảnh screenshot đó lên Antigravity AI và paste câu lệnh:
+
+"Đây là phong cách thiết kế mà tôi muốn. Hãy tạo giao diện Landing Page dựa trên cảm giác thiết kế, màu sắc và bố cục của bức ảnh này. Sử dụng phần nội dung chữ mà bạn vừa viết cho tôi ở Bước 1 để đắp vào giao diện."
+
+Lưu ý quan trọng
+Không cần copy y chang 100%.
+
+Mục tiêu là lấy:
+
+Cảm giác thiết kế
+Bố cục
+Cách chia section
+Phối màu
+Kiểu nút bấm
+Cách trình bày nội dung
+Không phải đi đạo nguyên bản của người khác.
+
+Bước 3 — Tinh chỉnh giao diện và sửa lỗi
+AI hiếm khi làm hoàn hảo ngay lần đầu.
+
+Bạn cần nhìn bản web nó tạo ra, sau đó bắt nó sửa từng điểm cụ thể.
+
+Nguyên tắc sửa
+Đừng nói:
+
+"Làm đẹp hơn đi."
+
+Hãy nói cụ thể:
+
+"Đổi màu nút bấm chính thành màu đỏ tươi."
+
+"Phần chữ giới thiệu đang quá to, làm nhỏ lại khoảng 20%."
+
+"Khoảng cách giữa các section đang quá rộng, thu gọn lại."
+
+"Thêm ảnh minh họa hình [mô tả hình ảnh] vào góc phải hero section."
+
+"Trên điện thoại phần nút CTA đang bị lệch, căn giữa lại."
+
+Cách làm đúng
+Mỗi lần chỉ yêu cầu sửa 1-3 điểm.
+
+Sửa xong thì xem lại.
+
+Nếu chưa ổn, tiếp tục yêu cầu.
+
+Đừng cố nhồi 20 yêu cầu trong một câu.
+AI sẽ dễ sửa sót, sửa sai hoặc làm hỏng phần đang ổn.
+
+Bước 4 — Yêu cầu xuất bản landing page
+Khi giao diện nhìn đã ổn trên màn hình, bạn cần đưa nó lên mạng để người khác có thể truy cập.
+
+Paste câu lệnh này vào Antigravity:
+
+"Mọi thứ trông rất ổn rồi. Bây giờ hãy xuất bản landing page này thành một trang web thực tế và cấp cho tôi một đường link URL để người khác có thể truy cập vào xem."
+
+Sau khi AI trả link
+Bạn cần kiểm tra ngay:
+
+Link có mở được không?
+Có bị trắng trang không?
+Hình ảnh có load đủ không?
+Nút bấm có hoạt động không?
+Giao diện điện thoại có bị vỡ không?
+Bước 5 — Kiểm thử thực tế với người thật
+AI có thể tạo link lỗi, web load chậm, ảnh không hiện, hoặc giao diện trên điện thoại bị lệch.
+
+Đừng chỉ tự xem trên máy mình.
+
+Hãy nhờ người khác bấm thử.
+
+Hành động 1
+Copy link AI vừa xuất bản.
+
+Hành động 2
+Gửi vào group Telegram, Zalo hoặc Facebook của bạn kèm tin nhắn:
+
+"Mọi người ơi, click thử link này giúp mình xem có vào được web không và giao diện trên điện thoại có bị lệch gì không nhé. Cảm ơn mọi người!"
+
+Hành động 3
+Nếu có người báo lỗi, quay lại Antigravity và nói rõ lỗi.
+
+Ví dụ:
+
+"Có người báo trên điện thoại phần chữ bị vỡ dòng và nút bấm bị lệch sang trái. Kiểm tra responsive mobile và sửa lại giúp tôi."
+
+Hoặc:
+
+"Ảnh ở phần giới thiệu không load được trên link live. Kiểm tra đường dẫn ảnh và sửa lại."
+
+Checklist nộp bài
+Bạn hoàn thành SOP này khi có đủ:
+
+Link landing page live mở được
+Giao diện không bị vỡ trên điện thoại
+Nội dung có headline, vấn đề, giải pháp, lợi ích, CTA
+Có ít nhất 1 ảnh / phong cách thiết kế tham chiếu
+Đã test với người thật
+Đã sửa lỗi nếu có người báo
+✅ Được duyệt khi
+Link landing page mở được thật
+Người lạ đọc 5 giây đầu hiểu bạn đang bán gì
+Có nút kêu gọi hành động rõ ràng
+Giao diện mobile không bị lệch nghiêm trọng
+Nội dung không còn quá chung chung
+Có bằng chứng đã test thực tế
+❌ Chưa đạt khi
+Chưa có link live
+Link mở không được
+Landing page chỉ có chữ, không có bố cục bán hàng
+Không có CTA rõ ràng
+Giao diện điện thoại bị vỡ
+Nội dung nghe chung chung kiểu “uy tín, chất lượng, tận tâm”
+💡 Mẹo AI-First
+Bạn không cần biết code mới làm được landing page.
+
+Nhưng bạn phải biết kiểm duyệt.
+
+AI có thể dựng bản đầu tiên rất nhanh, nhưng mắt nhìn của bạn mới quyết định trang đó có đáng tin, dễ hiểu và có khả năng bán hàng hay không.
+
+Công thức làm đúng là:
+
+Ra lệnh → Xem kết quả → Chỉ lỗi → Bắt sửa → Test thật → Sửa tiếp → Publish.

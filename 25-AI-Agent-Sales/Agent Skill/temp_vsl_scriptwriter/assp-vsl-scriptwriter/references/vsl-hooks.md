@@ -17,7 +17,7 @@ Ví dụ thật: "It takes 90 seconds for this NASA engineered AC to cool your r
 Ví dụ thật: "In the next few minutes, I'm going to show you how I've helped 
             thousands of women reverse pelvic floor dysfunction."
 
-Áp dụng cho KP3:
+Áp dụng cho Tiểu Hà Mã:
 "Trong 21 ngày, 90% người trong chương trình này đã tự build được 
 website, funnel và e-learning bằng AI — mà không cần biết code."
 ```
@@ -29,7 +29,7 @@ Template: "[Hành động quen thuộc] — nhưng [sự thật gây sốc]"
 Ví dụ thật: "Don't kibble your dog." (ngắn, sốc, ngược với mọi người đang làm)
 Ví dụ thật: "You'll never pay for Netflix again after seeing this."
 
-Áp dụng cho KP3:
+Áp dụng cho Tiểu Hà Mã:
 "Dừng học AI tool."
 (chỉ 3 chữ, ngược với mọi khóa học AI đang làm)
 ```
@@ -41,7 +41,7 @@ Template: "Bạn đang [vấn đề quen thuộc]... và bạn đã thử [giả
 Ví dụ thật: "Why are doctors now starting to advise against 
             CPAP machines, nasal strips, and mouth tape?"
 
-Áp dụng cho KP3:
+Áp dụng cho Tiểu Hà Mã:
 "Bạn đã học AI rồi — nhưng vẫn đang ngồi làm tay như cũ?"
 ```
 
@@ -52,7 +52,7 @@ Template: "Điều [authority] không muốn bạn biết về [chủ đề quen
 Ví dụ thật: "Netflix and Apple pray you never find out about this."
 Ví dụ thật: "It's so good, it should be illegal — but I assure you it's not."
 
-Áp dụng cho KP3:
+Áp dụng cho Tiểu Hà Mã:
 "Các khóa học AI không dạy bạn điều này — vì nếu bạn biết, 
 bạn không cần học tool nữa."
 ```
@@ -64,7 +64,7 @@ Template: Câu nói thường ngày, không phải script — tạo cảm giác 
 Ví dụ thật: "Huh. Noom has GLP-1 meds now."
 Ví dụ thật: "Hey back and, hello."
 
-Áp dụng cho KP3 (nếu dùng Raw Voice style):
+Áp dụng cho Tiểu Hà Mã (nếu dùng Raw Voice style):
 "Ờ, bạn đang dùng AI để tiết kiệm thời gian — nhưng vẫn làm tay hả?"
 ```
 

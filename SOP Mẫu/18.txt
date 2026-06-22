@@ -1,0 +1,394 @@
+Skill Sản Xuất Video AI Trên Higgsfield
+
+⚠️ Lưu ý: Bài này chỉ dành cho thành viên thử thách — KHÔNG share link hướng dẫn ra nhóm hay cho người ngoài.
+
+Hôm nay bạn ráp 1 video AI 15-25 giây theo workflow chia sẻ trong workshop private của Dũng (Workshop 8 do Hiếu phụ trách). 1 tool duy nhất — Higgsfield AI: vừa sinh ảnh (Stream 4.5), vừa biến ảnh thành video chuyển động (Kling 2.6 hoặc Kling 3.0). Không cần 4-5 tool rời.
+
+🎬 Bạn quyết định làm video về cái gì — đừng đóng khung. Pick 1 trong 2 hướng:
+
+A. Sản phẩm/dịch vụ bạn đang kinh doanh — gen video quảng bá đăng Reels/TikTok/FB Page. ROI thực tế, áp dụng skill ngay vào việc kiếm tiền.
+B. Cái gì đó vui vui tặng bạn bè — sinh nhật, kỷ niệm, lời chúc, video troll vui, gửi nhóm chat. Áp lực thấp, tập trung học workflow, vẫn có sản phẩm cuối cùng.
+✍️ Dùng ChatGPT viết kịch bản — đừng tự nghĩ. Guide có sẵn 2 prompt mẫu (cho hướng A và hướng B) — bạn chỉ cần copy, điền context sản phẩm/người nhận, ChatGPT trả về storyboard + prompt gen ảnh + prompt animate đầy đủ.
+
+Mục tiêu cuối ngày:
+
+1 video AI 15-25s hoàn chỉnh (đăng Reels/TikTok/Shorts hoặc gửi cho người nhận)
+Skill tao-video-ai — agent tự lặp lại quy trình theo workflow Higgsfield
+Hiểu prompt + cú máy "orbit nhẹ chậm giữ vai" — công thức thắng nhất 2026
+⏱ Bài này nhẹ tay nếu đi đúng workflow — ~30-45 phút lần đầu, ~30 phút từ lần 2. Tốn ~30-50 credit Higgsfield/video.
+
+💰 Tip tiết kiệm: Không cần trả 1tr/tháng tận gốc. Mục Phần thưởng Ngày 18 trong guide chỉ chỗ mua share account Higgsfield tận gốc ~100-300k/tháng — kèm hướng dẫn check scammer trước khi chuyển tiền.
+
+🎯 Đừng cố làm đẹp như Hollywood. Hiếu nói: "Ra ảnh ưng cái nào lụm cái đó, đừng mất công sửa hoài". AI có yếu tố hên xui — chấp nhận + di chuyển nhanh.
+
+▤ SOP — Hướng dẫn
+
+📘 Hướng dẫn đầy đủ
+🔒 Nhắc lại: đừng share link này ra nhóm hay cho người ngoài thử thách.
+
+👉 Mở hướng dẫn Ngày 18 — Skill Sản Xuất Video AI Trên Higgsfield
+
+Mở tab mới (chuột phải → Open in new tab) để vừa đọc vừa thao tác.
+
+🎯 Workflow trong guide
+Chuẩn bị: Đăng ký Higgsfield (mua share account MMOVN giá rẻ HOẶC trả trực tiếp 1tr/tháng) + chuẩn bị ảnh tuỳ chủ đề bạn chọn.
+
+Pick chủ đề video — sản phẩm/dịch vụ bạn HOẶC video vui tặng bạn bè (1 phút)
+Dùng ChatGPT viết kịch bản — copy prompt mẫu trong guide, điền context của bạn → nhận storyboard + prompt gen ảnh + prompt animate (5 phút)
+Tạo ảnh Stream 4.5 trong Higgsfield Image (10 phút) — nguyên tắc "ra ưng cái nào lụm cái đó"
+Mặc đồ cho model (nếu cần) — upload ảnh gương mặt + ảnh outfit (5 phút)
+Animate Kling 2.6 hoặc Kling 3.0 trong Higgsfield Video (10-15 phút) — prompt motion "orbit nhẹ chậm giữ vai sang"
+Multishot (Kling 3.0 only) — nối nhiều shot tự động, đỡ tốn credit
+Edit ghép trong CapCut — key zoom trên ảnh tĩnh để tiết kiệm credit
+Build skill tao-video-ai (5 phút) — agent lặp lại quy trình
+Tích hợp auto-post — mở rộng pipeline Day 17 (5 phút)
+🎁 Bonus
+Cuối guide có section Phần thưởng Ngày 18 — nguồn cộng đồng nội bộ (~6.700 thành viên) bán tài khoản premium giá tận gốc + bot check scammer. Nguồn này quý vì hẹp — đừng share ra ngoài thử thách.
+
+Ngày 18 · Tuần 4
+Skill Sản Xuất
+Video AI Trên Higgsfield
+Hôm nay bạn làm 1 video AI hoàn chỉnh theo workflow chia sẻ trong workshop private của Dũng (Workshop 8, do Hiếu phụ trách). 1 tool duy nhất — Higgsfield AI: vừa sinh ảnh sản phẩm, vừa biến ảnh thành video chuyển động. Không cần 4-5 tool rời.
+
+Mục tiêu cuối ngày
+Cuối hôm nay bạn có:
+
+1 video AI 15-25s về sản phẩm/dịch vụ bạn đang kinh doanh, hoặc cái gì đó vui vui tặng bạn bè — đăng được Reels / TikTok / Shorts (hoặc gửi nhóm chat)
+Skill tao-video-ai — agent tự lặp quy trình mỗi tuần, không tốn công lần nữa
+Hiểu prompt + cú máy "orbit nhẹ chậm giữ vai" — công thức thắng nhất 2026
+Tại sao chỉ 1 tool — không phải 4
+Đa số guide AI video trên mạng dạy ráp 4-5 tool: tool sinh ảnh + tool animate + tool TTS + tool music + tool edit. Phức tạp, mỗi tool 1 tài khoản, kẹt 1 chỗ là kẹt cả pipeline.
+
+Workshop private Tiểu Hà Mã — Workshop 8 do Hiếu phụ trách — chia sẻ workflow thực chiến: Higgsfield AI all-in-one. Có Stream 4.5 (sinh ảnh) + Kling 2.6/3.0 (animate). Tốn ~30-50 credit / video → với gói 1tr/tháng (1000 credit) làm được ~20-30 video / tháng.
+
+Hôm nay tập trung làm ra nguyên liệu chất lượng. Edit (ghép, key zoom) chỉ là khâu phụ — CapCut 5 phút là xong.
+
+Tinh thần Ngày 18
+Đầu vào quyết định đầu ra. Ảnh sản phẩm xấu → video xấu, không cứu được. Dành 80% công vào khâu sinh ảnh đẹp, 20% còn lại animate cú máy nhẹ.
+
+Không cần đẹp như Hollywood. TikTok đang không gắn AI tag với content thời trang/lifestyle nhìn như thật — đừng làm lố quá là OK.
+
+XEM TRƯỚC
+🎬 Video workshop gốc — xem cùng Hiếu thao tác trực tiếp
+Trước khi đọc các bước bên dưới, hãy xem video workshop bên dưới. Hiếu (workshop private của Dũng — Workshop 8) thao tác từng bước trên Higgsfield, cho bạn thấy mặt UI thật, ra ảnh thật, lúc nào nên cancel làm lại, prompt thắng-thua khác nhau ở chỗ nào.
+
+⏱ Lưu ý quan trọng — đỡ tốn thời gian
+Video tổng ~4 tiếng, nhưng phần thực sự về sản xuất video AI chỉ ~2 tiếng đầu. Phần sau là nội dung khác (Q&A, warm-up, các topic không liên quan Day 18).
+
+Khuyến nghị: xem từ đầu đến ~2:00:00 (mốc 2 tiếng) là đủ. Nếu hết mốc 2 tiếng mà vẫn còn phần Higgsfield → xem thêm vài phút nữa rồi dừng. Đừng phí 2 tiếng cuối.
+
+
+Cách xem hiệu quả (~2 tiếng đầu, từ 0:00:00 đến 2:00:00)
+Lần 1 — xem nguyên 2 tiếng phần Higgsfield: không thao tác, chỉ nắm flow tổng. Nắm được "à workflow là Stream 4.5 → Kling, không cần 4 tool".
+
+Lần 2 — xem từng đoạn + làm song song: mở Higgsfield ra, mỗi đoạn 5-10 phút Hiếu thao tác → bạn pause + làm theo trên account của bạn.
+
+Phần text bên dưới là tóm tắt + bổ sung context (đăng ký, ChatGPT viết kịch bản, build skill, auto-post). Đừng skip video — text không thay thế được nhịp thao tác thật.
+
+CHUẨN BỊ
+Đăng ký Higgsfield AI + chuẩn bị nguyên liệu
+Đăng ký tool — 2 lựa chọn
+✅ Cách rẻ — KHUYẾN NGHỊ để làm bài
+Mua share account / share gói trong cộng đồng MMOVN Community — chỉ ~100-300k/tháng thay vì 1tr trả tận gốc. Đủ credit để hoàn thành Day 18 + làm thêm vài video.
+
+👉 Cuộn xuống section "Phần thưởng Ngày 18" ở cuối trang — có hướng dẫn chi tiết: vào chợ → tìm "Higgsfield" → check người bán qua bot Cảnh báo scammer → mua an toàn.
+
+Đọc luôn mục Phần thưởng trước khi mua — tránh dính scammer.
+
+💼 Cách trả tận gốc — cho ai dùng dài hạn / kinh doanh
+👉 Higgsfield AI trực tiếp — gói khuyến nghị 1tr/tháng = 1000 credit. Nếu mua gói unlimited (~1tr1+) thì Stream 4.5 sinh ảnh không giới hạn.
+
+Dùng cho: chạy thực tế kinh doanh, ổn định lâu dài, không sợ logout đột xuất, tự quản tài khoản.
+
+Cost reference theo workshop của Dũng (cho gói 1000 credit):
+
+1 video cinematic (như "vợt hộp → cận sản phẩm → toàn cảnh"): ~50 credit
+1 video KOC thời trang (model thử đồ): ~30 credit
+1 ảnh Stream 4.5: ~3-5 credit (miễn phí nếu gói unlimited)
+Chuẩn bị nguyên liệu input
+Đầu vào quyết định đầu ra. Tuỳ chủ đề bạn chọn, chuẩn bị các ảnh phù hợp:
+
+Nếu làm video về sản phẩm/dịch vụ: chụp ảnh sản phẩm chính (góc tổng thể, chính diện), ảnh cận chi tiết (logo, hình in, texture), ảnh hộp/bao bì nếu có. Càng nhiều góc càng tốt — Hiếu dùng từ "càng nhiều nguyên liệu, AI càng đỡ sai".
+Nếu làm video tặng bạn bè / fun: ảnh chân dung bạn (hoặc người nhận), ảnh bối cảnh / kỷ niệm muốn lồng vào. Vài ảnh là đủ.
+Nếu chưa có ảnh model người thật: dùng Stream 4.5 generate model AI từ mô tả — bước này nằm trong workflow ở các bước sau.
+Lưu ý từ workshop private của Dũng
+Sản phẩm có logo nhỏ / chữ nhỏ / lọ hóa chất / mỹ phẩm → AI dễ sai chữ, sai logo, biến đổi sản phẩm. Giải pháp: dùng Kling 3.0 (không phải 2.6 hay Sora/Veo) — nó có tính năng element pin upload 10-20 ảnh sản phẩm tham chiếu để AI giữ đúng.
+
+BƯỚC 01
+Pick chủ đề video — sản phẩm bạn / fun cho bạn bè
+Bạn quyết định làm video về cái gì. Đừng đóng khung. Bạn pick 1 trong 2 hướng:
+
+Hướng	Phù hợp khi	Lợi ích
+A. Sản phẩm/dịch vụ bạn đang kinh doanh — gen video quảng bá đăng Reels/TikTok/FB Page	Bạn có business thật + cần content video	ROI thực tế, content bán được hàng, áp dụng skill ngay vào việc kiếm tiền
+B. Video vui tặng bạn bè — sinh nhật, kỷ niệm, troll vui, lời chúc, video cho người thân	Bạn chưa có business sẵn / muốn làm thử nhẹ nhàng / cảm xúc dẫn đầu	Áp lực thấp, tập trung học workflow, vẫn có sản phẩm cuối cùng để khoe
+Dùng ChatGPT viết kịch bản — KHÔNG tự nghĩ
+Đừng ngồi nghĩ kịch bản. ChatGPT viết tốt hơn bạn 10 lần nếu bạn cho nó context đúng. Mở ChatGPT → paste prompt sau (chọn 1 trong 2 tuỳ hướng đã pick):
+
+Prompt ChatGPT — Kịch bản video sản phẩm/dịch vụ
+COPY
+Tôi đang kinh doanh: [MÔ TẢ SẢN PHẨM/DỊCH VỤ — VD: "shop bán váy nữ phong cách Hàn Quốc trên Instagram, giá 300-600k/sản phẩm, tệp khách 22-30 tuổi"].
+
+Hôm nay tôi muốn làm 1 video AI 15-25 giây để đăng Reels / TikTok quảng bá. Tool dùng: Higgsfield (Stream 4.5 sinh ảnh + Kling 2.6/3.0 animate).
+
+Hãy viết cho tôi:
+1. Storyboard 3-5 cảnh, mỗi cảnh 4-5 giây
+2. Prompt tiếng Anh chi tiết để gen ảnh Stream 4.5 cho từng cảnh (tả model/sản phẩm/bối cảnh/lighting)
+3. Prompt tiếng Anh ngắn cho Kling animate từng cảnh (cú máy: orbit, zoom in, pan, dolly...)
+4. Hook 3 giây đầu (text overlay) + caption đăng Reels/TikTok có hashtag
+
+Phong cách video: cinematic / KOC / lifestyle... (bạn đề xuất phù hợp với sản phẩm tôi).
+Prompt ChatGPT — Video tặng bạn bè / fun
+COPY
+Tôi muốn làm 1 video AI 15-25 giây để [TẶNG AI/DỊP GÌ — VD: "tặng sinh nhật cho bạn thân tên Lan, 28 tuổi, thích du lịch và cà phê"].
+
+Bối cảnh / chi tiết về người nhận: [MÔ TẢ — VD: "Lan và tôi có nhiều kỷ niệm đi cà phê quận 1, hay đi Đà Lạt, mèo cưng tên Mochi"].
+
+Tone tôi muốn: [vui / cảm động / hài hước / lãng mạn].
+
+Tool: Higgsfield (Stream 4.5 sinh ảnh + Kling 2.6/3.0 animate).
+
+Hãy viết cho tôi:
+1. Storyboard 3-5 cảnh, mỗi cảnh 4-5 giây — kể 1 câu chuyện ngắn
+2. Prompt tiếng Anh chi tiết để gen ảnh Stream 4.5 cho từng cảnh
+3. Prompt tiếng Anh cho Kling animate (cú máy nhẹ nhàng, cinematic)
+4. Lời chúc / text overlay xuất hiện ở cuối video
+Mẹo dùng ChatGPT cho hiệu quả
+Càng cụ thể context, kịch bản càng đúng ý. Đừng viết "tôi bán mỹ phẩm" — viết "tôi bán serum dưỡng da brand Việt, giá 350k, target da dầu mụn 18-25 tuổi". Càng chi tiết, prompt ra càng dùng được luôn không cần sửa.
+
+Nếu lần đầu ra kịch bản chưa ưng → reply ChatGPT: "viết lại storyboard concept khác, nhấn vào yếu tố [X]". ChatGPT iterate vô hạn miễn phí.
+
+Tham khảo: 2 format thắng từ workshop của Dũng
+Nếu bạn đang phân vân style nào hợp, đây là 2 format Hiếu chia sẻ thắng nhất hiện tại — dùng làm tham khảo, không phải bắt buộc:
+
+Format	Hợp với	Cost
+Cinematic — vợt hộp → manican → toàn cảnh → cận chi tiết	Sản phẩm có hộp đẹp, brand premium, video build hype	~50 credit
+KOC fashion — model mặc đồ trong bối cảnh đời thường	Quần áo, váy, túi, giày, mỹ phẩm	~30 credit
+Bài demo dưới đây tôi đi theo concept KOC (cho bạn xem cụ thể). Logic Cinematic / video fun tương tự — chỉ khác prompt và bối cảnh.
+
+BƯỚC 02
+Viết prompt qua ChatGPT (hoặc Claude / Gemini)
+Mở ChatGPT (Higgsfield có tích hợp sẵn ChatGPT trong UI nếu chưa có) → paste prompt sau:
+
+Prompt · Sinh prompt cho Stream 4.5
+COPY
+Tôi muốn tạo ảnh AI bằng model Stream 4.5 trên Higgsfield. Hãy viết prompt cho tôi càng chi tiết càng tốt.
+
+Sản phẩm chính: [TÊN SẢN PHẨM, ví dụ: áo polo nam màu be]
+Tham chiếu: như ảnh tham chiếu (tôi sẽ upload)
+
+Yêu cầu cảnh:
+- Một con manican màu trắng đứng trong căn phòng có nắng đẹp
+- Mặc sản phẩm chính (giữ nguyên màu sắc, chi tiết thiết kế, logo / thêu / in như ảnh tham chiếu — KHÔNG được thay đổi)
+- Background: căn phòng tone tối, ánh đèn vàng, phong cách luxury minimal
+- Góc chụp: chính diện, thấy full outfit
+- Phối thêm: quần chinos màu be phối sáng + men dày màu trắng
+- Tỷ lệ: 9:16 (dọc, dùng cho Reels/TikTok)
+- Chất lượng: photorealistic, high detail, ánh sáng tự nhiên
+
+Output:
+1. Prompt chính (tiếng Anh, dùng paste vào Higgsfield)
+2. Negative prompt (loại trừ: wrong shape, sai cổ áo, sai màu, mất nút, thay đổi logo, thêm họa tiết, biến đổi thiết kế)
+Mẹo từ workshop của Dũng
+Trò chuyện với ChatGPT 2-3 câu trước khi xin prompt. Để nó hiểu bối cảnh, ý đồ. Sau đó mỗi lần làm cảnh mới chỉ cần ghi "tiếp theo, cảnh [X]" — nó tự nhớ context.
+
+BƯỚC 03
+Tạo ảnh trên Higgsfield — Stream 4.5
+Vào Higgsfield → tab Image (giao diện sinh ảnh)
+Chọn model Stream 4.5 ở thanh model bên dưới (Hiếu khuyến nghị — tối ưu cho người mới, dễ ra ảnh đẹp ngay lần đầu)
+Upload nguyên liệu: kéo thả tất cả ảnh input (sản phẩm + cận chi tiết) vào panel reference
+Paste prompt + negative prompt ChatGPT vừa cho
+Chỉnh tỷ lệ 9:16 (dọc) ở dropdown aspect ratio
+TẮT chế độ Free — bấm sang chế độ tốn phí. Free bị xếp hàng, lâu xui rủi. Tốn phí ~3-5 credit / ảnh nhưng nhanh + chen được nhiều ảnh song song
+Test 1 ảnh trước — đừng gen batch 4-8 ảnh ngay. Coi cảnh có ổn không → fix prompt → mới batch sau
+Khi ảnh ra sai — fix bằng cách nào
+Sai chi tiết áo (cổ áo, tay áo, logo): thêm ảnh CẬN của chi tiết đó vào panel reference. Stream 4.5 sẽ tham chiếu kỹ hơn.
+
+Sai background / mood: chỉnh prompt, KHÔNG cần đổi nguyên liệu. Bật giữ "warm tone, luxury minimal, ánh đèn vàng" cho consistency.
+
+Sai 100% — ra ảnh kì cục: dùng lại prompt cũ, gen lại 1-2 lần (AI có yếu tố hên xui). Hiếu nói "ra ưng cái nào lụm cái đó, đừng mất công sửa".
+
+BƯỚC 04
+(Concept KOC) Mặc đồ cho model
+Nếu bạn làm KOC fashion: cần ghép gương mặt model + bộ đồ → ra ảnh "model thật đang thử đồ".
+
+Trong Higgsfield Image, upload: 1 ảnh gương mặt model (rõ, chính diện) + 1 ảnh outfit (đã tách nền nếu có thể)
+Vẫn dùng model Stream 4.5
+Paste prompt:
+Prompt · Model thử đồ KOC
+COPY
+A young female model wearing the outfit shown in reference image, keeping her face EXACTLY the same as reference (lock face, lock skin tone, lock eye color), standing in a bright apartment with natural sunlight through window, casual realistic pose like a real KOC trying on clothes, 9:16 vertical aspect ratio, photorealistic, high detail, natural ambient light, warm tone, shallow depth of field
+
+LOCK: face identity, outfit color, outfit design details, embroidery / print / logo on outfit
+NEGATIVE: wrong face, different person, change outfit color, wrong size, missing buttons, fake plastic look
+Test 1 ảnh → nếu giữ đúng mặt + đúng đồ → batch tiếp các góc khác (cận tay áo, cận cổ, ngược nắng...).
+
+BƯỚC 05
+Tạo video clip — Kling 2.6 (cơ bản) hoặc 3.0 (nâng cao)
+Có ảnh ưng → vào tab Video trên Higgsfield.
+
+Chọn model
+Kling 2.6 — phương án tiết kiệm. Tốn ít credit hơn. Đủ dùng cho fashion / lifestyle. Đầu vào chỉ 1 ảnh.
+Kling 3.0 — nâng cao. Có element pin (upload nhiều ảnh tham chiếu sản phẩm → giữ chính xác logo / chữ / chi tiết). Dùng cho mỹ phẩm, hộp có logo, sản phẩm có chữ.
+Veo 3 / Seedance 2 / Sora — Hiếu thử rồi không khuyến nghị: Veo/Sora chất lượng OK nhưng chưa tối ưu cost; Seedance đầu ra 720p chứ không full HD.
+
+Workflow chuẩn (Kling 2.6)
+Upload ảnh đã ok
+Paste prompt motion (xem dưới)
+TẮT audio — không cần (tiết kiệm 2x credit)
+Thời lượng 5 giây — đủ cho 1 sim
+Render → đợi 30-60s → tải MP4
+Prompt motion · Cú máy thắng (workshop của Dũng)
+COPY
+A slow gentle orbit shot, camera moves smoothly around the subject, keeping the model still and elegant, soft warm light, cinematic vibe, luxury feel
+Vì sao "orbit nhẹ chậm" thắng
+Cú máy nhẹ + chậm = AI ít fail. Cú máy mạnh / nhanh / quay 360° = AI không có dữ liệu phía sau model → sinh thêm tay, thêm chân, hoặc warp kỳ cục.
+
+Hiếu khuyến nghị: dùng đúng 1 prompt orbit trên cho 90% trường hợp. Đổi style khi quen.
+
+BƯỚC 06
+Multishot trên Kling 3.0 (tiết kiệm credit)
+Mặc định 1 prompt = 1 cảnh 5s. Kling 3.0 có tính năng Multishot để gen nhiều cảnh trong 1 video 5s → tiết kiệm credit + đỡ phải ghép.
+
+2 chế độ Multishot
+Chế độ	Workflow	Khi nào dùng
+Auto	1 prompt → AI tự cắt 2-3 cảnh trong 5s	Bạn lười / không có ý tưởng cụ thể
+Custom	Bạn ghi rõ "cảnh 1: cận, cảnh 2: toàn"	Có concept rõ — vd: cận → toàn → cận chi tiết
+Prompt · Multishot Custom
+COPY
+Scene 1 (0-2.5s): close-up of model's face and upper body, gentle smile, soft warm sunlight from window
+Scene 2 (2.5-5s): wider full-body shot, slow orbit camera move around model, showing the outfit detail clearly
+
+Style: photorealistic, cinematic, luxury KOC vibe
+BƯỚC 07
+Edit ghép trong CapCut (5 phút)
+Higgsfield cho ra video clip 5s. Bạn cần ghép 2-3 clip + thêm vài ảnh tĩnh "key zoom" → ra video 15-25s.
+
+Trick từ workshop của Dũng — đỡ tốn credit
+Không phải cảnh nào cũng cần render thành video. Cảnh tĩnh chỉ cần key zoom trên ảnh đã có → tiết kiệm 30 credit / cảnh.
+
+Mở CapCut → New project → 9:16
+Drag thả các video clip 5s (Kling output) vào timeline
+Drag thả các ảnh tĩnh giữa các clip → set duration 2-3s mỗi ảnh
+Chọn ảnh → tab Animation → chọn "Zoom in slow" hoặc "Pan right" → ảnh thành chuyển động
+Nhạc nền (tùy chọn): kéo nhạc free từ thư viện CapCut hoặc Pixabay
+Tab Captions → Auto-captions → tiếng Việt (nếu có voice)
+Export 1080p, 30fps, MP4
+Voiceover / music — có cần không?
+Workshop private Tiểu Hà Mã KHÔNG bắt buộc voiceover/music. Nhiều video fashion thắng trên TikTok chỉ có nhạc nền hoặc nhạc beat trending. Bắt đầu đơn giản — voiceover thêm sau khi đã có format thắng.
+
+BƯỚC 08
+Build skill tao-video-ai
+Đã làm được 1 video tay. Giờ skill hoá để agent lặp lại quy trình.
+
+Prompt · Build skill tao-video-ai
+COPY
+Tạo skill mới tên "tao-video-ai" trong thư mục skills/. Cấu trúc Cấp 5:
+
+skills/tao-video-ai/
+  SKILL.md         - Quy trình 7 bước theo workflow của Dũng/Higgsfield (cho agent đọc khi lặp lại)
+  scripts/
+    gen-prompt.py        - Gọi Claude/ChatGPT API sinh prompt cho Stream 4.5 từ topic
+    list-images.py       - List ảnh sản phẩm trong thư mục product-photos/
+    upload-higgsfield.py    - Wrapper gọi Higgsfield API (nếu có) hoặc hướng dẫn paste tay
+  assets/
+    brand-style.md       - Tone luxury / casual / minimal phù hợp brand bạn
+    camera-prompts.md    - 5 prompt motion thắng: orbit nhẹ, dolly in, pan slow, key zoom, multishot
+    negative-prompt.txt  - Bộ negative prompt mặc định (loại trừ sai logo, sai màu...)
+  references/
+    koc-format.md        - Format KOC fashion thắng trên TikTok 2026
+    cinematic-format.md  - Format cinematic vợt hộp / detail-shot
+    troubleshoot.md      - Gặp sai chi tiết → thêm ảnh cận. Sai logo → dùng Kling 3.0 element pin
+
+Sau khi build, test với 1 sản phẩm mẫu — phải ra video 15-25s hoàn chỉnh không cần can thiệp tay (trừ duyệt cuối).
+BƯỚC 09
+Tích hợp auto-post (mở rộng pipeline Day 17)
+Day 17 bạn đã có tao-creative-fb auto-post text+ảnh. Giờ mở rộng:
+
+Prompt · Mở rộng pipeline post video
+COPY
+Mở rộng skill tao-creative-fb (Day 17): thêm chế độ "video" gọi skill tao-video-ai (Day 18).
+
+Khi tôi nhắn Telegram "video" → agent:
+1. Đọc content plan tuần này, chọn 1 topic phù hợp video (sản phẩm mới, KOC fashion...)
+2. Gọi tao-video-ai → ra file MP4 15-25s
+3. Gửi Telegram preview cho tôi duyệt
+4. Tôi OK → agent đăng:
+   - Reels Facebook (đã setup từ Day 17)
+   - TikTok (cần setup TikTok API hoặc upload manual via mobile)
+   - YouTube Shorts (qua YouTube Data API)
+5. Báo lại link 3 bài
+
+Tần suất: 2 video/tuần (thứ 3 + thứ 6, 9h sáng).
+Setup lịch hẹn 9h sáng thứ 3 + thứ 6. Sáng đầu tiên — agent gen video, gửi preview Telegram.
+
+FINAL
+Nộp Bài
+Checklist hoàn thành
+Tiêu chí hoàn thành
+Higgsfield AI hoặc bất kì Provider nào đã đăng ký + có credit hoạt động
+Đã làm ra 1 video AI 15-25s hoàn chỉnh bằng Stream 4.5 + Kling 2.6/3.0 hoặc model AI bất kì
+Skill tao-video-ai chạy được pipeline end-to-end
+Tích hợp auto-post — agent đăng video qua Telegram approval flow
+Đã đăng ít nhất 1 video lên 1 kênh public
+Tinh thần Ngày 18
+Lần đầu chạm Higgsfield hơi loay hoay 60-90 phút. Lần thứ 2 chỉ ~30 phút. Lần thứ 5 trở đi: agent + skill làm 90%, bạn chỉ duyệt + chia sẻ. Đó chính là pattern Operator.
+
+Hiếu nói: "Ra ảnh ưng cái nào lụm cái đó, đừng mất công sửa hoài". AI có yếu tố hên xui — chấp nhận + di chuyển nhanh.
+
+PHẦN THƯỞNG · NGÀY 18
+🎁 Chợ Trời Neverdie — nguồn tài nguyên giá tận gốc
+Tại sao gọi là "phần thưởng"
+Bạn đã vượt qua Ngày 18 — chỉ còn 3 ngày nữa. Đây là phần thưởng nội bộ:
+
+Không phải vì tương lai bạn không vô tình biết.
+Mà vì trong thời đại này, biết sớm luôn là lợi thế. Cộng đồng này sẽ biết sớm nhiều thứ hơn thị trường — hãy trân trọng phần thưởng này.
+
+Nguồn là gì
+👉 MMOVN Community — supergroup Telegram ~6.700 thành viên, có nhiều topic con. Đây là nguồn tận gốc mà hầu hết dân bán tài nguyên ngoài thị trường lên đây mua → bán lại ra Facebook / Shopee / website cá nhân.
+
+Mua trực tiếp trong cộng đồng = giá tận gốc, tiết kiệm 30-70% so với reseller.
+
+Có sẵn (giá tham khảo từ chợ tại thời điểm viết):
+
+ChatGPT Plus — từ 65k/tháng (KBH = không bảo hành) đến 380k/năm (BHF/ACC CẤP). Gói 250k/tháng (BHF) là sweet spot — sài tẹt ga, có bảo hành.
+ChatGPT Go Acc Cấp — 55k/năm (BH 30 ngày)
+YouTube Premium Family slot VN — 75k-380k tùy gói
+Spotify Premium — 250k/6 tháng → 400k/năm
+Google One, Higgsfield, Veo, Kling, Midjourney, Canva Pro, Adobe Creative… — tìm trong topic Chợ Giời
+💡 Tip mềm — ChatGPT Plus 250k/tháng "xài tẹt ga"
+Trong các option trên, ChatGPT Plus gói 250k/tháng (BHF — bảo hành full time) là cái đáng tiền nhất nếu bạn dùng nhiều. Sài tẹt ga, không lo logout đột xuất, có support khi gặp sự cố — nguồn có sẵn trong chợ.
+
+Bạn cũng nên thử ngay 2 thứ mới của ChatGPT — chưa nhiều người biết, mới đi, cực đẹp:
+
+Gen ảnh — model GPT Image mới ra, ảnh chi tiết + nét chữ trên ảnh đúng (đa số tool ảnh khác sai chữ tiếng Việt). Dùng cho thumbnail, ảnh sản phẩm test, ảnh cover bài đăng — dùng được ngay không cần Higgsfield cho các use case nhẹ.
+Gen website — Canvas mode → mô tả landing page bạn muốn → ChatGPT trả về HTML/CSS chạy được, có thể edit live trong UI. Test ý tưởng / build prototype landing trong 5 phút.
+Biết sớm = lợi thế. Cộng đồng này biết trước thị trường.
+
+2 topic bạn cần biết
+💰 Topic 1: Chợ Giời Neverdie
+Nơi người bán đăng tài nguyên + giá. Bạn vào → đọc bài → DM người bán → trao đổi.
+
+📢 Topic 2: Cảnh báo scammer — Check leak BẮT BUỘC
+Trước khi chuyển tiền cho bất kỳ ai trong chợ → LUÔN check người bán trong topic này.
+
+Search username / SĐT / Telegram ID người bán → bot trả về kết quả check.
+
+⚠️ Quy tắc đọc kết quả check — KHÔNG bỏ qua
+⭐️ Premium: ❌ No → KHÔNG mua người này. Họ đã có report scam/leak. Bỏ qua = mất tiền.
+
+⭐️ Premium: ✅ Yes → OK, có thể mua. Vẫn nên hỏi rõ chính sách bảo hành: KBH (không BH, rẻ nhất, rủi ro cao), BH GÓI (bảo hành nguyên gói), BHF / Bảo hành Full Time (an toàn nhất).
+
+Đã có nhiều case scam trong chợ — đó là lý do topic check tồn tại. Đừng tiếc 30 giây check.
+
+Áp dụng ngay cho Day 18
+Cần Higgsfield mà không muốn trả 1tr/tháng tận gốc? Vào Chợ Giời → tìm "Higgsfield" → check người bán qua Cảnh báo scammer → mua share account / share gói (giá thường 100-300k/tháng).
+
+Lưu ý: share account đôi khi bị logout đột xuất khi nhiều người dùng cùng lúc — chấp nhận đánh đổi rẻ ↔ rủi ro. Nếu chạy cho việc kinh doanh thật, mua gói cá nhân (Higgsfield trực tiếp ~1tr/tháng) ổn định hơn.
+
+Trân trọng phần thưởng
+Đừng share link MMOVN Community ra Facebook / nhóm ngoài / người không thuộc thử thách.
+
+Nguồn này quý là vì hẹp — public ra là mất giá trị, dễ bị spam, admin chặn cho cả thử thách. Cộng đồng này biết sớm = lợi thế. Hãy giữ lợi thế cho mình + người trong thử thách.
+
+"Đầu vào quyết định đầu ra.
+Cú máy nhẹ chậm. Test 1 ảnh trước. Lụm cái ưng."

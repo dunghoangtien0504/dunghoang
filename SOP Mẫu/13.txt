@@ -1,0 +1,15 @@
+Setup AI Agent (như con TIỂU HÀ MÃ)
+
+Nhiệm vụ: thiết lập một AI Agent hoàn chỉnh để hỗ trợ công việc của bạn + hỗ trợ mọi người trong group Telegram — giống như con Lửng Mật.
+
+
+▤ SOP — Hướng dẫn
+
+Hãy xem record để biết cách setup Agent như Lửng Mật. Link mua VPS: https://client.123host.vn/?affid=3854
+Prompt: Tôi đang muốn thực hiện clone repo goclaw https://github.com/nextlevelbuilder/goclaw này về và chạy trên VPS của tôi, github mà tôi sử dụng để sau này deploy bằng github action và comit và push code update lên là [LINK GITHUB]. Tôi muốn bạn tiên hành đọc repo goclaw chi tiết và kĩ càng và tiến hành thực hiện xây dựng 1 kế hoạch chi tiết và chuyên sâu để thực hiện cài goclaw trên VPS của tôi theo thông tin bên dưới, domain tôi sử dụng sẽ là [TÊN DOMAIN] (đã được trỏ tới IP VPS rồi). Hãy đảm bảo bạn phân tích sâu và lên kế hoạch thực hiện chi tiết và toàn bộ hết các phần để tôi chỉ cần vào domain [TÊN DOMAIN] là có thể vào được goclaw để thực hiện sử dụng.
+
+THÔNG TIN VPS: [Hãy fill thông tin VPS của mình đã mua vào đây, follow theo mẫu trong video]
+Được duyệt khi:
+
+Link AI Agent đã setup (Telegram bot @username, link web, hoặc screenshot demo) + mô tả ngắn agent làm gì. Agent phải phản hồi được câu hỏi từ thành viên trong group/chat riêng.
+Quan trọng:  Cũng như Ngày 7, hãy xem hết record meeting Ngày 13 và nộp bằng chứng screen record/video quay lại quá trình xem, hoặc ít nhất xem được hơn 1/2 thời lượng record. Có thể tua nhanh tốc độ phát, nhưng không được skip nội dung. Đây là yêu cầu bắt buộc để đảm bảo mọi thành viên đều hoàn thành cùng một phần trải nghiệm như nhau, công bằng với những thành viên đã tham gia đầy đủ buổi meeting live.

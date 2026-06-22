@@ -1,0 +1,256 @@
+Tạo Agent Team — Đội Agent Đầu Tiên
+
+⚠️ Lưu ý: Bài này chỉ dành cho thành viên thử thách — KHÔNG share link hướng dẫn ra nhóm hay cho người ngoài.
+
+Ngày 13 bạn dựng con agent đầu tiên. 6 ngày qua bạn dạy nó kỹ năng — viết content (Ngày 17), tạo hình, làm video (Ngày 18). Hôm nay bạn cho nó đồng đội.
+
+Một agent làm tất cả mọi việc là một cái nút thắt: nó giỏi, nhưng nó là một người. Hôm nay bạn biến nó thành một đội — có một agent trưởng nhóm điều phối, và các agent thành viên mỗi con một chuyên môn: viết bài, tạo hình, làm video. Bạn nhắn 1 câu cho trưởng nhóm, cả đội tự chia việc cho nhau.
+
+Mục tiêu cuối ngày:
+
+2–4 agent member mới, mỗi con một chuyên môn
+1 Agent Team thật trong goClaw — Agent chính (Orchestrator) làm trưởng nhóm, các agent mới làm thành viên
+Mỗi member 1 bot Telegram, gom hết vào 1 group chung — "phòng làm việc" để xem đội phối hợp
+Giao 1 việc thật → tận mắt thấy trưởng nhóm chia task, member nhận việc, chạy trên bảng Kanban
+Hôm nay bạn đi từ "vận hành 1 agent" lên "điều hành cả một bộ máy AI" — nấc cao nhất của pattern Operator.
+
+▤ SOP — Hướng dẫn
+
+📘 Hướng dẫn đầy đủ
+🔒 Nhắc lại: đừng share link này ra nhóm hay cho người ngoài thử thách.
+
+👉 Mở hướng dẫn Ngày 19 — Tạo Agent Team trong goClaw
+
+Mở tab mới (chuột phải → Open in new tab) để vừa đọc vừa thao tác.
+
+🎯 4 phần trong guide
+Phần 1 · Tuyển "nhân viên" — tạo agent member
+
+Chọn 1 trong 3 mẫu đội (mẫu chuẩn: viết bài + tạo hình + làm video)
+Tạo từng agent member ở /agents (⚠️ nhớ điền Mô tả thì nút "Tạo" mới sáng — agent tạo ra là dùng được làm thành viên ngay)
+Gán skill đã có: tao-creative-fb (ảnh gpt-image-1), tao-video-ai (Higgsfield), brand voice từ brain.db
+Mỗi member 1 bot Telegram + gom hết bot vào 1 group chung (cả Orchestrator) — nơi bạn thấy đội phối hợp. (Cách tạo bot đã học Ngày 13, làm lại y vậy.)
+Phần 2 · Gom thành đội — tạo Team
+
+Vào Agent Link & Team → Tạo Team (Create Team): Lead = Orchestrator (Agent chính), Members = các agent vừa tạo
+Cấu hình: Chế độ gửi Trực tiếp (đừng "Qua Leader" — đốt token), Workspace Cô lập, Escalation bật, Nhắc theo dõi 30 phút / tối đa 5 lần
+Agent chính chỉ điều phối — goClaw tự cấp khả năng điều phối khi nó làm trưởng nhóm, không cần tạo skill riêng (muốn chia khéo hơn thì thêm vài dòng vào AGENTS.md)
+Phần 3 · Giao 1 việc thật — xem đội chạy
+
+Nhắn Orchestrator trong group Telegram của đội 1 việc nhiều bước → nó tự chia task cho member, member báo cáo ngay trong group
+Xem task nhảy qua các cột Kanban (Chờ xử lý → Đang chạy → Đã hoàn thành)
+Phần 4 · Nộp bài
+
+💰 Lưu ý chi phí: mỗi member là 1 lượt model riêng (Lead + N member). Member tạo hình đốt credit OpenAI, member làm video đốt credit Higgsfield mạnh nhất — dùng model rẻ cho member, check credit trước.
+
+Ngày 19 · Tuần 4
+Tạo Agent Team —
+Từ Một Agent
+Thành Một Đội
+Ngày 13 bạn dựng con agent đầu tiên. 6 ngày qua bạn dạy nó kỹ năng — viết content, tạo hình, làm video. Hôm nay bạn cho nó đồng đội: một đội agent biết tự chia việc cho nhau, có một con trưởng nhóm điều phối tất cả. Bạn đi từ "vận hành 1 agent" lên "điều hành cả một bộ máy AI".
+
+Mục tiêu cuối ngày
+Cuối hôm nay bạn có:
+
+2–4 agent member mới, mỗi con một chuyên môn (viết bài / tạo hình / làm video)
+1 Agent Team thật trong goClaw — Agent chính làm trưởng nhóm, các agent mới làm thành viên, cấu hình chuẩn
+Giao 1 việc thật → tận mắt thấy trưởng nhóm chia task, member nhận việc, chạy trên bảng Kanban
+Tinh thần ngày hôm nay
+Tới giờ bạn có 1 agent làm tất cả mọi thứ — viết bài, trả lời khách, làm content. Một mình ôm hết. Đó chính là cái nút thắt: nó giỏi, nhưng nó là một người.
+
+Công ty thật không vận hành kiểu một người ôm mọi việc. Nó có một đội: một người quản lý chia việc, mỗi nhân viên một chuyên môn. Hôm nay agent của bạn thôi làm freelancer đơn độc — nó trở thành một công ty nhỏ mà bạn là ông chủ.
+
+Agent Team khác gì Agent Link?
+Agent Link = một đường ống nhờ việc giữa 2 agent (A nhờ B làm hộ một việc nhỏ) — nhẹ, không có bảng việc. Agent Team = một đội chính thức: 1 trưởng nhóm + nhiều thành viên + một bảng Kanban theo dõi từng task + workspace chung. Việc nhiều bước, nhiều người, cần theo dõi → dùng Team. Hôm nay ta làm Team.
+Mẹo của Dũng — đọc trước khi bắt đầu
+Đừng học thuộc lý thuyết. Cứ làm theo từng bước bên dưới: tạo vài agent → gom vào 1 team → giao 1 việc thật → xem nó chạy. Hiểu sâu nằm ở chỗ nhìn task nhảy qua các cột Kanban, không nằm ở chữ.
+
+TRƯỚC KHI BẮT ĐẦU
+Bạn đang có 1 agent. Hôm nay biến nó thành đội.
+Nhìn lại những gì bạn đã có sau 18 ngày — đây chính là "nhân sự" và "công cụ" của đội:
+
+1 Agent chính (con bạn dựng từ Ngày 13, đã có bot Telegram) — nó sẽ làm Orchestrator, tức trưởng nhóm điều phối.
+Skill tao-creative-fb (Ngày 17) — viết caption + tạo ảnh bằng gpt-image-1 (OpenAI).
+Skill tao-video-ai (Ngày 18) — làm video bằng Higgsfield (Stream 4.5 + Kling).
+brain.db (Ngày 5) — bộ não thứ 2 giữ brand voice của bạn.
+Agent Team hoạt động thế nào — hiểu trong 30 giây
+Bạn nhắn cho trưởng nhóm (Lead) một yêu cầu. Lead không tự làm — nó bẻ việc thành các task nhỏ và giao cho từng thành viên (member). Mỗi task hiện lên một bảng Kanban, chạy qua các cột Chờ xử lý → Đang chạy → Đã hoàn thành. Member làm xong báo về, Lead gom kết quả trả lại cho bạn. Bạn chỉ ra lệnh một câu, cả đội tự xoay.
+
+Nhớ trước khi bắt đầu
+1. Hôm nay bạn mới có 1 agent (để làm Orchestrator). Muốn có đội, phải tạo thêm vài agent member trước — đó là Phần Một bên dưới.
+2. Mọi agent bạn tạo bằng nút "Tạo agent" dùng được làm thành viên ngay — chỉ cần nó đang bật (active). Không có loại nào phải chọn, không có gì phải lo.
+
+Phần Một
+Tuyển "Nhân Viên" — Tạo Agent Member
+BƯỚC 01
+Chọn đội của bạn — 3 mẫu để bắt đầu
+Đội nào cũng được, miễn bám business của bạn. Dưới đây 3 mẫu — chọn 1, hoặc lấy làm gốc rồi đổi theo ý. Mỗi mẫu tái dùng đúng skill bạn đã có.
+
+Mẫu 1 · Khuyên cho người mới
+Đội Nội Dung Facebook
+Lead: Agent chính · Member: viết bài · tạo hình · làm video
+Đội tối thiểu mà đủ mạnh: trưởng nhóm nhận yêu cầu, giao cho 3 thành viên chuyên môn. Rẻ nhất để khởi động. Nếu phân vân, chọn mẫu này.
+Mẫu 2 · Đầy đủ hơn
+Đội Chiến Dịch Ra Mắt Sản Phẩm
+Lead: Agent chính · Member: lập kế hoạch · viết bài · tạo hình · làm video
+Thêm 1 member "lập kế hoạch" đọc brain.db ra brief chia việc cho cả đội. Tốn credit nhất (nhiều ảnh + video) — nhớ check credit OpenAI & Higgsfield trước.
+Mẫu 3 · Gắn lịch hẹn
+Đội Sản Xuất Hàng Ngày
+Lead: Agent chính (đã có Heartbeat + cron 9h) · Member: viết bài · tạo hình · làm video (2 lần/tuần)
+Kết hợp với Lịch hẹn (Schedule Tasks) đã có từ Ngày 17/18: cron đánh thức Lead mỗi sáng → Lead giao việc cho đội. Member video chỉ chạy Thứ 3 + Thứ 6 để giữ credit Higgsfield.
+Đặt tên member theo chuyên môn — đây là cách Orchestrator biết giao cho ai
+Khi giao việc, Orchestrator nhìn vào TÊN của member để biết con nào làm gì (nó được tiêm sẵn danh sách thành viên, nhưng chỉ thấy tên + một dòng chuyên môn ngắn, không thấy mô tả đầy đủ). Nên đặt Khóa agent (Agent Key) rõ theo nghề: viet-bai-fb, tao-hinh-fb, lam-video-fb; tên hiển thị cũng gợi nghề: "Cây Bút", "Hoạ Sĩ", "Đạo Diễn". Đặt tên mơ hồ kiểu agent-1 thì Orchestrator không biết con đó làm gì mà giao.
+
+Muốn chắc hơn: ở phần Cá tính của mỗi member, điền dòng Tóm tắt chuyên môn ngắn (vd "Viết caption Facebook đúng brand voice") — Orchestrator cũng đọc dòng này khi chia việc.
+
+BƯỚC 02
+Tạo từng agent member trong goClaw
+Mở dashboard goClaw của bạn (https://app.tên-miền-của-bạn). Vào menu tạo agent:
+
+Sidebar → Agents (đường dẫn /agents) → nút tạo agent → hộp thoại Tạo agent (Create agent)
+Điền các trường (nhãn hiển thị tùy ngôn ngữ — bên dưới ghi Tiếng Việt (English)):
+
+Form: Tạo agent (Create agent)
+Tên hiển thị (Display Name) *   → Cây Bút
+Khóa agent (Agent Key) *      → viet-bai-fb   (tự gợi ý từ tên)
+Provider *                    → chọn provider đã cấu hình
+Model *                       → chọn model RẺ cho member (vd Claude Haiku)
+Mô tả agent (Describe agent)  → "Bạn là cây bút chuyên viết
+                                 caption + bài đăng Facebook đúng
+                                 brand voice trong brain.db. Ngắn,
+                                 có hook, có CTA, không sến."
+Tự tiến hóa (Self-evolution)  → để TẮT (mới tạo)
+[ Hủy ]              [ Tạo (Create) ]
+Cái bẫy im lặng — nút "Tạo" cứ bị mờ
+Nút Tạo (Create) chỉ sáng khi đã điền đủ: Tên hiển thị + Khóa agent + Provider + Model + Mô tả agent (KHÔNG được để trống). Nhiều người bỏ trống ô Mô tả rồi loay hoay không bấm được. Cứ viết mô tả vài câu là nút sáng.
+
+Lặp lại cho mỗi member trong mẫu bạn chọn. Tối thiểu 2 member; mẫu chuẩn là 3 (viết bài, tạo hình, làm video).
+
+Kiểm tra điểm
+Vào lại trang Agents — thấy danh sách có Agent chính + các agent member vừa tạo, tất cả ở trạng thái active. Agent nào không active sẽ KHÔNG hiện ra khi chọn thành viên ở bước lập team — nhớ bật active.
+
+BƯỚC 03
+Trang bị skill cho từng member
+Mỗi member chỉ giỏi khi có đúng "đồ nghề". Vào từng agent → tab Skills → bật skill tương ứng. Đây là skill bạn đã tạo/cài ở các ngày trước:
+
+Đổi vai: mấy skill này trước đây bạn gán cho Agent chính. Giờ chuyển sang member — mỗi con cầm một skill. Agent chính không cần ôm skill sản xuất nữa, nó chỉ còn một việc: điều phối.
+
+Member	Skill đã có	Chi phí
+Viết bài	tao-creative-fb + brand_voice	Rẻ nhất — chỉ tốn token chữ
+Tạo hình	tao-creative-fb (ra ảnh)	Tốn credit OpenAI mỗi ảnh
+Làm video	tao-video-ai (Higgsfield)	Tốn nhất — credit Higgsfield
+Tiền — đọc kỹ kẻo cháy ví
+Một team không phải "gộp chung cho rẻ". Mỗi lần trưởng nhóm giao việc, hệ thống chạy 1 lượt model cho Lead + N lượt cho từng member — tức nhân chi phí token. Riêng:
+
+• Member tạo hình đốt credit OpenAI (gpt-image-1) — tài khoản mới có ~$5 free.
+• Member làm video đốt credit Higgsfield mạnh nhất (~30–50 credit/video, gói ~1tr = 1000 credit ≈ 20–30 video). Đừng để đội tự giao nhiều video liên tiếp.
+
+→ Chọn model rẻ (Haiku / GPT-4o-mini) cho member, để model mạnh cho mình Lead (vì Lead phải điều phối). Check credit OpenAI + Higgsfield trước khi cho đội chạy hàng loạt.
+
+BƯỚC 04
+Cho mỗi member 1 bot Telegram + gom vào 1 group
+Đây là bước nhiều người bỏ quên — nhưng thiếu nó thì bạn không thấy đội làm việc. Mỗi agent muốn "sống" và nói chuyện được thì phải có kênh riêng. Bạn đã làm điều này cho Agent chính (Orchestrator) từ Ngày 13 — giờ làm tương tự cho từng member.
+
+Vì sao mỗi member cần 1 bot riêng
+Orchestrator điều phối, nhưng member phải có "miệng" để báo cáo. Mỗi bot Telegram = một cái miệng. Gom hết vào một group chung = một "phòng làm việc": bạn nhắn Orchestrator, nó giao việc, các member trả lời ngay trong group. Bạn ngồi xem cả đội phối hợp trước mắt.
+Mỗi member → 1 bot Telegram riêng, gắn làm Channel cho đúng agent đó trong goClaw. (Cách tạo bot bạn đã rành từ Ngày 13 — làm lại y vậy cho từng member.)
+Tạo 1 group Telegram rồi add hết bot vào: bot Orchestrator (agent chính) + bot từng member. Đây là "phòng làm việc" chung của đội.
+Kiểm tra điểm
+Trong group Telegram có đủ bot: Orchestrator + các member. Thử nhắn 1 câu chào — đúng bot phản hồi là được. Đây là "phòng làm việc" nơi bạn xem đội phối hợp ở Phần Ba.
+
+Phần Hai
+Gom Lại Thành Đội — Tạo Team
+BƯỚC 05
+Tạo Agent Team
+Giờ bạn có "nhân viên" rồi. Lập đội cho chúng:
+
+Sidebar → Agent Link & Team → tab Agent Team (mặc định) → nút Tạo Team (Create Team)
+Form: Tạo Team (Create Team)
+Tên (Name) *                      → Đội Nội Dung Facebook
+Mô tả (Description)               → "Đội sản xuất content: viết bài,
+                                     tạo hình, làm video cho Page."
+Agent trưởng nhóm (Lead Agent) *  → chọn AGENT GOCLAW của bạn
+Thành viên (Members) *            → chọn: viet-bai-fb, tao-hinh-fb,
+                                     lam-video-fb
+[ Hủy ]                  [ Tạo (Create) ]
+Agent trưởng nhóm (Lead Agent) = Orchestrator: chọn Agent chính (con bạn dựng từ Ngày 13) — nó là người điều phối: nhận yêu cầu từ bạn rồi chia việc cho member. Lead nên dùng model mạnh (Sonnet/Opus) vì phải nghĩ cách chia việc.
+Thành viên (Members): ô này hiện các agent đang active — đúng mấy con bạn vừa tạo. Thiếu con nào thì quay lại bật active cho nó. Nên chọn 2–3 con chuyên môn khác nhau.
+Bấm Tạo (Create). Xong — đội của bạn ra đời.
+
+Một agent chỉ được làm trưởng 1 đội
+Nếu sau này bạn thử tạo đội thứ 2 với cùng Agent chính làm Lead, hệ thống báo lỗi "agent này đã làm trưởng một nhóm rồi". Hôm nay chỉ cần 1 đội — đừng tạo trùng. Muốn đội khác thì dùng một agent Lead khác.
+
+Agent chính có cần "skill điều phối" riêng không? — KHÔNG
+Bạn không phải tạo skill điều phối cho Agent chính. Ngay khi nó được đặt làm trưởng nhóm, goClaw tự trang bị: hướng dẫn cách chia việc + công cụ giao việc + danh sách thành viên — tiêm thẳng vào "não" nó. Nó biết tạo task và giao cho member ngay, không cần setup gì thêm.
+
+Muốn nó chia việc khéo hơn theo business của bạn (vd "yêu cầu content thì giao viết bài trước, xong mới tới ảnh")? Chỉ cần thêm vài dòng vào file AGENTS.md của Agent chính — không phải tạo skill, cũng không phải sửa CAPABILITIES.md. Cái này tùy chọn, không bắt buộc.
+
+BƯỚC 06
+Cấu hình đội — đặt đúng vài công tắc
+Mở đội vừa tạo (bấm vào nó, vào trang /teams/<id> — đây là bảng Kanban của đội) → bấm nút Cài đặt (Settings — biểu tượng bánh răng) ở đầu bảng. Phần lớn đã đúng mặc định; chỉnh cho khớp các giá trị sau:
+
+Team Settings — cấu hình khuyên dùng
+Chế độ gửi (Delivery mode)     → Trực tiếp (direct)   ← KHÔNG để "Qua Leader"
+Workspace                       → Cô lập (isolated)
+Escalation khi bị chặn          → BẬT (mặc định đã bật)
+Cho thành viên tạo request      → TẮT
+Nhắc theo dõi (Follow-up)       → 30 phút / tối đa 5 lần
+Vì sao để "Trực tiếp", đừng để "Qua Leader"
+Chế độ gửi mặc định là Trực tiếp — thông báo gửi thẳng, không tốn token. Nếu đổi sang Qua Leader, mỗi thông báo bị Lead diễn đạt lại bằng AI = thêm một lượt model mỗi lần. Giữ Trực tiếp cho rẻ và nhanh.
+
+Kiểm tra điểm — kết thúc Phần Hai
+Mở trang đội (/teams/<id>) thấy: tên đội, danh sách 1 Lead + các member, và một bảng Kanban đang trống (chưa có task — bình thường). Sẵn sàng giao việc.
+
+Phần Ba
+Giao 1 Việc Thật — Xem Đội Chạy
+BƯỚC 07
+Nhắn cho Orchestrator một yêu cầu thật (trong group)
+Đây là khoảnh khắc đáng xem nhất. Bạn không giao việc cho từng member — bạn chỉ nói với Orchestrator, nó tự chia. Mở group Telegram của đội (nơi có đủ bot Orchestrator + members) và nhắn một việc nhiều bước, ví dụ:
+
+Nhắn Orchestrator trong group
+COPY
+Tạo cho anh 1 bài đăng Facebook cho [sản phẩm/dịch vụ của bạn]:
+- 1 caption đúng giọng brand (có hook + CTA)
+- 1 ảnh minh hoạ hợp với caption
+
+Giao việc cho đội làm, xong tổng hợp lại gửi anh duyệt.
+Orchestrator sẽ tự tạo task và giao cho member (mỗi task một member phụ trách). Các member nhận việc và báo cáo ngay trong group — bạn ngồi xem cả đội phối hợp. Không cần làm gì thêm, chỉ chờ và quan sát.
+
+Member được "đánh thức" sau khi Lead xong lượt
+Đừng sốt ruột. Member không nhận việc tức thì — hệ thống đợi lượt trả lời của Lead kết thúc rồi mới đẩy task xuống cho member (cơ chế dispatch sau lượt). Vài giây tới một phút là chuyện thường. Và mỗi member mỗi vòng chỉ nhận 1 task ưu tiên cao nhất — nếu giao 5 việc cho 1 member, chúng xếp hàng làm lần lượt, không chạy song song.
+
+BƯỚC 08
+Xem task chạy trên bảng Kanban
+Quay lại trang đội (/teams/<id>). Bạn sẽ thấy task xuất hiện và nhảy qua các cột — đây chính là bằng chứng "trưởng nhóm đang điều phối thành viên":
+
+Chờ xử lý      Đang chạy        Chờ duyệt       Đã hoàn thành
+(Pending)      (In Progress)    (In Review)     (Completed)
+─────────      ────────────     ─────────       ────────────
+               #1 Viết caption
+               → Cây Bút
+               #2 Tạo ảnh
+               → Hoạ Sĩ         # mỗi thẻ có tên member phụ trách
+Lọc theo trạng thái ở thanh công cụ bảng: Đang hoạt động (Active) · Chờ xử lý (Pending) · Đang chạy (In Progress) · Chờ duyệt (In Review) · Đã hoàn thành (Completed) · Tất cả (All). Khi member làm xong, Orchestrator gom kết quả và nhắn lại trong group để bạn duyệt.
+
+⚠ Khi gặp lỗi — bấm để mở
+Member không nhận task / bảng đứng im
+Thẻ task tự chuyển sang "Đã thất bại" (failed) / "Bị chặn" (blocked)
+Không thấy member muốn chọn khi lập team
+Phần Bốn
+Nộp Bài
+FINAL
+Checklist & bằng chứng
+Làm theo thứ tự này là không kẹt
+Bằng chứng nộp bài
+1. Ảnh group Telegram của đội — bạn nhắn 1 yêu cầu, Orchestrator thật sự điều phối: chia việc và giao cho member (kiểu "đã giao [việc] cho [member]…"), các member báo cáo lại — tất cả ngay trong group. Đây là bằng chứng Orchestrator đang điều hành đội, không tự ôm hết một mình.
+2. Ảnh bảng Kanban trên dashboard goClaw — task của đội hiện trên bảng, có tên member phụ trách, đang chạy hoặc đã xong.
+Tùy chọn: output thật của member (1 caption, 1 ảnh gpt-image-1, hoặc 1 clip Higgsfield) — để dành khoe ở Demo Day Ngày 21.
+Được duyệt khi
+Có 1 Agent Team với trưởng nhóm + thành viên
+Ảnh group Telegram cho thấy Orchestrator thật sự điều phối — giao việc cho member, member báo cáo lại
+Ảnh Kanban trên dashboard goClaw cho thấy task của đội đang chạy
+Mẹo AI-First
+Cả ngày hôm nay bạn không tự viết caption, không tự vẽ ảnh, không tự dựng video. Bạn chỉ làm đúng một việc của ông chủ: tuyển người, lập đội, giao việc. Đây là nấc cao nhất của pattern Operator — bạn điều hành một bộ máy, không phải tự tay làm từng việc. Một câu nhắn cho trưởng nhóm = cả đội chuyển động.
+
+Hôm qua bạn là người làm.
+Hôm nay bạn là người điều hành một đội.

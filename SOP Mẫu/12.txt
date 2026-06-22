@@ -1,0 +1,107 @@
+SOP Ngày 12 — Tổng Kết Tuần 2 & Chuẩn Bị Deploy VPS
+
+Hôm nay là ngày bạn KIỂM CHỨNG — không phải ngày ngồi viết cảm nghĩ.
+
+Nhìn lại tuần 2 bạn đã ráp:
+
+✅ Ngày 9: Chatbot bán hàng 24/7
+
+✅ Ngày 10: Sepay nhận tiền + CRM + Admin panel
+
+✅ Ngày 11: Email marketing tự động
+
+✅ Ngày 6–12: 7 ngày đăng bài + danh sách chờ
+
+Một sự thật phũ phàng: đa số mọi người ráp từng mảnh nhưng chưa bao giờ tự đi hết 1 vòng xem cả hệ thống có thật sự chạy không. Form có thật sự gửi mail? Chatbot có trả lời? Mua thử có lên đơn trong /admin? Hôm nay bạn phải tự mình đi hết — và quay màn hình lại làm bằng chứng.
+
+Hôm nay bạn làm 4 việc:
+
+Test full luồng end-to-end — tự đóng vai khách, đi hết, quay video màn hình
+Đối soát số liệu thật — đếm bằng con số, không bằng cảm xúc
+Dọn & cứng hóa dự án — sạch sẽ, an toàn, sẵn sàng lên server
+Viết bài "lột xác 12 ngày" rồi đăng
+🔥 Mẹo của Dũng: Hệ thống chưa test không phải hệ thống — chỉ là hi vọng. Hôm nay biến hi vọng thành bằng chứng.
+
+▤ SOP — Hướng dẫn
+
+🔥 Mẹo của Dũng: Làm ngay trước khi đọc tiếp
+Copy toàn bộ SOP này, paste vào agent đang dùng và nói:
+
+"Đây là SOP tôi cần làm hôm nay. Hướng dẫn tôi từng bước một — mỗi lần chỉ 1 bước, chờ tôi làm xong báo lại rồi mới tiếp. Bị lỗi thì fix luôn. Bắt đầu đi."
+
+Bước 1 — Test full luồng end-to-end (BẮT BUỘC QUAY VIDEO)
+Đây là việc quan trọng nhất hôm nay. Bật phần mềm quay màn hình (Loom, OBS, hoặc tính năng quay màn hình có sẵn của máy/điện thoại) → quay lại toàn bộ quá trình bạn tự đóng vai khách đi hết luồng:
+
+Vào website → điền form danh sách chờ (dùng email dạng tên+test@gmail.com)
+Mở hộp thư → kiểm tra có nhận email chào mừng không
+Quay lại website → chat với chatbot 3 câu (hỏi giá, hỏi sản phẩm có hợp không, nói "để tôi nghĩ thêm")
+Bấm nút mua → quét QR Sepay chuyển 2.000đ thật
+Kiểm tra email xác nhận đơn hàng về hộp thư
+Vào /admin → xem đơn đã lên + chuyển sang trạng thái 'success' chưa
+Vừa làm vừa nói ra trong video: chỗ nào chạy, chỗ nào hỏng.
+
+Gặp lỗi ở bước nào? Dừng lại → copy lỗi → paste vào agent → "luồng [X] bị lỗi này, fix giúp tôi" → fix xong test lại bước đó. Ghi mỗi bug + cách fix vào file test_log.md.
+
+⚠️ Không hệ thống nào chạy đúng 100% ngay lần đầu. Bạn tìm ra bug hôm nay = thắng. Để khách thật tìm ra bug = thua.
+
+Bước 2 — Đối soát số liệu thật
+Mở agent → File → Open Folder → thư mục website → paste:
+
+"Đọc brain.db. Cho tôi con số chính xác: (1) Bao nhiêu người trong bảng customers/waitlist? (2) Bao nhiêu đơn trong bảng orders, trong đó bao nhiêu đơn trạng thái 'success'? (3) Tổng doanh thu thật đã nhận là bao nhiêu? Trình bày gọn."
+
+Tự đếm thêm: 7 ngày qua đã đăng bao nhiêu bài (mở brain_score.md ra đếm). Ghi tất cả vào file so_lieu.md.
+
+Bước 3 — Tự viết review 2 tuần BẰNG SỐ LIỆU
+Phần này tự viết tay, không nhờ AI — AI không sống 2 tuần đó cùng bạn, chỉ bạn mới biết thật sự cảm giác thế nào.
+
+Mở agent → thư mục my-brain → paste:
+
+"Tạo file week2_review.md với 5 câu hỏi sau, để trống chỗ trả lời cho tôi tự điền: (1) 12 ngày qua tôi đã build được gì? (2) Số liệu thật của tôi là gì? (3) Điều khó nhất tôi đã vượt qua? (4) Điều gì tôi làm chưa tốt? (5) Nếu bắt đầu lại từ ngày 1, tôi sẽ làm khác gì?"
+
+Mở week2_review.md → tự điền câu trả lời thật, dán số liệu từ so_lieu.md vào câu (2), không viết cho đẹp — viết thật là được.
+
+Bước 4 — Dọn & cứng hóa dự án để sẵn sàng lên server
+Mở agent → thư mục website → paste:
+
+"Tôi chuẩn bị đưa dự án này lên server thật. Hãy làm giúp tôi 4 việc và báo lại từng cái: (1) Quét toàn bộ code xem có API key / mật khẩu nào đang nằm lộ không — nếu có, đưa vào file .env và che lại. (2) Thêm validate cho trường email và số điện thoại trong form để khách không nhập sai, mất data liên hệ. (3) Viết file README.md hướng dẫn deploy cơ bản. (4) Tạo 1 bản backup của brain.db. Làm xong liệt kê cho tôi từng mục đã xử lý."
+
+Kiểm tra lại từng mục → còn thiếu thì bảo AI làm tiếp cho xong.
+
+Bị lỗi? Copy thông báo lỗi → paste vào AI → "bị lỗi này, fix giúp tôi."
+
+Bước 5 — Viết bài "lột xác 12 ngày"
+Mở agent → thư mục my-brain → paste:
+
+"Đọc week2_review.md và brand voice trong brain.db. Viết 1 bài đăng kể hành trình 12 ngày của tôi theo kiểu trước/sau — ngày 1 tôi chưa biết gì, giờ tôi đã có [dán số liệu thật]. Chân thật, không tô hồng, đúng giọng tôi. Có link website. Lưu vào day12.txt."
+
+Chuẩn bị thêm ảnh: 1 ảnh "ngày đầu" (màn hình trống / landing thô lúc mới làm) đặt cạnh 1 ảnh hệ thống hiện tại → ghép vào bài cho thấy rõ sự lột xác.
+
+Bước 6 — Đăng bài (chốt chuỗi 7 ngày)
+Hôm nay là ngày cuối của chuỗi 7 ngày đăng bài — đăng nhiều hơn bình thường nếu có thể:
+
+Bài chính: "lột xác 12 ngày" ở Bước 5 — đây là bài quan trọng nhất
++2 bài kéo người vào danh sách chờ theo plan.md
+Cập nhật brain_score.md lần cuối tối nay.
+
+Bước 7 — Nộp bài
+Video / screen recording đi hết luồng end-to-end (form → email chào mừng → chatbot → mua 2.000đ Sepay → email xác nhận → đơn 'success' trong /admin) — đây là bằng chứng chính, bắt buộc phải có video
+File test_log.md — bug đã gặp + đã fix
+Screenshot week2_review.md — 5 câu trả lời thật có số liệu
+Screenshot 4 mục đã dọn/cứng hóa (key đã giấu vào .env, form đã validate, README, backup brain.db)
+Link bài "lột xác 12 ngày" — ít nhất 2 kênh, link public
+✅ Được duyệt khi:
+
+Có video đi hết luồng — thấy rõ từng bước chạy thật trên màn hình, không phải chỉ ảnh tĩnh
+Mọi bug tìm thấy trong video đã được fix (test_log.md)
+week2_review.md có số liệu thật + tự viết tay
+4 mục cứng hóa đã xong — không còn API key lộ trong code
+Link bài đăng mở được — không phải ảnh chụp màn hình
+❌ Chưa đạt khi:
+
+Không có video, hoặc video không đi hết luồng
+Còn bug chưa fix mà vẫn nộp bài
+Review chung chung, không có số liệu, hoặc do AI viết thay
+Vẫn còn API key / mật khẩu lộ trong code
+Bài đăng bị private hoặc chỉ nộp ảnh
+💡 Mẹo AI-First
+AI fix bug thay bạn, đếm số thay bạn, viết bài đẹp thay bạn. Nhưng đi hết luồng và quay video thì phải tự bạn làm — đó là lúc bạn nhìn hệ thống của mình bằng đúng con mắt khách hàng. Rất nhiều người tưởng mọi thứ chạy ngon, tới khi quay video mới phát hiện email không gửi, chatbot trả lời trật, đơn không lên. Quay video = không tự lừa mình.

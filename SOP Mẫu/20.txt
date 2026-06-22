@@ -1,0 +1,763 @@
+Sản Phẩm Số + Kế Hoạch Kinh Doanh + Full Funnel
+
+⚠️ Lưu ý: Bài này chỉ dành cho thành viên thử thách — KHÔNG share link hướng dẫn ra nhóm hay cho người ngoài.
+
+Hôm nay làm 2 việc lớn trong 1 ngày:
+
+① Tạo & mở bán 1 sản phẩm số thật (phần mở đầu) — cuối phần này bạn có 1 link mua hàng live, gắn Sepay + Resend có sẵn từ Ngày 10/11.
+
+② Dùng trọn bộ 12 agent ASSP Dũng tặng để dựng full chiến lược + copywriting funnel thật quanh sản phẩm đó. Cuối ngày bạn có 1 cỗ máy bán hàng hoàn chỉnh deploy được, mang đi pitch tại Demo Day Ngày 21.
+
+19 ngày qua bạn chứng minh mình LÀM được — website, agent, automation. Hôm nay bạn vừa có thứ để bán, vừa lùi 1 bước lên cao để trả lời:
+
+"Tôi đang xây cái gì? Đi đâu? Bằng cách nào?"
+
+🎯 Khác biệt với "kế hoạch kinh doanh" thông thường: Kế hoạch của bạn không phải file Word khô khan — nó gồm sản phẩm live + chiến lược + assets thật: avatar thật, copy thật, ads thật, email sequence thật, sales script thật. Sẵn sàng bấm nút launch — chỉ chưa bấm thôi.
+
+🤖 AI-First xuyên suốt: AI làm — bạn duyệt và lắp ráp. Phần sản phẩm: AI tạo nội dung, bạn duyệt. Phần funnel: 12 agent mỗi con một việc — bạn gọi đúng agent, đọc output, duyệt. Bạn là tổng đạo diễn, agent là diễn viên. Pattern Operator ở mức cao nhất.
+
+⚠️ Bẫy phổ biến: "Cần làm chỉn chu cả 12 agent rồi mới qua agent sau" — không cần. Mục tiêu là sản phẩm live (dù thô) + rough draft trọn bộ funnel. Hoàn thành > Hoàn hảo. Refine sau khi có feedback từ Dũng ở Demo Day.
+
+Mục tiêu cuối ngày:
+
+1 sản phẩm số đã live trên web — có link mua thật, đã tự test mua 2.000đ
+1 thư mục ke-hoach-kinh-doanh/ đầy đủ ~12 file thật — từ avatar đến sales script — do AI tạo, bạn duyệt
+1 file index.html thuyết trình tổng — có nút "View" mở từng asset thật
+1 URL công khai (gợi ý yourdomain.com/ke-hoach) — đã gửi link cho Dũng qua Telegram trước Demo Day
+💰 Đây là đỉnh cao của 21 ngày. Sản phẩm trả lời câu "Bán cái gì". Funnel trả lời câu "Bán như thế nào để scale". Cộng lại = bạn không còn là người học vibe — bạn là operator có cỗ máy bán hàng thật.
+
+▤ SOP — Hướng dẫn
+
+📘 Hướng dẫn đầy đủ
+🔒 Nhắc lại: đừng share link này ra nhóm hay cho người ngoài thử thách.
+
+👉 Mở hướng dẫn Ngày 20 — Sản Phẩm Số + Kế Hoạch Kinh Doanh + Full Funnel
+
+Mở tab mới (chuột phải → Open in new tab) để vừa đọc vừa thao tác.
+
+🎯 Workflow trong guide
+Phần Mở Đầu · Tạo & bán sản phẩm số (5 bước nhanh — món khai vị) 0. Chốt ý tưởng → AI tạo nội dung (đọc brain.db) → đóng gói PDF/ZIP → định giá → đưa lên web (Sepay + Resend có sẵn) → tự mua thử 2.000đ. Bỏ qua research avatar/offer sâu — phần funnel bên dưới đã làm rồi.
+
+Phần 1 · Setup (Bước 01-02)
+
+Hiểu thứ tự 12 agent (output agent trước = input agent sau)
+Tạo thư mục ke-hoach-kinh-doanh/ + chuẩn bị business context (sản phẩm vừa tạo + brain.db)
+Phần 2 · Chạy 12 agent theo 5 chặng (Bước 03-07) 3. Chặng Foundation — Agent 01 Avatar Builder + 02 Brand Voice + 03 Hero Mechanism → 3 file MD 4. Chặng Money & Offer — Agent 04 Money Model + 05 Offer Architect + 06 HVCO Lead Magnet → 3 file MD 5. Chặng Funnel — Agent 07 Funnel Strategist → blueprint + visual.html 6. Chặng Copy — Agent 08 Ad Copy + 09 VSL Script + 10 Email Closer → ads + landing + VSL + email 7. Chặng Sales — Agent 11 Follow-Up + 12 Sales Call Script → follow-up + sales script
+
+Phần 3 · Roadmap + ASKS (Bước 08) 8. Vibe 13-roadmap-asks.md — Roadmap 90 ngày (3 tháng × 3 milestone) + ASKS cụ thể (điểm yếu nhất, cần Dũng hỗ trợ gì, 3 vấn đề sợ kẹt nhất)
+
+Phần 4 · File HTML thuyết trình (Bước 09) 9. Vibe index.html — 9 sections đẹp + nút "View" mở thẳng từng asset thật
+
+Phần 5 · Deploy + gửi Dũng (Bước 10) 10. Deploy subpath → yourdomain.com/ke-hoach (VPS có sẵn từ Ngày 14). Backup: GitHub Pages / Vercel nếu kẹt 11. Gửi link cho Dũng qua Telegram theo template trong guide — nói rõ phần ASKS
+
+💡 Tinh thần Ngày 20
+"Sáng nay bạn có thứ để bán. Chiều nay bạn có bản đồ + cỗ máy bán nó để scale."
+
+99% người làm business chưa bao giờ trong 1 ngày vừa ra mắt sản phẩm thật vừa vạch full funnel + assets. Hôm nay bạn làm cả hai, với AI làm 90% công việc. Ngày mai bạn pitch — không phải pitch ý tưởng, pitch cỗ máy đã build xong.
+
+Ngày 20 · Tuần 4
+Bản Kế Hoạch Kinh Doanh +
+Full Funnel Sẵn Sàng Launch
+Hôm nay làm 2 việc lớn. Đầu tiên: tạo & mở bán một sản phẩm số thật — cuối phần mở đầu bạn có 1 link mua hàng live. Sau đó: dùng trọn bộ 12 agent ASSP tôi tặng để dựng full chiến lược + copywriting funnel quanh nó. Cuối ngày bạn có một cỗ máy bán hàng hoàn chỉnh, mang đi pitch tại Demo Day Ngày 21.
+
+Mục tiêu cuối ngày
+Cuối hôm nay bạn có:
+
+1 sản phẩm số đã live trên web — có link mua thật, gắn Sepay + Resend sẵn có
+Một thư mục đầy đủ ~12 file thật — từ avatar khách hàng đến sales script — do AI tạo, bạn duyệt
+Một file HTML thuyết trình tổng hợp toàn bộ kế hoạch — có nút mở từng asset thật
+Bản kế hoạch deploy được — gửi link cho Dũng xem trước Demo Day
+Tinh thần ngày hôm nay
+19 ngày qua bạn build công cụ — website, agent, automation, sản phẩm số đầu tiên. Bạn đã chứng minh được mình LÀM được. Hôm nay là ngày bạn lùi lại 1 bước, lên cao 1 chút, để trả lời câu hỏi quan trọng nhất:
+
+"Tôi đang xây cái gì? Đi đâu? Bằng cách nào?"
+
+Khác với "kế hoạch kinh doanh" thông thường — kế hoạch của bạn không phải tài liệu word khô khan. Nó gồm chiến lược + assets thật: avatar thật, copy thật, ads thật, email sequence thật, sales script thật. Sẵn sàng bấm nút launch. Chỉ chưa bấm thôi.
+
+Đây là thứ bạn sẽ pitch ở Demo Day Ngày 21. Không phải slides trống — mà là cỗ máy đã build xong.
+
+AI-First xuyên suốt — nguyên tắc vàng hôm nay
+12 agent làm — bạn duyệt và lắp ráp. Bạn không tự nghĩ avatar, không tự viết copy, không tự design funnel. Mỗi agent có nhiệm vụ riêng — bạn chỉ cần gọi đúng agent, cung cấp đủ input, đọc output, duyệt hoặc bảo agent refine.
+
+Bạn là tổng đạo diễn. Agent là diễn viên. Đây là pattern Operator ở mức cao nhất.
+
+Bẫy phổ biến — đọc trước khi bắt đầu
+"Tôi cần làm chỉn chu cả 12 agent rồi mới chuyển sang agent tiếp theo" — không cần. Mục tiêu hôm nay là rough draft của trọn bộ funnel, không phải phiên bản hoàn hảo của 1 phần. Chạy nhanh, ra v1, tổng hợp lại. Refine sau khi có feedback từ Dũng ở Demo Day.
+
+Hoàn thành > Hoàn hảo. Có cả bộ rough draft > Có 3 phần xuất sắc + 9 phần trống.
+
+Bức tranh tổng thể — flow toàn bộ Ngày 20
+PHẦN MỞ ĐẦU · Tạo & bán sản phẩm số
+  Chốt ý tưởng → AI tạo nội dung → đóng gói → bán live (Sepay)
+↓
+PHẦN 1 · Setup
+  Hiểu 12 agent + tạo thư mục ke-hoach-kinh-doanh/
+  Chuẩn bị business context (sản phẩm vừa tạo + brain.db)
+↓
+PHẦN 2 · Chạy 12 agent theo 5 chặng
+  Chặng 1: Hiểu khách + brand (Agent 01-03) → 3 file MD
+  Chặng 2: Money + Offer + Lead Magnet (Agent 04-06) → 3 file MD
+  Chặng 3: Funnel Blueprint (Agent 07) → blueprint + visual HTML
+  Chặng 4: Copywriting (Agent 08-10) → ads + landing + VSL + email
+  Chặng 5: Sales tools (Agent 11-12) → follow-up + sales script
+↓
+PHẦN 3 · Roadmap + ASKS
+  90 ngày tới làm gì + bạn cần gì để đi nhanh hơn
+↓
+PHẦN 4 · Vibe file HTML thuyết trình
+  index.html — tổng hợp + nút "View" mở từng asset thật
+↓
+PHẦN 5 · Deploy
+  Đẩy lên web → gửi link Dũng trước Demo Day
+Phần Mở Đầu · Sản phẩm trước, phễu sau
+Tạo & Bán Sản Phẩm Số
+PHẦN MỞ ĐẦU
+Tạo & Bán Sản Phẩm Số
+Trước khi build cỗ máy copywriting 12-agent ở phần dưới, bạn cần một thứ để bán đã. Phần này gói toàn bộ việc tạo & mở bán một sản phẩm số thành một quy trình gọn — 5 bước, AI làm, bạn duyệt. Đây là món khai vị; phễu phía sau mới là món chính.
+
+Bỏ qua research sâu ở đây
+Đừng nghiên cứu avatar / offer chi tiết ở phần này. Phễu bên dưới đã làm rồi — Agent 01 (Avatar Builder) và Agent 05 (Offer Architect) đào sâu khách hàng và offer giúp bạn. Ở đây bạn chỉ cần chốt nhanh một ý tưởng để có sản phẩm thật, rồi để phễu lo phần tinh chỉnh.
+
+Bước A — Chốt nhanh ý tưởng + chọn dạng sản phẩm
+Đừng ngồi nghĩ lan man. Bạn giỏi gì, vừa học được gì trong khoá này mà người khác chưa biết — đóng hộp đúng cái đó. Chọn một dạng tạo được trong ngày: ebook (15–30 trang), bộ skills, prompt pack, hoặc SOP pack. Chưa biết chọn gì thì lấy ebook — dễ nhất.
+
+Prompt · Chốt ý tưởng + chọn dạng
+COPY
+Tôi muốn ra mắt nhanh 1 sản phẩm số để bán trong hôm nay.
+
+Về tôi:
+- Tôi giỏi / hay được hỏi về: [điền]
+- Tôi vừa học được trong khoá này mà người khác chưa biết: [điền]
+
+Gợi ý cho tôi 3 ý tưởng sản phẩm CỤ THỂ. Mỗi ý gồm:
+- Tên sản phẩm
+- Dạng (ebook / bộ skills / prompt pack / SOP pack)
+- Nội dung chính (~5 mục lớn)
+- Người mua
+
+Sau đó chọn giúp tôi 1 ý LÀM NHANH NHẤT trong 1 ngày và giải thích ngắn tại sao.
+
+Lưu ý: KHÔNG cần phân tích avatar hay offer sâu — phần đó tôi sẽ làm ở bước sau. Ở đây chỉ cần chốt ý tưởng + dạng để bắt tay vào tạo. Trả lời thẳng, không khen lấy lòng.
+Bước B — AI tạo nội dung theo giọng của bạn, đóng gói file
+Bảo agent đọc brain.db để bắt đúng brand voice của bạn — đây là thứ khiến sản phẩm là của bạn, không phải giọng AI generic. Ra outline trước, duyệt, rồi mới gen nội dung, cuối cùng đóng gói thành PDF (ebook/pack) hoặc ZIP (bộ skills).
+
+Prompt · Tạo nội dung + đóng gói
+COPY
+Đọc brain.db trong my-brain/ để hiểu brand voice, expertise và audience của tôi. Viết đúng giọng đó — không dùng giọng generic của AI.
+
+Sản phẩm tôi muốn tạo:
+- Tên: [điền]
+- Dạng: [ebook / bộ skills / prompt pack / SOP pack]
+- Chủ đề: [điền]
+- Người đọc xong làm được gì cụ thể: [điền]
+
+Làm tuần tự:
+1. Đề xuất outline (các chương/mục) — chờ tôi duyệt trước khi viết.
+2. Sau khi tôi duyệt: viết full nội dung từng phần, có ví dụ thật, áp dụng được ngay, key takeaway cuối mỗi phần.
+3. Đóng gói thành phẩm:
+   - Nếu ebook / prompt pack / SOP pack: tạo 1 file HTML layout sách đẹp → hướng dẫn tôi Chrome > Print > Save as PDF.
+   - Nếu bộ skills: tạo README + đóng gói tất cả vào 1 file ZIP.
+
+Cho tôi xem từng phần rồi mới làm tiếp.
+Thêm ví dụ thật của bạn
+Đọc lại draft và chèn 2–3 ví dụ thật từ kinh nghiệm cá nhân. AI không tự nghĩ ra được những thứ này — và đây chính là lý do khách mua sản phẩm của bạn thay vì một file AI generic khác.
+
+Bước C — Định giá
+Đừng nghĩ quá nhiều. Chọn 1 mức theo dạng sản phẩm: 97k cho prompt pack / SOP pack (mua không cần suy nghĩ), 297k cho ebook / mini guide (điểm ngọt), 497k cho ebook chuyên sâu / bộ skills nhỏ, 1–2tr cho bộ skills lớn hoặc system đầy đủ. Sản phẩm đầu tay an toàn nhất ở khoảng 197k–497k; có vài review rồi tăng giá sau.
+
+Bước D — Đưa lên website, dùng lại đồ đã có sẵn
+Bạn không phải dựng lại gì cả. Sepay đã gắn vào web từ Ngày 10, Resend gửi email từ Ngày 11 — hôm nay chỉ thêm một "kệ hàng" mới: landing + checkout có VietQR + trang cảm ơn/tải file. Agent đọc codebase là tự hiểu các integration đó đang dùng thế nào.
+
+Prompt · Landing + checkout + trang tải file
+COPY
+Đọc codebase website của tôi. Tôi đã có sẵn Sepay (tích hợp từ Ngày 10) và Resend (từ Ngày 11) — tìm cách chúng đang được dùng trong project và DÙNG LẠI đúng pattern đó, không cài thêm gì, không sửa cái đang chạy.
+
+Thêm flow bán 1 sản phẩm số, gồm 3 trang:
+
+TRANG 1 — Landing: /san-pham/[slug]
+- Tên + tagline, "khách nhận được gì" (3–5 ý), dành cho ai, vài câu về tác giả
+- Box giá + nút "Mua ngay [giá]đ", dòng trust: "Thanh toán VietQR · File giao ngay"
+
+TRANG 2 — Checkout: /san-pham/[slug]/checkout
+- Form: tên, email khách
+- Bấm thanh toán → gọi Sepay tạo đơn + hiện VietQR ngay trên trang để khách quét
+- Lưu order vào DB (tên, email, sản phẩm, giá, status=pending)
+
+TRANG 3 — Cảm ơn/Tải: /san-pham/[slug]/cam-on
+- Sepay callback verify thanh toán thành công → hiện nút TẢI FILE
+- Đồng thời gửi email qua Resend kèm link tải (để khách tải lại bất cứ lúc nào)
+
+Yêu cầu: đúng màu/font web hiện tại, mobile responsive, deploy lên VPS, báo tôi URL 3 trang để test. Làm tuần tự từng trang, cho tôi xem rồi mới sang trang sau.
+Bước E — Tự mua thử 2.000đ để xác nhận đã live
+Đừng tin "chắc là chạy". Mở landing page trên điện thoại, mua thật với giá tối thiểu, quét VietQR chuyển khoản, kiểm tra cả hai kênh giao hàng. Test xong mới được coi là live.
+
+Xác nhận sản phẩm đã live
+Trên điện thoại: mở landing → bấm Mua → điền tên/email → quét VietQR chuyển 2.000đ → trang cảm ơn hiện nút tải và tải được file → email từ Resend về trong vài phút, link trong email tải được. Cả hai kênh chạy = sản phẩm thật sự đã live. Sau đó hoàn lại tiền cho chính mình.
+
+Xong — bạn đã có một sản phẩm thật, một link mua thật. Giờ ta dựng cỗ máy copywriting 12-agent để biến khách lạ thành người mua: bắt đầu Phần Một.
+
+Phần Một
+Setup & Hiểu Bộ 12 Agent
+BƯỚC 01
+Hiểu bộ 12 agent ASSP — và thứ tự chạy
+Bộ 12 agent ASSP của tôi không phải 12 prompt rời rạc — chúng là 1 framework có thứ tự. Output của agent trước là input của agent sau. Chạy đúng thứ tự thì mỗi agent chỉ mất ít công, vì context đã được xây dần.
+
+#	Tên agent	Output file
+01	Avatar Builder	avatar.md
+02	Brand Voice Builder	brand-voice.md
+03	Hero Mechanism Builder	hero-mechanism.md
+04	Money Model Architect	money-model.md
+05	Offer Architect	offer.md
+06	HVCO Creator	hvco-leadmagnet.md
+07	Funnel Strategist	funnel-blueprint.md + visual.html
+08	Ad Copy Machine	ads-copy.md + landing.html
+09	VSL Scriptwriter	vsl-script.md
+10	Email Closer	email-sequence.md
+11	Follow-Up Engine	follow-up.md
+12	Sales Call Script	sales-script.md
+12 agent như dây chuyền sản xuất
+Tưởng tượng 12 chuyên gia ngồi cạnh nhau, mỗi người có nhiệm vụ riêng. Avatar Builder nói "khách hàng là ai" → đưa cho Brand Voice nói "viết cho họ kiểu gì" → đưa tiếp cho Offer Architect nói "bán cho họ gì"... cứ thế đến cuối. Bạn không cần là chuyên gia — bạn là người điều hành dây chuyền.
+1.1 — Tạo cấu trúc thư mục chuẩn
+Trước khi chạy agent đầu tiên, tạo thư mục để lưu output. Mở agent coding trong thư mục dự án (nơi bạn lưu code/skills) và bảo:
+
+Prompt · Tạo thư mục kế hoạch kinh doanh
+COPY
+Tạo cho tôi 1 thư mục mới tên ke-hoach-kinh-doanh/ trong workspace hiện tại.
+
+Cấu trúc:
+
+ke-hoach-kinh-doanh/
+├── README.md (giải thích thư mục này là gì)
+├── 01-avatar.md (placeholder)
+├── 02-brand-voice.md (placeholder)
+├── 03-hero-mechanism.md (placeholder)
+├── 04-money-model.md (placeholder)
+├── 05-offer.md (placeholder)
+├── 06-hvco-leadmagnet.md (placeholder)
+├── 07-funnel-blueprint.md (placeholder)
+├── 07-funnel-visual.html (placeholder)
+├── 08-ads-copy.md (placeholder)
+├── 08-landing.html (placeholder)
+├── 09-vsl-script.md (placeholder)
+├── 10-email-sequence.md (placeholder)
+├── 11-follow-up.md (placeholder)
+├── 12-sales-script.md (placeholder)
+└── index.html (placeholder — file thuyết trình tổng)
+
+Mỗi file MD/HTML chỉ cần có 1 dòng comment ở đầu ghi tên + agent nào sẽ tạo nội dung.
+
+Sau khi tạo xong: list ra cho tôi xem cấu trúc thư mục.
+ke-hoach-kinh-doanh/
+├── README.md                    # giới thiệu thư mục
+├── 01-avatar.md                 # Agent 01
+├── 02-brand-voice.md            # Agent 02
+├── 03-hero-mechanism.md         # Agent 03
+├── 04-money-model.md            # Agent 04
+├── 05-offer.md                  # Agent 05
+├── 06-hvco-leadmagnet.md        # Agent 06
+├── 07-funnel-blueprint.md       # Agent 07
+├── 07-funnel-visual.html        # Agent 07 (visual)
+├── 08-ads-copy.md               # Agent 08
+├── 08-landing.html              # Agent 08 (landing page)
+├── 09-vsl-script.md             # Agent 09
+├── 10-email-sequence.md         # Agent 10
+├── 11-follow-up.md              # Agent 11
+├── 12-sales-script.md           # Agent 12
+└── index.html                   # Thuyết trình tổng
+Kiểm tra điểm
+Chạy ls ke-hoach-kinh-doanh/ → thấy đủ 16 file (15 placeholder + README.md). Cấu trúc số đầu tên file giúp tự sắp xếp theo thứ tự agent — không bị lẫn.
+
+BƯỚC 02
+Chuẩn bị business context — input cho 12 agent
+Trước khi chạy agent đầu tiên, ngồi 5-10 phút trả lời 4 câu hỏi nền tảng. Tất cả 12 agent đều cần biết những thứ này — chuẩn bị 1 lần dùng cho cả ngày.
+
+Prompt · Tổng hợp business context
+COPY
+Tạo file ke-hoach-kinh-doanh/00-business-context.md với nội dung sau (tôi sẽ điền):
+
+# Business Context — [Tên bạn / Tên thương hiệu]
+
+## 1. Sản phẩm / dịch vụ chính
+- Tên sản phẩm: [tên — sản phẩm bạn vừa tạo ở Phần Mở Đầu, hoặc sản phẩm khác]
+- Dạng: [ebook / khóa học / dịch vụ / SaaS / bộ skills / ...]
+- Đang ở giai đoạn: [chưa bán / đã bán vài đơn / đã có khách đều / đang scale]
+- Giá hiện tại: [giá]
+- Link sản phẩm (nếu có): [link]
+
+## 2. Khách hàng đang có (nếu có)
+- Đã bán cho ai? [mô tả 2-3 khách thật, hoặc ghi "chưa có khách thật, đang đoán"]
+- Họ tìm đến qua kênh nào? [FB / referral / search / ...]
+- Họ trả tiền vì điều gì? [insight gì có giá trị nhất với họ]
+
+## 3. Tài sản đã có sau 19 ngày
+- Website chạy trên VPS với: [list module — Sepay, agent Telegram, skills, brain.db, ...]
+- Bộ skills đã có: [list các skill đã build/dùng]
+- Brand voice đã định hình trong brain.db: [yes/no]
+
+## 4. Mục tiêu kinh doanh 12 tháng tới
+- Mô hình kinh doanh tôi muốn xây: [info products / dịch vụ / hybrid / ...]
+- Doanh thu mong muốn 12 tháng: [con số cụ thể, dù chỉ là dự kiến]
+- 1 năm nữa tôi muốn vị trí của mình trên thị trường VN là: [...]
+
+Sau khi tôi điền xong: lưu file lại, đây là input chung cho cả 12 agent.
+AI-First — agent giúp bạn điền nếu kẹt
+Câu nào không biết trả lời? Bảo agent: "Đọc brain.db và sản phẩm tôi vừa tạo ở Phần Mở Đầu. Gợi ý cho tôi câu trả lời cho [câu X], rồi tôi điều chỉnh." Agent biết business của bạn — không phải bạn ngồi nhìn trang trắng.
+
+Kiểm tra điểm
+File 00-business-context.md đã có đủ 4 phần được điền (dù còn rough). Đây là "passport" của bạn — paste vào mỗi agent ASSP khi cần.
+
+Phần Hai
+Chạy 12 Agent Theo 5 Chặng
+Quy tắc chung khi chạy mỗi agent
+1. Mở chat mới cho từng chặng — context riêng, không bị nhiễu.
+2. Inject skill bằng @filename hoặc đọc thẳng SKILL.md trong context.
+3. Paste 00-business-context.md trước — agent biết bạn là ai.
+4. Output từ agent trước → paste làm input cho agent sau.
+5. Lưu output vào file đúng tên theo bảng ở Bước 01.
+
+BƯỚC 03
+Chặng 1 — Hiểu khách hàng + Brand (Agent 01-03)
+Chặng 1 · Foundation
+Bạn đang phục vụ ai? Bằng giọng văn nào? Khác biệt thế nào?
+Agent 01 Avatar Builder · 02 Brand Voice Builder · 03 Hero Mechanism Builder
+3 agent đầu xác định nền tảng — không có nền tảng đúng thì 9 agent sau làm cũng không hiệu quả. Output là 3 file MD: avatar, brand voice, hero mechanism.
+3.1 — Agent 01: Avatar Builder
+Prompt · Chạy Avatar Builder
+COPY
+@assp-avatar-builder/SKILL.md
+
+Đọc skill ASSP Avatar Builder. Sau đó đọc file business context của tôi:
+@ke-hoach-kinh-doanh/00-business-context.md
+
+Chạy quy trình Avatar Builder. Tôi đã có khách thật / chưa có khách / có một ít — hỏi tôi nếu cần làm rõ.
+
+Cuối: lưu output vào ke-hoach-kinh-doanh/01-avatar.md.
+3.2 — Agent 02: Brand Voice Builder
+Prompt · Chạy Brand Voice Builder
+COPY
+@assp-brand-voice-builder/SKILL.md
+
+Đọc skill ASSP Brand Voice Builder. Đọc thêm:
+- @ke-hoach-kinh-doanh/00-business-context.md
+- @ke-hoach-kinh-doanh/01-avatar.md
+- @my-brain/brand_voice (nếu đã có trong brain.db)
+
+Chạy quy trình. Nếu tôi đã có brand_voice trong brain.db — refine nó dựa trên avatar mới. Nếu chưa có — xây từ đầu.
+
+Cuối: lưu vào ke-hoach-kinh-doanh/02-brand-voice.md.
+3.3 — Agent 03: Hero Mechanism Builder
+Prompt · Chạy Hero Mechanism Builder
+COPY
+@assp-hero-mechanism-builder/SKILL.md
+
+Đọc skill. Đọc thêm:
+- @ke-hoach-kinh-doanh/00-business-context.md
+- @ke-hoach-kinh-doanh/01-avatar.md
+- @ke-hoach-kinh-doanh/02-brand-voice.md
+
+Chạy quy trình Hero Mechanism. Mục tiêu: tìm cơ chế khác biệt — vì sao là tôi chứ không phải đối thủ.
+
+Cuối: lưu vào ke-hoach-kinh-doanh/03-hero-mechanism.md.
+Kiểm tra điểm — kết thúc Chặng 1
+Bạn có 3 file thật trong thư mục: 01-avatar.md, 02-brand-voice.md, 03-hero-mechanism.md. Đọc qua 3 file — bạn có đồng ý với những gì agent viết không? Nếu chỗ nào sai — bảo agent refine ngay, đừng để đến cuối ngày.
+
+AI-First — refine output thay vì viết lại
+Output agent chưa ưng? Đừng tự sửa từng câu. Bảo agent: "Đọc lại file 01-avatar.md. Phần [X] chưa đúng vì [Y]. Refine lại theo hướng [Z]." Nhanh hơn nhiều.
+
+BƯỚC 04
+Chặng 2 — Money Model + Offer + Lead Magnet (Agent 04-06)
+Chặng 2 · Mô hình tiền
+Bạn kiếm tiền từ đâu? Bán gì cụ thể? Mồi nhử miễn phí là gì?
+Agent 04 Money Model · 05 Offer Architect · 06 HVCO Creator
+3 agent này định nghĩa "máy in tiền" của bạn. Agent 04 vạch bản đồ doanh thu (one-time / recurring / upsell). Agent 05 thiết kế offer chính thật chi tiết. Agent 06 tạo lead magnet (mồi nhử miễn phí) để thu lead.
+Prompt · Chạy Money Model + Offer + HVCO
+COPY
+@assp-money-model-architect/SKILL.md
+@assp-offer-architect/SKILL.md
+@assp-hvco-creator/SKILL.md
+
+Đọc 3 skill trên. Đọc thêm context:
+- @ke-hoach-kinh-doanh/00-business-context.md
+- @ke-hoach-kinh-doanh/01-avatar.md
+- @ke-hoach-kinh-doanh/02-brand-voice.md
+- @ke-hoach-kinh-doanh/03-hero-mechanism.md
+
+Chạy 3 agent theo thứ tự, từng agent một (chờ tôi duyệt giữa các agent):
+
+1. Money Model Architect → vạch bản đồ doanh thu của tôi.
+   Lưu output vào ke-hoach-kinh-doanh/04-money-model.md.
+
+2. Offer Architect → build offer chính chi tiết. Có thể dựa trên sản phẩm vừa tạo ở Phần Mở Đầu hoặc tạo offer mới (rộng hơn) tùy money model.
+   Lưu output vào ke-hoach-kinh-doanh/05-offer.md.
+
+3. HVCO Creator → tạo lead magnet (mồi nhử miễn phí) phù hợp với offer chính.
+   Lưu output vào ke-hoach-kinh-doanh/06-hvco-leadmagnet.md.
+
+Sau mỗi agent — pause để tôi đọc và duyệt.
+AI-First — chạy 3 agent trong 1 chat tiết kiệm thời gian
+Đừng mở 3 chat riêng cho 3 agent. Mở 1 chat, inject cả 3 SKILL.md + business context — agent tự chạy tuần tự, bạn chỉ cần duyệt giữa các agent. Context tích lũy giúp agent sau hiểu sâu hơn.
+
+Kiểm tra điểm — kết thúc Chặng 2
+3 file mới: 04-money-model.md, 05-offer.md, 06-hvco-leadmagnet.md. Đến giờ bạn đã có nửa bản kế hoạch — biết khách hàng là ai, brand voice thế nào, bán gì, kiếm tiền ra sao, mồi nhử gì.
+
+BƯỚC 05
+Chặng 3 — Funnel Blueprint (Agent 07)
+Chặng 3 · Bản thiết kế
+Hành trình khách hàng từ "người lạ" đến "khách hàng" gồm những bước gì?
+Agent 07 Funnel Strategist (key bridge)
+Đây là agent quan trọng nhất — vạch blueprint funnel chi tiết. Output là input cho 5 agent copywriting còn lại. Nếu blueprint sai — copy sau đó cũng lệch.
+Prompt · Chạy Funnel Strategist
+COPY
+@assp-funnel-strategist/SKILL.md
+
+Đọc skill. Đọc thêm:
+- @ke-hoach-kinh-doanh/00-business-context.md
+- @ke-hoach-kinh-doanh/04-money-model.md
+- @ke-hoach-kinh-doanh/05-offer.md
+- @ke-hoach-kinh-doanh/06-hvco-leadmagnet.md
+
+Chạy quy trình Funnel Strategist đầy đủ:
+
+1. Trình bày 11 loại funnel + Larger Market Formula
+2. Gợi ý 2-3 loại phù hợp với offer + budget của tôi (hỏi tôi nếu cần data về budget/khách mục tiêu/tháng)
+3. Sau khi tôi confirm → tính unit economics
+4. Vạch chi tiết từng bước
+5. Xuất 2 file:
+   - Visual funnel HTML đẹp (theo màu loại trang) → ke-hoach-kinh-doanh/07-funnel-visual.html
+   - Blueprint chi tiết MD → ke-hoach-kinh-doanh/07-funnel-blueprint.md
+
+Blueprint phải đủ để Agent 08-12 viết toàn bộ copy không cần hỏi thêm.
+AI-First — không tự chọn loại funnel
+Agent 07 sẽ show 11 loại funnel + tự gợi ý 2-3 loại phù hợp với bạn. Đừng tự chọn theo cảm tính — nghe agent giải thích Larger Market Formula trước, hỏi thêm nếu chưa rõ, rồi mới quyết. Agent có lý do của nó.
+
+Kiểm tra điểm — kết thúc Chặng 3
+Mở file 07-funnel-visual.html trong browser → thấy sơ đồ funnel có màu, từng trang có mục đích rõ. File 07-funnel-blueprint.md chi tiết từng bước. Đến đây bạn đã có "bản thiết kế cỗ máy" — chỉ còn lắp linh kiện vào.
+
+Đây là điểm dừng cuối để điều chỉnh chiến lược
+Sau Chặng 3 là viết copy hàng loạt. Nếu blueprint sai — sửa ngay tại đây. Đọc kỹ funnel-blueprint.md, tự hỏi: "Nếu là khách hàng của tôi, tôi có đi qua flow này không?" Không đồng ý chỗ nào — bảo Agent 07 refine.
+
+BƯỚC 06
+Chặng 4 — Copywriting funnel (Agent 08-10)
+Chặng 4 · Sản xuất copy hàng loạt
+Viết toàn bộ copy theo blueprint — ads, landing, VSL, email
+Agent 08 Ad Copy Machine · 09 VSL Scriptwriter · 10 Email Closer
+3 agent này dùng blueprint từ Chặng 3 để viết copy thật cho từng trang/asset. Output: ads-copy.md, landing.html, vsl-script.md, email-sequence.md.
+Prompt · Chạy 3 agent copywriting tuần tự
+COPY
+@assp-ad-copy-machine/SKILL.md
+@assp-vsl-scriptwriter/SKILL.md
+@assp-email-closer/SKILL.md
+
+Đọc 3 skill. Đọc thêm context đầy đủ:
+- @ke-hoach-kinh-doanh/00-business-context.md
+- @ke-hoach-kinh-doanh/01-avatar.md
+- @ke-hoach-kinh-doanh/02-brand-voice.md
+- @ke-hoach-kinh-doanh/03-hero-mechanism.md
+- @ke-hoach-kinh-doanh/05-offer.md
+- @ke-hoach-kinh-doanh/06-hvco-leadmagnet.md
+- @ke-hoach-kinh-doanh/07-funnel-blueprint.md
+
+Chạy 3 agent theo thứ tự, lưu output đúng file:
+
+1. Ad Copy Machine → viết:
+   - Ad copy cho Facebook + Google (theo blueprint funnel)
+   - Landing page copy (HTML đầy đủ, sẵn deploy được)
+   Lưu: ke-hoach-kinh-doanh/08-ads-copy.md + 08-landing.html
+
+2. VSL Scriptwriter → viết kịch bản VSL nếu funnel có VSL.
+   Nếu funnel KHÔNG có VSL — agent ghi rõ "funnel này không cần VSL" và skip.
+   Lưu: ke-hoach-kinh-doanh/09-vsl-script.md
+
+3. Email Closer → viết chuỗi email theo blueprint.
+   Lưu: ke-hoach-kinh-doanh/10-email-sequence.md
+
+Tự rà context hiện tại từ các file đã đọc, hỏi thêm khi cần. Output phải dùng được ngay, không phải ví dụ minh họa.
+AI-First — copy không ưng → bảo agent refine theo brand voice
+Đọc xong copy thấy generic? Bảo agent: "Đọc lại 02-brand-voice.md. Phần [X] đang viết quá AI/quá chung. Refine lại đúng giọng văn brand của tôi — câu ngắn hơn, có cá tính, kể chuyện thay vì liệt kê." Agent sửa nhanh hơn bạn tự viết.
+
+Landing page — 2 hướng để bạn chọn
+Agent 08 sẽ tạo landing page mới. Bạn có 2 hướng — chọn 1:
+
+Hướng A — Tạo mới hoàn toàn: landing trong funnel chính (cho offer rộng hơn sản phẩm vừa tạo). Bảo agent: "Tạo landing page mới hoàn toàn cho offer chính trong funnel."
+Hướng B — Refine landing vừa tạo: dùng output Agent 08 để cải thiện landing đã có. Bảo agent: "Tôi đã có landing tại [yourdomain.com/san-pham/...]. Đọc landing đó, viết lại theo copy chuẩn ASSP, output thành phiên bản nâng cấp."
+Chọn Hướng B nếu sản phẩm vừa tạo (Phần Mở Đầu) chính là offer chính trong funnel này. Chọn Hướng A nếu funnel này là cho offer khác/rộng hơn.
+
+Kiểm tra điểm — kết thúc Chặng 4
+Bạn có thêm ~4 file: 08-ads-copy.md, 08-landing.html, 09-vsl-script.md (hoặc note skip), 10-email-sequence.md. Mở landing.html trong browser → render đẹp được, đọc được copy.
+
+BƯỚC 07
+Chặng 5 — Sales tools (Agent 11-12)
+Chặng 5 · Khép vòng
+Khách lạnh re-engage thế nào? Gọi điện chốt deal nói gì?
+Agent 11 Follow-Up Engine · 12 Sales Call Script
+2 agent cuối phục vụ 2 tình huống: (1) khách đã quan tâm nhưng chưa mua → nuôi dưỡng tiếp; (2) khách high-ticket cần gọi điện 1-1 chốt. Nếu mô hình của bạn không gọi điện chốt — Agent 12 có thể skip.
+Prompt · Chạy Follow-Up + Sales Call
+COPY
+@assp-follow-up-engine/SKILL.md
+@assp-sales-call-script/SKILL.md
+
+Đọc 2 skill. Đọc thêm:
+- @ke-hoach-kinh-doanh/00-business-context.md
+- @ke-hoach-kinh-doanh/01-avatar.md
+- @ke-hoach-kinh-doanh/05-offer.md
+- @ke-hoach-kinh-doanh/07-funnel-blueprint.md
+- @ke-hoach-kinh-doanh/10-email-sequence.md
+
+Chạy:
+
+1. Follow-Up Engine → viết chuỗi nuôi dưỡng cho lead lạnh (chưa mua sau N ngày).
+   Lưu: ke-hoach-kinh-doanh/11-follow-up.md
+
+2. Sales Call Script:
+   - Nếu mô hình của tôi CÓ gọi điện chốt deal (high-ticket / dịch vụ / coaching) → viết script đầy đủ.
+   - Nếu mô hình KHÔNG gọi điện (chỉ self-service qua web) → ghi 1 file ngắn nói rõ "mô hình này không cần sales call, output skip" và đề xuất hình thức khép deal khác (chat support, demo call ngắn, ...)
+   Lưu: ke-hoach-kinh-doanh/12-sales-script.md
+Kiểm tra điểm — kết thúc Chặng 5 (xong 12 agent!)
+Bạn có đủ ~12 file MD/HTML trong thư mục. Chạy ls ke-hoach-kinh-doanh/ → đếm — không file nào còn là placeholder trống. Đây là toàn bộ funnel của bạn, sẵn để launch khi nào bạn muốn.
+
+AI-First — agent biết khi nào cần skip
+Agent 12 (Sales Call) tự nhận diện được mô hình của bạn có cần gọi điện hay không — bằng cách đọc money-model.md và offer.md. Tin agent. Nếu agent nói "không cần script gọi điện cho mô hình self-service này" — đó là câu trả lời đúng.
+
+Không chạy đủ 12 agent — không sao
+Mục tiêu là kế hoạch đủ thuyết phục để pitch, không phải checklist 12/12. Nếu bạn không kịp 1-2 agent (VD: VSL nếu funnel không có video, Sales Call nếu không gọi điện) — skip. Trong file thuyết trình ở Phần 4, ghi rõ phần đó "skip — không phù hợp với mô hình" + lý do.
+
+Phần Ba
+Roadmap 90 Ngày + ASKS
+BƯỚC 08
+Vibe roadmap 90 ngày + xác định ASKS cho Demo Day
+Bạn đã có chiến lược + assets. Giờ vạch ra: 90 ngày tới làm gì cụ thể để biến những file kia thành doanh thu thật. Và quan trọng — bạn cần gì để đi nhanh hơn. Phần ASKS này là cái Dũng sẽ chú ý nhất ở Demo Day.
+
+Prompt · Vibe Roadmap + ASKS
+COPY
+Đọc toàn bộ thư mục ke-hoach-kinh-doanh/ — tất cả 12 file output từ ASSP agents.
+
+Tạo file ke-hoach-kinh-doanh/13-roadmap-asks.md với 2 phần:
+
+═══════════════════════════════════════
+PHẦN 1: ROADMAP 90 NGÀY
+═══════════════════════════════════════
+
+Chia làm 3 tháng × 3 milestone mỗi tháng:
+
+THÁNG 1 — [tên giai đoạn, VD: "Validation"]
+  Milestone 1.1: [...]
+  Milestone 1.2: [...]
+  Milestone 1.3: [...]
+
+THÁNG 2 — [tên giai đoạn, VD: "Scale traffic"]
+  ...
+
+THÁNG 3 — [tên giai đoạn, VD: "Optimize conversion"]
+  ...
+
+Với mỗi milestone:
+- Mục tiêu cụ thể (đo được)
+- Hành động chính
+- Dùng asset nào trong thư mục (VD: "deploy 08-landing.html lên prod")
+
+═══════════════════════════════════════
+PHẦN 2: ASKS — Tôi cần gì để đi nhanh hơn
+═══════════════════════════════════════
+
+Tự nhìn lại 12 agent output + roadmap. Trả lời thẳng thắn:
+
+1. ĐIỂM YẾU LỚN NHẤT của tôi hiện tại là gì?
+   (VD: chưa biết chạy ads / chưa có audience / chưa biết tối ưu funnel / thiếu kỹ thuật)
+
+2. NẾU CÓ THỂ NHỜ DŨNG / Tiểu Hà Mã — tôi muốn được hỗ trợ về:
+   □ Coaching 1-1 về chiến lược kinh doanh
+   □ Done-for-you setup ads/funnel
+   □ Cộng đồng cùng level để học hỏi
+   □ Khoá Pro về [chủ đề cụ thể]
+   □ Khác: [...]
+
+3. TRONG 90 NGÀY TỚI — 3 vấn đề tôi sợ kẹt nhất:
+   1. [...]
+   2. [...]
+   3. [...]
+
+Trả lời thẳng, không cần tỏ ra "đã sẵn sàng". Càng cụ thể về điểm yếu — Dũng càng có thể hỗ trợ đúng cái bạn cần.
+ASKS không phải dấu hiệu yếu — là dấu hiệu rõ ràng
+Người làm business giỏi không phải người tự làm hết — là người biết mình mạnh chỗ nào, yếu chỗ nào, cần gì để đi tiếp. Phần ASKS càng cụ thể, càng chứng minh bạn đã suy nghĩ kỹ — không phải "không biết gì".
+
+Kiểm tra điểm
+File 13-roadmap-asks.md có đủ 2 phần. Roadmap 9 milestone cụ thể. ASKS có ít nhất 3 điểm yếu/yêu cầu cụ thể — không vague.
+
+Phần Bốn
+Vibe File HTML Thuyết Trình Tổng
+BƯỚC 09
+Vibe index.html — file thuyết trình link đến mọi asset
+File này không phải tóm tắt. Nó là navigation hub — Dũng và bạn ở Demo Day click vào từng section, mở tab mới xem asset thật. Avatar thật, copy thật, landing render thật, email thật.
+
+index.html như mục lục của 1 cuốn sách
+Bạn không in toàn bộ sách lên slide — bạn có 1 mục lục đẹp, ai muốn đọc chương nào thì lật tới chương đó. index.html là mục lục. 12 file thật là 12 chương. Khi pitch, bạn lướt qua mục lục, dừng ở chương nào quan trọng — Dũng muốn xem chương đó kỹ hơn thì click vào.
+Prompt · Vibe index.html — pitch deck tổng
+COPY
+Đọc toàn bộ thư mục ke-hoach-kinh-doanh/.
+
+Tạo file ke-hoach-kinh-doanh/index.html — file thuyết trình tổng hợp toàn bộ kế hoạch của tôi.
+
+Cấu trúc 9 sections:
+
+1. HERO
+   - Tên kế hoạch (VD: "Bản kế hoạch kinh doanh — [Tên thương hiệu]")
+   - Tagline 1 câu (lấy từ hero-mechanism)
+   - Tên tác giả + ngày tạo
+   - Nút "Bắt đầu" scroll xuống section 2
+
+2. AVATAR
+   - Tóm tắt 3-4 câu (rút từ 01-avatar.md)
+   - Nút "View full avatar" → mở 01-avatar.md trong tab mới
+
+3. BRAND VOICE
+   - Tóm tắt + 2-3 câu ví dụ giọng văn
+   - Nút "View brand voice" → mở 02-brand-voice.md
+
+4. HERO MECHANISM
+   - Tóm tắt cơ chế khác biệt (3-4 câu)
+   - Nút "View" → 03-hero-mechanism.md
+
+5. MONEY MODEL + OFFER STACK
+   - Bảng/visual money model (giá, recurring, upsell)
+   - Box offer chính
+   - 2 nút: "View money model" → 04-money-model.md, "View offer detail" → 05-offer.md
+
+6. FUNNEL BLUEPRINT
+   - Embed visual funnel (07-funnel-visual.html) — dùng iframe hoặc copy SVG vào
+   - Nút "View blueprint chi tiết" → 07-funnel-blueprint.md
+   - Nút "View lead magnet" → 06-hvco-leadmagnet.md
+
+7. FULL FUNNEL ASSETS — phần quan trọng nhất
+   Hiển thị grid các asset thật:
+   - Card "Ad Copy" → "View ads" mở 08-ads-copy.md
+   - Card "Landing Page" → "View live" mở 08-landing.html
+   - Card "VSL Script" → "View script" mở 09-vsl-script.md (hoặc note skip)
+   - Card "Email Sequence" → "View emails" mở 10-email-sequence.md
+   - Card "Follow-up" → 11-follow-up.md
+   - Card "Sales Script" → 12-sales-script.md (hoặc note skip)
+   Mỗi card có: tên + 1 dòng mô tả + nút View
+
+8. ROADMAP 90 NGÀY
+   - Visual 3 tháng × 3 milestone (timeline)
+   - Lấy nội dung từ 13-roadmap-asks.md phần 1
+
+9. ASKS — Tôi cần gì để đi nhanh hơn
+   - 3 box: Điểm yếu / Hỗ trợ mong muốn / Vấn đề trong 90 ngày tới
+   - Lấy nội dung từ 13-roadmap-asks.md phần 2
+   - CTA cuối: "Tôi sẵn sàng pitch ở Demo Day Ngày 21"
+
+Yêu cầu design:
+- Style: chuyên nghiệp nhưng có cá tính (KHÔNG generic AI design)
+- Màu chủ đạo: theo brand voice của tôi (đọc 02-brand-voice.md)
+- Font: 1 serif đẹp cho heading + 1 sans-serif dễ đọc cho body
+- Mobile responsive
+- Mỗi nút "View" có target="_blank" (mở tab mới)
+- Smooth scroll giữa sections
+- Topbar nav cố định với 9 anchor
+
+Single file HTML — tất cả CSS/JS inline. Không phụ thuộc CDN ngoài (font có thể dùng Google Fonts).
+
+Sau khi tạo xong: hướng dẫn tôi mở file trong browser để preview.
+AI-First — đừng tự thiết kế từng section
+Agent đọc tất cả 12 file output → tự rút tóm tắt cho mỗi section. Bạn chỉ cần đọc kết quả, sửa chỗ nào sai. Không tự copy-paste từ MD vào HTML — đó là việc của agent. Bạn là tổng đạo diễn.
+
+Kiểm tra điểm
+Mở ke-hoach-kinh-doanh/index.html trong browser → thấy 9 sections đẹp, scroll mượt, mỗi nút "View" mở tab mới với asset thật. Test trên cả desktop và mobile.
+
+⚠️ Troubleshoot — Bước 09
+"Nút View mở tab mới nhưng file MD hiển thị code raw"
+"index.html quá dài, load chậm"
+"Design generic AI quá, không có cá tính"
+Phần Năm
+Deploy + Sẵn Sàng Demo Day
+BƯỚC 10
+Deploy lên web — gửi link cho Dũng
+Bản kế hoạch trên máy không pitch được. Cần deploy lên web để Dũng xem trước Demo Day, có link click vào được, các nút "View" hoạt động thật.
+
+Đề xuất — deploy thành subpath website của bạn
+Bạn đã có website chạy trên VPS từ Ngày 14. Cách đơn giản và chuyên nghiệp nhất là deploy thư mục ke-hoach-kinh-doanh/ thành subpath của website đó:
+
+URL kết quả mong đợi
+yourdomain.com/ke-hoach
+       ↓ (mở ra index.html)
+   Trang thuyết trình tổng
+
+yourdomain.com/ke-hoach/01-avatar.md
+yourdomain.com/ke-hoach/08-landing.html
+yourdomain.com/ke-hoach/...
+       ↓
+   Các asset thật, click "View" từ index là mở
+Prompt · Deploy thư mục lên subpath website
+COPY
+Tôi cần deploy thư mục ke-hoach-kinh-doanh/ lên website đang chạy của tôi (VPS từ Ngày 14).
+
+URL mong muốn: yourdomain.com/ke-hoach
+- Truy cập yourdomain.com/ke-hoach → render index.html
+- Các file MD/HTML khác truy cập qua: yourdomain.com/ke-hoach/[tên file]
+- File MD nên render đẹp (không hiển thị code raw)
+
+Đọc setup web hiện tại của tôi (Nginx/Apache/Laravel/Next.js/...) → chọn cách deploy phù hợp:
+
+OPTION A — Static subpath:
+- Copy thư mục lên VPS
+- Config web server serve static cho path /ke-hoach
+- Setup markdown rendering nếu cần (có thể dùng marked.js hoặc tương tự)
+
+OPTION B — Subdomain riêng (nếu phức tạp hơn):
+- pitch.yourdomain.com → trỏ về thư mục này
+
+OPTION C — GitHub Pages (nếu không muốn động vào VPS):
+- Push lên repo → enable GitHub Pages → URL dạng username.github.io/ke-hoach
+
+Chọn option phù hợp với setup hiện tại của tôi, hướng dẫn từng bước. Đề xuất Option A nếu khả thi (chuyên nghiệp + dùng domain chính của tôi).
+
+Sau khi deploy xong:
+1. Test trên điện thoại — index.html load đẹp
+2. Click thử mỗi nút View — mở đúng asset
+3. Gửi tôi URL hoàn chỉnh
+Các cách deploy khác (nếu cần)
+Subdomain riêng: pitch.yourdomain.com — tách biệt với web chính, đẹp nhưng cần config DNS
+GitHub Pages: miễn phí, tự render markdown, không động vào VPS — username.github.io/ke-hoach
+Vercel/Netlify: drag-drop folder → ra link công khai trong 30 giây
+Gợi ý mạnh — chọn Option A
+Deploy subpath vào website chính của bạn (yourdomain.com/ke-hoach) là chuyên nghiệp nhất cho Demo Day. Dũng nhìn URL đã thấy bạn có hệ thống đầy đủ. Nhưng nếu Option A phức tạp với stack hiện tại — Option C (GitHub Pages) là backup tốt.
+
+Gửi link cho Dũng
+Sau khi deploy thành công, gửi tin nhắn ngắn cho Dũng qua Telegram (hoặc kênh đã thoả thuận):
+
+Mẫu tin nhắn gửi Dũng
+Chào anh Dũng,
+
+Em đã hoàn thành Nhiệm vụ Ngày 20 — chạy trọn bộ 12 agent ASSP.
+
+Bản kế hoạch + full funnel của em ở đây:
+→ yourdomain.com/ke-hoach
+
+Anh xem trước Demo Day Ngày 21 nhé. Em đã ghi rõ phần ASKS
+(điểm yếu + cần hỗ trợ) trong section cuối — em rất muốn
+nghe phản hồi của anh khi pitch.
+
+Cảm ơn anh!
+[Tên bạn]
+Kiểm tra điểm — quan trọng nhất ngày hôm nay
+URL yourdomain.com/ke-hoach mở được trên điện thoại của Dũng — index render đẹp, các nút "View" mở đúng asset, không có file nào bị lỗi 404. Tin nhắn đã gửi cho Dũng.
+
+⚠️ Troubleshoot — Bước 10
+"Subpath /ke-hoach bị 404"
+"File MD vẫn hiển thị code raw, không render"
+"Deploy lên VPS phức tạp quá, hết giờ rồi"
+FINAL
+Nộp Bài
+Checklist hoàn thành
+Tiêu chí hoàn thành
+Có 1 thư mục đầy đủ assets thật — không phải tóm tắt, không phải mô tả
+Có 1 URL công khai để pitch — Dũng click là xem được mọi thứ
+Phần ASKS rõ ràng cụ thể — biết mình cần gì để đi tiếp
+Sẵn sàng pitch 5-10 phút tại Demo Day Ngày 21
+Tinh thần ngày 20
+Hôm nay bạn đã làm thứ mà 99% người làm business chưa từng làm: dùng AI để tự build full funnel + chiến lược trong 1 ngày. Không phải mô tả — là asset thật, sẵn sàng launch.
+
+Ngày mai bạn pitch. Không phải pitch ý tưởng. Pitch cỗ máy đã build xong.
+
+"19 ngày bạn build hệ thống.
+Hôm nay bạn có bản đồ + cỗ máy bán hàng sẵn sàng launch."

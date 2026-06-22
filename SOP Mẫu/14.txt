@@ -1,0 +1,480 @@
+Website Lên VPS + Trao Cánh Tay Cho Agent
+
+⚠️ Lưu ý quan trọng: Bài này chỉ dành cho thành viên hiện tại của thử thách — KHÔNG chia sẻ link hướng dẫn ra nhóm hay cho người chưa tham gia thử thách. Giữ kín giúp anh.
+
+Đưa website lên VPS thật + trang bị cho AI Agent khả năng thao tác server qua MCP (Model Context Protocol) — biến nó từ chatbot thành một "cánh tay" thực sự.
+
+Bài tập đầy đủ có trong hướng dẫn chi tiết bên dưới, đọc kỹ trước khi bắt tay vào làm.
+
+▤ SOP — Hướng dẫn
+
+📘 Hướng dẫn đầy đủ
+🔒 Nhắc lại: đừng share link này ra nhóm hay cho người ngoài thử thách biết.
+
+Website Lên VPS Thật
++ Trao Cánh Tay Cho Agent MCP
+Từ hôm nay bạn không còn chơi demo trên Vercel nữa. Website chạy trên VPS thật, database thật, và AI agent có cánh tay để làm việc thật — tất cả qua một câu nhắn Telegram.
+
+Đọc trước khi bắt đầu
+Nhiệm vụ trước đã có meeting hướng dẫn dùng VPS và trỏ domain — đó là nền tảng của hôm nay. Nếu bạn đã nắm được 2 thứ đó, phần còn lại rất đơn giản: mở agent coding ngay trong thư mục dự án website, cung cấp thông tin VPS cho nó, là nó tự deploy toàn bộ source website lên VPS giúp bạn.
+
+Sau khi website đã chạy trên VPS, bạn có thể tạo thêm CRM, admin panel, email flow, hay BẤT CỨ tính năng nào cho website. Và đây là lúc MCP bước vào — mỗi tính năng mới bạn vibe ra, chỉ cần build 1 MCP tool tương ứng, là bạn đã có thể điều khiển nó qua Telegram. Business bạn càng lớn, cánh tay AI càng dài.
+Mục tiêu cuối ngày
+Bạn ngồi cà phê, nảy ra ý tưởng, mở Telegram nhắn một câu kiểu:
+
+"Đổi tiêu đề landing thành 'Flash sale cuối tuần 30%'"
+→ goClaw gọi tool MCP → file index.html trên VPS được sửa → khách đang truy cập website refresh là thấy tiêu đề mới. Tất cả trong 3 giây, không mở laptop.
+
+Tại sao hôm nay đặc biệt
+Từ Ngày 2 đến giờ, website của bạn sống trên Vercel — nhanh, tiện, miễn phí, nhưng nó là "cửa hàng giấy": đẹp để chụp hình, nhưng không ghi được sổ sách thật. Database trên Vercel là file tĩnh, khách không vào thay đổi được gì.
+
+Ở nhiệm vụ trước bạn mua VPS, cài goClaw. Hôm nay bạn kéo cả cửa hàng về VPS — để nó trở thành cửa hàng thật: có kho hàng, có sổ cái, có nhân viên AI đứng trong đó làm việc 24/7.
+
+Mẹo của Dũng trước khi bắt đầu
+Hôm nay là ngày dài nhất trong chuỗi — có 2 phần lớn. Copy toàn bộ SOP này, mở agent coding trên máy (Antigravity/Cursor/Claude Code) và paste:
+
+Prompt mở đầu · Paste vào agent trên máy
+COPY
+Đây là SOP tôi cần làm hôm nay, có 2 phần lớn: (1) kéo website từ Vercel lên VPS thật, (2) build MCP server cho AI agent có tay chân.
+
+Bạn hướng dẫn tôi từng bước một — mỗi lần 1 bước, chờ tôi báo lại rồi mới tiếp. Lỗi gì bạn fix luôn. Bắt đầu bằng việc đọc code website hiện tại của tôi để biết đang dùng ngôn ngữ/framework gì.
+Sau Ngày 14 sẽ nhìn thế này
+        1 VPS duy nhất chạy 3 thứ cùng lúc
+    ┌────────────────────────────────────────┐
+    │  goClaw  (AI gateway)   :18790         │
+    │  Website (landing+admin):3000          │
+    │  MCP     (cánh tay AI)  :3001 local    │
+    │  ─────── chung brain.db ───────        │
+    └────────────────────────────────────────┘
+                    ▲
+                    │ Nginx + SSL auto
+                    ▼
+    ┌────────────────────────────────────────┐
+    │  app.yourdomain.com  → goClaw          │
+    │  yourdomain.com      → Website         │
+    └────────────────────────────────────────┘
+
+    Telegram ──→ goClaw ──→ MCP ──→ brain.db ──→ Web
+Đừng sợ diagram này
+Bạn không cần hiểu hết các port và mũi tên. Diagram chỉ để bạn biết "ở cuối ngày, VPS của tôi sẽ chạy 3 thứ cùng lúc, và tất cả đi qua 1 domain". Agent coding lo phần kỹ thuật — bạn chỉ cần biết đích đến trông như vậy.
+
+📋
+Chuẩn bị trước khi bắt đầu (mất 1 phút): Mở agent coding ở thư mục website, paste prompt này để agent tự tìm và show ra các secret bạn cần. Không cần tự đi lục thư mục.
+Prompt · Show các secret ra để chuẩn bị
+COPY
+Tôi sắp deploy website này lên VPS. Trước khi bắt đầu, hãy tìm và hiển thị ra cho tôi TẤT CẢ các giá trị bí mật tôi đang dùng trong dự án này — bao gồm nhưng không giới hạn: API keys, bot tokens, database URLs, email service keys, payment keys, bất kỳ biến môi trường nào.
+
+Tìm trong các file thường có: .env, .env.local, .env.production, config.js, config.json, và trong các hardcode giữa code.
+
+Hiển thị theo format:
+TÊN_BIẾN = giá trị thật
+[ghi rõ đang nằm ở file nào]
+
+Nếu chưa có file .env (secrets đang hardcode trong code), báo tôi biết để xử lý.
+Tại sao làm bước này trước
+Khi deploy lên VPS, agent sẽ cần dán các secret này vào server. Có sẵn danh sách = không bị dừng giữa chừng đi tìm. Bạn chỉ cần copy output của agent và để sẵn bên cạnh — lúc agent hỏi "Resend key là gì?", bạn paste ngay.
+
+Phần Một
+Kéo website về nhà mới
+Nếu bạn có nhiều dự án nằm rải rác
+Qua các ngày trước, có thể bạn đã tạo nhiều thư mục source khác nhau cho nhiều dự án khác nhau — ví dụ 1 landing page bán khóa, 1 blog cá nhân, 1 trang portfolio, 1 form waitlist cho sản phẩm mới... Mỗi cái một thư mục riêng.
+
+Tin vui: bạn hoàn toàn có thể copy tất cả các thư mục đó dồn vào 1 thư mục lớn, deploy chung lên 1 VPS. Nếu các dự án có liên quan nhau (cùng khách hàng, cùng database, cùng luồng bán) — bạn còn có thể mix chúng lại thành một hệ thống thống nhất, chia sẻ cùng brain.db, cùng CRM, cùng email flow.
+
+Không bắt buộc — nếu thấy phức tạp, cứ bắt đầu với 1 dự án chính hôm nay. Các dự án khác đưa lên sau cũng được. Nhưng nếu bạn thấy logic thì làm luôn, tiết kiệm thời gian về sau.
+
+BƯỚC 01
+Dọn code sẵn sàng cho production
+Trước khi dọn nhà, phải gói đồ đạc lại cho gọn. Mở agent coding trên máy (Antigravity/Cursor), mở thư mục website, paste:
+
+Prompt · Dọn code
+COPY
+Tôi sắp deploy website này lên VPS Ubuntu chạy production. Hãy kiểm tra và làm giúp tôi:
+
+1. Đọc toàn bộ cấu trúc — tôi đang dùng ngôn ngữ/framework gì? (HTML tĩnh, Node.js, Python...). Nếu là HTML tĩnh thuần, wrap vào 1 Express server đơn giản để có /admin, API endpoints, kết nối brain.db.
+
+2. Check xem thư mục này đã là git repo và đã có remote GitHub chưa. Nếu chưa, tạo repo private tên my-website trên GitHub của tôi và push lên.
+
+3. Tách tất cả bí mật (API key, bot token, Resend key...) ra file .env. Thêm .env và brain.db vào .gitignore. Tạo file .env.example có mẫu các biến cần set.
+
+4. Đảm bảo server listen port từ biến môi trường (process.env.PORT || 3000).
+
+5. Tạo file deploy_notes.md liệt kê: các biến .env cần có trên VPS, lệnh để chạy server, cổng đang lắng nghe.
+
+6. Commit và push lên GitHub.
+
+Xong bước này báo tôi trước khi qua bước 2.
+Tại sao phải làm bước này
+Vercel "tha thứ" mọi thứ — thiếu env cũng chạy, không có server cũng chạy. VPS không. Lên VPS phải chuẩn từ đầu: env riêng, server rõ ràng, không leak secret. Agent làm hết, bạn chỉ duyệt.
+
+BƯỚC 02
+Để agent deploy code lên VPS giúp bạn
+Đây là bước "kéo đồ về nhà mới". Vẫn trong agent coding trên máy, paste:
+
+Prompt · Deploy lên VPS
+COPY
+Giờ deploy website lên VPS của tôi.
+
+THÔNG TIN VPS (điền trước khi gửi):
+- IP: [điền IP VPS]
+- SSH user: [thường là root hoặc ubuntu]
+- SSH port: [thường là 22]
+- Cách xác thực: [SSH key ở đường dẫn nào, hoặc password]
+
+CÁC SECRET/ENV CẦN SET TRÊN VPS:
+[paste danh sách secret mà bạn đã cho tôi show ra ở bước chuẩn bị đầu ngày]
+
+Làm các việc sau, từng bước một, chờ tôi xác nhận từng bước:
+
+1. SSH vào VPS. Cài Node.js (hoặc runtime phù hợp với code của tôi) nếu chưa có.
+
+2. Clone repo my-website từ GitHub về /opt/my-website trên VPS.
+
+3. npm install (hoặc tương đương). Tạo file .env trên VPS với các giá trị thật ở trên.
+
+4. Upload file brain.db hiện tại của tôi từ máy lên /opt/my-website/brain.db (dùng scp). Đây là database có data thật — KHÔNG lấy từ GitHub.
+
+5. Tạo systemd service tên "mywebsite" để website chạy 24/7 trên port 3000, tự restart nếu crash. Enable và start service.
+
+6. Test: curl http://localhost:3000 trên VPS — phải trả HTML về. Nếu lỗi, fix.
+
+7. Báo tôi khi xong, kèm trạng thái service.
+Vì sao phải điền thông tin VPS lại
+Agent coding không có trí nhớ giữa các phiên — phiên trước khác phiên này. Nhiệm vụ trước bạn đã đưa thông tin rồi, nhưng nếu mở phiên mới, agent sẽ không biết. Luôn paste thông tin vào prompt để chắc.
+
+Nếu sợ paste credentials vào chat: bảo agent đọc từ file ~/.ssh/config (nếu bạn đã setup SSH alias cho VPS), an toàn hơn.
+
+Giải thích kiểu trẻ con
+VPS giống như căn phòng trống trên mây. Agent coding là người chuyển nhà — nó tự bước vào phòng (SSH), lắp đặt đồ điện (Node.js), mang đồ đạc lên (git clone + scp), cắm điện chạy (systemd). Bạn chỉ đứng ngoài đưa chìa khóa và xác nhận.
+⚠️
+File brain.db không nằm trong GitHub. Đây là data khách thật — bạn đã thêm vào .gitignore ở Bước 1. Phải upload tay bằng scp. Agent sẽ tự chạy lệnh scp, bạn chỉ cần gật đầu.
+BƯỚC 03
+Gắn domain + HTTPS tự động
+Website giờ chạy trên VPS nhưng vẫn nghe port 3000 — khách vào http://VPS_IP:3000 mới thấy. Giờ gắn domain + SSL xanh.
+
+Quy tắc đơn giản
+goClaw luôn ở subdomain, website luôn ở domain chính. Ví dụ bạn có domain dunghoang.com:
+
+dunghoang.com → website (khách vào mua hàng)
+app.dunghoang.com → goClaw (chỉ bạn vào quản lý)
+Lý do: website là bộ mặt công khai, phải dễ nhớ; goClaw là phòng kỹ thuật, ẩn đằng sau subdomain.
+
+Prompt · Setup domain + HTTPS
+COPY
+Setup reverse proxy + HTTPS cho VPS của tôi.
+
+THÔNG TIN:
+- VPS đã có goClaw chạy ở port 18790 (từ nhiệm vụ trước)
+- VPS vừa có website chạy ở port 3000 (vừa deploy)
+- Domain chính của tôi: [điền domain].com
+- Tôi mua domain tại: [điền 123host/Namecheap/Cloudflare/GoDaddy...]
+
+Tôi muốn kết quả cuối:
+- [domain chính].com → website (port 3000)
+- app.[domain chính].com → goClaw (port 18790)
+
+Làm giúp tôi:
+
+1. Hướng dẫn tôi cách thêm/đổi A record tại nhà cung cấp domain của tôi, chỉ rõ từng click. Cần 2 A record:
+   - @ (hoặc domain chính) → IP VPS của tôi
+   - app → IP VPS của tôi
+
+2. Trong khi chờ DNS propagate, cài Caddy trên VPS (dễ nhất — tự lo SSL Let's Encrypt miễn phí). Nếu nhiệm vụ trước tôi đã cài Nginx thì giữ Nginx, chỉ thêm server block mới.
+
+3. Tạo Caddyfile (hoặc Nginx config) với 2 block — 1 cho domain chính trỏ về port 3000, 1 cho subdomain app trỏ về port 18790.
+
+4. Reload Caddy/Nginx. Test curl cả 2 URL — phải trả đúng response.
+
+5. Nếu test fail vì DNS chưa propagate, hướng dẫn tôi cách check bằng dig hoặc công cụ online như dnschecker.org.
+
+Bắt đầu bước 1. Chờ tôi xác nhận xong mới qua bước 2.
+⏱️
+DNS propagate có thể mất 5 phút đến 24 giờ. Đa số trường hợp xong trong 10-30 phút. Nếu lâu hơn — đừng hoảng, cứ làm việc khác (Bước 4 trở đi) trong khi chờ. Test lại sau vài giờ.
+Caddy hay Nginx?
+Caddy tự lo SSL — không cần chạy certbot, không cần config 100 dòng. Chỉ 2 dòng là xong HTTPS. Đây là cách docs goClaw khuyên dùng.
+
+Nếu nhiệm vụ trước bạn đã cài Nginx: giữ nguyên, chỉ thêm server block mới cho website. Đừng đổi nếu đang ổn.
+
+BƯỚC 04
+Xác nhận Vercel đã tự ngắt
+Chuyện đã xảy ra một cách âm thầm
+Khi bạn đổi A record ở Bước 3 để domain trỏ về IP VPS, thì Vercel về bản chất đã bị ngắt kết nối — không phải bạn phải tự "tắt" gì cả. Domain đã rời khỏi Vercel, trỏ về nhà mới. Vercel chỉ còn là project cũ nằm trong dashboard, không còn phục vụ domain của bạn nữa.
+
+Giờ chỉ cần xác nhận mọi thứ đã đúng — không phải sửa gì thêm.
+
+Cách test bằng trình duyệt ẩn danh
+Phải dùng chế độ ẩn danh (Incognito/Private) vì browser thường nó cache version cũ của Vercel, test trên tab thường có thể lừa bạn.
+
+Mở trình duyệt ẩn danh:
+Chrome/Edge: Ctrl+Shift+N (Windows) hoặc Cmd+Shift+N (Mac)
+Safari: Cmd+Shift+N
+Firefox: Ctrl+Shift+P (Windows) hoặc Cmd+Shift+P (Mac)
+Vào https://yourdomain.com — phải thấy:
+✓ Ổ khóa xanh HTTPS trên thanh địa chỉ
+✓ Nội dung là website của bạn
+✓ Form điền được, các button hoạt động
+Thử luôn https://app.yourdomain.com — phải vào được Dashboard goClaw.
+Project Vercel bạn có thể để lại làm backup hoặc xóa — tùy bạn. Nó không còn phục vụ ai nữa.
+Nếu tab ẩn danh vẫn thấy Vercel cũ
+Có nghĩa DNS chưa propagate xong. Không phải lỗi — chờ thêm 10-30 phút rồi test lại. Trong lúc chờ, đi tiếp Phần 2 (MCP) được rồi, không ảnh hưởng.
+
+Phần Hai
+Trao Cánh Tay Cho Agent
+Nghỉ 5 phút trước khi qua Phần 2
+Phần 1 vừa xong là một thành tựu lớn — bạn đã có website thật trên VPS thật, không phải ai cũng làm được trong 1 ngày. Đứng dậy, duỗi người, uống nước.
+
+Phần 2 sẽ nhẹ hơn về kỹ thuật nhưng hấp dẫn hơn về trải nghiệm — vì đây là lúc bạn thấy AI thực sự "làm việc" thay vì chỉ "trò chuyện". Sẵn sàng thì đi tiếp.
+
+BƯỚC 05
+Hiểu MCP — và nghĩ xem bạn cần "tay" làm gì
+Hãy tưởng tượng
+goClaw + agent bạn tạo ở nhiệm vụ trước = nhân viên giỏi nhưng đang ngồi ở văn phòng kế bên, nhìn qua cửa kính vào cửa hàng của bạn. Nó thấy mọi thứ nhưng không thò tay vào được.
+
+MCP = cái ô cửa nhỏ giữa 2 phòng. Qua ô cửa đó, nhân viên thò tay vào cửa hàng làm việc thật.
+
+MCP là gì về mặt kỹ thuật
+Một server nhỏ chạy song song website, expose ra vài "nút bấm" cho AI. AI bấm nút nào → server chạy function đó → ghi database, sửa file, gọi API.
+Ví dụ thực tế để hiểu rõ hơn
+Giả sử bạn vừa nảy ý tưởng chạy flash sale cuối tuần. Bạn muốn đổi tiêu đề landing ngay để khách vào thấy deal mới. Không có MCP:
+
+Bạn chat với AI: "Đổi tiêu đề landing thành 'Flash sale cuối tuần 30%'"
+AI: "Dạ, em đã đổi tiêu đề rồi ạ!"
+Nhưng thực tế: AI chỉ "nói miệng", file index.html trên VPS không đổi chữ nào. Bạn vẫn phải mở laptop, SSH vào, sửa file, reload.
+Có MCP:
+
+Bạn chat với AI: "Đổi tiêu đề landing thành 'Flash sale cuối tuần 30%'"
+AI nhìn vào "hộp tools" MCP, thấy có function đổi_tiêu_đề(nội_dung_mới) → gọi nó
+Function chạy thật trên VPS → mở file index.html → thay dòng tiêu đề → lưu lại
+AI: "Đã đổi tiêu đề. Khách đang truy cập website refresh là thấy."
+Thực tế: mở website trong trình duyệt ẩn danh, refresh → tiêu đề mới hiện ra thật.
+Ví dụ khác cho dễ mường tượng
+MCP giống như bộ điều khiển từ xa. Tivi (website) + bạn (AI) ở 2 đầu phòng. Remote (MCP) là thứ duy nhất khiến bạn bật/tắt/đổi kênh từ xa được.
+
+Không có remote → bạn phải đứng dậy đi tới tivi. Có remote → ngồi yên cũng điều khiển được tivi.
+
+Nghĩ xem bạn cần "tay" làm gì
+Đây là phần quan trọng — không có đáp án chung. Tùy vào thứ bạn đã vibe code các ngày trước, MCP sẽ khác. Dưới đây là 4 mẫu để bạn tham khảo:
+
+Use Case · E-commerce
+Nếu bạn bán sản phẩm + có admin panel
+Báo cáo đơn hôm nay, gửi email cảm ơn khách vừa mua, đổi giá sản phẩm trên web, thêm khách VIP vào danh sách chăm sóc riêng.
+→ today_orders · thank_customer · update_price · tag_vip
+Use Case · Content / Blog
+Nếu bạn làm blog, landing bài viết
+Nhắn ý tưởng → AI viết nháp → lưu vào database chờ duyệt → 1 câu "đăng bài số 3" là publish.
+→ save_draft · list_drafts · publish_post · schedule_post
+Use Case · Brain.db / Ghi chú
+Nếu bạn dùng brain.db làm second brain
+Nhắn idea bất chợt → lưu vào đúng table → hỏi lại lúc nào cũng được → AI tự phân loại.
+→ add_note · query_brain · update_brand_voice · search_knowledge
+Use Case · Landing dynamic
+Nếu bạn có form waitlist, email sequence
+Sửa tiêu đề landing qua Telegram, xem ai mới điền form, gửi email thủ công cho 1 người.
+→ update_hero · list_waitlist · send_email · update_price_table
+Không trong 4 mẫu trên? Không sao. Bạn vibe cái gì, MCP phục vụ cái đó.
+
+BƯỚC 06
+Để AI tự gợi ý tool MCP cho bạn
+Mở agent coding trên máy (vẫn ở thư mục website), paste:
+
+Prompt · Gợi ý MCP tools
+COPY
+Đọc toàn bộ codebase website này. Dựa vào những gì tôi đã build (database, form, admin panel, email flow, content...), gợi ý cho tôi 3-5 MCP function hữu ích nhất — những thứ mà tôi sẽ thực sự muốn làm qua Telegram hàng ngày.
+
+Với mỗi function, ghi:
+- Tên function (snake_case)
+- Input params (tên + kiểu dữ liệu)
+- Output dự kiến
+- Tình huống dùng hàng ngày (1 câu)
+- Độ ưu tiên (1-5)
+
+Xếp theo độ ưu tiên giảm dần. Tôi sẽ chọn 3 cái để build đầu tiên.
+
+Lưu vào file mcp_functions_draft.md.
+Agent sẽ đọc code bạn, hiểu bạn làm gì, gợi ý function phù hợp. Đọc kỹ, chọn 3 cái quan trọng nhất. Paste vào chat tiếp:
+
+Prompt · Chốt danh sách
+COPY
+Tôi chọn 3 function sau để build MCP: [điền 3 tên function]. Cập nhật mcp_functions_draft.md chỉ giữ 3 cái này, viết thêm phần "ví dụ câu nhắn Telegram sẽ trigger function này".
+BƯỚC 07
+Vibe code MCP server
+Giờ là phần vui — để agent viết hẳn MCP server.
+
+Tinh thần AI-First — chọn 1 trong 2 cách
+Cách 1 (khuyên dùng) — Nói ngắn gọn, tự nhiên:
+
+Mở agent coding ngay trong thư mục dự án website, nói đơn giản:
+
+Prompt AI-First · Nói tự nhiên
+COPY
+Giờ tôi có agent goClaw và đây là docs của nền tảng này: https://docs.goclaw.sh/
+
+Tôi muốn build MCP server để kết nối agent trong goClaw với hệ thống website này. Đọc docs goClaw về MCP integration trước, rồi đọc codebase của tôi, sau đó đề xuất kế hoạch build và làm giúp tôi. Làm từng bước, chờ tôi xác nhận.
+Chỉ 2 câu, agent tự đọc docs, tự đọc code, tự đề xuất, tự làm. Bạn chỉ duyệt. Đây là cách thực sự AI-First — tin tưởng agent và giao phó.
+
+Cách 2 — Prompt chi tiết (nếu bạn muốn kiểm soát chặt):
+
+Nếu lần đầu làm MCP và muốn chắc ăn về từng chi tiết, paste prompt đầy đủ dưới đây. Nhưng sau khi hiểu rồi, bạn nên quay lại Cách 1 cho những lần sau.
+
+Prompt · Build MCP server (chi tiết)
+COPY
+Tạo MCP server trong chính repo my-website này, thư mục /mcp. Dùng transport streamable-http (vì goClaw sẽ gọi qua HTTP localhost).
+
+Yêu cầu:
+
+1. Tech stack: cùng ngôn ngữ với website (Node.js dùng @modelcontextprotocol/sdk, Python dùng mcp package). Nếu website Node, dùng Node.
+
+2. Server listen port 3001, chỉ bind 127.0.0.1 (localhost only, KHÔNG public ra internet).
+
+3. Expose đúng 3 function tôi đã chọn trong mcp_functions_draft.md. Mỗi function phải:
+   - Kết nối cùng brain.db với website (cùng file, không tạo DB mới)
+   - Validate input kỹ càng
+   - Trả về kết quả rõ ràng (success/error + message)
+   - Log mọi lần gọi ra console với timestamp
+
+4. Tạo file mcp/README.md hướng dẫn deploy, kèm systemd service file mẫu.
+
+5. Bạn tự chạy MCP server local và tự gọi curl test cả 3 function để đảm bảo chạy được. TÔI KHÔNG chạy test — bạn tự làm và báo kết quả.
+
+6. Sau khi test pass, commit+push lên GitHub.
+
+Làm từng bước, chờ tôi xác nhận từng bước.
+Chú ý về "cửa vào" MCP server — và kịch bản của bạn
+Trong prompt có dòng "chỉ bind 127.0.0.1" — đây là mặc định an toàn khi goClaw và MCP cùng VPS. Hiểu kiểu trẻ con:
+
+MCP server giống một căn phòng nhỏ trong VPS của bạn, có quyền ghi vào database. Căn phòng này có thể mở cửa theo 2 cách:
+
+Cửa trong nhà (127.0.0.1): chỉ người đang ở cùng VPS mới vào được. goClaw cũng ở trong VPS → vẫn vào tốt. Người lạ trên internet → không thấy cửa luôn. ✅ An toàn.
+Cửa ngoài đường (0.0.0.0): bất kỳ ai trên internet cũng thấy và vào được. Không có bảo mật → hacker xóa sạch database. ❌ Nguy hiểm nếu không kèm auth.
+Kịch bản A — goClaw và MCP cùng VPS: giữ nguyên prompt, bind 127.0.0.1. Xong.
+
+Kịch bản B — goClaw ở VPS khác: bạn cần sửa prompt — bảo agent bind 0.0.0.0 thay vì 127.0.0.1, và luôn kèm lớp auth token cho MCP server. Chi tiết cách làm sẽ ở Bước 8 khi connect vào Dashboard.
+
+BƯỚC 08
+Deploy MCP lên VPS + connect vào goClaw
+Paste vào agent coding:
+
+Prompt · Deploy MCP
+COPY
+Deploy MCP server vừa build lên VPS:
+
+1. SSH vào VPS, vào /opt/my-website (đã có sẵn từ Bước 2).
+
+2. git pull để lấy code MCP mới.
+
+3. npm install các package MCP cần.
+
+4. Tạo systemd service "mcp-server" chạy MCP server ở 127.0.0.1:3001, tự restart. Enable và start.
+
+5. Test trên VPS: curl http://127.0.0.1:3001/mcp (hoặc endpoint health check) — phải phản hồi.
+
+6. Báo tôi trạng thái service.
+
+Xong bước này tôi sẽ vào Dashboard goClaw tự thêm MCP server.
+Thêm MCP vào goClaw Dashboard
+Phần này bạn tự làm trên UI — không paste prompt:
+
+Mở https://app.yourdomain.com (goClaw Dashboard đã setup) → đăng nhập.
+Sidebar bên trái → Capabilities → MCP Servers.
+Bấm Add MCP Server. Điền:
+Name: my-business
+Transport: streamable-http
+URL: tùy kịch bản của bạn (xem box "3 cách nói địa chỉ một máy" ngay bên dưới). Mặc định nếu cùng VPS: http://127.0.0.1:3001/mcp
+Tool prefix: biz (goClaw sẽ tự thêm __ vào giữa — tool cuối sẽ có dạng biz__update_hero)
+Enabled: ✓
+Lưu. goClaw sẽ tự connect và hiện ra list tool đã detect được. Nếu status không phải Connected, chụp màn hình báo lỗi → paste vào agent coding → "fix."
+Cho agent dùng tool MCP: Sidebar → Core → Agents → chọn agent Telegram của bạn → tab Config → phần Tools → đảm bảo profile là full, hoặc trong alsoAllow thêm các tool biz__*. Lưu.
+Lần đầu vào Dashboard lạ lẫm?
+Chụp màn hình chỗ bạn đang đứng trong Dashboard → ném vào Claude → hỏi "tôi cần thêm MCP server, chỉ tôi bấm nút gì tiếp?". Claude nhìn ảnh và chỉ đường trong 5 giây.
+Hiểu cái URL http://127.0.0.1:3001/mcp
+Đây không phải URL lạ — chỉ là cách đọc địa chỉ máy chứa MCP + cổng vào. Cấu trúc:
+http://[địa chỉ máy]:[số cổng]/[đường dẫn]
+Trước khi điền URL — trả lời 1 câu hỏi
+goClaw và MCP server của bạn đang ở cùng VPS, hay khác VPS?
+
+Cùng VPS — bạn cài goClaw ở nhiệm vụ trước, rồi hôm nay deploy website + MCP vào chính VPS đó. Phổ biến nhất với người mới.
+Khác VPS — bạn có 1 VPS chỉ dành cho goClaw, và 1 VPS khác cho website/business. 2 máy khác nhau, chỉ nối qua internet.
+Hai kịch bản có URL điền khác nhau — đọc phần bên dưới để chọn đúng.
+
+3 cách "nói" địa chỉ một máy — và cách chọn URL cho MCP
+Cùng 1 máy có thể có 3 "tên gọi":
+
+127.0.0.1 — cách gọi "nhà mình" khi đang đứng ở trong nhà. Chỉ chương trình cùng máy dùng được.
+45.76.100.20 (IP public) — địa chỉ nhà nhìn từ ngoài đường. Ai trên internet biết IP đều có thể gọi tới.
+mcp.yourdomain.com — tên nhà thân thiện, trỏ về IP public.
+➜ KỊCH BẢN A — goClaw và MCP cùng VPS:
+
+Điền URL: http://127.0.0.1:3001/mcp
+
+Lý do: goClaw gọi MCP mà không cần đi vòng ra internet — gọi "nhà mình" là nhanh và an toàn nhất. Bind MCP ở 127.0.0.1 như đã làm ở Bước 7 là đúng.
+
+➜ KỊCH BẢN B — goClaw và MCP khác VPS:
+
+Điền URL: https://mcp.yourdomain.com/mcp (hoặc IP public: http://45.76.100.20:3001/mcp)
+
+Lý do: goClaw đang ở một VPS khác — nó phải "đi ra đường" để gọi MCP. Phải có địa chỉ công khai thì mới gọi tới được.
+
+Cần làm thêm 2 việc:
+
+Bảo agent coding đổi bind MCP từ 127.0.0.1 sang 0.0.0.0 — để MCP nghe được cuộc gọi từ ngoài.
+Thêm subdomain mcp.yourdomain.com + Caddy reverse proxy + auth token bắt buộc — vì giờ cửa đã mở ra internet, không có token thì ai cũng vào được.
+Hoặc an toàn hơn: dùng VPN/Tailscale để 2 VPS "nhìn thấy nhau" như trong mạng nội bộ, không cần lộ ra internet. Bảo agent coding setup Tailscale nếu bạn muốn cách này — docs goClaw có hỗ trợ sẵn.
+
+BƯỚC 09
+Test qua Telegram — khoảnh khắc "wow"
+Mở Telegram, vào chat với bot agent của bạn (đã setup từ nhiệm vụ trước). Nhắn thử các câu tự nhiên — đừng nhắn kiểu code lạnh lùng. Vài ví dụ:
+
+Nếu bạn build biz__update_hero: "Đổi tiêu đề landing thành 'Flash sale cuối tuần 30%'"
+Nếu bạn build biz__today_orders: "Hôm nay có bao nhiêu đơn rồi?"
+Nếu bạn build biz__thank_customer: "Gửi email cảm ơn 3 khách mới nhất"
+Nếu bạn build biz__save_draft: "Ghi lại idea: blog post về 7 sai lầm khi làm landing page"
+Nếu bạn build biz__list_waitlist: "Ai mới điền form hôm nay?"
+Agent sẽ hiểu ý, chọn tool đúng, gọi MCP, báo kết quả về Telegram. Sau đó:
+
+Mở website trên browser → refresh → xác nhận thay đổi đã diễn ra thật (tiêu đề mới, draft đã lưu, email đã gửi...)
+Muốn xem MCP có thực sự chạy không? Bảo agent coding: "SSH vào VPS, xem log của MCP server, cho tôi biết lần gọi gần nhất là khi nào và function nào."
+Nếu agent không gọi tool mà trả lời text thường
+Vào Dashboard goClaw → agent detail → tab Files → mở AGENTS.md hoặc SOUL.md → thêm 1 dòng: "Khi user yêu cầu sửa/xoá/báo cáo data, LUÔN gọi tool MCP thay vì chỉ trả lời text."
+
+Hoặc nhắn thẳng trong chat: "Dùng tool biz__update_hero để đổi tiêu đề." — lần sau nó nhớ.
+
+BƯỚC 10
+Đăng bài khoe thành quả
+🎁 Phần quà cho người khoe đúng cách
+Bài đăng phải nhắn Telegram Dũng Hoàng — ai gửi đúng sẽ được tặng 1 bộ skills xịn xò trị giá 2 triệu đồng. Đây là phần thưởng cho người thực sự đi đến Ngày 14 — bạn xứng đáng.
+
+Link Telegram: t.me/KentHoang
+
+Mở agent coding ở bất kỳ thư mục nào có brain.db (thường là my-brain từ Ngày 5, hoặc thư mục website nếu bạn đã gộp). Paste:
+
+Prompt · Viết bài khoe
+COPY
+Đọc brand voice trong brain.db. Viết 1 bài đăng kể về trải nghiệm hôm nay:
+
+- Sáng nay website còn ở Vercel — chiều tối đã chạy trên VPS của chính mình, database thật.
+- Ngồi cà phê nhắn 1 câu Telegram, AI agent tự làm việc thật trên website: [kể 1 use case cụ thể bạn vừa test thành công, ví dụ "đổi tiêu đề landing chỉ bằng 1 câu nhắn" hoặc "báo cáo đơn hôm nay ngay trong chat"].
+- Cảm giác lần đầu thấy AI không chỉ nói — mà LÀM.
+
+Tone tự nhiên, không khoe khoang kỹ thuật. Nhấn mạnh cảm giác "kiểm soát" và "tự do" — không cần mở laptop vẫn vận hành được business.
+
+Cuối bài NHỚ nhắn Dũng Hoàng (link: https://t.me/KentHoang) — cảm ơn vì chuỗi thử thách này.
+
+Lưu vào day14_post.txt.
+Không có brain.db riêng? Không sao — paste brand voice đã dùng từ các ngày trước vào thẳng trong prompt. Hoặc kể lại cảm nhận bằng chính giọng của bạn, dùng AI chỉ để format lại. Bài đăng đầu do bạn, AI chỉ là trợ lý viết.
+
+Đăng ít nhất 2 kênh. Nhớ nhắn Dũng Hoàng ở Telegram — đây là điều kiện bắt buộc để nhận bộ skills 2tr.
+
+FINAL
+Nộp Bài
+Checklist hoàn thành
+Tiêu chí hoàn thành
+Website chạy trên VPS thật với domain + HTTPS — không còn Vercel
+Nhắn 1 câu tự nhiên qua Telegram → AI gọi MCP → website/database thay đổi thật
+Mẹo AI-First tổng cho cả ngày
+Hôm nay là ngày nặng nhất — nhưng KHÔNG phải vì bạn làm nhiều. Vì agent làm nhiều.
+
+Đừng đọc từng lệnh bash, npm, systemd. Agent viết gì kệ agent. Bạn chỉ duyệt, xác nhận, và báo lỗi khi có.
+Lỗi = cơ hội dạy lại. Copy nguyên lỗi → paste vào agent → "fix." Đừng Google, đừng hỏi Stack Overflow.
+"Không biết" là câu thần chú. Gặp từ lạ (systemd, Caddy, reverse proxy, streamable-http)? Paste: "Giải thích [từ đó] cho tôi như trẻ con 10 tuổi."
+Chụp màn hình thay mô tả. Đặc biệt khi vào Dashboard goClaw lần đầu — chụp ảnh thay vì mô tả bằng chữ.
+Chia việc thành nhiều phiên. Nếu mệt sau Phần 1, nghỉ 1 tiếng rồi làm Phần 2. Không cần xong hết trong 1 lèo.

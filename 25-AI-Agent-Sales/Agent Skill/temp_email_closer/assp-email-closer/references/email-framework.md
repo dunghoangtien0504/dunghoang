@@ -64,7 +64,7 @@ Goal: your email must land in the "P" (Personal) group in the inbox, not the "C"
 ❌ Sai (dài, marketing, hoa chữ):
 "5 Bí Quyết Dùng AI Tăng Thu Nhập Gấp 3"
 "[KHẨN] Giá tăng sau 24 giờ!!!"
-"Newsletter tuần này của KP3"
+"Newsletter tuần này của Tiểu Hà Mã"
 ```
 
 **6 good subject line types:**

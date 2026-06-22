@@ -206,7 +206,7 @@ Cấu trúc:
 → Và đó là lý do [sản phẩm này] tồn tại
 ```
 
-Ví dụ KP3:
+Ví dụ Tiểu Hà Mã:
 > "Trước khi có Thử Thách 21 Ngày — tôi mất X tháng tự mò cách dùng AI.
 > Build website 3 lần, 3 lần hỏng. Đến lần thứ 4 tôi mới hiểu ra...
 > [moment chuyển đổi]
@@ -232,7 +232,7 @@ Bài học từ Hormozi:
 → "Họ đều hoạt động — nhưng không đủ vì MODEL sai"
 → Người đọc gật đầu vì đã từng mua đúng mấy thứ đó
 
-Ví dụ KP3:
+Ví dụ Tiểu Hà Mã:
 > "Các khóa học AI dạy bạn tool — ChatGPT, Midjourney, CapCut...
 > Bạn học xong. Tool update. Bạn học lại.
 > Không ai dạy bạn cách tư duy — cách ép AI làm việc theo hệ thống.
@@ -277,7 +277,7 @@ Bài học từ Hormozi:
 **3. MODEL > METHOD framework**
 → Không bán "kỹ thuật mới" — bán "cách nhìn mới"
 → "Tất cả method đều hoạt động — nếu model đúng. Nếu model sai — không method nào cứu được"
-→ Ứng dụng cho KP3: Không bán "học AI tool" — bán "học cách tư duy AI đúng"
+→ Ứng dụng cho Tiểu Hà Mã: Không bán "học AI tool" — bán "học cách tư duy AI đúng"
 
 **4. Giải thích cơ chế bằng logic đơn giản, có nguồn**
 → "Jay Abraham — người tư vấn cho công ty tổng doanh thu $21.7 tỷ — nói chỉ có 3 cách tăng doanh thu"

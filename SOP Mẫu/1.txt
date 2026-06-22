@@ -1,0 +1,36 @@
+SOP Day 1 - Setup Công Cụ & Vào Group Support
+Thuộc chuỗi thử thách 21 ngày.
+Mục tiêu của Day 1 là chuẩn bị đầy đủ công cụ để từ Day 2 trở đi có thể làm bài không bị kẹt vì thiếu setup.
+
+Xem lại record Kick Off Meeting
+Tham gia group support
+Tham gia group Telegram tại link này:(cho link sau)
+
+Trong group này có Lửng Mật hỗ trợ bạn trong quá trình làm bài tập.
+
+Khi cần support, tag @tieuhama_bot
+
+Chụp ảnh bằng chứng
+Bạn cần chụp ảnh để chứng minh đã setup xong.
+
+Ảnh cần chụp
+Chụp ít nhất các ảnh sau:
+
+Ảnh đã xem lại record Kick-off
+Ảnh đã tham gia group Telegram
+Ảnh Claude đã đăng nhập và trả lời được
+Ảnh VS Code đã mở được
+Ảnh Claude Desktop đã mở được
+Ảnh Antigravity đã mở được
+✅ Được duyệt khi
+Có bằng chứng đã tham gia group Telegram AI Agent Challenge
+Có bằng chứng đã xem record Kick-off
+VS Code đã cài và mở được
+Claude Desktop đã cài và mở được
+Antigravity đã cài và mở được
+💡 Mẹo AI-First
+Ngày 1 không phải để làm cho hoàn hảo.
+
+Ngày 1 là để dọn đường. Nếu bị kẹt ở bất kỳ bước nào, chụp màn hình lỗi và hỏi ngay trong group. Dùng mẫu này:
+
+Em đang làm Day 1. Em bị kẹt ở bước [tên bước]. Đây là ảnh lỗi. Nhờ @tieuhama_bot hướng dẫn em xử lý từng bước.

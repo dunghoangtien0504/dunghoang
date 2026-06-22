@@ -1,0 +1,162 @@
+Agent Workflow
+
+Hôm nay bạn sẽ biến danh sách khách hàng trong CRM thành một cỗ máy chăm sóc tự động.
+
+Nhìn lại những gì bạn đã có:
+
+✅ CRM có danh sách khách hàng thật tại yourdomain.com/admin
+
+✅ Bộ não thứ 2 biết viết đúng giọng bạn
+
+✅ Sepay đang nhận tiền tự động
+
+Hôm nay thêm 1 mảnh: khách điền form → tự nhận email chào → 2 ngày sau nhận email có giá trị → 1 ngày sau nhận email mời mua → có đơn hàng → tự nhận email xác nhận. Tất cả tự động, bạn không cần làm gì.
+
+Resend là gì?
+Bình thường khi bạn gửi email từ Gmail, bạn ngồi gõ tay từng cái. Nhưng website của bạn là một đoạn code — code không tự gửi email được, nó cần một "bưu điện" để nhờ gửi hộ.
+
+Resend chính là cái bưu điện đó.
+
+Website của bạn sẽ nói với Resend: "Này, có khách mới vừa đăng ký, gửi email chào mừng cho họ đi." Resend nhận lệnh và gửi ngay — bạn không cần làm gì cả.
+
+Về mặt kỹ thuật, website kết nối với Resend qua API — hiểu đơn giản là website dùng một cái "chìa khóa bí mật" (API Key) để ra lệnh cho Resend gửi email. Không phải bạn đang dùng Resend như một app gửi email thủ công — mà là website tự động gọi Resend mỗi khi cần gửi. Đó là lý do bước đầu tiên là lấy API Key — đó là chìa khóa để website nói chuyện được với Resend.
+
+Miễn phí hoàn toàn cho giai đoạn đầu — đủ dùng cho đến khi bạn có hàng nghìn khách hàng.
+
+💡 Mẹo thao tác trên nền tảng mới — không biết bấm gì thì hỏi AI
+Lần đầu vào Resend, nhìn giao diện lạ hoắc không biết bắt đầu từ đâu? Đừng mò — làm thế này:
+
+Chụp màn hình giao diện Resend → ném vào Claude hoặc ChatGPT → hỏi:
+
+"Đây là giao diện Resend. Tôi cần tạo API Key, hãy chỉ tôi phải bấm vào đâu."
+
+AI nhìn vào ảnh sẽ chỉ đúng chỗ cần bấm. Không cần đọc docs, không cần mò mẫm. Áp dụng được cho bất kỳ nền tảng nào — Sepay, Resend, Vercel, bất cứ thứ gì lạ. Cứ chụp màn hình và hỏi.
+
+🔥 Mẹo của Dũng: Làm ngay trước khi đọc tiếp
+Copy toàn bộ SOP này, paste vào agent đang dùng và nói:
+
+"Đây là SOP tôi cần làm hôm nay. Hướng dẫn tôi từng bước một — mỗi lần chỉ 1 bước, chờ tôi làm xong báo lại rồi mới tiếp. Bị lỗi thì fix luôn. Bắt đầu đi."
+
+▤ SOP — Hướng dẫn
+
+🔥 Mẹo của Dũng: Làm ngay trước khi đọc tiếp
+Copy toàn bộ SOP này, paste vào agent đang dùng và nói:
+
+"Đây là SOP tôi cần làm hôm nay. Hướng dẫn tôi từng bước một — mỗi lần chỉ 1 bước, chờ tôi làm xong báo lại rồi mới tiếp. Bị lỗi thì fix luôn. Bắt đầu đi."
+
+Bước 1 — Thêm trường email vào form và CRM
+Tại sao cần làm bước này? Vì Resend cần biết địa chỉ email của khách để gửi — không có email thì không gửi được cho ai.
+
+Mở agent → File → Open Folder → thư mục website → paste prompt này:
+
+"Kiểm tra form waitlist trên website có trường email chưa. Nếu chưa có thì thêm trường email vào form, thêm cột email vào bảng customers trong brain.db, và cập nhật trang /admin để hiển thị cột email. Chạy luôn cho tôi."
+
+Sau khi AI xong → vào yourdomain.com/admin → tab Khách hàng → kiểm tra có cột email chưa.
+
+Bị lỗi? Copy thông báo lỗi → paste vào AI → nói "bị lỗi này, fix giúp tôi."
+
+Bước 2 — Đăng ký Resend, lấy API Key, và verify domain
+Vào resend.com → đăng ký miễn phí → xác minh email.
+
+Sau khi vào dashboard → chụp màn hình giao diện → ném vào AI → hỏi: "Tôi cần tạo API Key, chỉ tôi bấm vào đâu." AI sẽ chỉ đúng chỗ cần bấm.
+
+Tạo API Key xong → copy lại → lưu vào file resend_config.txt trong thư mục website.
+
+⚠️ Bắt buộc: verify domain ngay hôm nay. Vào Domains → Add Domain trên Resend → nhập domain của bạn → làm theo hướng dẫn DNS (thêm các bản ghi TXT/MX vào nhà cung cấp tên miền). Không biết làm thì: chụp màn hình Resend → ném vào AI → hỏi "Tôi cần verify domain trên Resend, chỉ tôi từng bước."
+
+Verify domain nhanh hay chậm phụ thuộc hoàn toàn vào việc nhập bản ghi DNS có đúng không. Nhập đúng → Resend xác nhận trong vòng 30 phút, thường chỉ vài phút. Nếu chờ quá 30 phút gần như chắc chắn là nhập sai bản ghi — xem lại từng ký tự, copy đúng giá trị Resend cho, không phải ngồi chờ thêm. Không có ngoại lệ "phải đợi 24 giờ" — đó là dấu hiệu của nhập sai, không phải DNS chậm.
+
+Domain verified rồi mới gửi email từ hi@yourdomain.com được thay vì @resend.dev — đây là điều kiện bắt buộc để nộp bài.
+
+Bước 3 — Để AI kết nối Resend vào website
+Vẫn ở thư mục website, paste prompt này:
+
+"Tôi muốn kết nối Resend vào website để gửi email tự động. Hãy đọc tài liệu tại https://resend.com/docs và hướng dẫn tôi từng bước một — mỗi lần chỉ 1 bước, chờ tôi làm xong báo lại rồi mới tiếp. API Key của tôi đã lưu trong file resend_config.txt. Địa chỉ người gửi phải dùng domain riêng của tôi, không dùng @resend.dev."
+
+AI tự đọc docs, tự hiểu, dẫn bạn từng bước. Làm theo và báo lại sau mỗi bước.
+
+Bị lỗi? Nói với AI: "Bị lỗi này [paste lỗi], fix giúp tôi."
+
+Bước 4 — Nhờ AI viết 3 email tự động
+Mở agent → File → Open Folder → thư mục my-brain → paste prompt này:
+
+"Đọc brand voice trong brain.db và thông tin sản phẩm trong bảng products. Viết 3 email theo đúng giọng của tôi:
+
+Email 1 — Chào mừng: gửi ngay khi khách điền form. Ngắn, ấm, giới thiệu bạn là ai và vì sao họ nên chờ đón.
+
+Email 2 — Nurture: gửi 2 ngày sau Email 1. Chia sẻ 1 insight có giá trị liên quan đến sản phẩm — không bán hàng, chỉ cho đi.
+
+Email 3 — Chốt: gửi 1 ngày sau Email 2. Giới thiệu sản phẩm, lợi ích thật, CTA rõ ràng dẫn đến trang thanh toán.
+
+Lưu vào file email_sequence.md."
+
+Đọc lại 3 email → chỗ nào chưa đúng giọng thì nói AI sửa. Không tự sửa tay.
+
+Xong bước này → chuyển lại thư mục website trước khi làm bước 5.
+
+Bước 5 — Gắn email sequence vào website + thêm chế độ test
+Mở agent → File → Open Folder → thư mục website → paste prompt này:
+
+"Đọc file email_sequence.md. Làm 3 việc: (1) Khi có khách mới điền form waitlist → tự động gửi Email 1 ngay lập tức qua Resend. (2) 2 ngày sau → tự động gửi Email 2. (3) 1 ngày sau → tự động gửi Email 3 kèm link trang thanh toán. Dùng API Key trong resend_config.txt. Địa chỉ người gửi phải là domain riêng của tôi.
+
+Thêm chế độ test: nếu email điền vào form có chứa chữ '+test' — ví dụ tenmình+test@gmail.com — thì gửi cả 3 email ngay lập tức thay vì chờ theo lịch."
+
+Sau khi AI xong → test bằng cách điền form với email tenmình+test@gmail.com
+
+Ví dụ cụ thể: Email của bạn là nguyenvana@gmail.com thì điền nguyenvana+test@gmail.com — email vẫn vào hộp thư của bạn bình thường, không cần tạo email mới.
+
+Kiểm tra hộp thư: 3 email về, và địa chỉ người gửi phải là something@yourdomain.com, không phải @resend.dev.
+
+Bị lỗi? Copy thông báo lỗi → paste vào AI → nói "bị lỗi này, fix giúp tôi."
+
+Bước 6 — Thêm email xác nhận đơn hàng
+Vẫn ở thư mục website, paste prompt này:
+
+"Đọc brand voice trong file email_sequence.md và thông tin sản phẩm trong brain.db. Viết thêm 1 email xác nhận đơn hàng — gửi tự động khi admin thêm đơn mới vào bảng orders. Email phải có: tên sản phẩm, số tiền, hướng dẫn nhận hàng, lời cảm ơn đúng giọng. Địa chỉ người gửi phải là domain riêng của tôi. Kết nối với Resend và gắn vào luồng tạo đơn hàng trong /admin."
+
+Test bằng cách vào yourdomain.com/admin → thêm 1 đơn hàng thử với email thật → kiểm tra hộp thư có nhận được email xác nhận không.
+
+Bị lỗi? Copy thông báo lỗi → paste vào AI → nói "bị lỗi này, fix giúp tôi."
+
+Bước 7 — Đăng bài thông báo
+Mở agent → File → Open Folder → thư mục my-brain → paste prompt này:
+
+"Đọc brand voice trong brain.db. Viết 1 bài đăng chia sẻ rằng từ hôm nay khách hàng của tôi sẽ nhận được email chăm sóc tự động sau khi đăng ký — không phải email spam mà là email có giá trị thật. Tone gần gũi, có chút tự hào nhưng không khoe khoang. Có link website. Lưu vào file day11.txt."
+
+Chỉnh tối đa 5 phút → đăng thật lên ít nhất 2 kênh.
+
+Bước 8 — Nộp bài (Screenshot đặt trong folder GG driver của bạn, mở public để reviewer có thể vào kiểm tra)
+✅ Screenshot hộp thư nhận được cả 3 email sau khi test bằng email +test — phải thấy rõ địa chỉ người gửi là something@yourdomain.com
+
+✅ Screenshot hộp thư nhận được email xác nhận đơn hàng sau khi test thêm đơn trong /admin
+
+✅ Screenshot file email_sequence.md có đủ 3 email đúng giọng
+
+✅ Link bài đăng — ít nhất 2 kênh, link public
+
+** Được duyệt khi:**
+
+✅ Nhận được cả 3 email trong hộp thư thật sau khi test chế độ +test
+
+✅ Địa chỉ người gửi trong tất cả email là something@yourdomain.com — không phải @resend.dev (chứng minh domain đã verify trên Resend)
+
+✅ Nhận được email xác nhận đơn hàng sau khi test hoàn thành đơn
+
+✅ email_sequence.md có đủ 3 email đúng giọng brand voice
+
+✅ Link bài đăng mở được — không phải ảnh chụp màn hình
+
+❌ Chưa đạt khi:
+
+❌ Email người gửi vẫn là @resend.dev — domain chưa verify
+
+❌ Chỉ nhận được Email 1, Email 2 và 3 chưa chạy được
+
+❌ Email xác nhận đơn hàng chưa hoạt động
+
+❌ email_sequence.md còn trống hoặc chỉ có template mẫu
+
+❌ Link bài đăng bị private hoặc chỉ nộp ảnh
+
+💡 Mẹo AI-First
+Email marketing nghe có vẻ phức tạp — nhưng Resend được thiết kế để dùng với agent coding. AI đọc docs Resend thay bạn, viết code kết nối thay bạn, viết nội dung email theo brand voice thay bạn. Bạn chỉ cần paste prompt, test, và xác nhận email vào hộp thư — từ đúng địa chỉ domain của mình.

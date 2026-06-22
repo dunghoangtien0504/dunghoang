@@ -1,0 +1,201 @@
+Ngày 07 · Tuần 1
+Dùng Agent Coding
+Quản Lý Công Việc
+Hướng dẫn từng bước dành cho người mới — đơn giản, thực tế, dùng được ngay hôm nay.
+
+3 giai đoạn
+10 bước
+~25 phút hoàn thành
+Mục tiêu cuối ngày
+Cuối hôm nay bạn có:
+
+Một thư mục làm việc my-workspace/ do chính Agent tạo — đủ README, tasks, projects, meetings, archive
+Ít nhất 3 task thật được Agent sắp xếp ưu tiên + một lịch tuần tự động
+Đã xem hết record meeting Ngày 7 và nộp bằng chứng — hoàn thành tuần 1
+🧠
+Trước khi bắt đầu
+5 Tư Duy AI-First Cần Có
+01 / CONTEXT IS KING
+Agent chỉ giỏi khi bạn cho đủ bối cảnh
+Agent không đọc được suy nghĩ. Bạn càng viết rõ — bạn là ai, đang làm gì, muốn gì — thì kết quả càng chuẩn. File README.md chính là "não" của workspace.
+02 / DELEGATE, DON'T DO
+Đừng tự làm những gì Agent làm được
+Cũ
+Tự tạo từng file, gõ từng dòng, format tay
+Mới
+1 câu lệnh → Agent tạo toàn bộ cấu trúc
+03 / PROMPT = SKILL
+Cách bạn hỏi quyết định chất lượng trả lời
+Prompt tốt có 3 phần: Ngữ cảnh (bạn đang ở đâu), Nhiệm vụ (cần làm gì), Output mong muốn (muốn nhận lại dạng gì). Thiếu 1 trong 3 → kết quả nhạt.
+04 / DATA IN, DATA OUT
+Rác vào = rác ra. Dữ liệu tốt = kết quả tốt
+Agent phân tích dữ liệu từ file của bạn. Nếu tasks.md trống hoặc viết chung chung, Agent cũng chỉ trả lời chung chung. Đầu tư 5 phút viết file → tiết kiệm hàng giờ sau đó.
+05 / ITERATE FAST
+Không cần hoàn hảo, cần chạy được trước
+Đừng chờ có đủ dữ liệu mới bắt đầu. Tạo file với nội dung tối thiểu → chạy thử → sửa dần. Agent giúp bạn cải thiện từng vòng, không cần làm đúng ngay từ đầu.
+Giai đoạn 1 · 10 phút
+Tạo thư mục làm việc
+01
+Mở Agent Coding — trỏ vào thư mục làm việc
+Tạo một thư mục trống trên máy (ví dụ: Desktop), đặt tên my-workspace. Sau đó mở thư mục đó trong công cụ của bạn.
+💡
+Cursor / VS Code: File → Open Folder → chọn my-workspace  |  Antigravity: tương tự, chọn Open Folder
+02
+Dùng Agent tạo toàn bộ cấu trúc bằng 1 câu lệnh
+Thay vì tự tay tạo từng file — hãy để Agent làm. Dán đoạn này vào ô chat của Agent:
+Prompt → Agent
+Copy
+
+Hãy tạo cho tôi cấu trúc thư mục làm việc cá nhân gồm:
+
+my-workspace/
+├── README.md
+├── tasks.md
+├── weekly-goals.md
+├── projects/
+│   ├── project-1.md
+│   └── project-2.md
+├── meetings/
+│   └── meeting-notes.md
+└── archive/
+
+Trong mỗi file .md, hãy tạo sẵn nội dung mẫu
+phù hợp để tôi có thể điền vào ngay.
+✅
+Agent sẽ tự tạo toàn bộ file và nội dung mẫu. Bạn không cần gõ tay gì cả.
+03
+Hiểu mỗi thư mục dùng để làm gì
+Sau khi Agent tạo xong, đây là ý nghĩa của từng file và thư mục:
+📁
+my-workspace/
+📄
+README.md
+  
+← Agent đọc cái này TRƯỚC TIÊN. Viết bạn là ai, đang làm gì.
+📄
+tasks.md
+  
+← Tất cả việc cần làm, deadline, trạng thái.
+📄
+weekly-goals.md
+  
+← 3–5 mục tiêu tuần này. Viết vào mỗi đầu tuần.
+📁
+projects/
+  
+← Mỗi dự án lớn có 1 file riêng.
+📄
+project-1.md
+📄
+project-2.md
+📁
+meetings/
+  
+← Ghi chép sau mỗi buổi họp.
+📁
+archive/
+  
+← Việc đã xong. Chuyển vào đây để không rối.
+📌
+Quy tắc đơn giản: Việc hàng ngày → tasks.md  |  Dự án lớn → projects/  |  Họp xong → meetings/  |  Xong rồi → archive/
+04
+Dùng Agent điền nội dung vào README.md
+README.md là file quan trọng nhất — Agent đọc cái này đầu tiên để hiểu bối cảnh của bạn. Điền thông tin thật vào phần ngoặc vuông rồi dán vào chat:
+Prompt → Agent
+Copy
+Hãy viết nội dung cho file README.md dựa trên thông tin:
+
+- Tên tôi: [điền tên bạn]
+- Vai trò: [ví dụ: học viên AI Agent / trưởng nhóm / freelancer]
+- Đội nhóm: [tên nhóm hoặc tổ chức nếu có]
+- Mục tiêu lớn nhất tháng này: [1–2 câu]
+- Quy tắc ưu tiên:
+  + Urgent + Important → làm ngay hôm nay
+  + Important, not urgent → lên lịch
+  + Urgent, not important → nhờ người khác hoặc cắt
+
+Viết định dạng markdown, ngắn gọn, rõ ràng.
+05
+Dùng Agent tạo danh sách task trong tasks.md
+"Đổ" hết công việc trong đầu ra file. Liệt kê thật — đừng bịa. Agent sẽ format và sắp xếp cho bạn:
+Prompt → Agent
+Copy
+Hãy tạo nội dung cho tasks.md với danh sách sau:
+
+[Liệt kê tất cả việc bạn đang có, ví dụ:]
+- Hoàn thành bài tập tuần 1 AI Agent — deadline: Chủ nhật
+- Xem lại video buổi học hôm qua — deadline: ngày mai
+- Chuẩn bị nội dung demo — deadline: thứ 6
+
+Format thành bảng markdown gồm các cột:
+Tên task | Deadline | Trạng thái | Độ ưu tiên
+
+Điền trạng thái mặc định: "Chưa làm".
+Điền độ ưu tiên dựa vào deadline gần nhất.
+Giai đoạn 2 · 10 phút
+Nói chuyện với Agent
+06
+Ra lệnh cho Agent đọc toàn bộ thư mục và phân tích
+Bây giờ thư mục đã có dữ liệu thật. Hỏi Agent phân tích cho bạn:
+Prompt → Agent
+Copy
+Hãy đọc toàn bộ file trong thư mục này.
+Sau đó cho tôi biết:
+1. Tôi đang có bao nhiêu task chưa hoàn thành?
+2. Task nào quan trọng nhất cần làm hôm nay?
+3. Có file nào còn thiếu thông tin không?
+
+Trả lời ngắn gọn, dùng bullet points.
+⚠️
+Quy tắc vàng: Prompt càng cụ thể → Agent càng trả lời đúng. Đừng hỏi kiểu "giúp tôi với" — Agent không biết giúp gì.
+07
+Ra lệnh cho Agent lên lịch tuần tự động
+Prompt → Agent
+Copy
+Dựa vào tasks.md và weekly-goals.md trong thư mục này,
+hãy tạo lịch làm việc từ Thứ 2 đến Thứ 6 tuần này.
+Mỗi ngày tối đa 3 việc chính.
+Ưu tiên deadline gần nhất lên trước.
+Xuất ra dạng bảng, mỗi hàng là 1 ngày.
+08
+Ra lệnh cho Agent cập nhật task khi xong việc
+Mỗi khi hoàn thành một việc, thay vì tự sửa file — chỉ cần nói với Agent:
+Prompt → Agent
+Copy
+Tôi vừa hoàn thành task "[tên task]".
+Hãy cập nhật trạng thái trong tasks.md thành "Đã xong"
+và ghi thêm ngày hoàn thành hôm nay vào bên cạnh.
+Giai đoạn 3 · 5 phút
+Demo cho nhóm
+09
+Chuẩn bị nội dung chia sẻ trong meeting
+Không cần slide. Không cần chuẩn bị nhiều. Chỉ cần trả lời đúng 3 câu hỏi này:
+Use case là gì? — Bạn dùng Agent để quản lý cá nhân / đội nhóm / dự án gì cụ thể?
+Agent làm được gì? — Đọc file, tạo lịch, cập nhật task, tóm tắt, phân tích ưu tiên...
+Tiết kiệm bao nhiêu thời gian? — So với cách bạn làm thủ công trước đây.
+🎯
+Demo trực tiếp thuyết phục hơn slide. Chiếu màn hình và chạy 1 prompt live — 30 giây Agent đọc 10 file và xuất lịch tuần sẽ gây ấn tượng hơn bất kỳ PowerPoint nào.
+10
+Checklist trước khi nộp bài
+Thư mục my-workspace/ đã có đủ 6 file/folder theo cấu trúc ở Bước 2
+README.md đã có thông tin thật của bạn — không phải nội dung mẫu
+tasks.md đã có ít nhất 3 task thật với deadline thật
+Đã chạy thử ít nhất 2 prompt với Agent và có output thực
+Chụp màn hình hoặc quay video kết quả
+Chuẩn bị câu trả lời cho 3 câu hỏi ở Bước 9
+Quan trọng: Đã xem hết record meeting Ngày 7 và nộp bằng chứng screen record/video quay lại quá trình xem. Có thể tua nhanh tốc độ phát, nhưng không được skip nội dung. Đây là yêu cầu bắt buộc để đảm bảo mọi thành viên đều hoàn thành cùng một phần trải nghiệm như nhau, công bằng với những bạn đã tham gia đầy đủ buổi meeting live. Có thể sử dụng các phần mềm quay màn hình như OBS Studio, Loom, Zoom Recording, QuickTime Player trên macOS, Xbox Game Bar trên Windows, hoặc hỏi AI để được gợi ý công cụ phù hợp với thiết bị của bạn. Tinh thần là AI-first: chưa biết dùng công cụ nào thì hỏi AI trước, rồi làm theo hướng dẫn.
+💡
+Chưa biết bắt đầu từ đâu?
+Ý Tưởng Use Case
+📌 Quản lý task học tập AI Agent
+📌 Kế hoạch sprint cho đội nhóm
+📌 Ghi chép tóm tắt buổi họp
+📌 Theo dõi tiến độ dự án song song
+📌 Phân tích và sắp xếp ưu tiên công việc
+📌 Lên lịch học & ôn tập tự động
+Nhớ một điều quan trọng nhất:
+Agent không "biết" gì nếu bạn không viết vào file.
+Thư mục càng chi tiết — có context, có deadline, có người phụ trách
+thì Agent càng trả lời chính xác.
+
+Rác vào = rác ra. Dữ liệu tốt vào = kết quả tốt ra.

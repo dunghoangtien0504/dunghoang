@@ -96,7 +96,7 @@ Goal: Prove you can help by actually helping with a small part right now.
 **Don't just talk — actually do it:**
 Solve a small piece of their problem right there on the call.
 
-Ví dụ KP3:
+Ví dụ Tiểu Hà Mã:
 > "Bạn nói đang muốn build website nhưng không biết bắt đầu từ đâu.
 > Mình sẽ chỉ bạn ngay bây giờ 3 bước đầu tiên cần làm — không cần tool phức tạp."
 > [Giải thích 3 bước ngắn gọn]

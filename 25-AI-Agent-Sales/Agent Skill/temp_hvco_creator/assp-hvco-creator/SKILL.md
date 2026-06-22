@@ -88,7 +88,7 @@ Selection criteria:
 ## Brief Format — Output file hvco-brief-[name]-v1.md
 
 ```
-## KP3 · hvco-brief-[name]-v1.md
+## Tiểu Hà Mã · hvco-brief-[name]-v1.md
 
 ### Basic Information
 - HVCO name:

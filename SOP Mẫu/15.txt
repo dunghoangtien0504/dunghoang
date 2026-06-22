@@ -1,0 +1,335 @@
+Agent Trở Thành Cộng Sự Tức Thì
+
+⚠️ Lưu ý: Bài này chỉ dành cho thành viên thử thách — KHÔNG share link hướng dẫn ra nhóm hay cho người ngoài.
+
+Ngày 14 bạn cho agent cánh tay (MCP). Hôm nay cho nó việc cụ thể, giọng riêng, và thói quen chủ động.
+
+Mục tiêu: Lần đầu agent không đợi bạn nhắn — nó tự Telegram khi có đơn mới, form mới, hay mỗi sáng tổng kết đêm trước.
+
+Nhẹ hơn nhiệm vụ trước (~2-3 giờ): Agent coding viết MCP function + MD files, bạn upload + bật Heartbeat qua Dashboard. Không cần SSH hay sửa VPS.
+
+▤ SOP — Hướng dẫn
+
+📘 Hướng dẫn đầy đủ
+🔒 Nhắc lại: đừng share link này ra nhóm hay cho người ngoài thử thách.
+
+👉 Mở hướng dẫn Ngày 15 — Agent Trở Thành Cộng Sự Tức Thì
+
+Mở tab mới (chuột phải → Open in new tab) để vừa đọc vừa thao tác.
+Ngày 15 · Tuần 3
+Agent Trở Thành
+Cộng Sự Tức Thì
+Nhiệm vụ trước bạn cho agent cánh tay (MCP). Hôm nay cho nó việc cụ thể, giọng riêng, và thói quen chủ động. Lần đầu agent không đợi bạn nhắn — nó tự nhắn khi có chuyện xảy ra.
+
+Mục tiêu cuối ngày
+Đang làm việc khác, bỗng Telegram tự bật một trong những tin kiểu này:
+
+"Có đơn mới vừa vào: 450k của chị Hà, 2 sản phẩm."
+"Có người mới điền form: anh Minh, SĐT 0903xxx. Đây là khách thứ 5 hôm nay."
+"8h sáng. Tối qua chốt 3 đơn, tổng 1.2tr. Hôm nay bạn chưa có việc nào đang chờ xử lý."
+→ Agent tự theo dõi business, tự nhắn bạn khi có chuyện — không cần bạn hỏi trước.
+
+Sự khác biệt của ngày hôm nay
+Đến giờ agent phản ứng — bạn nhắn gì, nó làm đó. Hôm nay agent chủ động — tự biết chuyện và tự báo.
+
+Nếu bạn chưa có team, agent chính là cộng sự đầu tiên của bạn. Nếu bạn đã có team, agent thành người giữ mắt giúp cả team — không bao giờ ngủ quên việc.
+
+Tinh thần AI-First (để AI làm — mình chỉ duyệt) cho cả ngày
+Hôm nay nhẹ hơn nhiệm vụ trước. Không phải đưa code mới lên VPS, không đụng VPS, không SSL. Bạn chỉ cần:
+
+Agent coding thêm 1 MCP function nhỏ (không tạo bảng mới)
+Agent coding viết nháp các file MD cho goClaw
+Bạn tải file + thiết lập Heartbeat qua Dashboard (bấm chuột, không gõ lệnh)
+Tổng thời gian: ~2-3 giờ. Chỗ duy nhất bạn phải tự quyết: "Agent cần nhắn tôi khi có chuyện gì?"
+
+Phần Một
+Cho agent một việc dễ nhất để bắt đầu
+BƯỚC 01
+Chọn 1 tín hiệu để agent theo dõi
+Không cần nghĩ lớn. Ngày đầu tiên agent làm việc chủ động, mục tiêu chỉ là một tín hiệu đơn giản — khi nó xảy ra, agent nhắn bạn.
+
+3 lựa chọn dễ nhất — chọn 1 hợp với business của bạn:
+
+Tín hiệu 01 · Đơn mới
+Có đơn hàng vừa vào
+Data bạn đã có sẵn (bảng orders từ nhiệm vụ Sepay). Chỉ cần thêm 1 MCP function đọc đơn mới trong X phút gần đây. Agent nhắn bạn khi có đơn.
+"Đơn mới: chị Hà, 450k, 2 sản phẩm. Tổng hôm nay: 3 đơn."
+
+Tín hiệu 02 · Form/lead mới
+Có người mới điền form
+Data bạn đã có sẵn (bảng waitlist hoặc customers từ nhiệm vụ form). Chỉ cần thêm 1 MCP function đọc lead mới. Agent nhắn bạn.
+"Anh Minh vừa điền form, SĐT 0903xxx. Khách thứ 5 hôm nay."
+
+Tín hiệu 03 · Báo cáo sáng
+Tổng kết 24h qua
+Đơn giản nhất — không cần theo dõi tức thì. Cron chạy 8h mỗi sáng, agent tổng hợp đơn + khách + doanh thu tối qua. Phù hợp nếu business bạn chậm, không cần biết ngay lập tức.
+"8h sáng. Tối qua chốt 3 đơn, 1.2tr. 2 khách mới điền form."
+
+Nên chọn Tín hiệu 01 hoặc 02
+Vì nó bắn ra tức thì khi có chuyện — cho bạn thấy ngay tính tức thì. Tín hiệu 03 dễ nhất nhưng chỉ chạy 1 lần/ngày, ít cảm giác bất ngờ.
+
+Muốn hăng hái? Làm cả 3 — 1 nhắn tức thì (01 hoặc 02) + 1 báo sáng (03).
+
+BƯỚC 02
+Vibe thêm 1 MCP function
+Mở agent coding ngay trong thư mục website trên máy. Dán đoạn hướng dẫn đơn giản này vào agent:
+
+Prompt · Thêm MCP function (AI-First)
+COPY
+Tôi muốn agent AI của tôi (qua goClaw + Telegram) tự nhắn tôi khi có chuyện xảy ra trong business.
+
+Tín hiệu tôi chọn: [điền Tín hiệu 01, 02, 03 — hoặc mô tả ngắn use case riêng]
+
+Trước khi code, hãy:
+
+1. ĐỌC codebase hiện tại — brain.db + MCP server từ nhiệm vụ trước. Cho tôi biết đang có bảng gì, function MCP gì.
+
+2. ĐỀ XUẤT plan:
+   - Có cần thêm cột nào vào bảng hiện có không (ví dụ: cờ "đã_nhắn" để không nhắn trùng)?
+   - Cần thêm MCP function nào? (tên + input + output)
+   - KHÔNG tạo bảng mới, KHÔNG tạo trang admin mới — chỉ mở rộng cái đã có.
+
+3. Sau khi tôi duyệt plan, code + đưa lên VPS + thử nhanh để chắc function trả đúng.
+
+Mục tiêu: giữ đơn giản nhất có thể. Tôi không cần tính năng phức tạp — chỉ cần 1 function để agent đọc được tín hiệu này.
+Đừng tự viết prompt dài hơn
+Agent coding đã hiểu codebase của bạn. Bạn chỉ cần nói mục tiêu ngắn gọn. Prompt dài quá sẽ làm nó bị bó khuôn, khó sáng tạo giải pháp phù hợp.
+
+Phần Hai
+Nâng cấp bộ não thứ 2
+BƯỚC 03
+Hiểu sự nâng cấp
+Bộ não thứ 2 của bạn đang ở đâu?
+Từ Ngày 5 bạn đã xây bộ não thứ 2 — file brain.db chứa brand voice, knowledge, business info. Nó đang nằm trên máy bạn, im lặng.
+
+Hôm nay bạn đánh thức nó dậy và kết nối với goClaw. Từ giờ, agent đọc được brand voice, biết giọng bạn, biết nguyên tắc bạn — lần đầu agent nói chuyện "như bạn", không phải ChatGPT generic.
+
+Hiểu kiểu đơn giản nhất
+brain.db = cuốn sổ tay của bạn ở nhà. goClaw = cộng sự ở văn phòng. Hôm nay bạn photocopy cuốn sổ, mang qua văn phòng, đưa cho cộng sự đọc. Vậy thôi.
+BƯỚC 04
+Export brain.db ra markdown
+goClaw đọc được markdown, không đọc được SQLite trực tiếp. Cần chuyển đổi. AI làm giúp:
+
+Prompt · Export brain.db → MD
+COPY
+Mở thư mục my-brain trên máy tôi. Đọc file brain.db.
+
+Làm giúp tôi:
+
+1. Tạo thư mục vault-ready/ mới.
+
+2. Đọc các table trong brain.db và xuất ra file markdown — mỗi table 1 file:
+   - brand_voice → brand-voice.md (giọng văn, tone, từ hay dùng/tránh)
+   - knowledge → knowledge-base.md (kiến thức chuyên môn)
+   - business → my-business.md (sản phẩm, khách hàng mục tiêu)
+   - các table khác có gì thì xuất hết (faq, objections, products...)
+
+3. Dùng cú pháp [[wikilinks]] khi 1 file nhắc tới nội dung của file khác — giúp goClaw liên kết các khái niệm.
+
+4. Viết file index.md — mục lục liệt kê tất cả file, có wikilink.
+
+5. Báo tôi có bao nhiêu file, bao nhiêu từ.
+
+Không có table nào thì skip. Không tự tạo data giả.
+Không có brain.db?
+Có thể bạn đã skip Ngày 5 hoặc lưu brand voice ở chỗ khác. Dùng prompt này thay thế:
+
+"Tạo thư mục vault-ready/ với 3 file markdown: brand-voice.md, my-business.md, knowledge-base.md. Hỏi tôi từng câu ngắn (tone, từ dùng, sản phẩm, USP, 3 kiến thức quan trọng), viết file dựa trên câu trả lời. Làm từng file một."
+
+BƯỚC 05
+Upload vào Knowledge Vault
+Knowledge Vault là thư viện tài liệu trong goClaw. Agent dùng nó để tra cứu mỗi khi trả lời — giống Google search riêng cho agent.
+
+Cách 1 — Tải lên qua Dashboard (đơn giản nhất)
+Mở https://app.yourdomain.com → đăng nhập goClaw Dashboard.
+Sidebar → Core → Knowledge Vault (hoặc Documents tùy phiên bản).
+Bấm Upload → chọn từng file trong thư mục vault-ready/.
+Chờ trạng thái chuyển đã xử lý xong.
+Cách 2 — Đồng bộ hệ thống file (nếu Cách 1 không có giao diện tải lên)
+Bảo agent coding làm giúp:
+
+Prompt · Đồng bộ hệ thống file
+COPY
+Tôi muốn nạp các file MD vào Knowledge Vault của goClaw qua đồng bộ hệ thống file.
+
+Thông tin VPS: [điền IP, SSH user]
+
+Làm giúp:
+1. Đọc tài liệu tại https://docs.goclaw.sh/ tìm đường dẫn thư mục vault (thường ~/.goclaw/vault/ hoặc /opt/goclaw/vault/).
+2. SSH vào VPS, kiểm tra thư mục. Chưa có thì tạo.
+3. SCP tất cả file trong vault-ready/ lên thư mục vault trên VPS.
+4. Kiểm tra goClaw đã tự xử lý chưa (qua Dashboard hoặc nhật ký). Nếu chưa, hướng dẫn tôi tải lại.
+
+Làm từng bước một.
+Lạc trong Dashboard?
+Chụp màn hình chỗ bạn đang đứng → dán vào Claude → hỏi "tôi đang tìm Knowledge Vault để tải file, bấm đâu tiếp?". Nhanh hơn đi tìm menu.
+Phần Ba
+Cho agent giọng riêng
+BƯỚC 06
+Hiểu 4 Context Files cốt lõi
+Ngoài Knowledge Vault (tra cứu khi cần), mỗi agent có một bộ file định nghĩa nó là ai — gọi là Context Files. Đây là file agent đọc mỗi lần trước khi trả lời. Hôm nay viết 4 file quan trọng nhất:
+
+SOUL.md
+Linh hồn — "Tôi là ai"
+Cá tính, giọng điệu, phong cách nói chuyện. Đây là file quyết định agent nói "như chị Lan bán khóa tự tin, gần gũi" hay "như trợ lý robot cứng nhắc".
+USER.md
+Về bạn — "Tôi đang làm việc với ai"
+Tên bạn, business đang làm, cách giao tiếp ưa thích. Agent gọi bạn đúng tên, nhớ bạn là ai, adjust theo thói quen.
+AGENTS.md
+Nguyên tắc — "Tôi được/không được làm gì"
+Hướng dẫn vận hành — agent được phép làm gì (nhắn báo đơn mới, trả lời khách), không được làm gì (giảm giá tự tiện, hứa ngày ship, xóa dữ liệu). Hàng rào an toàn.
+HEARTBEAT.md
+Thói quen — "Tôi tự kiểm tra gì mỗi 5-10 phút"
+Checklist agent đọc mỗi lần "tim đập". Đây là file kích hoạt tính tức thì — nó bảo agent tự gọi MCP function đã build ở Phần 1 để kiểm tra có tín hiệu mới không.
+BƯỚC 07
+Để AI viết nháp 4 file
+Không tự viết — để AI đọc brain.db và soạn sẵn 4 file. Dán vào agent coding:
+
+Prompt · Draft 4 Context Files
+COPY
+Tôi cần bạn viết nháp 4 Context Files cho agent goClaw. Đọc brain.db trong thư mục my-brain/ trước.
+
+Quan trọng: ở Phần 1 hôm nay tôi đã thêm MCP function: [tên function + ý nghĩa, ví dụ: "get_new_orders_since_last_check() — đọc đơn mới trong X phút gần đây"]. File HEARTBEAT.md phải gắn với function này.
+
+Tạo thư mục context-files/ mới, viết 4 file:
+
+1. SOUL.md — personality agent dựa trên brand_voice trong brain.db. Các phần: # Who I Am, # How I Talk, # What I Care About, # Phrases I Use, # Phrases I Avoid.
+
+2. USER.md — về tôi (user), dựa trên business + brand_voice. Các phần: # My Name, # What I'm Building, # How I Like To Be Talked To.
+
+3. AGENTS.md — hướng dẫn vận hành. Các phần: # What You CAN Do (5 việc agent được phép, BAO GỒM gọi MCP function để chủ động nhắn tôi), # What You MUST NOT Do (3 việc cấm), # When Uncertain (mặc định: hỏi tôi trước khi hành động).
+
+4. HEARTBEAT.md — file QUAN TRỌNG NHẤT. Nội dung:
+
+# Every Heartbeat Check
+
+Bạn là cộng sự của tôi. Mỗi lần tim đập:
+
+1. Gọi [tên MCP function đã build ở Phần 1]
+2. Nếu có kết quả (có đơn mới / form mới / vv):
+   → Nhắn tôi trên Telegram, kèm đầy đủ context cần thiết
+   → Giọng theo SOUL.md
+3. Nếu không có gì mới: im lặng, không spam.
+
+Quy tắc vàng:
+- Chỉ nhắn khi có VIỆC GIÁ TRỊ — không nhắn "không có gì mới"
+- Không nhắn cùng 1 thứ 2 lần — cơ chế đã_nhắn trong database lo việc đó
+- Tone luôn theo SOUL.md
+
+Mỗi file ngắn (50-150 dòng), tiếng Việt, giọng tự nhiên theo brand_voice.
+
+Sau khi xong, show nội dung từng file, hỏi tôi có chỉnh gì không — đặc biệt HEARTBEAT.md vì nó quyết định cách agent làm việc.
+Sau khi AI viết nháp xong: đọc kỹ, chỉnh 10-20% cho đúng giọng thật. Chỗ nào nghe "giống AI viết" thì viết lại.
+
+BƯỚC 08
+Upload 4 file vào agent
+Dashboard → Sidebar → Core → Agents.
+Chọn agent Telegram bạn đã tạo ở nhiệm vụ trước.
+Tab Files (hoặc Context tùy phiên bản).
+Tải lên (hoặc dán nội dung) từng file: SOUL.md, USER.md, AGENTS.md, HEARTBEAT.md.
+Lưu.
+Không thấy thẻ Files?
+Chụp màn hình Dashboard agent của bạn → dán vào Claude → "tôi muốn tải lên 4 file MD làm context cho agent này, thẻ nào?". Mỗi version goClaw bố cục hơi khác.
+
+Nếu không có UI: bảo agent coding SSH vào VPS, copy file vào thư mục context của agent (thường ~/.goclaw/agents/[tên-agent]/).
+
+Phần Bốn
+Cho agent thói quen chủ động
+BƯỚC 09
+Bật Heartbeat
+Heartbeat là gì?
+Giống tim đập — cứ đều đặn N phút một lần, agent tự đọc file HEARTBEAT.md và làm theo checklist. Đây là cơ chế biến agent từ phản ứng thành chủ động.
+Dashboard → Agent detail (trang chi tiết agent) → thẻ Config (cấu hình).
+Phần Heartbeat → bật Enabled (kích hoạt).
+Interval (khoảng thời gian giữa 2 lần tim đập): đặt 5m (5 phút) — đủ tức thì để cảm nhận, chưa tốn nhiều chi phí AI.
+Active Hours (giờ hoạt động): chọn giờ agent làm việc (ví dụ 7h-23h) — tránh chạy lúc 3h sáng tốn chi phí AI vô ích.
+Model (chọn mô hình AI): chọn model rẻ cho Heartbeat (Haiku hoặc GPT-4o-mini) — Heartbeat chỉ kiểm tra nhẹ, không cần Sonnet.
+Lưu.
+BƯỚC 10
+(Tùy chọn) Thêm cron báo sáng
+Heartbeat lo việc bất ngờ. Cron lo việc đúng giờ. Nếu bạn muốn có thêm báo sáng cố định 8h mỗi ngày, thiết lập thêm 1 cron:
+
+Cron là gì?
+Giống đồng hồ báo thức công ty — đặt "đúng 8h sáng rung chuông", agent nghe chuông là chạy task đã giao. Khác Heartbeat ở chỗ Cron đúng giờ cố định, Heartbeat đều đặn không cố định.
+Dashboard → Automation (tự động hoá) hoặc Cron Jobs (lịch tự động).
+Bấm Add (thêm mới). Điền:
+Name (tên): morning-briefing
+Schedule (lịch chạy): 0 8 * * * (8h sáng mỗi ngày)
+Timezone (múi giờ): Asia/Ho_Chi_Minh
+Agent: chọn agent Telegram của bạn
+Message (tin nhắn giao cho agent): Chào sáng. Tổng kết 24h qua: có bao nhiêu đơn, doanh thu, khách mới. Báo ngắn gọn.
+Channel / Target (kênh gửi / người nhận): Telegram chat của bạn
+Lưu.
+Không biết cú pháp cron?
+Hỏi AI: "Cho tôi cron expression cho 8h sáng mỗi ngày, Việt Nam." → AI trả 0 8 * * * + timezone. Xong.
+
+BƯỚC 11
+Test 3 cấp
+Đừng đợi mai test. Làm 3 thử nhanh ngay bây giờ:
+
+Test 1 — Giọng (kiểm tra Context Files)
+Trong Telegram, hỏi agent:
+
+"Bạn là ai?" → trả lời theo SOUL.md (không phải "Tôi là AI assistant...")
+"Bạn có được phép giảm giá cho khách không?" → theo AGENTS.md (thường: "không, cần hỏi sếp trước")
+Trả lời đúng → Context Files đang hoạt động. Trả lời generic → xem troubleshoot cuối bước.
+
+Test 2 — Nhắn tức thì (quan trọng nhất hôm nay)
+Tùy tín hiệu bạn chọn:
+
+Tín hiệu 01 (đơn mới) → tự tạo 1 đơn test qua trang bán hàng (hoặc thêm trực tiếp vào DB) → chờ 5-10 phút.
+Tín hiệu 02 (form mới) → tự điền form trên landing page → chờ 5-10 phút.
+Trong vòng 10 phút, Telegram phải tự bật tin nhắn từ agent, kèm chi tiết. Đây là khoảnh khắc bất ngờ — agent đang chủ động làm việc thay bạn.
+
+Test 3 — Cron báo sáng (chỉ nếu bạn làm Bước 10)
+Dashboard → Cron Jobs → morning-briefing → bấm Run Now. Telegram phải nhận tin báo sáng trong 30 giây.
+
+Nếu Test 2 không nhắn
+Kiểm tra theo thứ tự:
+
+Agent có đọc HEARTBEAT.md không? Dashboard → Agent → xem nhật ký Heartbeat. Phải thấy heartbeat đã chạy gần đây.
+MCP function có trả data đúng không? Gọi thẳng qua Telegram: "Dùng tool [tên function] xem có gì mới không." — nếu nó trả được, MCP ok.
+Cơ chế "đã nhắn" — có thể đơn đã được đánh dấu nhắn rồi từ Heartbeat trước. Tạo đơn mới hoàn toàn để thử.
+Vẫn không được? Chụp nhật ký Heartbeat → dán vào agent coding → "agent không nhắn khi có đơn mới, sửa lỗi giúp."
+
+BƯỚC 12
+Đăng bài khoe thành quả
+🎁 Phần quà cho người khoe đúng cách
+Bài đăng phải nhắn Telegram Dũng Hoàng — ai gửi đúng sẽ được tặng 1 bộ skills xịn xò trị giá 2 triệu đồng.
+
+Link Telegram: t.me/KentHoang
+
+Mở agent coding, dán:
+
+Prompt · Viết bài khoe
+COPY
+Đọc brand voice trong brain.db. Viết 1 bài đăng kể về trải nghiệm hôm nay:
+
+- Nhiệm vụ trước agent có cánh tay. Hôm nay agent thành cộng sự thực sự — có giọng riêng, biết nguyên tắc của tôi, và tự chủ động nhắn tôi khi có chuyện.
+- Tôi dạy agent theo dõi [điền tín hiệu bạn chọn — ví dụ: "đơn mới" / "form mới"]. Khi có tín hiệu, agent tự bật Telegram trước khi tôi kịp nhận ra — "[dán câu agent đã nhắn cho bạn]".
+- Đây là lần đầu agent chủ động liên hệ tôi thay vì ngược lại.
+- Cảm giác: có một cộng sự thực sự của riêng mình, biết tên tôi, biết nguyên tắc tôi, có thói quen chủ động.
+
+Tone tự nhiên, cá nhân, không khoe khoang kỹ thuật. Nhấn mạnh trải nghiệm "agent làm việc khi mình không nhắn".
+
+Cuối bài NHỚ nhắn Dũng Hoàng (link: https://t.me/KentHoang).
+
+Lưu vào day15_post.txt.
+Đăng ít nhất 2 kênh. Nhớ nhắn Dũng Hoàng trên Telegram để nhận bộ skills 2tr.
+
+FINAL
+Nộp Bài
+Checklist hoàn thành
+Tiêu chí hoàn thành
+Agent trả lời đúng giọng bạn (không còn generic)
+Agent tự nhắn trước khi bạn hỏi — khi có đơn/form mới
+Mẹo AI-First tổng cho cả ngày
+Hôm nay nhẹ hơn nhiệm vụ trước. Không đưa code mới lên, không cài phần mềm, không SSH nhiều. Chủ yếu:
+
+Dán prompt ngắn → AI code hoặc viết MD → bạn đọc duyệt.
+Bấm trên Dashboard để tải file, bật Heartbeat, đặt cron.
+Test bằng cách tạo đơn/form giả → chờ agent nhắn.
+Chỗ khó nhất: "biết chỗ nào bấm trên Dashboard". Mỗi version goClaw bố cục khác nhau. Nguyên tắc: chụp màn hình + hỏi Claude.
+
+"Cộng sự AI không chờ bạn ra lệnh.
+Có việc — nó tự nhắn trước."

@@ -131,7 +131,7 @@ Nhiều business kết hợp:
 HVCO Funnel (mass market) → Challenge Funnel (engage sâu) → Application Funnel (upsell high-ticket)
 ```
 
-Ví dụ KP3:
+Ví dụ Tiểu Hà Mã:
 - HVCO miễn phí → nurture → Thử thách 21 ngày (2.5tr) → Coaching 1-1 (25tr)
 - Mỗi tầng filter dần — chỉ người phù hợp nhất đi đến tầng cao nhất
 

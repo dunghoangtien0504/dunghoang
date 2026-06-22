@@ -1,0 +1,121 @@
+Soi Đối Thủ — Tìm Khoảng Trống Định Vị
+
+Hôm nay bạn dùng lại đúng kỹ năng Ngày 7 — agent đọc & phân tích — nhưng lần này chĩa vào đối thủ thay vì thư mục của bạn.
+
+Bạn sẽ làm 4 thứ:
+
+Liệt kê 3-5 đối thủ thật trong ngách của bạn
+Để agent đọc website/fanpage của họ và bóc ra điểm mạnh – điểm yếu – giá
+Tìm khoảng trống định vị + chốt khung giá cho mình
+Áp 1 thay đổi thật lên landing page để chiếm chỗ đó
+Tất cả agent làm — bạn chỉ cần ra lệnh, đọc, và chốt.
+
+Vì sao hôm nay quan trọng: Mọi thứ bạn bán — landing, bài đăng, lời tư vấn — đều phải trả lời được 1 câu: "Tại sao khách chọn BẠN thay vì đối thủ?" Hầu hết người bán không trả lời nổi câu này nên cuối cùng phải đua giá. Hôm nay bạn đi tìm câu trả lời đó — và nó là nền cho mọi thứ bạn làm về sau.
+
+Trước khi bắt đầu — bạn thuộc nhóm nào?
+
+Đã có landing page / sản phẩm → soi đối thủ rồi sửa định vị landing luôn trong hôm nay.
+Chưa có gì để bán → vẫn soi đối thủ trong ngách bạn đang nhắm tới — đây là cách rẻ nhất để quyết định bán gì khác biệt ngay từ đầu, thay vì làm ra một bản sao mờ nhạt.
+🔥 Mẹo của Dũng: Đa số người mới đi copy đối thủ → trông giống hệt nhau → cuối cùng phải đua giá. Hôm nay bạn làm ngược lại: tìm chỗ chưa ai đứng, rồi đứng vào đó.
+
+▤ SOP — Hướng dẫn
+
+🔥 Mẹo của Dũng: Làm ngay trước khi đọc tiếp
+Copy toàn bộ SOP này, paste vào agent đang dùng và nói:
+
+"Đây là SOP tôi cần làm hôm nay. Hướng dẫn tôi từng bước một — mỗi lần chỉ 1 bước, chờ tôi làm xong báo lại rồi mới tiếp. Bị lỗi thì fix luôn. Bắt đầu đi."
+
+Từ đó AI làm MC, bạn chỉ làm theo. Kẹt chỗ nào thì nói "bị kẹt rồi" — AI tự xử.
+
+📊 Ví dụ mẫu — "đạt" trông như thế nào
+(Giả sử bạn bán khóa học làm bánh online. Đây chỉ là mẫu để bạn hình dung — đừng copy, hãy làm với đối thủ thật của bạn.)
+
+Bảng đối thủ (doi-thu.md):
+
+Đối thủ	Lời hứa chính	Giá	Mạnh	Yếu
+Bếp A	"Học làm bánh từ số 0"	1.2tr	Nhiều công thức	Video quay sẵn, không sửa bài
+Bếp B	"Bánh kem chuẩn tiệm"	3tr	Có chứng chỉ	Đắt, kén người mới
+Kênh C	"Công thức mỗi ngày"	Miễn phí	Dễ tiếp cận	Lẻ tẻ, không lộ trình
+Khoảng trống + giá (dinh-vi.md):
+
+Cả 3 đối thủ đều dạy công thức, nhưng không ai cầm tay người mới đi từ số 0 tới lúc bán được chiếc bánh đầu tiên. → Góc định vị mình chiếm: "Lộ trình 30 ngày từ chưa biết gì đến đơn hàng đầu tiên — có người sửa bài tận tay." → Khung giá: 1.5tr (cao hơn Bếp A vì có người sửa bài + lộ trình bán hàng; rẻ hơn Bếp B vì nhắm người mới).
+
+Thấy chưa? Định vị tốt = cụ thể, có chứng minh, đối thủ khó copy — không phải "chất lượng, uy tín, giá tốt".
+
+Bước 1 — Liệt kê đối thủ
+Mở agent → File → Open Folder → thư mục my-brain (để agent đọc được brain.db) → paste:
+
+"Đọc brand voice và thông tin sản phẩm trong brain.db. Tôi đang bán [sản phẩm] cho [khách hàng]. Gợi ý cho tôi 5 đối thủ đang bán thứ tương tự hoặc giải quyết cùng vấn đề — ưu tiên đối thủ Việt Nam, kèm link website hoặc fanpage. Tôi tự biết các đối thủ này rồi: [liệt kê nếu có, không có thì bỏ trống]. Lưu danh sách vào file doi-thu.md."
+
+Mở doi-thu.md → giữ lại 3-5 cái sát nhất với bạn.
+
+Bước 2 — Để agent đọc & bóc tách từng đối thủ
+Vẫn ở agent, paste (thay link vào):
+
+"Đọc lần lượt các trang sau: [dán 3-5 link đối thủ]. Với mỗi đối thủ, bóc ra giúp tôi: (1) Lời hứa chính / câu headline họ dùng, (2) Giá nếu công khai, (3) Họ mạnh ở điểm gì, (4) Họ yếu / thiếu ở điểm gì, (5) Khách hay khen gì – chê gì nếu thấy review/bình luận. Trình bày thành bảng so sánh trong doi-thu.md."
+
+Agent không mở được link? Mở trang đối thủ → copy phần chữ chính (hoặc chụp màn hình) → dán thẳng vào chat và nói "đây là nội dung đối thủ, phân tích giúp tôi." (mẹo này y như Ngày 11 — gặp gì lạ thì chụp màn hình ném vào AI).
+
+Bước 3 — Tìm khoảng trống định vị
+Paste:
+
+"Đọc doi-thu.md và brand voice trong brain.db. Trả lời thẳng: (1) Tất cả đối thủ đang nói GIỐNG nhau ở điểm gì? (2) Có nỗi đau / mong muốn nào của khách mà KHÔNG đối thủ nào nói tới không? (3) Gợi ý cho tôi 3 góc định vị khác biệt tôi có thể chiếm — mỗi góc viết thành 1 câu khẳng định ngắn, dễ hiểu. Lưu vào file dinh-vi.md."
+
+Đọc 3 góc → chọn 1 góc bạn tin và làm được thật (đừng chọn góc nghe kêu nhưng bạn không làm nổi).
+
+Bước 4 — Chốt góc khác biệt + chuẩn bị câu trả lời khách
+Paste (điền góc đã chọn):
+
+"Tôi chọn góc định vị: [dán góc bạn chọn]. Làm 3 việc: (1) Viết lại thành 1 câu định vị mạnh + 3 gạch đầu dòng chứng minh vì sao tôi làm được điều đó còn đối thủ thì không. (2) Dựa trên điểm yếu của đối thủ trong doi-thu.md, viết 2-3 câu trả lời khi khách so sánh tôi với đối thủ — kiểu khách nói 'bên kia rẻ hơn' hoặc 'bên kia có X' thì tôi đáp thế nào, giọng tự tin nhưng không dìm hàng đối thủ. (3) Viết 1 câu ngắn gọn 'Vì sao nên chọn chúng tôi thay vì [đối thủ]'. Lưu tất cả vào dinh-vi.md và cập nhật vào brain.db để dùng khi bán hàng, tư vấn, trả lời khách sau này."
+
+⚠️ Tránh định vị chung chung kiểu "uy tín – chất lượng – giá tốt". Ai cũng nói được → không phải định vị. Định vị tốt là cái đối thủ KHÓ bắt chước.
+
+Bước 5 — Chốt khung giá so với đối thủ
+Vẫn ở agent (thư mục my-brain), paste:
+
+"Đọc cột giá của các đối thủ trong doi-thu.md và góc định vị trong dinh-vi.md. Gợi ý tôi nên đặt giá ở khoảng nào — rẻ hơn, ngang, hay cao hơn đối thủ — và GIẢI THÍCH vì sao mức đó hợp với định vị của tôi (đừng mặc định cứ rẻ là tốt). Cho tôi 1 con số hoặc 1 khoảng giá cụ thể + 1 câu lý do tôi có thể nói với khách khi họ chê đắt. Lưu vào dinh-vi.md và cập nhật brain.db."
+
+Đọc lại → hợp lý thì dùng, chưa hợp thì bảo AI tính lại theo hướng bạn muốn.
+
+💡 Giá là một phần của định vị: định vị cao cấp mà để giá bèo thì khách không tin; định vị "dễ bắt đầu" mà hét giá trên trời thì khách bỏ chạy.
+
+Bước 6 — Áp 1 thay đổi THẬT lên landing page
+Mở agent → File → Open Folder → thư mục website → paste:
+
+"Đọc dinh-vi.md. Cập nhật phần đầu landing page (headline + đoạn mở đầu) để thể hiện rõ góc định vị khác biệt này — sao cho khách đọc 5 giây đầu là hiểu tôi khác đối thủ ở đâu. Nếu trang đã có hiển thị giá, chỉnh lại cho khớp khung giá trong dinh-vi.md. Giữ nguyên bố cục và phần còn lại, chỉ đổi phần copy thể hiện sự khác biệt."
+
+Sau khi AI xong → mở website thật lên xem đã đổi chưa → đọc thử như một người khách lạ: có thấy bạn khác biệt không?
+
+Bị lỗi? Copy thông báo lỗi → paste vào AI → nói "bị lỗi này, fix giúp tôi."
+
+Bước 7 — Đăng bài + cập nhật bộ não thứ 2
+Mở agent → thư mục my-brain → paste:
+
+"Đọc brand voice trong brain.db và dinh-vi.md. Viết 1 bài đăng chia sẻ một điều bất ngờ tôi nhận ra sau khi soi đối thủ hôm nay — và điểm khác biệt tôi vừa chọn cho mình. Tone thật, gần gũi, không nói xấu đối thủ. Có link website. Lưu vào day8.txt."
+
+Chỉnh tối đa 5 phút → đăng thật lên ít nhất 2 kênh → tối nay cập nhật brain_score.md.
+
+Bước 8 — Nộp bài
+Screenshot doi-thu.md — bảng so sánh ít nhất 3 đối thủ thật (có link, có giá)
+Screenshot dinh-vi.md — 3 góc định vị + 1 góc đã chọn + câu trả lời khi khách so sánh đối thủ + khung giá kèm lý do
+Link landing page LIVE đã đổi định vị — người review vào phải thấy được điểm khác biệt ở phần đầu trang
+Link bài đăng — ít nhất 2 kênh, link public
+✅ Được duyệt khi:
+
+doi-thu.md có ít nhất 3 đối thủ THẬT, có link mở được — không bịa
+dinh-vi.md có góc định vị cụ thể, sắc — không chung chung kiểu "uy tín, chất lượng, giá tốt"
+Có khung giá kèm lý do + có câu trả lời khi khách so sánh với đối thủ
+Mở link landing thấy phần đầu đã thể hiện điểm khác biệt
+Link bài đăng mở được — không phải ảnh chụp màn hình
+❌ Chưa đạt khi:
+
+doi-thu.md trống, bịa, hoặc không có link
+Định vị chung chung ai cũng nói được
+Chưa có khung giá, hoặc giá không kèm lý do
+Landing chưa đổi gì thật / chỉ nói mồm
+Bài đăng private hoặc chỉ nộp ảnh
+⚠️ Nhớ chuỗi 7 ngày vẫn đang chạy
+Hôm nay vẫn đăng ít nhất 3 bài kéo người vào danh sách chờ — ngoài bài chia sẻ insight đối thủ. Cập nhật brain_score.md tối nay.
+
+💡 Mẹo AI-First
+Agent đọc đối thủ thay bạn — bạn không cần ngồi đọc hết từng web. Nhưng việc CHỌN góc định vị và chốt giá là của bạn: AI chỉ gợi ý, bạn mới là người quyết mình muốn được khách nhớ đến vì điều gì. Đây là thứ AI không quyết thay được — và cũng là thứ đáng giá nhất hôm nay.

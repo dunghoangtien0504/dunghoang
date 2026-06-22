@@ -28,7 +28,7 @@ Funnel mạnh khi: LTV > 3x CPA
 Funnel có thể scale khi: LTV > 5x CPA
 ```
 
-Ví dụ KP3:
+Ví dụ Tiểu Hà Mã:
 - Offer chính: 2,500,000đ
 - Upsell coaching: 25,000,000đ
 - LTV kỳ vọng: 5-10tr (không phải ai cũng upsell)

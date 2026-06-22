@@ -25,7 +25,7 @@ Specific numbers beat vague ones ("Kiếm thêm 3tr/tháng" > "Kiếm thêm thu 
 Add a qualifier: "Even if you...", "Even if you've never...", "#3 will surprise you"
 
 **4. Talk about them — not about you**
-Wrong: "KP3's method helps you..."
+Wrong: "Tiểu Hà Mã's method helps you..."
 Right: "How to build an AI website yourself without hiring anyone"
 
 **5. Hứa kết quả cụ thể**

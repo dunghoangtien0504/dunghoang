@@ -1,0 +1,187 @@
+Ngày 6 — Mở Danh Sách Chờ & Bắt Đầu 7 Ngày Đăng Bài
+
+Hôm nay bạn sẽ làm 4 thứ:
+
+Gắn form khảo sát vào website Lên kế hoạch content cho 7 ngày tới Tạo bảng theo dõi để xem AI có thông minh lên không Đăng bài đầu tiên
+
+Tất cả đều dùng AI làm — bạn chỉ cần copy prompt, bấm đồng ý, và test thử.
+
+💡 Dừng lại 1 phút — nhìn lại những gì bạn đã làm Mở máy tính lên, nhìn vào các thư mục bạn đã tạo từ đầu chương trình:
+
+Ngày 2: bạn tạo thư mục chứa landing page Ngày 5: bạn tạo thư mục my-brain
+
+Bạn có nhận ra không — mỗi dự án bạn làm là một thư mục riêng trên máy tính? Đây không phải ngẫu nhiên. Đây là cách các developer làm việc thật sự. Mỗi thư mục = 1 dự án = 1 sản phẩm. Khi bạn muốn làm thêm sản phẩm mới, chỉ cần tạo thêm 1 thư mục mới — không đụng vào thư mục cũ, không sợ hỏng gì. Và quan trọng hơn: thư mục trên máy tính của bạn hôm nay chính là thứ bạn sẽ đưa lên VPS sau này để chạy online — không cần học lại từ đầu, chỉ cần copy lên là xong. Cứ nhớ công thức này: 1 dự án = 1 thư mục = 1 VPS sau này.
+
+Trước khi bắt đầu — bạn thuộc nhóm nào? Đã có thứ để bán rồi → Dùng form để hỏi thêm về khách hàng, tiếp tục bán luôn. Chưa có thứ để bán → Mở danh sách chờ trước. Ai điền vào = người muốn mua. Có đủ người rồi mới build sản phẩm — không build trước bán sau. Chưa biết bán gì? Nghĩ đến sản phẩm số hoặc SaaS — không cần vốn, không cần kho, AI giúp build được.
+
+▤ SOP — Hướng dẫn
+
+SOP Ngày 6 - Tạo Form Danh Sách Chờ & Bắt Đầu 7 Ngày Đăng Bài
+🎯 Mục tiêu
+Hôm nay bạn cần tạo được:
+
+Một form khảo sát / danh sách chờ trên website
+Một kế hoạch content 7 ngày để kéo người vào form
+Một bảng theo dõi brain_score.md
+Ba bài đăng đầu tiên trong ngày 1
+Bằng chứng đã đăng thật và có data thật trong form
+Bước 1 - Nhờ AI nghĩ câu hỏi khảo sát
+Mở Claude hoặc bất kỳ AI nào, paste câu này vào:
+
+"Tôi đang bán [điền sản phẩm của bạn] cho [điền khách hàng của bạn]. Viết cho tôi 5 câu hỏi khảo sát ngắn để hỏi khách hàng tiềm năng - phải có hỏi tên và số điện thoại/Zalo, còn lại hỏi về nhu cầu của họ. Câu hỏi ngắn thôi, dễ trả lời."
+
+Copy 5 câu hỏi đó lại.
+
+Bạn sẽ dùng ở bước tiếp theo.
+
+Bước 2 - Gắn form vào website
+Mở agent coding:
+
+File → Open Folder → chọn thư mục chứa website từ Ngày 2
+
+Sau đó mở file chính của website lên.
+
+Thường là:
+
+index.html
+
+Hoặc file chính mà website đang dùng.
+
+Sau đó paste câu này vào chat AI:
+
+"Thêm vào website này một form với các trường: Tên, Số điện thoại/Zalo, [dán 5 câu hỏi vừa có vào đây].
+
+Khi bấm submit thì gửi dữ liệu về Google Sheets (dùng Google Forms embed hoặc Formspree.io). Cách đơn giản nhất: tạo 1 Google Form có các trường Tên, SĐT/Zalo, [5 câu hỏi] → lấy link embed → nhúng vào landing page. Data tự động vào Google Sheets, không cần backend."
+
+Sau khi AI làm xong:
+
+Tự điền thử form 1 lần trên website
+Kiểm tra kết quả thu được
+Nếu bị lỗi
+Copy nguyên thông báo lỗi, paste vào chat AI và nói:
+
+"bị lỗi này, fix giúp tôi."
+
+Làm lại đến khi chạy được.
+
+Bước 3 - Nhờ AI lên kế hoạch content 7 ngày
+Mở agent coding:
+
+File → Open Folder → chọn thư mục my-brain
+
+Lúc này agent mới đọc được brain.db.
+
+Paste câu này vào chat AI:
+
+"Đọc brand voice trong file brain.db. Tạo kế hoạch content 7 ngày để tôi đăng bài kéo người vào form danh sách chờ. Mỗi ngày có 3 chủ đề bài khác nhau, ghi rõ sẽ đăng lên kênh nào và tone bài ra sao. Lưu vào file plan.md."
+
+Mở file:
+
+plan.md
+
+Đọc lại nội dung.
+
+Chủ đề nào chưa hợp thì nói AI chỉnh.
+
+Không tự sửa tay.
+
+Bước 4 - Tạo bảng theo dõi bộ não thứ 2
+Vẫn đang ở thư mục my-brain, paste câu này:
+
+"Tạo file brain_score.md - một bảng theo dõi 7 ngày. Mỗi ngày có 4 ô: (1) Bài AI viết hôm nay giống giọng tôi mấy điểm từ 1-10, (2) Người xem phản hồi thế nào, (3) Tôi đã thêm gì vào brand voice hôm nay, (4) Nhận xét ngắn. Thêm 1 dòng tổng kết ở cuối để so sánh ngày 1 và ngày 7."
+
+File này điền vào mỗi tối trong 7 ngày tới.
+
+Chỉ mất 2 phút.
+
+Đây là cách duy nhất để biết bộ não thứ 2 có thông minh lên không.
+
+Bước 5 - Viết và đăng bài ngày 1
+Vẫn ở thư mục my-brain, paste câu này:
+
+"Đọc brand voice trong brain.db và xem chủ đề ngày 1 trong plan.md. Viết 3 bài đăng mạng xã hội - mỗi bài cho 1 kênh khác nhau, có CTA kêu người bấm vào form danh sách chờ. Lưu vào file day1.txt."
+
+Sau khi AI viết xong:
+
+Đọc lại 3 bài
+Chỉnh tối đa 5 phút mỗi bài
+Đăng thật lên các kênh ngay hôm nay
+Không để draft
+Bước 6 - Điền bảng theo dõi ngày 1
+Mở file:
+
+brain_score.md
+
+Tối hôm nay, điền vào hàng ngày 1.
+
+Nội dung cần điền
+Bài AI viết giống giọng bạn mấy điểm?
+Người xem phản hồi thế nào?
+Bạn đã thêm gì vào brand voice?
+Nhận xét ngắn
+Nộp bài
+Bài nộp cần có đủ 4 thứ này, đăng trong link drive của bạn, mở public cho reviewer vào kiểm tra:
+
+Screenshot website có form đang chạy, có data thật
+Screenshot ít nhất 3 bài đã đăng thật trên ít nhất 2 kênh
+Screenshot file plan.md đã có đủ 7 ngày
+Screenshot file brain_score.md đã điền xong ngày 1
+✅ Được duyệt khi
+Form có data thật, dù chỉ là bạn tự test
+3 bài đã lên mạng thật, không phải draft
+plan.md có đủ 7 ngày
+brain_score.md đã điền ngày 1
+❌ Chưa đạt khi
+Form chưa có data
+Chưa đăng bài
+Thiếu plan.md
+Thiếu brain_score.md
+brain_score.md còn trống
+⚠️ Nhiệm vụ này chạy 7 ngày - đây là luật chơi
+Từ hôm nay đến Ngày 12:
+
+Mỗi ngày tối thiểu 3 bài
+Đăng trên ít nhất 2 kênh
+Không giới hạn số bài tối đa
+Đã có AI lo rồi, càng nhiều càng tốt
+Nhiệm vụ này chạy song song với:
+
+Ngày 7
+Ngày 8
+Ngày 9
+Ngày 10
+Ngày 11
+Ngày 12
+Không thay thế bất kỳ nhiệm vụ nào.
+
+Đến Ngày 12, nhìn lại brain_score.md.
+
+Bạn sẽ thấy bộ não thứ 2 của mình đã học được gì sau 7 ngày.
+
+💡 Mẹo AI-First
+Bước 1 đến bước 5 AI làm hết.
+
+Bạn chỉ cần copy prompt và bấm đồng ý.
+
+Nhưng bước 6 thì phải tự làm mỗi tối.
+
+Không ai điền thay bạn được.
+
+Càng điền thật, càng bổ sung nhiều vào brand voice, AI càng viết đúng giọng hơn.
+
+Garbage in, garbage out.
+
+🔥 Mẹo của Dũng: Không muốn đọc SOP?
+Copy toàn bộ SOP này, paste vào agent đang dùng và nói:
+
+"Đây là SOP tôi cần làm. Hướng dẫn tôi từng bước một - mỗi lần chỉ 1 bước, chờ tôi làm xong báo lại rồi mới đưa bước tiếp. Bị lỗi thì fix luôn. Bắt đầu đi."
+
+Từ đó AI làm MC.
+
+Bạn chỉ cần làm theo.
+
+Kẹt chỗ nào thì nói:
+
+"bị kẹt rồi"
+
+AI tự xử.

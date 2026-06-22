@@ -54,7 +54,7 @@ Không sao — tôi hiểu. Inbox của mọi người đều bận.
 Nhưng tôi không muốn gửi email cho người không muốn nhận.
 Nên tôi sắp xóa tên bạn khỏi danh sách.
 
-Nếu bạn vẫn muốn nhận thông tin từ KP3 — nhấn vào đây:
+Nếu bạn vẫn muốn nhận thông tin từ Tiểu Hà Mã — nhấn vào đây:
 [LINK GIỮ LẠI]
 
 Nếu không — không sao cả. Chúc bạn mọi điều tốt lành.

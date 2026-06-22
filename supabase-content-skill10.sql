@@ -1,0 +1,219 @@
+-- Cập nhật content_html cho Skill 10 — Dựng Landing Page
+-- Áp dụng cho cả 3 khóa: Khóa 1, Khóa 2, Mini
+UPDATE lessons
+SET content_html = '<div style="font-family:''Segoe UI'',system-ui,-apple-system,sans-serif;color:#1a2e1f;line-height:1.65;max-width:100%;">
+
+  <!-- HEADER -->
+  <div style="background:linear-gradient(135deg,#0d2b1a 0%,#1D9E75 100%);border-radius:16px;padding:28px 24px 24px;margin-bottom:24px;color:#fff;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+      <span style="background:rgba(255,255,255,0.15);border-radius:100px;padding:3px 10px;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Skill #10</span>
+      <span style="background:rgba(255,255,255,0.15);border-radius:100px;padding:3px 10px;font-size:11px;">Phễu &amp; Trang Bán</span>
+    </div>
+    <h1 style="font-size:22px;font-weight:800;margin:0 0 8px;line-height:1.3;">Dựng Landing Page</h1>
+    <p style="margin:0 0 16px;opacity:0.88;font-size:14px;">Trang bán hàng hoàn chỉnh — không cần code, làm trong 1 buổi, khách lạ đọc 5 giây hiểu bạn bán gì.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <span style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:5px 14px;font-size:12px;">⏱ 45–90 phút</span>
+      <span style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:5px 14px;font-size:12px;">🛠 Claude + Framer / Carrd / Notion</span>
+      <span style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:5px 14px;font-size:12px;">📦 Cần: BRAND_DNA từ Skill #02</span>
+    </div>
+  </div>
+
+  <!-- MỤC TIÊU -->
+  <div style="background:#f0faf5;border-left:4px solid #1D9E75;border-radius:0 12px 12px 0;padding:16px 18px;margin-bottom:24px;">
+    <div style="font-weight:700;color:#0d2b1a;font-size:14px;margin-bottom:6px;">🎯 Kết quả cần đạt cuối buổi</div>
+    <ul style="margin:0;padding-left:18px;color:#2d5a3d;font-size:14px;line-height:1.8;">
+      <li>1 landing page thật có link chia sẻ được</li>
+      <li>Khách lạ đọc 5 giây biết bạn bán gì, cho ai, giá bao nhiêu</li>
+      <li>Nút liên hệ / đặt hàng hoạt động được</li>
+      <li>Giao diện xem ổn trên điện thoại</li>
+    </ul>
+  </div>
+
+  <!-- TRƯỚC KHI LÀM -->
+  <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:12px;padding:16px 18px;margin-bottom:28px;">
+    <div style="font-weight:700;color:#92400e;font-size:14px;margin-bottom:6px;">⚠️ Chuẩn bị trước khi bắt đầu</div>
+    <p style="margin:0;color:#78350f;font-size:13px;">Mở sẵn file BRAND_DNA (từ Skill #02). Chuẩn bị 3 thông tin: <strong>bán gì, cho ai, giá bao nhiêu</strong>. Nếu chưa có BRAND_DNA thì làm xong Skill #02 trước — không bắt buộc nhưng trang sẽ nghe đúng giọng bạn hơn nhiều.</p>
+  </div>
+
+  <!-- BƯỚC 1 -->
+  <div style="margin-bottom:24px;">
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="min-width:36px;height:36px;background:#0d2b1a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <span style="color:#fff;font-weight:800;font-size:14px;">1</span>
+      </div>
+      <div style="flex:1;">
+        <h3 style="font-size:16px;font-weight:700;color:#0d2b1a;margin:0 0 10px;">Nạp nguyên liệu cho Claude</h3>
+        <p style="color:#555;font-size:14px;margin:0 0 12px;">Mở Claude. Paste BRAND_DNA vào đầu. Rồi dán prompt bên dưới — điền vào chỗ <code style="background:#f3f4f6;padding:1px 5px;border-radius:4px;font-size:12px;">[...]</code>:</p>
+        <div style="background:#0f172a;border-radius:10px;padding:16px;font-family:''Consolas'',''Courier New'',monospace;font-size:12.5px;color:#e2e8f0;white-space:pre-wrap;overflow-x:auto;line-height:1.7;">Tôi cần landing page bán: [tên sản phẩm / dịch vụ]
+Khách hàng mục tiêu: [mô tả ngắn — ai, làm gì, đang khổ vì gì]
+Pain lớn nhất của họ: [1 câu thôi, cụ thể]
+Kết quả sau khi mua: [họ có/làm được gì cụ thể]
+Giá bán: [số tiền]
+Cam kết / bảo hành: [nếu có]
+
+Viết đầy đủ nội dung trang bán từ trên xuống dưới:
+- Headline chính (1 câu, thu hút)
+- Sub-headline (1-2 câu giải thích thêm)
+- Phần Pain (họ đang khổ gì)
+- Giải pháp (sản phẩm giải quyết ra sao)
+- Những gì họ nhận được (list 5-7 điểm)
+- Bằng chứng / uy tín nếu có
+- Offer + giá + cam kết
+- CTA (nút kêu gọi hành động)
+
+Viết bằng tiếng Việt, giọng tự nhiên, câu ngắn, dễ hiểu.</div>
+        <p style="color:#6b7280;font-size:13px;margin:10px 0 0;font-style:italic;">💡 Đọc lướt kết quả — nếu chỗ nào nghe chung chung thì nhờ Claude viết lại cụ thể hơn. Ví dụ: "Viết lại phần headline ngắn hơn, mạnh hơn."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BƯỚC 2 -->
+  <div style="margin-bottom:24px;">
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="min-width:36px;height:36px;background:#0d2b1a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <span style="color:#fff;font-weight:800;font-size:14px;">2</span>
+      </div>
+      <div style="flex:1;">
+        <h3 style="font-size:16px;font-weight:700;color:#0d2b1a;margin:0 0 10px;">Chọn công cụ và lắp nội dung vào</h3>
+        <p style="color:#555;font-size:14px;margin:0 0 12px;">Chọn 1 trong các công cụ dưới — không cần code:</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:12px;">
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;">
+            <div style="font-weight:700;font-size:13px;color:#0d2b1a;margin-bottom:4px;">Framer</div>
+            <div style="font-size:12px;color:#6b7280;">Đẹp nhất, kéo thả, có AI assistant. Miễn phí plan cơ bản.</div>
+          </div>
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;">
+            <div style="font-weight:700;font-size:13px;color:#0d2b1a;margin-bottom:4px;">Carrd</div>
+            <div style="font-size:12px;color:#6b7280;">Đơn giản nhất cho trang 1 cột. ~$9/năm để có domain riêng.</div>
+          </div>
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;">
+            <div style="font-weight:700;font-size:13px;color:#0d2b1a;margin-bottom:4px;">Notion + Super</div>
+            <div style="font-size:12px;color:#6b7280;">Dễ nhất nếu đã quen Notion. Viết bài rồi publish qua Super.so.</div>
+          </div>
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;">
+            <div style="font-weight:700;font-size:13px;color:#0d2b1a;margin-bottom:4px;">Google Sites</div>
+            <div style="font-size:12px;color:#6b7280;">Hoàn toàn miễn phí, link sites.google.com. Đủ dùng để test.</div>
+          </div>
+        </div>
+        <p style="color:#6b7280;font-size:13px;font-style:italic;">Nếu chưa biết chọn cái nào → dùng Google Sites hoặc Carrd trước. Test ý tưởng xong rồi nâng cấp sau.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BƯỚC 3 -->
+  <div style="margin-bottom:24px;">
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="min-width:36px;height:36px;background:#0d2b1a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <span style="color:#fff;font-weight:800;font-size:14px;">3</span>
+      </div>
+      <div style="flex:1;">
+        <h3 style="font-size:16px;font-weight:700;color:#0d2b1a;margin:0 0 10px;">Lấy phong cách giao diện từ ảnh mẫu</h3>
+        <p style="color:#555;font-size:14px;margin:0 0 12px;">Đừng mô tả bằng chữ — AI dễ hiểu sai. Chụp màn hình 1 trang bạn thấy đẹp rồi dán vào Claude:</p>
+        <div style="background:#0f172a;border-radius:10px;padding:16px;font-family:''Consolas'',''Courier New'',monospace;font-size:12.5px;color:#e2e8f0;white-space:pre-wrap;line-height:1.7;">Đây là phong cách tôi muốn [đính kèm ảnh chụp màn hình].
+Dựa vào cảm giác thiết kế, màu sắc và bố cục trong ảnh,
+viết cho tôi đoạn HTML + CSS cho phần hero section
+của landing page tôi vừa làm ở trên.
+Nội dung dùng headline và sub-headline tôi đã có.</div>
+        <p style="color:#6b7280;font-size:13px;margin:10px 0 0;font-style:italic;">Không cần copy 100% — lấy cảm giác màu + bố cục là đủ.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BƯỚC 4 -->
+  <div style="margin-bottom:24px;">
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="min-width:36px;height:36px;background:#0d2b1a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <span style="color:#fff;font-weight:800;font-size:14px;">4</span>
+      </div>
+      <div style="flex:1;">
+        <h3 style="font-size:16px;font-weight:700;color:#0d2b1a;margin:0 0 10px;">Gắn nút liên hệ và test</h3>
+        <p style="color:#555;font-size:14px;margin:0 0 12px;">Chọn 1 cách nhận đơn — gắn vào nút CTA:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <span style="background:#dcfce7;color:#15803d;border-radius:100px;padding:5px 14px;font-size:12px;font-weight:600;">Nút Zalo trực tiếp</span>
+          <span style="background:#dcfce7;color:#15803d;border-radius:100px;padding:5px 14px;font-size:12px;font-weight:600;">Form Google Sheet</span>
+          <span style="background:#dcfce7;color:#15803d;border-radius:100px;padding:5px 14px;font-size:12px;font-weight:600;">Nút Messenger</span>
+          <span style="background:#dcfce7;color:#15803d;border-radius:100px;padding:5px 14px;font-size:12px;font-weight:600;">Email trực tiếp</span>
+        </div>
+        <p style="color:#555;font-size:14px;margin:0 0 8px;"><strong>Bắt buộc: tự test 1 lần.</strong> Đóng vai khách hàng → bấm nút → kiểm tra nhận được thông báo không.</p>
+        <p style="color:#6b7280;font-size:13px;">Trang đẹp mà khách bấm nút bạn không nhận được = trang chết.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BƯỚC 5 -->
+  <div style="margin-bottom:28px;">
+    <div style="display:flex;align-items:flex-start;gap:14px;">
+      <div style="min-width:36px;height:36px;background:#0d2b1a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <span style="color:#fff;font-weight:800;font-size:14px;">5</span>
+      </div>
+      <div style="flex:1;">
+        <h3 style="font-size:16px;font-weight:700;color:#0d2b1a;margin:0 0 10px;">Lấy phản hồi thật từ người thật</h3>
+        <p style="color:#555;font-size:14px;margin:0 0 12px;">Gửi link cho 2–3 người không liên quan, nhờ họ đọc và trả lời đúng 1 câu:</p>
+        <div style="background:#f0faf5;border-radius:10px;padding:14px 16px;">
+          <p style="margin:0;font-size:14px;color:#0d2b1a;font-style:italic;">"Đọc 5 giây đầu, bạn có hiểu mình đang bán gì không? Phần nào chưa rõ?"</p>
+        </div>
+        <div style="margin-top:12px;">
+          <div style="font-size:13px;color:#6b7280;margin-bottom:6px;">Phản hồi được tính là hợp lệ:</div>
+          <div style="font-size:13px;color:#059669;margin-bottom:3px;">✅ "Tao hiểu mày bán X nhưng chưa thấy giá"</div>
+          <div style="font-size:13px;color:#059669;margin-bottom:3px;">✅ "Nút Zalo hơi khó thấy, đổi màu đi"</div>
+          <div style="font-size:13px;color:#dc2626;margin-bottom:3px;">❌ "Ok", "Được", "Đẹp" — quá chung chung</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div style="background:#f8fafc;border-radius:14px;padding:20px 22px;margin-bottom:20px;">
+    <div style="font-weight:700;color:#0d2b1a;font-size:15px;margin-bottom:14px;">✅ Đánh dấu hoàn thành khi có đủ</div>
+    <div style="display:grid;gap:8px;">
+      <label style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#374151;cursor:pointer;">
+        <input type="checkbox" style="margin-top:3px;accent-color:#1D9E75;" />
+        <span>Link landing page mở được, không báo lỗi</span>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#374151;cursor:pointer;">
+        <input type="checkbox" style="margin-top:3px;accent-color:#1D9E75;" />
+        <span>Người lạ đọc 5 giây đầu hiểu bạn bán gì, cho ai</span>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#374151;cursor:pointer;">
+        <input type="checkbox" style="margin-top:3px;accent-color:#1D9E75;" />
+        <span>Có giá hoặc cách hỏi giá rõ ràng</span>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#374151;cursor:pointer;">
+        <input type="checkbox" style="margin-top:3px;accent-color:#1D9E75;" />
+        <span>Nút CTA bấm được và bạn nhận được thông báo</span>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#374151;cursor:pointer;">
+        <input type="checkbox" style="margin-top:3px;accent-color:#1D9E75;" />
+        <span>Giao diện điện thoại không vỡ bố cục</span>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#374151;cursor:pointer;">
+        <input type="checkbox" style="margin-top:3px;accent-color:#1D9E75;" />
+        <span>Đã test với ít nhất 1 người thật và có phản hồi</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- MẸO AI-FIRST -->
+  <div style="background:linear-gradient(135deg,#fef9ec,#fef3c7);border:1px solid #fcd34d;border-radius:14px;padding:20px 22px;margin-bottom:20px;">
+    <div style="font-weight:700;color:#92400e;font-size:14px;margin-bottom:10px;">💡 Mẹo AI-First — Bạn là ông chủ, Claude là nhân viên</div>
+    <p style="color:#78350f;font-size:14px;margin:0 0 10px;">Bạn không cần biết code hay marketing mới làm được trang bán. Nhưng bạn phải biết kiểm duyệt — đọc trang và cảm nhận "khách lạ có tin không?"</p>
+    <p style="color:#78350f;font-size:14px;margin:0;">Công thức đúng: <strong>Ra lệnh → Xem kết quả → Chỉ lỗi cụ thể → Bắt sửa → Test người thật → Sửa tiếp.</strong> Đừng nói "làm đẹp hơn đi" — hãy nói "đổi màu nút CTA thành xanh lá #1D9E75, to hơn gấp đôi."</p>
+  </div>
+
+  <!-- BƯỚC TIẾP THEO -->
+  <div style="background:linear-gradient(135deg,#0d2b1a,#1a3d2a);border-radius:14px;padding:20px 22px;color:#fff;">
+    <div style="font-weight:700;font-size:14px;margin-bottom:8px;">🚀 Skill tiếp theo sau khi xong</div>
+    <p style="font-size:13px;opacity:0.85;margin:0 0 12px;">Khi trang bán đã chạy, bước tự nhiên tiếp theo là kéo người vào xem:</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <span style="background:rgba(29,158,117,0.3);border:1px solid rgba(29,158,117,0.5);border-radius:100px;padding:5px 14px;font-size:12px;">Skill #11 — Làm đẹp giao diện</span>
+      <span style="background:rgba(29,158,117,0.3);border:1px solid rgba(29,158,117,0.5);border-radius:100px;padding:5px 14px;font-size:12px;">Skill #13 — Quảng cáo Facebook</span>
+      <span style="background:rgba(29,158,117,0.3);border:1px solid rgba(29,158,117,0.5);border-radius:100px;padding:5px 14px;font-size:12px;">Skill #12 — Bài SEO kéo traffic miễn phí</span>
+    </div>
+  </div>
+
+</div>
+'
+WHERE id IN (
+  '4baaed79-000f-418a-97c2-4fdff363f856',
+  '3ce47064-1ed6-420d-8328-759214a02cb8',
+  '52fd330a-15e0-4755-bc5c-d177779f8597'
+);

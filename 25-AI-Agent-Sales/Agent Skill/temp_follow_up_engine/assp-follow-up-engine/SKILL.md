@@ -128,9 +128,9 @@ follow-up-[group]-[name]-v1.md
 ```
 
 Examples:
-- `follow-up-post-interview-kp3-v1.md`
-- `follow-up-cold-lead-kp3-v1.md`
-- `follow-up-breakup-kp3-v1.md`
+- `follow-up-post-interview-dh-v1.md`
+- `follow-up-cold-lead-dh-v1.md`
+- `follow-up-breakup-dh-v1.md`
 
 ---
 

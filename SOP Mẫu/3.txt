@@ -1,0 +1,218 @@
+Đầu tiên lên đây mua một cái domain giá rẻ nhất hoặc mua domain mà bạn thật sự định dùng để kinh doanh: https://client.123host.vn/?affid=3854, hosting sài chùa hoặc mua đều được, nhưng domain thì phải mua, rẻ nhất .id.vn, còn mua .vn sẽ đắt hơn.
+
+💡 Mẹo AI-First — Làm Xong Trong 1 Buổi Đừng bắt đầu bằng cách tự nghĩ nội dung. Hãy dump hết thông tin thô vào AI trước — bạn bán gì, cho ai, giá bao nhiêu, khách hay hỏi gì — rồi để AI viết toàn bộ headline, mô tả sản phẩm, CTA, thậm chí gợi ý tên domain. Bạn chỉ cần đọc, chỉnh, dán vào — không cần ngồi nghĩ từng chữ. Coi AI như người trợ lý đã hiểu copywriting, việc của bạn là review chứ không phải sáng tác.
+
+🦀 Mẹo bá đạo số 2: chắc chắc trong cộng đồng có người biết làm, hãy tag Tiểu Hà Mã kêu gom nhóm mọi người và hẹn giờ để meeting chung để làm bài tập, đây là sức mạnh tập thể, chắc chắc mọi người có thể nhanh chóng xong bài tập và học hỏi nhau.
+
+▤ SOP — Hướng dẫn
+
+SOP Ngày 3 — Deploy Website Thật & Sẵn Sàng Bán Hàng
+🎯 Mục tiêu hôm nay
+Cuối ngày phải có một website:
+
+Chạy trên domain thật
+Có nội dung thật
+Có sản phẩm / dịch vụ thật
+Có nút liên hệ hoặc đặt hàng thật
+Có thể nhận khách hàng thật
+Website chưa cần hoàn hảo.
+Nhưng phải mở được, đọc được, bấm được, và khách có cách liên hệ với bạn.
+
+Bước 1 — Mua domain
+Gợi ý đơn vị cung cấp mà team của Dũng thường xuyên sử dụng cho khách hàng:
+
+https://client.123host.vn/?affid=3854
+
+Lưu ý: không bắt buộc phải mua domain tại 123host, có thể mua domain từ bất cứ nhà cung cấp uy tín nào mà bạn tin tưởng.
+
+Chọn domain phù hợp với sản phẩm hoặc dịch vụ bạn định bán.
+
+Gợi ý chọn domain
+Ưu tiên:
+
+.com (khuyên dùng)
+.vn
+Tên ngắn
+Dễ nhớ
+Dễ gõ
+Không dùng ký tự khó hiểu
+Không quá dài
+Nếu chưa biết chắc sẽ bán gì, hãy chọn tên domain trung tính, dễ mở rộng sau này.
+
+Ví dụ:
+
+tenbrand.com
+tenbrand.vn
+tenban.com
+tenban.vn
+Việc cần làm
+Chọn domain
+Hoàn tất thanh toán
+Lưu lại tài khoản đăng nhập
+Lưu lại thông tin quản lý domain
+Đừng mất cả ngày để nghĩ tên domain.
+Tên đủ ổn là được. Quan trọng là hôm nay phải có web chạy thật.
+
+Bước 2 — Chọn hosting hoặc nền tảng deploy
+Bạn cần một nơi để đưa website lên mạng.
+
+Có thể chọn một trong các phương án sau.
+
+Phương án miễn phí
+Phù hợp nếu bạn làm landing page đơn giản hoặc web tĩnh.
+
+Vercel
+Netlify
+GitHub Pages
+Phương án trả phí
+Phù hợp nếu bạn muốn dùng WordPress, hosting truyền thống, hoặc cần quản lý dễ hơn.
+
+123host
+Hostinger
+Hosting khác bạn đang dùng
+Việc cần làm
+Chọn nền tảng deploy
+Kết nối website với nền tảng đó
+Trỏ domain vừa mua về hosting / nền tảng đã chọn
+Cập nhật DNS hoặc Nameserver nếu cần
+Nếu không rành kỹ thuật, chọn phương án đơn giản nhất: domain + hosting cùng một nhà cung cấp để dễ xử lý.
+
+Bước 3 — Điền nội dung thật vào website
+Đừng để website còn chữ mẫu như:
+
+Lorem ipsum
+Your product here
+Contact us
+Sample text
+Thay toàn bộ placeholder bằng thông tin thật.
+
+Nội dung bắt buộc phải có
+Tên sản phẩm / dịch vụ thật
+Mô tả ngắn gọn bạn đang bán gì
+Lợi ích chính cho khách hàng
+Giá cụ thể hoặc khung giá
+Ảnh thật hoặc ảnh minh họa phù hợp
+Số điện thoại / Zalo / Email thật
+Nút kêu gọi hành động rõ ràng
+CTA nên dùng
+Chọn 1-2 CTA rõ nhất:
+
+Đặt hàng ngay
+Nhắn Zalo
+Mua ngay
+Đăng ký tư vấn
+Gửi thông tin
+Liên hệ ngay
+Checklist nội dung
+ Tên sản phẩm / dịch vụ đã đúng
+ Mô tả dễ hiểu
+ Có lợi ích cụ thể
+ Có giá hoặc cách hỏi giá
+ Có ảnh phù hợp
+ Có thông tin liên hệ thật
+ Có CTA rõ ràng
+Người lạ vào website phải hiểu trong 5 giây:
+bạn bán gì, cho ai, và bấm vào đâu để mua / liên hệ.
+
+Bước 4 — Thiết lập kênh nhận đơn
+Website không chỉ để nhìn cho đẹp.
+
+Khách bấm CTA thì bạn phải nhận được thông tin.
+
+Chọn một cách nhận đơn
+Có thể dùng một trong các cách sau:
+
+Form gửi về Google Sheet
+Form gửi về Email
+Nút Zalo trực tiếp
+Nút Messenger trực tiếp
+Nút gọi điện
+Nút WhatsApp nếu phù hợp
+Việc cần làm
+Gắn form hoặc nút liên hệ vào website
+Tự bấm thử CTA
+Tự điền form 1 lần
+Kiểm tra bạn có nhận được thông báo không
+Test bắt buộc
+Tự đóng vai khách hàng và thử:
+
+Tên: Test
+Số điện thoại: 0900000000
+Nhu cầu: Tôi muốn tư vấn
+
+Sau đó kiểm tra:
+
+Google Sheet có nhận dữ liệu không?
+Email có về không?
+Zalo / Messenger có mở đúng không?
+Nút gọi điện có đúng số không?
+Không test thì coi như chưa xong.
+Website đẹp mà khách gửi form bạn không nhận được thì vẫn là website chết.
+
+Bước 5 — Kiểm tra trước khi mở cửa
+Trước khi nộp bài, mở website như một khách hàng thật.
+
+Checklist kiểm tra
+ Website mở được trên domain thật
+ Mở được trên điện thoại
+ Giao diện mobile không bị vỡ
+ Tốc độ tải trang ổn
+ Ảnh hiển thị đầy đủ
+ Tất cả nút bấm hoạt động
+ Form gửi được
+ Số điện thoại đúng
+ Link Zalo / Messenger đúng
+ Không còn chữ mẫu
+ Không sai chính tả nghiêm trọng
+ CTA rõ ràng
+Tin nhắn nhờ người khác test
+Gửi link cho 1-3 người và nhắn:
+
+Click thử giúp mình link này xem có mở được không, trên điện thoại có bị lệch gì không, và bấm nút liên hệ có hoạt động không nhé.
+
+Nếu họ báo lỗi, quay lại sửa ngay.
+
+Bước 6 — Nộp bài
+Submit link website là nộp bài.
+
+Nội dung nộp
+Gửi:
+
+Link website live:
+https://tenmiencuaban.com
+
+Kèm thêm nếu có:
+
+Kênh nhận đơn:
+Form / Zalo / Messenger / Email
+
+✅ Được duyệt khi
+Website mở được trên domain thật
+Nội dung là nội dung thật, không còn placeholder
+Có sản phẩm hoặc dịch vụ rõ ràng
+Có CTA rõ ràng
+Có ít nhất 1 cách để khách liên hệ hoặc đặt hàng
+Form / nút liên hệ đã được test
+Website xem được trên điện thoại
+❌ Chưa đạt khi
+Chưa có domain thật
+Link không mở được
+Website còn chữ mẫu
+Không rõ đang bán gì
+Không có giá hoặc thông tin tư vấn giá
+Không có nút liên hệ / đặt hàng
+Bấm CTA không hoạt động
+Form gửi đi nhưng bạn không nhận được
+Giao diện mobile bị vỡ nặng
+💡 Mẹo AI-First
+Bạn không cần tự mò từng lỗi kỹ thuật.
+
+Nếu bị kẹt, copy lỗi hoặc chụp màn hình rồi ném cho AI.
+
+Dùng câu này:
+
+Tôi bị lỗi này khi deploy website. Hãy giải thích ngắn gọn lỗi là gì và hướng dẫn tôi sửa từng bước một. Mỗi lần chỉ đưa 1 bước, chờ tôi làm xong rồi mới tiếp.
+
+Công thức hôm nay:
+
+Có domain thật → Có web thật → Có nội dung thật → Có CTA thật → Test thật → Nộp link.

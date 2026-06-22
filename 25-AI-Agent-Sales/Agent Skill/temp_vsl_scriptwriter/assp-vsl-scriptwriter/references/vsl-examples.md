@@ -6,7 +6,7 @@
 | Ví dụ Root Cause | Cách lật ngược vấn đề |
 | Ví dụ Price Anchor | Cách stack giá trị |
 | Ví dụ CTA | Cách kêu gọi hành động |
-| Template KP3 | Hook + structure cho "21 ngày ép AI" |
+| Template Tiểu Hà Mã | Hook + structure cho "21 ngày ép AI" |
 
 ---
 
@@ -55,7 +55,7 @@
 **Ví dụ từ VSL:**
 > *"In our early trials, many guys said they'd happily pay upwards of $200. Today, Muscle Defense is available for only $89.95. But because you stuck with me through this presentation, you can get it for better than half price — less than $45."*
 
-**Ứng dụng KP3:**
+**Ứng dụng Tiểu Hà Mã:**
 > *"AI Agent Support cá nhân 21 ngày — nếu thuê riêng tốn 21 triệu.*
 > *Cộng đồng peer learning — thường tính 8 triệu.*
 > *Template Funnel — agency charge 5-15 triệu.*
@@ -74,7 +74,7 @@
 
 > *"If you mean business about getting back your muscle mass, I wouldn't waste another second. Tap the button below this video now."*
 
-**Ứng dụng KP3:**
+**Ứng dụng Tiểu Hà Mã:**
 > *"Nhấn nút bên dưới. Điền form 2 phút. Chọn lịch phỏng vấn.*
 > *Giá tăng sau vài ngày. Cần qua phỏng vấn. Còn X chỗ trống.*
 > *Nhấn ngay — trước khi video này đóng."*

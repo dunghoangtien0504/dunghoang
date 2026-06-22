@@ -1,0 +1,423 @@
+Tự Tay Tạo Skill
+
+⚠️ Lưu ý: Bài này chỉ dành cho thành viên thử thách — KHÔNG share link hướng dẫn ra nhóm hay cho người ngoài.
+
+Hôm qua (Ngày 15) bạn dùng được skills của người khác. Hôm nay bạn tự tạo ít nhất 3 skill — biến tri thức thành tài sản số có thể tái sử dụng vĩnh viễn.
+
+Có 5 cấp độ Claude Skills — từ chỉ MD thuần (Cấp 1) đến đầy đủ scripts + assets + references (Cấp 5). Trắc nghiệm 10 câu bên dưới giúp bạn biết khi nào dùng cấp nào.
+
+Nhẹ tay (~3-4 giờ): trắc nghiệm 10 câu + chọn ít nhất 3 ý tưởng + agent coding tạo từng skill + test ở 2 nơi mỗi skill.
+
+▤ SOP — Hướng dẫn
+
+📘 Hướng dẫn đầy đủ
+🔒 Nhắc lại: đừng share link này ra nhóm hay cho người ngoài thử thách.
+
+👉 Mở hướng dẫn Ngày 16 — Tự Tay Tạo Skill
+
+Mở tab mới (chuột phải → Open in new tab) để vừa đọc vừa thao tác.
+
+Ngày 16 · Tuần 3
+Tự Tay Tạo Skill —
+Biến Quy Trình Của Bạn
+Thành Vũ Khí AI
+Bộ skills 2 triệu tôi tặng các bạn ở Ngày 15 — hôm nay bạn sẽ tự tay tạo những skill được sử dụng tùy biến cho business của riêng bạn. Skill là cách để agent thay được những người làm chuyên môn cao — lập trình viên, video editor, copywriter, kế toán...
+
+Mục tiêu cuối ngày
+Cuối hôm nay bạn có:
+
+Bộ skills 2tr tôi tặng ở Ngày 15 — đã được cài đặt và dùng được trong agent coding của bạn + trên goClaw
+Ít nhất 3 skill do chính bạn tạo, gắn với business của bạn (viết bài Facebook đúng giọng, soạn proposal đúng template, làm báo cáo doanh thu... — tùy bạn chọn)
+Hiểu rõ 5 cấp độ skill, biết khi nào dùng cấp nào — bằng cách làm bài trắc nghiệm 10 câu
+Một câu chuyện thật
+Bạn từng phải trả 10 triệu cho 1 video editor để cắt 30 video reels mỗi tháng? Hoặc 15 triệu cho 1 lập trình viên junior để code 1 tính năng mới mỗi tuần? Hoặc 5 triệu cho 1 copywriter để viết content theo brand voice của bạn?
+
+Skill cấp cao = cho agent khả năng làm những việc đó thay con người. Bạn ngủ — agent edit video, code, viết bài. Không phải tương lai xa — đây là cái bạn build được trong vài giờ hôm nay.
+
+Tinh thần ngày hôm nay
+Đây là ngày chuyển hóa quan trọng nhất chuỗi. Trước hôm nay bạn nhận skill từ tôi. Sau hôm nay bạn tự tạo skill — đồng nghĩa bạn không còn phụ thuộc vào ai nữa, business của bạn cần gì tự làm được.
+
+SOP hôm nay ép bạn dùng agent coding hỏi — không phải đọc lý thuyết suông. Đây mới là cách hiểu sâu.
+
+Phần Một
+Cài Bộ Skills 2tr Bạn Đã Có
+BƯỚC 01
+Giải nén bộ skills bạn nhận được
+Nhắc lại
+Hoàn thành Ngày 15, tôi đã gửi bạn 1 bộ skills xịn xò trị giá 2 triệu — gồm các skill viết content, soạn proposal, phân tích đối thủ... Hôm nay, trước khi học cách tự tạo skill mới, hãy cài đặt và dùng được bộ skills cũ này trước.
+
+Vì sao? Vì bạn cần thấy nó hoạt động để hiểu skill là gì trên thực tế. Lý thuyết đọc 100 lần không bằng dùng thử 1 lần.
+
+Tải bộ skills tôi đã gửi bạn (file .zip qua email/Telegram khi bạn hoàn thành Ngày 15).
+Giải nén ra một thư mục, đặt tên dễ nhớ — ví dụ dh-skills/. Bên trong sẽ có nhiều thư mục con, mỗi thư mục là 1 skill (kebab-case như viet-bai-facebook/, soan-proposal/...).
+Mở thử 1 thư mục — bạn sẽ thấy file SKILL.md bên trong. Đây chính là "trái tim" của skill.
+Chưa nhận được bộ skills?
+Có thể bạn chưa hoàn thành Ngày 15 đúng cách (cần nhắn Telegram Dũng Hoàng). Quay lại Ngày 15, hoàn thành đúng quy trình, bộ skills sẽ được gửi cho bạn.
+
+Trong lúc chờ, bạn vẫn có thể bỏ qua Phần Một và làm Phần Hai trở đi — học lý thuyết + tự tạo skill mới của bạn.
+
+BƯỚC 02
+Cài skills vào agent coding của bạn
+Có 2 cách dùng tùy bạn đang dùng agent coding nào:
+
+Cách A — Dùng "@filename trick" (cho mọi agent coding)
+Đây là cách đơn giản nhất, hoạt động trên mọi agent coding (Cursor, Antigravity, Windsurf, Continue, Claude Code...):
+
+Copy thư mục dh-skills/ vào trong dự án bạn đang làm việc (ví dụ thư mục website của bạn).
+Mở agent coding, trong khung chat gõ ký tự @ → một popup hiện ra → tìm và chọn file SKILL.md của skill bạn muốn dùng (ví dụ dh-skills/viet-bai-facebook/SKILL.md).
+File được tạm thời inject vào ngữ cảnh hội thoại. Agent đã đọc skill.
+Sau đó gõ yêu cầu thật, ví dụ: "Viết bài Facebook về khoá học X giá 2tr, có ưu đãi cuối tuần."
+Agent đọc skill → làm theo template/instructions → ra output đúng format.
+@filename trick là gì?
+Mỗi agent coding đều có cách tạm thời chèn 1 file vào ngữ cảnh hội thoại. Cursor/Windsurf/Antigravity gõ @ hoặc #. Đây là cách dùng skill tạm thời cho 1 cuộc trò chuyện — không cài permanent, lúc nào cần thì gọi.
+Cách B — Cài permanent vào Claude Code (chỉ cho ai có Claude Code)
+Nếu bạn dùng Claude Code, có thể cài skill permanent để Claude tự kích hoạt khi cần, không phải gọi @ mỗi lần:
+
+Mở terminal, copy bộ skills vào thư mục skills của Claude Code:
+cp -r dh-skills/* ~/.claude/skills/
+Khởi động lại Claude Code (đóng và mở lại terminal).
+Từ giờ, mỗi khi bạn nói câu phù hợp với skill (ví dụ "viết bài Facebook"), Claude tự nhận ra, tự đọc skill, tự làm theo. Không cần gọi @.
+Không có Claude Code?
+Không sao. Cách A (@filename) hoạt động trên hầu hết agent coding khác. Bạn không bỏ lỡ gì cả — chỉ là thao tác mỗi lần dùng thêm 1 bước (gõ @).
+
+Khi quen với skills rồi, bạn có thể mua Claude Code (rẻ hơn nhiều so với thuê 1 nhân viên).
+
+BƯỚC 03
+Upload skills lên Claude.ai (tùy chọn)
+Nếu bạn có tài khoản Claude.ai (Pro hoặc Free), bạn có thể upload skills lên đó để dùng trực tiếp trong giao diện chat của Claude — không cần agent coding:
+
+Mở claude.ai → đăng nhập.
+Vào Settings (góc trên phải) → Capabilities → Skills.
+Bấm Upload Skill → chọn thư mục skill (nén thành .zip trước nếu yêu cầu).
+Bật Enabled cho skill đó.
+Quay về cuộc chat — gõ yêu cầu phù hợp, Claude tự kích hoạt skill.
+Không có Claude.ai?
+Bỏ qua bước này — Cách A (@filename trong agent coding) đã đủ rồi. Hoặc đến Phần Bốn bạn sẽ upload skills lên goClaw để dùng qua Telegram.
+
+BƯỚC 04
+Dùng thử ít nhất 1 skill
+Đừng bỏ qua bước này. Trải nghiệm thật mới hiểu skill là gì.
+
+Chọn 1 skill trong bộ dh-skills/ phù hợp với business của bạn (ví dụ viet-bai-facebook/). Mở skill ra (đọc nhanh SKILL.md để hiểu nó làm gì), rồi:
+
+Trong agent coding, gõ @ → chọn SKILL.md của skill đó.
+Gõ yêu cầu thật từ business của bạn — không phải ví dụ giả. Ví dụ: "Viết bài Facebook giới thiệu khoá [tên khoá thật của bạn], giá [giá thật], điểm khác biệt là [USP thật]."
+Đọc kỹ output — agent có ra đúng format không? Tone có đúng không?
+Nếu output chưa đúng giọng bạn — đó là dấu hiệu skill cần điều chỉnh. Đến Phần Ba bạn sẽ học cách sửa skill.
+Khoảnh khắc bạn cần cảm nhận
+Khi bạn paste 1 yêu cầu ngắn 1 câu vào agent coding, kèm @SKILL.md, agent ra cho bạn 1 bài đăng Facebook hoàn chỉnh đúng format trong 10 giây — đó chính là giá trị của skill. Trước đây bạn phải mô tả lại context mỗi lần. Giờ skill làm thay.
+
+Nhân giá trị đó với 30 lần/tháng — đó là tại sao bộ skills này đáng 2tr.
+
+Phần Hai
+Hiểu Skill Là Gì
+BƯỚC 05
+Đọc ebook trước
+Tôi đã gửi bạn file ebook "The Complete Guide to Building Skills for Claude" của Anthropic. Đây là tài liệu chính thức.
+
+Bạn không cần đọc hết. Chỉ cần đọc 3 chương:
+
+Chapter 1 — Fundamentals: Skill là gì, cấu trúc thư mục, progressive disclosure. ~3 trang.
+Chapter 2 — Planning and Design: Cách viết SKILL.md + YAML frontmatter. ~6 trang.
+Chapter 5 — Patterns and Troubleshooting (chỉ phần Patterns đầu): 5 patterns phổ biến. ~5 trang.
+Tổng: ~14 trang, đọc 20-30 phút. Đọc bằng tiếng Anh nhưng có agent coding bên cạnh — không hiểu chỗ nào, paste vào hỏi.
+
+Hiểu skill kiểu đơn giản nhất
+Skill = 1 thư mục có file SKILL.md. File này dạy agent cách làm 1 việc cụ thể. Khi agent thấy task tương tự, nó tự đọc skill và làm theo.
+BƯỚC 06
+Hiểu 5 cấp độ skill
+Skill có thể đơn giản (chỉ 1 file MD) hoặc phức tạp (nhiều thành phần). Anthropic chia thành 5 cấp độ — biết cấp nào phù hợp việc nào là kỹ năng quan trọng nhất hôm nay:
+
+Cấp 1 · Skill Đơn
+Chỉ 1 file SKILL.md
+my-skill/
+└── SKILL.md
+Khi nào dùng: Khi skill chỉ là hướng dẫn cách agent xử lý task — không cần data ngoài, không cần format chuẩn cứng. Output là văn bản tự do.
+Thay được: junior CS, junior copywriter, content creator
+
+Cấp 2 · Skill + Khuôn Mẫu
+SKILL.md + assets/ chứa template
+my-skill/
+├── SKILL.md
+└── assets/
+    └── template.docx
+Khi nào dùng: Khi output cần đúng format chuẩn mỗi lần — slide, hợp đồng, proposal, caption có hook+body+CTA cố định.
+Thay được: graphic designer (làm template), proposal writer, SEO writer
+
+Cấp 3 · Skill + Máy Tự Động
+SKILL.md + scripts/ chứa code chạy được
+my-skill/
+├── SKILL.md
+└── scripts/
+    └── process.py
+Khi nào dùng: Khi cần xử lý dữ liệu thực tế — đếm, tính toán, parse file, validate, edit video, render ảnh. Code chính xác hơn ngôn ngữ.
+Thay được: lập trình viên junior, data analyst, video editor (FFmpeg), SEO checker
+
+Cấp 4 · Skill + Sổ Tay Chuyên Môn
+SKILL.md + references/ chứa kiến thức sâu
+my-skill/
+├── SKILL.md
+└── references/
+    └── deep-knowledge.md
+Khi nào dùng: Khi skill cần kiến thức chuyên sâu — luật, tài chính, y khoa, kế toán. Agent tham chiếu khi cần (không load hết vào context cho đỡ tốn chi phí AI).
+Thay được: tư vấn pháp lý, tư vấn tài chính, kế toán, chuyên gia chuyên môn
+
+Cấp 5 · Skill Đầy Đủ
+SKILL.md + scripts/ + assets/ + references/
+my-skill/
+├── SKILL.md
+├── scripts/
+├── assets/
+└── references/
+Khi nào dùng: Cho task phức hợp cao — vừa cần xử lý data, vừa cần format chuẩn, vừa cần kiến thức sâu. Ví dụ: build báo cáo BI hàng tuần.
+Thay được: senior all-round (technical writer + designer + dev junior)
+
+Quy tắc vàng khi chọn cấp
+Bắt đầu cấp thấp nhất khả thi. Skill đầu tiên của bạn nên Cấp 1 hoặc Cấp 2 — dễ làm, dễ test, ra kết quả nhanh. Sau quen rồi, lên Cấp 3-5 cho task phức tạp.
+
+Đừng over-engineer skill đầu tiên — không ai làm được skill cấp 5 ngay lần đầu.
+
+BƯỚC 07
+Trắc nghiệm 10 câu — bắt buộc dùng AI để trả lời
+Cách làm bài
+Mỗi câu là 1 tình huống thật. Bạn phải đoán: cấp skill nào phù hợp nhất?
+
+Quy tắc bắt buộc: với mỗi câu, mở agent coding của bạn (Cursor / Antigravity / Claude Code) và bấm nút "Hỏi AI" — nó copy sẵn prompt, bạn dán vào agent, agent giải thích. Sau đó quay lại đây chọn đáp án.
+
+Đừng đoán mò. Mục tiêu là hiểu sâu, không phải đúng nhanh. Làm đủ 10 câu, mỗi câu sẽ có giải thích chi tiết sau khi bạn chọn.
+
+0 / 10 câu đã hoàn thành
+Câu 01 / 10
+Bạn muốn agent trả lời câu hỏi thường gặp của khách hàng trên Telegram, đúng tone business của bạn. FAQ có sẵn 20 câu, mỗi câu trả lời ngắn 2-3 dòng.
+
+Chưa biết? Bấm "Hỏi AI" → dán vào Cursor/Antigravity → đọc giải thích → quay lại chọn đáp án.
+Hỏi AI
+Kiểm tra đáp án
+Câu 02 / 10
+Bạn muốn agent edit video tự động — cắt clip dài thành 5 reels ngắn, thêm caption animation, ghép nhạc nền.
+
+Chưa biết? Bấm "Hỏi AI" → dán vào agent coding → đọc giải thích.
+Hỏi AI
+Kiểm tra đáp án
+Câu 03 / 10
+Bạn muốn agent soạn proposal/báo giá cho khách hàng mới — phải đúng template thương hiệu của bạn (logo, màu, layout cố định).
+
+Chưa biết? Bấm "Hỏi AI" để nó giải thích cho bạn.
+Hỏi AI
+Kiểm tra đáp án
+Câu 04 / 10
+Bạn muốn agent code 1 tính năng mới vào website của bạn — ví dụ thêm trang "Khách hàng nói gì". Task gồm: viết code frontend, viết code backend, test, commit, deploy.
+
+Đây là task khó nhất bài. Bấm "Hỏi AI" để hiểu rõ.
+Hỏi AI
+Kiểm tra đáp án
+Câu 05 / 10
+Bạn muốn agent soạn hợp đồng cho khách thuê dịch vụ — phải đúng luật VN, có điều khoản chuẩn về thanh toán, sở hữu trí tuệ, NDA, giải quyết tranh chấp.
+
+Chưa biết? Bấm "Hỏi AI" để nó giải thích cho bạn.
+Hỏi AI
+Kiểm tra đáp án
+Câu 06 / 10
+Bạn muốn agent làm báo cáo doanh thu cuối tháng — đọc data thật từ database (đơn hàng, khách hàng), tính toán doanh thu/lãi/khách mới, vẽ biểu đồ, xuất ra slide PowerPoint theo template công ty.
+
+Câu này tổng hợp nhiều thứ. Bấm "Hỏi AI" để hiểu rõ.
+Hỏi AI
+Kiểm tra đáp án
+Câu 07 / 10
+Bạn muốn agent viết caption Instagram cho mỗi sản phẩm bạn bán — caption có cấu trúc cố định: Hook (câu gây chú ý) + Body (mô tả sản phẩm) + CTA (kêu gọi mua).
+
+Chưa biết? Bấm "Hỏi AI" để nó giải thích cho bạn.
+Hỏi AI
+Kiểm tra đáp án
+Câu 08 / 10
+Bạn muốn agent phân tích đối thủ cạnh tranh — bạn cho tên đối thủ, agent vào website của họ, đọc nội dung, đánh giá điểm mạnh/yếu, viết báo cáo dạng văn bản.
+
+Chưa biết? Bấm "Hỏi AI" để nó giải thích cho bạn.
+Hỏi AI
+Kiểm tra đáp án
+Câu 09 / 10
+Bạn muốn agent tạo poster quảng cáo tự động — bạn nhập thông tin sự kiện (tên, ngày, địa điểm), agent tạo ra ảnh poster có sẵn typography đẹp, màu sắc đúng brand, logo công ty.
+
+Câu này nâng cao. Bấm "Hỏi AI" để hiểu rõ.
+Hỏi AI
+Kiểm tra đáp án
+Câu 10 / 10
+Bạn muốn agent tư vấn đầu tư cơ bản cho khách hàng — agent hỏi tình hình tài chính của khách, gợi ý phân bổ portfolio (cổ phiếu, vàng, gửi tiết kiệm) dựa trên nguyên tắc đầu tư chuẩn (rule of 100, đa dạng hoá, etc.).
+
+Câu cuối! Bấm "Hỏi AI" để hiểu rõ.
+Hỏi AI
+Kiểm tra đáp án
+BƯỚC 08
+10 ý tưởng skill cho business của bạn
+Trước khi vào tạo, đây là 10 ý tưởng skill khả thi — chọn 1 cái phù hợp business của bạn để làm đầu tiên:
+
+01
+Skill viết bài Facebook theo brand voice
+Cấp 2 · Hợp với: mọi business cần content
+Template Hook + Body + CTA. Agent đọc thông tin sản phẩm/sự kiện → fill vào template → ra bài đăng đúng giọng bạn. Khuyên làm đầu tiên.
+02
+Skill trả lời FAQ khách hàng
+Cấp 1 · Hợp với: e-commerce, khoá học, dịch vụ
+SKILL.md chứa 20+ FAQ + cách trả lời theo brand. Agent thay junior CS — không cần con người trực Telegram nữa.
+03
+Skill báo cáo doanh thu cuối tuần
+Cấp 3 · Hợp với: bán hàng có database
+Script đọc database → tính số → render dạng tin nhắn Telegram. Mỗi cuối tuần agent tự gửi, không cần bạn yêu cầu.
+04
+Skill viết email follow-up khách
+Cấp 2 · Hợp với: B2B, agency, freelancer
+Template email theo từng giai đoạn (sau gặp lần 1, sau gửi proposal, sau im lặng 1 tuần...). Agent điền tên khách + context → ra email gửi luôn.
+05
+Skill soạn proposal/báo giá
+Cấp 2 · Hợp với: freelancer, agency
+Template proposal có logo, cấu trúc giá, điều khoản chuẩn. Agent điền theo yêu cầu khách → file Word đẹp gửi luôn.
+06
+Skill phân tích đối thủ cạnh tranh
+Cấp 1 + 4 · Hợp với: marketer, founder
+Agent vào website đối thủ → đọc → đánh giá theo framework SWOT (references chứa SWOT chi tiết). Output báo cáo 1 trang.
+07
+Skill viết caption sản phẩm bán hàng
+Cấp 2 · Hợp với: shop online
+Template Hook + Body + CTA. Bạn nhập tên sản phẩm + giá + USP → agent ra caption Instagram/Facebook đúng giọng.
+08
+Skill kiểm tra bài viết trước khi đăng (SEO)
+Cấp 3 · Hợp với: blogger, content creator
+Script đếm độ dài, mật độ từ khóa, kiểm tra tiêu đề/meta. Agent chấm điểm 1-10 + đề xuất cải thiện.
+09
+Skill soạn lịch nội dung tuần
+Cấp 1 + 2 · Hợp với: social media manager
+Bạn nhập theme tuần + sự kiện → agent ra 7 ý tưởng bài đăng cho 7 ngày, kèm caption mẫu cho từng bài.
+10
+Skill tạo SOP/quy trình nội bộ
+Cấp 1 · Hợp với: người có team, cần document
+Bạn mô tả quy trình bằng lời → agent biến thành SOP rõ ràng, có numbered steps, troubleshooting, checklist.
+Phần Ba
+Tự Tay Tạo Skill Đầu Tiên
+BƯỚC 09
+Chốt ít nhất 3 skill để làm hôm nay
+Chọn ít nhất 3 trong 10 ý tưởng ở Bước 08 — hoặc nghĩ ra ý tưởng riêng phù hợp business của bạn. Tiêu chí chọn:
+
+Đơn giản: ưu tiên Cấp 1 hoặc Cấp 2 cho skill đầu tiên. Không nhảy thẳng Cấp 5.
+Có ích thực sự: việc bạn đang làm tay 3-5 lần/tuần — skill ra sẽ tiết kiệm thật.
+Rõ output: bạn hình dung được kết quả nó ra phải như thế nào.
+Khuyên cho người mới
+Skill 01 (viết bài Facebook) hoặc Skill 02 (FAQ khách hàng) là 2 lựa chọn an toàn nhất — đơn giản, ra kết quả ngay, dùng được hàng ngày. Bạn có thể làm xong 1 trong 2 cái này trong 60 phút.
+
+BƯỚC 10
+Vibe code skill bằng agent coding
+Mở agent coding (Cursor / Antigravity / Claude Code), tạo thư mục mới my-skills/ trên máy. Paste prompt:
+
+Prompt · Tạo skill đầu tiên (AI-First)
+COPY
+Tôi muốn tạo 1 Claude Skill đầu tiên. Đây là tài liệu chính thức của Anthropic về cách tạo skill: https://docs.anthropic.com/skills (hoặc tôi đã đọc ebook và đính kèm ở đây nếu bạn cần).
+
+Skill tôi muốn tạo:
+- Tên skill: [điền tên ngắn theo kebab-case, ví dụ: viet-bai-facebook]
+- Mục đích: [điền 1 câu — ví dụ: "Viết bài Facebook đúng brand voice của tôi"]
+- Cấp độ: [Cấp 1 / 2 / 3 / 4 / 5 — bạn đã chọn ở Bước 04]
+- Use case cụ thể: [điền 2-3 tình huống thật — ví dụ: "Khi tôi nói 'viết bài Facebook về sản phẩm A giá 500k', skill này phải kích hoạt và ra bài đúng template Hook+Body+CTA"]
+
+Đọc context của tôi:
+1. Brain.db trong folder my-brain/ — chứa brand_voice của tôi
+2. Nếu cần thêm thông tin gì về business của tôi, hỏi tôi cụ thể
+
+Làm giúp tôi:
+
+1. Tạo thư mục my-skills/[tên-skill]/ với cấu trúc đúng (kebab-case, có SKILL.md, các thư mục assets/scripts/references nếu cần theo cấp độ tôi chọn).
+
+2. Viết SKILL.md với:
+   - YAML frontmatter có name + description chuẩn (description phải gồm: cái skill làm gì + khi nào dùng + các trigger phrase người dùng có thể nói)
+   - Body markdown rõ ràng: Instructions, Examples (2-3 ví dụ), Troubleshooting nếu có
+
+3. Nếu Cấp 2: tạo template trong assets/. Nếu Cấp 3: viết script có chú thích rõ. Nếu Cấp 4: viết references chia thành nhiều file MD nhỏ.
+
+4. Test skill ngay tại đây: bạn giả vờ là Claude đang nhận skill này, tôi gõ 1 yêu cầu thật, bạn xem skill có kích hoạt đúng không và output có đúng kỳ vọng không.
+
+5. Nếu test có vấn đề (skill không kích hoạt khi nên kích hoạt, hoặc kích hoạt sai khi không nên), sửa lại description trong YAML và test lại.
+
+Làm từng bước, trình bày plan trước khi code, chờ tôi duyệt.
+Quy tắc khi viết description trong YAML
+Theo ebook (Chapter 2), description là phần quan trọng nhất của skill — nó quyết định khi nào skill kích hoạt. Description tốt phải gồm:
+
+Cái gì (What it does)
+Khi nào dùng (When to use it) + các cụm từ người dùng có thể nói
+Dưới 1024 ký tự
+Ví dụ tốt: "Viết bài Facebook theo brand voice. Dùng khi user nói 'viết bài cho sản phẩm X', 'làm caption Facebook', 'viết content quảng cáo'."
+
+BƯỚC 11
+Test skill ngay trong agent coding
+Sau khi agent đã viết xong, test ngay tại agent coding bằng "@filename trick" — đây là cách hầu hết agent coding (Cursor, Antigravity, Windsurf) đều support:
+
+Trong khung chat của agent coding, gõ @ → một popup hiện ra → chọn file SKILL.md bạn vừa tạo. File được inject vào context.
+Sau đó gõ yêu cầu thật, ví dụ: "Viết bài Facebook về khoá học Vibe Coding của tôi, giá 2tr, ưu đãi cuối tuần."
+Agent sẽ đọc skill, làm theo template/instructions trong skill, ra bài đăng.
+Kiểm tra: output có đúng format bạn mong muốn không? Tone có đúng không? Nếu không đúng → quay lại sửa SKILL.md, test lại.
+@filename trick là gì?
+Mỗi agent coding đều có cách tạm thời chèn 1 file vào ngữ cảnh hội thoại. Cursor/Windsurf gõ @, Antigravity gõ # hoặc kéo thả file. Đây là cách nhanh nhất để test skill trước khi upload lên goClaw.
+Skill không hoạt động đúng?
+3 lỗi phổ biến (theo ebook Chapter 5):
+
+Skill không kích hoạt: description thiếu trigger phrase. Sửa: thêm các cụm người dùng thường nói.
+Skill kích hoạt sai lúc: description quá rộng. Sửa: thêm "Do NOT use for [...]" để hạn chế.
+Output không đúng template: SKILL.md instructions chưa rõ. Sửa: thêm Examples cụ thể, càng concrete càng tốt.
+Phần Bốn
+Đưa Skill Lên goClaw Để Agent Dùng
+BƯỚC 12
+Upload skill lên goClaw
+Skill bạn vừa tạo dùng được trong agent coding (qua @filename). Giờ đưa lên goClaw để agent Telegram của bạn dùng được — bất cứ khi nào bạn nhắn yêu cầu phù hợp, nó tự kích hoạt skill.
+
+Mở https://app.yourdomain.com → đăng nhập goClaw Dashboard.
+Sidebar → Capabilities → Skills.
+Bấm Upload Skill → chọn thư mục skill bạn vừa tạo (nén thành .zip nếu cần).
+Bật Enabled cho skill này.
+Vào agent detail (agent Telegram của bạn) → tab Skills → tick để cho agent này dùng skill vừa upload.
+Không thấy Skills trong sidebar goClaw?
+Tuỳ phiên bản, có thể nằm ở: Capabilities → Skills, hoặc Core → Skills, hoặc cần upload qua filesystem sync (giống Knowledge Vault ở Ngày 15).
+
+Chụp màn hình → paste vào Claude → "tôi muốn upload skill cho goClaw, bấm đâu?".
+
+BƯỚC 13
+Test thật với Telegram
+Mở Telegram, chat với agent Telegram của bạn. Gõ 1 yêu cầu phù hợp với skill bạn vừa tạo:
+
+Nếu skill viết bài Facebook: "Viết bài Facebook về sản phẩm A của tôi giá 500k, ưu đãi cuối tuần."
+Nếu skill FAQ: "Khách hỏi làm sao biết khoá học có hợp với mình không?"
+Nếu skill báo cáo: "Làm báo cáo doanh thu tuần này cho tôi."
+Agent phải:
+
+✓ Tự nhận ra skill phù hợp
+✓ Load skill vào context
+✓ Output đúng format/template như đã test ở Bước 07
+Nếu agent không kích hoạt skill: kiểm tra description trong YAML đã có đủ trigger phrase chưa. Nếu output sai format: sửa lại Examples trong SKILL.md, upload lại.
+
+Phần Năm
+Khoe Thành Quả
+BƯỚC 14
+Đăng bài khoe thành quả
+Mở agent coding, paste:
+
+Prompt · Viết bài khoe Ngày 16
+COPY
+Đọc brand voice trong brain.db. Viết 1 bài đăng kể về trải nghiệm hôm nay:
+
+- Trước hôm nay tôi nhận skills từ người khác. Hôm nay tôi tự tay tạo 3 skill — chính xác cho business của tôi.
+- 3 skill tôi vừa tạo: [điền tên + mỗi skill làm gì].
+- Lần đầu tôi hiểu skill cấp cao có thể thay được [điền: video editor / lập trình viên / copywriter / kế toán... — cái tương ứng skill bạn làm].
+- Cảm giác: không còn phụ thuộc vào ai để có công cụ AI riêng — business cần gì tôi tự build được.
+
+Tone tự nhiên, cá nhân, không khoe khoang kỹ thuật. Nhấn mạnh việc chuyển từ "user" sang "creator" — đây là khác biệt lớn nhất hôm nay.
+
+Lưu vào day16_post.txt.
+Đăng ít nhất 2 kênh.
+
+FINAL
+Nộp Bài
+Checklist hoàn thành
+Tiêu chí hoàn thành
+Bạn hiểu 5 cấp skill, biết khi nào dùng cấp nào (qua 10 câu trắc nghiệm)
+Bạn có ít nhất 3 skill do chính bạn tạo, mỗi skill dùng được ở 2 nơi
+Bạn không còn phụ thuộc vào skills của ai — business cần gì tự build được
+Mẹo cho ngày mai và sau đó
+Sau khi xong 3 skill hôm nay, mỗi tuần tạo thêm 1 skill mới. Sau 3 tháng bạn sẽ có ~12 skills riêng — đủ thay 1 team nhỏ. Đây là tài sản thực sự của bạn, không ai lấy mất được.
+
+Mẹo: việc nào bạn làm tay 3+ lần/tuần — biến thành skill. Quy luật đơn giản này tiết kiệm hàng giờ mỗi tuần.

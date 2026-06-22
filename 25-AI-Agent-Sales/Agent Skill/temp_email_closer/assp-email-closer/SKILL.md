@@ -93,7 +93,7 @@ P.S. [Summarize value + repeat CTA]
 **All emails written in Vietnamese:**
 - Subject line in Vietnamese — lowercase, like a text message
 - Body in natural Vietnamese — not machine-translated, no flowery language
-- No English except proper nouns (KP3, AI, Zalo...)
+- No English except proper nouns (Tiểu Hà Mã, AI, Zalo...)
 - Read it aloud — if it sounds like a translation, rewrite it
 
 **Friend's voice:**

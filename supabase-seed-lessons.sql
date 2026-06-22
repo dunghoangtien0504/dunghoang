@@ -611,7 +611,7 @@ Khóa 1: hỏi-đáp khi học. Khóa 2: Dũng cài Tiểu Hà Mã riêng, kèm 
 
 Cách sử dụng:
 1. Tham gia group Telegram của khóa (link trong email kích hoạt)
-2. Tag @lungmatkp3_bot khi cần hỏi
+2. Tag @tieuhama_bot khi cần hỏi
 3. Mô tả rõ bạn đang làm gì, đang kẹt ở bước nào
 4. Bot trả lời và gợi ý bước tiếp theo
 5. Nếu câu hỏi phức tạp, Dũng sẽ trả lời trực tiếp trong 24h

@@ -1838,7 +1838,7 @@ mt-10 md:mt-14 max-w-[840px] mx-auto w-full
 
 +n).trim():t[e]=n+
 
-DỪNG NGAY VIỆC ĐỐT TIỀN CHO NHÂN SỰ LƯỜI BIẾNG VÀ QUẢNG CÁO VÔ NGHĨA!
+DỪNG NGAY VIỆC ĐỐT TIỀN CHO NHÂN SỰ LƯỜI BIẾNG VÀ QUẢNG CÁO VÔ DŨNG!
 
 ?t:null,t!==null&&(e.memoizedState={dehydrated:t,treeContext:Sn!==null?{id:Ze,overflow:Pe}:null,retryLane:536870912,hydrationErrors:null},n=gf(t),n.return=e,e.child=n,te=e,_t=null)):t=null,t===null)throw An(e);return e.lanes=536870912,null}return dl(e,i)}var u=t.memoizedState;if(u!==null){var m=u.dehydrated;if(jo(e),o)if(e.flags&256)e.flags&=-257,e=_d(t,e,n);else if(e.memoizedState!==null)e.child=t.child,e.flags|=128,e=null;else throw Error(r(558));else if(Xt||qa(t,e,n,!1),o=(n&t.childLanes)!==0,Xt||o){if(i=Dt,i!==null&&(m=jh(i,n),m!==0&&m!==u.retryLane))throw u.retryLane=m,sa(t,m),xe(i,t,m),Yo;Sl(),e=_d(t,e,n)}else t=u.treeContext,_t=Be(m.nextSibling),te=e,bt=!0,Tn=null,Ve=!1,t!==null&&bf(e,t),e=dl(e,i),e.flags|=4096;return e}return t=ln(t.child,{mode:i.mode,children:i.children}),t.ref=e.ref,e.child=t,t.return=e,t}function ml(t,e){var n=e.ref;if(n===null)t!==null&&t.ref!==null&&(e.flags|=4194816);else{if(typeof n!=
 
@@ -3449,7 +3449,7 @@ space-y-2 text-xs md:text-sm text-black
 
 )?(p=!0,d[x]=b):r[x]=b}}if(s.transform||(f||l?r.transform=fj(s,a.transform,l):r.transform&&(r.transform=
 
-Đó là lý do nội dung mà hệ thống KP3 tạo ra luôn mang đậm
+Đó là lý do nội dung mà hệ thống Tiểu Hà Mã tạo ra luôn mang đậm
 
 không phải trả 10 triệu.
 
@@ -3841,7 +3841,7 @@ mất thời gian học cách viết
 
 Agent Money Model
 
-COPYRIGHT © 2026 KP3® | DIRECT RESPONSE DIGITAL MARKETING
+COPYRIGHT © 2026 Tiểu Hà Mã® | DIRECT RESPONSE DIGITAL MARKETING
 
 )}}function Kg(a,s,l){return{min:Fg(a,s),max:Fg(a,l)}}function Fg(a,s){return typeof a==
 
@@ -4043,7 +4043,7 @@ cảm xúc</span>.
 
 ,o.formTarget,o,null)):(Ct(t,e,
 
-NGHE NHỮNG FEEDBACK NÓI THẬT VỀ KP3
+NGHE NHỮNG FEEDBACK NÓI THẬT VỀ Tiểu Hà Mã
 
 compositionupdate
 
@@ -4486,7 +4486,7 @@ onDoubleClickCapture
 
 ||n.readyState!==
 
-duongtrongnghia.com
+dunghoang.com
 
 w-full max-w-md bg-gray-50 p-4 md:p-6 rounded-xl text-left space-y-3 md:space-y-4
 
