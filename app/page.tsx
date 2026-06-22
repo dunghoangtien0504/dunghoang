@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import { ArrowRight, BookOpen, Users, CheckCircle, Newspaper } from 'lucide-react'
 import { getRecentPosts } from '@/lib/posts'
+import SiteNav from '@/components/SiteNav'
+import MetaPixel from '@/components/MetaPixel'
+import AffiliateTracker from '@/components/AffiliateTracker'
 
 export const metadata = {
   title: 'DungHoang.com — 24 Skill AI Cho Người Kinh Doanh Một Mình',
@@ -55,6 +58,9 @@ export default function HomePage() {
 
   return (
     <div className="min-h-dvh bg-[#F6F0E4] font-sans">
+      <MetaPixel />
+      <AffiliateTracker />
+      <SiteNav />
 
       {/* ── Hero ───────────────────────────────────────────────── */}
       <section className="max-w-4xl mx-auto px-4 py-16 text-center space-y-6">
@@ -87,34 +93,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Products ───────────────────────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-4 pb-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {PRODUCTS.map((p, i) => (
-            <div
-              key={i}
-              className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-4 hover:border-[#3D6B4A]/40 hover:shadow-sm transition-all flex flex-col"
-            >
-              <div className="flex items-center justify-between">
-                <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${p.badgeColor}`}>
-                  {p.badge}
-                </span>
-                <span className="text-[#3D6B4A]">{p.icon}</span>
+      {/* ── Products ── featured Khóa 1 + others below ─────────── */}
+      <section className="max-w-4xl mx-auto px-4 pb-16 space-y-3">
+        {/* Featured: Khóa 1 */}
+        {(() => {
+          const p = PRODUCTS[2]
+          return (
+            <div className="bg-[#0D2B1A] border border-[#0D2B1A] rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+              <div className="flex-1 space-y-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold bg-[#C0390E] text-white px-2.5 py-1 rounded-full">{p.badge}</span>
+                  <span className="text-[#88860B] text-xs font-semibold">— 605+ học viên đã học</span>
+                </div>
+                <p className="font-black text-[#F6F0E4] text-xl leading-snug">{p.name}</p>
+                <p className="text-sm text-[#C8D5C9] leading-relaxed max-w-md">{p.desc}</p>
               </div>
-              <div className="flex-1 space-y-1.5">
+              <div className="flex flex-col items-start sm:items-end gap-3 flex-shrink-0">
+                <p className="font-black text-[#F6F0E4] text-2xl font-mono">{p.price}</p>
+                <Link href={p.href}
+                  className="h-12 px-6 bg-[#C0390E] hover:bg-[#a02e0a] active:scale-[0.97] text-white font-bold text-sm rounded-xl transition-all flex items-center gap-2 whitespace-nowrap">
+                  {p.cta} <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          )
+        })()}
+
+        {/* Secondary: 3 others */}
+        <div className="grid sm:grid-cols-3 gap-3">
+          {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[3]].map((p, i) => (
+            <div key={i}
+              className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-3 hover:border-[#3D6B4A]/40 hover:shadow-sm transition-all flex flex-col">
+              <span className={`text-xs font-semibold px-2.5 py-1 rounded-full self-start ${p.badgeColor}`}>{p.badge}</span>
+              <div className="flex-1 space-y-1">
                 <p className="font-bold text-[#0D2B1A] text-sm leading-snug">{p.name}</p>
                 <p className="text-xs text-[#3D6B4A] leading-relaxed">{p.desc}</p>
               </div>
-              <div className="space-y-2">
-                {p.price && (
-                  <p className="font-bold text-[#0D2B1A] text-lg">{p.price}</p>
-                )}
-                <Link
-                  href={p.href}
-                  className="flex items-center justify-center gap-1.5 w-full h-10 bg-[#0D2B1A] hover:bg-[#1a4a2e] text-[#F6F0E4] font-semibold text-sm rounded-xl transition-colors"
-                >
-                  {p.cta}
-                  <ArrowRight className="w-3.5 h-3.5" />
+              <div className="flex items-center justify-between">
+                <p className="font-bold text-[#0D2B1A]">{p.price}</p>
+                <Link href={p.href}
+                  className="h-9 px-4 bg-[#0D2B1A] hover:bg-[#1a4a2e] text-[#F6F0E4] font-semibold text-xs rounded-xl transition-colors flex items-center gap-1.5">
+                  {p.cta} <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
             </div>
@@ -185,8 +204,8 @@ export default function HomePage() {
           Nếu chưa biết thì thử 7 ngày miễn phí trước. Không cần thẻ. Không cam kết.
         </p>
         <Link
-          href="/thu-thach-7-ngay"
-          className="inline-flex items-center gap-2 h-13 px-8 py-3 bg-[#C0390E] hover:bg-[#A0300B] text-white font-bold rounded-xl transition-all shadow-lg text-base"
+          href="/bi-quyet-7-ngay"
+          className="inline-flex items-center gap-2 h-14 px-8 bg-[#C0390E] hover:bg-[#A0300B] active:scale-[0.97] text-white font-bold rounded-2xl transition-all shadow-lg text-base"
         >
           Tham gia thử thách 7 ngày miễn phí
           <ArrowRight className="w-5 h-5" />

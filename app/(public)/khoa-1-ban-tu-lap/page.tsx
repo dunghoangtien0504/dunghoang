@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import CheckoutModal from '@/components/checkout/CheckoutModal'
 import { PRODUCTS } from '@/lib/products'
 import { KHOA1_SKILLS, SKILL_GROUPS } from '@/lib/skills'
+import { ClipboardList, Clock, Bot, Repeat2, Home, Users, FlaskConical, RefreshCw, Shield } from 'lucide-react'
 
 const product = PRODUCTS.khoa1_686
 
@@ -241,14 +242,14 @@ export default function Khoa1Page() {
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { icon:'📋', title:'SOP từng bước', desc:'Mỗi skill là quy trình copy-paste, không cần đoán mò hay tự sáng tạo' },
-              { icon:'⏱️', title:'30-60 phút/skill', desc:'Làm xong là có output dùng được ngay hôm đó, không phải học rồi về tự làm' },
-              { icon:'🤖', title:'AI làm phần nặng', desc:'Viết, lên ý tưởng, dựng khung — bạn chỉ đọc lại và chỉnh cho đúng business mình' },
-              { icon:'♾️', title:'Dùng mãi không hết', desc:'Học 1 lần, dùng cho mọi sản phẩm, mọi chiến dịch — không lỗi mốt' },
+              { icon: <ClipboardList className="w-4 h-4 text-[#3D6B4A]" />, title:'SOP từng bước', desc:'Mỗi skill là quy trình copy-paste, không cần đoán mò hay tự sáng tạo' },
+              { icon: <Clock className="w-4 h-4 text-[#3D6B4A]" />, title:'30-60 phút/skill', desc:'Làm xong là có output dùng được ngay hôm đó, không phải học rồi về tự làm' },
+              { icon: <Bot className="w-4 h-4 text-[#3D6B4A]" />, title:'AI làm phần nặng', desc:'Viết, lên ý tưởng, dựng khung — bạn chỉ đọc lại và chỉnh cho đúng business mình' },
+              { icon: <Repeat2 className="w-4 h-4 text-[#3D6B4A]" />, title:'Dùng mãi không hết', desc:'Học 1 lần, dùng cho mọi sản phẩm, mọi chiến dịch — không lỗi mốt' },
             ].map(c => (
               <div key={c.title} className="bg-white border border-[#DDD8CB] rounded-xl p-4 space-y-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="text-xl">{c.icon}</span>
+                  <span className="w-7 h-7 rounded-lg bg-[#EAF5EF] flex items-center justify-center flex-shrink-0">{c.icon}</span>
                   <p className="font-bold text-[#0D2B1A] text-sm">{c.title}</p>
                 </div>
                 <p className="text-xs text-gray-500 leading-relaxed">{c.desc}</p>
@@ -348,13 +349,13 @@ export default function Khoa1Page() {
           </div>
           <div className="space-y-4">
             {[
-              { icon:'🏡', text:'Mình vận hành homestay + khoá học + tư vấn AI một mình — 24 skill này đang chạy thật trong business mình mỗi ngày' },
-              { icon:'👥', text:'605 học viên từ chủ shop, coach, freelancer đến solopreneur nhiều ngành đã học và áp dụng được' },
-              { icon:'🧪', text:'SOP được test 2 năm thực chiến — không phải viết từ sách, không copy từ guru nước ngoài' },
-              { icon:'🔄', text:'Khóa 1 là nền tảng — mua xong muốn kèm sát, 868.686đ trừ vào Khóa 2 (3.868.686đ)' },
-            ].map(a => (
-              <div key={a.icon} className="flex items-start gap-3">
-                <span className="text-xl flex-shrink-0 mt-0.5">{a.icon}</span>
+              { icon: <Home className="w-4 h-4 text-[#88860B]" />, text:'Mình vận hành homestay + khoá học + tư vấn AI một mình — 24 skill này đang chạy thật trong business mình mỗi ngày' },
+              { icon: <Users className="w-4 h-4 text-[#88860B]" />, text:'605 học viên từ chủ shop, coach, freelancer đến solopreneur nhiều ngành đã học và áp dụng được' },
+              { icon: <FlaskConical className="w-4 h-4 text-[#88860B]" />, text:'SOP được test 2 năm thực chiến — không phải viết từ sách, không copy từ guru nước ngoài' },
+              { icon: <RefreshCw className="w-4 h-4 text-[#88860B]" />, text:'Khóa 1 là nền tảng — mua xong muốn kèm sát, 868.686đ trừ vào Khóa 2 (3.868.686đ)' },
+            ].map((a, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="w-7 h-7 rounded-lg bg-[#F6F0E4]/10 flex items-center justify-center flex-shrink-0 mt-0.5">{a.icon}</span>
                 <p className="text-[#F6F0E4]/75 text-sm leading-relaxed">{a.text}</p>
               </div>
             ))}
@@ -429,7 +430,7 @@ export default function Khoa1Page() {
       <section className="bg-[#EAF5EF] border-y border-[#2D7A4F]/20 px-4 py-12">
         <div className="max-w-2xl mx-auto flex items-start gap-4">
           <div className="w-14 h-14 rounded-2xl bg-[#2D7A4F] flex items-center justify-center flex-shrink-0">
-            <span className="text-2xl">🛡️</span>
+            <Shield className="w-7 h-7 text-white" />
           </div>
           <div className="space-y-2">
             <h3 className="text-xl font-black text-[#0D2B1A]">Bảo Hành Kết Quả 14 Ngày</h3>

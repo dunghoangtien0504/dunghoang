@@ -31,12 +31,13 @@ export default function SiteNav() {
 
         {/* Right CTAs */}
         <div className="flex items-center gap-2">
-          <Link href="/thu-thach-7-ngay"
-            className="hidden sm:inline-flex text-sm font-semibold text-white bg-[#C0390E] hover:bg-[#A0300B] px-3 py-1.5 rounded-lg transition-colors">
-            Thử miễn phí
+          <Link href="/bi-quyet-7-ngay"
+            className="inline-flex text-xs sm:text-sm font-semibold text-white bg-[#C0390E] hover:bg-[#A0300B] active:scale-[0.97] px-2.5 sm:px-3 py-1.5 rounded-lg transition-all">
+            <span className="hidden sm:inline">Thử miễn phí</span>
+            <span className="sm:hidden">Thử ngay</span>
           </Link>
           <Link href="/portal"
-            className="text-sm text-[#7A8C7E] hover:text-[#3D6B4A] transition-colors px-2 py-1.5">
+            className="hidden sm:block text-sm text-[#7A8C7E] hover:text-[#3D6B4A] transition-colors px-2 py-1.5">
             Đăng nhập
           </Link>
         </div>
