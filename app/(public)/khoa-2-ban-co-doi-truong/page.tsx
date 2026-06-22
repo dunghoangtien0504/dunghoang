@@ -7,18 +7,20 @@ import { PRODUCTS } from '@/lib/products'
 const product = PRODUCTS.khoa2_2768
 
 const FAQS = [
-  { q:'Tiểu Hà Mã là gì? Khác gì chatbot thường?',
-    a:'Tiểu Hà Mã là AI agent mình cài riêng cho bạn trên Telegram. Không phải chatbot trả lời chung chung. Nó biết SOP của bạn, biết sản phẩm của bạn, và kèm bạn theo từng bước. Bạn hỏi đến đâu, nó chỉ đến đó. Mình thiết lập riêng từng người, không dùng chung.' },
-  { q:'30 ngày cam kết là cam kết gì?',
-    a:'Trong 30 ngày bạn sẽ dựng xong hệ thống: content tự đăng, khách tự được trả lời, đơn tự về. Mình kèm sát qua Telegram, không để bạn kẹt ở bước nào. Nếu làm đủ theo SOP mà không đạt, mình ngồi review lại và sửa cùng bạn.' },
+  { q:'AI Agent riêng của mình là cái gì? Giống Tiểu Hà Mã như thế nào?',
+    a:'Tiểu Hà Mã là AI agent mình đang dùng thật cho business của mình trên Telegram. Trong Khóa 2, mình setup cho bạn 1 agent tương tự — nhưng được train theo SOP và sản phẩm của riêng bạn. Không phải chatbot trả lời chung chung. Nó biết business của bạn cụ thể.' },
+  { q:'Mình setup agent cho bạn theo kiểu nào?',
+    a:'Bạn sẽ điền vào bộ câu hỏi về business: sản phẩm gì, khách như thế nào, câu hỏi thường gặp là gì, giọng trả lời muốn ra sao. Mình dựa vào đó để cấu hình agent. Bạn test thử, góp ý, mình chỉnh lại cho đến khi ưng. Sau khi xong, agent chạy trên Telegram của bạn.' },
   { q:'Rollover từ Khóa 1 thế nào?',
-    a:'Nếu đã mua Khóa 1 (868.686đ), số tiền đó được trừ vào Khóa 2. Bạn chỉ cần thêm 3.000.000đ để có toàn bộ Khóa 2 kèm Tiểu Hà Mã. Liên hệ mình qua Telegram để áp dụng.' },
+    a:'Nếu đã mua Khóa 1 (868.686đ), số tiền đó được trừ vào Khóa 2. Bạn chỉ cần thêm 3.000.000đ để có toàn bộ Khóa 2 kèm AI Agent riêng. Liên hệ mình qua Telegram để áp dụng.' },
   { q:'Chỉ 20 suất/đợt là thật không?',
-    a:'Thật. Tiểu Hà Mã cần mình thiết lập riêng và kèm sát từng người. Mình không thể kèm cùng lúc quá nhiều người mà vẫn đảm bảo chất lượng. Mỗi đợt 20 suất, hết là đóng đăng ký.' },
+    a:'Thật. Setup agent riêng cần mình làm tay từng người, không thể làm hàng loạt. Mỗi đợt 20 suất, hết là đóng đăng ký chờ đợt sau.' },
   { q:'Bảo hành thế nào?',
     a:'14 ngày hoàn 100%. Nếu 14 ngày đầu bạn thấy không phù hợp, nhắn mình, hoàn trong 24 giờ không hỏi lý do.' },
   { q:'Khác gì Khóa 1?',
-    a:'Khóa 1 bạn tự học 24 AI agent, tự áp dụng. Khóa 2 có thêm: bộ SOP dựng cả hệ thống 30 ngày + Tiểu Hà Mã kèm 24/7 qua Telegram. Phù hợp nếu bạn muốn chắc ăn hơn hoặc không muốn tự mày mò.' },
+    a:'Khóa 1: bạn tự học 24 AI agent và tự áp dụng vào business của mình. Khóa 2: bạn có đủ 24 skill của Khóa 1, cộng thêm mình setup riêng 1 AI Agent trên Telegram cho business của bạn và 1 buổi soi hệ thống 1 kèm 1. Phù hợp nếu bạn muốn có AI Agent hoạt động thật, không chỉ học lý thuyết.' },
+  { q:'AI Agent sau khi setup thì chạy thế nào?',
+    a:'Agent chạy trên Telegram. Bạn hoặc khách hàng nhắn vào là nó trả lời theo đúng cách bạn muốn. Bạn có thể dùng nó để xử lý câu hỏi thường gặp, tư vấn sản phẩm, hoặc hỗ trợ bản thân lúc cần tra cứu SOP nhanh.' },
 ]
 
 const WEEK_PLAN = [
@@ -108,7 +110,7 @@ export default function Khoa2Page() {
 
       {/* SCARCITY BAR */}
       <div className="bg-[#C0390E] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
-        ⚡ Đợt này chỉ còn <strong className="font-mono">{slots} suất</strong> · Tiểu Hà Mã cần thiết lập riêng, không thể nhận nhiều hơn
+        ⚡ Đợt này chỉ còn <strong className="font-mono">{slots} suất</strong> · AI Agent cần setup riêng từng người, không thể nhận thêm
       </div>
 
 
@@ -119,22 +121,21 @@ export default function Khoa2Page() {
             Khóa 2 · Bản Có Đội Trưởng · 20 Suất/Đợt
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-[#F6F0E4] leading-tight">
-            30 Ngày Dựng Xong<br/>
-            <span className="text-[#C0390E]">Hệ Thống Bán Hàng Tự Chạy</span><br/>
-            <span className="text-2xl sm:text-3xl font-bold text-[#F6F0E4]/70">Kèm Tiểu Hà Mã · AI Đội Trưởng 24/7</span>
+            24 AI Agent for Business<br/>
+            <span className="text-[#C0390E]">+ AI Đội Trưởng Của Riêng Bạn</span>
           </h1>
           <p className="text-[#F6F0E4]/70 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            24 AI agent + bộ SOP dựng hệ thống 4 tuần + Tiểu Hà Mã kèm sát qua Telegram.
-            Cam kết: 30 ngày bạn có hệ thống tự chạy, hoặc mình ngồi sửa cùng bạn cho đến khi chạy được.
+            Phiên bản đầy đủ nhất. Học đủ 24 AI Agent như Khóa 1.
+            Thêm: mình setup riêng 1 AI Agent trên Telegram cho business của bạn — biết sản phẩm bạn, biết khách bạn, hoạt động thật.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <button onClick={open}
               className="h-14 px-8 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-lg shadow-red-900/30 hover:shadow-xl hover:shadow-red-900/40">
               Giữ Suất · 3.868.686đ →
             </button>
-            <a href="#30-ngay"
+            <a href="#ke-hoach"
               className="h-14 px-8 border border-[#F6F0E4]/20 text-[#F6F0E4]/70 hover:text-[#F6F0E4] text-sm font-medium rounded-2xl flex items-center justify-center transition-colors">
-              Xem kế hoạch 30 ngày →
+              Xem Khóa 2 gồm gì →
             </a>
           </div>
           <p className="text-[#F6F0E4]/40 text-xs">Đã mua Khóa 1 (868.686đ)? Chỉ cần thêm 3.000.000đ · Bảo hành 14 ngày hoàn 100%</p>
@@ -146,9 +147,9 @@ export default function Khoa2Page() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-4 gap-4 text-center">
             {[
-              { n:'20',    label:'suất/đợt tối đa' },
-              { n:'30 ngày', label:'có hệ thống thật' },
-              { n:'24/7',  label:'Tiểu Hà Mã kèm sát' },
+              { n:'24',      label:'AI Agent học được' },
+              { n:'1',       label:'AI Agent cài riêng cho bạn' },
+              { n:'20',      label:'suất/đợt tối đa' },
               { n:'14 ngày', label:'bảo hành hoàn 100%' },
             ].map(s => (
               <div key={s.n}>
@@ -166,18 +167,18 @@ export default function Khoa2Page() {
           <div className="space-y-3">
             <p className="text-xs font-bold text-[#C0390E] uppercase tracking-widest">Thực trạng</p>
             <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A] leading-tight">
-              Bạn biết AI có thể làm được.<br/>Nhưng mỗi lần setup là kẹt.
+              Khóa 1 bạn học 24 skill.<br/>Khóa 2 bạn có thêm AI Agent hoạt động thật.
             </h2>
           </div>
           <div className="space-y-3 text-gray-700 leading-relaxed">
-            <p>Bạn đã xem video. Đã đọc bài. Biết ChatGPT có thể viết content, biết chatbot có thể trả lời khách.</p>
-            <p>Nhưng cứ đến bước bắt đầu thật là kẹt. "Mình bắt đầu từ đâu?" "Cái này kết nối với cái kia thế nào?" "Bước này sai rồi thì sao?"</p>
+            <p>Học skill là một chuyện. Có AI thật đang chạy cho business của mình là chuyện khác.</p>
+            <p>Khóa 2 sinh ra vì nhiều người học Khóa 1 xong muốn bước tiếp: không chỉ biết cách làm, mà có AI Agent đang làm thật cho mình — đúng giọng, đúng sản phẩm, đúng cách mình muốn.</p>
           </div>
           <div className="space-y-3">
             {[
-              { icon:'⚠️', head:'Kẹt vì thiếu người đi cùng', body:'Xem video tự học được đến 80%. Nhưng 20% còn lại chính là phần khó nhất và không ai chỉ cho bạn.' },
-              { icon:'⚠️', head:'Kẹt vì không biết thứ tự',   body:'24 AI agent, bắt đầu từ đâu? Cái nào phụ thuộc cái nào? Setup sai thứ tự là mất thêm 2 tuần.' },
-              { icon:'⚠️', head:'Kẹt vì không có template',   body:'Prompt người khác dùng được không có nghĩa là phù hợp với business của bạn. Cần ai customize lại cho bạn.' },
+              { icon:'🤖', head:'Khóa 1: bạn học cách dùng 24 AI Agent', body:'Hiểu từng skill, có SOP, có prompt. Tự áp dụng vào business theo nhịp của mình.' },
+              { icon:'⚡', head:'Khóa 2: thêm AI Agent cài riêng cho bạn', body:'Mình setup 1 AI Agent trên Telegram cho business của bạn cụ thể. Biết sản phẩm bạn, biết khách bạn, trả lời theo cách bạn muốn.' },
+              { icon:'🔍', head:'Thêm: 1 buổi soi hệ thống 1 kèm 1', body:'Nhìn vào business của bạn cùng nhau, xem đang dùng AI đúng chỗ chưa, bước tiếp nên làm gì.' },
             ].map((p, i) => (
               <div key={i} className="bg-white border border-[#DDD8CB] rounded-xl p-4 flex items-start gap-3 transition-all duration-200 hover:shadow-md hover:border-brand-border/20 hover:translate-y-[-2px]">
                 <span className="text-lg flex-shrink-0">{p.icon}</span>
@@ -190,7 +191,7 @@ export default function Khoa2Page() {
           </div>
           <button onClick={open}
             className="w-full h-14 bg-[#0D2B1A] hover:bg-[#153f27] active:scale-[0.97] hover:scale-[1.01] text-[#F6F0E4] font-bold rounded-2xl transition-all duration-200 shadow-md">
-            Tôi Muốn Có Người Đi Cùng →
+            Tôi Muốn Có AI Agent Của Riêng Mình →
           </button>
         </div>
       </section>
@@ -198,25 +199,26 @@ export default function Khoa2Page() {
       {/* [4] BRIDGE */}
       <section className="bg-[#0D2B1A] px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-5">
-          <p className="text-xs font-bold text-[#88860B] uppercase tracking-widest">Đó là lý do Khóa 2 ra đời</p>
+          <p className="text-xs font-bold text-[#88860B] uppercase tracking-widest">Tiểu Hà Mã là gì</p>
           <h2 className="text-2xl sm:text-3xl font-black text-[#F6F0E4] leading-tight">
-            Không phải thêm bài học.<br/>Là người đi cùng bạn trong 30 ngày.
+            AI Agent mình đang dùng thật.<br/>Và sẽ setup một cái y vậy cho bạn.
           </h2>
           <div className="space-y-4 text-[#F6F0E4]/75 text-sm sm:text-base leading-relaxed">
-            <p>Mình đã kèm đủ loại business qua Khóa 1: từ chủ shop thời trang đến coach, freelancer, homestay.</p>
-            <p>Điểm chung: ai cũng biết AI có thể giúp gì. Điểm khác nhau: ai có người đi cùng thì xong trong 30 ngày. Ai không có thì vẫn đang "sắp làm" sau 3 tháng.</p>
-            <p className="text-[#F6F0E4]"><strong>Tiểu Hà Mã là đội trưởng AI mình cài riêng cho bạn trên Telegram.</strong> Nó biết SOP của bạn, biết sản phẩm của bạn, và trả lời câu hỏi của bạn bất kể 2h sáng hay 11h đêm.</p>
-            <p className="text-[#F6F0E4]/60 italic">Khác chatbot chung chung ở chỗ: Tiểu Hà Mã được cài riêng cho business của bạn, mình setup tay từng cái một.</p>
+            <p>Tiểu Hà Mã là AI agent mình cài trên Telegram cho chính business của mình. Nó biết toàn bộ SOP, biết sản phẩm, biết cách mình muốn trả lời khách. Mình hỏi nó bất cứ lúc nào là có câu trả lời ngay.</p>
+            <p>Trong Khóa 2, mình làm y vậy cho bạn. Điền vào bộ câu hỏi về business của bạn, mình dựa vào đó cài agent. Bạn test thử, mình chỉnh đến khi ưng.</p>
+            <p className="text-[#F6F0E4]"><strong>Không phải chatbot trả lời chung chung.</strong> Agent của bạn biết bạn đang bán gì, khách thường hỏi gì, và trả lời theo cách bạn muốn.</p>
+            <p className="text-[#F6F0E4]/60 italic">Mình đang dùng thật hàng ngày. Nên mình biết cài cho bạn là được.</p>
           </div>
         </div>
       </section>
 
-      {/* [5] 30-NGAY */}
-      <section id="30-ngay" className="px-4 py-14">
+      {/* [5] KE HOACH */}
+      <section id="ke-hoach" className="px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Kế hoạch 30 ngày</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Tuần nào làm gì, rõ từng bước</h2>
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Khóa 2 gồm gì</p>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">24 AI Agent + AI Đội Trưởng của bạn</h2>
+            <p className="text-sm text-gray-500">4 tuần học đủ 24 skill. Song song mình setup AI Agent riêng cho bạn.</p>
           </div>
           <div className="space-y-3">
             {WEEK_PLAN.map(w => (
@@ -238,7 +240,7 @@ export default function Khoa2Page() {
           </div>
           <button onClick={open}
             className="w-full h-14 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors shadow-lg shadow-red-900/20">
-            Giữ Suất · Bắt Đầu 30 Ngày →
+            Giữ Suất · 3.868.686đ →
           </button>
         </div>
       </section>
@@ -246,19 +248,19 @@ export default function Khoa2Page() {
       {/* [7] EMOTION */}
       <section className="bg-white border-y border-[#DDD8CB] px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-6">
-          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Ngày 30: hệ thống xong</h2>
+          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Sau Khóa 2: bạn có gì trong tay</h2>
           <div className="bg-[#0D2B1A] rounded-2xl p-6 space-y-4 text-[#F6F0E4]/80 text-sm leading-relaxed">
-            <p>Sáng thứ Hai. Bạn không phải nghĩ hôm nay đăng gì. Lịch content đã có sẵn.</p>
-            <p>Inbox có 15 tin nhắn. Tiểu Hà Mã đã trả lời 12 cái. 3 cái cần bạn confirm, Hà Mã draft sẵn câu trả lời rồi.</p>
-            <p className="text-[#F6F0E4]"><strong>Business chạy trong khi bạn ngủ.</strong></p>
-            <p>Đó không phải mục tiêu viễn tưởng. Đó là thứ 605 người học trước bạn đã làm được. Và 30 ngày là đủ.</p>
+            <p>Bạn biết cách dùng 24 AI Agent vào đúng việc trong business của mình.</p>
+            <p>Và bạn có 1 AI Agent đang chạy thật trên Telegram — biết sản phẩm bạn, trả lời theo cách bạn muốn.</p>
+            <p className="text-[#F6F0E4]"><strong>Không phải học xong để đó. Là học xong có cái chạy được ngay.</strong></p>
+            <p>Mình đang dùng y vậy cho business của mình. Nên mình biết nó làm được gì và cài cho bạn như thế nào.</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
             {[
-              { before:'Content: tự viết mỗi ngày', after:'30 bài: AI viết, bạn approve' },
-              { before:'Inbox: trả lời từng cái',   after:'Tiểu Hà Mã xử lý tự động' },
-              { before:'Setup chatbot: kẹt mãi',    after:'Mình cài sẵn cho bạn' },
-              { before:'Tự mày mò 1 mình',          after:'Có người kèm sát 30 ngày' },
+              { before:'Học skill rồi để đó',        after:'24 skill + AI Agent chạy thật' },
+              { before:'Tự mày mò cài agent',         after:'Mình cài tay, bạn dùng luôn' },
+              { before:'Prompt chung chung',          after:'Agent biết đúng business bạn' },
+              { before:'Hỏi không ai trả lời',       after:'1 buổi soi hệ thống 1 kèm 1' },
             ].map((r, i) => (
               <div key={i} className="bg-[#F6F0E4] rounded-xl border border-[#DDD8CB] p-3">
                 <p className="text-xs text-red-400 line-through">{r.before}</p>
@@ -272,13 +274,12 @@ export default function Khoa2Page() {
       {/* [8] AUTHORITY */}
       <section className="bg-[#0D2B1A] px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-5">
-          <h2 className="text-2xl font-black text-[#F6F0E4]">Mình kèm bạn như thế này</h2>
+          <h2 className="text-2xl font-black text-[#F6F0E4]">Khóa 2 gồm 3 phần</h2>
           <div className="space-y-4">
             {[
-              { icon:'🤖', head:'Tiểu Hà Mã · cài riêng cho bạn', body:'Không dùng chung với ai. Mình setup riêng cho business của bạn: biết sản phẩm, biết giọng bạn, biết SOP của bạn.' },
-              { icon:'📱', head:'Kèm qua Telegram 24/7', body:'Bạn kẹt bước nào, nhắn Tiểu Hà Mã. Nó trả lời ngay, không cần đợi mình online.' },
-              { icon:'📋', head:'SOP 30 ngày chi tiết từng bước', body:'Không phải "làm theo cảm giác". Mỗi ngày biết rõ hôm nay làm gì, tại sao, theo thứ tự nào.' },
-              { icon:'🔍', head:'Review hệ thống cuối tháng', body:'Tuần 4 mình review lại toàn bộ cùng bạn. Cái gì chưa chạy tốt, tối ưu lại ngay.' },
+              { icon:'📚', head:'Phần 1: 24 AI Agent for Business (đầy đủ như Khóa 1)', body:'Toàn bộ 24 skill trong khu học. Video + SOP + prompt sẵn cho từng bước. Học theo nhịp của bạn, không deadline.' },
+              { icon:'🤖', head:'Phần 2: Mình setup AI Agent riêng cho bạn trên Telegram', body:'Bạn điền bộ câu hỏi về business. Mình dựa vào đó cài agent biết đúng sản phẩm, đúng khách, đúng cách bạn muốn trả lời. Bạn test thử, mình chỉnh cho đến khi ưng.' },
+              { icon:'🔍', head:'Phần 3: 1 buổi Soi Hệ Thống 1 kèm 1', body:'Gặp trực tiếp qua video call. Nhìn vào business của bạn cùng nhau: đang dùng AI đúng chỗ chưa, bước tiếp nên làm gì, chỗ nào đang có lỗ hổng.' },
             ].map(a => (
               <div key={a.icon} className="flex items-start gap-4 bg-[#F6F0E4]/5 rounded-xl p-4">
                 <span className="text-2xl flex-shrink-0">{a.icon}</span>
@@ -302,21 +303,20 @@ export default function Khoa2Page() {
 
           {/* So sánh */}
           <div className="bg-[#FAF7F2] border border-[#DDD8CB] rounded-2xl p-5 space-y-3">
-            <p className="font-bold text-[#0D2B1A] text-sm">Nếu tự thuê người làm thay:</p>
+            <p className="font-bold text-[#0D2B1A] text-sm">Nếu thuê người làm thay hoặc tự làm:</p>
             {[
-              { item:'1 nhân viên content', cost:'8-12 triệu/tháng' },
-              { item:'1 nhân viên CSKH',   cost:'7-10 triệu/tháng' },
-              { item:'Setup chatbot (thuê freelancer)', cost:'5-15 triệu 1 lần' },
-              { item:'Freelance làm ads copy', cost:'3-5 triệu/tháng' },
+              { item:'Thuê freelancer setup chatbot 1 lần', cost:'5-15 triệu' },
+              { item:'Tự học mày mò cài agent (thời gian)', cost:'2-4 tuần' },
+              { item:'Tư vấn 1 kèm 1 với chuyên gia AI',   cost:'3-5 triệu/buổi' },
+              { item:'Khóa học AI + riêng phần agent setup', cost:'5-10 triệu' },
             ].map((r, i) => (
               <div key={i} className="flex justify-between items-center">
                 <p className="text-sm text-gray-600">{r.item}</p>
                 <p className="text-sm font-bold text-red-500">{r.cost}</p>
               </div>
             ))}
-            <div className="border-t border-[#DDD8CB] pt-3 flex justify-between">
-              <p className="font-bold text-[#0D2B1A]">Tổng cộng mỗi tháng</p>
-              <p className="text-lg font-black text-red-500">23-42 triệu</p>
+            <div className="border-t border-[#DDD8CB] pt-3">
+              <p className="text-sm text-gray-500">Khóa 2: 24 skill + setup agent thật + soi hệ thống — gói trong 1 lần.</p>
             </div>
           </div>
 
@@ -326,13 +326,9 @@ export default function Khoa2Page() {
             </div>
             <div className="divide-y divide-[#DDD8CB]">
               {[
-                { item:'24 AI agent thực chiến',              value:'12.000.000đ' },
-                { item:'Tiểu Hà Mã cài riêng cho bạn',      value:'5.000.000đ' },
-                { item:'SOP 30 ngày dựng hệ thống chi tiết', value:'3.000.000đ' },
-                { item:'Review + tối ưu hệ thống cuối tháng',value:'2.000.000đ' },
-                { item:'BONUS: 489 tiêu đề thu hút',          value:'499.000đ', bonus:true },
-                { item:'BONUS: Ma trận nội dung 6 tháng',    value:'299.000đ', bonus:true },
-                { item:'BONUS: Buổi soi hệ thống 1 kèm 1',  value:'1.000.000đ', bonus:true },
+                { item:'24 AI Agent for Business — đầy đủ như Khóa 1', value:'868.686đ' },
+                { item:'Setup AI Agent riêng cho bạn trên Telegram',    value:'3.000.000đ' },
+                { item:'Buổi Soi Hệ Thống 1 kèm 1 (video call)',        value:'1.000.000đ', bonus:true },
               ].map((r, i) => (
                 <div key={i} className={`px-5 py-3 flex justify-between items-center ${r.bonus ? 'bg-[#EAF5EF]' : ''}`}>
                   <p className={`text-sm ${r.bonus ? 'font-semibold text-[#2D7A4F]' : 'text-gray-700'}`}>
@@ -344,7 +340,7 @@ export default function Khoa2Page() {
             </div>
             <div className="px-5 py-4 bg-[#FAF7F2] flex justify-between items-center">
               <p className="font-bold text-[#0D2B1A]">Giá trị tổng cộng</p>
-              <p className="text-xl font-black text-gray-400 line-through">24.298.000đ</p>
+              <p className="text-xl font-black text-gray-400 line-through">4.868.686đ</p>
             </div>
             <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
               <div>
@@ -375,7 +371,7 @@ export default function Khoa2Page() {
             <h3 className="text-xl font-black text-[#0D2B1A]">Cam kết kép</h3>
             <div className="space-y-2 text-sm text-gray-600 leading-relaxed">
               <p><strong className="text-[#0D2B1A]">1. Bảo hành 14 ngày hoàn 100%:</strong> Không phù hợp trong 14 ngày đầu → nhắn mình, hoàn trong 24h không hỏi lý do.</p>
-              <p><strong className="text-[#0D2B1A]">2. Cam kết 30 ngày có hệ thống:</strong> Làm đủ theo SOP mà không có hệ thống chạy được → mình ngồi review và sửa cùng bạn cho đến khi chạy.</p>
+              <p><strong className="text-[#0D2B1A]">2. Setup agent đến khi ưng:</strong> Mình chỉnh agent theo phản hồi của bạn cho đến khi nó hoạt động đúng cách bạn muốn. Không setup xong rồi bỏ.</p>
             </div>
           </div>
         </div>
@@ -390,10 +386,10 @@ export default function Khoa2Page() {
               <p className="font-bold text-[#2D7A4F] text-sm">✓ DÀNH CHO:</p>
               <div className="space-y-2">
                 {[
-                  'Muốn dựng hệ thống đầy đủ trong 30 ngày, không mày mò mãi',
-                  'Đã mua Khóa 1 và muốn có người kèm sát để setup đúng',
-                  'Sẵn sàng đầu tư để không cần thuê team content/CSKH',
-                  'Business có thu nhập ổn, muốn scale mà không mở rộng headcount',
+                  'Đã học Khóa 1 (hoặc mua luôn Khóa 2) và muốn có AI Agent hoạt động thật, không chỉ học lý thuyết',
+                  'Có business đang chạy, muốn AI Agent biết đúng sản phẩm và khách hàng của mình',
+                  'Muốn tiết kiệm thời gian mày mò tự cài — nhờ mình setup tay cho',
+                  'Muốn có 1 buổi ngồi nhìn vào business để biết đang dùng AI đúng hướng chưa',
                 ].map((t, i) => <p key={i} className="text-sm text-gray-700 leading-snug">• {t}</p>)}
               </div>
             </div>
@@ -401,9 +397,9 @@ export default function Khoa2Page() {
               <p className="font-bold text-gray-500 text-sm">✗ KHÔNG PHẢI CHO:</p>
               <div className="space-y-2">
                 {[
-                  'Chưa có sản phẩm/dịch vụ thật đang bán (trước tiên dùng AI cần có thứ gì để bán)',
-                  'Muốn thụ động hoàn toàn, không muốn học hay làm gì',
-                  'Đang thử nghiệm xem AI có phù hợp không (xem Khóa 1 trước)',
+                  'Chưa có sản phẩm/dịch vụ thật — agent cần biết bạn bán gì mới cài được',
+                  'Muốn AI Agent tự kiếm tiền mà không cần làm gì từ phía bạn',
+                  'Chưa chắc AI có phù hợp không — thử Khóa 1 trước rồi nâng cấp sau',
                 ].map((t, i) => <p key={i} className="text-sm text-gray-500 leading-snug">• {t}</p>)}
               </div>
             </div>
@@ -429,13 +425,13 @@ export default function Khoa2Page() {
       <section className="px-4 py-14 bg-[#FAF7F2] border-y border-[#DDD8CB]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-1">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Kết quả sau 30 ngày</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Người đi cùng Tiểu Hà Mã: xong thật trong 30 ngày</h2>
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Học viên Khóa 2</p>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">Học xong + có AI Agent đang chạy thật</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { name:'Chủ homestay 3 phòng', result:'Hà Mã setup chatbot Zalo trong ngày 3. Từ đó inbox tự được trả lời. Mình chỉ cần xác nhận đặt phòng. Tháng đầu tiết kiệm gần 4 tiếng/ngày', outcome:'Hệ thống CSKH tự động trong 3 ngày' },
-              { name:'Coach kinh doanh',       result:'30 bài content cho tháng đầu xong trong tuần 1. Ads Facebook chạy từ tuần 2. Doanh thu tháng đó tăng vì có hệ thống, không phải vì làm nhiều hơn', outcome:'Lịch content 30 ngày + ads chạy trong 2 tuần' },
+              { name:'Chủ homestay 3 phòng', result:'Sau khi mình setup AI Agent, inbox câu hỏi thường gặp tự được trả lời. Mình chỉ cần xác nhận đặt phòng. Tiết kiệm mấy tiếng mỗi ngày không cần reply thủ công nữa', outcome:'AI Agent trả lời khách 24/7 đúng thông tin phòng' },
+              { name:'Coach kinh doanh',       result:'Agent biết đúng các gói dịch vụ và câu mình hay dùng để tư vấn. Khách hỏi bất cứ lúc nào đều có câu trả lời. Buổi soi hệ thống xong mình biết bước tiếp nên làm gì rồi', outcome:'Agent tư vấn đúng gói, đúng giọng' },
             ].map((t, i) => (
               <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3 transition-all duration-200 hover:shadow-md hover:border-brand-border/20 hover:translate-y-[-2px]">
                 <p className="text-sm text-gray-700 leading-relaxed italic">"{t.result}"</p>
@@ -457,7 +453,7 @@ export default function Khoa2Page() {
             <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A] leading-tight">
               Còn {slots} suất đợt này.<br/>Khi hết, đóng đăng ký.
             </h2>
-            <p className="text-gray-500 text-sm">Tiểu Hà Mã cần setup riêng. Mình không thể nhận thêm.</p>
+            <p className="text-gray-500 text-sm">Setup AI Agent riêng cần làm tay từng người. Mình không thể nhận thêm.</p>
           </div>
 
           <div className="bg-[#0D2B1A] rounded-2xl p-5 space-y-3">
@@ -465,24 +461,24 @@ export default function Khoa2Page() {
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <span className="text-[#C0390E] text-lg">A</span>
-                <p className="text-[#F6F0E4]/70 text-sm">Đăng ký hôm nay: 30 ngày có hệ thống chạy được</p>
+                <p className="text-[#F6F0E4]/70 text-sm">Đăng ký hôm nay: học đủ 24 skill + có AI Agent của riêng mình</p>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-[#C0390E] text-lg">B</span>
-                <p className="text-[#F6F0E4]/70 text-sm">Chờ thêm, và tiếp tục làm thủ công trong lúc đó</p>
+                <p className="text-[#F6F0E4]/70 text-sm">Chờ thêm, và tiếp tục mày mò tự cài trong lúc đó</p>
               </div>
             </div>
-            <p className="text-[#88860B] text-sm italic">Cả hai đều là lựa chọn hợp lệ. Nhưng B có chi phí thực: thời gian bạn mất đi mỗi ngày không có AI hỗ trợ.</p>
+            <p className="text-[#88860B] text-sm italic">Cả hai đều hợp lệ. Nhưng nếu bạn muốn có agent thật đang chạy — đợt này còn {slots} suất.</p>
           </div>
 
           <div className="space-y-3">
             <button onClick={open}
               className="w-full h-16 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.02] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-xl shadow-red-900/25 hover:shadow-2xl hover:shadow-red-900/40">
-              Quyết Định Hôm Nay · Giữ Suất Trước Khi Hết →
+              Giữ Suất · 3.868.686đ →
             </button>
             <div className="flex items-center justify-center gap-4 text-xs text-gray-400 flex-wrap">
-              <span>✓ 30 ngày có hệ thống</span>
-              <span>✓ Tiểu Hà Mã 24/7</span>
+              <span>✓ 24 AI Agent for Business</span>
+              <span>✓ AI Agent cài riêng cho bạn</span>
               <span>✓ Bảo hành 14 ngày</span>
             </div>
           </div>
@@ -508,7 +504,7 @@ export default function Khoa2Page() {
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A]/95 backdrop-blur-md border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl animate-slide-up">
           <div className="min-w-0">
             <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 2 · Có Đội Trưởng · {slots} suất</p>
-            <p className="text-[#F6F0E4]/50 text-xs">3.868.686đ · 30 ngày · Tiểu Hà Mã 24/7</p>
+            <p className="text-[#F6F0E4]/50 text-xs">3.868.686đ · 24 skill + AI Agent riêng · Bảo hành 14 ngày</p>
           </div>
           <button onClick={open}
             className="flex-shrink-0 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white font-bold px-4 h-11 rounded-xl text-sm transition-all duration-200 whitespace-nowrap">
