@@ -1,0 +1,155 @@
+Skill 04 — Tư Duy Vận Hành Một Mình (Founder Pro)
+Thuộc bộ 24 AI Agent for Business.
+
+Mục tiêu của Skill 04 là thiết lập bộ nhịp vận hành tuần — để từ giờ bạn không bắt đầu mỗi tuần bằng câu hỏi "tuần này mình làm gì?". Thay vào đó bạn có hệ thống: ưu tiên đúng việc, biết ngay việc nào quan trọng nhất, cuối tuần biết mình đã làm được gì.
+
+Skill này không cần AI phức tạp. Nó cần bạn nghiêm túc với bản thân hơn là với công cụ.
+
+💡 Tư duy AI-First
+Người kinh doanh một mình thường mắc 1 trong 2 cái bẫy: hoặc làm ngẫu hứng (việc gì nổi lên làm việc đó), hoặc plan quá phức tạp (lên kế hoạch mãi nhưng không bắt đầu).
+
+AI giúp bạn tránh cả hai: dùng AI lên kế hoạch nhanh mỗi đầu tuần (5-10 phút), dùng AI review cuối tuần (5 phút). Phần còn lại là bạn thực hiện.
+
+▤ SOP — Hướng dẫn
+
+🎯 Mục tiêu cuối bài
+Sau khi làm xong, bạn phải có:
+- Template lên kế hoạch đầu tuần (Weekly Planning)
+- Template review cuối tuần (Weekly Review)
+- Đã chạy thử 1 vòng: lên kế hoạch tuần này ngay bây giờ
+- Biết "việc quan trọng nhất tuần này" là gì
+
+Công cụ: Notion, Google Docs, hoặc thậm chí giấy và bút. Kết hợp Claude/ChatGPT để hỗ trợ.
+
+---
+
+Bước 1 — Hiểu khung ưu tiên việc
+Trước khi lên kế hoạch, cần biết cách phân loại việc. Dùng khung đơn giản nhất:
+
+Việc QUAN TRỌNG và KHẨN CẤP → Làm ngay hôm nay
+(Ví dụ: khách hỏi về đơn hàng, deadline sắp đến)
+
+Việc QUAN TRỌNG nhưng KHÔNG KHẨN CẤP → Lên lịch cụ thể
+(Ví dụ: viết bài content, cải thiện trang bán hàng, học skill mới)
+→ Đây là loại việc quan trọng nhất cho sự phát triển, hay bị bỏ qua nhất.
+
+Việc KHẨN CẤP nhưng KHÔNG QUAN TRỌNG → Làm nhanh hoặc delegate
+(Ví dụ: reply tin nhắn, xử lý inbox)
+
+Việc KHÔNG QUAN TRỌNG và KHÔNG KHẨN CẤP → Bỏ hoặc để cuối tuần
+(Ví dụ: scroll mạng xã hội, họp không cần thiết)
+
+Người kinh doanh một mình hay sa vào loại 1 và 3 mà quên loại 2. Skill 04 giúp bạn bảo vệ thời gian cho loại 2.
+
+---
+
+Bước 2 — Tạo Template Weekly Planning
+Copy template sau vào Notion, Google Docs, hoặc bất kỳ chỗ nào bạn hay mở:
+
+---
+WEEKLY PLANNING — Tuần [số] / [tháng] [năm]
+
+🎯 MỤC TIÊU TUẦN NÀY
+(1-3 kết quả cụ thể tôi muốn đạt cuối tuần)
+1.
+2.
+3.
+
+⭐ VIỆC QUAN TRỌNG NHẤT (chỉ chọn 1)
+Nếu tuần này chỉ hoàn thành được 1 việc — việc đó là:
+→
+
+📋 DANH SÁCH VIỆC THEO NGÀY
+Thứ Hai:
+Thứ Ba:
+Thứ Tư:
+Thứ Năm:
+Thứ Sáu:
+(Thứ 7 / CN để trống hoặc làm việc nhẹ / nghỉ)
+
+⚡ VIỆC KHẨN CẤP PHẢI XỬ LÝ
+(việc phải làm trong 24-48h, dù không muốn)
+
+🚫 VIỆC TÔI SẼ KHÔNG LÀM TUẦN NÀY
+(list ra để không bị phân tâm)
+---
+
+---
+
+Bước 3 — Tạo Template Weekly Review
+Copy template sau, dùng cuối tuần (Thứ 6 hoặc Chủ Nhật):
+
+---
+WEEKLY REVIEW — Tuần [số] / [tháng] [năm]
+
+✅ ĐÃ HOÀN THÀNH
+(những việc đã xong, kể cả việc nhỏ)
+
+❌ CHƯA HOÀN THÀNH — Lý do?
+(không phán xét, chỉ hiểu tại sao để điều chỉnh)
+
+💡 HỌC ĐƯỢC GÌ TUẦN NÀY?
+(insight, điều bất ngờ, bài học từ sai lầm)
+
+🔋 NĂNG LƯỢNG TUẦN NÀY
+(1-10 — bạn có đủ sức không? Có quá tải không?)
+
+📌 VIỆC CẦN CHUYỂN SANG TUẦN SAU
+(chưa xong nhưng vẫn quan trọng)
+---
+
+---
+
+Bước 4 — Chạy thử ngay bây giờ
+Đừng để đến tuần sau. Mở template Weekly Planning và điền ngay cho tuần hiện tại.
+
+Nếu không biết điền gì, dùng AI:
+
+---
+Tôi đang kinh doanh [mô tả ngắn].
+Tuần tới tôi đang nghĩ đến việc làm những thứ này: [liệt kê tất cả việc đang trong đầu].
+
+Hãy giúp tôi:
+1. Phân loại: đâu là việc quan trọng nhất cho tăng trưởng, đâu là việc khẩn cấp, đâu là việc có thể bỏ?
+2. Xác định 1 việc quan trọng nhất tôi nên ưu tiên làm trước tuần này.
+3. Gợi ý cách chia việc vào các ngày trong tuần sao cho không bị dồn vào 1 ngày.
+---
+
+Điền kết quả vào template. Lưu lại.
+
+---
+
+Bước 5 — Đặt lịch 2 lần mỗi tuần
+Skill này chỉ hoạt động nếu bạn làm đều:
+
+- Đầu tuần (Thứ Hai sáng hoặc Chủ Nhật tối): 10-15 phút điền Weekly Planning
+- Cuối tuần (Thứ 6 tối hoặc Chủ Nhật): 10 phút điền Weekly Review
+
+Đặt lịch nhắc nhở trên điện thoại ngay bây giờ cho 2 việc này. Không đặt lịch = không làm được lâu dài.
+
+---
+
+Checklist trước khi qua Skill 05
+- Đã có Template Weekly Planning (lưu ở chỗ dễ mở)
+- Đã có Template Weekly Review
+- Đã điền thử cho tuần hiện tại
+- Đã đặt lịch nhắc nhở 2 lần/tuần
+- Biết "việc quan trọng nhất tuần này" của mình là gì
+
+✅ Được duyệt khi
+Weekly Planning của tuần này đã điền đầy đủ — có mục tiêu, có việc quan trọng nhất, có danh sách việc theo ngày.
+Đã đặt lịch nhắc nhở trên điện thoại cho đầu tuần và cuối tuần.
+Bạn biết trả lời được câu: "Tuần này, nếu chỉ làm được 1 việc, việc đó là gì?"
+
+❌ Chưa đạt khi
+Chỉ đọc qua template nhưng chưa điền thật.
+Chưa đặt lịch nhắc nhở — tức là tuần sau chắc chắn sẽ quên.
+Danh sách việc quá nhiều (hơn 10 việc/tuần) — chưa biết ưu tiên, liệt kê tất cả.
+Không có "việc quan trọng nhất" — tức là vẫn chưa quyết định gì cả.
+
+💡 Mẹo AI-First — Dùng AI như người hỏi thăm cuối tuần
+Mỗi Thứ 6, paste nội dung Weekly Planning vào AI và hỏi:
+
+"Đây là kế hoạch tuần của tôi và những gì đã làm được. Hãy hỏi tôi 3 câu để giúp tôi review tuần này và chuẩn bị cho tuần sau tốt hơn."
+
+AI sẽ hỏi đúng những câu bạn hay né tránh. Đó là lúc bạn học được nhiều nhất — không phải từ những tuần mọi thứ suôn sẻ, mà từ những tuần có thứ gì đó không như kế hoạch.

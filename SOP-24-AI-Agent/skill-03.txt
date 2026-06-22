@@ -1,0 +1,155 @@
+Skill 03 — Tư Duy Offer Kiểu Hormozi
+Thuộc bộ 24 AI Agent for Business.
+
+Mục tiêu của Skill 03 là hiểu được tại sao cùng một sản phẩm, người này bán được giá cao hơn người kia rất nhiều — và áp dụng tư duy đó vào offer của bạn ngay hôm nay.
+
+Skill này không tạo ra công cụ AI nào. Nó thay đổi cách bạn nghĩ về việc đóng gói và định giá. Những skill viết bài, làm landing page, làm ads phía sau đều cần nền tảng này.
+
+💡 Tư duy AI-First
+AI không biết sản phẩm của bạn đáng giá bao nhiêu. Bạn mới biết.
+
+Nhưng AI có thể giúp bạn nhìn offer của mình từ góc độ khách hàng — chỉ cho bạn thấy những chỗ khách đang nghĩ "chưa đủ lý do để mua" mà bạn không nhận ra.
+
+Dùng AI như một "khách hàng ảo" để test offer trước khi đưa ra thị trường.
+
+▤ SOP — Hướng dẫn
+
+🎯 Mục tiêu cuối bài
+Sau khi làm xong, bạn phải có:
+- Hiểu 4 yếu tố tạo nên giá trị cảm nhận (Value Equation của Hormozi)
+- Bảng tự chấm điểm offer hiện tại của bạn (0-10 từng yếu tố)
+- Ít nhất 1 cách cụ thể để tăng giá trị cảm nhận mà không tăng giá
+- Viết lại tên/mô tả offer theo framework
+
+Công cụ: Claude hoặc ChatGPT + bút và giấy (hoặc Notion/Google Docs)
+
+---
+
+Bước 1 — Hiểu 4 yếu tố Value Equation
+Theo Hormozi, giá trị khách cảm nhận được tính bởi 4 yếu tố:
+
+① Kết quả lý tưởng (Dream Outcome)
+Khách muốn đạt được gì? Kết quả họ mơ tới là gì?
+Càng cụ thể, càng lớn, giá trị càng cao.
+Ví dụ: "Tăng doanh thu" thấp hơn "Có 10 đơn/tháng từ Facebook mà không cần chạy ads".
+
+② Xác suất thành công cảm nhận được (Perceived Likelihood of Achievement)
+Khách có tin họ sẽ làm được không? Có tin bạn có thể giúp họ không?
+Đây là chỗ cần proof: testimonial, kết quả thật, cam kết bảo hành.
+
+③ Thời gian chờ đợi (Time Delay)
+Kết quả đến nhanh hay chậm? Càng nhanh, giá trị càng cao.
+"30 ngày có hệ thống" > "Học xong rồi tự áp dụng".
+
+④ Công sức và rủi ro (Effort & Sacrifice)
+Khách phải bỏ ra bao nhiêu công? Bao nhiêu rủi ro?
+Càng ít công, ít rủi ro, giá trị càng cao.
+Bảo hành 14 ngày hoàn tiền = giảm rủi ro = tăng giá trị cảm nhận.
+
+Công thức: Giá trị = (Kết quả × Xác suất) / (Thời gian × Công sức)
+Muốn giá trị tăng: tăng tử số hoặc giảm mẫu số.
+
+---
+
+Bước 2 — Chấm điểm offer hiện tại của bạn
+Viết tên offer/sản phẩm hiện tại của bạn ra. Sau đó chấm điểm từ 0-10:
+
+① Kết quả lý tưởng: ___/10
+(0 = rất mơ hồ / 10 = rất cụ thể và hấp dẫn)
+
+② Xác suất thành công khách tin: ___/10
+(0 = khách hoài nghi / 10 = có nhiều proof, bảo hành rõ ràng)
+
+③ Thời gian chờ: ___/10
+(0 = rất lâu / 10 = kết quả đến rất nhanh)
+
+④ Công sức & rủi ro: ___/10
+(0 = khách phải bỏ nhiều công, rủi ro cao / 10 = rất ít công, không rủi ro)
+
+Nhìn vào điểm thấp nhất — đó là chỗ cần cải thiện trước.
+
+---
+
+Bước 3 — Hỏi AI: "Khách đang nghĩ gì khi xem offer của tôi?"
+Mở Claude hoặc ChatGPT. Paste đoạn sau:
+
+---
+Tôi đang bán: [mô tả offer của bạn — sản phẩm, giá, những gì khách nhận được]
+
+Hãy đóng vai một khách hàng tiềm năng đang cân nhắc mua. Giả sử tôi vừa giới thiệu offer này cho bạn. Hãy cho tôi biết:
+
+1. Điều gì trong offer này khiến bạn quan tâm nhất?
+2. Điều gì khiến bạn chần chừ chưa mua ngay?
+3. Bạn đang nghi ngờ điều gì?
+4. Bạn muốn thêm gì vào offer để quyết định dễ hơn?
+5. Mức giá này nghe thế nào với những gì bạn sẽ nhận được?
+
+Trả lời thẳng thắn, như khách hàng thật đang nghĩ, không phải lời khen xã giao.
+---
+
+Đọc kết quả. Những điều AI nói khách đang nghi ngờ — đó là những điều bạn cần xử lý trong trang bán hàng và bài viết.
+
+---
+
+Bước 4 — Tìm ít nhất 1 cách tăng giá trị mà không tăng giá
+Dựa vào điểm thấp nhất ở Bước 2, chọn 1 cách cải thiện:
+
+Nếu điểm thấp ở Kết quả lý tưởng:
+→ Viết lại kết quả cụ thể hơn. Thay "giúp bạn bán hàng tốt hơn" bằng "giúp bạn có 5 đơn đầu tiên trong 30 ngày".
+
+Nếu điểm thấp ở Xác suất:
+→ Thêm bằng chứng: case study, số lượng khách đã học, kết quả thật.
+→ Thêm bảo hành: "14 ngày hoàn 100% nếu không phù hợp".
+
+Nếu điểm thấp ở Thời gian:
+→ Rõ ràng hơn về timeline: "Tuần 1 làm gì, Tuần 2 làm gì, kết quả đến lúc nào".
+
+Nếu điểm thấp ở Công sức:
+→ Làm rõ AI làm phần nào, khách chỉ cần làm phần nào.
+→ Thêm template, checklist, SOP để giảm công sức người mua.
+
+Chọn 1 cải thiện. Áp dụng ngay vào mô tả offer.
+
+---
+
+Bước 5 — Viết lại tên và câu mô tả offer
+Dùng AI để viết lại:
+
+---
+Offer hiện tại của tôi tên là: [tên hiện tại]
+Mô tả hiện tại: [mô tả hiện tại]
+
+Khách hàng mục tiêu: [mô tả ngắn]
+Kết quả cụ thể họ nhận được: [điền]
+Thời gian để có kết quả: [điền]
+Proof / bảo hành: [điền]
+Những gì AI/công cụ làm thay: [điền]
+
+Hãy viết lại tên offer và 2-3 câu mô tả ngắn (kiểu dùng trên trang bán hàng hoặc bài đăng). Tập trung vào kết quả cụ thể và giảm rủi ro cho khách. Tránh từ chung chung như "chất lượng cao", "uy tín", "tận tâm".
+---
+
+---
+
+Checklist trước khi qua Skill 04
+- Đã hiểu 4 yếu tố Value Equation
+- Đã chấm điểm offer hiện tại của mình
+- Đã tìm được ít nhất 1 cách cải thiện cụ thể
+- Đã viết lại tên/mô tả offer theo hướng kết quả + giảm rủi ro
+
+✅ Được duyệt khi
+Nhìn vào mô tả offer mới, người đọc lần đầu hiểu ngay: bạn sẽ nhận được gì, trong bao lâu, rủi ro như thế nào.
+Mô tả offer mới không còn từ chung chung như "tốt hơn", "hiệu quả hơn" mà nói được con số hoặc kết quả cụ thể.
+Bảng chấm điểm đã điền đầy đủ 4 yếu tố.
+
+❌ Chưa đạt khi
+Offer vẫn mô tả theo kiểu tính năng ("Gồm 24 video, 10 bài tập") thay vì kết quả ("Sau 4 tuần bạn có X cụ thể").
+Không có bảo hành hoặc cam kết nào — rủi ro 100% về phía khách.
+Mô tả mới vẫn chung chung, không đo được.
+Chưa test với "khách ảo" qua AI.
+
+💡 Mẹo AI-First — Test offer với người thật
+Sau khi viết lại offer, gửi mô tả mới cho 1-2 người trong mạng lưới (người giống khách mục tiêu). Hỏi:
+
+"Đọc đoạn này xong, bạn hiểu mình đang bán gì không? Bạn thấy còn thiếu thông tin gì chưa?"
+
+Phản hồi của người thật quan trọng hơn phản hồi của AI. AI đoán. Người thật nói từ cảm giác thật.
