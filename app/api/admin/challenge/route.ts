@@ -6,7 +6,7 @@ export async function GET() {
   const [{ data: enrollments }, { data: submissions }] = await Promise.all([
     supabaseAdmin
       .from('challenge_enrollments')
-      .select('email, order_code, status, all_completed, created_at')
+      .select('id, email, name, order_code, deposit_amount, status, all_completed, created_at, started_at, first_unlock_at')
       .order('created_at', { ascending: false }),
     supabaseAdmin
       .from('challenge_submissions')

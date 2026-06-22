@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { CheckCircle, XCircle, Clock, AlertCircle, UserPlus, RefreshCw, Trash2, ChevronDown, ChevronUp } from 'lucide-react'
+import { CheckCircle, XCircle, Clock, AlertCircle, UserPlus, RefreshCw, Trash2, ChevronDown, ChevronUp, Unlock } from 'lucide-react'
 
 type Enrollment = {
   id:             string
@@ -179,6 +179,25 @@ function EnrollmentRow({
     }
   }
 
+  async function unlockAll() {
+    if (!confirm(`Mở toàn bộ 7 ngày cho ${e.email}? Các tài khoản khác không bị ảnh hưởng.`)) return
+    setUpdating(true)
+    try {
+      const res = await fetch('/api/admin/challenge/enrollment', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: e.id, unlock_all: true }),
+      })
+      if (!res.ok) throw new Error('Lỗi mở khóa')
+      onToast(`Đã mở toàn bộ 7 ngày cho ${e.email}`)
+      onRefresh()
+    } catch {
+      onToast('Có lỗi xảy ra')
+    } finally {
+      setUpdating(false)
+    }
+  }
+
   async function deleteEnrollment() {
     if (!confirm(`Xoá enrollment của ${e.email}? Không thể hoàn tác.`)) return
     setUpdating(true)
@@ -210,6 +229,16 @@ function EnrollmentRow({
         {e.all_completed && (
           <span className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-medium">Hoàn thành ✓</span>
         )}
+
+        {/* Unlock all */}
+        <button
+          onClick={unlockAll}
+          disabled={updating}
+          title="Mở toàn bộ 7 ngày ngay (chỉ tài khoản này)"
+          className="flex items-center gap-1 text-xs bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 rounded-lg px-2 py-1 transition-colors disabled:opacity-50"
+        >
+          <Unlock size={11} />Mở hết
+        </button>
 
         {/* Status selector */}
         <select
