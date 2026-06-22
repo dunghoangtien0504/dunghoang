@@ -68,9 +68,9 @@ export default function HomePage() {
           Hơn 600 solopreneur đang dùng
         </div>
         <h1 className="text-3xl sm:text-5xl font-bold text-[#0D2B1A] leading-tight">
-          24 Skill AI cho người
+          24 AI Agent
           <br />
-          <span className="text-[#3D6B4A]">kinh doanh một mình</span>
+          <span className="text-[#3D6B4A]">for Business</span>
         </h1>
         <p className="text-[#3D6B4A] text-lg max-w-2xl mx-auto leading-relaxed">
           Không phải lý thuyết AI. Mỗi skill có output cụ thể: trang bán hàng,
