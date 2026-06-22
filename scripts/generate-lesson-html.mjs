@@ -305,6 +305,130 @@ Viết 10 tiêu đề theo 5 kiểu khác nhau (2 tiêu đề/kiểu):
 5. Kiểu câu chuyện: "Mình đã [làm gì] và..."
 
 Đánh dấu tiêu đề mạnh nhất và giải thích lý do.`,
+
+  '03': `[Dán BRAND_DNA hoặc mô tả sản phẩm của bạn]
+
+Tôi đang muốn nâng cấp giá trị cảm nhận cho sản phẩm: [mô tả sản phẩm/dịch vụ]
+Mức giá hiện tại: [mức giá]
+Khách hàng mục tiêu: [từ chân dung khách hàng]
+
+Dựa vào công thức Value Equation của Alex Hormozi:
+Value = (Dream Outcome x Perceived Likelihood of Achievement) / (Time Delay x Effort & Sacrifice)
+
+Hãy phân tích offer hiện tại của tôi và gợi ý:
+1. Dream Outcome: Làm thế nào để định nghĩa kết quả mơ ước cụ thể, cuốn hút hơn cho khách hàng?
+2. Perceived Likelihood of Achievement: Đề xuất 3 cách/bằng chứng giúp khách tin tưởng họ sẽ làm được (ví dụ: bảo hành, tài liệu tặng kèm, checklist...).
+3. Time Delay: Làm thế nào để giúp khách có kết quả nhỏ/chiến thắng đầu tiên nhanh nhất?
+4. Effort & Sacrifice: Những gì có thể loại bỏ hoặc làm thay để giảm công sức và sự hy sinh của khách hàng?
+5. Viết lại 3 phiên bản mô tả Offer mới cuốn hút nhất.`,
+
+  '04': `Dưới đây là danh sách các đầu việc mà tôi (solopreneur) đang tự làm hàng ngày/hàng tuần:
+[Liệt kê các đầu việc của bạn, ví dụ: viết content, trả lời inbox, gửi file cho khách, setup page, thiết kế ảnh...]
+
+Hãy đóng vai trò chuyên gia tư vấn vận hành doanh nghiệp 1 người. Hãy giúp tôi phân tích và phân loại các việc này:
+1. Nhóm A (Chỉ tôi mới làm được - lõi tư duy, sản phẩm): Danh sách việc giữ lại và tối ưu hóa thời gian.
+2. Nhóm B (AI hoặc tự động hóa có thể làm thay): Gợi ý công cụ AI, cách tự động hóa (ví dụ: dùng Zapier, chatbot, hoặc AI generator) và skill tương ứng để setup.
+3. Nhóm C (Việc không quan trọng/không tạo ra tiền): Đề xuất cắt bỏ hoặc tối giản.
+4. Lên lịch làm việc tuần (Weekly Schedule) mới giúp tôi giải phóng 50% thời gian cho Nhóm B.`,
+
+  '06': `[Dán BRAND_DNA hoặc mô tả sản phẩm của bạn]
+
+Tôi đang kinh doanh một mình trong lĩnh vực: [mô tả lĩnh vực, ví dụ: dạy học tiếng Anh, bán đồ handmade, coaching...]
+Khách hàng mục tiêu là: [từ chân dung khách hàng]
+
+Hãy giúp tôi xây dựng "Bậc thang sản phẩm" (Value Ladder) để tối đa hóa doanh thu trên mỗi khách hàng (LTV):
+1. Bậc vào cửa (Sản phẩm đầu phễu dưới 500k, giá trị cực cao, dễ quyết định mua): Gợi ý 3 ý tưởng.
+2. Bậc trung (Sản phẩm chủ lực từ 500k - 3tr): Gợi ý 2 ý tưởng sản phẩm/dịch vụ.
+3. Bậc cao (Sản phẩm cao cấp từ 3tr+ hoặc coaching/kèm cặp): Gợi ý 2 ý tưởng dịch vụ giá cao.
+4. Chỉ ra điểm "Upsell" tự nhiên để dẫn dắt khách hàng từ bậc thấp lên bậc cao.`,
+
+  '09': `[Dán mô tả sản phẩm và bậc thang giá của bạn]
+
+Tôi muốn xây dựng một phễu bán hàng (sales funnel) tự động để bán: [sản phẩm muốn bán]
+Nguồn traffic chính tôi muốn kéo từ: [ví dụ: Facebook cá nhân, Group, TikTok, Youtube, chạy Ads...]
+
+Hãy thiết kế bản đồ phễu bán hàng chi tiết gồm các chặng:
+1. Điểm chạm đầu tiên (Traffic): Khách thấy gì để thu hút sự chú ý?
+2. Quà tặng/Mồi kéo khách (Lead Magnet): Trang nhận quà cần những nội dung gì?
+3. Nuôi dưỡng (Nurture): Chuỗi nội dung/email gì để tạo niềm tin trong 3-5 ngày?
+4. Trang bán hàng (Sales Page): Trình bày offer thế nào?
+5. Chốt đơn & Chăm sóc sau bán: Quy trình tự động giao hàng và xin feedback.`,
+
+  '10': `[Dán BRAND_DNA và thông tin sản phẩm của bạn]
+
+Tôi muốn viết nội dung cho trang Landing Page bán sản phẩm/dịch vụ: [Tên sản phẩm]
+Mức giá: [Mức giá]
+Khách hàng mục tiêu: [Chân dung khách hàng]
+Món quà đi kèm/Bảo hành: [Chi tiết nếu có]
+
+Hãy viết cho tôi cấu trúc nội dung Landing Page bán hàng chuẩn chuyển đổi cao:
+1. Tiêu đề chính (Headline) & Tiêu đề phụ (Subheadline) cuốn hút, nói rõ lợi ích.
+2. Section Vấn Đề: Mô tả 3 nỗi đau lớn nhất mà khách hàng đang chịu đựng.
+3. Section Giải Pháp: Giới thiệu sản phẩm của tôi giải quyết vấn đề đó thế nào.
+4. Section Tính Năng & Lợi Ích: Liệt kê chi tiết những gì khách nhận được + lợi ích thực tế.
+5. Section Giá Trị (Offer): Nêu bật giá bán + các quà tặng đi kèm (bonus) + cam kết bảo hành.
+6. Câu kêu gọi hành động (CTA) cho nút bấm.`,
+
+  '11': `Tôi đang dựng trang Landing Page bán sản phẩm/dịch vụ: [Tên sản phẩm]
+Tính cách thương hiệu tôi muốn truyền tải: [Ví dụ: Tin cậy, chuyên nghiệp, hoặc trẻ trung, năng động, tối giản...]
+Đối tượng khách hàng là: [Ví dụ: học sinh sinh viên, chủ doanh nghiệp, mẹ bỉm sữa...]
+
+Hãy tư vấn cho tôi hệ thống thiết kế giao diện (Design System) tối giản gồm:
+1. Bộ 3 màu chủ đạo (Mã màu Hex): 1 màu nền chính, 1 màu text/phụ, và 1 màu nút bấm CTA nổi bật (tương phản cao).
+2. Lựa chọn Font chữ: Đề xuất cặp font Google Fonts dễ đọc, hiện đại.
+3. Bố cục khoảng cách (Spacing & Padding) để trang thoáng, dễ đọc trên điện thoại.
+4. Checklist 5 điểm cần kiểm tra để giao diện đạt chuẩn premium, thân thiện với thiết bị di động (mobile-first).`,
+
+  '19': `[Dán BRAND_DNA và mô tả sản phẩm của bạn]
+
+Tôi muốn xây dựng chiến dịch marketing ra mắt/quảng bá sản phẩm tại thị trường Việt Nam.
+Sản phẩm: [Tên sản phẩm]
+Kênh truyền thông chính: [Ví dụ: Facebook cá nhân, Zalo group, TikTok...]
+
+Hãy thiết lập khung kế hoạch marketing phù hợp với hành vi mua sắm của người Việt:
+1. Chiến lược kể câu chuyện cá nhân (Storytelling): Gợi ý dàn ý bài viết chia sẻ hành trình vượt khó của tôi để tạo sự đồng cảm.
+2. Chiến lược tạo uy tín bằng bằng chứng thực tế (Social Proof): Cách thu thập và trình bày testimonial tự nhiên, không bị giả tạo.
+3. Khung kịch bản mini game / quà tặng kích thích chia sẻ trên mạng xã hội để kéo tương tác tự nhiên.
+4. Viết 3 mẫu caption ngắn chuẩn văn phong social Việt Nam (gần gũi, cuốn hút, CTA rõ ràng).`,
+
+  '22': `Tôi muốn xây dựng kịch bản trả lời tự động cho chatbot trên Messenger/Instagram của Page bán sản phẩm: [Tên sản phẩm/dịch vụ]
+Dưới đây là danh sách các câu hỏi khách hàng thường xuyên nhắn hỏi Page của tôi:
+1. [Câu hỏi 1, ví dụ: Giá bao nhiêu vậy shop?]
+2. [Câu hỏi 2, ví dụ: Có được kiểm tra hàng trước khi thanh toán không?]
+3. [Câu hỏi 3, ví dụ: Khóa học này học online hay offline?]
+4. [Câu hỏi 4, ví dụ: Có bảo hành/hoàn tiền không?]
+5. [Câu hỏi 5, ví dụ: Tư vấn giúp mình nhé.]
+
+Hãy đóng vai chuyên gia tối ưu trải nghiệm khách hàng, viết kịch bản chatbot tự động trả lời cho từng câu hỏi trên:
+- Giọng văn: Gần gũi, lịch sự, ngắn gọn (dưới 100 từ mỗi câu trả lời).
+- Cuối mỗi câu trả lời phải có gợi ý hành động tiếp theo (ví dụ: bấm nút để nhắn trực tiếp, điền form nhận quà...).`,
+
+  '23': `Tôi muốn viết một ứng dụng React/Next.js đơn giản để tự động hóa việc đăng bài lên Facebook Page qua Facebook Graph API.
+Yêu cầu chức năng:
+1. Giao diện đơn giản có 1 ô nhập văn bản (textarea) để viết nội dung bài đăng.
+2. 1 ô nhập link ảnh (nếu có).
+3. 1 nút bấm "Đăng bài ngay".
+4. Khi bấm, ứng dụng sẽ gọi API gửi bài viết đó lên Facebook Page của tôi bằng Page Access Token.
+
+Hãy đóng vai chuyên gia React/Next.js, hướng dẫn tôi cấu trúc dự án và viết code cho:
+1. Cách thiết lập API route trong Next.js (pages/api/post.ts hoặc App Router API route) sử dụng Fetch để POST lên https://graph.facebook.com.
+2. Code giao diện React component đơn giản, đẹp mắt với Tailwind CSS hoặc CSS cơ bản.
+3. Hướng dẫn các bước lấy Page Access Token và Page ID từ Facebook Developer Portal để dán vào biến môi trường .env.`,
+
+  '24': `Tôi muốn sử dụng AI (như NotebookLM hoặc Claude) để nghiên cứu sâu một tài liệu/sách/báo cáo về chủ đề: [Tên chủ đề tài liệu, ví dụ: Báo cáo thị trường E-commerce Việt Nam 2025]
+
+Hãy viết cho tôi bộ prompt/câu hỏi chất lượng cao để tôi hỏi AI sau khi upload tài liệu lên:
+1. Prompt tóm tắt trích xuất 5 bài học cốt lõi lớn nhất.
+2. Prompt tìm kiếm lỗ hổng/điểm yếu hoặc những nhận định có thể gây tranh cãi trong tài liệu.
+3. Prompt rút ra 5 hành động thực tế (Actionable Items) áp dụng ngay cho business của tôi là: [mô tả ngắn business].
+4. Prompt chuyển đổi tài liệu này thành kịch bản podcast 2 người thảo luận sinh động.`,
+
+  '25': `Tôi đang học và thực hành [Tên Skill/Nhiệm vụ bạn đang làm] trong chương trình Solopreneur.
+Tôi đang bị kẹt ở bước: [Mô tả chi tiết bước bị kẹt, ví dụ: deploy landing page bị lỗi trắng trang khi trỏ domain]
+Thông tin lỗi/màn hình tôi thấy là: [Copy log lỗi hoặc mô tả lỗi]
+Tôi đã thử những cách sau nhưng chưa được: [Ví dụ: Đã xóa cache, đã thử deploy lại...]
+
+Nhờ Tiểu Hà Mã hướng dẫn tôi giải quyết lỗi này theo từng bước đơn giản, dễ hiểu nhé!`,
 }
 
 // ── HTML generator ────────────────────────────────────────────────────────────
@@ -396,84 +520,84 @@ function getSteps(skill) {
   if (prompt && !strategySkills.includes(skill.n) && !toolSkills.includes(skill.n)) {
     return [
       { title:`Chuẩn bị BRAND_DNA`, body:'Mở file BRAND_DNA (từ Skill #02). Nếu chưa có, bỏ qua bước này — nhưng kết quả sẽ chung chung hơn.', prompt:null, note:'File BRAND_DNA dán vào đầu mỗi lần dùng AI để AI giữ đúng giọng bạn.' },
-      { title:`Dán prompt vào Claude`, body:`Copy prompt bên dưới, điền vào các chỗ [...]  rồi paste vào Claude hoặc ChatGPT:`, prompt:prompt, note:null },
-      { title:`Đọc và chỉnh kết quả`, body:'AI sẽ cho ra bản đầu. Đọc lướt — chỗ nào nghe chung chung hoặc sai business của bạn thì nhờ Claude chỉnh lại. Ví dụ: "Viết lại đoạn 2 cụ thể hơn cho ngành [ngành của tôi]."', prompt:null, note:null },
+      { title:`Dán prompt vào AI`, body:`Copy prompt bên dưới, điền vào các chỗ [...] rồi paste vào Claude, ChatGPT, Cursor, Antigravity hoặc các công cụ vibe coding khác:`, prompt:prompt, note:null },
+      { title:`Đọc và chỉnh kết quả`, body:'AI sẽ cho ra bản đầu. Đọc lướt — chỗ nào nghe chung chung hoặc sai business của bạn thì nhờ AI chỉnh lại. Ví dụ: "Viết lại đoạn 2 cụ thể hơn cho ngành [ngành của tôi]."', prompt:null, note:null },
       { title:`Lưu output để dùng`, body:`Lưu kết quả vào Google Docs hoặc Notion. ${skill.output} — đây là thứ bạn cầm được.`, prompt:null, note:'Đặt tên file rõ ràng để tìm lại dễ. Ví dụ: "SKILL-' + skill.n + '-' + skill.name.replace(/ /g,'-') + '.md"' },
     ]
   }
 
   if (skill.n === '01') return [
     { title:'Liệt kê 3 khách đang mua nhiều nhất', body:'Nghĩ đến 3 khách hàng thật đang mua nhiều nhất hoặc dễ bán nhất. Viết tên (hoặc biệt danh) và ngành nghề của họ.', prompt:null, note:'Không cần nhiều. 3 người thật tốt hơn 30 người tưởng tượng.' },
-    { title:'Phân tích chân dung bằng AI', body:'Paste prompt bên dưới vào Claude — điền thông tin thật về khách của bạn:', prompt:PROMPTS['01'], note:null },
+    { title:'Phân tích chân dung bằng AI', body:'Paste prompt bên dưới vào AI — điền thông tin thật về khách của bạn:', prompt:PROMPTS['01'], note:null },
     { title:'Extract câu nói thật', body:'Tìm lại các tin nhắn, bình luận, hoặc email khách đã gửi. Copy những câu hay nhất vào file chân dung. Đây là "ngôn ngữ của khách" — dùng nguyên văn trong bài viết sẽ mạnh hơn tự viết nhiều.', prompt:null, note:null },
     { title:'Lưu file chân dung', body:'Lưu vào Notion hoặc Google Docs với tên "AVATAR-[tên nhóm khách].md". Đây là tài liệu sống — cập nhật khi bạn hiểu khách hơn.', prompt:null, note:'File này sẽ được dùng ở hầu hết skill viết chữ sau này.' },
   ]
 
   if (skill.n === '02') return [
     { title:'Thu thập mẫu viết thật của bạn', body:'Tìm lại 5 bài viết/post/đoạn email bạn đã viết và thấy ổn. Không cần hay nhất — chỉ cần là giọng bình thường của bạn. Paste tất cả vào một file.', prompt:null, note:'Nếu chưa viết gì, hãy viết một đoạn 200 từ kể về business của bạn — bằng giọng bình thường như đang nhắn tin cho bạn bè.' },
-    { title:'Tạo BRAND_DNA với AI', body:'Paste prompt bên dưới vào Claude cùng với 5 bài viết của bạn:', prompt:PROMPTS['02'], note:null },
+    { title:'Tạo BRAND_DNA với AI', body:'Paste prompt bên dưới vào AI cùng với 5 bài viết của bạn:', prompt:PROMPTS['02'], note:null },
     { title:'Test BRAND_DNA ngay', body:'Dán BRAND_DNA vào đầu một cuộc chat mới. Rồi yêu cầu: "Viết 1 bài Facebook 200 từ về [chủ đề bạn biết]." Đọc kết quả — nếu nghe gần giống giọng bạn là đạt.', prompt:null, note:null },
     { title:'Chỉnh và lưu', body:'Nếu chỗ nào AI chưa bắt được giọng đúng, thêm ví dụ cụ thể vào BRAND_DNA. Lưu file cuối cùng — đây là thứ bạn dùng mãi.', prompt:null, note:'BRAND_DNA là "linh hồn" của mọi skill viết chữ. Skill nào cũng cần dán nó vào đầu.' },
   ]
 
   if (skill.n === '03') return [
     { title:'Hiểu Value Equation', body:'Hormozi nói giá trị cảm nhận = (Kết quả mơ ước × Xác suất thành công) / (Thời gian chờ × Công sức bỏ ra). Cái bạn cần làm: tăng tử số và giảm mẫu số.', prompt:null, note:'Không cần nhớ công thức — chỉ cần nhớ: tăng kết quả + tăng niềm tin thành công + giảm thời gian chờ + giảm công sức = giá trị cao hơn.' },
-    { title:'Chấm điểm offer hiện tại', body:'Viết tên sản phẩm và trả lời 4 câu: (1) Kết quả khách đạt được là gì — cụ thể không? (2) Khách có tin họ sẽ làm được không — bằng chứng gì? (3) Bao lâu thấy kết quả đầu tiên? (4) Khách cần bỏ bao nhiêu công sức để làm được?', prompt:null, note:null },
+    { title:'Chấm điểm offer hiện tại với AI', body:'Copy prompt dưới đây, điền thông tin và chạy trên AI để phân tích và tự chấm điểm:', prompt:PROMPTS['03'], note:null },
     { title:'Tìm 3 điểm nâng giá trị', body:'Dựa vào bài chấm, tìm 3 điểm cụ thể có thể cải thiện. Ví dụ: thêm bảo hành, rút ngắn thời gian thấy kết quả đầu tiên, thêm hướng dẫn từng bước.', prompt:null, note:null },
     { title:'Viết lại mô tả offer mới', body:'Viết 3 câu giới thiệu offer theo cấu trúc: "[Ai] có thể [kết quả cụ thể] trong [thời gian] mà không cần [công sức lớn] — cam kết [bảo hành]."', prompt:null, note:'Câu mô tả này dùng ngay cho trang bán và quảng cáo ở các skill sau.' },
   ]
 
   if (skill.n === '04') return [
     { title:'Audit thời gian tuần này', body:'Viết ra tất cả việc bạn đã làm trong 3 ngày qua. Phân loại từng việc: (A) Chỉ mình làm được — (B) AI có thể làm được — (C) Việc không cần thiết.', prompt:null, note:'Đa số người phát hiện ra 40-60% thời gian đang dùng cho nhóm B — việc AI có thể làm thay.' },
-    { title:'Lập danh sách AI sẽ thay', body:'Từ nhóm B ở trên, chọn 5 việc AI có thể làm ngay hôm nay. Ghi rõ: việc là gì, AI tool dùng, skill nào trong khóa này giúp bạn setup.', prompt:null, note:null },
+    { title:'Lập danh sách AI sẽ thay', body:'Copy prompt dưới đây để AI giúp phân tích và gợi ý các việc có thể tự động hóa bằng AI:', prompt:PROMPTS['04'], note:null },
     { title:'Dựng lịch tuần mới', body:'Vẽ lịch tuần tiếp theo chỉ gồm nhóm A (việc chỉ mình làm được). Các nhóm B chuyển sang AI. Nhóm C cắt bỏ. Mục tiêu: mỗi ngày làm ít hơn nhưng đúng hơn.', prompt:null, note:null },
     { title:'Đặt 1 review mỗi tuần', body:'Mỗi thứ Sáu dành 15 phút: xem lại tuần qua, chuyển thêm 1-2 việc sang AI. Dần dần hệ thống tự chạy nhiều hơn.', prompt:null, note:'Thứ tự ưu tiên: setup xong skill nào → chuyển việc đó sang AI → qua skill tiếp theo.' },
   ]
 
   if (skill.n === '06') return [
     { title:'List tất cả sản phẩm đang có', body:'Viết ra tất cả thứ bạn có thể bán — từ dịch vụ 1 lần, khóa học, tư vấn, đến sản phẩm digital. Không cần đang bán thật — ý tưởng cũng được.', prompt:null, note:null },
-    { title:'Vẽ bậc thang giá', body:'Xếp các sản phẩm từ rẻ nhất tới đắt nhất. Lý tưởng: có ít nhất 3 bậc — bậc vào cửa (dưới 500k), bậc trung (500k-3tr), bậc cao (3tr+). Khách mua bậc thấp trước rồi tự nhiên muốn lên bậc cao hơn.', prompt:null, note:null },
+    { title:'Vẽ bậc thang giá với AI', body:'Copy prompt dưới đây để AI đề xuất bậc thang sản phẩm tối ưu cho business của bạn:', prompt:PROMPTS['06'], note:null },
     { title:'Tìm điểm upsell tự nhiên', body:'Với mỗi sản phẩm, hỏi: "Sau khi khách mua xong, điều tiếp theo họ cần là gì?" Đó chính là sản phẩm upsell. Kết nối các sản phẩm thành hành trình tự nhiên.', prompt:null, note:'Ví dụ: Mua mini course → Muốn làm sâu hơn → Mua khóa đầy đủ → Muốn được kèm tay → Mua 1-kèm-1.' },
     { title:'Vẽ sơ đồ và lưu', body:'Vẽ sơ đồ bậc thang trên giấy hoặc Miro. Lưu lại — đây là "bản đồ tiền" của bạn. Mỗi quyết định marketing sau này đều nhắm vào việc đưa khách lên bậc tiếp theo.', prompt:null, note:null },
   ]
 
   if (skill.n === '09') return [
     { title:'Xác định traffic đang có', body:'Khách lạ của bạn đang ở đâu? Facebook, TikTok, Google, giới thiệu? Đây là điểm đầu phễu — bạn cần content/quảng cáo ở đó để kéo họ vào.', prompt:null, note:null },
-    { title:'Vẽ đường đi của khách', body:'Vẽ từng bước: Thấy quảng cáo/bài → Làm gì tiếp? → Để lại liên hệ ở đâu? → Nhận gì? → Được dẫn đến đâu? → Mua ở đâu? → Sau mua họ làm gì? Mỗi bước phải có nội dung/hành động cụ thể.', prompt:null, note:null },
+    { title:'Thiết kế phễu bán hàng với AI', body:'Copy prompt dưới đây để AI phác thảo chi tiết phễu bán hàng tự động cho bạn:', prompt:PROMPTS['09'], note:null },
     { title:'Xác định "lỗ thủng" phễu', body:'Nhìn vào phễu vừa vẽ. Bước nào bạn chưa có? Bước nào khách hay rớt ra? Đó là điểm cần fix trước tiên — không cần phễu hoàn hảo, chỉ cần không rớt quá nhiều ở 1 bước.', prompt:null, note:null },
     { title:'Ưu tiên làm từ đâu', body:'Làm từ cuối phễu ra trước: đầu tiên có trang bán (Skill #10) → rồi mới cần traffic đổ vào. Nhiều người làm ngược — kéo traffic vào rồi không có trang nhận.', prompt:null, note:null },
   ]
 
   if (skill.n === '11') return [
     { title:'Audit trang hiện tại trên điện thoại', body:'Mở trang của bạn trên điện thoại (không phải máy tính). Nhìn bằng mắt khách lạ: font có đọc được không? Hình có load nhanh không? Nút có bấm được không? Ghi lại 3 vấn đề chính.', prompt:null, note:'90% khách Việt Nam xem trang bán trên điện thoại. Nếu điện thoại xấu thì máy tính đẹp cũng không quan trọng.' },
-    { title:'Chọn bộ màu 3 màu', body:'Chọn đúng 3 màu: 1 màu tối cho nền/chữ, 1 màu sáng cho nền phụ, 1 màu nổi bật cho nút CTA. Gợi ý: dùng coolors.co để tìm bộ màu hài hòa. Lưu mã hex của 3 màu.', prompt:null, note:'CTA (nút bấm) phải màu tương phản hoàn toàn — đặt trên nền trắng thì CTA phải đậm, đặt trên nền tối thì CTA phải sáng.' },
+    { title:'Thiết kế giao diện cùng AI', body:'Copy prompt dưới đây để AI tư vấn hệ thống màu sắc, typography và checklist di động tối ưu:', prompt:PROMPTS['11'], note:null },
     { title:'Chỉnh font và khoảng cách', body:'Font: 1 font thôi (không mix). Size tối thiểu 16px cho thân bài, 24px+ cho tiêu đề. Khoảng cách: thêm padding/margin — trang bị chật chội trông kém chuyên nghiệp hơn trang thoáng.', prompt:null, note:null },
     { title:'Test lại và so sánh', body:'Mở trang cũ và trang mới cùng lúc. Nhờ 1 người khác xem và nói: "Em nhìn trang này thấy bán gì, cho ai?" — nếu họ nói được trong 5 giây là đạt.', prompt:null, note:null },
   ]
 
   if (skill.n === '22') return [
     { title:'Map 10 câu hỏi khách hay nhắn', body:'Lục lại inbox Messenger/Instagram 1 tháng qua. Liệt kê 10 câu hỏi khách hay hỏi nhất. Nhóm chúng thành 3-5 chủ đề (giá, sản phẩm, thời gian giao hàng, địa chỉ...).', prompt:null, note:'Bot chỉ cần trả lời được 10 câu này là đã giải quyết được 70-80% khối lượng inbox.' },
-    { title:'Viết kịch bản bot với AI', body:`Paste câu hỏi vừa map vào Claude với hướng dẫn:\n\nMình cần viết kịch bản chatbot cho Messenger của Page bán [sản phẩm]. Dưới đây là 10 câu hỏi khách hay hỏi:\n[Paste 10 câu]\n\nViết kịch bản trả lời cho từng câu, giọng thân thiện tự nhiên. Mỗi câu trả lời có nút "Xem thêm" hoặc "Liên hệ ngay" ở cuối.`, prompt:null, note:null },
+    { title:'Viết kịch bản bot với AI', body:'Copy prompt dưới đây, điền các câu hỏi hay gặp của bạn để AI viết kịch bản chatbot tự động:', prompt:PROMPTS['22'], note:null },
     { title:'Cài vào Meta Business Suite', body:'Vào Meta Business Suite → Inbox → Automation. Tạo câu trả lời tự động cho từng từ khóa. Bật "Instant Reply" để trả lời ngay khi khách nhắn lần đầu.', prompt:null, note:null },
     { title:'Test và tối ưu', body:'Nhờ bạn bè nhắn thử từng câu hỏi. Xem bot trả lời có đúng không. Chỉnh những chỗ còn cứng nhắc hoặc sai thông tin.', prompt:null, note:'Bot không cần hoàn hảo ngay — cứ bật lên rồi cải thiện dần theo feedback thật từ khách.' },
   ]
 
   if (skill.n === '24') return [
     { title:'Upload tài liệu vào NotebookLM', body:'Vào notebooklm.google.com → tạo notebook mới → upload file (PDF, Word, Google Doc, link bài viết). Có thể upload nhiều file cùng lúc cho 1 chủ đề.', prompt:null, note:'NotebookLM miễn phí 100%. Chỉ cần tài khoản Google.' },
-    { title:'Hỏi sâu về tài liệu', body:'Thay vì hỏi "tóm tắt bài này", hỏi cụ thể hơn: "Có bao nhiêu ý chính?", "Điểm nào tác giả nhấn mạnh nhất?", "Điểm nào mâu thuẫn với [quan điểm X]?", "Rút ra 5 action cụ thể để áp dụng ngay."', prompt:null, note:'NotebookLM chỉ trả lời dựa trên tài liệu bạn upload — không bịa thêm thông tin ngoài tài liệu.' },
+    { title:'Hỏi sâu về tài liệu với AI', body:'Copy prompt dưới đây để hỏi sâu tài liệu trong NotebookLM hoặc Claude:', prompt:PROMPTS['24'], note:null },
     { title:'Tạo podcast và quiz', body:'Click "Audio Overview" → NotebookLM tự tạo podcast 2 người đối thoại về tài liệu. Click "Study Guide" → có quiz và mindmap. Dùng để học nhanh hoặc chia sẻ insight cho team.', prompt:null, note:null },
     { title:'Lưu lại insights vào Notion', body:'Copy những insight quan trọng nhất sang Notion hoặc Google Docs. Tạo thư mục riêng cho từng chủ đề nghiên cứu — theo thời gian sẽ có kho kiến thức đáng giá.', prompt:null, note:null },
   ]
 
   if (skill.n === '25') return [
     { title:'Kết nối Tiểu Hà Mã trên Telegram', body:'Tìm Tiểu Hà Mã trên Telegram theo hướng dẫn trong email xác nhận khóa học. Nếu Khóa 2 — Dũng sẽ cài riêng theo business của bạn trong tuần đầu.', prompt:null, note:'Khóa 1: Tiểu Hà Mã trả lời câu hỏi về skill và SOP. Khóa 2: được cài riêng, biết sản phẩm và giọng viết của bạn.' },
-    { title:'Cách hỏi hiệu quả', body:'Hỏi tốt hơn = trả lời tốt hơn. Format: "[Tôi đang làm Skill #X] → [Vấn đề cụ thể] → [Đã thử cách nào rồi]". Ví dụ: "Tôi đang làm Skill #13 ads. Prompt tôi dùng ra content khô quá. Tôi đã thêm BRAND_DNA rồi. Làm sao chỉnh?"', prompt:null, note:null },
+    { title:'Cách hỏi hiệu quả', body:'Copy cấu trúc sau để nhắn tin cho trợ lý AI Tiểu Hà Mã mỗi khi bạn gặp khó khăn:', prompt:PROMPTS['25'], note:null },
     { title:'Hỏi bất kỳ lúc nào kẹt', body:'Kẹt ở bước nào trong SOP → nhắn Tiểu Hà Mã luôn. Không cần đợi. Không cần ngại hỏi câu "ngớ ngẩn". Kẹt mà không hỏi mới tốn thời gian.', prompt:null, note:null },
   ]
 
   if (skill.n === '23') return [
     { title:'Chuẩn bị môi trường (Khóa 2 only)', body:'Skill này cần Dũng kèm sát trực tiếp. Đây là tóm tắt để bạn biết trước sẽ làm gì: Cài Node.js + Cursor → Tạo Facebook App → Lấy token → Build app React → Deploy Vercel.', prompt:null, note:'Nếu bạn đang ở Khóa 1 xem thử, đây là lý do skill này chỉ ở Khóa 2 — nhiều bước kỹ thuật cần kèm tay mới làm xong không bị kẹt giữa chừng.' },
-    { title:'Kết nối với Dũng để bắt đầu', body:'Nhắn Telegram @KentHoang "Em muốn làm Skill #23". Dũng sẽ sắp lịch 1-1 và kèm từng bước cho đến khi app chạy được.', prompt:null, note:null },
+    { title:'Kết nối với Dũng để bắt đầu', body:'Nhắn Telegram @KentHoang "Em muốn làm Skill #23". Dũng sẽ sắp lịch 1-1. Bạn cũng có thể dùng prompt dưới đây dán vào Cursor/Antigravity để tham khảo cách dựng code trước:', prompt:PROMPTS['23'], note:null },
     { title:'Test app sau khi xong', body:'App hoàn chỉnh sẽ làm được: gõ chủ đề → AI viết bài theo giọng bạn → xem preview → bấm 1 nút → bài lên Facebook Page. Không cần mở trình duyệt Facebook.', prompt:null, note:'Sau khi app chạy, tốc độ đăng bài tăng 10x — thay vì mở trình duyệt, copy, dán, format, lại mở ảnh...' },
   ]
 
