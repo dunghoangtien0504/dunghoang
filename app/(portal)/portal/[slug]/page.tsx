@@ -14,6 +14,7 @@ type Lesson = {
   id: string
   title: string
   description: string | null
+  content_html: string | null
   video_url: string | null
   duration: number
   sort_order: number
@@ -180,15 +181,22 @@ function DayCard({
           )}
 
           {/* SOP */}
-          {lesson.description && (
+          {(lesson.content_html || lesson.description) && (
             <div className="p-5 space-y-3">
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold text-[#0D2B1A] uppercase tracking-widest">Hướng Dẫn</span>
                 <div className="flex-1 h-px bg-gray-100" />
               </div>
-              <div className="prose prose-sm max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap text-sm">
-                {lesson.description}
-              </div>
+              {lesson.content_html ? (
+                <div
+                  className="prose prose-sm max-w-none text-gray-700 leading-relaxed text-sm"
+                  dangerouslySetInnerHTML={{ __html: lesson.content_html }}
+                />
+              ) : (
+                <div className="prose prose-sm max-w-none text-gray-700 leading-relaxed whitespace-pre-wrap text-sm">
+                  {lesson.description}
+                </div>
+              )}
             </div>
           )}
 
@@ -324,7 +332,7 @@ export default function CoursePage() {
 
     const { data: lessonData } = await supabase!
       .from('lessons')
-      .select('id, title, description, video_url, duration, sort_order, is_free, host_note')
+      .select('id, title, description, content_html, video_url, duration, sort_order, is_free, host_note')
       .eq('course_id', slug)
       .eq('is_published', true)
       .order('sort_order')
