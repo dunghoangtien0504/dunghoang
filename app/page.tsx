@@ -44,8 +44,8 @@ const PRODUCTS = [
   {
     badge: 'Có đội trưởng',
     badgeColor: 'bg-[#F0EDF8] text-[#5B3DA8]',
-    name: 'Có Đội — 24 Skill + Tiểu Hà Mã',
-    desc: '24 skill + Tiểu Hà Mã kèm sát 24/7. Cam kết 30 ngày có hệ thống tự chạy.',
+    name: 'Khóa 2 — Cầm Tay Chỉ Việc',
+    desc: '24 skill + 1 buổi Soi Hệ Thống 1-kèm-1 với Dũng. Dũng ngồi cùng bạn, chỉ đúng chỗ cần fix.',
     price: '3.868.686đ',
     cta: 'Xem chi tiết',
     href: '/khoa-2-ban-co-doi-truong',
