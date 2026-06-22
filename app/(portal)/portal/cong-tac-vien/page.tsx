@@ -30,7 +30,7 @@ interface Payout {
 
 const COMMISSIONS = [
   { product: 'Mini — Trang Bán Hàng Làm Trong 1 Buổi', price: '686.868đ',   pct: '20%', earn: '137.374đ' },
-  { product: 'Khóa 1 — 24 Skill AI (Bản Tự Lập)',      price: '868.686đ',   pct: '20%', earn: '173.737đ' },
+  { product: 'Khóa 1 — 24 AI Agent for Business (Bản Tự Lập)', price: '868.686đ', pct: '20%', earn: '173.737đ' },
   { product: 'Khóa 2 — Bản Có Đội Trưởng',             price: '3.868.686đ', pct: '10%', earn: '386.869đ' },
 ]
 

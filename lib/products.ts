@@ -26,7 +26,7 @@ export const PRODUCTS: Record<string, Product> = {
   // ── KHÓA 1 — 25 skill, gồm trang bán hàng + tặng Content System ─────────────
   khoa1_686: {
     id:         'khoa1_686',
-    name:       'Tự Chiến — 24 Skill AI',
+    name:       '24 AI Agent for Business',
     price:      868686,
     codePrefix: 'DH-K1',
     successUrl: '/cam-on-khoa-1',
@@ -51,7 +51,7 @@ export const PRODUCTS: Record<string, Product> = {
 export const COURSE_SHORT_NAMES: Record<string, string> = {
   content_368:   'Content System',
   mini_368:      'Trang Bán Hàng',
-  khoa1_686:     'Tự Chiến',
+  khoa1_686:     '24 AI Agent',
   khoa2_2768:    'Có Đội',
   challenge_368: 'Thử Thách 7 Ngày',
   '1kem1':       '1 Kèm 1',

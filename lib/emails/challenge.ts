@@ -285,7 +285,7 @@ function day7(name: string): { subject: string; html: string } {
   <li style="margin-bottom:6px;">Bộ template trả lời inbox</li>
 </ul>
 
-<p style="margin:0 0 12px;">Đây là 1 trong 25 skill mình dạy trong bộ Biệt Đội AI Agent. Skill số 1 thôi — viết bài đúng giọng. 24 skill còn lại bao gồm: làm trang bán hàng, tạo phễu tự chạy, email tự động, chatbot trả lời khách, ads Facebook, báo cáo doanh thu...</p>
+<p style="margin:0 0 12px;">Đây là 1 trong 24 AI agent trong bộ 24 AI Agent for Business. Agent số 1 thôi — viết bài đúng giọng. 23 AI agent còn lại bao gồm: làm trang bán hàng, tạo phễu tự chạy, email tự động, chatbot trả lời khách, ads Facebook, báo cáo doanh thu...</p>
 
 <p style="margin:0 0 12px;">Mình thiết kế để người kinh doanh một mình có thể tự vận hành mọi thứ mà không cần thuê đội ngũ.</p>
 

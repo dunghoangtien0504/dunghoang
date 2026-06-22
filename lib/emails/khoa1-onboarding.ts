@@ -4,7 +4,7 @@ import { emailLayout } from './layout'
 function k1Layout(content: string): string {
   return emailLayout(content).replace(
     'Email này gửi tự động vì bạn đã đăng ký Thử Thách 7 Ngày AI Viết Bài.',
-    'Email này gửi tự động vì bạn đã mua Khóa 1 — 24 Skill AI Bán Hàng.',
+    'Email này gửi tự động vì bạn đã mua Khóa 1 — 24 AI Agent for Business.',
   )
 }
 
@@ -14,7 +14,7 @@ type EmailContent = { subject: string; html: string }
 export function getKhoa1EmailDay1(name: string): EmailContent {
   const subject = `${name} ơi — đơn của bạn xác nhận rồi, đây là bước tiếp theo`
   const html = k1Layout(`
-<div class="day-badge">Khóa 1 · 24 Skill AI · Chào mừng</div>
+<div class="day-badge">Khóa 1 · 24 AI Agent for Business · Chào mừng</div>
 <h1 class="subject-line">Xong rồi. Bạn vào rồi.</h1>
 
 <p>Mình vừa thấy đơn của bạn được xác nhận.</p>
@@ -33,7 +33,7 @@ export function getKhoa1EmailDay1(name: string): EmailContent {
 
 <p><strong>Bắt đầu từ đâu?</strong></p>
 
-<p>Đừng mở hết 24 skill một lúc. Sẽ choáng. Mình biết vì mình từng như vậy.</p>
+<p>Đừng mở hết 24 AI agent một lúc. Sẽ choáng. Mình biết vì mình từng như vậy.</p>
 
 <p>Chỉ cần làm 1 việc:</p>
 
@@ -107,13 +107,13 @@ export function getKhoa1EmailDay3(name: string): EmailContent {
 
 <p>Mình hỏi vì mình biết giai đoạn này. Ngày 1 hào hứng. Ngày 2 bắt đầu. Ngày 3 cuộc sống chen vào, bỏ qua 1 buổi. Ngày 4 thấy mình "đang bị trễ" rồi... thôi ngại quá, để mai.</p>
 
-<p>Không phải lười. Không phải không muốn. Là 24 skill nhìn vào nhiều quá, không biết bắt đầu từ đâu sau khi bỏ lỡ 1 ngày.</p>
+<p>Không phải lười. Không phải không muốn. Là 24 AI agent nhìn vào nhiều quá, không biết bắt đầu từ đâu sau khi bỏ lỡ 1 ngày.</p>
 
 <hr class="divider" />
 
 <p>Mình có một cách mình hay dùng khi bị trễ:</p>
 
-<div class="highlight"><strong>Đừng nhìn 24 skill.</strong> Nhìn skill tiếp theo thôi.<br/><br/>Bạn đang ở đâu? Làm xong skill đó trước. Rồi mới nhìn cái kế tiếp.</div>
+<div class="highlight"><strong>Đừng nhìn 24 AI agent.</strong> Nhìn agent tiếp theo thôi.<br/><br/>Bạn đang ở đâu? Làm xong agent đó trước. Rồi mới nhìn cái kế tiếp.</div>
 
 <p>Nếu bạn vừa xong BRAND_DNA (Skill 01), bước tiếp theo mình gợi ý:</p>
 

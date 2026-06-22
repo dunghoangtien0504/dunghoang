@@ -6,8 +6,8 @@ import MetaPixel from '@/components/MetaPixel'
 import AffiliateTracker from '@/components/AffiliateTracker'
 
 export const metadata = {
-  title: 'DungHoang.com — 24 Skill AI Cho Người Kinh Doanh Một Mình',
-  description: 'Bộ 24 skill AI giúp solopreneur tự vận hành hệ thống bán hàng mà không cần thuê đội ngũ. Thử thách 7 ngày miễn phí.',
+  title: 'DungHoang.com — 24 AI Agent for Business',
+  description: 'Bộ 24 AI agent giúp solopreneur tự vận hành hệ thống bán hàng mà không cần thuê đội ngũ. Thử thách 7 ngày miễn phí.',
 }
 
 const PRODUCTS = [
@@ -34,8 +34,8 @@ const PRODUCTS = [
   {
     badge: 'Bộ đầy đủ',
     badgeColor: 'bg-[#EAF5EF] text-[#2D7A4F]',
-    name: 'Tự Chiến — 24 Skill AI',
-    desc: 'Toàn bộ 24 skill tự học. Tặng kèm Content System + Landing Page skill.',
+    name: '24 AI Agent for Business',
+    desc: 'Toàn bộ 24 AI agent tự học. Tặng kèm Content System + Landing Page skill.',
     price: '868.686đ',
     cta: 'Xem chi tiết',
     href: '/khoa-1-ban-tu-lap',
@@ -45,7 +45,7 @@ const PRODUCTS = [
     badge: 'Có đội trưởng',
     badgeColor: 'bg-[#F0EDF8] text-[#5B3DA8]',
     name: 'Khóa 2 — Cầm Tay Chỉ Việc',
-    desc: '24 skill + 1 buổi Soi Hệ Thống 1-kèm-1 với Dũng. Dũng ngồi cùng bạn, chỉ đúng chỗ cần fix.',
+    desc: '24 AI agent + 1 buổi Soi Hệ Thống 1-kèm-1 với Dũng. Dũng ngồi cùng bạn, chỉ đúng chỗ cần fix.',
     price: '3.868.686đ',
     cta: 'Xem chi tiết',
     href: '/khoa-2-ban-co-doi-truong',
@@ -88,7 +88,7 @@ export default function HomePage() {
             href="/khoa-1-ban-tu-lap"
             className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-white hover:bg-[#FAF7F2] text-[#0D2B1A] font-semibold rounded-xl border border-[#DDD8CB] transition-colors"
           >
-            Xem 24 skill
+            Xem 24 AI agent
           </Link>
         </div>
       </section>
@@ -149,7 +149,7 @@ export default function HomePage() {
           </p>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
-              ['24 skill', 'Mỗi skill thay 1 nhân sự. Cả bộ thay cả đội.'],
+              ['24 AI agent', 'Mỗi agent thay 1 nhân sự. Cả bộ thay cả đội.'],
               ['30 ngày', 'Cam kết Khóa 2: dựng xong hệ thống tự chạy hoặc mình sửa cùng.'],
               ['14 ngày BH', 'Hoàn 100% không hỏi lý do nếu không phù hợp.'],
             ].map(([num, desc], i) => (
@@ -182,7 +182,7 @@ export default function HomePage() {
             build DungHoang.com, và dùng AI để làm phần lớn những việc mà trước đây cần cả đội.
           </p>
           <p className="text-[#3D6B4A] leading-relaxed text-sm">
-            24 skill này là những gì mình đang dùng thật. Mình chia sẻ lại vì nghĩ người kinh doanh
+            24 AI agent này là những gì mình đang dùng thật. Mình chia sẻ lại vì nghĩ người kinh doanh
             một mình deserves biết những công cụ này. Không phải để "học AI cho vui" mà để dùng
             ngay vào việc kinh doanh thật.
           </p>
@@ -258,7 +258,7 @@ export default function HomePage() {
             <Link href="/thu-thach-7-ngay" className="hover:text-[#3D6B4A]">Thử thách 7 ngày</Link>
             <Link href="/he-thong-content" className="hover:text-[#3D6B4A]">Content System</Link>
             <Link href="/mini-trang-ban-hang" className="hover:text-[#3D6B4A]">Trang Bán Hàng</Link>
-            <Link href="/khoa-1-ban-tu-lap" className="hover:text-[#3D6B4A]">Tự Chiến</Link>
+            <Link href="/khoa-1-ban-tu-lap" className="hover:text-[#3D6B4A]">24 AI Agent</Link>
             <Link href="/khoa-2-ban-co-doi-truong" className="hover:text-[#3D6B4A]">Có Đội</Link>
             <Link href="/portal" className="hover:text-[#3D6B4A]">Portal học viên</Link>
           </div>

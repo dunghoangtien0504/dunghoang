@@ -126,11 +126,11 @@ function getEmailDay7(name: string): EmailContent {
   const subject = `[Ngày 7] Gặp Tiểu Hà Mã - đội trưởng AI của mình`
   const html = emailLayout(`
 <div class="day-badge">Thử Thách 7 Ngày · Ngày 7 / 7</div>
-<h1 class="subject-line">7 ngày vừa rồi bạn học được 1 trong 25 skill của Biệt Đội AI Agent.</h1>
-<p>Dạy AI viết đúng giọng bạn - skill số 1. Mình gọi đây là "Nạp Giọng" vì về bản chất bạn đang lập trình cho AI hiểu bạn là ai trước khi nó làm bất kỳ việc gì cho bạn.</p>
-<p>Còn 24 skill nữa. Mỗi skill thay 1 người bạn đang phải thuê hoặc tự làm.</p>
+<h1 class="subject-line">7 ngày vừa rồi bạn học được 1 trong 24 AI agent của 24 AI Agent for Business.</h1>
+<p>Dạy AI viết đúng giọng bạn - agent số 1. Mình gọi đây là "Nạp Giọng" vì về bản chất bạn đang lập trình cho AI hiểu bạn là ai trước khi nó làm bất kỳ việc gì cho bạn.</p>
+<p>Còn 23 AI agent nữa. Mỗi agent thay 1 người bạn đang phải thuê hoặc tự làm.</p>
 <hr class="divider" />
-<p>Nhưng hôm nay mình muốn cho bạn thấy điểm đến - không phải 25 skill - mà là khi 25 skill đó chạy cùng nhau thì trông như thế nào.</p>
+<p>Nhưng hôm nay mình muốn cho bạn thấy điểm đến - không phải 24 AI agent riêng lẻ - mà là khi 24 AI agent đó chạy cùng nhau thì trông như thế nào.</p>
 <p>Đây là Tiểu Hà Mã - đội trưởng AI của mình trên Telegram:</p>
 <img src="https://dunghoang.com/images/tieu-ha-ma-demo.jpg" alt="Tiểu Hà Mã đang trả lời khách lúc 2h14 sáng" style="width:100%;border-radius:8px;margin:16px 0;" />
 <p>2h14 sáng. Mình đang ngủ. Hà Mã đang trả lời khách, tư vấn, gửi link thanh toán - tự động hoàn toàn.</p>
@@ -138,7 +138,7 @@ function getEmailDay7(name: string): EmailContent {
 <hr class="divider" />
 <p>Nếu 7 ngày này bạn thấy oke - bước tiếp là:</p>
 <p><strong><a href="https://dunghoang.com/mini-368">Mini 368k</a></strong> - Học đầy đủ skill làm trang bán hàng AI trong 1 giờ. 1 skill này thôi đã thay người thiết kế landing page 8-10tr/tháng.</p>
-<p><strong><a href="https://dunghoang.com/khoa-1">Khóa 1 - 686.868đ</a></strong> - Nhận cả 25 skill + Hà Mã hỏi-đáp khi kẹt trên Telegram. Mình đi cùng bạn qua từng skill.</p>
+<p><strong><a href="https://dunghoang.com/khoa-1-ban-tu-lap">Khóa 1 — 24 AI Agent for Business</a></strong> - Nhận cả 24 AI agent + Hà Mã hỏi-đáp khi kẹt trên Telegram. Mình đi cùng bạn qua từng agent.</p>
 <div class="cta-block">
   <a class="cta-btn" href="https://dunghoang.com/khoa-1">Xem Khóa 1 — 686.868đ</a>
 </div>

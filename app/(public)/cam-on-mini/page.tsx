@@ -97,7 +97,7 @@ export default function CamOnMiniPage() {
 
             {/* 24 skill preview */}
             <div className="space-y-2">
-              <p className="text-sm font-semibold text-[#0D2B1A]">24 skill trong Khóa 1 bao gồm:</p>
+              <p className="text-sm font-semibold text-[#0D2B1A]">24 AI agent trong Khóa 1 bao gồm:</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                 {[
                   'Trang bán hàng (bạn đang học)',

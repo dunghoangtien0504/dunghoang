@@ -20,11 +20,11 @@ const FAQS = [
   },
   {
     q: 'Ngoài kia có nhiều khóa AI rẻ hơn, sao chọn cái này?',
-    a: 'Hầu hết khóa AI dạy cách viết prompt hay thao tác với ChatGPT. Khóa 1 khác ở chỗ: 24 skill là 24 quy trình đang chạy thật trong business của mình — mỗi skill cho bạn output dùng được ngay (trang bán hàng, email, content 30 ngày...). Bạn không học lý thuyết — bạn copy quy trình đã được test 2 năm thực chiến.',
+    a: 'Hầu hết khóa AI dạy cách viết prompt hay thao tác với ChatGPT. Khóa 1 khác ở chỗ: 24 AI agent là 24 quy trình đang chạy thật trong business của mình — mỗi agent cho bạn output dùng được ngay (trang bán hàng, email, content 30 ngày...). Bạn không học lý thuyết — bạn copy quy trình đã được test 2 năm thực chiến.',
   },
   {
     q: 'Tôi đang rất bận, không có thời gian học.',
-    a: 'Chính vì bận nên bạn mới cần hệ thống này hơn bao giờ hết. Mỗi skill 30-60 phút — học buổi tối 1 tiếng, cuối tuần 2 buổi là xong 4-5 skill. Không cần học hết 24 skill cùng lúc. Nhiều học viên nói skill đầu tiên đã tiết kiệm 1-2 tiếng ngay tuần đó. Sau đó thời gian tự mở ra.',
+    a: 'Chính vì bận nên bạn mới cần hệ thống này hơn bao giờ hết. Mỗi agent 30-60 phút — học buổi tối 1 tiếng, cuối tuần 2 buổi là xong 4-5 agent. Không cần học hết 24 AI agent cùng lúc. Nhiều học viên nói agent đầu tiên đã tiết kiệm 1-2 tiếng ngay tuần đó. Sau đó thời gian tự mở ra.',
   },
   {
     q: 'Mỗi skill mất bao lâu?',
@@ -85,12 +85,12 @@ export default function Khoa1Page() {
       <section ref={heroRef} className="bg-[#0D2B1A] px-4 pt-12 pb-16">
         <div className="max-w-3xl mx-auto text-center space-y-5">
           <div className="inline-block bg-[#C0390E]/20 text-[#E87C5E] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
-            Khóa 1 · Bản Tự Lập · 24 Skill AI
+            Khóa 1 · Bản Tự Lập · 24 AI Agent for Business
           </div>
 
           {/* B.1 Headline: S(24 skill) C(đang dùng thật) P(tiết kiệm 4-5h) U(bắt đầu hôm nay) */}
           <h1 className="text-3xl sm:text-5xl font-black text-[#F6F0E4] leading-tight">
-            24 Skill AI Bán Hàng<br/>
+            24 AI Agent for Business<br/>
             <span className="text-[#C0390E]">Làm Việc Thay Bạn Mỗi Ngày</span><br/>
             <span className="text-xl sm:text-2xl font-bold text-[#F6F0E4]/60 block mt-2">Không phải lý thuyết. SOP đang chạy thật trong business mình.</span>
           </h1>
@@ -109,7 +109,7 @@ export default function Khoa1Page() {
             </button>
             <a href="#24-skill"
               className="h-14 px-8 border border-[#F6F0E4]/20 text-[#F6F0E4]/70 hover:text-[#F6F0E4] text-sm font-medium rounded-2xl flex items-center justify-center transition-colors">
-              Xem đủ 24 skill →
+              Xem đủ 24 AI agent →
             </a>
           </div>
           <p className="text-[#F6F0E4]/40 text-xs">Bảo hành 14 ngày hoàn 100% · Khu học online 24/7</p>
@@ -122,7 +122,7 @@ export default function Khoa1Page() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             {[
               { n:'605+', label:'solopreneur đã học' },
-              { n:'24',   label:'skill AI thực chiến' },
+              { n:'24',   label:'AI agent thực chiến' },
               { n:'4-5h', label:'tiết kiệm mỗi ngày' },
               { n:'14n',  label:'bảo hành hoàn 100%' },
             ].map(s => (
@@ -175,7 +175,7 @@ export default function Khoa1Page() {
               Mình là nhân viên. Nhân viên của chính mình. Không lương, không nghỉ, không thăng tiến.
             </p>
             <p className="font-bold text-[#0D2B1A]">
-              24 skill trong Khóa 1 là để thay đổi điều đó.
+              24 AI agent trong Khóa 1 là để thay đổi điều đó.
             </p>
           </div>
 
@@ -222,7 +222,7 @@ export default function Khoa1Page() {
 
           {/* G: Identity shift */}
           <p className="text-[#F6F0E4]/60 text-sm italic leading-relaxed">
-            Mình không còn là nhân viên của chính mình nữa. 24 skill trong Khóa 1 là chính xác những gì mình đóng gói lại từ 2 năm đó.
+            Mình không còn là nhân viên của chính mình nữa. 24 AI agent trong Khóa 1 là chính xác những gì mình đóng gói lại từ 2 năm đó.
           </p>
 
           {/* L3 CTA: đang tin tưởng */}
@@ -237,8 +237,8 @@ export default function Khoa1Page() {
       <section className="px-4 py-14 bg-[#FAF7F2] border-y border-[#DDD8CB]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Bộ 24 skill là gì</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">1 skill = 1 quy trình AI làm việc thay bạn</h2>
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Bộ 24 AI agent là gì</p>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">1 AI agent = 1 quy trình AI làm việc thay bạn</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
@@ -266,7 +266,7 @@ export default function Khoa1Page() {
       <section id="24-skill" className="px-4 py-14 bg-white border-y border-[#DDD8CB]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">24 skill trong Khóa 1</p>
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">24 AI agent trong Khóa 1</p>
             <h2 className="text-2xl font-black text-[#0D2B1A]">Mỗi skill cho bạn một thứ cầm được</h2>
             <p className="text-gray-500 text-sm">Mình ghi rõ skill làm được gì và bạn nhận lại gì — không nói chung chung</p>
           </div>
@@ -349,7 +349,7 @@ export default function Khoa1Page() {
           </div>
           <div className="space-y-4">
             {[
-              { icon: <Home className="w-4 h-4 text-[#88860B]" />, text:'Mình vận hành homestay + khoá học + tư vấn AI một mình — 24 skill này đang chạy thật trong business mình mỗi ngày' },
+              { icon: <Home className="w-4 h-4 text-[#88860B]" />, text:'Mình vận hành homestay + khoá học + tư vấn AI một mình — 24 AI agent này đang chạy thật trong business mình mỗi ngày' },
               { icon: <Users className="w-4 h-4 text-[#88860B]" />, text:'605 học viên từ chủ shop, coach, freelancer đến solopreneur nhiều ngành đã học và áp dụng được' },
               { icon: <FlaskConical className="w-4 h-4 text-[#88860B]" />, text:'SOP được test 2 năm thực chiến — không phải viết từ sách, không copy từ guru nước ngoài' },
               { icon: <RefreshCw className="w-4 h-4 text-[#88860B]" />, text:'Khóa 1 là nền tảng — mua xong muốn kèm sát, 868.686đ trừ vào Khóa 2 (3.868.686đ)' },
@@ -382,7 +382,7 @@ export default function Khoa1Page() {
             </div>
             <div className="divide-y divide-[#DDD8CB]">
               {[
-                { item:'24 SOP AI thực chiến (30-60 phút/skill)',      value:'12.000.000đ' },
+                { item:'24 AI agent thực chiến (30-60 phút/agent)',     value:'12.000.000đ' },
                 { item:'Skill Landing Page — Trang Bán Hàng AI',        value:'690.000đ' },
                 { item:'Khu học online 24/7 — trọn đời',                value:'990.000đ' },
                 { item:'Bộ prompt AI cho từng skill',                   value:'2.500.000đ' },
@@ -412,7 +412,7 @@ export default function Khoa1Page() {
           <div className="bg-[#0D2B1A]/5 rounded-xl p-4 text-sm text-gray-700 leading-relaxed space-y-2">
             <p><strong className="text-[#0D2B1A]">So sánh thực tế:</strong></p>
             <p>1 nhân viên content tối thiểu 8 triệu/tháng. 1 năm = 96 triệu. Nhân viên nghỉ, tiền mất.</p>
-            <p>Khóa 1 = 868.686đ trả 1 lần — 24 skill dùng mãi, không bao giờ xin nghỉ.</p>
+            <p>Khóa 1 = 868.686đ trả 1 lần — 24 AI agent dùng mãi, không bao giờ xin nghỉ.</p>
           </div>
 
           {/* L4 CTA: sẵn sàng */}
@@ -528,7 +528,7 @@ export default function Khoa1Page() {
               Quyết Định Hôm Nay — Xây Đội AI Của Tôi →
             </button>
             <div className="flex items-center justify-center gap-4 text-xs text-gray-400 flex-wrap">
-              <span>✓ 24 skill thực chiến</span>
+              <span>✓ 24 AI agent thực chiến</span>
               <span>✓ Bảo hành 14 ngày hoàn 100%</span>
               <span>✓ Nâng lên Khóa 2 bất kỳ lúc nào</span>
             </div>
@@ -558,7 +558,7 @@ export default function Khoa1Page() {
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A]/95 backdrop-blur-md border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl animate-slide-up">
           <div className="min-w-0">
             <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 1 Bản Tự Lập · 868.686đ</p>
-            <p className="text-[#F6F0E4]/50 text-xs">24 skill AI · Bảo hành 14 ngày</p>
+            <p className="text-[#F6F0E4]/50 text-xs">24 AI agent · Bảo hành 14 ngày</p>
           </div>
           <button onClick={open}
             className="flex-shrink-0 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.02] text-white font-bold px-5 h-11 rounded-xl text-sm transition-all duration-200">

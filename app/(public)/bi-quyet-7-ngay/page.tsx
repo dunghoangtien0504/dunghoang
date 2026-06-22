@@ -248,7 +248,7 @@ export default function BiQuyet7NgayPage() {
             <p>Skill đầu tiên: viết caption Facebook. Mình dạy AI giọng mình viết. Fail lần đầu. Chỉnh lại. Fail lần hai. Chỉnh tiếp. Đến lần 4 — AI viết ra cái mình đọc mà không nhận ra đó không phải mình viết.</p>
             {/* F — Kết quả ≥3 số */}
             <p className="text-[#F6F0E4]">
-              Hôm đó mình lập tức làm tiếp 24 skill còn lại.
+              Hôm đó mình lập tức làm tiếp 23 AI agent còn lại.
               Bây giờ: <strong>25 AI agent đang chạy trong business mình hàng ngày</strong> —
               email, caption, tin chốt đơn, kịch bản video, lịch content 30 ngày.
               Tiết kiệm được khoảng <strong>4-5 tiếng mỗi ngày</strong>.
