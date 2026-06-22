@@ -26,9 +26,10 @@ const amount = Number(process.argv[3]) || 868686
 async function run() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
   const webhookUrl = `${siteUrl}/api/webhooks/sepay`
-  const secret = env.SEPAY_WEBHOOK_SECRET || 'DH_SEPAY_2026'
+  const secret = process.env.SEPAY_WEBHOOK_SECRET || env.SEPAY_WEBHOOK_SECRET || 'DH_SEPAY_2026'
 
   console.log(`🚀 Đang giả lập webhook Sepay tới: ${webhookUrl}`)
+  console.log(`🔑 Sử dụng Secret Key gửi đi: "${secret}"`)
   console.log(`📦 Mã đơn: ${orderCode}, Số tiền nhận: ${amount.toLocaleString('vi-VN')}₫`)
 
   const payload = {
