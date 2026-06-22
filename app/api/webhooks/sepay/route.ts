@@ -45,6 +45,14 @@ export async function POST(req: NextRequest) {
         sepay_ref:  referenceCode || sepayId,
         paid_at:    new Date().toISOString(),
       })
+
+      const teleMessage = `⚠️ <b>GIAO DỊCH LẠ (MÃ ĐƠN KHÔNG KHỚP DATABASE)</b>\n` +
+        `- Mã đơn nhận được: <code>${orderCode}</code>\n` +
+        `- Nội dung chuyển khoản: <code>${content}</code>\n` +
+        `- Số tiền nhận: <b>${formatVND(transferAmount)}</b>\n` +
+        `- Mã giao dịch Sepay: <code>${referenceCode || sepayId}</code>`
+      await sendTelegramAlert(teleMessage)
+
       return NextResponse.json({ message: 'Mã không khớp đơn nào — đã ghi lại để kiểm tra' })
     }
 
@@ -220,10 +228,40 @@ export async function POST(req: NextRequest) {
     }
 
     console.log(`[sepay] ${orderCode} (${order.course_name}) — kích hoạt cho ${email}`)
+
+    // Gửi Telegram báo thành công
+    const teleMessage = `🔔 <b>ĐƠN HÀNG THÀNH CÔNG!</b>\n` +
+      `- Mã đơn: <code>${orderCode}</code>\n` +
+      `- Khách hàng: <b>${name}</b> (${email})\n` +
+      `- Khóa học: <b>${order.course_name}</b>\n` +
+      `- Số tiền nhận: <b>${formatVND(received)}</b>\n` +
+      `- Mã giao dịch Sepay: <code>${referenceCode || sepayId}</code>`
+    await sendTelegramAlert(teleMessage)
+
     return NextResponse.json({ success: true, message: `Đơn ${orderCode} đã xử lý` })
 
   } catch (err) {
     console.error('[sepay-webhook]', err)
     return NextResponse.json({ error: 'Server error' }, { status: 500 })
+  }
+}
+
+async function sendTelegramAlert(message: string) {
+  const token = process.env.TELEGRAM_BOT_TOKEN
+  const chatId = process.env.TELEGRAM_CHAT_ID
+  if (!token || !chatId) return
+
+  try {
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message,
+        parse_mode: 'HTML',
+      }),
+    })
+  } catch (err) {
+    console.error('[telegram-alert-error]', err)
   }
 }
