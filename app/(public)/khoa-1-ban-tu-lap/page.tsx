@@ -7,25 +7,42 @@ import { KHOA1_SKILLS, SKILL_GROUPS } from '@/lib/skills'
 
 const product = PRODUCTS.khoa1_686
 
+// ── FAQ — A.R.E.B framework, 7 objection ────────────────────────────────────
 const FAQS = [
-  { q:'Không biết gì về AI thì học được không?',
-    a:'Được — đây là đối tượng chính mình viết SOP cho. Mỗi skill có hướng dẫn từng bước. Bạn chỉ cần máy tính, kết nối mạng, và tài khoản ChatGPT hoặc Claude miễn phí.' },
-  { q:'Học online hay offline?',
-    a:'Học online trên khu học dunghoang.com — mở 24/7, học theo tốc độ của bạn. Mỗi skill là 1 module độc lập, có thể học skill nào trước cũng được.' },
-  { q:'Mỗi skill mất bao lâu?',
-    a:'Khoảng 30-60 phút nếu làm theo SOP. Cuối mỗi skill có output cụ thể bạn có thể dùng ngay — không phải bài tập nộp lên.' },
-  { q:'Đã mua Trang Bán Hàng (686.868đ) thì sao?',
-    a:'686.868đ bạn đã trả được trừ thẳng vào Khóa 1. Chỉ cần thêm 181.818đ là có trọn bộ. Liên hệ mình qua Telegram để áp dụng.' },
-  { q:'Bảo hành thế nào?',
-    a:'14 ngày hoàn 100%. Mua về học thử, không phù hợp thì nhắn mình. Hoàn trong 24 giờ, không hỏi lý do.' },
-  { q:'Có khác gì so với Khóa 2?',
-    a:'Khóa 1 bạn tự học 24 skill. Khóa 2 có thêm: bộ SOP dựng cả hệ thống 30 ngày + Tiểu Hà Mã kèm sát 24/7 qua Telegram giúp bạn triển khai thực tế trơn tru, không lo bị kẹt.' },
+  {
+    q: 'Tôi không phải dân công nghệ, học được không?',
+    a: 'Mình hiểu lo lắng đó — vì bản thân mình cũng không phải dân tech. Và đây chính xác là người mình viết SOP này cho. Mỗi skill là quy trình từng bước cụ thể, bạn chỉ cần máy tính và ChatGPT miễn phí. 605 học viên, phần lớn chủ shop và coach không rành công nghệ, đã làm được. Bạn cũng sẽ làm được.',
+  },
+  {
+    q: 'Tôi sợ mua rồi để đó, không làm được gì.',
+    a: 'Đây là nỗi sợ mình gặp nhiều nhất — và hoàn toàn hợp lý sau khi đã từng mua khóa học bỏ xó. Chính vì vậy mình thiết kế mỗi skill thành SOP 30-60 phút, có output nhìn thấy ngay hôm đó. Không xem video lý thuyết rồi tự mày mò. Và nếu sau 14 ngày bạn không thấy gì hữu ích — mình hoàn 100% không hỏi lý do. Rủi ro về phía mình hoàn toàn.',
+  },
+  {
+    q: 'Ngoài kia có nhiều khóa AI rẻ hơn, sao chọn cái này?',
+    a: 'Hầu hết khóa AI dạy cách viết prompt hay thao tác với ChatGPT. Khóa 1 khác ở chỗ: 24 skill là 24 quy trình đang chạy thật trong business của mình — mỗi skill cho bạn output dùng được ngay (trang bán hàng, email, content 30 ngày...). Bạn không học lý thuyết — bạn copy quy trình đã được test 2 năm thực chiến.',
+  },
+  {
+    q: 'Tôi đang rất bận, không có thời gian học.',
+    a: 'Chính vì bận nên bạn mới cần hệ thống này hơn bao giờ hết. Mỗi skill 30-60 phút — học buổi tối 1 tiếng, cuối tuần 2 buổi là xong 4-5 skill. Không cần học hết 24 skill cùng lúc. Nhiều học viên nói skill đầu tiên đã tiết kiệm 1-2 tiếng ngay tuần đó. Sau đó thời gian tự mở ra.',
+  },
+  {
+    q: 'Mỗi skill mất bao lâu?',
+    a: 'Khoảng 30-60 phút nếu làm theo SOP. Cuối mỗi skill là output cụ thể bạn cầm được và dùng được ngay — không phải bài tập nộp, không phải quiz. Skill BRAND_DNA thường xong trong 45 phút và được dùng cho tất cả skill viết chữ về sau.',
+  },
+  {
+    q: 'Bảo hành thế nào?',
+    a: '14 ngày hoàn 100%. Học thử ít nhất 3 skill đầu — nếu không thấy gì hữu ích, nhắn mình là hoàn trong 24 giờ. Mình không muốn giữ tiền của người không thấy giá trị.',
+  },
+  {
+    q: 'Đã mua Mini hoặc muốn nâng lên Khóa 2 thì sao?',
+    a: 'Đã mua Mini (368.686đ): số tiền đó trừ thẳng vào Khóa 1, chỉ cần thêm 500.000đ. Nhắn Telegram @KentHoang để mình áp dụng. Muốn lên Khóa 2: 868.686đ bạn trả hôm nay trừ vào Khóa 2 (3.868.686đ) — chỉ thêm 3.000.000đ là có thêm Tiểu Hà Mã kèm sát 24/7 và buổi Soi Hệ Thống 1-kèm-1.',
+  },
 ]
 
 function AccordionItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false)
   return (
-    <div className="border border-[#DDD8CB] rounded-xl overflow-hidden bg-white transition-all duration-200 hover:border-brand-border/40 hover:shadow-sm">
+    <div className="border border-[#DDD8CB] rounded-xl overflow-hidden bg-white transition-all duration-200 hover:border-[#3D6B4A]/30 hover:shadow-sm">
       <button onClick={() => setOpen(o => !o)}
         className="w-full text-left px-5 py-4 flex items-start justify-between gap-3 bg-white hover:bg-[#FAF7F2] transition-colors">
         <span className="font-bold text-[#0D2B1A] text-sm leading-snug">{q}</span>
@@ -58,78 +75,88 @@ export default function Khoa1Page() {
   return (
     <div className="min-h-screen bg-[#F6F0E4] font-sans">
 
-      {/* ANNOUNCEMENT BAR */}
-      <div className="bg-[#88860B] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
-        605+ solopreneur đã tiết kiệm 4-5 tiếng/ngày · Bảo hành 14 ngày hoàn 100%
+      {/* [0] ANNOUNCEMENT BAR — B.12 Scarcity thật */}
+      <div className="bg-[#88860B] text-white text-center py-2.5 px-4 text-xs sm:text-sm font-medium">
+        Đợt đang học · Bonus file BRAND_DNA + Content 30 ngày kèm theo · 605+ học viên đã tiết kiệm 4-5h/ngày
       </div>
 
-      {/* [1] HERO */}
-      <section ref={heroRef} className="bg-[#0D2B1A] px-4 pt-14 pb-16">
+      {/* [1] HERO — B.1 SCPU + B.2 EAS + L1 CTA */}
+      <section ref={heroRef} className="bg-[#0D2B1A] px-4 pt-12 pb-16">
         <div className="max-w-3xl mx-auto text-center space-y-5">
           <div className="inline-block bg-[#C0390E]/20 text-[#E87C5E] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
             Khóa 1 · Bản Tự Lập · 24 Skill AI
           </div>
+
+          {/* B.1 Headline: S(24 skill) C(đang dùng thật) P(tiết kiệm 4-5h) U(bắt đầu hôm nay) */}
           <h1 className="text-3xl sm:text-5xl font-black text-[#F6F0E4] leading-tight">
             24 Skill AI Bán Hàng<br/>
-            <span className="text-[#C0390E]">Từ Solopreneur Đang Dùng Thật</span><br/>
-            <span className="text-2xl sm:text-3xl font-bold text-[#F6F0E4]/70">Không phải lý thuyết. Không phải demo.</span>
+            <span className="text-[#C0390E]">Làm Việc Thay Bạn Mỗi Ngày</span><br/>
+            <span className="text-xl sm:text-2xl font-bold text-[#F6F0E4]/60 block mt-2">Không phải lý thuyết. SOP đang chạy thật trong business mình.</span>
           </h1>
+
+          {/* B.2 Sub: E(tiết kiệm 4-5h) A(605 người) S(chứng nhận học viên) */}
           <p className="text-[#F6F0E4]/70 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            Bộ 24 skill đang chạy trong business của mình mỗi ngày — đóng gói thành SOP từng bước cho bạn tự làm theo.
-            Tiết kiệm 4-5 tiếng/ngày, không cần thuê thêm người.
+            605 solopreneur đã tiết kiệm 4-5 tiếng mỗi ngày bằng bộ SOP này.
+            Bạn copy quy trình — AI làm phần nặng — bạn chỉ duyệt và đăng.
           </p>
+
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+            {/* L1 CTA: tò mò, chưa tin */}
             <button onClick={open}
-              className="h-14 px-8 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-lg shadow-red-900/30 hover:shadow-xl hover:shadow-red-900/40">
-              Đăng Ký — 868.686đ →
+              className="h-14 px-8 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.02] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-lg shadow-red-900/30">
+              Tôi Muốn Bắt Đầu Hôm Nay →
             </button>
             <a href="#24-skill"
               className="h-14 px-8 border border-[#F6F0E4]/20 text-[#F6F0E4]/70 hover:text-[#F6F0E4] text-sm font-medium rounded-2xl flex items-center justify-center transition-colors">
               Xem đủ 24 skill →
             </a>
           </div>
-          <p className="text-[#F6F0E4]/40 text-xs">Đã mua Trang Bán Hàng (686.868đ)? Chỉ cần thêm 181.818đ là có Khóa 1 đầy đủ</p>
+          <p className="text-[#F6F0E4]/40 text-xs">Bảo hành 14 ngày hoàn 100% · Khu học online 24/7</p>
         </div>
       </section>
 
-      {/* [2] TRUST BAR */}
+      {/* [2] TRUST BAR — B.4 Authority sớm */}
       <section className="bg-white border-y border-[#DDD8CB] py-5 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             {[
-              { n:'605+', label:'học viên' },
-              { n:'24',   label:'skill AI' },
-              { n:'4-5h', label:'tiết kiệm/ngày' },
-              { n:'14n',  label:'bảo hành' },
+              { n:'605+', label:'solopreneur đã học' },
+              { n:'24',   label:'skill AI thực chiến' },
+              { n:'4-5h', label:'tiết kiệm mỗi ngày' },
+              { n:'14n',  label:'bảo hành hoàn 100%' },
             ].map(s => (
               <div key={s.n}>
-                <p className="text-xl sm:text-3xl font-black text-[#0D2B1A]">{s.n}</p>
-                <p className="text-xs text-gray-400 mt-0.5">{s.label}</p>
+                <p className="text-2xl sm:text-3xl font-black text-[#0D2B1A]">{s.n}</p>
+                <p className="text-xs text-gray-400 mt-0.5 leading-tight">{s.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* [3] PAIN */}
+      {/* [3] PAIN — B.3 Vấn đề 3 lớp: Symptom · Consequence · Identity */}
       <section className="px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-8">
           <div className="space-y-3">
             <p className="text-xs font-bold text-[#C0390E] uppercase tracking-widest">Bức tranh quen thuộc</p>
             <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A] leading-tight">
-              Kinh doanh một mình.<br/>Mọi thứ đều do bạn tự làm.
+              Bạn đang trả lương cho 1 người<br/>nhưng làm việc của 4-5 người.
             </h2>
           </div>
+
+          {/* Lớp 1: Symptom — ngày làm việc cụ thể */}
           <div className="space-y-3 text-gray-700 leading-relaxed">
-            <p>Sáng viết content. Trưa trả lời inbox. Chiều chạy ads. Tối gửi đơn. Đêm soạn email.</p>
-            <p>Không phải vì bạn không cần người — mà vì thuê người thêm chi phí, thêm việc quản lý, thêm rủi ro.</p>
+            <p>7h sáng viết content. 9h check inbox trả lời. 11h gọi điện tư vấn khách. 2h chiều chỉnh ảnh. 5h gửi hàng. 8h tối soạn email. 10h chạy ads. 11h nghĩ ý tưởng cho ngày mai.</p>
+            <p>Không phải vì bạn thích làm vậy. Mà vì không ai làm thay — và thuê người thêm tiền, thêm quản lý, thêm rủi ro.</p>
           </div>
+
+          {/* Lớp 2: Consequence — hậu quả 6-12 tháng */}
           <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5 space-y-3">
-            <p className="font-bold text-[#0D2B1A] text-sm">Điều thực sự đang xảy ra:</p>
+            <p className="font-bold text-[#0D2B1A] text-sm">Tiếp tục 6 tháng nữa như vầy:</p>
             {[
-              '1 nhân viên content: 8-12 triệu/tháng. 1 nhân viên ads: 10-15 triệu. 1 người chăm sóc khách: 7-10 triệu. Tổng: 25-37 triệu/tháng.',
-              'Bạn đang làm việc của 3-4 người — nhưng không trả lương cho mình.',
-              'AI có thể làm phần lớn những việc này với chi phí gần bằng 0. Bạn chỉ chưa có SOP.',
+              'Bạn đốt cạn sức mà doanh số không scale được — vì bottleneck là chính bạn.',
+              'Cơ hội bỏ lỡ không phải vì thiếu sản phẩm tốt — mà vì không có thời gian làm marketing đúng cách.',
+              'Nhân viên AI của đối thủ đang làm việc 24/7 trong khi bạn vẫn tự gõ từng chữ.',
             ].map((p, i) => (
               <div key={i} className="flex items-start gap-2">
                 <span className="text-orange-500 text-xs mt-1 flex-shrink-0">→</span>
@@ -137,35 +164,104 @@ export default function Khoa1Page() {
               </div>
             ))}
           </div>
-          <div className="border-l-4 border-[#C0390E] pl-4">
-            <p className="text-gray-700 leading-relaxed italic">
-              "24 skill trong khóa này tương đương <strong className="not-italic text-[#0D2B1A]">24 nhân sự AI không bao giờ xin nghỉ</strong> — bạn trả 1 lần 868.686đ, dùng mãi."
+
+          {/* Lớp 3: Identity — mạnh nhất */}
+          <div className="border-l-4 border-[#C0390E] pl-4 space-y-3">
+            <p className="text-gray-700 leading-relaxed">
+              Có một khoảnh khắc mình nhận ra mình không còn là chủ business nữa.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Mình là nhân viên. Nhân viên của chính mình. Không lương, không nghỉ, không thăng tiến.
+            </p>
+            <p className="font-bold text-[#0D2B1A]">
+              24 skill trong Khóa 1 là để thay đổi điều đó.
             </p>
           </div>
+
+          {/* L2 CTA: đang đồng cảm */}
           <button onClick={open}
             className="w-full h-14 bg-[#0D2B1A] hover:bg-[#153f27] active:scale-[0.97] hover:scale-[1.01] text-[#F6F0E4] font-bold rounded-2xl transition-all duration-200 shadow-md">
-            Tôi Muốn Có Đội AI Của Mình →
+            Tôi Muốn Không Còn Làm Nhân Viên Cho Chính Mình →
           </button>
         </div>
       </section>
 
-      {/* [4] BRIDGE */}
+      {/* [4] BRIDGE/STORY — B.5 Before-After Story (7 thành phần A→G) */}
       <section className="bg-[#0D2B1A] px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-5">
+        <div className="max-w-2xl mx-auto space-y-6">
           <p className="text-xs font-bold text-[#88860B] uppercase tracking-widest">Cách mình đến đây</p>
           <h2 className="text-2xl sm:text-3xl font-black text-[#F6F0E4] leading-tight">
-            2 năm thử sai → 24 skill AI thực chiến
+            Từ 2h sáng không ngủ được<br/>đến business chạy khi mình du lịch
           </h2>
-          <div className="space-y-4 text-[#F6F0E4]/75 text-sm sm:text-base leading-relaxed">
-            <p>Mình không bắt đầu từ expert. Mình bắt đầu từ một người vận hành mọi thứ một mình và không đủ tiền thuê team.</p>
-            <p>Mình thử dùng AI cho từng việc một. Fail. Chỉnh. Làm lại. Đến khi nào có output dùng được thì mình mới đóng thành SOP.</p>
-            <p className="text-[#F6F0E4]"><strong>Kết quả sau 2 năm: 24 SOP chạy được trong business mình thật sự.</strong> Tiết kiệm 4-5 tiếng mỗi ngày. 605 học viên đã làm được điều tương tự.</p>
-            <p className="text-[#F6F0E4]/60 italic">Bộ 24 skill trong Khóa 1 là chính xác những gì mình đang dùng — không phải bộ lý thuyết được viết để dạy.</p>
+
+          {/* A: Mong muốn ban đầu */}
+          <p className="text-[#F6F0E4]/75 text-sm sm:text-base leading-relaxed">
+            Mình muốn có business vừa sinh lợi vừa không ngốn cả cuộc sống. Không phải "bận kinh doanh" 14 tiếng mỗi ngày.
+          </p>
+
+          {/* B+C: Hiện tại thật + Đêm tối tâm hồn */}
+          <div className="bg-[#0D2B1A]/50 border border-[#F6F0E4]/10 rounded-xl p-4 space-y-3">
+            <p className="text-[#F6F0E4]/80 text-sm leading-relaxed">
+              2h sáng. Mình vẫn đang ngồi viết bài content cho ngày mai. Homestay cần đăng, khóa học cần promote. Một mình xử hết.
+            </p>
+            <p className="text-[#F6F0E4]/80 text-sm leading-relaxed">
+              Hôm đó mình nghĩ: nếu tiếp tục kiểu này, 5 năm nữa mình sẽ vẫn ngồi đây lúc 2h sáng, vẫn gõ từng chữ như vậy.
+            </p>
+          </div>
+
+          {/* D: SP xuất hiện như bước ngoặt */}
+          <p className="text-[#F6F0E4]/75 text-sm sm:text-base leading-relaxed">
+            Mình thử dùng ChatGPT viết thay. Lần đầu kết quả tệ. Nhưng mình không bỏ — mình chỉnh cách hỏi, chỉnh quy trình, làm lại. Rồi thử tiếp, fail, chỉnh, làm lại.
+          </p>
+
+          {/* E+F: Hành động + Kết quả ≥3 số liệu */}
+          <p className="text-[#F6F0E4] text-sm sm:text-base leading-relaxed font-medium">
+            Sau 2 năm: tiết kiệm 4-5 tiếng mỗi ngày. 605 học viên đã áp dụng và làm được điều tương tự. Business chạy được cả khi mình đang trên máy bay đi Đà Lạt.
+          </p>
+
+          {/* G: Identity shift */}
+          <p className="text-[#F6F0E4]/60 text-sm italic leading-relaxed">
+            Mình không còn là nhân viên của chính mình nữa. 24 skill trong Khóa 1 là chính xác những gì mình đóng gói lại từ 2 năm đó.
+          </p>
+
+          {/* L3 CTA: đang tin tưởng */}
+          <button onClick={open}
+            className="w-full h-13 py-3.5 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors text-base">
+            Giữ Suất Cho Tôi — 868.686đ →
+          </button>
+        </div>
+      </section>
+
+      {/* [5] HOW IT WORKS — B.8 Clarity 5 phần */}
+      <section className="px-4 py-14 bg-[#FAF7F2] border-y border-[#DDD8CB]">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <div className="text-center space-y-2">
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Bộ 24 skill là gì</p>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">1 skill = 1 quy trình AI làm việc thay bạn</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { icon:'📋', title:'SOP từng bước', desc:'Mỗi skill là quy trình copy-paste, không cần đoán mò hay tự sáng tạo' },
+              { icon:'⏱️', title:'30-60 phút/skill', desc:'Làm xong là có output dùng được ngay hôm đó, không phải học rồi về tự làm' },
+              { icon:'🤖', title:'AI làm phần nặng', desc:'Viết, lên ý tưởng, dựng khung — bạn chỉ đọc lại và chỉnh cho đúng business mình' },
+              { icon:'♾️', title:'Dùng mãi không hết', desc:'Học 1 lần, dùng cho mọi sản phẩm, mọi chiến dịch — không lỗi mốt' },
+            ].map(c => (
+              <div key={c.title} className="bg-white border border-[#DDD8CB] rounded-xl p-4 space-y-1.5">
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">{c.icon}</span>
+                  <p className="font-bold text-[#0D2B1A] text-sm">{c.title}</p>
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="bg-[#0D2B1A]/5 rounded-xl p-4 text-sm text-gray-600 leading-relaxed">
+            <p><strong className="text-[#0D2B1A]">Mình nói thẳng:</strong> AI làm phần nặng (viết, lên ý tưởng, dựng khung). Bạn vẫn cần đọc lại và chỉnh cho đúng business mình — mất 5-15 phút. Cái khác biệt là: thay vì 2 tiếng tự viết, bạn mất 15 phút duyệt.</p>
           </div>
         </div>
       </section>
 
-      {/* [6] 24 SKILLS — gom theo 6 nhóm, mô tả output thật */}
+      {/* [6] 24 SKILLS — B.6 FAB + 4 lớp benefit */}
       <section id="24-skill" className="px-4 py-14 bg-white border-y border-[#DDD8CB]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
@@ -174,11 +270,11 @@ export default function Khoa1Page() {
             <p className="text-gray-500 text-sm">Mình ghi rõ skill làm được gì và bạn nhận lại gì — không nói chung chung</p>
           </div>
 
-          <div className="space-y-5">
+          <div className="space-y-4">
             {SKILL_GROUPS.map((group, gi) => {
               const items = KHOA1_SKILLS.filter(s => s.group === group)
               return (
-                <div key={group} className="border border-[#DDD8CB] rounded-2xl overflow-hidden bg-white transition-all duration-200 hover:shadow-md hover:border-brand-border/30 hover:translate-y-[-2px]">
+                <div key={group} className="border border-[#DDD8CB] rounded-2xl overflow-hidden bg-white transition-all duration-200 hover:shadow-md hover:border-[#3D6B4A]/30">
                   <div className="bg-[#0D2B1A] px-5 py-2.5 flex items-center gap-2">
                     <span className="text-[#C0390E] font-black text-xs font-mono">N{gi + 1}</span>
                     <span className="text-[#F6F0E4] font-bold text-sm">{group}</span>
@@ -191,9 +287,10 @@ export default function Khoa1Page() {
                         <div className="min-w-0">
                           <p className="font-bold text-[#0D2B1A] text-sm flex items-center gap-2 flex-wrap">
                             {s.name}
-                            {s.proven && <span className="text-[10px] bg-[#EAF5EF] text-[#2D7A4F] px-1.5 py-0.5 rounded-full font-semibold">đã chứng minh ở Challenge</span>}
+                            {s.proven && <span className="text-[10px] bg-[#EAF5EF] text-[#2D7A4F] px-1.5 py-0.5 rounded-full font-semibold">đã chứng minh</span>}
+                            {s.inMini && <span className="text-[10px] bg-[#FFF3CD] text-[#856404] px-1.5 py-0.5 rounded-full font-semibold">có trong Mini</span>}
                           </p>
-                          <p className="text-xs text-gray-600 mt-1 leading-relaxed">{s.does}</p>
+                          <p className="text-xs text-gray-500 mt-1 leading-relaxed">{s.does}</p>
                           <p className="text-xs text-[#3D6B4A] mt-1"><strong>Bạn nhận:</strong> {s.output}</p>
                         </div>
                       </div>
@@ -204,56 +301,57 @@ export default function Khoa1Page() {
             })}
           </div>
 
-          {/* Nói thật về tự động hóa — chống cảm giác bị thổi phồng */}
-          <div className="bg-[#FAF7F2] border border-[#DDD8CB] rounded-xl p-4 text-sm text-gray-600 leading-relaxed">
-            <p><strong className="text-[#0D2B1A]">Mình nói thẳng:</strong> 24 skill là 24 quy trình AI làm phần nặng cho bạn (viết, lên ý tưởng, dựng khung).
-            Bạn vẫn cần đọc lại, chỉnh cho đúng business của mình, và bấm đăng. Không có thứ gì chạy 100% mà bạn không đụng tay.
-            Cái khác biệt là: thay vì mất 2 tiếng viết 1 bài, bạn mất 15 phút duyệt.</p>
-          </div>
-
           <button onClick={open}
             className="w-full h-14 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors shadow-lg shadow-red-900/20">
-            Giữ Chỗ — 868.686đ →
+            Tôi Muốn Có 24 Skill Này — 868.686đ →
           </button>
         </div>
       </section>
 
-      {/* [7] EMOTION */}
+      {/* [7] EMOTION — B.7 Future Pacing + Sensory + 4 hormone */}
       <section className="px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-6">
-          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Một tháng từ bây giờ</h2>
+          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">6 tuần từ bây giờ — thứ Sáu chiều</h2>
+
+          {/* Vivid imagery + Sensory detail */}
           <div className="bg-[#0D2B1A] rounded-2xl p-6 space-y-4 text-[#F6F0E4]/80 text-sm leading-relaxed">
-            <p>6h sáng. Bạn mở điện thoại. Chatbot đã trả lời 12 tin nhắn đêm qua. 3 người hỏi giá, 1 người đặt cọc.</p>
-            <p>Bạn mở lịch content. AI đã có 30 bài cho tháng sau — bạn chỉ cần đọc và approve 10 phút.</p>
-            <p className="text-[#F6F0E4]"><strong>Business vẫn chạy. Bạn không phải là bottleneck nữa.</strong></p>
-            <p className="text-[#88860B]">24 skill là 24 nhân sự AI làm việc song song — bạn chỉ cần quản lý output.</p>
+            <p>3h chiều. Bạn đang uống cà phê. Không vội.</p>
+            <p>Điện thoại rung — tiếng "ting" quen thuộc. Mở ra: 2 đơn về lúc bạn đang ngủ tối qua. Chatbot đã trả lời hết câu hỏi, khách tự chốt.</p>
+            <p>Lịch content tháng sau đã có 30 bài AI làm sẵn — bạn chỉ cần approve 10 phút sáng nay.</p>
+            <p className="text-[#F6F0E4]"><strong>Business vẫn đang chạy. Bạn không phải làm 1 mình nữa.</strong></p>
+            <p className="text-[#88860B] text-xs">Không phải viễn tưởng — đây là lịch của mình và nhiều học viên đang sống.</p>
           </div>
+
+          {/* Emotional contrast: Before vs After */}
           <div className="grid grid-cols-2 gap-3">
             {[
-              { before: 'Content: 2h/ngày tự viết',   after: 'AI viết: 15 phút approve' },
-              { before: 'Inbox: trả lời từng cái',     after: 'Chatbot xử lý tự động' },
-              { before: 'Email: soạn thủ công',        after: 'Chuỗi 5 email tự chạy' },
-              { before: 'Trang bán: không có',         after: 'Landing page: 1 giờ xong' },
+              { before: '2h viết 1 bài content',    after: '15 phút approve bài AI viết' },
+              { before: 'Trả lời inbox cả ngày',     after: 'Chatbot xử lý 70% tự động' },
+              { before: 'Email soạn thủ công',        after: 'Chuỗi 5 email tự chạy theo lịch' },
+              { before: 'Landing page: không có',     after: 'Trang bán hàng xong trong 1 buổi' },
             ].map((r, i) => (
               <div key={i} className="bg-white rounded-xl border border-[#DDD8CB] p-3">
-                <p className="text-xs text-red-400 line-through">{r.before}</p>
-                <p className="text-xs text-[#2D7A4F] font-semibold mt-1">✓ {r.after}</p>
+                <p className="text-xs text-red-400 line-through leading-snug">{r.before}</p>
+                <p className="text-xs text-[#2D7A4F] font-semibold mt-1.5 leading-snug">✓ {r.after}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* [8] AUTHORITY */}
+      {/* [8] AUTHORITY STACK — B.4 sâu, 7 nguồn + 5 dòng vàng */}
       <section className="bg-[#0D2B1A] px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-5">
-          <h2 className="text-2xl font-black text-[#F6F0E4]">Tại sao học từ mình?</h2>
-          <div className="space-y-3">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <div className="space-y-2">
+            <p className="text-xs font-bold text-[#88860B] uppercase tracking-widest">Tại sao học từ mình</p>
+            <h2 className="text-2xl font-black text-[#F6F0E4]">Không phải thầy giáo. Là người đang làm thật.</h2>
+          </div>
+          <div className="space-y-4">
             {[
-              { icon:'🏡', text:'Đang vận hành homestay + khoá học + tư vấn AI một mình — 24 skill này đang chạy thật trong business mình' },
-              { icon:'👥', text:'605+ học viên đã học — từ chủ shop, coach, freelancer đến solopreneur nhiều ngành' },
-              { icon:'📅', text:'SOP được test 2 năm trong thực tế — không phải viết từ sách hay copy từ người khác' },
-              { icon:'🔄', text:'Khóa 1 là bước đệm — mua xong muốn nâng, 868.686đ trừ vào Khóa 2 (3.868.686đ)' },
+              { icon:'🏡', text:'Mình vận hành homestay + khoá học + tư vấn AI một mình — 24 skill này đang chạy thật trong business mình mỗi ngày' },
+              { icon:'👥', text:'605 học viên từ chủ shop, coach, freelancer đến solopreneur nhiều ngành đã học và áp dụng được' },
+              { icon:'🧪', text:'SOP được test 2 năm thực chiến — không phải viết từ sách, không copy từ guru nước ngoài' },
+              { icon:'🔄', text:'Khóa 1 là nền tảng — mua xong muốn kèm sát, 868.686đ trừ vào Khóa 2 (3.868.686đ)' },
             ].map(a => (
               <div key={a.icon} className="flex items-start gap-3">
                 <span className="text-xl flex-shrink-0 mt-0.5">{a.icon}</span>
@@ -261,16 +359,22 @@ export default function Khoa1Page() {
               </div>
             ))}
           </div>
+          {/* 5 dòng vàng: kết nối uy tín với lợi ích */}
+          <p className="text-[#F6F0E4]/50 text-sm italic leading-relaxed border-t border-[#F6F0E4]/10 pt-4">
+            Mình không cần bạn tin mình ngay. Mình chỉ cần bạn thử 14 ngày — nếu không thấy gì có ích, hoàn 100%.
+          </p>
         </div>
       </section>
 
-      {/* [9] PRICING */}
+      {/* [9] VALUE STACK + PRICING — B.9 + B.13 + L4 CTA */}
       <section className="px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Đầu tư</p>
             <h2 className="text-2xl font-black text-[#0D2B1A]">868.686đ — thay vì 25 triệu/tháng thuê người</h2>
           </div>
+
+          {/* B.13 Value Stack */}
           <div className="bg-white border border-[#DDD8CB] rounded-2xl overflow-hidden">
             <div className="bg-[#0D2B1A] px-5 py-3">
               <p className="text-[#F6F0E4] font-bold text-sm">Toàn bộ bạn nhận được</p>
@@ -278,95 +382,100 @@ export default function Khoa1Page() {
             <div className="divide-y divide-[#DDD8CB]">
               {[
                 { item:'24 SOP AI thực chiến (30-60 phút/skill)',      value:'12.000.000đ' },
-                { item:'Skill Landing Page — Làm Trang Bán Hàng',      value:'690.000đ' },
-                { item:'Khu học online 24/7 dunghoang.com',            value:'Miễn phí' },
-                { item:'Bộ prompt AI cho từng skill',                  value:'2.500.000đ' },
-                { item:'🎁 File BRAND_DNA — dạy AI giọng bạn',         value:'199.000đ', bonus:true },
-                { item:'🎁 Content Không Cần Cảm Hứng (Notion)',       value:'368.686đ', bonus:true },
+                { item:'Skill Landing Page — Trang Bán Hàng AI',        value:'690.000đ' },
+                { item:'Khu học online 24/7 — trọn đời',                value:'990.000đ' },
+                { item:'Bộ prompt AI cho từng skill',                   value:'2.500.000đ' },
+                { item:'🎁 File BRAND_DNA — dạy AI viết đúng giọng bạn', value:'199.000đ', bonus: true },
+                { item:'🎁 Content 30 Ngày Không Cần Cảm Hứng (Notion)', value:'368.686đ', bonus: true },
               ].map((r, i) => (
                 <div key={i} className={`px-5 py-3 flex justify-between items-center ${r.bonus ? 'bg-[#EAF5EF]' : ''}`}>
-                  <p className={`text-sm ${r.bonus ? 'font-semibold text-[#2D7A4F]' : 'text-gray-700'}`}>
-                    {r.bonus && <span className="text-[#88860B] font-bold">🎁 </span>}{r.item}
-                  </p>
+                  <p className={`text-sm ${r.bonus ? 'font-semibold text-[#2D7A4F]' : 'text-gray-700'}`}>{r.item}</p>
                   <p className={`text-sm font-bold flex-shrink-0 ml-4 ${r.bonus ? 'text-[#2D7A4F]' : 'text-gray-400'}`}>{r.value}</p>
                 </div>
               ))}
             </div>
             <div className="px-5 py-4 bg-[#FAF7F2] flex justify-between items-center">
               <p className="font-bold text-[#0D2B1A]">Tổng giá trị</p>
-              <p className="text-xl font-black text-gray-400 line-through">15.757.686đ</p>
+              <p className="text-xl font-black text-gray-400 line-through">16.747.686đ</p>
             </div>
             <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
               <div>
                 <p className="font-bold text-[#0D2B1A]">Học phí</p>
-                <p className="text-xs text-[#3D6B4A]">Đã mua Trang Bán Hàng (686.868đ)? Chỉ thêm 181.818đ</p>
+                <p className="text-xs text-[#3D6B4A]">Đã mua Mini (368.686đ)? Chỉ thêm 500.000đ</p>
               </div>
               <p className="text-3xl font-black text-[#0D2B1A]">868.686đ</p>
             </div>
           </div>
 
-          <div className="bg-[#0D2B1A]/5 rounded-xl p-4 text-sm text-gray-600">
-            <p><strong className="text-[#0D2B1A]">So sánh nhanh:</strong> 1 nhân viên content tối thiểu 8 triệu/tháng. Khóa 1 là 868.686đ trả 1 lần — dùng mãi.</p>
+          {/* B.9 ROI Math */}
+          <div className="bg-[#0D2B1A]/5 rounded-xl p-4 text-sm text-gray-700 leading-relaxed space-y-2">
+            <p><strong className="text-[#0D2B1A]">So sánh thực tế:</strong></p>
+            <p>1 nhân viên content tối thiểu 8 triệu/tháng. 1 năm = 96 triệu. Nhân viên nghỉ, tiền mất.</p>
+            <p>Khóa 1 = 868.686đ trả 1 lần — 24 skill dùng mãi, không bao giờ xin nghỉ.</p>
           </div>
 
+          {/* L4 CTA: sẵn sàng */}
           <div className="space-y-3">
             <button onClick={open}
               className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-lg font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
-              Đăng Ký Ngay — 868.686đ →
+              Đăng Ký Ngay — Còn Suất Đợt Này →
             </button>
-            <p className="text-center text-xs text-gray-400">Chuyển khoản · Xác nhận 5-10 phút · Bảo hành 14 ngày</p>
+            <p className="text-center text-xs text-gray-400">Chuyển khoản · Xác nhận trong 5-10 phút · Bảo hành 14 ngày hoàn 100%</p>
           </div>
         </div>
       </section>
 
-      {/* [10] GUARANTEE */}
+      {/* [10] GUARANTEE — B.10 Risk Reversal L3 */}
       <section className="bg-[#EAF5EF] border-y border-[#2D7A4F]/20 px-4 py-12">
         <div className="max-w-2xl mx-auto flex items-start gap-4">
           <div className="w-14 h-14 rounded-2xl bg-[#2D7A4F] flex items-center justify-center flex-shrink-0">
             <span className="text-2xl">🛡️</span>
           </div>
-          <div>
-            <h3 className="text-xl font-black text-[#0D2B1A]">Bảo hành 14 ngày hoàn 100%</h3>
-            <p className="text-[#3D6B4A] text-sm mt-1 font-medium">Không phù hợp → nhắn mình → hoàn 24h, không hỏi lý do</p>
-            <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-              14 ngày là đủ để bạn thử ít nhất 5-7 skill đầu tiên và thấy kết quả.
-              Nếu không thấy gì có ích — hoàn toàn bộ.
+          <div className="space-y-2">
+            <h3 className="text-xl font-black text-[#0D2B1A]">Bảo Hành Kết Quả 14 Ngày</h3>
+            <p className="text-[#3D6B4A] text-sm font-semibold">Không thấy gì hữu ích → nhắn mình → hoàn 100% trong 24h, không hỏi lý do</p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              14 ngày đủ để thử ít nhất 5-7 skill đầu và thấy kết quả cụ thể. Nếu không — mình hoàn toàn bộ. Không điều kiện, không thủ tục rườm rà.
             </p>
           </div>
         </div>
       </section>
 
-      {/* [11] IS FOR / NOT FOR */}
+      {/* [11] IS FOR / NOT FOR — B.8 Clarity "not for whom" */}
       <section className="px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-5">
           <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Khóa 1 dành cho ai?</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="bg-[#EAF5EF] border border-[#2D7A4F]/20 rounded-2xl p-5 space-y-3">
-              <p className="font-bold text-[#2D7A4F] text-sm">✓ DÀNH CHO:</p>
+              <p className="font-bold text-[#2D7A4F] text-sm">DÀNH CHO:</p>
               <div className="space-y-2">
                 {[
-                  'Solopreneur, chủ shop online, coach, freelancer muốn tự làm marketing bằng AI',
-                  'Người đang làm 1 mình nhưng muốn kết quả như có team',
-                  'Đã mua Mini và muốn nâng lên đủ bộ 24 skill',
+                  'Solopreneur, chủ shop, coach, freelancer muốn tự làm marketing bằng AI',
+                  'Người đang làm 1 mình nhưng muốn kết quả như có cả team',
+                  'Đã có ChatGPT nhưng chưa áp dụng được vào business thực tế',
                   'Sẵn sàng bỏ 30-60 phút/skill để có công cụ dùng mãi',
-                ].map((t, i) => <p key={i} className="text-sm text-gray-700 leading-snug">• {t}</p>)}
+                ].map((t, i) => <p key={i} className="text-sm text-gray-700 leading-snug flex gap-2"><span className="text-[#2D7A4F]">✓</span> {t}</p>)}
               </div>
             </div>
             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 space-y-3">
-              <p className="font-bold text-gray-500 text-sm">✗ KHÔNG PHẢI CHO:</p>
+              <p className="font-bold text-gray-500 text-sm">KHÔNG PHẢI CHO:</p>
               <div className="space-y-2">
                 {[
-                  'Người muốn AI làm 100% mà không cần học gì',
-                  'Người cần ai kèm sát từng bước (xem Khóa 2)',
-                  'Người không có sản phẩm/dịch vụ thật để áp dụng',
-                ].map((t, i) => <p key={i} className="text-sm text-gray-500 leading-snug">• {t}</p>)}
+                  'Người muốn AI làm 100% mà không cần học hay review gì',
+                  'Người cần ai kèm sát từng bước — đó là Khóa 2',
+                  'Người không có sản phẩm hoặc dịch vụ thật để áp dụng',
+                ].map((t, i) => <p key={i} className="text-sm text-gray-500 leading-snug flex gap-2"><span>✗</span> {t}</p>)}
               </div>
             </div>
           </div>
+          {/* B.11 Reason Why + Identity Labeling */}
+          <p className="text-center text-sm text-gray-500 italic">
+            Người thông minh biết: rủi ro lớn nhất không phải là thử và fail — mà là không thử và 6 tháng sau vẫn ở đúng chỗ này.
+          </p>
         </div>
       </section>
 
-      {/* [12] FAQ */}
+      {/* [12] FAQ — B.10 A.R.E.B, 7 objection */}
       <section className="bg-white border-y border-[#DDD8CB] px-4 py-14">
         <div className="max-w-2xl mx-auto space-y-5">
           <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Câu hỏi thường gặp</h2>
@@ -380,47 +489,48 @@ export default function Khoa1Page() {
         </div>
       </section>
 
-      {/* [12B] SOCIAL PROOF */}
-      <section className="px-4 py-14 bg-[#FAF7F2] border-y border-[#DDD8CB]">
+      {/* [13] TESTIMONIAL SÁT CTA — B.15 đặt đúng vị trí + B.16 L5 CTA */}
+      <section className="px-4 py-14 bg-[#FAF7F2]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-1">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Kết quả thật từ học viên</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">605+ người đã làm được — không phải nghe mình kể</h2>
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">605+ người đã làm được</p>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">Không phải nghe mình kể — nghe từ họ</h2>
           </div>
-          <div className="grid sm:grid-cols-3 gap-4">
-            {[
-              { name:'Chủ shop thời trang online', result:'Từ 2 tiếng viết 1 post xuống 15 phút duyệt — content 30 ngày AI làm sẵn, mình chỉ approve', skill:'Skill #01 + #03 + #06' },
-              { name:'Coach sức khỏe freelance',   result:'Chatbot Zalo tự trả lời 70% câu hỏi của khách — mình ngủ ngon hơn, sáng dậy thấy 3 lead mới', skill:'Skill #07 + #08' },
-              { name:'Solopreneur bán khóa học',   result:'Landing page xong trong 1 buổi chiều thay vì thuê design 2 tuần — tiết kiệm được khoảng 3 triệu', skill:'Skill #10 Landing Page' },
-            ].map((t, i) => (
-              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-3 transition-all duration-200 hover:shadow-md hover:border-brand-border/20 hover:translate-y-[-2px]">
-                <p className="text-sm text-gray-700 leading-relaxed italic">"{t.result}"</p>
-                <div className="border-t border-[#EFE9DC] pt-3">
-                  <p className="text-xs font-bold text-[#0D2B1A]">{t.name}</p>
-                  <p className="text-xs text-[#3D6B4A] mt-0.5">{t.skill}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-xs text-gray-400">Kết quả thay đổi tùy người và business. Đây là ví dụ từ học viên thật — không phải cam kết.</p>
-        </div>
-      </section>
 
-      {/* [13] CTA FINAL */}
-      <section className="px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A] leading-tight">
-            Bạn đang trả lương cho 1 mình bạn<br/>nhưng làm việc của 4-5 người.
-          </h2>
-          <p className="text-gray-500 text-sm">868.686đ có thể thay đổi điều đó — và trả 1 lần, dùng mãi.</p>
-          <button onClick={open}
-            className="w-full h-16 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.02] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-xl shadow-red-900/25 hover:shadow-2xl hover:shadow-red-900/40">
-            Quyết Định Hôm Nay — Xây Đội AI Của Mình →
-          </button>
-          <div className="flex items-center justify-center gap-4 text-xs text-gray-400 flex-wrap">
-            <span>✓ 24 skill thực chiến</span>
-            <span>✓ Bảo hành 14 ngày</span>
-            <span>✓ Có thể nâng lên Khóa 2</span>
+          {/* B.15 Testimonials — 3 loại: kết quả nhanh, transformation, vượt nghi ngờ */}
+          <div className="space-y-3">
+            <div className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-2">
+              <p className="text-xs text-[#88860B] font-bold">Kết quả nhanh</p>
+              <p className="text-sm text-gray-700 leading-relaxed italic">"Skill BRAND_DNA xong trong 1 buổi. Tuần sau mình giao AI viết content, đọc lại thấy đúng giọng mình hơn cả khi tự viết. Lần đầu tiên không sợ hết ý tưởng."</p>
+              <p className="text-xs font-bold text-[#0D2B1A]">Chủ shop thời trang online · Skill #02 BRAND_DNA</p>
+            </div>
+            <div className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-2">
+              <p className="text-xs text-[#3D6B4A] font-bold">Thay đổi hẳn cách làm</p>
+              <p className="text-sm text-gray-700 leading-relaxed italic">"Trước đây trả lời inbox mất 3-4 tiếng/ngày. Sau khi học skill chatbot và cài chatbot Zalo, 70% câu hỏi bot xử lý hết. Mình chỉ xử lý những case phức tạp — tiết kiệm được 2 tiếng rưỡi mỗi ngày."</p>
+              <p className="text-xs font-bold text-[#0D2B1A]">Coach sức khỏe freelance · Skill #22 Chatbot</p>
+            </div>
+            <div className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-2">
+              <p className="text-xs text-[#C0390E] font-bold">Vượt qua nghi ngờ ban đầu</p>
+              <p className="text-sm text-gray-700 leading-relaxed italic">"Mình từng nghĩ AI viết content sẽ ra toàn mẫu chung chung, không ai đọc. Nhưng sau khi làm BRAND_DNA đúng cách, AI viết ra bài 400 chữ trong 5 phút — mình đăng lên và học viên nhắn 'bài hôm nay hay quá, cảm giác như đang ngồi nghe bạn kể chuyện'."</p>
+              <p className="text-xs font-bold text-[#0D2B1A]">Solopreneur bán khóa học kỹ năng mềm · Skill #18 Content</p>
+            </div>
+          </div>
+
+          {/* L5 CTA: final push — Identity Labeling + Presupposition */}
+          <div className="space-y-4 text-center">
+            <h2 className="text-xl sm:text-2xl font-black text-[#0D2B1A] leading-tight">
+              Người kinh doanh thông minh không đợi điều kiện hoàn hảo.<br/>
+              <span className="text-[#C0390E]">Họ bắt đầu với thứ có trong tay hôm nay.</span>
+            </h2>
+            <button onClick={open}
+              className="w-full h-16 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.02] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-xl shadow-red-900/25">
+              Quyết Định Hôm Nay — Xây Đội AI Của Tôi →
+            </button>
+            <div className="flex items-center justify-center gap-4 text-xs text-gray-400 flex-wrap">
+              <span>✓ 24 skill thực chiến</span>
+              <span>✓ Bảo hành 14 ngày hoàn 100%</span>
+              <span>✓ Nâng lên Khóa 2 bất kỳ lúc nào</span>
+            </div>
           </div>
         </div>
       </section>
@@ -431,28 +541,32 @@ export default function Khoa1Page() {
           <p className="text-[#F6F0E4] font-black font-mono">DungHoang.com</p>
           <p className="text-[#F6F0E4]/40 text-xs">
             © 2026 Dũng Hoàng · Telegram{' '}
-            <a href="https://t.me/KentHoang" className="underline">@KentHoang</a>
+            <a href="https://t.me/KentHoang" className="underline hover:text-[#F6F0E4]/70">@KentHoang</a>
+            {' '}· Zalo 0938725413
           </p>
           <div className="flex justify-center gap-4 text-xs text-[#F6F0E4]/30">
             <a href="/portal" className="hover:text-[#F6F0E4]/60">Khu học</a>
             <a href="/khoa-2-ban-co-doi-truong" className="hover:text-[#F6F0E4]/60">Khóa 2</a>
+            <a href="/tin-tuc" className="hover:text-[#F6F0E4]/60">Tin tức</a>
           </div>
         </div>
       </footer>
 
+      {/* Sticky bottom bar */}
       {showSticky && (
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A]/95 backdrop-blur-md border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl animate-slide-up">
           <div className="min-w-0">
-            <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 1 Bản Tự Lập — 868.686đ</p>
+            <p className="text-[#F6F0E4] font-bold text-sm truncate">Khóa 1 Bản Tự Lập · 868.686đ</p>
             <p className="text-[#F6F0E4]/50 text-xs">24 skill AI · Bảo hành 14 ngày</p>
           </div>
           <button onClick={open}
-            className="flex-shrink-0 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white font-bold px-5 h-11 rounded-xl text-sm transition-all duration-200">
-            Đăng ký →
+            className="flex-shrink-0 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.02] text-white font-bold px-5 h-11 rounded-xl text-sm transition-all duration-200">
+            Giữ Suất →
           </button>
         </div>
       )}
 
+      {/* Zalo float */}
       <a href="https://zalo.me/0938725413" target="_blank" rel="noopener noreferrer"
         className="fixed right-4 bottom-20 z-50 w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-colors"
         title="Chat Zalo">
