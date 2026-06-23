@@ -428,7 +428,7 @@ export default function CoursePage() {
         <div className="bg-[#0D2B1A] rounded-2xl p-6 text-center space-y-4">
           <p className="text-[#F6F0E4]/70 text-sm">Mua khóa học để mở khóa toàn bộ {totalCount} ngày</p>
           <a
-            href={`/${slug.replace('_', '-')}`}
+            href={slug === 'landing-page' ? '/landing-page' : `/${slug.replace('_', '-')}`}
             className="inline-block bg-[#1D9E75] text-white text-sm px-8 py-3 rounded-xl font-bold hover:bg-[#17875f] transition-colors"
           >
             Xem chi tiết →

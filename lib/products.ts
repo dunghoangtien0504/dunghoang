@@ -38,8 +38,8 @@ export const PRODUCTS: Record<string, Product> = {
     successUrl: '/cam-on-thu-thach',
   },
   // ── KHÓA LANDING PAGE — Vibe Coding + 8 skill files ──────────────────────────
-  landing_186: {
-    id:         'landing_186',
+  'landing-page': {
+    id:         'landing-page',
     name:       'Landing Page Siêu Chuyển Đổi',
     price:      686868,
     codePrefix: 'DH-LP',
@@ -55,7 +55,7 @@ export const COURSE_SHORT_NAMES: Record<string, string> = {
   khoa2_2768:    'Coaching',
   challenge_368: 'Thử Thách 7 Ngày',
   '1kem1':       '1 Kèm 1',
-  landing_186:   'Landing Page Siêu Chuyển Đổi',
+  'landing-page': 'Landing Page Siêu Chuyển Đổi',
 }
 
 /** Lấy tên ngắn an toàn cho 1 course_id bất kỳ */

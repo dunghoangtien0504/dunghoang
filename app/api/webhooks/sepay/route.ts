@@ -164,7 +164,7 @@ export async function POST(req: NextRequest) {
           }, { onConflict: 'user_id,course_id' })
         }
 
-        if (order.course_id === 'landing_186') {
+        if (order.course_id === 'landing-page') {
           const welcome = getLandingEmailDay1(name)
           await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
         } else if (order.course_id === 'khoa1_686') {
