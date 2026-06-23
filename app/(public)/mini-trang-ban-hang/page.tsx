@@ -86,8 +86,8 @@ export default function MiniTrangBanHangPage() {
             Skill Landing Page · AI Bán Hàng · Tặng Content System
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-[#F6F0E4] leading-tight">
-            Trang Bán Hàng Của Bạn<br/>
-            <span className="text-[#C0390E]">Làm Xong Trong 1 Buổi</span><br/>
+            Landing Page Siêu<br/>
+            <span className="text-[#C0390E]">Chuyển Đổi Cao</span><br/>
             <span className="text-2xl sm:text-3xl font-bold text-[#F6F0E4]/70">Không code. Không thuê người. Không chờ.</span>
           </h1>
           <p className="text-[#F6F0E4]/70 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
@@ -113,8 +113,8 @@ export default function MiniTrangBanHangPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-3 gap-4 text-center">
             {[
-              { n:'605+', label:'học viên đã học' },
               { n:'1 buổi', label:'có trang thật ngay' },
+              { n:'0 code', label:'không cần code một chữ' },
               { n:'14 ngày', label:'bảo hành hoàn tiền' },
             ].map(s => (
               <div key={s.n}>
@@ -163,7 +163,7 @@ export default function MiniTrangBanHangPage() {
 
           <button onClick={open}
             className="w-full h-14 bg-[#0D2B1A] hover:bg-[#153f27] active:scale-[0.97] hover:scale-[1.01] text-[#F6F0E4] font-bold rounded-2xl transition-all duration-200 shadow-md">
-            Tôi Muốn Có Trang Bán Hàng Của Mình →
+            Bắt Đầu Ngay — 686.868đ →
           </button>
         </div>
       </section>
@@ -489,7 +489,7 @@ export default function MiniTrangBanHangPage() {
       {showSticky && (
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A]/95 backdrop-blur-md border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl animate-slide-up">
           <div className="min-w-0">
-            <p className="text-[#F6F0E4] font-bold text-sm truncate">Trang Bán Hàng + Content System — 686.868đ</p>
+            <p className="text-[#F6F0E4] font-bold text-sm truncate">Landing Page Siêu Chuyển Đổi — 686.868đ</p>
             <p className="text-[#F6F0E4]/50 text-xs">Bảo hành 14 ngày · Có thể trừ vào Khóa 1</p>
           </div>
           <button onClick={open}
