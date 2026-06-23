@@ -63,54 +63,74 @@ export default function KhoaLandingPage() {
   const open = () => setShowCheckout(true)
 
   return (
-    <div className="min-h-screen bg-[#F6F0E4] font-sans">
+    <div className="min-h-screen bg-[#F6F0E4] font-sans antialiased text-[#0D2B1A]">
 
       {/* [0] ANNOUNCEMENT BAR */}
-      <div className="bg-[#88860B] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
-        Tặng kèm Content System Notion (368.686đ) + 8 file skill · Bảo hành 14 ngày hoàn 100%
+      <div className="bg-[#88860B] text-[#F6F0E4] text-center py-2.5 px-4 text-xs sm:text-sm font-semibold tracking-wide shadow-sm relative z-20">
+        Tặng kèm Hệ thống Content Notion (368.686đ) + 8 file skill · Bảo hành 14 ngày hoàn tiền 100%
       </div>
 
       {/* [1] HERO */}
-      <section ref={heroRef} className="bg-[#0D2B1A] px-4 pt-14 pb-16">
-        <div className="max-w-3xl mx-auto text-center space-y-5">
-          <div className="inline-block bg-[#C0390E]/20 text-[#E87C5E] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
-            Khóa Thực Hành · Vibe Coding · 10 Skill Files
+      <section ref={heroRef} className="relative overflow-hidden bg-[#0D2B1A] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#173F28] via-[#0D2B1A] to-[#05150C] px-4 pt-20 pb-24 border-b border-[#3D6B4A]/20">
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,_transparent_1px),_linear-gradient(90deg,_rgba(255,255,255,0.015)_1px,_transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+
+        {/* Ambient glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#3D6B4A]/10 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="relative max-w-4xl mx-auto text-center space-y-6">
+          <div className="inline-flex items-center gap-2 bg-[#C0390E]/10 border border-[#C0390E]/30 text-[#FF9E80] text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C0390E] animate-pulse" />
+            Khóa Thực Hành · Vibe Coding · 8 Skill Files Sẵn Có
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black text-[#F6F0E4] leading-tight">
-            Tự Build Landing Page Thật<br/>
-            <span className="text-[#C0390E]">Không Cần Code Một Chữ</span><br/>
-            <span className="text-2xl sm:text-3xl font-bold text-[#F6F0E4]/70">AI làm hết phần kỹ thuật. Bạn chỉ cần nói muốn gì.</span>
+          
+          <h1 className="text-4xl sm:text-6xl font-black text-[#F6F0E4] leading-[1.15] tracking-tight">
+            Tự Dựng Landing Page Thật
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B4A] to-[#C0390E]">
+              Không Cần Biết Code
+            </span>
           </h1>
-          <p className="text-[#F6F0E4]/70 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            10 buổi thực hành với Vibe Coding. Cuối mỗi buổi có file output thật. Cuối khóa bạn có
-            landing page đang chạy thật trên tên miền của bạn — không phải demo, không phải template.
+
+          <p className="text-xl sm:text-2xl font-bold text-[#F6F0E4]/85 max-w-2xl mx-auto">
+            AI làm hết phần kỹ thuật. Bạn chỉ cần ra lệnh bằng tiếng Việt.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+
+          <p className="text-[#C8D5C9] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            10 buổi thực hành có SOP và câu lệnh viết sẵn. Mỗi buổi hoàn thành 1 tệp output thật. 
+            Kết khóa, bạn sở hữu một **trang bán hàng tự động 24/7** chạy trên tên miền của riêng mình — không phải template rập khuôn.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 max-w-md mx-auto">
             <button onClick={open}
-              className="h-14 px-8 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.03] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-lg shadow-red-900/30">
-              Bắt Đầu Ngay — 1.868.000đ →
+              className="group relative h-14 px-8 bg-gradient-to-r from-[#D94F2B] to-[#C0390E] hover:from-[#E85E39] hover:to-[#D94F2B] active:scale-[0.98] text-white text-base font-bold rounded-2xl transition-all duration-200 shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-2">
+              Bắt Đầu Ngay — {product.price}
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
             </button>
             <a href="#curriculum"
-              className="h-14 px-8 border border-[#F6F0E4]/20 text-[#F6F0E4]/70 hover:text-[#F6F0E4] text-sm font-medium rounded-2xl flex items-center justify-center transition-colors">
-              Xem 10 bài học →
+              className="h-14 px-8 bg-[#F6F0E4]/5 border border-[#F6F0E4]/10 hover:bg-[#F6F0E4]/10 hover:border-[#F6F0E4]/25 text-[#F6F0E4]/80 hover:text-[#F6F0E4] text-sm font-semibold rounded-2xl flex items-center justify-center transition-all duration-200">
+              Xem Lộ Trình Chi Tiết
             </a>
           </div>
-          <p className="text-[#F6F0E4]/40 text-xs">Đã mua Landing Page Siêu Chuyển Đổi? 686.868đ được trừ thẳng vào đây.</p>
+
+          <p className="text-[#F6F0E4]/55 text-xs pt-1">
+            Đã sở hữu <em>Landing Page Siêu Chuyển Đổi</em>? Nhắn Telegram <a href="https://t.me/KentHoang" className="underline hover:text-[#F6F0E4]/85 font-medium">@KentHoang</a> để nhận ưu đãi trừ thẳng 686.868đ vào học phí.
+          </p>
         </div>
       </section>
 
       {/* [2] TRUST BAR */}
-      <section className="bg-white border-y border-[#DDD8CB] py-5 px-4">
+      <section className="bg-white border-y border-[#DDD8CB]/80 py-6 px-4 shadow-sm relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="grid grid-cols-3 gap-6 text-center divide-x divide-[#DDD8CB]">
             {[
-              { n:'10 bài', label:'output file thật mỗi bài' },
-              { n:'8 skill', label:'file tải về dùng mãi' },
-              { n:'14 ngày', label:'bảo hành hoàn tiền' },
-            ].map(s => (
-              <div key={s.n}>
-                <p className="text-2xl sm:text-3xl font-black text-[#0D2B1A]">{s.n}</p>
-                <p className="text-xs text-gray-400 mt-0.5">{s.label}</p>
+              { n: '10 Bài Học', label: 'Thực hành ra file thật' },
+              { n: '8 Skill Files', label: 'Tải về máy dùng vĩnh viễn' },
+              { n: '14 Ngày', label: 'Bảo hành hoàn tiền 100%' },
+            ].map((s, idx) => (
+              <div key={s.n} className={idx === 0 ? '' : 'pl-4'}>
+                <p className="text-2xl sm:text-4xl font-extrabold text-[#0D2B1A] tracking-tight">{s.n}</p>
+                <p className="text-xs sm:text-sm text-gray-500 mt-1 font-medium">{s.label}</p>
               </div>
             ))}
           </div>
@@ -118,170 +138,246 @@ export default function KhoaLandingPage() {
       </section>
 
       {/* [3] PAIN */}
-      <section className="px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-8">
-          <div className="space-y-3">
-            <p className="text-xs font-bold text-[#C0390E] uppercase tracking-widest">Vấn đề</p>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A] leading-tight">
-              Muốn có landing page nhưng<br/>không biết bắt đầu từ đâu.
+      <section className="px-4 py-20 bg-[#F6F0E4]">
+        <div className="max-w-3xl mx-auto space-y-12">
+          <div className="text-center space-y-4">
+            <span className="text-xs font-bold text-[#C0390E] uppercase tracking-widest bg-[#C0390E]/5 px-3 py-1 rounded-full border border-[#C0390E]/15">Thực tế phũ phàng</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#0D2B1A] leading-tight">
+              Muốn có trang bán hàng tự động,<br/>nhưng tự làm thì kẹt, thuê ngoài thì sợ
             </h2>
           </div>
-          <div className="space-y-3 text-gray-700 leading-relaxed">
-            <p>Thuê người thì tốn 2-5 triệu, chờ 2 tuần, muốn sửa lại phải nhờ. Xong rồi thấy trang không đúng ý mà ngại nói.</p>
-            <p>Thử dùng AI thì ra cái gì đó chung chung — copy nghe không đúng giọng, design trông không phải của mình, không biết sửa từ đâu.</p>
-            <p>Vì AI không biết bạn là ai, bán gì, cho ai, giọng bạn viết như thế nào. Chưa ai dạy AI điều đó trước khi nhờ nó làm landing page.</p>
-          </div>
-          <div className="bg-orange-50 border border-orange-100 rounded-2xl p-5 space-y-3">
-            <p className="font-bold text-[#0D2B1A] text-sm">Kết quả:</p>
+
+          <div className="grid sm:grid-cols-2 gap-4">
             {[
-              'Vẫn bán qua inbox, giải thích lại từ đầu với từng khách',
-              'Landing page thuê người làm xong rồi để đó, không dám sửa',
-              'Đối thủ có trang bán hàng đẹp hơn dù sản phẩm không tốt hơn',
+              {
+                title: 'Nỗi lo chi phí & kiểm soát',
+                desc: 'Thuê freelancer tốn 2-5 triệu/trang, chờ đợi 2 tuần. Muốn đổi một câu chữ, chỉnh một mức giá lại phải gửi yêu cầu chờ sửa, tốn thời gian và cực kỳ bất tiện.'
+              },
+              {
+                title: 'Nỗi sợ kỹ thuật & code',
+                desc: 'Tự học lập trình, HTML/CSS thì quá sức. Mua các công cụ kéo thả thì trả phí hằng tháng đắt đỏ, dùng vài bữa không hiệu quả lại bỏ phí.'
+              },
+              {
+                title: 'Nỗi thất vọng từ AI chung chung',
+                desc: 'Hỏi ChatGPT viết landing page thì ra nội dung sáo rỗng, nghe toàn văn mẫu marketing giả tạo, không đúng giọng văn chân thực của bạn.'
+              },
+              {
+                title: 'Mệt mỏi vì chốt đơn thủ công',
+                desc: 'Không có trang bán hàng, bạn phải túc trực điện thoại 24/7 để tư vấn qua inbox Zalo/Facebook. Giải thích một nội dung cho 100 khách giống hệt nhau.'
+              }
             ].map((p, i) => (
-              <div key={i} className="flex items-start gap-2">
-                <span className="text-orange-500 text-xs mt-1 flex-shrink-0">→</span>
-                <p className="text-sm text-gray-700">{p}</p>
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-6 shadow-card hover:border-[#3D6B4A]/30 transition-all duration-200">
+                <div className="w-8 h-8 rounded-lg bg-[#C0390E]/10 flex items-center justify-center mb-3">
+                  <span className="text-[#C0390E] font-bold text-sm">!</span>
+                </div>
+                <h4 className="font-bold text-[#0D2B1A] text-base mb-1">{p.title}</h4>
+                <p className="text-sm text-gray-600 leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
+
+          <div className="bg-[#FAF7F2] border border-[#DDD8CB] rounded-3xl p-8 space-y-6">
+            <p className="font-bold text-[#0D2B1A] text-lg text-center sm:text-left">Hậu quả là...</p>
+            <div className="grid sm:grid-cols-3 gap-6">
+              {[
+                { title: 'Tụt hậu doanh số', desc: 'Đối thủ có trang bán hàng đẹp, tự động chốt đơn dù sản phẩm chưa chắc tốt bằng bạn.' },
+                { title: 'Lãng phí tài nguyên', desc: 'Trang bán hàng thuê làm xong rồi đắp chiếu vì không biết cách tự chỉnh sửa, tối ưu.' },
+                { title: 'Kẹt trong việc sự vụ', desc: 'Suốt ngày chat tư vấn thủ công, không có thời gian tập trung cải tiến sản phẩm.' }
+              ].map((item, i) => (
+                <div key={i} className="space-y-2">
+                  <div className="flex items-center gap-2 text-[#C0390E]">
+                    <span className="font-bold text-lg">→</span>
+                    <h5 className="font-bold text-[#0D2B1A] text-sm">{item.title}</h5>
+                  </div>
+                  <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <button onClick={open}
-            className="w-full h-14 bg-[#0D2B1A] hover:bg-[#153f27] text-[#F6F0E4] font-bold rounded-2xl transition-all">
-            Tôi Muốn Tự Build Landing Page →
+            className="w-full h-14 bg-gradient-to-r from-[#0D2B1A] to-[#153f27] hover:from-[#153f27] hover:to-[#0D2B1A] text-[#F6F0E4] font-bold rounded-2xl transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2">
+            Giải Quyết Ngay Với Vibe Coding →
           </button>
         </div>
       </section>
 
       {/* [4] BRIDGE — WHAT IS VIBE CODING */}
-      <section className="bg-[#0D2B1A] px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-6">
-          <p className="text-xs font-bold text-[#88860B] uppercase tracking-widest">Cách làm</p>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#F6F0E4] leading-tight">
-            Vibe Coding: Tải file skill về.<br/>Chat AI. Xong.
-          </h2>
-          <div className="space-y-4 text-[#F6F0E4]/75 text-sm sm:text-base leading-relaxed">
-            <p>Mỗi bài học có 1 file skill (`.zip` hoặc `.skill`). Bạn tải về, kéo vào thư mục, mở Cursor (hoặc Antigravity, Claude Code), rồi chat:</p>
-            <div className="bg-[#1a1a2e] rounded-xl p-4">
-              <p className="text-[#88c0a0] text-xs font-mono mb-1">Câu chat mẫu</p>
-              <p className="text-[#e8f0ec] font-mono text-sm">"Đọc các file trong folder agent-avatar-builder. Sau đó áp dụng skill cho tôi. Tôi đang bán [sản phẩm của bạn]."</p>
+      <section className="bg-[#0D2B1A] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#05150C] via-[#0D2B1A] to-[#173F28] px-4 py-20 relative overflow-hidden">
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,_transparent_1px),_linear-gradient(90deg,_rgba(255,255,255,0.01)_1px,_transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+
+        <div className="relative max-w-3xl mx-auto space-y-8">
+          <div className="space-y-3">
+            <span className="text-xs font-bold text-[#88860B] uppercase tracking-widest bg-[#88860B]/10 px-3 py-1 rounded-full border border-[#88860B]/20">Mô hình vận hành mới</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-[#F6F0E4] leading-tight">
+              Vibe Coding: Tải file skill về. Chat AI. Xong.
+            </h2>
+          </div>
+          
+          <div className="space-y-6 text-[#C8D5C9] text-base leading-relaxed">
+            <p>
+              Khóa học này chuyển giao **8 file skill chuyên dụng** đã được đóng gói sẵn. Bạn không cần tự viết code, 
+              chỉ cần kéo file skill vào thư mục và ra lệnh cho AI trong Cursor/Antigravity/Claude Code:
+            </p>
+            
+            <div className="bg-[#12121E] border border-white/5 rounded-2xl p-5 shadow-inner relative overflow-hidden font-mono text-sm">
+              <div className="flex items-center gap-1.5 pb-3 border-b border-white/5 mb-3">
+                <span className="w-3 h-3 rounded-full bg-[#FF5F56]" />
+                <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
+                <span className="w-3 h-3 rounded-full bg-[#27C93F]" />
+                <span className="text-xs text-gray-500 font-sans ml-2">Terminal AI Chat</span>
+              </div>
+              <p className="text-[#88c0a0] text-xs mb-1">// Dán câu lệnh này vào AI và nhấn Enter:</p>
+              <p className="text-[#e8f0ec] leading-relaxed">
+                "Đọc các file trong folder agent-avatar-builder. 
+                Sau đó áp dụng skill để viết bản mô tả khách hàng cho sản phẩm: [Tên sản phẩm của bạn]."
+              </p>
             </div>
-            <p className="text-[#F6F0E4]"><strong>AI đọc skill, hỏi bạn từng câu, rồi tự viết file output.</strong> Bạn không cần biết code. Không cần biết AI hoạt động như thế nào bên trong. Chỉ cần trả lời câu hỏi của AI.</p>
-            <p>10 bài = 10 file output. File này là input cho file kia. Cuối cùng AI có đủ thông tin để build cả landing page HTML cho bạn.</p>
+
+            <p className="text-[#F6F0E4] font-medium">
+              AI sẽ tự động đọc quy trình SOP, hỏi bạn từng câu hỏi một để lấy dữ liệu thực tế, rồi tự viết ra file kết quả.
+            </p>
+            <p>
+              Mỗi bài học tương ứng với 1 file output (chân dung khách, giọng văn, offer, phễu...). Cuối cùng, 
+              AI sẽ kết nối toàn bộ dữ liệu này để tự viết tệp HTML chạy thật cho landing page của bạn.
+            </p>
           </div>
         </div>
       </section>
 
       {/* [5] CURRICULUM */}
-      <section id="curriculum" className="px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-6">
-          <div className="text-center space-y-2">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Nội dung</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">10 buổi — 10 output thật</h2>
-            <p className="text-sm text-gray-500">Mỗi buổi có file skill + câu chat sẵn + checklist xong bài</p>
+      <section id="curriculum" className="px-4 py-20 bg-[#F6F0E4]">
+        <div className="max-w-3xl mx-auto space-y-12">
+          <div className="text-center space-y-3">
+            <span className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 px-3 py-1 rounded-full border border-[#3D6B4A]/15">Lộ trình học</span>
+            <h2 className="text-3xl font-black text-[#0D2B1A]">10 bài thực hành thực tế</h2>
+            <p className="text-sm text-gray-500 max-w-md mx-auto">Mỗi buổi học bàn giao 1 file skill + prompt copy-paste + checklist phê duyệt bài tập rõ ràng.</p>
           </div>
-          <div className="space-y-3">
+
+          <div className="space-y-4">
             {LESSONS.map((l, i) => (
-              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-4 flex items-start gap-4">
-                <div className="w-9 h-9 rounded-full bg-[#0D2B1A] flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#F6F0E4] text-xs font-black">{l.n}</span>
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 shadow-card hover:border-[#3D6B4A]/40 hover:shadow-card-md transition-all duration-200 flex gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#0D2B1A] flex items-center justify-center flex-shrink-0 text-[#F6F0E4] font-black text-sm shadow-sm">
+                  {l.n}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-start justify-between gap-2">
-                    <p className="font-bold text-[#0D2B1A] text-sm leading-snug">{l.title}</p>
-                    <span className="text-xs text-gray-400 flex-shrink-0">{l.time}</span>
+                <div className="flex-1 min-w-0 space-y-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <p className="font-extrabold text-[#0D2B1A] text-base leading-snug">{l.title}</p>
+                    <span className="text-xs text-gray-400 font-semibold bg-gray-100 px-2 py-0.5 rounded-md self-start sm:self-center">{l.time}</span>
                   </div>
-                  <p className="text-xs text-[#3D6B4A] mt-1 leading-snug">Output: <strong>{l.output}</strong></p>
+                  <p className="text-xs text-[#3D6B4A] leading-relaxed">
+                    Output: <strong className="text-[#0D2B1A]">{l.output}</strong>
+                  </p>
                 </div>
               </div>
             ))}
           </div>
+
           <button onClick={open}
-            className="w-full h-14 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors shadow-lg shadow-red-900/20">
-            Đăng Ký Ngay — 1.868.000đ →
+            className="w-full h-16 bg-gradient-to-r from-[#D94F2B] to-[#C0390E] hover:from-[#E85E39] hover:to-[#D94F2B] text-white font-black rounded-2xl transition-all shadow-lg shadow-brand-accent/15 active:scale-[0.98] flex items-center justify-center gap-2">
+            Đăng Ký Thực Hành Ngay — {product.price} →
           </button>
         </div>
       </section>
 
       {/* [6] WHAT YOU GET */}
-      <section className="bg-white border-y border-[#DDD8CB] px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-8">
-          <div className="text-center space-y-2">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Bạn nhận được</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Đầy đủ để có landing page thật</h2>
+      <section className="bg-white border-y border-[#DDD8CB]/80 px-4 py-20">
+        <div className="max-w-3xl mx-auto space-y-12">
+          <div className="text-center space-y-3">
+            <span className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 px-3 py-1 rounded-full border border-[#3D6B4A]/15">Tài nguyên khóa học</span>
+            <h2 className="text-3xl font-black text-[#0D2B1A]">Những gì bạn nhận được khi đăng ký</h2>
           </div>
-          <div className="space-y-3">
+
+          <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { icon:'🎯', title:'10 bài học có SOP + câu chat sẵn', desc:'Mỗi bài có hướng dẫn từng bước, câu chat copy-paste, và checklist để biết đã xong chưa.' },
-              { icon:'📦', title:'8 file skill — tải về dùng ngay', desc:'avatar-builder, brand-voice, hormozi-system, hero-mechanism, offer-architect, funnel-strategist, landing-page, ui-ux-pro-max. Không cần tìm đâu thêm.' },
-              { icon:'🏗️', title:'Landing page HTML thật — không phải template', desc:'AI build dựa trên avatar + brand-dna + offer thật của bạn. Mỗi trang ra một bản khác nhau, không phải fill-in-the-blank.' },
-              { icon:'🚀', title:'Deploy Vercel + SePay + Meta Pixel', desc:'Bài 10 hướng dẫn đẩy lên Vercel, kết nối tên miền, nhận tiền qua SePay, gắn tracking Pixel. Làm thật luôn.' },
+              { icon:'🎯', title:'10 bài học có SOP thực hành', desc:'Hướng dẫn rõ ràng từng bước, file prompt soạn sẵn, checklist xong bài tự chấm điểm để bạn không lo bị lạc hướng.' },
+              { icon:'📦', title:'8 file skill — Tải về dùng trọn đời', desc:'avatar-builder, brand-voice, hormozi-system, hero-mechanism, offer-architect, funnel-strategist, landing-page, ui-ux-pro-max. Tài sản dùng mãi mãi.' },
+              { icon:'🏗️', title:'Landing page HTML độc bản', desc:'AI sinh mã nguồn HTML trực tiếp dựa trên định vị, giọng văn và offer riêng của bạn, không sao chép hay trùng lặp với bất cứ ai.' },
+              { icon:'🚀', title:'Deploy, Nhận Tiền & Đo lường', desc:'Cài đặt tên miền riêng, nhận tiền chuyển khoản tự động qua SePay, tích hợp Meta Pixel theo dõi conversion. Tất cả chạy thật.' },
             ].map((item, i) => (
-              <div key={i} className="border border-[#DDD8CB] rounded-2xl p-5 flex items-start gap-4">
-                <span className="text-2xl flex-shrink-0">{item.icon}</span>
-                <div>
+              <div key={i} className="border border-[#DDD8CB] rounded-2xl p-6 flex gap-4 bg-[#FAF8F5] hover:bg-white hover:border-[#3D6B4A]/30 hover:shadow-card transition-all duration-200">
+                <span className="text-3xl flex-shrink-0">{item.icon}</span>
+                <div className="space-y-1">
                   <p className="font-bold text-[#0D2B1A] text-sm">{item.title}</p>
-                  <p className="text-sm text-gray-500 mt-1 leading-relaxed">{item.desc}</p>
+                  <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="bg-[#EAF5EF] border-2 border-[#2D7A4F]/30 rounded-2xl p-5 space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="text-xl">🎁</span>
+
+          {/* Bonus block */}
+          <div className="bg-[#EAF5EF] border border-[#2D7A4F]/30 rounded-3xl p-8 space-y-4 shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#2D7A4F]/5 rounded-full translate-x-8 -translate-y-8 pointer-events-none" />
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[#2D7A4F]/10 flex items-center justify-center text-xl">🎁</div>
               <div>
-                <p className="font-black text-[#0D2B1A] text-sm">TẶNG KÈM: Content Không Cần Cảm Hứng</p>
-                <p className="text-xs text-[#3D6B4A] font-medium">Workspace Notion · AI viết bài đúng giọng bạn · Trị giá 368.686đ</p>
+                <p className="font-extrabold text-[#0D2B1A] text-base">TẶNG KÈM: Content Không Cần Cảm Hứng</p>
+                <p className="text-xs text-[#2D7A4F] font-semibold">Workspace Notion + AI viết bài đúng giọng bạn · Trị giá 368.686đ</p>
               </div>
             </div>
-            <div className="space-y-2 text-sm text-gray-700">
+            <div className="grid sm:grid-cols-2 gap-3 text-sm text-gray-700 pt-2 border-t border-[#2D7A4F]/10">
               {[
-                'Brand DNA + Story Bank: AI viết bài không cần nhắc lại giọng mỗi lần',
-                'Hook Library + 600+ mẫu tiêu đề',
-                'Quy trình 4 bước Thu thập → Phân tích → Sản xuất → Phân phối',
-                'AI commands: gõ "viết bài" là có bài sẵn để duyệt',
+                'Brand DNA & Story Bank: Dán một lần, AI nhớ giọng viết mãi mãi',
+                'Hook Library + 600+ mẫu tiêu đề giật tít thu hút',
+                'Quy trình sản xuất đa kênh tự động hóa',
+                'AI Commands: Gõ "viết bài" là có bài viết thô sẵn để chỉnh',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-2">
-                  <span className="text-[#2D7A4F] text-xs mt-0.5 flex-shrink-0 font-bold">✓</span>
-                  <p className="leading-snug">{item}</p>
+                  <span className="text-[#2D7A4F] text-xs mt-1 font-bold">✓</span>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item}</p>
                 </div>
               ))}
             </div>
           </div>
+
           <button onClick={open}
-            className="w-full h-14 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors text-base shadow-lg shadow-red-900/20">
-            Giữ Chỗ — 1.868.000đ →
+            className="w-full h-16 bg-gradient-to-r from-[#D94F2B] to-[#C0390E] hover:from-[#E85E39] hover:to-[#D94F2B] text-white font-black rounded-2xl transition-all shadow-lg shadow-brand-accent/15 active:scale-[0.98] flex items-center justify-center gap-2">
+            Đăng Ký & Nhận Quà Tặng Ngay →
           </button>
         </div>
       </section>
 
       {/* [7] EMOTION */}
-      <section className="px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-6">
-          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">2 tuần nữa trông như thế này</h2>
-          <div className="bg-[#0D2B1A] rounded-2xl p-6 space-y-4 text-[#F6F0E4]/80 text-sm leading-relaxed">
-            <p>Khách hỏi giá. Bạn gửi link. Họ tự đọc, tự thấy giá trị, tự nhấn mua.</p>
-            <p className="text-[#F6F0E4]"><strong>Landing page đang làm việc thay bạn 24/7 — kể cả lúc 3h sáng khi bạn đang ngủ.</strong></p>
-            <p>Và bạn biết cách tự sửa. Muốn đổi giá, đổi headline, đổi hình — mở Cursor lên, chat AI, 5 phút là xong. Không phải nhờ ai.</p>
-            <p>Lần sau cần landing page cho sản phẩm mới, bạn không học lại. Bạn chỉ thay avatar mới vào, chạy skill, 1 buổi là có trang mới.</p>
-            <p className="text-[#88860B]">Đó là kỹ năng — không phải template. Một lần học, dùng mãi.</p>
+      <section className="px-4 py-20 bg-[#F6F0E4]">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-[#0D2B1A] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#173F28] to-[#0D2B1A] border border-[#3D6B4A]/20 rounded-3xl p-8 sm:p-10 space-y-6 text-[#C8D5C9] text-base leading-relaxed shadow-lg relative overflow-hidden">
+            <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-[#3D6B4A]/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <h3 className="text-2xl font-black text-[#F6F0E4] text-center">Bức tranh sau 2 tuần thực hành...</h3>
+            <p>Khách hàng tiềm năng hỏi thăm sản phẩm. Thay vì ngồi giải thích dài dòng qua chat, bạn chỉ cần gửi link trang bán hàng tự động của mình.</p>
+            <p className="text-[#F6F0E4] font-semibold">
+              Khách tự đọc, tự thấy thuyết phục, tự quét QR chuyển khoản. Landing page hoạt động thay bạn 24/7, mang đơn về ngay cả khi bạn đang ngủ.
+            </p>
+            <p>
+              Quan trọng nhất, bạn làm chủ công nghệ. Muốn đổi giá, sửa chữ, thêm quà tặng — bạn chỉ cần bật Cursor lên, chat với AI 5 phút là cập nhật xong, 
+              không cần phụ thuộc vào designer hay dev ngoài.
+            </p>
+            <p className="text-[#88860B] font-bold text-center pt-2">Một lần học kỹ năng, sở hữu hệ thống trọn đời.</p>
           </div>
         </div>
       </section>
 
       {/* [8] AUTHORITY */}
-      <section className="bg-[#0D2B1A] px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-5">
-          <h2 className="text-2xl font-black text-[#F6F0E4]">Tại sao tin quy trình này?</h2>
-          <div className="space-y-3">
+      <section className="bg-[#0D2B1A] relative overflow-hidden px-4 py-20 border-y border-[#3D6B4A]/25">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,_transparent_1px),_linear-gradient(90deg,_rgba(255,255,255,0.01)_1px,_transparent_1px)] bg-[size:48px_48px] pointer-events-none" />
+        <div className="relative max-w-3xl mx-auto space-y-8">
+          <div className="text-center space-y-2">
+            <span className="text-xs font-bold text-[#88860B] uppercase tracking-widest bg-[#88860B]/10 px-3 py-1 rounded-full border border-[#88860B]/20">Chứng thực thực tế</span>
+            <h2 className="text-3xl font-black text-[#F6F0E4]">Tại sao bạn nên tin quy trình này?</h2>
+          </div>
+
+          <div className="space-y-4">
             {[
-              { icon:'✅', text:'Mình đang dùng chính quy trình Vibe Coding này để build và update dunghoang.com hằng ngày' },
-              { icon:'📦', text:'8 file skill này là skill mình đang dùng thật trong business — không phải tạo ra để dạy' },
-              { icon:'🏠', text:'Landing page homestay, landing page khóa học, landing page tư vấn — đều build theo quy trình này' },
-              { icon:'👥', text:'Học viên từ nhiều ngành: coach, bán mỹ phẩm, freelancer, homestay — không ai cần biết code trước' },
-              { icon:'🔄', text:'Đã mua Landing Page Siêu Chuyển Đổi? 686.868đ trừ thẳng vào — nhắn @KentHoang' },
+              { icon: '🛠️', text: 'Tôi dùng chính quy trình Vibe Coding này để tự tay xây dựng, phát triển và cập nhật dunghoang.com mỗi ngày.' },
+              { icon: '📦', text: '8 file skill bàn giao trong khóa học chính là những tệp tin tôi đang sử dụng thật cho việc kinh doanh cá nhân — không phải tạo ra để dạy lý thuyết.' },
+              { icon: '🏠', text: 'Từ landing page cho homestay, khóa học, đến dịch vụ tư vấn của tôi... đều được nhân bản nhanh chóng bằng bộ công cụ này.' },
+              { icon: '👥', text: 'Học viên thuộc mọi ngành nghề (coach, tư vấn, bán sản phẩm vật lý, dịch vụ...) đều tự làm được mà không cần nền tảng công nghệ từ trước.' },
+              { icon: '🔄', text: 'Bảo hành 100% trong 14 ngày. Nếu bạn học thử thấy quy trình không phù hợp, nhắn Telegram @KentHoang nhận lại tiền trong 24h.' },
             ].map(a => (
-              <div key={a.icon} className="flex items-start gap-3">
-                <span className="text-xl flex-shrink-0 mt-0.5">{a.icon}</span>
-                <p className="text-[#F6F0E4]/75 text-sm leading-relaxed">{a.text}</p>
+              <div key={a.icon} className="flex items-start gap-4 bg-white/5 border border-white/5 rounded-2xl p-5 hover:bg-white/10 hover:border-white/10 transition-all duration-200">
+                <span className="text-2xl flex-shrink-0 mt-0.5">{a.icon}</span>
+                <p className="text-[#C8D5C9] text-sm leading-relaxed">{a.text}</p>
               </div>
             ))}
           </div>
@@ -289,94 +385,99 @@ export default function KhoaLandingPage() {
       </section>
 
       {/* [9] PRICING */}
-      <section className="px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-6">
-          <div className="text-center space-y-2">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Đầu tư</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">1.868.000đ — ít hơn thuê freelancer 1 trang</h2>
-            <p className="text-sm text-gray-500">Freelancer build 1 landing page: 2-5 triệu. Chờ 2 tuần. Muốn sửa lại phải nhờ. Không biết làm lần 2.</p>
+      <section className="px-4 py-20 bg-[#F6F0E4]">
+        <div className="max-w-3xl mx-auto space-y-10">
+          <div className="text-center space-y-3">
+            <span className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 px-3 py-1 rounded-full border border-[#3D6B4A]/15">Đầu tư xứng đáng</span>
+            <h2 className="text-3xl font-black text-[#0D2B1A]">Một lần học học phí, tiết kiệm hàng chục triệu thuê ngoài</h2>
+            <p className="text-sm text-gray-500 max-w-md mx-auto">Chi phí thuê ngoài làm 1 trang đã từ 2-5 triệu. Với khóa này, bạn tự làm vô số trang mãi mãi.</p>
           </div>
-          <div className="bg-white border border-[#DDD8CB] rounded-2xl overflow-hidden">
-            <div className="bg-[#0D2B1A] px-5 py-3">
-              <p className="text-[#F6F0E4] font-bold text-sm">Bạn nhận được</p>
+
+          <div className="bg-white border border-[#DDD8CB] rounded-3xl overflow-hidden shadow-md">
+            <div className="bg-[#0D2B1A] px-6 py-4 border-b border-[#DDD8CB]">
+              <p className="text-[#F6F0E4] font-bold text-base">Chi tiết gói bàn giao</p>
             </div>
-            <div className="divide-y divide-[#DDD8CB]">
+            <div className="divide-y divide-[#DDD8CB]/80">
               {[
-                { item:'10 bài học + SOP + câu chat sẵn',          value:'1.200.000đ' },
-                { item:'8 file skill (tải về dùng mãi)',            value:'800.000đ' },
-                { item:'Landing page HTML thật (deploy được)',       value:'500.000đ' },
-                { item:'Hướng dẫn deploy Vercel + kết nối tên miền', value:'200.000đ' },
-                { item:'🎁 Content Không Cần Cảm Hứng (Notion)',    value:'368.686đ', bonus:true },
+                { item:'10 buổi thực hành + SOP hướng dẫn chi tiết', value:'1.200.000đ' },
+                { item:'8 file skill AI chuyên dụng (dùng mãi mãi)', value:'800.000đ' },
+                { item:'Mã nguồn Landing Page HTML độc bản của bạn', value:'500.000đ' },
+                { item:'Hướng dẫn cài đặt deploy Vercel + tên miền riêng', value:'200.000đ' },
+                { item:'🎁 Tặng kèm: Content Không Cần Cảm Hứng (Notion)', value:'368.686đ', bonus:true },
               ].map((r, i) => (
-                <div key={i} className={`px-5 py-3 flex justify-between items-center ${r.bonus ? 'bg-[#EAF5EF]' : ''}`}>
-                  <p className={`text-sm ${r.bonus ? 'font-semibold text-[#2D7A4F]' : 'text-gray-700'}`}>{r.item}</p>
+                <div key={i} className={`px-6 py-4 flex justify-between items-center ${r.bonus ? 'bg-[#EAF5EF]/70' : ''}`}>
+                  <p className={`text-sm ${r.bonus ? 'font-bold text-[#2D7A4F]' : 'text-gray-700'}`}>{r.item}</p>
                   <p className={`text-sm font-bold flex-shrink-0 ml-4 ${r.bonus ? 'text-[#2D7A4F]' : 'text-gray-400'}`}>{r.value}</p>
                 </div>
               ))}
             </div>
-            <div className="px-5 py-4 bg-[#FAF7F2] flex justify-between items-center">
-              <p className="font-bold text-[#0D2B1A]">Tổng giá trị</p>
-              <p className="text-lg font-black text-gray-400 line-through">3.068.686đ</p>
+            
+            <div className="px-6 py-4 bg-[#FAF7F2] flex justify-between items-center border-t border-[#DDD8CB]">
+              <p className="font-bold text-[#0D2B1A] text-sm">Tổng giá trị quy đổi</p>
+              <p className="text-base font-black text-gray-400 line-through">3.068.686đ</p>
             </div>
-            <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
+            
+            <div className="px-6 py-5 bg-[#EAF5EF] flex justify-between items-center border-t border-[#DDD8CB]">
               <div>
-                <p className="font-bold text-[#0D2B1A]">Học phí</p>
-                <p className="text-xs text-[#3D6B4A]">Đã mua Landing Page Siêu Chuyển Đổi? Trừ 686.868đ</p>
+                <p className="font-black text-[#0D2B1A] text-base">Học phí ưu đãi</p>
+                <p className="text-xs text-[#3D6B4A] mt-0.5">Thanh toán một lần · Cam kết không phát sinh chi phí</p>
               </div>
-              <p className="text-3xl font-black text-[#0D2B1A]">1.868.000đ</p>
+              <p className="text-3xl font-black text-[#0D2B1A]">{product.price}</p>
             </div>
           </div>
-          <div className="space-y-3">
+
+          <div className="space-y-4">
             <button onClick={open}
-              className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-lg font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
-              Đăng Ký Ngay — 1.868.000đ →
+              className="w-full h-16 bg-gradient-to-r from-[#C0390E] to-[#E85E39] hover:from-[#E85E39] hover:to-[#C0390E] text-white text-lg font-black rounded-2xl transition-all shadow-xl shadow-brand-accent/20 active:scale-[0.98]">
+              Đăng Ký Học Ngay — {product.price} →
             </button>
-            <p className="text-center text-xs text-gray-400">Chuyển khoản · Xác nhận trong 5-10 phút · Bảo hành 14 ngày</p>
+            <p className="text-center text-xs text-gray-400">Hỗ trợ chuyển khoản nhanh · Kích hoạt ngay lập tức · Bảo hành 14 ngày</p>
           </div>
         </div>
       </section>
 
       {/* [10] GUARANTEE */}
-      <section className="bg-[#EAF5EF] border-y border-[#2D7A4F]/20 px-4 py-12">
-        <div className="max-w-2xl mx-auto flex items-start gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-[#2D7A4F] flex items-center justify-center flex-shrink-0">
-            <span className="text-2xl">🛡️</span>
+      <section className="bg-[#EAF5EF]/80 border-y border-[#2D7A4F]/20 px-4 py-16">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center sm:items-start gap-6">
+          <div className="w-16 h-16 rounded-2xl bg-[#2D7A4F] flex items-center justify-center flex-shrink-0 text-white text-3xl shadow-sm">
+            🛡️
           </div>
-          <div>
-            <h3 className="text-xl font-black text-[#0D2B1A]">Bảo hành 14 ngày hoàn 100%</h3>
-            <p className="text-[#3D6B4A] text-sm mt-1 font-medium">Không phù hợp → nhắn mình → hoàn 24h, không hỏi lý do</p>
-            <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-              Mình tin vào chất lượng đủ để đặt cam kết này. Nếu học xong mà thấy quy trình không giúp được gì,
-              nhắn Telegram là xong. Mình không giữ tiền của người không thấy giá trị.
+          <div className="space-y-3 text-center sm:text-left">
+            <h3 className="text-2xl font-black text-[#0D2B1A]">Cam kết bảo hành rủi ro 100% trong 14 ngày</h3>
+            <p className="text-[#2D7A4F] text-sm font-bold bg-[#2D7A4F]/5 border border-[#2D7A4F]/15 px-3 py-1 rounded-full inline-block">Học thử thoải mái · Đăng ký không rủi ro</p>
+            <p className="text-sm text-gray-600 leading-relaxed pt-2">
+              Tôi tin vào tính thực chiến của quy trình này đủ để cam kết: Trong vòng 14 ngày kể từ khi đăng ký, nếu bạn áp dụng nhưng thấy không phù hợp, 
+              chỉ cần gửi tin nhắn Zalo/Telegram cho tôi. Tôi sẽ hoàn trả 100% học phí trong vòng 24h, hoàn toàn không hỏi lý do gây khó dễ.
             </p>
           </div>
         </div>
       </section>
 
       {/* [11] FOR WHO */}
-      <section className="px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-5">
-          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Khóa này dành cho ai?</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div className="bg-[#EAF5EF] border border-[#2D7A4F]/20 rounded-2xl p-5 space-y-3">
-              <p className="font-bold text-[#2D7A4F] text-sm">✓ DÀNH CHO BẠN NẾU:</p>
-              <div className="space-y-2">
+      <section className="px-4 py-20 bg-[#F6F0E4]">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <h2 className="text-3xl font-black text-[#0D2B1A] text-center">Khóa học này dành cho ai?</h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="bg-[#EAF5EF] border border-[#2D7A4F]/20 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+              <p className="font-extrabold text-[#2D7A4F] text-base">✓ PHÙ HỢP TUYỆT ĐỐI NẾU:</p>
+              <div className="space-y-3">
                 {[
-                  'Muốn có landing page thật nhưng không biết bắt đầu từ đâu',
-                  'Đã thử dùng AI nhưng ra kết quả chung chung, không đúng giọng',
-                  'Không muốn thuê người vì tốn tiền và mất kiểm soát',
-                  'Muốn học kỹ năng một lần, tự làm được nhiều lần sau',
-                ].map((t, i) => <p key={i} className="text-sm text-gray-700 leading-snug">• {t}</p>)}
+                  'Bạn là Solopreneur, chủ shop, coach, freelancer muốn tự xây trang bán hàng tối ưu.',
+                  'Bạn muốn sở hữu kỹ năng chủ động thiết kế, tự kiểm soát nội dung và nhân bản trang web.',
+                  'Bạn đã thử dùng AI viết bài nhưng chưa ưng ý vì giọng văn quá hời hợt, chung chung.',
+                  'Bạn mong muốn tháo gỡ rào cản chốt đơn thủ công, đưa quy trình bán hàng tự động 24/7.'
+                ].map((t, i) => <p key={i} className="text-sm text-gray-700 leading-relaxed">• {t}</p>)}
               </div>
             </div>
-            <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 space-y-3">
-              <p className="font-bold text-gray-500 text-sm">✗ KHÔNG PHÙ HỢP NẾU:</p>
-              <div className="space-y-2">
+            
+            <div className="bg-white border border-[#DDD8CB] rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+              <p className="font-extrabold text-gray-400 text-base">✗ KHÔNG PHÙ HỢP NẾU:</p>
+              <div className="space-y-3">
                 {[
-                  'Muốn người khác làm thay, không tự tay làm',
-                  'Không có sản phẩm/dịch vụ thật để bán',
-                  'Cần hệ thống 24 AI agent đầy đủ (xem Khóa 1)',
-                ].map((t, i) => <p key={i} className="text-sm text-gray-500 leading-snug">• {t}</p>)}
+                  'Bạn chỉ muốn phó mặc 100% việc cho người khác làm hộ mà không muốn chạm tay vào học hỏi.',
+                  'Bạn chưa có ý tưởng sản phẩm hay dịch vụ cụ thể nào để bắt đầu thiết lập trang bán hàng.',
+                  'Bạn kỳ vọng có phần mềm tự động hóa hoàn toàn không cần tư duy sáng tạo hay chuẩn bị nội dung.'
+                ].map((t, i) => <p key={i} className="text-sm text-gray-500 leading-relaxed">• {t}</p>)}
               </div>
             </div>
           </div>
@@ -384,81 +485,89 @@ export default function KhoaLandingPage() {
       </section>
 
       {/* [12] FAQ */}
-      <section className="bg-white border-y border-[#DDD8CB] px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-5">
-          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Câu hỏi thường gặp</h2>
-          <div className="space-y-2">
+      <section className="bg-white border-y border-[#DDD8CB]/80 px-4 py-20">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <div className="text-center space-y-2">
+            <span className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 px-3 py-1 rounded-full border border-[#3D6B4A]/15">Giải đáp thắc mắc</span>
+            <h2 className="text-3xl font-black text-[#0D2B1A]">Câu hỏi thường gặp</h2>
+          </div>
+
+          <div className="space-y-3 max-w-2xl mx-auto">
             {FAQS.map((f, i) => <AccordionItem key={i} q={f.q} a={f.a} />)}
           </div>
-          <p className="text-center text-sm text-gray-400">
-            Câu hỏi khác? Nhắn Telegram{' '}
-            <a href="https://t.me/KentHoang" className="text-[#3D6B4A] underline font-medium">@KentHoang</a>
+
+          <p className="text-center text-sm text-gray-500 pt-4">
+            Bạn còn thắc mắc khác? Chat trực tiếp với tôi qua Telegram{' '}
+            <a href="https://t.me/KentHoang" className="text-[#3D6B4A] underline font-bold hover:text-[#0D2B1A] transition-colors">@KentHoang</a>
           </p>
         </div>
       </section>
 
       {/* [13] SOCIAL PROOF */}
-      <section className="px-4 py-14 bg-[#FAF7F2] border-y border-[#DDD8CB]">
-        <div className="max-w-2xl mx-auto space-y-6">
-          <h2 className="text-2xl font-black text-[#0D2B1A] text-center">Học viên nói gì</h2>
-          <div className="space-y-4">
+      <section className="px-4 py-20 bg-[#FAF7F2] border-b border-[#DDD8CB]">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <h2 className="text-3xl font-black text-[#0D2B1A] text-center">Phản hồi từ những học viên thực tế</h2>
+          
+          <div className="space-y-4 max-w-2xl mx-auto">
             {[
               {
                 stars: 5,
-                quote: 'Trước mình sợ nhất chữ "code". Giờ biết là mình không cần code gì cả. Cursor đọc file skill rồi tự làm. Mình chỉ trả lời câu hỏi của AI và xem nó build trang bán hàng cho mình.',
+                quote: 'Trước đây tôi rất sợ mấy thuật ngữ kỹ thuật như code, hosting, domain. Không ngờ với Vibe Coding, Cursor đọc file skill và tự viết HTML hết. Tôi chỉ cần trả lời câu hỏi và duyệt kết quả.',
                 name:  'Lan Phương',
-                role:  'Bán khóa học online',
-                result:'Có landing page trong 1 tuần đầu',
+                role:  'Coach & Bán khóa học online',
+                result:'Sở hữu trang bán hàng sau 6 ngày',
               },
               {
                 stars: 5,
-                quote: 'Phần Hormozi và Cơ Chế Khác Biệt là 2 bài mình xem đi xem lại nhiều nhất. Sau khi hiểu 2 phần này, headline trang bán của mình thay đổi hoàn toàn. Khách vào trang không bỏ đi nữa.',
+                quote: 'Phần tư duy Offer Hormozi thực sự làm thay đổi góc nhìn của tôi. Viết headline tập trung giải quyết nỗi đau và cam kết rõ ràng giúp tỷ lệ khách đọc đến cuối trang tăng hẳn.',
                 name:  'Minh Tuấn',
-                role:  'Coach sức khoẻ',
-                result:'Tỷ lệ đọc đến cuối trang tăng',
+                role:  'Huấn luyện viên sức khỏe cá nhân',
+                result:'Tỷ lệ chuyển đổi trang tăng rõ rệt',
               },
               {
                 stars: 5,
-                quote: 'Bài 10 deploy hướng dẫn chi tiết từng bước. Mình không biết Vercel là gì, không biết DNS là gì — nhưng vẫn làm được. Cuối buổi trang đang chạy với tên miền của mình rồi.',
+                quote: 'Bài 10 deploy hướng dẫn chi tiết từng bước. Tôi không biết gì về lập trình vẫn đưa trang web lên tên miền riêng thành công, kết nối SePay tự động báo đơn cực sướng.',
                 name:  'Thu Hà',
-                role:  'Tư vấn dinh dưỡng',
-                result:'Trang thật, tên miền thật, ngày 10',
+                role:  'Chủ shop mỹ phẩm thiên nhiên',
+                result:'Web chạy thật, tên miền riêng hoàn thành',
               },
             ].map((t, i) => (
-              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3 hover:shadow-md transition-all">
-                <div className="flex gap-0.5">
-                  {Array(t.stars).fill(0).map((_, j) => <span key={j} className="text-amber-400 text-sm">★</span>)}
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-6 space-y-4 hover:shadow-card-md hover:border-[#3D6B4A]/30 transition-all duration-200">
+                <div className="flex gap-1 text-amber-400">
+                  {Array(t.stars).fill(0).map((_, j) => <span key={j} className="text-sm">★</span>)}
                 </div>
                 <p className="text-sm text-gray-700 italic leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between pt-2 border-t border-gray-100">
                   <div>
                     <p className="text-sm font-bold text-[#0D2B1A]">{t.name}</p>
-                    <p className="text-xs text-gray-400">{t.role}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">{t.role}</p>
                   </div>
-                  <span className="text-xs bg-[#EAF5EF] text-[#2D7A4F] px-3 py-1 rounded-full font-medium">{t.result}</span>
+                  <span className="text-xs bg-[#EAF5EF] text-[#2D7A4F] px-3 py-1 rounded-full font-bold">{t.result}</span>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-xs text-gray-400 italic">Kết quả thay đổi tùy người và business. Đây là ví dụ từ học viên thật.</p>
+          <p className="text-center text-xs text-gray-400 italic">Lưu ý: Kết quả có thể khác biệt tùy theo sản phẩm và mức độ áp dụng của từng người.</p>
         </div>
       </section>
 
       {/* [14] FINAL CTA */}
-      <section className="px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A] leading-tight">
-            2 tuần nữa,<br/>bạn có thể đã có landing page thật đang chạy.
+      <section className="px-4 py-20 bg-[#F6F0E4]">
+        <div className="max-w-2xl mx-auto space-y-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-black text-[#0D2B1A] leading-tight">
+            2 tuần nữa, bạn đã sở hữu một trang bán hàng tự chốt đơn 24/7
           </h2>
-          <p className="text-gray-500 text-sm">Hoặc tiếp tục giải thích qua inbox với từng khách một.</p>
+          <p className="text-gray-500 text-sm max-w-md mx-auto">Hoặc bạn chọn tiếp tục tốn hàng giờ trực chat Zalo giải thích đi giải thích lại cho từng khách hàng thủ công.</p>
+          
           <button onClick={open}
-            className="w-full h-16 bg-[#C0390E] hover:bg-[#b0300a] active:scale-[0.97] hover:scale-[1.02] text-white text-base font-black rounded-2xl transition-all shadow-xl shadow-red-900/25">
-            Bắt Đầu Ngay — 1.868.000đ →
+            className="w-full h-16 bg-gradient-to-r from-[#C0390E] to-[#E85E39] hover:from-[#E85E39] hover:to-[#C0390E] text-white text-lg font-black rounded-2xl transition-all shadow-xl shadow-brand-accent/25 active:scale-[0.98] hover:scale-[1.01]">
+            Bắt Đầu Ngay — {product.price} →
           </button>
-          <div className="flex items-center justify-center gap-6 text-xs text-gray-400">
-            <span>✓ 1.868.000đ</span>
-            <span>✓ Bảo hành 14 ngày</span>
-            <span>✓ Tặng Content System</span>
+          
+          <div className="flex items-center justify-center gap-6 text-xs text-gray-400 font-semibold">
+            <span>✓ Học phí {product.price}</span>
+            <span>✓ Bảo hành hoàn tiền 14 ngày</span>
+            <span>✓ Tặng Content System Notion</span>
           </div>
         </div>
       </section>
@@ -481,22 +590,23 @@ export default function KhoaLandingPage() {
 
       {/* STICKY BAR */}
       {showSticky && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A]/95 backdrop-blur-md border-t border-[#F6F0E4]/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl animate-slide-up">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0D2B1A]/90 backdrop-blur-md border-t border-white/10 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl animate-slide-up">
           <div className="min-w-0">
-            <p className="text-[#F6F0E4] font-bold text-sm truncate">Landing Page Chuyển Đổi Cao — 1.868.000đ</p>
-            <p className="text-[#F6F0E4]/50 text-xs">10 buổi · Bảo hành 14 ngày · Tặng Content System</p>
+            <p className="text-[#F6F0E4] font-bold text-sm truncate">Tạo Landing Page Chuyển Đổi Cao</p>
+            <p className="text-[#C8D5C9]/60 text-xs truncate">10 bài học · Bàn giao 8 skill · Hoàn tiền 14 ngày</p>
           </div>
           <button onClick={open}
-            className="flex-shrink-0 bg-[#C0390E] hover:bg-[#b0300a] text-white font-bold px-5 h-11 rounded-xl text-sm transition-all">
-            Đăng ký →
+            className="flex-shrink-0 bg-[#C0390E] hover:bg-[#E85E39] text-white font-bold px-5 h-11 rounded-xl text-sm transition-all shadow-md">
+            Đăng ký — {product.price}
           </button>
         </div>
       )}
 
+      {/* Floating Zalo Chat */}
       <a href="https://zalo.me/0938725413" target="_blank" rel="noopener noreferrer"
-        className="fixed right-4 bottom-20 z-50 w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-colors"
-        title="Chat Zalo">
-        <span className="text-white font-bold text-xs">Zalo</span>
+        className="fixed right-6 bottom-20 z-50 w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 group"
+        title="Hỗ trợ Zalo">
+        <span className="text-white font-bold text-xs uppercase tracking-wider group-hover:animate-pulse">Zalo</span>
       </a>
 
       <CheckoutModal productId={product.id} open={showCheckout} onClose={() => setShowCheckout(false)} />
