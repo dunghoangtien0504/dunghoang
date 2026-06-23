@@ -7,16 +7,16 @@ import { PRODUCTS } from '@/lib/products'
 const product = PRODUCTS.landing_186
 
 const LESSONS = [
-  { n:'01', title:'Cài Công Cụ Vibe Coding', time:'30 phút', output:'Cursor / Antigravity / Claude Code đã cài, thư mục làm việc sẵn sàng' },
-  { n:'02', title:'Skill #01 — Chân Dung Khách Hàng', time:'30 phút', output:'avatar-khach-hang.md — biết viết cho ai' },
-  { n:'03', title:'Skill #02 — Giọng Văn Thương Hiệu', time:'45 phút', output:'brand-dna.md — AI viết đúng giọng bạn' },
-  { n:'04', title:'Skill #03 — Tư Duy Offer Kiểu Hormozi', time:'45 phút', output:'offer-scorecard.md — offer nghe xứng đáng với giá' },
-  { n:'05', title:'Skill #05 — Cơ Chế Khác Biệt', time:'45 phút', output:'hero-mechanism.md + 3 bản headline' },
-  { n:'06', title:'Skill #07 — Thiết Kế Offer Hoàn Chỉnh', time:'60 phút', output:'offer-final.md — offer đủ 5 tầng' },
-  { n:'07', title:'Skill #09 — Phễu Bán Hàng', time:'45 phút', output:'funnel-plan.md — 1 mục tiêu rõ cho landing page' },
-  { n:'08', title:'Skill #10 — Xây Landing Page Thật', time:'90 phút', output:'landing-page.html — chạy được, không phải demo' },
-  { n:'09', title:'Skill #11 — Nâng Cấp Giao Diện UI/UX', time:'60 phút', output:'landing-page-v2.html — đẹp hơn, chuyển đổi cao hơn' },
-  { n:'10', title:'Deploy + Thanh Toán + Tracking', time:'60 phút', output:'Landing page đang chạy thật trên tên miền của bạn' },
+  { n:'01', title:'Bài 1: Setup công cụ Vibe Coding (Cursor, Antigravity, Claude Code)', time:'30 phút', output:'Cursor, Antigravity, Claude Code đã cài, thư mục làm việc sẵn sàng' },
+  { n:'02', title:'Bài 2 (Skill 01): Xây dựng Chân dung khách hàng (avatar-khach-hang.md)', time:'30 phút', output:'avatar-khach-hang.md — biết viết cho ai' },
+  { n:'03', title:'Bài 3 (Skill 02): Định hình Giọng văn thương hiệu (brand-dna.md) để AI viết không bị generic', time:'45 phút', output:'brand-dna.md — AI viết đúng giọng bạn' },
+  { n:'04', title:'Bài 4 (Skill 03): Thiết kế Offer theo phương trình giá trị của Alex Hormozi', time:'45 phút', output:'offer-scorecard.md — offer nghe xứng đáng với giá' },
+  { n:'05', title:'Bài 5 (Skill 05): Định danh Cơ chế khác biệt (Hero Mechanism) để giải thích cách làm riêng', time:'45 phút', output:'hero-mechanism.md + 3 bản headline' },
+  { n:'06', title:'Bài 6 (Skill 07): Đóng gói Offer hoàn chỉnh 5 lớp (Core, Bonus, Guarantee, Urgency, CTA)', time:'60 phút', output:'offer-final.md — offer đủ 5 tầng' },
+  { n:'07', title:'Bài 7 (Skill 09): Xác định Phễu bán hàng (Funnel Strategist) và chọn 1 mục tiêu duy nhất cho landing page', time:'45 phút', output:'funnel-plan.md — 1 mục tiêu rõ cho landing page' },
+  { n:'08', title:'Bài 8 (Skill 10): Tự build Landing Page HTML thật từ các file dữ liệu trên', time:'90 phút', output:'landing-page.html — chạy được, không phải demo' },
+  { n:'09', title:'Bài 9 (Skill 11): Nâng cấp UI/UX chuẩn Pro Max (hệ màu, typography, spacing, độ nổi bật của CTA)', time:'60 phút', output:'landing-page-v2.html — đẹp hơn, chuyển đổi cao hơn' },
+  { n:'10', title:'Bài 10: Deploy lên Vercel, cài SePay nhận tiền tự động và gắn Meta Pixel tracking', time:'60 phút', output:'Landing page đang chạy thật trên tên miền của bạn' },
 ]
 
 const FAQS = [

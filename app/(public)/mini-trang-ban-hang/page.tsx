@@ -22,6 +22,12 @@ const CONTENT_SYSTEM_ITEMS = [
   'AI commands: gõ "viết bài" là có bài sẵn để duyệt và đăng',
 ]
 
+const LESSONS = [
+  { n:'01', title:'Bài 1 · Chào mừng — Cách học hiệu quả nhất', time:'5 phút', output:'Hiểu rõ lộ trình và chuẩn bị môi trường làm việc tốt nhất.' },
+  { n:'02', title:'Bài 2 · Skill 02 — Giọng Văn Thương Hiệu (BRAND_DNA)', time:'25 phút', output:'Hoàn thành file BRAND_DNA để AI biết bạn là ai, tự viết bài đúng giọng bạn.' },
+  { n:'03', title:'Bài 3 · Skill 10 — Dựng Landing Page Trong 1 Buổi', time:'45 phút', output:'Sở hữu trang bán hàng chạy thật từ các file dữ liệu trên, không cần biết code.' },
+]
+
 const FAQS = [
   { q:'Không biết code có làm được không?',
     a:'Được. Không cần code, không cần thiết kế. SOP dùng công cụ có sẵn (Canva, Notion, hoặc tool miễn phí). Bạn chỉ cần máy tính và kết nối mạng.' },
@@ -183,27 +189,28 @@ export default function MiniTrangBanHangPage() {
         </div>
       </section>
 
-      {/* [5] HOW IT WORKS */}
-      <section className="px-4 py-14">
-        <div className="max-w-2xl mx-auto space-y-6">
+      {/* [5] CURRICULUM */}
+      <section className="px-4 py-16 bg-[#F6F0E4]">
+        <div className="max-w-2xl mx-auto space-y-8">
           <div className="text-center space-y-2">
-            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Quy trình</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Từ 0 đến trang bán hàng thật trong 1 buổi</h2>
+            <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 px-3 py-1 rounded-full border border-[#3D6B4A]/15 inline-block">Lộ trình học</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#0D2B1A]">3 bài thực hành thực tế</h2>
+            <p className="text-xs text-gray-500">Mỗi buổi học bàn giao 1 file skill + prompt copy-paste + checklist phê duyệt bài tập rõ ràng.</p>
           </div>
-          <div className="space-y-3">
-            {[
-              { n:'1', head:'Nạp BRAND_DNA — 15 phút', body:'Điền file BRAND_DNA: bạn là ai, bán gì, cho ai, giọng viết như thế nào. Làm 1 lần, dùng mãi cho mọi skill sau.' },
-              { n:'2', head:'Dùng prompt tạo copy — 20 phút', body:'Paste BRAND_DNA + prompt vào AI. Nó viết headline, sub, bullets, CTA, section proof theo đúng sản phẩm bạn.' },
-              { n:'3', head:'Lắp vào template — 20 phút', body:'Dùng tool miễn phí, lắp copy vào. Template sẵn có, bạn chỉ thay nội dung, không cần thiết kế từ đầu.' },
-              { n:'4', head:'Chạy checklist 12 điểm — 5 phút', body:'Kiểm tra nhanh 12 điểm trước khi đăng. Không bỏ sót phần nào làm khách đọc xong không mua.' },
-            ].map(s => (
-              <div key={s.n} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#0D2B1A] flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#F6F0E4] text-xs font-black">{s.n}</span>
+          <div className="space-y-4">
+            {LESSONS.map((l, i) => (
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 shadow-card hover:border-[#3D6B4A]/40 hover:shadow-card-md transition-all duration-200 flex gap-4">
+                <div className="w-10 h-10 rounded-xl bg-[#0D2B1A] flex items-center justify-center flex-shrink-0 text-[#F6F0E4] font-black text-sm shadow-sm">
+                  {l.n}
                 </div>
-                <div>
-                  <p className="font-bold text-[#0D2B1A] text-sm">{s.head}</p>
-                  <p className="text-sm text-gray-500 mt-1 leading-relaxed">{s.body}</p>
+                <div className="flex-1 min-w-0 space-y-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <p className="font-extrabold text-[#0D2B1A] text-base leading-snug">{l.title}</p>
+                    <span className="text-xs text-gray-400 font-semibold bg-gray-100 px-2 py-0.5 rounded-md self-start sm:self-center">{l.time}</span>
+                  </div>
+                  <p className="text-xs text-[#3D6B4A] leading-relaxed">
+                    Output: <strong className="text-[#0D2B1A]">{l.output}</strong>
+                  </p>
                 </div>
               </div>
             ))}
