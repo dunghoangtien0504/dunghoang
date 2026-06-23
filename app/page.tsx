@@ -7,7 +7,7 @@ import AffiliateTracker from '@/components/AffiliateTracker'
 
 export const metadata = {
   title: 'DungHoang.com — 24 AI Agent for Business',
-  description: 'Bộ 24 AI agent giúp solopreneur tự vận hành hệ thống bán hàng mà không cần thuê đội ngũ. Thử thách 7 ngày miễn phí.',
+  description: 'Bộ 24 AI agent giúp solopreneur tự vận hành hệ thống bán hàng mà không cần thuê đội ngũ.',
 }
 
 const PRODUCTS = [
@@ -78,17 +78,17 @@ export default function HomePage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
-            href="/thu-thach-7-ngay"
+            href="/khoa-1-ban-tu-lap"
             className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#C0390E] hover:bg-[#A0300B] text-white font-bold rounded-xl transition-all shadow-lg"
           >
-            Thử 7 ngày miễn phí
+            Xem 24 AI Agent
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
-            href="/khoa-1-ban-tu-lap"
+            href="/khoa-2-ban-co-doi-truong"
             className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-white hover:bg-[#FAF7F2] text-[#0D2B1A] font-semibold rounded-xl border border-[#DDD8CB] transition-colors"
           >
-            Xem 24 AI agent
+            Khóa 2 — Có Đội Trưởng
           </Link>
         </div>
       </section>
@@ -201,15 +201,24 @@ export default function HomePage() {
       <section className="max-w-2xl mx-auto px-4 pb-16 text-center space-y-4">
         <h2 className="text-2xl font-bold text-[#0D2B1A]">Bắt đầu từ đâu?</h2>
         <p className="text-[#3D6B4A] text-sm">
-          Nếu chưa biết thì thử 7 ngày miễn phí trước. Không cần thẻ. Không cam kết.
+          Khóa 1 tự học theo nhịp của bạn. Khóa 2 có thêm AI Agent cài riêng cho business của bạn.
         </p>
-        <Link
-          href="/bi-quyet-7-ngay"
-          className="inline-flex items-center gap-2 h-14 px-8 bg-[#C0390E] hover:bg-[#A0300B] active:scale-[0.97] text-white font-bold rounded-2xl transition-all shadow-lg text-base"
-        >
-          Tham gia thử thách 7 ngày miễn phí
-          <ArrowRight className="w-5 h-5" />
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <Link
+            href="/khoa-1-ban-tu-lap"
+            className="inline-flex items-center gap-2 h-14 px-8 bg-[#C0390E] hover:bg-[#A0300B] active:scale-[0.97] text-white font-bold rounded-2xl transition-all shadow-lg text-base"
+          >
+            Khóa 1 — 868.686đ
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+          <Link
+            href="/khoa-2-ban-co-doi-truong"
+            className="inline-flex items-center gap-2 h-14 px-8 bg-white hover:bg-[#FAF7F2] text-[#0D2B1A] font-semibold rounded-2xl border border-[#DDD8CB] transition-colors text-sm"
+          >
+            Khóa 2 — Có Đội Trưởng
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </section>
 
       {/* ── Blog preview ───────────────────────────────────────── */}
@@ -255,7 +264,7 @@ export default function HomePage() {
             <span>DungHoang.com</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/thu-thach-7-ngay" className="hover:text-[#3D6B4A]">Thử thách 7 ngày</Link>
+            <Link href="/khoa-2-ban-co-doi-truong" className="hover:text-[#3D6B4A]">Khóa 2</Link>
             <Link href="/he-thong-content" className="hover:text-[#3D6B4A]">Content System</Link>
             <Link href="/mini-trang-ban-hang" className="hover:text-[#3D6B4A]">Trang Bán Hàng</Link>
             <Link href="/khoa-1-ban-tu-lap" className="hover:text-[#3D6B4A]">24 AI Agent</Link>

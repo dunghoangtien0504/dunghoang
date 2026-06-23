@@ -19,10 +19,6 @@ export default function SiteNav() {
             className="text-sm text-[#3D6B4A] font-medium px-3 py-1.5 rounded-lg hover:bg-[#EAF5EF] hover:text-[#0D2B1A] transition-colors">
             Khóa học
           </Link>
-          <Link href="/bi-quyet-7-ngay"
-            className="text-sm text-[#3D6B4A] font-medium px-3 py-1.5 rounded-lg hover:bg-[#EAF5EF] hover:text-[#0D2B1A] transition-colors">
-            Thử thách
-          </Link>
           <Link href="/tin-tuc"
             className="text-sm text-[#3D6B4A] font-medium px-3 py-1.5 rounded-lg hover:bg-[#EAF5EF] hover:text-[#0D2B1A] transition-colors">
             Tin tức
@@ -31,10 +27,10 @@ export default function SiteNav() {
 
         {/* Right CTAs */}
         <div className="flex items-center gap-2">
-          <Link href="/bi-quyet-7-ngay"
+          <Link href="/khoa-1-ban-tu-lap"
             className="inline-flex text-xs sm:text-sm font-semibold text-white bg-[#C0390E] hover:bg-[#A0300B] active:scale-[0.97] px-2.5 sm:px-3 py-1.5 rounded-lg transition-all">
-            <span className="hidden sm:inline">Thử miễn phí</span>
-            <span className="sm:hidden">Thử ngay</span>
+            <span className="hidden sm:inline">Xem khóa học</span>
+            <span className="sm:hidden">Khóa học</span>
           </Link>
           <Link href="/portal"
             className="hidden sm:block text-sm text-[#7A8C7E] hover:text-[#3D6B4A] transition-colors px-2 py-1.5">
