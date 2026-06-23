@@ -34,9 +34,9 @@ const PRODUCTS = [
   {
     badge: 'Khóa thực hành',
     badgeColor: 'bg-[#FFF0ED] text-[#C0390E]',
-    name: 'Tạo Landing Page Chuyển Đổi Cao',
+    name: 'Landing Page Siêu Chuyển Đổi',
     desc: 'Vibe Coding + 8 skill file. 10 buổi thực hành. Cuối khóa có landing page thật đang chạy.',
-    price: '1.868.000đ',
+    price: '686.868đ',
     cta: 'Xem chi tiết',
     href: '/khoa-landing-page',
     icon: <BookOpen className="w-5 h-5" />,

@@ -12,7 +12,7 @@ export default function CamOnLandingPage() {
     return () => clearTimeout(t)
   }, [])
 
-  const extraNeeded = (3868686 - 1868000).toLocaleString('vi-VN') // 2.000.686
+  const extraNeeded = (3868686 - 686868).toLocaleString('vi-VN') // 3.181.818
 
   return (
     <div className="min-h-dvh bg-[#F6F0E4] font-sans">
@@ -81,7 +81,7 @@ export default function CamOnLandingPage() {
                 kèm từng bước đến khi hệ thống thật sự tự chạy — đó là Coaching.
               </p>
               <p className="text-[#3D6B4A] leading-relaxed text-sm">
-                Và vì bạn đã trả 1.868.000đ rồi, số tiền đó trừ thẳng vào.
+                Và vì bạn đã trả 686.868đ rồi, số tiền đó trừ thẳng vào.
                 Bạn chỉ cần thêm <strong className="text-[#0D2B1A]">{extraNeeded}đ</strong> nữa.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function CamOnLandingPage() {
               </div>
               <div className="flex justify-between items-center text-sm">
                 <span className="text-[#3D6B4A]">Bạn đã trả (Khóa Landing Page)</span>
-                <span className="text-[#2D7A4F] font-semibold">-1.868.000đ</span>
+                <span className="text-[#2D7A4F] font-semibold">-686.868đ</span>
               </div>
               <div className="h-px bg-[#DDD8CB]" />
               <div className="flex justify-between items-center">

@@ -22,7 +22,7 @@ const LESSONS = [
 const FAQS = [
   { q:'Không biết code có làm được không?', a:'Được. Không cần code một chữ. Vibe Coding nghĩa là bạn tải file skill về, bỏ vào thư mục, chat AI "đọc file này và làm hộ tôi". AI viết code, bạn nói muốn gì.' },
   { q:'Cần dùng tool AI nào? Có tốn tiền không?', a:'Cursor (miễn phí tier cơ bản), hoặc Antigravity, hoặc Claude Code. Bài 1 hướng dẫn cài cả 3. Bạn dùng cái nào phù hợp nhất với máy tính bạn đang có.' },
-  { q:'Đã mua Landing Page Siêu Chuyển Đổi (686.868đ) rồi thì sao?', a:'686.868đ đó được trừ thẳng vào học phí khóa này. Bạn chỉ thêm 1.181.132đ nữa là học đủ 10 bài. Nhắn mình qua Telegram @KentHoang để áp dụng.' },
+  { q:'Có thể nâng cấp lên Coaching sau không?', a:'Được. 686.868đ bạn đã trả sẽ được trừ thẳng vào học phí Coaching. Nhắn mình qua Telegram @KentHoang để áp dụng ưu đãi.' },
   { q:'Cuối khóa có landing page thật không hay chỉ bài tập?', a:'Landing page thật. Deploy lên Vercel, có tên miền, SePay nhận tiền. Bài 10 hướng dẫn từng bước deploy và kết nối thanh toán luôn.' },
   { q:'Học bao lâu thì xong?', a:'10 buổi, mỗi buổi 30-90 phút. Ai học liên tục 2 tuần là xong. Ai học cuối tuần thì khoảng 1 tháng.' },
   { q:'Khác gì Khóa 1 — 24 AI Agent?', a:'Khóa 1 dạy cả 24 skill cho nhiều mục đích (content, chatbot, email...). Khóa Landing Page tập trung 100% vào 1 mục tiêu: có landing page thật chạy được cuối khóa. Sâu hơn, có coaching output từng bài.' },
@@ -114,7 +114,7 @@ export default function KhoaLandingPage() {
           </div>
 
           <p className="text-[#F6F0E4]/55 text-xs pt-1">
-            Đã sở hữu <em>Landing Page Siêu Chuyển Đổi</em>? Nhắn Telegram <a href="https://t.me/KentHoang" className="underline hover:text-[#F6F0E4]/85 font-medium">@KentHoang</a> để nhận ưu đãi trừ thẳng 686.868đ vào học phí.
+            Muốn nâng cấp lên Coaching sau? 686.868đ bạn trả hôm nay sẽ được trừ thẳng vào học phí. Nhắn Telegram <a href="https://t.me/KentHoang" className="underline hover:text-[#F6F0E4]/85 font-medium">@KentHoang</a>.
           </p>
         </div>
       </section>
