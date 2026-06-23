@@ -15,6 +15,7 @@ type Enrollment = {
 const COURSE_ACCENT: Record<string, string> = {
   content_368: 'bg-amber-500',
   mini_368:    'bg-emerald-600',
+  landing_186: 'bg-red-600',
   khoa1_686:   'bg-blue-600',
   khoa2_2768:  'bg-purple-600',
   '1kem1':     'bg-orange-600',
@@ -23,6 +24,7 @@ const COURSE_ACCENT: Record<string, string> = {
 const COURSE_EMOJI: Record<string, string> = {
   content_368: '✍️',
   mini_368:    '🛒',
+  landing_186: '🚀',
   khoa1_686:   '⚡',
   khoa2_2768:  '🤝',
   '1kem1':     '🎯',

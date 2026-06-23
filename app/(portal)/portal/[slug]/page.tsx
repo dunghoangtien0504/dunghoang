@@ -139,7 +139,7 @@ function DayCard({
         {/* Title + status */}
         <div className="flex-1 min-w-0">
           <p className={`text-sm font-bold leading-snug ${isLocked ? 'text-gray-300' : 'text-[#0D2B1A]'}`}>
-            Ngày {index + 1} · {lesson.title}
+            Bài {index + 1} · {lesson.title}
           </p>
           <div className="flex items-center gap-2 mt-1">
             <span className={`inline-flex items-center gap-1.5 text-xs font-medium ${cfg.text}`}>
@@ -381,8 +381,8 @@ export default function CoursePage() {
         {enrolled && (
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#F6F0E4]/60">Nhiệm vụ hằng ngày</span>
-              <span className="text-[#F6F0E4] font-bold">{completedCount}/{totalCount} hoàn thành</span>
+              <span className="text-[#F6F0E4]/60">Tiến độ</span>
+              <span className="text-[#F6F0E4] font-bold">{completedCount}/{totalCount} bài hoàn thành</span>
             </div>
             <div className="h-2 bg-white/10 rounded-full overflow-hidden">
               <div

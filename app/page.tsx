@@ -32,6 +32,16 @@ const PRODUCTS = [
     icon: <BookOpen className="w-5 h-5" />,
   },
   {
+    badge: 'Khóa thực hành',
+    badgeColor: 'bg-[#FFF0ED] text-[#C0390E]',
+    name: 'Tạo Landing Page Chuyển Đổi Cao',
+    desc: 'Vibe Coding + 8 skill file. 10 buổi thực hành. Cuối khóa có landing page thật đang chạy.',
+    price: '1.868.000đ',
+    cta: 'Xem chi tiết',
+    href: '/khoa-landing-page',
+    icon: <BookOpen className="w-5 h-5" />,
+  },
+  {
     badge: 'Bộ đầy đủ',
     badgeColor: 'bg-[#EAF5EF] text-[#2D7A4F]',
     name: '24 AI Agent for Business',

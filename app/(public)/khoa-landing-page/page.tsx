@@ -104,8 +104,8 @@ export default function KhoaLandingPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-3 gap-4 text-center">
             {[
-              { n:'650+', label:'học viên đã học' },
-              { n:'10 buổi', label:'output thật mỗi bài' },
+              { n:'10 bài', label:'output file thật mỗi bài' },
+              { n:'8 skill', label:'file tải về dùng mãi' },
               { n:'14 ngày', label:'bảo hành hoàn tiền' },
             ].map(s => (
               <div key={s.n}>
@@ -276,7 +276,7 @@ export default function KhoaLandingPage() {
               { icon:'✅', text:'Mình đang dùng chính quy trình Vibe Coding này để build và update dunghoang.com hằng ngày' },
               { icon:'📦', text:'8 file skill này là skill mình đang dùng thật trong business — không phải tạo ra để dạy' },
               { icon:'🏠', text:'Landing page homestay, landing page khóa học, landing page tư vấn — đều build theo quy trình này' },
-              { icon:'👥', text:'650+ học viên, nhiều người không biết code, không dùng máy tính nhiều — đều có trang thật' },
+              { icon:'👥', text:'Học viên từ nhiều ngành: coach, bán mỹ phẩm, freelancer, homestay — không ai cần biết code trước' },
               { icon:'🔄', text:'Đã mua Landing Page Siêu Chuyển Đổi? 686.868đ trừ thẳng vào — nhắn @KentHoang' },
             ].map(a => (
               <div key={a.icon} className="flex items-start gap-3">
