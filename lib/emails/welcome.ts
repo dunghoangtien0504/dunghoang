@@ -1,11 +1,12 @@
 import { emailLayout } from './layout'
 
 const COURSE_INFO: Record<string, { name: string; drive_link: string; telegram_link: string }> = {
-  content_368: { name: 'Content Không Cần Cảm Hứng',        drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
-  mini_368:    { name: 'Trang Bán Hàng — Làm Trong 1 Buổi', drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
-  khoa1_686:   { name: '24 AI Agent for Business',           drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
-  khoa2_2768:  { name: 'Có Đội — 25 Skill + Tiểu Hà Mã',    drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
-  '1kem1':     { name: '1 Kèm 1 — Dũng Cầm Tay Chỉ Việc',   drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
+  content_368:  { name: 'Content Không Cần Cảm Hứng',          drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
+  mini_368:     { name: 'Landing Page Siêu Chuyển Đổi',         drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
+  landing_186:  { name: 'Tạo Landing Page Chuyển Đổi Cao',      drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
+  khoa1_686:    { name: '24 AI Agent for Business',              drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
+  khoa2_2768:   { name: 'Coaching — Cầm Tay Chỉ Việc',          drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
+  '1kem1':      { name: '1 Kèm 1 — Dũng Cầm Tay Chỉ Việc',     drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
 }
 
 export function getWelcomeEmail(name: string, courseId: string, courseName?: string): { subject: string; html: string } {

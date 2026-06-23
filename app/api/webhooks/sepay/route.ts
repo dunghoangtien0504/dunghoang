@@ -5,6 +5,7 @@ import { getWelcomeEmail } from '@/lib/emails/welcome'
 import { getKhoa1EmailDay1 } from '@/lib/emails/khoa1-onboarding'
 import { formatVND } from '@/lib/products'
 import { getFirstUnlock } from '@/lib/challenge-days'
+import { getLandingEmailDay1 } from '@/lib/emails/landing-onboarding'
 
 // Sepay gửi POST này mỗi khi có tiền vào tài khoản
 export async function POST(req: NextRequest) {
@@ -20,7 +21,7 @@ export async function POST(req: NextRequest) {
 
     // Tìm mã đơn hàng trong nội dung chuyển khoản
     // Prefix khớp với codePrefix trong lib/products.ts: DH-CT, DH-MINI, DH-K1, DH-K2, DH-CHAL
-    const orderCodeMatch = content?.match(/DH-(?:CT|MINI|K1|K2|CHAL)-[A-Z0-9]+/i)
+    const orderCodeMatch = content?.match(/DH-(?:CT|MINI|K1|K2|LP|CHAL)-[A-Z0-9]+/i)
     if (!orderCodeMatch) {
       console.log('[sepay] Không có mã DH trong nội dung:', content)
       return NextResponse.json({ message: 'Bỏ qua — không có mã đơn hàng' }, { status: 200 })
@@ -163,7 +164,10 @@ export async function POST(req: NextRequest) {
           }, { onConflict: 'user_id,course_id' })
         }
 
-        if (order.course_id === 'khoa1_686') {
+        if (order.course_id === 'landing_186') {
+          const welcome = getLandingEmailDay1(name)
+          await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
+        } else if (order.course_id === 'khoa1_686') {
           // Khóa 1 → dùng email onboarding riêng + khởi động chuỗi chăm sóc
           const welcome = getKhoa1EmailDay1(name)
           await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
