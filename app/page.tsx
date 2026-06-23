@@ -131,7 +131,7 @@ export default function HomePage() {
 
         {/* Secondary: 3 others */}
         <div className="grid sm:grid-cols-3 gap-3">
-          {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[3]].map((p, i) => (
+          {[PRODUCTS[0], PRODUCTS[3], PRODUCTS[4]].map((p, i) => (
             <div key={i}
               className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-3 hover:border-[#3D6B4A]/40 hover:shadow-sm transition-all flex flex-col">
               <span className={`text-xs font-semibold px-2.5 py-1 rounded-full self-start ${p.badgeColor}`}>{p.badge}</span>
