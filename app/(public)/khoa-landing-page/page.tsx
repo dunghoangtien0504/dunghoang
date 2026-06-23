@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import CheckoutModal from '@/components/checkout/CheckoutModal'
-import { PRODUCTS } from '@/lib/products'
+import { PRODUCTS, formatVND } from '@/lib/products'
 
 const product = PRODUCTS.landing_186
 
@@ -104,7 +104,7 @@ export default function KhoaLandingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 max-w-md mx-auto">
             <button onClick={open}
               className="group relative h-14 px-8 bg-gradient-to-r from-[#D94F2B] to-[#C0390E] hover:from-[#E85E39] hover:to-[#D94F2B] active:scale-[0.98] text-white text-base font-bold rounded-2xl transition-all duration-200 shadow-lg shadow-brand-accent/20 flex items-center justify-center gap-2">
-              Bắt Đầu Ngay — {product.price}
+              Bắt Đầu Ngay — {formatVND(product.price)}
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </button>
             <a href="#curriculum"
@@ -276,7 +276,7 @@ export default function KhoaLandingPage() {
 
           <button onClick={open}
             className="w-full h-16 bg-gradient-to-r from-[#D94F2B] to-[#C0390E] hover:from-[#E85E39] hover:to-[#D94F2B] text-white font-black rounded-2xl transition-all shadow-lg shadow-brand-accent/15 active:scale-[0.98] flex items-center justify-center gap-2">
-            Đăng Ký Thực Hành Ngay — {product.price} →
+            Đăng Ký Thực Hành Ngay — {formatVND(product.price)} →
           </button>
         </div>
       </section>
@@ -387,49 +387,81 @@ export default function KhoaLandingPage() {
       {/* [9] PRICING */}
       <section className="px-4 py-20 bg-[#F6F0E4]">
         <div className="max-w-3xl mx-auto space-y-10">
+
+          {/* Value anchor — so sánh chi phí thực tế */}
           <div className="text-center space-y-3">
-            <span className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 px-3 py-1 rounded-full border border-[#3D6B4A]/15">Đầu tư xứng đáng</span>
-            <h2 className="text-3xl font-black text-[#0D2B1A]">Một lần học học phí, tiết kiệm hàng chục triệu thuê ngoài</h2>
-            <p className="text-sm text-gray-500 max-w-md mx-auto">Chi phí thuê ngoài làm 1 trang đã từ 2-5 triệu. Với khóa này, bạn tự làm vô số trang mãi mãi.</p>
+            <span className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 px-3 py-1 rounded-full border border-[#3D6B4A]/15">Đầu tư một lần — dùng mãi mãi</span>
+            <h2 className="text-3xl font-black text-[#0D2B1A]">Những gì thị trường đang tính — và bạn sẽ không phải trả nữa</h2>
+            <p className="text-sm text-gray-500 max-w-lg mx-auto">Mỗi lần cần landing page mới để test ads, bạn đang mất tiền cho 1 trong 3 lựa chọn này.</p>
           </div>
 
-          <div className="bg-white border border-[#DDD8CB] rounded-3xl overflow-hidden shadow-md">
-            <div className="bg-[#0D2B1A] px-6 py-4 border-b border-[#DDD8CB]">
-              <p className="text-[#F6F0E4] font-bold text-base">Chi tiết gói bàn giao</p>
+          {/* 3 lựa chọn thị trường */}
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { label:'Thuê freelancer', cost:'2.000.000 – 5.000.000đ', unit:'/ 1 trang', note:'Cần 10–15 trang/tháng để test ads → mất 20–75 triệu', icon:'👨‍💻' },
+              { label:'Thuê nhân sự marketing', cost:'10.000.000 – 15.000.000đ', unit:'/ tháng', note:'Vẫn phải chờ, vẫn phải sửa, vẫn không chủ động được', icon:'👥' },
+              { label:'Thuê agency làm website', cost:'20.000.000 – 30.000.000đ', unit:'/ lần', note:'Muốn chỉnh 1 dòng chữ lại phải gửi yêu cầu, chờ 3–5 ngày', icon:'🏢' },
+            ].map((c, i) => (
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-3">
+                <span className="text-2xl">{c.icon}</span>
+                <p className="font-bold text-[#0D2B1A] text-sm">{c.label}</p>
+                <div>
+                  <p className="text-xl font-black text-[#C0390E]">{c.cost}</p>
+                  <p className="text-xs text-gray-400">{c.unit}</p>
+                </div>
+                <p className="text-xs text-gray-500 leading-relaxed border-t border-[#DDD8CB] pt-3">{c.note}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Pricing box */}
+          <div className="bg-white border-2 border-[#0D2B1A] rounded-3xl overflow-hidden shadow-xl">
+            <div className="bg-[#0D2B1A] px-6 py-4">
+              <p className="text-[#F6F0E4] font-bold text-base">Bạn nhận được trong khóa này</p>
             </div>
             <div className="divide-y divide-[#DDD8CB]/80">
               {[
-                { item:'10 buổi thực hành + SOP hướng dẫn chi tiết', value:'1.200.000đ' },
-                { item:'8 file skill AI chuyên dụng (dùng mãi mãi)', value:'800.000đ' },
-                { item:'Mã nguồn Landing Page HTML độc bản của bạn', value:'500.000đ' },
-                { item:'Hướng dẫn cài đặt deploy Vercel + tên miền riêng', value:'200.000đ' },
-                { item:'🎁 Tặng kèm: Content Không Cần Cảm Hứng (Notion)', value:'368.686đ', bonus:true },
+                { item:'10 buổi thực hành có SOP hướng dẫn từng bước', value:'2.000.000đ', note:'= 1 trang thuê freelancer rẻ nhất thị trường' },
+                { item:'8 file skill AI chuyên dụng — dùng mãi mãi', value:'4.000.000đ', note:'= 2 buổi thuê chuyên gia AI training' },
+                { item:'Mã nguồn Landing Page HTML riêng của bạn', value:'3.000.000đ', note:'= agency tính để bàn giao source code' },
+                { item:'Deploy Vercel + tên miền + SePay nhận tiền thật', value:'2.000.000đ', note:'= setup kỹ thuật mà không cần thuê dev' },
+                { item:'🎁 Tặng kèm: Content Không Cần Cảm Hứng (Notion)', value:'368.686đ', note:'Bộ prompt AI viết đúng giọng bạn', bonus:true },
               ].map((r, i) => (
-                <div key={i} className={`px-6 py-4 flex justify-between items-center ${r.bonus ? 'bg-[#EAF5EF]/70' : ''}`}>
-                  <p className={`text-sm ${r.bonus ? 'font-bold text-[#2D7A4F]' : 'text-gray-700'}`}>{r.item}</p>
-                  <p className={`text-sm font-bold flex-shrink-0 ml-4 ${r.bonus ? 'text-[#2D7A4F]' : 'text-gray-400'}`}>{r.value}</p>
+                <div key={i} className={`px-6 py-4 ${r.bonus ? 'bg-[#EAF5EF]/70' : ''}`}>
+                  <div className="flex justify-between items-start gap-4">
+                    <p className={`text-sm font-semibold ${r.bonus ? 'text-[#2D7A4F]' : 'text-gray-800'}`}>{r.item}</p>
+                    <p className={`text-sm font-black flex-shrink-0 ${r.bonus ? 'text-[#2D7A4F]' : 'text-gray-400 line-through'}`}>{r.value}</p>
+                  </div>
+                  <p className="text-xs text-gray-400 mt-1">{r.note}</p>
                 </div>
               ))}
             </div>
-            
+
             <div className="px-6 py-4 bg-[#FAF7F2] flex justify-between items-center border-t border-[#DDD8CB]">
-              <p className="font-bold text-[#0D2B1A] text-sm">Tổng giá trị quy đổi</p>
-              <p className="text-base font-black text-gray-400 line-through">3.068.686đ</p>
-            </div>
-            
-            <div className="px-6 py-5 bg-[#EAF5EF] flex justify-between items-center border-t border-[#DDD8CB]">
               <div>
-                <p className="font-black text-[#0D2B1A] text-base">Học phí ưu đãi</p>
-                <p className="text-xs text-[#3D6B4A] mt-0.5">Thanh toán một lần · Cam kết không phát sinh chi phí</p>
+                <p className="font-bold text-[#0D2B1A] text-sm">Tổng giá trị thực tế</p>
+                <p className="text-xs text-gray-400">Nếu mua riêng lẻ từng phần</p>
               </div>
-              <p className="text-3xl font-black text-[#0D2B1A]">{product.price}</p>
+              <p className="text-lg font-black text-gray-400 line-through">11.368.686đ</p>
+            </div>
+
+            <div className="px-6 py-6 bg-[#EAF5EF] border-t-2 border-[#0D2B1A]">
+              <div className="flex justify-between items-center">
+                <div>
+                  <p className="font-black text-[#0D2B1A] text-lg">Học phí — trả một lần, dùng mãi</p>
+                  <p className="text-xs text-[#3D6B4A] mt-1">Ít hơn chi phí thuê freelancer làm 1 trang · Bảo hành 14 ngày hoàn 100%</p>
+                </div>
+                <div className="text-right flex-shrink-0 ml-4">
+                  <p className="text-4xl font-black text-[#0D2B1A]">{formatVND(product.price)}</p>
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="space-y-4">
             <button onClick={open}
               className="w-full h-16 bg-gradient-to-r from-[#C0390E] to-[#E85E39] hover:from-[#E85E39] hover:to-[#C0390E] text-white text-lg font-black rounded-2xl transition-all shadow-xl shadow-brand-accent/20 active:scale-[0.98]">
-              Đăng Ký Học Ngay — {product.price} →
+              Đăng Ký Học Ngay — {formatVND(product.price)} →
             </button>
             <p className="text-center text-xs text-gray-400">Hỗ trợ chuyển khoản nhanh · Kích hoạt ngay lập tức · Bảo hành 14 ngày</p>
           </div>
@@ -561,11 +593,11 @@ export default function KhoaLandingPage() {
           
           <button onClick={open}
             className="w-full h-16 bg-gradient-to-r from-[#C0390E] to-[#E85E39] hover:from-[#E85E39] hover:to-[#C0390E] text-white text-lg font-black rounded-2xl transition-all shadow-xl shadow-brand-accent/25 active:scale-[0.98] hover:scale-[1.01]">
-            Bắt Đầu Ngay — {product.price} →
+            Bắt Đầu Ngay — {formatVND(product.price)} →
           </button>
           
           <div className="flex items-center justify-center gap-6 text-xs text-gray-400 font-semibold">
-            <span>✓ Học phí {product.price}</span>
+            <span>✓ Học phí {formatVND(product.price)}</span>
             <span>✓ Bảo hành hoàn tiền 14 ngày</span>
             <span>✓ Tặng Content System Notion</span>
           </div>
@@ -597,7 +629,7 @@ export default function KhoaLandingPage() {
           </div>
           <button onClick={open}
             className="flex-shrink-0 bg-[#C0390E] hover:bg-[#E85E39] text-white font-bold px-5 h-11 rounded-xl text-sm transition-all shadow-md">
-            Đăng ký — {product.price}
+            Đăng ký — {formatVND(product.price)}
           </button>
         </div>
       )}
