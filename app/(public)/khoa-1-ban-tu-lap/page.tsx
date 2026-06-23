@@ -212,7 +212,7 @@ export default function Khoa1Page() {
 
           {/* D: SP xuất hiện như bước ngoặt */}
           <p className="text-[#F6F0E4]/75 text-sm sm:text-base leading-relaxed">
-            Mình thử dùng ChatGPT viết thay. Lần đầu kết quả tệ. Nhưng mình không bỏ — mình chỉnh cách hỏi, chỉnh quy trình, làm lại. Rồi thử tiếp, fail, chỉnh, làm lại.
+            Mình bắt đầu thử xây từng AI agent cho từng việc cụ thể. Agent viết content theo đúng giọng mình. Agent nghiên cứu thị trường. Agent trả lời câu hỏi khách. Dùng các công cụ Vibe Coding để ráp chúng lại thành hệ thống. Lần đầu kết quả tệ. Mình không bỏ, mình chỉnh quy trình, thử lại. Chỉnh tiếp, làm lại.
           </p>
 
           {/* E+F: Hành động + Kết quả ≥3 số liệu */}
