@@ -24,7 +24,7 @@ const PRODUCTS = [
   {
     badge: 'Phổ biến nhất',
     badgeColor: 'bg-[#EDF3FF] text-[#2B5BB8]',
-    name: 'Trang Bán Hàng — Làm Trong 1 Buổi',
+    name: 'Landing Page Siêu Chuyển Đổi',
     desc: 'Skill 08B Landing Page. Không cần code. AI làm hết kỹ thuật. Tặng kèm Content System.',
     price: '686.868đ',
     cta: 'Xem chi tiết',
@@ -44,7 +44,7 @@ const PRODUCTS = [
   {
     badge: 'Có đội trưởng',
     badgeColor: 'bg-[#F0EDF8] text-[#5B3DA8]',
-    name: 'Khóa 2 — Cầm Tay Chỉ Việc',
+    name: 'Coaching — Cầm Tay Chỉ Việc',
     desc: '24 AI agent + 1 buổi Soi Hệ Thống 1-kèm-1 với Dũng. Dũng ngồi cùng bạn, chỉ đúng chỗ cần fix.',
     price: '3.868.686đ',
     cta: 'Xem chi tiết',

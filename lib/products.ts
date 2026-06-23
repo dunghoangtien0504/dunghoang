@@ -18,7 +18,7 @@ export const PRODUCTS: Record<string, Product> = {
   // ── TRANG BÁN HÀNG — skill Landing Page, tặng kèm Content System ────────────
   mini_368: {
     id:         'mini_368',
-    name:       'Trang Bán Hàng — Làm Trong 1 Buổi',
+    name:       'Landing Page Siêu Chuyển Đổi',
     price:      686868,
     codePrefix: 'DH-MINI',
     successUrl: '/cam-on-mini',
@@ -33,7 +33,7 @@ export const PRODUCTS: Record<string, Product> = {
   },
   khoa2_2768: {
     id:         'khoa2_2768',
-    name:       'Có Đội — 24 Skill + Tiểu Hà Mã',
+    name:       'Coaching — Cầm Tay Chỉ Việc',
     price:      3868686,
     codePrefix: 'DH-K2',
     successUrl: '/cam-on-khoa-2',
@@ -45,16 +45,25 @@ export const PRODUCTS: Record<string, Product> = {
     codePrefix: 'DH-CHAL',
     successUrl: '/cam-on-thu-thach',
   },
+  // ── KHÓA LANDING PAGE — 10 bài, Vibe Coding + 8 skill files ─────────────────
+  landing_186: {
+    id:         'landing_186',
+    name:       'Tạo Landing Page Chuyển Đổi Cao',
+    price:      1868000,
+    codePrefix: 'DH-LP',
+    successUrl: '/cam-on-landing-page',
+  },
 }
 
 /** Tên ngắn hiển thị trong admin/portal — nguồn duy nhất, dùng chung mọi nơi */
 export const COURSE_SHORT_NAMES: Record<string, string> = {
   content_368:   'Content System',
-  mini_368:      'Trang Bán Hàng',
+  mini_368:      'Landing Page Siêu Chuyển Đổi',
   khoa1_686:     '24 AI Agent',
-  khoa2_2768:    'Có Đội',
+  khoa2_2768:    'Coaching',
   challenge_368: 'Thử Thách 7 Ngày',
   '1kem1':       '1 Kèm 1',
+  landing_186:   'Landing Page',
 }
 
 /** Lấy tên ngắn an toàn cho 1 course_id bất kỳ */
