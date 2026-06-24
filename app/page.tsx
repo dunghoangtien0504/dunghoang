@@ -15,7 +15,7 @@ const PRODUCTS = [
     badge: 'Mới · 199k',
     badgeColor: 'bg-[#E6F7F1] text-[#0D6E4D]',
     name: 'Setup Meta AI Agent',
-    desc: 'Cài AI trả lời tự động cho Messenger / Instagram. Không cần code. Setup 30 phút, AI chạy 24/7.',
+    desc: 'Cài AI trả lời tự động cho Messenger, Instagram, WhatsApp. Không cần code. Setup 30 phút, AI chạy 24/7.',
     price: '199.000đ',
     cta: 'Xem chi tiết',
     href: '/meta-ai-agent',
@@ -130,7 +130,7 @@ export default function HomePage() {
         })()}
 
         {/* Secondary: 4 others */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[3], PRODUCTS[4]].map((p, i) => (
             <div key={i}
               className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-3 hover:border-[#3D6B4A]/40 hover:shadow-sm transition-all flex flex-col">
