@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
 
     // Tìm mã đơn hàng trong nội dung chuyển khoản
     // Prefix khớp với codePrefix trong lib/products.ts: DH-CT, DH-MINI, DH-K1, DH-K2, DH-CHAL
-    const orderCodeMatch = content?.match(/DH-(?:CT|MINI|K1|K2|LP|CHAL)-[A-Z0-9]+/i)
+    const orderCodeMatch = content?.match(/DH-(?:CT|MINI|K1|K2|LP|CHAL|MBA)-[A-Z0-9]+/i)
     if (!orderCodeMatch) {
       console.log('[sepay] Không có mã DH trong nội dung:', content)
       return NextResponse.json({ message: 'Bỏ qua — không có mã đơn hàng' }, { status: 200 })
@@ -108,7 +108,7 @@ export async function POST(req: NextRequest) {
 
     if (email) {
       // Tạo hoặc lấy Supabase Auth user
-      const { data: existingUsers } = await supabaseAdmin.auth.admin.listUsers()
+      const { data: existingUsers } = await supabaseAdmin.auth.admin.listUsers({ perPage: 1000 })
       let userId = existingUsers?.users.find(u => u.email === email)?.id
 
       if (!userId) {

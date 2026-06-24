@@ -6,8 +6,11 @@ export async function POST(request: Request) {
   try {
     const { username, password } = await request.json()
 
-    const expectedUsername = process.env.ADMIN_USERNAME || 'Dunghoang'
-    const expectedPassword = process.env.ADMIN_PASSWORD || 'Dung687568!'
+    const expectedUsername = process.env.ADMIN_USERNAME
+    const expectedPassword = process.env.ADMIN_PASSWORD
+    if (!expectedUsername || !expectedPassword) {
+      return NextResponse.json({ success: false, error: 'Server misconfigured.' }, { status: 500 })
+    }
 
     // So khớp không phân biệt chữ hoa chữ thường đối với username và khớp tuyệt đối đối với password
     if (

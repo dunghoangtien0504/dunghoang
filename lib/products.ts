@@ -45,6 +45,14 @@ export const PRODUCTS: Record<string, Product> = {
     codePrefix: 'DH-LP',
     successUrl: '/cam-on-landing-page',
   },
+  // ── META BUSINESS AI — skill setup AI cho Messenger/Instagram/WhatsApp ────────
+  'meta-business-ai': {
+    id:         'meta-business-ai',
+    name:       'Setup Meta Business AI',
+    price:      99000,
+    codePrefix: 'DH-MBA',
+    successUrl: '/cam-on-meta-business-ai',
+  },
 }
 
 /** Tên ngắn hiển thị trong admin/portal — nguồn duy nhất, dùng chung mọi nơi */
@@ -56,7 +64,8 @@ export const COURSE_SHORT_NAMES: Record<string, string> = {
   khoa2_2768:    'Coaching',
   challenge_368: 'Thử Thách 7 Ngày',
   '1kem1':       '1 Kèm 1',
-  'landing-page': 'Landing Page Siêu Chuyển Đổi',
+  'landing-page':      'Landing Page Siêu Chuyển Đổi',
+  'meta-business-ai':  'Setup Meta Business AI',
 }
 
 /** Lấy tên ngắn an toàn cho 1 course_id bất kỳ */

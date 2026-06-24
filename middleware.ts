@@ -28,7 +28,7 @@ export async function middleware(request: NextRequest) {
   // Nếu là route protected → kiểm tra token
   if (isProtected) {
     const token = request.cookies.get(AUTH_COOKIE)?.value
-    const secret = process.env.ADMIN_PASSWORD || 'Dung687568!'
+    const secret = process.env.ADMIN_PASSWORD
 
     let isValid = false
     if (token && secret) {
