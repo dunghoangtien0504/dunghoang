@@ -166,7 +166,7 @@ export default function DashboardPage() {
               {[
                 'Học 1 skill → làm thử ngay → thấy kết quả → học skill tiếp. Đừng xem hết một lúc.',
                 'Nộp bài từng ngày để Dũng theo dõi và duyệt. Bài được duyệt mới tính hoàn thành.',
-                'Bị kẹt ở đâu? Nhắn Telegram @KentHoang bất cứ lúc nào.',
+                'Bị kẹt ở đâu? Vào group Telegram — Tiểu Hà Mã hỗ trợ 24/7.',
               ].map((tip, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <CheckCircle size={15} className="text-[#1D9E75] mt-0.5 flex-shrink-0" />

@@ -87,9 +87,9 @@ export async function POST(req: NextRequest) {
 
             <p style="margin:0 0 8px;font-size:14px;"><strong>Hoa hồng:</strong></p>
             <ul style="margin:0 0 20px;padding-left:20px;color:#3D6B4A;font-size:14px;">
-              <li style="margin-bottom:4px;">Mini 368k → 20% = <strong>73.600đ</strong>/đơn</li>
-              <li style="margin-bottom:4px;">Khóa 1 686k → 20% = <strong>137.374đ</strong>/đơn</li>
-              <li style="margin-bottom:4px;">Khóa 2 2.768k → 10% = <strong>276.868đ</strong>/đơn</li>
+              <li style="margin-bottom:4px;">Mini 686.868đ → 20% = <strong>137.374đ</strong>/đơn</li>
+              <li style="margin-bottom:4px;">Khóa 1 868.686đ → 20% = <strong>173.737đ</strong>/đơn</li>
+              <li style="margin-bottom:4px;">Khóa 2 3.868.686đ → 10% = <strong>386.869đ</strong>/đơn</li>
             </ul>
 
             <div style="text-align:center;margin:24px 0;">
