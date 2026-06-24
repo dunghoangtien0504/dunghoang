@@ -6,7 +6,7 @@ import { PRODUCTS } from '@/lib/products'
 import { KHOA1_SKILLS, SKILL_GROUPS } from '@/lib/skills'
 import { ClipboardList, Clock, Bot, Repeat2, Home, Users, FlaskConical, RefreshCw, Shield } from 'lucide-react'
 
-const product = PRODUCTS.khoa1_686
+const product = PRODUCTS['khoa-1']
 
 // ── FAQ — A.R.E.B framework, 7 objection ────────────────────────────────────
 const FAQS = [
@@ -547,7 +547,7 @@ export default function Khoa1Page() {
           </p>
           <div className="flex justify-center gap-4 text-xs text-[#F6F0E4]/30">
             <a href="/portal" className="hover:text-[#F6F0E4]/60">Khu học</a>
-            <a href="/khoa-2-ban-co-doi-truong" className="hover:text-[#F6F0E4]/60">Khóa 2</a>
+            <a href="/coaching" className="hover:text-[#F6F0E4]/60">Khóa 2</a>
             <a href="/tin-tuc" className="hover:text-[#F6F0E4]/60">Tin tức</a>
           </div>
         </div>

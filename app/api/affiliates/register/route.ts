@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
 
             <p style="margin:0 0 8px;font-size:14px;color:#3D6B4A;"><strong>Link giới thiệu:</strong></p>
             <p style="margin:0 0 20px;font-size:13px;background:#FAF7F2;border:1px solid #DDD8CB;border-radius:8px;padding:10px 12px;word-break:break-all;font-family:monospace;">
-              ${SITE}/khoa-1-ban-tu-lap?ref=${aff.ref_code}
+              ${SITE}/24-ai-agent?ref=${aff.ref_code}
             </p>
 
             <p style="margin:0 0 8px;font-size:14px;"><strong>Hoa hồng:</strong></p>

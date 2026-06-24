@@ -16,6 +16,7 @@ const COURSE_ACCENT: Record<string, string> = {
   content_368: 'bg-amber-500',
   mini_368:    'bg-emerald-600',
   'landing-page': 'bg-red-600',
+  'khoa-1':    'bg-blue-600',
   khoa1_686:   'bg-blue-600',
   khoa2_2768:  'bg-purple-600',
   '1kem1':     'bg-orange-600',
@@ -25,6 +26,7 @@ const COURSE_EMOJI: Record<string, string> = {
   content_368: '✍️',
   mini_368:    '🛒',
   'landing-page': '🚀',
+  'khoa-1':    '⚡',
   khoa1_686:   '⚡',
   khoa2_2768:  '🤝',
   '1kem1':     '🎯',
@@ -132,7 +134,7 @@ export default function DashboardPage() {
                 Nếu đã mua, liên hệ Dũng qua Telegram để được cấp quyền.
               </p>
             </div>
-            <a href="/khoa-1-ban-tu-lap"
+            <a href="/khoa-1"
               className="inline-block bg-[#0D2B1A] text-white text-sm px-6 py-3 rounded-xl hover:bg-[#1D9E75] transition-colors font-bold">
               Xem Khóa 1 — 868.686đ →
             </a>

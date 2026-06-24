@@ -495,7 +495,7 @@ export default function Khoa2Page() {
           </p>
           <div className="flex justify-center gap-4 text-xs text-[#F6F0E4]/30">
             <a href="/portal" className="hover:text-[#F6F0E4]/60">Khu học</a>
-            <a href="/khoa-1-ban-tu-lap" className="hover:text-[#F6F0E4]/60">Khóa 1</a>
+            <a href="/24-ai-agent" className="hover:text-[#F6F0E4]/60">Khóa 1</a>
           </div>
         </div>
       </footer>

@@ -48,7 +48,7 @@ const PRODUCTS = [
     desc: 'Toàn bộ 24 AI agent tự học. Tặng kèm Content System + Landing Page skill.',
     price: '868.686đ',
     cta: 'Xem chi tiết',
-    href: '/khoa-1-ban-tu-lap',
+    href: '/24-ai-agent',
     icon: <BookOpen className="w-5 h-5" />,
   },
   {
@@ -58,7 +58,7 @@ const PRODUCTS = [
     desc: '24 AI agent + 1 buổi Soi Hệ Thống 1-kèm-1 với Dũng. Dũng ngồi cùng bạn, chỉ đúng chỗ cần fix.',
     price: '3.868.686đ',
     cta: 'Xem chi tiết',
-    href: '/khoa-2-ban-co-doi-truong',
+    href: '/coaching',
     icon: <Users className="w-5 h-5" />,
   },
 ]
@@ -88,14 +88,14 @@ export default function HomePage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
-            href="/khoa-1-ban-tu-lap"
+            href="/24-ai-agent"
             className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-[#C0390E] hover:bg-[#A0300B] text-white font-bold rounded-xl transition-all shadow-lg"
           >
             Xem 24 AI Agent
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
-            href="/khoa-2-ban-co-doi-truong"
+            href="/coaching"
             className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-white hover:bg-[#FAF7F2] text-[#0D2B1A] font-semibold rounded-xl border border-[#DDD8CB] transition-colors"
           >
             Khóa 2 — Có Đội Trưởng
@@ -215,14 +215,14 @@ export default function HomePage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
-            href="/khoa-1-ban-tu-lap"
+            href="/24-ai-agent"
             className="inline-flex items-center gap-2 h-14 px-8 bg-[#C0390E] hover:bg-[#A0300B] active:scale-[0.97] text-white font-bold rounded-2xl transition-all shadow-lg text-base"
           >
             Khóa 1 — 868.686đ
             <ArrowRight className="w-5 h-5" />
           </Link>
           <Link
-            href="/khoa-2-ban-co-doi-truong"
+            href="/coaching"
             className="inline-flex items-center gap-2 h-14 px-8 bg-white hover:bg-[#FAF7F2] text-[#0D2B1A] font-semibold rounded-2xl border border-[#DDD8CB] transition-colors text-sm"
           >
             Khóa 2 — Có Đội Trưởng
@@ -274,11 +274,11 @@ export default function HomePage() {
             <span>DungHoang.com</span>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/khoa-2-ban-co-doi-truong" className="hover:text-[#3D6B4A]">Khóa 2</Link>
+            <Link href="/coaching" className="hover:text-[#3D6B4A]">Khóa 2</Link>
             <Link href="/he-thong-content" className="hover:text-[#3D6B4A]">Content System</Link>
             <Link href="/mini-trang-ban-hang" className="hover:text-[#3D6B4A]">Trang Bán Hàng</Link>
-            <Link href="/khoa-1-ban-tu-lap" className="hover:text-[#3D6B4A]">24 AI Agent</Link>
-            <Link href="/khoa-2-ban-co-doi-truong" className="hover:text-[#3D6B4A]">Có Đội</Link>
+            <Link href="/24-ai-agent" className="hover:text-[#3D6B4A]">24 AI Agent</Link>
+            <Link href="/coaching" className="hover:text-[#3D6B4A]">Có Đội</Link>
             <Link href="/portal" className="hover:text-[#3D6B4A]">Portal học viên</Link>
           </div>
         </div>

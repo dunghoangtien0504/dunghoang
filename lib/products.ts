@@ -15,9 +15,9 @@ export const PRODUCTS: Record<string, Product> = {
     codePrefix: 'DH-CT',
     successUrl: '/cam-on-content',
   },
-  // ── KHÓA 1 — 25 skill, gồm trang bán hàng + tặng Content System ─────────────
-  khoa1_686: {
-    id:         'khoa1_686',
+  // ── KHÓA 1 — 24 skill, gồm trang bán hàng + tặng Content System ─────────────
+  'khoa-1': {
+    id:         'khoa-1',
     name:       '24 AI Agent for Business',
     price:      868686,
     codePrefix: 'DH-K1',
@@ -51,7 +51,8 @@ export const PRODUCTS: Record<string, Product> = {
 export const COURSE_SHORT_NAMES: Record<string, string> = {
   content_368:   'Content System',
   mini_368:      'Landing Page Siêu Chuyển Đổi', // giữ để không lỗi đơn hàng cũ
-  khoa1_686:     '24 AI Agent',
+  'khoa-1':      '24 AI Agent',
+  khoa1_686:     '24 AI Agent', // giữ để không lỗi đơn hàng cũ
   khoa2_2768:    'Coaching',
   challenge_368: 'Thử Thách 7 Ngày',
   '1kem1':       '1 Kèm 1',

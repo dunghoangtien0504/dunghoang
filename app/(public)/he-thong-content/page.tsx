@@ -482,7 +482,7 @@ export default function HeThongContentPage() {
           </p>
           <div className="flex justify-center gap-4 text-xs text-[#F6F0E4]/30">
             <a href="/mini-trang-ban-hang" className="hover:text-[#F6F0E4]/60">Trang Bán Hàng</a>
-            <a href="/khoa-1-ban-tu-lap" className="hover:text-[#F6F0E4]/60">Khóa 1</a>
+            <a href="/24-ai-agent" className="hover:text-[#F6F0E4]/60">Khóa 1</a>
             <a href="/portal" className="hover:text-[#F6F0E4]/60">Khu học</a>
           </div>
         </div>

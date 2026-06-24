@@ -224,7 +224,7 @@ export default function PortalAffiliatePage() {
     )
   }
 
-  const refLink = aff ? `${SITE}/khoa-1-ban-tu-lap?ref=${aff.ref_code}` : ''
+  const refLink = aff ? `${SITE}/24-ai-agent?ref=${aff.ref_code}` : ''
 
   return (
     <div className="min-h-screen bg-[#F6F0E4]">

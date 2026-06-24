@@ -127,7 +127,7 @@ export default function LoginPage() {
 
         <p className="text-center text-xs text-gray-400">
           Chưa có khóa học?{' '}
-          <Link href="/khoa-1-ban-tu-lap" className="text-[#1D9E75] hover:underline">Xem Khóa 1</Link>
+          <Link href="/24-ai-agent" className="text-[#1D9E75] hover:underline">Xem Khóa 1</Link>
         </p>
       </div>
     </div>

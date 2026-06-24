@@ -190,7 +190,7 @@
 
 ### BƯỚC 7 — Sales Page Khóa 1 686.868đ
 
-**URL:** dunghoang.com/khoa-1-ban-tu-lap
+**URL:** dunghoang.com/24-ai-agent
 
 **Offer:** "Bản Tự Lập" — 686.868đ
 
@@ -218,7 +218,7 @@
 
 ### BƯỚC 9 — Sales Page Khóa 2 2.768.686đ (Trang Chính — Xương Sống)
 
-**URL:** dunghoang.com/khoa-2-ban-co-doi-truong
+**URL:** dunghoang.com/coaching
 
 **Offer:** "Bản Có Đội Trưởng" — 2.768.686đ
 

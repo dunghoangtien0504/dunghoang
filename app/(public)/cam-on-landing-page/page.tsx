@@ -126,7 +126,7 @@ export default function CamOnLandingPage() {
 
             <div className="space-y-3">
               <Link
-                href="/khoa-2-ban-co-doi-truong"
+                href="/coaching"
                 className="flex items-center justify-center gap-2 w-full h-14 bg-[#C0390E] hover:bg-[#A0300B] text-white font-bold text-base rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Xem Coaching đầy đủ

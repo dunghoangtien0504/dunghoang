@@ -212,7 +212,7 @@ export default function CamOnKhoa1Page() {
             {/* Xem trang bán hàng đầy đủ */}
             <p className="text-center text-sm text-[#7A8C7E]">
               Muốn xem chi tiết trước?{' '}
-              <Link href="/khoa-2-ban-co-doi-truong" className="text-[#3D6B4A] underline font-medium">
+              <Link href="/coaching" className="text-[#3D6B4A] underline font-medium">
                 Xem trang Khóa 2 đầy đủ
               </Link>
             </p>
@@ -240,11 +240,11 @@ export default function CamOnKhoa1Page() {
           <p className="text-xs text-[#7A8C7E]">
             <Link href="/" className="hover:text-[#3D6B4A] transition-colors">DungHoang.com</Link>
             {' '}·{' '}
-            <Link href="/khoa-1-ban-tu-lap" className="hover:text-[#3D6B4A] transition-colors">
+            <Link href="/24-ai-agent" className="hover:text-[#3D6B4A] transition-colors">
               Khóa 1
             </Link>
             {' '}·{' '}
-            <Link href="/khoa-2-ban-co-doi-truong" className="hover:text-[#3D6B4A] transition-colors">
+            <Link href="/coaching" className="hover:text-[#3D6B4A] transition-colors">
               Khóa 2
             </Link>
           </p>

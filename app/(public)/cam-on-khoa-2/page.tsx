@@ -129,7 +129,7 @@ export default function CamOnKhoa2Page() {
           <p className="text-xs text-[#7A8C7E]">
             <Link href="/" className="hover:text-[#3D6B4A] transition-colors">DungHoang.com</Link>
             {' '}·{' '}
-            <Link href="/khoa-2-ban-co-doi-truong" className="hover:text-[#3D6B4A] transition-colors">
+            <Link href="/coaching" className="hover:text-[#3D6B4A] transition-colors">
               Xem lại Khóa 2
             </Link>
           </p>

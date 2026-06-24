@@ -167,7 +167,7 @@ export async function POST(req: NextRequest) {
         if (order.course_id === 'landing-page') {
           const welcome = getLandingEmailDay1(name)
           await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
-        } else if (order.course_id === 'khoa1_686') {
+        } else if (order.course_id === 'khoa-1' || order.course_id === 'khoa1_686') {
           // Khóa 1 → dùng email onboarding riêng + khởi động chuỗi chăm sóc
           const welcome = getKhoa1EmailDay1(name)
           await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })

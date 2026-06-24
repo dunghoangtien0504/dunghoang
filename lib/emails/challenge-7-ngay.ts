@@ -138,7 +138,7 @@ function getEmailDay7(name: string): EmailContent {
 <hr class="divider" />
 <p>Nếu 7 ngày này bạn thấy oke - bước tiếp là:</p>
 <p><strong><a href="https://dunghoang.com/mini-368">Mini 368k</a></strong> - Học đầy đủ skill làm trang bán hàng AI trong 1 giờ. 1 skill này thôi đã thay người thiết kế landing page 8-10tr/tháng.</p>
-<p><strong><a href="https://dunghoang.com/khoa-1-ban-tu-lap">Khóa 1 — 24 AI Agent for Business</a></strong> - Nhận cả 24 AI agent + Hà Mã hỏi-đáp khi kẹt trên Telegram. Mình đi cùng bạn qua từng agent.</p>
+<p><strong><a href="https://dunghoang.com/24-ai-agent">Khóa 1 — 24 AI Agent for Business</a></strong> - Nhận cả 24 AI agent + Hà Mã hỏi-đáp khi kẹt trên Telegram. Mình đi cùng bạn qua từng agent.</p>
 <div class="cta-block">
   <a class="cta-btn" href="https://dunghoang.com/khoa-1">Xem Khóa 1 — 686.868đ</a>
 </div>

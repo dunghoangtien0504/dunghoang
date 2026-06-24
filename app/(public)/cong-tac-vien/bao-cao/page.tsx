@@ -177,7 +177,7 @@ function Dashboard() {
     </div>
   )
 
-  const refLink = `${SITE}/khoa-1-ban-tu-lap?ref=${aff.ref_code}`
+  const refLink = `${SITE}/24-ai-agent?ref=${aff.ref_code}`
 
   return (
     <div className="space-y-8">
