@@ -462,8 +462,8 @@ export default function Khoa2Page() {
             </div>
             <div className="divide-y divide-[#DDD8CB]">
               {[
-                { item: 'Gói 24 AI Agent for Business (đầy đủ Khóa 1)', value: '868.686đ' },
-                { item: 'Setup AI Agent riêng trên Telegram (Dũng làm tay)', value: '3.000.000đ' },
+                { item: 'Gói 24 AI Agent for Business (đầy đủ Khóa 1)', value: '16.484.832đ' },
+                { item: 'Setup AI Agent riêng của bạn giống Tiểu Hà Mã (thị trường $3.000)', value: '75.000.000đ' },
                 { item: 'Buổi Soi Hệ Thống 1-kèm-1 (Video Call trực tiếp)', value: '1.000.000đ', bonus: true },
                 { item: 'Quà tặng 1: 489 Tiêu Đề Thu Hút Khách Hàng (Notion)', value: '686.000đ', bonus: true },
                 { item: 'Quà tặng 2: File Nạp Giọng BRAND_DNA mẫu của Dũng', value: '686.000đ', bonus: true },
@@ -482,7 +482,7 @@ export default function Khoa2Page() {
             
             <div className="px-5 py-4 bg-[#FAF7F2] flex justify-between items-center text-sm">
               <p className="font-bold text-[#0D2B1A]">Tổng giá trị gói & quà tặng</p>
-              <p className="text-lg font-black text-gray-400 line-through">8.480.686đ</p>
+              <p className="text-lg font-black text-gray-400 line-through">96.096.832đ</p>
             </div>
             <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
               <div>
