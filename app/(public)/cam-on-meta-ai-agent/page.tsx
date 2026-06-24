@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-export default function CamOnMetaBusinessAIPage() {
+export default function CamOnMetaAIAgentPage() {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -32,30 +32,40 @@ export default function CamOnMetaBusinessAIPage() {
 
         <p className="text-[#F6F0E4]/70 text-lg mb-8 leading-relaxed">
           Mình đã nhận được thanh toán của bạn.
-          File <strong className="text-[#F6F0E4]">Setup Meta Business AI</strong> và
-          hướng dẫn chi tiết đang được gửi vào email của bạn.
-          Thường mất khoảng 2-5 phút.
+          Hướng dẫn setup <strong className="text-[#F6F0E4]">Meta AI Agent</strong> đã
+          được mở trong khu học — và email xác nhận đang gửi về hộp thư của bạn.
+        </p>
+
+        {/* CTA vào portal */}
+        <Link
+          href="/portal/meta-ai-agent"
+          className="block w-full bg-[#1D9E75] hover:bg-[#178a65] text-white font-bold py-4 px-8 rounded-xl text-lg text-center transition-all duration-200 shadow-lg mb-6"
+        >
+          Vào Khu Học Ngay →
+        </Link>
+        <p className="text-xs text-[#F6F0E4]/40 mb-8">
+          Đăng nhập bằng email vừa thanh toán. Nếu lần đầu, bấm &ldquo;Quên mật khẩu&rdquo; để tạo mật khẩu.
         </p>
 
         {/* What's next */}
         <div className="bg-[#F6F0E4]/5 border border-[#F6F0E4]/10 rounded-2xl p-6 text-left mb-8">
-          <h2 className="font-bold text-lg mb-4 text-center">Bước tiếp theo của bạn</h2>
+          <h2 className="font-bold text-lg mb-4 text-center">Bạn sẽ làm gì trong khu học</h2>
           <div className="space-y-4">
             {[
               {
                 num: '1',
-                title: 'Kiểm tra email',
-                desc: 'Mình gửi file + hướng dẫn vào email bạn đăng ký. Nếu không thấy, kiểm tra thư mục spam nhé.',
+                title: 'Bài 1: Đọc tổng quan',
+                desc: 'Hiểu toàn bộ quy trình trước — mất 5 phút. Bài này mở miễn phí không cần đăng nhập.',
               },
               {
                 num: '2',
-                title: 'Điền thông tin shop vào form trong file',
-                desc: 'File có form hỏi các thông tin cơ bản về shop. Điền vào là AI sẽ biết nói chuyện đúng giọng của bạn.',
+                title: 'Bài 2-4: Làm từng bước theo hướng dẫn',
+                desc: 'Chuẩn bị thông tin → điền template → paste vào Meta Business Suite.',
               },
               {
                 num: '3',
-                title: 'Copy và paste vào Meta Business Suite',
-                desc: 'Làm theo hướng dẫn từng bước trong file. Kẹt bước nào thì nhắn mình qua Telegram.',
+                title: 'Bài 5: Test AI trước khi bật cho khách',
+                desc: '20+ câu hỏi mẫu để chắc chắn AI nói đúng trước khi mở cho khách thật.',
               },
             ].map((item) => (
               <div key={item.num} className="flex gap-4 items-start">

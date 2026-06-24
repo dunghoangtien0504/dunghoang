@@ -6,6 +6,7 @@ import { getKhoa1EmailDay1 } from '@/lib/emails/khoa1-onboarding'
 import { formatVND } from '@/lib/products'
 import { getFirstUnlock } from '@/lib/challenge-days'
 import { getLandingEmailDay1 } from '@/lib/emails/landing-onboarding'
+import { getMetaAIAgentWelcome } from '@/lib/emails/meta-ai-agent-welcome'
 
 // Sepay gửi POST này mỗi khi có tiền vào tài khoản
 export async function POST(req: NextRequest) {
@@ -164,7 +165,10 @@ export async function POST(req: NextRequest) {
           }, { onConflict: 'user_id,course_id' })
         }
 
-        if (order.course_id === 'landing-page') {
+        if (order.course_id === 'meta-ai-agent') {
+          const welcome = getMetaAIAgentWelcome(name)
+          await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
+        } else if (order.course_id === 'landing-page') {
           const welcome = getLandingEmailDay1(name)
           await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
         } else if (order.course_id === 'khoa-1' || order.course_id === 'khoa1_686') {
