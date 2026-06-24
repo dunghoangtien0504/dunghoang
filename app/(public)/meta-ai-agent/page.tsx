@@ -4,9 +4,9 @@ import { useState, useEffect, useRef } from 'react'
 import { PRODUCTS } from '@/lib/products'
 import CheckoutModal from '@/components/checkout/CheckoutModal'
 
-const product = PRODUCTS['meta-business-ai']
+const product = PRODUCTS['meta-ai-agent']
 
-export default function MetaBusinessAIPage() {
+export default function MetaAIAgentPage() {
   const [showCheckout, setShowCheckout] = useState(false)
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({})
   const observerRef = useRef<IntersectionObserver | null>(null)
@@ -39,7 +39,7 @@ export default function MetaBusinessAIPage() {
 
       {/* Announcement bar */}
       <div className="bg-[#1D9E75] text-[#0D2B1A] text-center py-2 px-4 text-sm font-semibold">
-        Chỉ còn <strong>47 slot</strong> với giá 99.000đ — tăng lên 299.000đ sau khi hết đợt này
+        Chỉ còn <strong>47 slot</strong> với giá 199.000đ — tăng lên 2199.000đ sau khi hết đợt này
       </div>
 
       {/* Hero */}
@@ -65,7 +65,7 @@ export default function MetaBusinessAIPage() {
           onClick={() => setShowCheckout(true)}
           className="bg-[#1D9E75] hover:bg-[#178a65] text-white font-bold py-4 px-10 rounded-xl text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
-          Tôi muốn setup ngay — 99.000đ →
+          Tôi muốn setup ngay — 199.000đ →
         </button>
 
         <p className="text-sm text-[#F6F0E4]/50 mt-3">Nhận file ngay sau khi thanh toán. Bảo đảm hoàn tiền 7 ngày.</p>
@@ -82,7 +82,7 @@ export default function MetaBusinessAIPage() {
             { num: '600+', label: 'học viên đã dùng skill này' },
             { num: '6', label: 'ngành hàng hỗ trợ sẵn' },
             { num: '4', label: 'tài liệu đầy đủ, copy-paste ngay' },
-            { num: '99k', label: 'giá chỉ bằng 1 buổi cà phê' },
+            { num: '199k', label: 'giá chỉ bằng 1 buổi cà phê' },
           ].map((item) => (
             <div key={item.label} className="bg-[#F6F0E4]/5 border border-[#F6F0E4]/10 rounded-xl px-6 py-4 min-w-[140px]">
               <div className="text-2xl font-extrabold text-[#1D9E75]">{item.num}</div>
@@ -284,7 +284,7 @@ export default function MetaBusinessAIPage() {
 
         <div className="bg-[#1D9E75]/10 border-2 border-[#1D9E75] rounded-2xl p-8 text-center">
           <p className="text-[#F6F0E4]/60 mb-1 text-sm">Giá hôm nay</p>
-          <div className="text-5xl font-extrabold text-[#1D9E75] mb-2">99.000đ</div>
+          <div className="text-5xl font-extrabold text-[#1D9E75] mb-2">199.000đ</div>
           <p className="text-[#F6F0E4]/60 text-sm mb-6">Nhận file ngay sau khi thanh toán. QR auto xác nhận.</p>
           <button
             onClick={() => setShowCheckout(true)}
@@ -309,7 +309,7 @@ export default function MetaBusinessAIPage() {
             <p className="text-sm text-[#F6F0E4]/70 leading-relaxed">
               Bạn mua về, làm theo hướng dẫn. Nếu AI vẫn không nói chuyện được đúng
               như mình hứa, bạn nhắn Telegram mình trong vòng 7 ngày, mình hoàn lại
-              toàn bộ 99.000đ. Không cần giải thích.
+              toàn bộ 199.000đ. Không cần giải thích.
             </p>
           </div>
         </div>
@@ -415,7 +415,7 @@ export default function MetaBusinessAIPage() {
       >
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
           AI Meta của bạn đang trả lời sai.<br />
-          <span className="text-[#1D9E75]">Sửa lại hôm nay chỉ mất 99.000đ.</span>
+          <span className="text-[#1D9E75]">Sửa lại hôm nay chỉ mất 199.000đ.</span>
         </h2>
         <p className="text-[#F6F0E4]/60 mb-8 leading-relaxed">
           Đừng để khách nhắn mà không có ai trả lời. Đừng để AI nói linh tinh làm xấu hình ảnh shop.
@@ -425,7 +425,7 @@ export default function MetaBusinessAIPage() {
           onClick={() => setShowCheckout(true)}
           className="bg-[#1D9E75] hover:bg-[#178a65] text-white font-bold py-4 px-12 rounded-xl text-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
-          Tôi muốn setup AI ngay — 99.000đ →
+          Tôi muốn setup AI ngay — 199.000đ →
         </button>
         <p className="text-xs text-[#F6F0E4]/40 mt-4">Bảo đảm hoàn tiền 7 ngày · Nhận file ngay sau thanh toán</p>
       </section>
@@ -440,7 +440,7 @@ export default function MetaBusinessAIPage() {
       <div className="fixed bottom-0 left-0 right-0 bg-[#0D2B1A]/95 border-t border-[#F6F0E4]/10 backdrop-blur-sm px-4 py-3 z-40 flex items-center justify-between max-w-2xl mx-auto gap-4 md:rounded-t-2xl md:bottom-4 md:left-1/2 md:-translate-x-1/2 md:shadow-2xl">
         <div>
           <div className="font-bold text-sm">Setup Meta Business AI</div>
-          <div className="text-[#1D9E75] text-xs">chỉ 99.000đ · bảo đảm 7 ngày</div>
+          <div className="text-[#1D9E75] text-xs">chỉ 199.000đ · bảo đảm 7 ngày</div>
         </div>
         <button
           onClick={() => setShowCheckout(true)}

@@ -1,0 +1,139 @@
+Skill 01 — Chân Dung Khách Hàng (Avatar Builder)
+Thuộc bộ 24 AI Agent for Business.
+
+Mục tiêu của Skill 01 là có một bản mô tả khách hàng chi tiết. Không phải kiểu "nữ 25-35 tuổi thích mua sắm" — mà chi tiết đến mức bạn viết bài, AI hiểu ngay đang nói chuyện với ai.
+
+Bản này sẽ dùng cho mọi skill phía sau. Viết sai ở đây, mọi thứ sau cũng lệch.
+
+💡 Tư duy AI-First
+Đừng tự ngồi nghĩ "khách hàng của mình là ai". Đó là cách chậm và hay bị sai.
+
+Hãy dump hết những gì bạn biết về khách thật vào AI — câu họ hay hỏi, việc họ hay làm, điều họ hay phàn nàn — rồi để AI tổng hợp thành bản avatar. Bạn chỉ cần đọc lại và chỉnh những chỗ AI hiểu chưa đúng.
+
+▤ SOP — Hướng dẫn
+
+🎯 Mục tiêu cuối bài
+Sau khi làm xong, bạn phải có:
+- Tên avatar + nghề nghiệp + độ tuổi + thu nhập ước tính
+- Ít nhất 3 nỗi đau cụ thể (không phải "muốn kiếm thêm tiền" — phải cụ thể hơn)
+- 1 kết quả lý tưởng họ thật sự muốn đạt
+- 2-3 câu họ hay nói khi mô tả vấn đề của mình
+- Lý do họ chưa giải quyết được dù đã biết
+
+Công cụ: Claude hoặc ChatGPT (miễn phí đều được)
+
+---
+
+Bước 1 — Viết ra những gì bạn đã biết về khách thật
+Trước khi hỏi AI bất cứ điều gì, dành 5-10 phút viết thô.
+
+Không cần đúng format. Cứ gõ ra:
+
+- Khách của mình thường làm nghề gì?
+- Họ hay nhắn hỏi mình điều gì nhất?
+- Câu phàn nàn mình nghe nhiều nhất là gì?
+- Họ đã thử làm gì trước khi tìm đến mình?
+- Kết quả họ muốn sau khi mua là gì cụ thể?
+
+Nếu chưa có khách thật: viết dựa trên người bạn hình dung sẽ bán cho. Nhưng ghi rõ đây là giả định, sau khi có khách thật thì phải cập nhật lại.
+
+Viết xong — qua Bước 2.
+
+---
+
+Bước 2 — Paste vào AI để tổng hợp
+Mở Claude hoặc ChatGPT. Paste đoạn sau vào (điền thông tin thật của bạn vào chỗ []):
+
+---
+Tôi đang kinh doanh [mô tả ngắn về sản phẩm/dịch vụ của bạn].
+
+Khách hàng của tôi thường là người [mô tả thô về khách — nghề, độ tuổi, tình trạng].
+
+Những điều tôi biết về họ:
+- [Điều 1 bạn biết về khách]
+- [Điều 2]
+- [Điều 3]
+- [Câu họ hay nói / hay hỏi]
+- [Điều họ đã thử làm nhưng thất bại]
+
+Hãy tổng hợp thành một bản Chân Dung Khách Hàng chi tiết, gồm:
+1. Tên avatar (đặt tên thật cho dễ nhớ, ví dụ: "Chị Mai")
+2. Nghề nghiệp + độ tuổi + thu nhập ước tính
+3. Một ngày bình thường của họ trông như thế nào
+4. 3-5 nỗi đau cụ thể (ghi đúng kiểu họ sẽ nói, không dùng ngôn ngữ marketing)
+5. Kết quả lý tưởng họ muốn đạt (cụ thể, đo được)
+6. Lý do sâu xa họ chưa giải quyết được vấn đề dù đã biết
+7. 3 câu họ hay nói khi mô tả vấn đề
+
+Viết bằng tiếng Việt, câu ngắn, dễ hiểu.
+---
+
+Chờ AI trả lời. Đọc toàn bộ từ trên xuống dưới.
+
+---
+
+Bước 3 — Chỉnh những chỗ AI hiểu chưa đúng
+AI sẽ không đúng 100%. Đặc biệt ở phần "câu họ hay nói" — AI hay viết chung chung.
+
+Sau khi đọc xong, nhớ lại khách thật của bạn và hỏi:
+
+- Nỗi đau này đúng không? Hay mình hay nghe họ nói chỗ khác hơn?
+- Câu AI đề xuất họ hay nói — có nghe tự nhiên không, hay vẫn nghe kiểu marketing?
+- Kết quả lý tưởng — đây có đúng là thứ họ thật sự muốn không?
+
+Chỗ nào sai, bảo AI:
+
+"Phần [tên phần] chưa đúng. Khách thật của tôi thường nói [điền câu thật]. Sửa lại đúng với thông tin này."
+
+---
+
+Bước 4 — Bổ sung "câu nói thật" của khách
+Đây là phần quan trọng nhất và AI hay làm yếu nhất.
+
+Nghĩ lại 3 tháng gần đây — khách của bạn đã nhắn gì? Đã hỏi gì? Có câu nào bạn đọc xong thấy "ừ, đúng, họ hay nói vậy" không?
+
+Copy nguyên câu đó — không chỉnh, không sửa — vào phần "câu khách hay nói" trong avatar.
+
+Ví dụ câu thật thường nghe như:
+- "Mình cũng biết cần làm rồi nhưng cứ không biết bắt đầu từ đâu"
+- "Thuê người thì tốn, mà tự làm thì không có thời gian"
+- "Mình đã mua mấy khóa học rồi nhưng xem xong vẫn không biết làm thế nào"
+
+Câu như vậy quý hơn bất kỳ insight nào AI tự nghĩ ra.
+
+---
+
+Bước 5 — Lưu vào file
+Lưu bản avatar vào 1 file (Google Docs, Notion, hoặc txt đều được). Đặt tên: `avatar-khach-hang.txt`
+
+File này sẽ dùng trong Skill 02, 05, 07, 08... Giữ nó, đừng để mất.
+
+---
+
+Checklist trước khi qua Skill 02
+Bạn hoàn thành Skill 01 khi có đủ:
+- Tên avatar + nghề + tuổi
+- Ít nhất 3 nỗi đau CỤ THỂ (không phải "muốn thành công")
+- 1 kết quả lý tưởng đo được
+- Ít nhất 2 câu khách hay nói (viết đúng kiểu họ nói)
+- Đã lưu file
+
+✅ Được duyệt khi
+Đọc xong avatar, mình (hoặc người khác) hình dung ngay ra được 1 người thật cụ thể.
+Nỗi đau trong avatar khớp với câu khách hay nhắn cho bạn.
+Có ít nhất 1 câu dùng đúng ngôn ngữ của khách (không phải ngôn ngữ marketing).
+
+❌ Chưa đạt khi
+Avatar mô tả kiểu "người muốn kinh doanh tốt hơn" — quá chung, không ai cụ thể.
+Không có câu nói thật của khách, chỉ có câu AI tự nghĩ.
+Chưa lưu file, chỉ để trong chat.
+Nỗi đau nghe kiểu "muốn tăng doanh thu, muốn scale" — đó là ngôn ngữ người bán, không phải ngôn ngữ người mua.
+
+💡 Mẹo AI-First — Khi chưa có khách thật
+Nếu bạn chưa bán được đơn nào: đừng bịa. Hãy tìm 3-5 người trong mạng lưới của bạn trông giống khách mục tiêu và nhắn hỏi họ 3 câu:
+
+"Bạn đang gặp khó khăn gì nhất với [lĩnh vực]?"
+"Bạn đã thử làm gì để giải quyết chưa?"
+"Kết quả lý tưởng với bạn trông như thế nào?"
+
+Copy nguyên câu trả lời của họ vào avatar. Đó là dữ liệu thật nhất bạn có thể có trước khi bán được đơn đầu tiên.

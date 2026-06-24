@@ -1,0 +1,144 @@
+Skill 02 — Giọng Văn Thương Hiệu (BRAND_DNA)
+Thuộc bộ 24 AI Agent for Business.
+
+Mục tiêu của Skill 02 là tạo ra file BRAND_DNA — một đoạn văn mô tả chính xác cách bạn viết, cách bạn nói chuyện, và những thứ bạn không bao giờ viết. Sau khi có file này, bạn dán vào AI một lần là AI tự giữ giọng cho mọi bài.
+
+Skill này cần làm trước mọi skill viết chữ. Không có BRAND_DNA, AI viết ra nghe như AI. Có BRAND_DNA, AI viết ra nghe như bạn.
+
+💡 Tư duy AI-First
+Bạn không tự "đặt ra" giọng văn. Bạn phát hiện nó từ những gì bạn đã viết.
+
+Lấy 5-10 bài bạn đã đăng thật (Facebook, Zalo, email, caption) — paste vào AI và để AI phân tích giọng. Bạn chỉ cần xác nhận "đúng rồi" hoặc "cái này không phải mình".
+
+Nếu chưa viết gì bao giờ: trả lời câu hỏi bằng miệng, ghi âm lại, rồi dùng AI chuyển thành văn bản. Giọng nói tự nhiên của bạn là điểm bắt đầu tốt nhất.
+
+▤ SOP — Hướng dẫn
+
+🎯 Mục tiêu cuối bài
+Sau khi làm xong, bạn phải có:
+- File BRAND_DNA hoàn chỉnh (khoảng 200-400 chữ)
+- Đã test: dán BRAND_DNA vào AI + yêu cầu viết 1 đoạn ngắn → nghe giống giọng bạn
+- Lưu file để dùng cho mọi skill viết chữ phía sau
+
+Công cụ: Claude hoặc ChatGPT + bài viết cũ của bạn (hoặc ghi âm giọng nói)
+
+---
+
+Bước 1 — Thu thập bài viết cũ
+Tìm 5-10 bài bạn đã viết thật và cảm thấy "cái này nghe giống mình nhất". Có thể là:
+- Bài đăng Facebook
+- Caption Instagram
+- Tin nhắn dài bạn gửi cho khách
+- Email bạn viết cho ai đó
+- Đoạn mô tả sản phẩm bạn tự viết
+
+Không cần đẹp, không cần dài. Cần thật — viết đúng kiểu bạn nói chuyện bình thường.
+
+Copy hết vào 1 chỗ. Qua Bước 2.
+
+Nếu chưa có bài viết nào: nhảy thẳng xuống Bước 2B.
+
+---
+
+Bước 2A — Để AI phân tích giọng (nếu có bài cũ)
+Mở Claude hoặc ChatGPT. Paste đoạn sau vào:
+
+---
+Dưới đây là những bài viết thật tôi đã đăng. Hãy phân tích giọng văn của tôi theo các khía cạnh sau:
+
+1. Cách mở đầu bài (hay bắt đầu bằng gì?)
+2. Độ dài câu (ngắn/vừa/dài?)
+3. Từ ngữ đặc trưng (hay dùng từ nào?)
+4. Từ ngữ KHÔNG bao giờ dùng (tránh gì?)
+5. Cách kết bài (kết như thế nào?)
+6. Tông điệu tổng thể (tâm sự/chuyên gia/vui/nghiêm?)
+7. Cách xưng hô (mình/tôi/em/bạn?)
+
+Sau khi phân tích xong, hãy tổng hợp thành một đoạn BRAND_DNA dạng: "Khi viết, tôi sẽ... / Tôi luôn... / Tôi không bao giờ..."
+
+[PASTE BÀI VIẾT CỦA BẠN VÀO ĐÂY]
+---
+
+Đọc kết quả. Xác nhận từng điểm: đúng hay sai.
+
+---
+
+Bước 2B — Nếu chưa có bài viết (hoặc bài chưa đủ)
+Trả lời 7 câu hỏi này thật tự nhiên (viết như đang nhắn tin cho bạn):
+
+1. Khi viết về sản phẩm của mình, bạn hay mở đầu bằng gì?
+2. Bạn hay xưng là gì khi viết — mình/tôi/em?
+3. Câu bạn thấy nghe "không phải mình" nhất là câu kiểu nào?
+4. Bạn hay dùng emoji trong bài không? Hay dùng cái gì?
+5. Bạn muốn người đọc cảm thấy gì sau khi đọc bài của bạn?
+6. Bạn thấy mình giống kiểu bạn thân đang chia sẻ, hay kiểu thầy đang dạy?
+7. Có câu nào bạn TUYỆT ĐỐI không muốn AI viết thay bạn không?
+
+Paste 7 câu trả lời vào AI cùng lệnh:
+
+"Dựa vào 7 câu trả lời này, hãy viết một đoạn BRAND_DNA khoảng 200-300 chữ mô tả giọng văn của tôi. Viết dạng hướng dẫn cho AI: 'Khi viết thay [tên bạn], bạn sẽ... / Không bao giờ...'"
+
+---
+
+Bước 3 — Chỉnh BRAND_DNA cho đúng
+Đọc bản AI tổng hợp. Kiểm tra từng dòng:
+
+- Dòng này có phản ánh đúng cách mình viết không?
+- Có dòng nào nghe "cứng" hoặc "formal" quá không?
+- Có dòng nào AI tự thêm vào mà thực ra mình không vậy không?
+
+Xóa những dòng không đúng. Thêm những gì còn thiếu. Viết bằng tay nếu cần.
+
+Một BRAND_DNA tốt trông như thế này (ví dụ):
+
+---
+Khi viết, tôi dùng giọng tâm sự — như đang ngồi nói chuyện với người bạn hiểu chuyện, không phải giảng bài. Tôi hay mở đầu bằng một cảnh đời thường hoặc một câu hỏi thật. Câu ngắn. Ít chữ thừa. Xưng mình/bạn.
+
+Tôi không dùng: em-dash (—), từ "copywriter", "tối ưu hóa", "hành trình", "nội dung chất lượng cao". Tôi không viết kiểu chuyên gia đứng trên nhìn xuống.
+
+Kết bài nhẹ — như người bạn nói xong câu chuyện rồi để người kia suy nghĩ. Không kêu gọi mạnh tay.
+---
+
+---
+
+Bước 4 — Test BRAND_DNA
+Paste BRAND_DNA vào một chat AI mới. Sau đó yêu cầu:
+
+"Dựa trên BRAND_DNA trên, hãy viết một bài đăng Facebook khoảng 100-150 chữ giới thiệu [sản phẩm của bạn]. Viết đúng giọng đã mô tả."
+
+Đọc kết quả. Tự hỏi:
+
+- Đọc bài này, nếu không biết AI viết, mình có nghĩ đây là bài do mình viết không?
+- Có chỗ nào nghe "AI quá" không?
+
+Nếu chưa ổn: chỉnh BRAND_DNA rồi test lại. Có thể test 2-3 vòng.
+
+---
+
+Bước 5 — Lưu file
+Lưu BRAND_DNA vào file: `brand-dna.txt`
+
+Mỗi lần dùng AI để viết bài (bất kỳ skill nào), bắt đầu chat bằng: paste BRAND_DNA vào trước, rồi mới yêu cầu.
+
+---
+
+Checklist trước khi qua Skill 03
+- BRAND_DNA đã viết xong, khoảng 150-400 chữ
+- Đã test ít nhất 1 lần: AI viết bài theo BRAND_DNA nghe giống giọng bạn
+- Đã lưu file brand-dna.txt
+
+✅ Được duyệt khi
+AI viết bài theo BRAND_DNA, người đọc không đoán ra AI viết.
+BRAND_DNA có phần "KHÔNG bao giờ dùng" — phần này quan trọng không kém phần "hay dùng".
+File đã lưu và bạn biết mình sẽ paste nó vào đâu trong các skill tiếp theo.
+
+❌ Chưa đạt khi
+BRAND_DNA chỉ ghi "viết ngắn gọn, chân thực" — quá chung, không đủ để AI hiểu.
+Chưa test: không biết AI có viết đúng giọng không.
+Không có phần từ ngữ cấm / điều không bao giờ viết.
+AI test viết ra vẫn nghe như AI generic — tức là BRAND_DNA chưa đủ cụ thể.
+
+💡 Mẹo AI-First — Cách biết BRAND_DNA đã đủ mạnh
+Cho người quen đọc bài AI test viết (không nói là AI viết). Nếu họ nói "ừ, nghe giống bạn đấy" hoặc không phát hiện ra AI viết — BRAND_DNA đã đủ tốt.
+
+Nếu họ nói "nghe hơi lạ, không phải kiểu bạn hay viết" — quay lại chỉnh BRAND_DNA, thường là phần câu mở đầu và cách xưng hô chưa đúng.

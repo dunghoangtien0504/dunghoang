@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Setup Meta Business AI trong 10 phút — DungHoang.com</title>
+<meta name="description" content="Bản đặc tả Meta Business AI hoàn chỉnh cho Messenger, Instagram, WhatsApp. Chỉ 99.000đ — paste vào là AI tự chạy 24/7.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0D2B1A;
+  --bg-deep:   #081A10;
+  --bg-card:   rgba(255,255,255,0.05);
+  --bg-card2:  rgba(255,255,255,0.03);
+  --accent:    #1D9E75;
+  --accent-h:  #17875f;
+  --gold:      #D4B896;
+  --text:      #F6F0E4;
+  --text-2:    rgba(246,240,228,0.65);
+  --text-3:    rgba(246,240,228,0.35);
+  --border:    rgba(255,255,255,0.08);
+  --border-2:  rgba(255,255,255,0.14);
+  --danger:    #E05C5C;
+  --radius:    16px;
+  --radius-sm: 10px;
+  --ff:        'Be Vietnam Pro', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--ff);
+  background: var(--bg-deep);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  padding-top: 48px; /* announcement bar */
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
+
+/* ── ANNOUNCEMENT BAR ── */
+.ann-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.ann-bar span { opacity: 0.85; font-weight: 400; }
+
+/* ── STICKY CTA BAR ── */
+.sticky-cta {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 150;
+  background: var(--bg-deep);
+  border-top: 1px solid var(--border-2);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  backdrop-filter: blur(16px);
+}
+.sticky-cta .price-tag { font-size: 12px; color: var(--text-2); }
+.sticky-cta .price-tag strong { color: var(--text); font-size: 18px; font-weight: 800; }
+.sticky-cta .btn-sticky {
+  flex-shrink: 0;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  padding: 13px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  touch-action: manipulation;
+  min-height: 48px;
+  white-space: nowrap;
+}
+.sticky-cta .btn-sticky:hover { background: var(--accent-h); }
+
+/* ── ZALO FLOAT ── */
+.zalo-float {
+  position: fixed;
+  bottom: 80px;
+  right: 16px;
+  z-index: 140;
+  width: 52px; height: 52px;
+  background: #0068FF;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,104,255,0.4);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.zalo-float:hover { transform: scale(1.1); }
+.zalo-float svg { width: 28px; height: 28px; fill: #fff; }
+
+/* ── LAYOUT ── */
+.container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+.container-wide { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+section { padding: 64px 0; }
+
+/* ── FADE UP ANIMATION ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.fade-up.visible { opacity: 1; transform: none; }
+
+/* ── HERO ── */
+.hero {
+  padding: 56px 0 64px;
+  background: var(--bg);
+}
+.hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(29,158,117,0.12);
+  border: 1px solid rgba(29,158,117,0.25);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.hero-eyebrow .dot {
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.hero h1 {
+  font-size: clamp(28px, 6vw, 46px);
+  font-weight: 900;
+  line-height: 1.18;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.hero-sub {
+  font-size: 17px;
+  color: var(--text-2);
+  line-height: 1.65;
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 16px 36px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  touch-action: manipulation;
+  min-height: 52px;
+  text-align: center;
+}
+.btn-primary:hover { background: var(--accent-h); transform: translateY(-1px); }
+.btn-primary .arrow { font-size: 18px; }
+.hero-note {
+  font-size: 13px;
+  color: var(--text-3);
+  margin-top: 14px;
+}
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+.trust-item .num {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+.trust-item .label {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-top: 4px;
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-size: clamp(22px, 4.5vw, 34px);
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.section-sub {
+  font-size: 16px;
+  color: var(--text-2);
+  line-height: 1.65;
+  max-width: 540px;
+}
+
+/* ── PAIN SECTION ── */
+.pain-section { background: var(--bg); }
+.pain-list { margin-top: 36px; display: flex; flex-direction: column; gap: 16px; }
+.pain-card {
+  background: rgba(224,92,92,0.07);
+  border: 1px solid rgba(224,92,92,0.18);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.pain-icon {
+  width: 36px; height: 36px;
+  background: rgba(224,92,92,0.15);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+.pain-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.pain-card p { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+
+/* ── SOLUTION BRIDGE ── */
+.solution-section { background: var(--bg-deep); }
+.story-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-top: 32px;
+  position: relative;
+}
+.story-box::before {
+  content: '"';
+  position: absolute;
+  top: 16px; left: 24px;
+  font-size: 64px;
+  color: var(--accent);
+  opacity: 0.3;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+.story-box p {
+  font-size: 16px;
+  color: var(--text-2);
+  line-height: 1.75;
+  padding-top: 16px;
+}
+.story-box p strong { color: var(--text); }
+
+/* ── HOW IT WORKS ── */
+.how-section { background: var(--bg); }
+.steps-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.step-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.step-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+.step-num {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.25;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.step-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.step-card p { font-size: 13px; color: var(--text-2); line-height: 1.6; }
+
+/* ── DELIVERABLES ── */
+.deliver-section { background: var(--bg-deep); }
+.deliver-grid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.deliver-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.deliver-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(29,158,117,0.12);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+.deliver-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.deliver-card p { font-size: 13px; color: var(--text-2); line-height: 1.6; }
+.deliver-card .check-list { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+.deliver-card .check-item {
+  font-size: 12px;
+  color: var(--text-2);
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.deliver-card .check-item svg {
+  width: 14px; height: 14px;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── VALUE STACK ── */
+.value-section { background: var(--bg); }
+.value-table {
+  margin-top: 36px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.value-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+.value-row:last-child { border-bottom: none; }
+.value-name { font-size: 14px; font-weight: 600; }
+.value-desc { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+.value-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-2);
+  white-space: nowrap;
+  text-align: right;
+}
+.value-total {
+  background: rgba(29,158,117,0.08);
+  border-top: 1px solid rgba(29,158,117,0.2);
+}
+.value-total .value-name { color: var(--text); }
+.value-total .value-price { color: var(--text); font-size: 17px; }
+
+/* ── PRICING ── */
+.pricing-box {
+  margin-top: 32px;
+  background: var(--bg-deep);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.pricing-box::before {
+  content: 'GIÁ HÔM NAY';
+  position: absolute;
+  top: 16px; right: -28px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 4px 40px;
+  transform: rotate(35deg);
+}
+.pricing-box .old-price {
+  font-size: 18px;
+  color: var(--text-3);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+.pricing-box .new-price {
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.pricing-box .new-price span {
+  font-size: 24px;
+  font-weight: 600;
+  vertical-align: top;
+  margin-top: 10px;
+  display: inline-block;
+}
+.pricing-box .price-note {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-top: 8px;
+}
+.pricing-box .btn-buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 16px 40px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 28px;
+  min-height: 52px;
+  text-align: center;
+  touch-action: manipulation;
+}
+.pricing-box .btn-buy:hover { background: var(--accent-h); }
+
+/* ── GUARANTEE ── */
+.guarantee-section { background: var(--bg-deep); }
+.guarantee-box {
+  background: rgba(29,158,117,0.07);
+  border: 1px solid rgba(29,158,117,0.2);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-top: 36px;
+}
+.guarantee-icon {
+  width: 52px; height: 52px;
+  background: rgba(29,158,117,0.15);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.guarantee-icon svg { width: 28px; height: 28px; color: var(--accent); }
+.guarantee-text h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+.guarantee-text p { font-size: 14px; color: var(--text-2); line-height: 1.65; }
+
+/* ── FOR / NOT FOR ── */
+.for-section { background: var(--bg); }
+.for-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+.for-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.for-card.yes { border-color: rgba(29,158,117,0.25); }
+.for-card.no { border-color: rgba(224,92,92,0.2); }
+.for-header {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.for-card.yes .for-header { color: var(--accent); }
+.for-card.no .for-header { color: var(--danger); }
+.for-list { display: flex; flex-direction: column; gap: 10px; }
+.for-item { font-size: 14px; color: var(--text-2); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+.for-item svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; }
+.for-card.yes .for-item svg { color: var(--accent); }
+.for-card.no .for-item svg { color: var(--danger); }
+
+/* ── FAQ ── */
+.faq-section { background: var(--bg-deep); }
+.faq-list { margin-top: 36px; display: flex; flex-direction: column; gap: 2px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.faq-q {
+  width: 100%;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--ff);
+  font-size: 15px;
+  font-weight: 600;
+  touch-action: manipulation;
+}
+.faq-chevron { flex-shrink: 0; transition: transform 0.25s ease; }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+.faq-a { display: none; padding: 0 20px 18px; font-size: 14px; color: var(--text-2); line-height: 1.7; }
+.faq-item.open .faq-a { display: block; }
+
+/* ── FINAL CTA ── */
+.final-cta { background: var(--bg); text-align: center; }
+.final-cta-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-2);
+  border-radius: 20px;
+  padding: 52px 32px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.final-cta-box .price-final {
+  font-size: 44px;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 16px 0;
+}
+.final-cta-box p { font-size: 15px; color: var(--text-2); margin-bottom: 28px; line-height: 1.65; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--bg-deep);
+  border-top: 1px solid var(--border);
+  padding: 32px 20px 80px;
+  text-align: center;
+}
+footer .footer-logo { font-size: 14px; font-weight: 800; color: var(--text); letter-spacing: 0.03em; margin-bottom: 8px; }
+footer p { font-size: 12px; color: var(--text-3); line-height: 1.6; }
+footer a { color: var(--text-2); text-decoration: underline; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  section { padding: 48px 0; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .deliver-grid { grid-template-columns: 1fr; }
+  .for-grid { grid-template-columns: 1fr; }
+  .trust-grid { gap: 8px; }
+  .trust-item .num { font-size: 22px; }
+  .guarantee-box { flex-direction: column; gap: 16px; }
+  .pricing-box { padding: 28px 20px; }
+  .pricing-box .new-price { font-size: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { transition: none; opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── ANNOUNCEMENT BAR ── -->
+<div class="ann-bar" role="banner">
+  Giá 99.000d chi ap dung trong thang nay <span>— Sau do ve gia goc 350.000d</span>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="fade-up">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        AI Agent cho Messenger · Instagram · WhatsApp
+      </div>
+      <h1>
+        Shop ban co <em>hang chuc tin nhan</em> moi ngay<br>
+        ma khong ai tra loi kip?
+      </h1>
+      <p class="hero-sub">
+        Skill nay cho ban mot ban dac ta hoan chinh de paste thang vao Meta Business Suite.
+        AI tu dong tra loi khach 24/7 - tu hoi gia den chot don - khong can thue nhan vien.
+      </p>
+      <a href="#pricing" class="btn-primary">
+        Lay ngay voi 99.000d <span class="arrow">&#8594;</span>
+      </a>
+      <p class="hero-note">Hoan tien 14 ngay neu khong hai long · Giao ngay sau khi thanh toan</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <div class="container fade-up">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="num">600+</div>
+        <div class="label">hoc vien da su dung skill</div>
+      </div>
+      <div class="trust-item">
+        <div class="num">6</div>
+        <div class="label">nganh hang duoc ho tro</div>
+      </div>
+      <div class="trust-item">
+        <div class="num">10 phut</div>
+        <div class="label">tu zero den AI chay duoc</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PAIN SECTION ── -->
+<section class="pain-section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-title">Chuyen nay quen khong?</div>
+      <p class="section-sub">
+        Minh biet vi minh cung da trai qua. Luc dau tuong to shop nho, tu tra loi duoc.
+        Roi mot ngay so tin nhan tang gap doi...
+      </p>
+    </div>
+    <div class="pain-list">
+      <div class="pain-card fade-up">
+        <div class="pain-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E05C5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div>
+          <h3>Khach hoi, minh tra loi cham - ho mua hang noi khac</h3>
+          <p>Messenger den 11 gio dem. Sang hom sau tra loi thi khach noi "thoi em mua roi". Mot don 800k bay mat vi cham 8 tieng.</p>
+        </div>
+      </div>
+      <div class="pain-card fade-up">
+        <div class="pain-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E05C5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <h3>Thue nhan vien CSKH: 3-5 trieu/thang, van khong du</h3>
+          <p>Tuyen duoc nguoi thi lo dao tao. Nguoi nghi thi lo khach hong duoc cham soc. Tien luong thi khong nghi.</p>
+        </div>
+      </div>
+      <div class="pain-card fade-up">
+        <div class="pain-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E05C5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <h3>Da thu setup chatbot nhung AI tra loi sai, khach phien</h3>
+          <p>Nhap prompt vo toi, AI tra loi vu vo. Khach hoi gia ao xanh, AI bao het hang. Khach hoi ship, AI... im. Cuoi cung tat di, tu tra loi tay nhu cu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOLUTION BRIDGE ── -->
+<section class="solution-section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-title">Mình tìm ra cach nay sau 3 thang thu sai</div>
+      <p class="section-sub">
+        Khong phai chatbot. Khong phai thue nhan vien. La cach cau hinh dung de
+        AI cua Meta tu hieu shop cua ban.
+      </p>
+    </div>
+    <div class="story-box fade-up">
+      <p>
+        Hoi truoc minh cung chay shop online. Tin nhan tu Facebook, Instagram, Zalo...
+        den lien tuc. <strong>Minh ngoi tra loi den 12 gio dem van chua xong.</strong>
+      </p>
+      <p style="margin-top:14px;">
+        Sau do minh thu setup Meta Business AI. Ban dau sai het - AI tra loi nhu robot,
+        khach ghep mat. Minh mat 3 thang chay thu, chat thu, tinh chinh tung cau.
+      </p>
+      <p style="margin-top:14px;">
+        Roi minh tim ra <strong>dung thu tu cau hinh</strong>: Business Info phai viet the nao,
+        Custom Instructions can nhung gi, Avoid Topics nao phai chan.
+        <strong>Khi set up dung, AI cua Meta bat dau hieu shop - tu van, tu goi y san pham,
+        tu hoi so de chot don.</strong>
+      </p>
+      <p style="margin-top:14px;">
+        Skill nay la toan bo nhung gi minh da rut ra. Ban chi can dung 10 phut tra loi cau hoi,
+        skill tu viet ban dac ta hoan chinh cho ban.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="how-section" id="how">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-title">3 buoc la xong</div>
+      <p class="section-sub">Khong can biet ky thuat. Khong can code. Chi can biet shop cua ban ban gi.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card fade-up">
+        <div class="step-num">01</div>
+        <h3>Cho skill biet ve shop cua ban</h3>
+        <p>Ten shop, san pham, chinh sach doi tra, gio hoat dong... Cang chi tiet cang tot. Skill co cau hoi dan tung buoc.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">02</div>
+        <h3>Skill viet ban dac ta day du 4 phan</h3>
+        <p>Business Info, Custom Instructions, Avoid Certain Topics, va Kich ban Kiem thu. Viet xong la copy-paste duoc ngay.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">03</div>
+        <h3>Dan vao Meta Business Suite, AI chay</h3>
+        <p>Vao Meta · Business AI · Dan noi dung vao dung o · Save. AI bat dau tra loi khach ngay lap tuc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DELIVERABLES ── -->
+<section class="deliver-section" id="deliverables">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-title">Ban nhan duoc chinh xac 4 phan</div>
+      <p class="section-sub">Moi phan deu duoc viet san, hoan chinh, chi viec copy-paste vao dung o tuong ung trong Meta.</p>
+    </div>
+    <div class="deliver-grid">
+      <div class="deliver-card fade-up">
+        <div class="deliver-tag">Phan 1</div>
+        <h3>Business Info &amp; Catalog</h3>
+        <p>Cau hinh nen tang de AI hieu shop cua ban: san pham, gia, chinh sach, khu vuc phu vu...</p>
+        <div class="check-list">
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Mo ta thuong hieu, doi tuong khach
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Chinh sach doi tra, thanh toan, giao hang
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Huong dan phan loai thuoc tinh san pham
+          </div>
+        </div>
+      </div>
+      <div class="deliver-card fade-up">
+        <div class="deliver-tag">Phan 2</div>
+        <h3>Custom Instructions</h3>
+        <p>Toan bo cach cu xu cua AI: giong noi, quy trinh tu van, cach xu ly phan doi, cach chot don...</p>
+        <div class="check-list">
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Vai tro + tone of voice phu hop nganh
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Logic tu van 5 buoc + xin lead
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Logic chuyen nguoi that khi can
+          </div>
+        </div>
+      </div>
+      <div class="deliver-card fade-up">
+        <div class="deliver-tag">Phan 3</div>
+        <h3>Avoid Certain Topics</h3>
+        <p>Danh sach chu de AI tuyet doi khong duoc tu tra loi: phap ly, y te, cam ket hieu qua, so sanh doi thu...</p>
+        <div class="check-list">
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Guardrails rui ro phap ly + y te
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Vung cam AI khong duoc suy doan
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Tuy chinh theo dac thu nganh hang
+          </div>
+        </div>
+      </div>
+      <div class="deliver-card fade-up">
+        <div class="deliver-tag">Phan 4</div>
+        <h3>Kich ban Kiem thu</h3>
+        <p>Bo cau hoi test de ban kiem tra AI truoc khi bat: 10+ tinh huong thuc te, cach phan biet AI tra loi dung hay sai.</p>
+        <div class="check-list">
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            10+ tinh huong khach hay gap
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Cach biet AI tra loi dung/sai
+          </div>
+          <div class="check-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Checklist truoc khi bat AI
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VALUE STACK + PRICING ── -->
+<section class="value-section" id="pricing">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-title">Gia tri that — so voi chi 99.000d</div>
+      <p class="section-sub">
+        Thue nguoi tu van setup Meta Business AI: 500k-1 trieu mot buoi.
+        Skill nay lam dieu tuong tu, tu dong, theo dung nganh hang cua ban.
+      </p>
+    </div>
+    <div class="value-table fade-up">
+      <div class="value-row">
+        <div>
+          <div class="value-name">Cau hinh Business Info chuyen nganh</div>
+          <div class="value-desc">Khong phai mau chung, viet theo dung nganh Thoi trang/Skincare/F&B/Noi that/Spa/Me-Be</div>
+        </div>
+        <div class="value-price">150.000d</div>
+      </div>
+      <div class="value-row">
+        <div>
+          <div class="value-name">Custom Instructions day du 7 logic</div>
+          <div class="value-desc">Tu van, goi y san pham, xu ly phan doi, xin lead, chot don, chuyen nguoi, tu choi an toan</div>
+        </div>
+        <div class="value-price">200.000d</div>
+      </div>
+      <div class="value-row">
+        <div>
+          <div class="value-name">Avoid Topics theo rui ro nganh</div>
+          <div class="value-desc">Guardrails phap ly + y te + an toan, tuy chinh rieng theo tung nganh</div>
+        </div>
+        <div class="value-price">100.000d</div>
+      </div>
+      <div class="value-row">
+        <div>
+          <div class="value-name">Bo kiem thu 10+ tinh huong</div>
+          <div class="value-desc">Kich ban test thuc te, checklist truoc khi bat AI</div>
+        </div>
+        <div class="value-price">100.000d</div>
+      </div>
+      <div class="value-row value-total">
+        <div>
+          <div class="value-name">Tong gia tri thuc te</div>
+          <div class="value-desc">Neu thue tu van rieng tu</div>
+        </div>
+        <div class="value-price">550.000d</div>
+      </div>
+    </div>
+
+    <div class="pricing-box fade-up">
+      <div class="old-price">550.000d</div>
+      <div class="new-price"><span>chi</span> 99.000<span>d</span></div>
+      <div class="price-note">Giao ngay sau khi thanh toan · Dung duoc moi nganh hang · Hoan tien 14 ngay</div>
+      <a href="https://dunghoang.com/meta-business-ai" class="btn-buy">
+        Toi muon AI tu dong tra loi khach <span class="arrow">&#8594;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── GUARANTEE ── -->
+<section class="guarantee-section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-title">Mình cam kết</div>
+    </div>
+    <div class="guarantee-box fade-up">
+      <div class="guarantee-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <div class="guarantee-text">
+        <h3>Hoan tien trong 14 ngay, khong can ly do</h3>
+        <p>
+          Neu ban da lam theo huong dan ma AI van khong chay dung, hoac ban khong hai long vi bat ky ly do gi,
+          nhan tin cho minh qua Telegram <strong>@KentHoang</strong> hoac Zalo <strong>0938725413</strong>.
+          Minh se hoan toan bo 99.000d trong vong 24 gio. Khong hoi han, khong kho khan.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOR / NOT FOR ── -->
+<section class="for-section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-title">Skill nay danh cho ai?</div>
+    </div>
+    <div class="for-grid">
+      <div class="for-card yes fade-up">
+        <div class="for-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Phu hop voi ban
+        </div>
+        <div class="for-list">
+          <div class="for-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Chu shop online (thoi trang, my pham, spa, F&B, noi that, me va be)
+          </div>
+          <div class="for-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Dang nhan nhieu tin nhan tu Messenger / Instagram
+          </div>
+          <div class="for-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Muon AI tu dong ma khong muon tra loi chat robot cu ky
+          </div>
+          <div class="for-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Chua biet ky thuat nhung van muon tu setup
+          </div>
+          <div class="for-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Kinh doanh mot minh, muon tiet kiem luong nhan vien CSKH
+          </div>
+        </div>
+      </div>
+      <div class="for-card no fade-up">
+        <div class="for-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Chua phu hop neu
+        </div>
+        <div class="for-list">
+          <div class="for-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Doanh nghiep B2B phuc tap, quy trinh mua hang dai
+          </div>
+          <div class="for-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Khong co Fanpage / tai khoan Instagram / WhatsApp Business
+          </div>
+          <div class="for-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Can AI tu dong chay marketing, chay quang cao (day khong phai phan nay)
+          </div>
+          <div class="for-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Muon chatbot viet code theo yeu cau rieng
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-title">Cau hoi hay gap</div>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Meta Business AI la gi, co khac chatbot khong?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Meta Business AI la tinh nang AI chinh chu cua Meta (cong ty me cua Facebook/Instagram), khac hoan toan voi chatbot thong thuong. Chatbot chay theo kich ban dinh san (neu A thi B), con Meta Business AI la AI that su hieu ngon ngu tu nhien, tu van linh hoat theo tung tinh huong. Minh khong xay dung AI nay - minh giup ban cau hinh de no hieu dung shop cua ban.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Toi khong biet ky thuat, co tu lam duoc khong?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Hoan toan duoc. Skill chi yeu cau ban biet ve shop cua chinh ban - san pham gi, chinh sach gi, khach hay hoi gi. Skill se tu tao ra ban dac ta, ban chi can copy-paste vao Meta Business Suite. Khong can biet code, khong can hieu AI.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Toi nhan skill nay o dau, lam the nao de dung?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Sau khi thanh toan, ban nhan email kem huong dan cai dat skill vao Claude Code (cong cu AI cua Anthropic). Sau do chay skill, tra loi vai cau hoi ve shop, nhan ban dac ta, paste vao Meta Business Suite. Toan bo quy trinh co video huong dan kem theo.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Skill nay ho tro nhung nganh hang nao?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          6 nganh chinh: Thoi trang nu, My pham/Skincare, Me va Be, F&B (nha hang/quan cafe), Noi that/Gia dung, Spa/Tham my. Neu nganh ban khong nam trong danh sach, skill van tao duoc ban dac ta theo khung chung, chi khong co guardrails chuyen nganh sau nhu 6 nganh tren.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Dung cho Messenger, Instagram hay WhatsApp?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Tat ca. Ban dac ta skill tao ra trung tinh theo kenh - co the dung cho Messenger, Instagram DM, WhatsApp Business, va ca tich hop website. Meta Business AI mot khi duoc setup dung, no chay tren tat ca kenh duoc ket noi vao Business Suite cua ban.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Sau khi mua toi duoc ho tro them khong?
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          Co. Neu AI tra loi sai sau khi setup theo huong dan, nhan tin cho minh qua Telegram @KentHoang hoac Zalo 0938725413. Minh xem qua va huong dan chinh sua. Chinh sach bao hanh 14 ngay ke tu ngay mua.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="final-cta" id="buy">
+  <div class="container">
+    <div class="final-cta-box fade-up">
+      <div class="section-title">Thu nghi ma xem</div>
+      <div class="price-final">99.000d</div>
+      <p>
+        Thay vi de tin nhan chong chot den khi qua muon,<br>
+        thay vi tra 3-5 trieu/thang cho nhan vien CSKH,<br>
+        ban co the co AI tu dong hom nay voi 99k.
+      </p>
+      <a href="https://dunghoang.com/meta-business-ai" class="btn-primary" style="display:inline-flex;">
+        Toi muon lay ngay <span class="arrow">&#8594;</span>
+      </a>
+      <p style="font-size:13px; color:var(--text-3); margin-top:14px;">
+        Hoan tien 14 ngay · Giao ngay · Ho tro qua Telegram
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">DungHoang.com</div>
+  <p>
+    Lien he: Zalo <a href="tel:0938725413">0938725413</a> · Telegram <a href="https://t.me/KentHoang">@KentHoang</a>
+  </p>
+  <p style="margin-top:8px;">
+    &copy; 2026 DungHoang.com · <a href="https://dunghoang.com">Trang chu</a> · <a href="https://dunghoang.com/24-ai-agent">Khoa hoc AI</a>
+  </p>
+</footer>
+
+<!-- ── STICKY CTA BAR ── -->
+<div class="sticky-cta">
+  <div class="price-tag">
+    Chi <strong>99.000d</strong><br>
+    <span>Hoan tien 14 ngay</span>
+  </div>
+  <a href="https://dunghoang.com/meta-business-ai" class="btn-sticky">
+    Lay ngay &#8594;
+  </a>
+</div>
+
+<!-- ── ZALO FLOAT ── -->
+<a href="https://zalo.me/0938725413" class="zalo-float" aria-label="Nhan tin Zalo" target="_blank" rel="noopener">
+  <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+    <path d="M24 4C13 4 4 13 4 24c0 4.9 1.8 9.4 4.8 12.9L6 42l5.4-2.7C14.3 41.1 19 43 24 43c11 0 20-9 20-20S35 4 24 4z"/>
+    <text x="50%" y="57%" dominant-baseline="middle" text-anchor="middle" font-size="14" font-weight="bold" fill="#0068FF" font-family="Arial">Z</text>
+  </svg>
+</a>
+
+<script>
+// ── FADE UP ON SCROLL ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── FAQ ACCORDION ──
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ── SMOOTH SCROLL FOR ANCHORS ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>
