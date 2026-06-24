@@ -108,7 +108,7 @@ export default function HeThongContentPage() {
     <div className="min-h-screen bg-[#F6F0E4] font-sans">
 
       {/* [0] ANNOUNCEMENT BAR */}
-      <div className="bg-[#88860B] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
+      <div className="bg-[#C0390E] text-white text-center py-2 px-4 text-xs sm:text-sm font-medium">
         Tặng kèm miễn phí khi mua Trang Bán Hàng (686.868đ) hoặc Khóa 1 (868.686đ) · Bảo hành 14 ngày
       </div>
 

@@ -184,10 +184,10 @@ export const SKILLS: Skill[] = [
 
   // ── NHÓM 6 — TỰ ĐỘNG HÓA & CÔNG NGHỆ ────────────────────────────────────────
   {
-    n: '22', name: 'Chatbot Messenger & Instagram', agent: 'Meta Business AI', group: 'Tự động hóa',
-    does: 'Cấu hình trợ lý AI trả lời khách tự động trên Messenger/Instagram của Page bạn.',
-    output: 'Bản đặc tả copy-paste vào Meta Business Suite để bot trả khách.',
-    auto: 'Bot trả tự động phần lớn; câu khó chuyển cho bạn. Cần Page Facebook.',
+    n: '22', name: 'AI Agent Chat Messenger', agent: 'Meta Business AI', group: 'Tự động hóa',
+    does: 'Cấu hình trợ lý AI trả lời khách tự động trên Messenger của Page bạn.',
+    output: 'Bản đặc tả copy-paste vào Meta Business Suite để trợ lý trả khách.',
+    auto: 'Trợ lý trả tự động phần lớn; câu khó chuyển cho bạn. Cần Page Facebook.',
   },
   {
     n: '23', name: 'Nghiên Cứu Tài Liệu Bằng AI', agent: 'NotebookLM', group: 'Tự động hóa',

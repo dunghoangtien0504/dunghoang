@@ -77,7 +77,7 @@ export default function Khoa1Page() {
     <div className="min-h-screen bg-[#F6F0E4] font-sans">
 
       {/* [0] ANNOUNCEMENT BAR — B.12 Scarcity thật */}
-      <div className="bg-[#88860B] text-white text-center py-2.5 px-4 text-xs sm:text-sm font-medium">
+      <div className="bg-[#C0390E] text-white text-center py-2.5 px-4 text-xs sm:text-sm font-medium">
         Đợt đang học · Bonus file BRAND_DNA + Content 30 ngày kèm theo · 605+ học viên đã tiết kiệm 4-5h/ngày
       </div>
 

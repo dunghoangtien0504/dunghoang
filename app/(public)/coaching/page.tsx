@@ -64,7 +64,7 @@ const WEEK_PLAN = [
       'Skill 19 — Marketing Việt Nam: framework điền vào là có nội dung đúng nền tảng VN',
       'Skill 20 — Carousel Instagram: nhiều slide dạy hoặc kể chuyện, caption + hashtag sẵn',
       'Skill 21 — Tiêu Đề Thu Hút: 10 tiêu đề mỗi lần, nhiều kiểu để chọn cái hiệu quả nhất',
-      'Skill 22 — Chatbot Messenger & Instagram: bot trả lời khách tự động trên Page của bạn',
+      'Skill 22 — AI Agent Chat Messenger: trợ lý trả lời khách tự động trên Page của bạn',
       'Skill 23 — Nghiên Cứu Tài Liệu Bằng AI: tóm tắt, hỏi đáp, tạo quiz từ tài liệu thật',
       'Skill 24 — Tiểu Hà Mã (GoClaw): tối ưu AI đội trưởng theo đúng SOP business bạn đã xây',
     ],
