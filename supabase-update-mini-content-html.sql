@@ -1,0 +1,120 @@
+-- Cập nhật content_html cho các bài mini_368
+-- Chạy trong Supabase SQL Editor
+
+-- Bài 1: Chào mừng — Cách học hiệu quả nhất
+UPDATE lessons
+SET content_html = '<div style="font-family: -apple-system, BlinkMacSystemFont, ''Segoe UI'', sans-serif; color: #1a1a1a; background: #F6F0E4; border-radius: 16px; overflow: hidden;">
+
+  <!-- Header -->
+  <div style="background: #0D2B1A; padding: 24px 28px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+      <span style="background: #C0390E; color: white; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.05em;">BÀI MỞ ĐẦU</span>
+      <span style="color: #88860B; font-size: 12px; font-weight: 600;">Mini — Trang Bán Hàng 1 Giờ</span>
+    </div>
+    <h2 style="color: #F6F0E4; font-size: 22px; font-weight: 800; margin: 0 0 8px; line-height: 1.3;">Chào mừng — Cách học hiệu quả nhất</h2>
+    <p style="color: #C8D5C9; font-size: 14px; margin: 0; line-height: 1.6;">Bài này không có bài tập. Chỉ cần đọc một lần, hiểu cách vận hành, rồi bắt tay ngay vào Skill tiếp theo.</p>
+  </div>
+
+  <!-- Output box -->
+  <div style="background: #EAF5EF; border-left: 4px solid #1D9E75; padding: 16px 24px; margin: 0;">
+    <p style="font-size: 12px; font-weight: 700; color: #2D7A4F; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 6px;">Bạn sẽ có được sau khóa này</p>
+    <p style="font-size: 14px; color: #1a1a1a; margin: 0;">Một trang bán hàng thật đang chạy được — đúng cấu trúc 15 phần chuyển đổi cao, AI viết toàn bộ chữ, không cần biết code hay thiết kế.</p>
+  </div>
+
+  <!-- AI transparency -->
+  <div style="background: #FFF8E6; border-left: 4px solid #E8A020; padding: 12px 24px; margin: 0;">
+    <p style="font-size: 12px; font-weight: 600; color: #7A5500; margin: 0;"><strong>AI làm được:</strong> Viết toàn bộ nội dung trang theo đúng cấu trúc. <strong>Bạn cần làm:</strong> Nói đúng sản phẩm của mình, đọc lại và chỉnh chỗ nghe chưa giống bạn.</p>
+  </div>
+
+  <div style="padding: 28px;">
+
+    <div style="background: #0D2B1A; border-radius: 12px; padding: 16px 20px; margin-bottom: 28px;">
+      <p style="color: #88860B; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 6px;">💡 Tư Duy AI-First</p>
+      <p style="color: #C8D5C9; font-size: 13px; margin: 0; line-height: 1.6;">Bạn không cần học thiết kế web. Không cần biết code. Không cần "cảm hứng viết". Bạn chỉ cần biết cách ra lệnh đúng cho AI — AI sẽ làm phần còn lại. Bạn đọc lại, chỉnh chỗ chưa đúng, rồi đăng lên.</p>
+    </div>
+
+    <div style="margin-bottom: 28px;">
+      <p style="font-size: 11px; font-weight: 700; color: #3D6B4A; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 12px;">🎯 Sau bài này bạn cần biết</p>
+      <div style="background: white; border: 1px solid #DDD8CB; border-radius: 12px; padding: 16px 20px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: #1D9E75; font-weight: 700; flex-shrink: 0;">✓</span><span style="font-size: 14px; color: #333;">Khóa này có 2 skill — thứ tự không đổi: BRAND_DNA trước, Landing Page sau</span></div>
+          <div style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: #1D9E75; font-weight: 700; flex-shrink: 0;">✓</span><span style="font-size: 14px; color: #333;">Mỗi skill có SOP từng bước + prompt sẵn — làm theo là ra output</span></div>
+          <div style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: #1D9E75; font-weight: 700; flex-shrink: 0;">✓</span><span style="font-size: 14px; color: #333;">Khi xong mỗi bài: nộp output vào ô "Nộp bài" — Dũng sẽ xem và cho phản hồi</span></div>
+          <div style="display: flex; align-items: flex-start; gap: 10px;"><span style="color: #1D9E75; font-weight: 700; flex-shrink: 0;">✓</span><span style="font-size: 14px; color: #333;">AI là công cụ — mình ra lệnh, AI làm. Không phải mình làm, AI hỗ trợ</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size: 11px; font-weight: 700; color: #3D6B4A; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 16px;">▤ Cách vận hành mỗi bài học</p>
+
+    <div style="margin-bottom: 20px; border: 1px solid #DDD8CB; border-radius: 12px; overflow: hidden; background: white;">
+      <div style="background: #0D2B1A; padding: 12px 20px; display: flex; align-items: center; gap: 10px;">
+        <span style="background: #C0390E; color: white; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px;">Bước 1</span>
+        <span style="color: #F6F0E4; font-weight: 600; font-size: 14px;">Đọc phần Hướng Dẫn trong bài</span>
+      </div>
+      <div style="padding: 16px 20px;">
+        <p style="font-size: 14px; color: #444; line-height: 1.7; margin: 0 0 12px;">Mỗi bài có phần "Hướng Dẫn" giải thích skill đó làm gì, output cầm được là gì, và các bước thực hiện.</p>
+        <div style="background: #F6F0E4; border-radius: 8px; padding: 14px 16px; font-size: 13px; color: #555; line-height: 1.8;">Đọc kỹ phần Hướng Dẫn trước khi mở AI — biết mình đang làm gì thì kết quả tốt hơn nhiều so với làm theo phản xạ.</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px; border: 1px solid #DDD8CB; border-radius: 12px; overflow: hidden; background: white;">
+      <div style="background: #0D2B1A; padding: 12px 20px; display: flex; align-items: center; gap: 10px;">
+        <span style="background: #C0390E; color: white; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px;">Bước 2</span>
+        <span style="color: #F6F0E4; font-weight: 600; font-size: 14px;">Mở AI — làm theo từng bước trong SOP</span>
+      </div>
+      <div style="padding: 16px 20px;">
+        <p style="font-size: 14px; color: #444; line-height: 1.7; margin: 0 0 12px;">Mỗi bước trong SOP đã có prompt sẵn. Copy prompt, điền thông tin thật của bạn vào chỗ <strong>[...]</strong>, paste vào AI.</p>
+        <div style="background: #EAF5EF; border-radius: 8px; padding: 12px 16px;">
+          <p style="font-size: 12px; font-weight: 600; color: #2D7A4F; margin: 0 0 6px;">Dùng Claude hoặc ChatGPT đều được</p>
+          <p style="font-size: 13px; color: #444; margin: 0; line-height: 1.7;">Khuyến khích dùng Claude (claude.ai) — nó nghe lệnh tốt hơn cho loại bài này. Nhưng ChatGPT cũng ra output được.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px; border: 1px solid #DDD8CB; border-radius: 12px; overflow: hidden; background: white;">
+      <div style="background: #0D2B1A; padding: 12px 20px; display: flex; align-items: center; gap: 10px;">
+        <span style="background: #C0390E; color: white; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px;">Bước 3</span>
+        <span style="color: #F6F0E4; font-weight: 600; font-size: 14px;">Nộp output — nhận phản hồi từ Dũng</span>
+      </div>
+      <div style="padding: 16px 20px;">
+        <p style="font-size: 14px; color: #444; line-height: 1.7; margin: 0 0 12px;">Khi xong mỗi bài — paste link output vào ô "Nộp bài" bên dưới. Dũng sẽ xem và nhận xét.</p>
+        <div style="background: #F6F0E4; border-radius: 8px; padding: 14px 16px; font-size: 13px; color: #555; line-height: 1.8;"><strong>Nộp bài cần gì?</strong><br>Skill 02 (BRAND_DNA): Link file Google Doc chứa BRAND_DNA của bạn<br>Skill 10 (Landing Page): Link trang bán hàng đã đăng lên web</div>
+        <p style="font-size: 13px; color: #888; margin: 10px 0 0; font-style: italic;">Bài này không cần nộp gì — tick "Tự đánh dấu xong" rồi mở Skill tiếp theo.</p>
+      </div>
+    </div>
+
+    <div style="border-top: 1px solid #DDD8CB; margin-bottom: 24px;"></div>
+
+    <p style="font-size: 11px; font-weight: 700; color: #3D6B4A; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 12px;">📋 2 Skill Bạn Sẽ Làm</p>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
+
+      <div style="background: white; border: 1px solid #DDD8CB; border-radius: 12px; padding: 16px 20px; display: flex; align-items: flex-start; gap: 14px;">
+        <div style="background: #0D2B1A; border-radius: 8px; padding: 6px 10px; flex-shrink: 0;"><span style="color: #F6F0E4; font-size: 12px; font-weight: 800;">02</span></div>
+        <div>
+          <p style="font-size: 14px; font-weight: 700; color: #0D2B1A; margin: 0 0 4px;">Giọng Văn Thương Hiệu (BRAND_DNA)</p>
+          <p style="font-size: 13px; color: #555; margin: 0; line-height: 1.6;">Dạy AI học giọng văn của bạn. Mọi chữ AI viết sau đó — kể cả trang bán hàng — sẽ nghe đúng giọng bạn, không phải giọng AI generic.</p>
+          <p style="font-size: 12px; color: #2D7A4F; font-weight: 600; margin: 6px 0 0;">Output: File BRAND_DNA dùng mãi cho tất cả bài sau</p>
+        </div>
+      </div>
+
+      <div style="background: white; border: 1px solid #DDD8CB; border-radius: 12px; padding: 16px 20px; display: flex; align-items: flex-start; gap: 14px;">
+        <div style="background: #0D2B1A; border-radius: 8px; padding: 6px 10px; flex-shrink: 0;"><span style="color: #F6F0E4; font-size: 12px; font-weight: 800;">10</span></div>
+        <div>
+          <p style="font-size: 14px; font-weight: 700; color: #0D2B1A; margin: 0 0 4px;">Dựng Landing Page Trong 1 Buổi</p>
+          <p style="font-size: 13px; color: #555; margin: 0; line-height: 1.6;">Dùng BRAND_DNA vừa làm + AI viết toàn bộ nội dung trang bán hàng 15 phần. Bạn lắp vào công cụ và đăng — không cần code.</p>
+          <p style="font-size: 12px; color: #2D7A4F; font-weight: 600; margin: 6px 0 0;">Output: Link trang bán hàng thật đang online</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="background: #0D2B1A; border-radius: 12px; padding: 16px 20px;">
+      <p style="color: #88860B; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 6px;">🚀 Làm ngay bây giờ</p>
+      <p style="color: #C8D5C9; font-size: 13px; margin: 0; line-height: 1.7;">Tick "Tự đánh dấu xong" ở bài này. Rồi mở <strong style="color: #F6F0E4;">Ngày 2 — Giọng Văn Thương Hiệu (BRAND_DNA)</strong>. Có gì hỏi thêm thì nhắn Dũng qua Telegram @KentHoang — mình trả lời trong ngày.</p>
+    </div>
+
+  </div>
+</div>'
+WHERE course_id = 'mini_368' AND sort_order = 1;
