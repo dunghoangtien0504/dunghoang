@@ -35,16 +35,6 @@ const PRODUCTS = [
     badge: 'Phổ biến nhất',
     badgeColor: 'bg-[#EDF3FF] text-[#2B5BB8]',
     name: 'Landing Page Siêu Chuyển Đổi',
-    desc: 'Skill 08B Landing Page. Không cần code. AI làm hết kỹ thuật. Tặng kèm Content System.',
-    price: '686.868đ',
-    cta: 'Xem chi tiết',
-    href: '/mini-trang-ban-hang',
-    icon: <BookOpen className="w-5 h-5" />,
-  },
-  {
-    badge: 'Khóa thực hành',
-    badgeColor: 'bg-[#FFF0ED] text-[#C0390E]',
-    name: 'Landing Page Siêu Chuyển Đổi',
     desc: 'Vibe Coding + 8 skill file. 10 buổi thực hành. Cuối khóa có landing page thật đang chạy.',
     price: '686.868đ',
     cta: 'Xem chi tiết',
@@ -139,9 +129,9 @@ export default function HomePage() {
           )
         })()}
 
-        {/* Secondary: 3 others */}
-        <div className="grid sm:grid-cols-3 gap-3">
-          {[PRODUCTS[0], PRODUCTS[3], PRODUCTS[4]].map((p, i) => (
+        {/* Secondary: 4 others */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[3], PRODUCTS[4]].map((p, i) => (
             <div key={i}
               className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-3 hover:border-[#3D6B4A]/40 hover:shadow-sm transition-all flex flex-col">
               <span className={`text-xs font-semibold px-2.5 py-1 rounded-full self-start ${p.badgeColor}`}>{p.badge}</span>
