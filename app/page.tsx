@@ -15,7 +15,7 @@ const PRODUCTS = [
     badge: 'Mới · 199k',
     badgeColor: 'bg-[#E6F7F1] text-[#0D6E4D]',
     name: 'Setup Meta AI Agent',
-    desc: 'Cài AI trả lời tự động cho Messenger, Instagram, WhatsApp. Không cần code. Setup 30 phút, AI chạy 24/7.',
+    desc: 'Cài AI trả lời tự động cho Messenger Fanpage. Không cần code. Setup 30 phút, AI chạy 24/7.',
     price: '199.000đ',
     cta: 'Xem chi tiết',
     href: '/meta-ai-agent',
