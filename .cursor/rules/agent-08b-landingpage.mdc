@@ -1,0 +1,201 @@
+---
+description: Xây dựng landing page bán hàng chuyển đổi cao theo hệ thống Wepower V4 — 16 bước × 15 section × NLP × DISC. Đầu ra là file HTML hoàn chỉnh, dark theme, mobile-first, sticky CTA, sẵn sàng đăng. Dùng skill này khi người dùng muốn "tạo landing page", "viết trang bán hàng", "trang chốt đơn", "sales page", "landing page bán khóa học", "trang đích quảng cáo", "build landing page", "trang bán sản phẩm/dịch vụ", hoặc khi đã có sales-page.md / offer.md / funnel-blueprint.md từ các Agent AAFB trước (đặc biệt sau Ad Copy Machine 08). KÍCH HOẠT NGAY cả khi người dùng chỉ mô tả ngắn như "làm trang bán hàng cho khóa X", "tôi cần landing page cho homestay", "viết trang đích cho sản phẩm Y". Chạy SAU Ad Copy Machine (08), TRƯỚC VSL Scriptwriter (09). Có thể dùng độc lập — nếu chưa có thông tin gì, skill sẽ hỏi bộ câu hỏi đầu vào để thu thập nguyên liệu trước khi build.
+globs: *
+---
+# AGENT-08B-LANDINGPAGE
+
+
+# AAFB — Landing Page Builder
+## Agent 08B/12 · AAFB Framework · Wepower Engine V4.0
+
+
+## Nhiệm vụ
+
+Biến nội dung copy thành một **landing page HTML hoàn chỉnh** chuyển đổi cao — tổ chức theo 15 section × 16 bước của Wepower V4, có Emotion Curve leo thang, trigger đủ 4 nhóm DISC, nhúng NLP đúng vị trí, và CTA graduated 5 lần.
+
+**Skill này làm:**
+- Nhận nguyên liệu (từ Agent trước HOẶC từ bộ câu hỏi đầu vào) → build landing page HTML.
+- Tổ chức copy theo đúng 15 section + Emotion Curve.
+- Nhúng 10 kỹ thuật NLP và trigger DISC vào đúng bước.
+- Xuất file `.html` dark theme, mobile-first, sticky CTA, Zalo float.
+
+**Skill này KHÔNG làm:**
+- Viết copy thô từ đầu khi không có nguyên liệu → đó là Ad Copy Machine (08). Nhưng nếu dùng độc lập, skill TỰ thu thập đủ nguyên liệu qua bộ câu hỏi rồi mới build.
+- Map funnel → Funnel Strategist (07).
+- Viết script video → VSL Scriptwriter (09).
+
+
+## BƯỚC 0 — Phân Luồng: Có Context Hay Chưa?
+
+**Quét cuộc trò chuyện hiện tại và file người dùng paste vào. Xác định đang ở luồng nào:**
+
+```
+┌─ LUỒNG A — ĐÃ CÓ NGUYÊN LIỆU ────────────────────────────┐
+│ Có ít nhất sales-page.md HOẶC (offer.md + avatar.md)      │
+│ trong chat, HOẶC người dùng vừa chạy Agent 01→08.          │
+│ → Bỏ qua hỏi. Đọc references. Build ngay.                  │
+└────────────────────────────────────────────────────────────┘
+
+┌─ LUỒNG B — CHƯA CÓ GÌ (dùng độc lập) ─────────────────────┐
+│ Người dùng chỉ nói "làm landing page cho X" mà không       │
+│ paste file nào, không có context Agent trước.              │
+│ → Chạy bộ câu hỏi đầu vào (BƯỚC 1B) trước khi build.       │
+└────────────────────────────────────────────────────────────┘
+```
+
+**Quy tắc xác định:** Nếu trong chat đã có bất kỳ thông tin nào trả lời được Pain lớn nhất + Kết quả lý tưởng + Đối tượng + Offer/giá → đủ để vào Luồng A. Thiếu một trong các trụ cột này → Luồng B.
+
+Khi không chắc, hỏi gọn một câu:
+> "Bạn đã có sẵn nội dung copy / file offer / chân dung khách hàng chưa? Nếu có thì paste vào đây. Còn chưa có thì tôi sẽ hỏi vài câu để thu thập thông tin trước khi build."
+
+
+## BƯỚC 1A — Luồng Có Nguyên Liệu
+
+Nhận và đọc các file có sẵn (ưu tiên theo thứ tự):
+
+```
+sales-page-[name].md     ← nội dung copy gốc — QUAN TRỌNG NHẤT
+offer-[name].md          ← để build Value Stack (B.9) + Stack (B.13)
+avatar.md                ← để viết Pain 3 lớp đúng ngôn ngữ khách (B.3)
+voice-profile.md         ← để giữ giọng văn xuyên suốt
+funnel-blueprint.md      ← để xác định traffic temperature + CTA đích
+hero-mechanism.md        ← để đặt vào B.4 Authority + B.8 Clarity
+```
+
+Thiếu file nào → vẫn build được, chỉ dùng placeholder rõ ràng `[CẦN BỔ SUNG: ...]` ở chỗ đó. **Không bịa số liệu, không bịa testimonial.**
+
+Sau khi đọc xong → nhảy thẳng tới **BƯỚC 2 — Tư Duy Trước Khi Build.**
+
+
+## BƯỚC 1B — Luồng Độc Lập: Bộ Câu Hỏi Đầu Vào
+
+**⚡ Đọc `references/input-questions.md` trước.** File đó có toàn bộ câu hỏi chi tiết + cách xử lý từng câu trả lời.
+
+Hỏi theo **3 cụm**, mỗi cụm gửi 1 message (không hỏi dồn 1 lúc tất cả, cũng không hỏi từng câu lẻ tẻ quá chậm). Sau mỗi cụm, chờ người dùng trả lời rồi mới sang cụm sau.
+
+**Cụm 1 — Nền tảng (bắt buộc, 5 câu):**
+1. Sản phẩm/dịch vụ là gì? Bán cho ai?
+2. **Pain lớn nhất** của khách — điều gì khiến họ mất ngủ? (chỉ 1, không dàn trải)
+3. **Kết quả lý tưởng** khách muốn đạt — cụ thể, đo được?
+4. Khách **đã thử gì và thất bại**? (để định vị SP khác đi)
+5. **Điều gì buộc khách hành động NGAY hôm nay**? (scarcity thật)
+
+**Cụm 2 — Offer & Bằng chứng (5 câu):**
+6. Giá bán? Có chia nhỏ thanh toán không?
+7. Trong sản phẩm có gì? (liệt kê deliverables — tối đa 7-10 món)
+8. Bonus kèm theo? Giá trị từng cái?
+9. **Bằng chứng/uy tín**: bạn là ai, đã làm được gì, bao nhiêu khách, có testimonial thật không?
+10. Cam kết/bảo hành gì? (để build Risk Reversal)
+
+**Cụm 3 — Định hướng (3 câu):**
+11. **Traffic temperature**: khách đến từ đâu? (Cold = FB ads / Warm = đã xem content / Hot = email list đã biết SP)
+12. **Nhóm khách chính** thuộc tính cách nào? (Quyết đoán-D / Xã giao-I / Ổn định-S / Phân tích-C — nếu không rõ, hỏi "khách thường quyết nhanh hay cân nhắc kỹ?")
+13. **Mục tiêu CTA**: bấm vào nút thì khách làm gì? (mua thẳng / để lại SĐT / nhắn Zalo / đăng ký tư vấn?)
+
+**Nếu người dùng trả lời thiếu hoặc mơ hồ ở câu trụ cột (2, 3, 9)** → hỏi lại 1 lần cho rõ trước khi build. Pain mơ hồ = cả trang yếu.
+
+Sau khi đủ thông tin → **BƯỚC 2.**
+
+
+## BƯỚC 2 — Tư Duy Trước Khi Build (4 bước T1–T4)
+
+**⚡ Đọc `references/wepower-foundation.md`** — Section 0, 1, 2 của Wepower.
+
+```
+T1 — Extract Insight    : Chốt Pain trục chính. Toàn trang xoay quanh 1 pain.
+T2 — Mapping Message    : Pain→Hook · Desire→Promise · Proof→Trust · Offer→Conversion
+T3 — Build Emotion Curve: Mỗi section 1 trạng thái cảm xúc cao hơn section trước.
+T4 — Xác định DISC      : Nhóm đa số → giọng chính. Trang vẫn trigger cả 4.
+```
+
+Chọn **bộ công thức theo traffic temperature:**
+- **Cold** → PAS · AIDA · BAB (focus: Pain → Story → Why you)
+- **Warm** → PPPP · ACC (focus: Case study → Proof → Offer)
+- **Hot** → SLAP · Hook-Value-CTA (focus: Urgency → Value recap → CTA)
+
+Trình bày ngắn cho người dùng: pain trục, temperature, DISC persona chính, công thức sẽ dùng. Rồi build.
+
+
+## BƯỚC 3 — Build 15 Section Theo 16 Bước
+
+**⚡ Đọc `references/wepower-16-steps.md`** — chi tiết từng bước (Pain 3 lớp, Story 7 thành phần A→G, Clarity 5 phần, A.R.E.B, Value Stack, CTA graduated...).
+
+**⚡ Đọc `references/nlp-disc.md`** — 10 kỹ thuật NLP đặt ở đâu + DISC trigger map.
+
+Thứ tự 15 section (cố định) và bước tương ứng:
+
+```
+[0]  Announcement Bar    ← B.12 Scarcity (thật, có lý do)
+[1]  Hero / Above Fold   ← B.1 Headline + B.2 Sub Headline
+[2]  Trust Bar + Logo    ← B.4 Authority (đặt sớm)
+[3]  Pain Section        ← B.3 Vấn đề 3 lớp (Symptom·Consequence·Identity)
+[4]  Solution Bridge+VSL ← B.5 Before-After Story (7 thành phần A→G)
+[5]  How It Works        ← B.8 Clarity 5 phần
+[6]  Features / Inside   ← B.6 Lợi ích FAB + 4 lớp benefit
+[7]  Emotion / Masters   ← B.7 Cảm xúc 4 hormone + 5 kỹ thuật
+[8]  Authority Stack     ← B.4 Authority sâu (7 nguồn · 5 dòng vàng)
+[9]  Value Stack+Pricing ← B.9 Giá trị + B.13 Value Stack
+[10] Guarantee           ← B.10 Xử lý từ chối + Risk Reversal 4 cấp
+[11] Is For / Not For    ← B.8 Clarity "not for whom"
+[12] FAQ                 ← B.10 7 Objection + A.R.E.B
+[13] Testimonial + CTA   ← B.15 Testimonial SÁT CTA + B.16 CTA L5
+[14] Footer              ← Payment logos · VAT · Zalo float
+(rải xuyên suốt: B.11 Reason Why · B.14 Bonus · B.16 CTA 5 lần)
+```
+
+**Quy tắc nhúng NLP đúng vị trí:**
+```
+Pain   (B.3) → Pacing & Leading + Negative Future Pacing + Sensory
+Story  (B.5) → Embedded Command + Open Loop
+Emotion(B.7) → Future Pacing + Sensory Language
+Value  (B.9) → Open Loop trước reveal giá
+Reason (B.11)→ Identity Labeling + Presupposition
+CTA    (B.16)→ Presupposition + Double Bind + Identity Labeling
+```
+
+
+## BƯỚC 4 — Xuất HTML
+
+**⚡ Đọc `references/html-template.md`** — skeleton HTML + Design System + quy tắc kỹ thuật.
+
+Xuất ra file `landing-page-[name]-v1.html`:
+- **Dark theme**: nền `#08080F`, gold `#D4A843`, green `#4CAF82`, red `#E05C5C`.
+- **Font**: Be Vietnam Pro / Sora (800/700/600) + Playfair Display italic cho điểm nhấn.
+- **Mobile-first**: CTA ≥48×48px, đặt ở Thumb Zone (giữa màn hình).
+- **Sticky CTA bar** luôn hiển thị + **Zalo float** góc phải.
+- **Fade-up animation** khi scroll tới mỗi section.
+- CTA màu tương phản hoàn toàn với nền, first-person ("Cho Tôi"), có mũi tên →.
+
+**Nếu người dùng có brand color riêng** → ưu tiên brand color của họ, vẫn giữ nguyên tắc tương phản CTA.
+
+
+## BƯỚC 5 — Checklist + Bàn Giao
+
+Chạy nhanh checklist 16 điểm (có trong `references/wepower-16-steps.md` cuối file). Báo cho người dùng điểm nào còn placeholder cần bổ sung (số liệu thật, testimonial thật, logo media...).
+
+Sau khi xuất file → hỏi:
+> "Đã xong landing page. Bạn muốn tôi: (a) viết script VSL cho video ở Section 4 — Agent 09, (b) viết email sequence dẫn về trang này — Agent 10, hay (c) chỉnh sửa section nào trên trang?"
+
+
+## Bạn Đang Dùng AAFB — AI Agent For Businesss
+
+**Agent này:** Landing Page Builder (08B) — Build landing page HTML từ nguyên liệu copy.
+
+| Agent | Khi nào dùng |
+|-------|-------------|
+| 01 Avatar Builder | Hiểu sâu khách hàng → avatar.md |
+| 02 Brand Voice | Giọng văn thương hiệu → voice-profile.md |
+| 03 Hero Mechanism | Tạo khác biệt → hero-mechanism.md |
+| 04 Money Model | Map doanh thu → money-model.md |
+| 05 Offer Architect | Build từng offer → offer.md |
+| 06 HVCO Creator | Lead magnet miễn phí |
+| 07 Funnel Strategist | Map hành trình → funnel-blueprint.md |
+| 08 Ad Copy Machine | Viết copy từng trang → sales-page.md |
+| **08B Landing Page** | **Build landing page HTML ← ĐANG DÙNG** |
+| 09 VSL Scriptwriter | Viết script video |
+| 10 Email Closer | Viết chuỗi email |
+| 11 Follow-Up Engine | Re-engage cold leads |
+| 12 Sales Call Script | Script chốt qua điện thoại |
+
+**Luồng dữ liệu:** 08 (sales-page.md) → **08B (landing-page.html)** → 09/10/11/12 đều trỏ về landing-page.html.
+

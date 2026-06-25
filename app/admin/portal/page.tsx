@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
-import { supabase } from '@/lib/supabase'
 import { CheckCircle2, XCircle, Clock, ChevronDown, ExternalLink } from 'lucide-react'
 
 type Submission = {
@@ -37,38 +36,39 @@ export default function AdminPortalPage() {
 
   const load = useCallback(async () => {
     setLoading(true)
-    const q = supabase!
-      .from('lesson_progress')
-      .select(`
-        id, user_id, lesson_id, completed,
-        submission_url, submission_note, submitted_at,
-        approved, admin_note, updated_at,
-        lessons:lesson_id (title, course_id)
-      `)
-      .not('submitted_at', 'is', null)
-      .order('submitted_at', { ascending: false })
-
-    if (filter === 'pending')  q.is('approved', null)
-    if (filter === 'approved') q.eq('approved', true)
-    if (filter === 'rejected') q.eq('approved', false)
-
-    const { data } = await q
-    setItems((data as unknown as Submission[]) || [])
-    setLoading(false)
+    try {
+      const res = await fetch(`/api/admin/portal?filter=${filter}`)
+      const data = await res.json()
+      setItems((data.submissions as Submission[]) || [])
+    } catch (err) {
+      console.error('Loi load submissions:', err)
+    } finally {
+      setLoading(false)
+    }
   }, [filter])
 
   useEffect(() => { load() }, [load])
 
   async function approve(item: Submission, decision: boolean) {
     setSaving(item.id)
-    await supabase!.from('lesson_progress').update({
-      approved:   decision,
-      completed:  decision,
-      admin_note: notes[item.id]?.trim() || null,
-      updated_at: new Date().toISOString(),
-    }).eq('id', item.id)
-    setSaving(null)
-    load()
+    try {
+      const res = await fetch('/api/admin/portal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id:         item.id,
+          approved:   decision,
+          completed:  decision,
+          admin_note: notes[item.id]?.trim() || null,
+        }),
+      })
+      if (!res.ok) throw new Error('Khong the duyet bai')
+      load()
+    } catch (err) {
+      console.error('Loi approve:', err)
+    } finally {
+      setSaving(null)
+    }
   }
 
   const counts = { pending: 0, approved: 0, rejected: 0 }
