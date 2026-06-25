@@ -30,13 +30,6 @@ export const PRODUCTS: Record<string, Product> = {
     codePrefix: 'DH-K2',
     successUrl: '/cam-on-khoa-2',
   },
-  challenge_368: {
-    id:         'challenge_368',
-    name:       'Bí Quyết 7 Ngày Đưa AI Vào Business — Cọc 368k',
-    price:      368000,
-    codePrefix: 'DH-CHAL',
-    successUrl: '/cam-on-thu-thach',
-  },
   // ── KHÓA LANDING PAGE — Vibe Coding + 8 skill files ──────────────────────────
   'landing-page': {
     id:         'landing-page',
@@ -62,7 +55,6 @@ export const COURSE_SHORT_NAMES: Record<string, string> = {
   'khoa-1':      '24 AI Agent',
   khoa1_686:     '24 AI Agent', // giữ để không lỗi đơn hàng cũ
   khoa2_2768:    'Coaching',
-  challenge_368: 'Thử Thách 7 Ngày',
   '1kem1':       '1 Kèm 1',
   'landing-page':      'Landing Page Siêu Chuyển Đổi',
   'meta-ai-agent':     'Setup Meta AI Agent',

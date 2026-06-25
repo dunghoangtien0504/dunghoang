@@ -207,7 +207,6 @@ export const SKILLS: Skill[] = [
 export const MINI_SKILLS   = SKILLS.filter(s => s.inMini)            // Mini 368k
 export const KHOA1_SKILLS  = SKILLS                                  // Khóa 1 (24 skill)
 export const ALL_SKILLS    = SKILLS                                  // Khóa 2 (đủ 24)
-export const PROVEN_SKILLS = SKILLS.filter(s => s.proven)            // đã chứng minh trong Challenge
 
 export const SKILL_GROUPS: SkillGroup[] = [
   'Nền tảng', 'Chiến lược', 'Phễu & Trang bán',

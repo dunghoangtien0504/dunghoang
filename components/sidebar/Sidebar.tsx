@@ -51,7 +51,6 @@ const navGroups: NavGroup[] = [
       { href: '/admin/coupons',   icon: Tag,          label: 'Mã giảm giá' },
       { href: '/admin/packages',  icon: Package,      label: 'Quản lý Gói' },
       { href: '/admin/affiliate', icon: Share2,       label: 'Quản lý Affiliate' },
-      { href: '/admin/challenge', icon: Trophy,       label: 'Challenge 7 Ngày' },
     ],
   },
   {

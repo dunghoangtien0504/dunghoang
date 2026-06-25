@@ -4,7 +4,6 @@ import { sendEmail } from '@/lib/resend'
 import { getWelcomeEmail } from '@/lib/emails/welcome'
 import { getKhoa1EmailDay1 } from '@/lib/emails/khoa1-onboarding'
 import { formatVND } from '@/lib/products'
-import { getFirstUnlock } from '@/lib/challenge-days'
 import { getLandingEmailDay1 } from '@/lib/emails/landing-onboarding'
 import { getMetaAIAgentWelcome } from '@/lib/emails/meta-ai-agent-welcome'
 
@@ -21,8 +20,8 @@ export async function POST(req: NextRequest) {
     const { content, transferAmount, referenceCode, id: sepayId } = body
 
     // Tìm mã đơn hàng trong nội dung chuyển khoản
-    // Prefix khớp với codePrefix trong lib/products.ts: DH-CT, DH-MINI, DH-K1, DH-K2, DH-CHAL
-    const orderCodeMatch = content?.match(/DH-(?:CT|MINI|K1|K2|LP|CHAL|MBA)-[A-Z0-9]+/i)
+    // Prefix khớp với codePrefix trong lib/products.ts: DH-CT, DH-MINI, DH-K1, DH-K2
+    const orderCodeMatch = content?.match(/DH-(?:CT|MINI|K1|K2|LP|MBA)-[A-Z0-9]+/i)
     if (!orderCodeMatch) {
       console.log('[sepay] Không có mã DH trong nội dung:', content)
       return NextResponse.json({ message: 'Bỏ qua — không có mã đơn hàng' }, { status: 200 })
@@ -105,8 +104,6 @@ export async function POST(req: NextRequest) {
       .update({ status: 'completed', paid_at: new Date().toISOString(), sepay_ref: referenceCode || sepayId })
       .eq('order_code', orderCode)
 
-    const isChallenge = orderCode.startsWith('DH-CHAL-')
-
     if (email) {
       // Tạo hoặc lấy Supabase Auth user
       const { data: existingUsers } = await supabaseAdmin.auth.admin.listUsers({ perPage: 1000 })
@@ -121,96 +118,55 @@ export async function POST(req: NextRequest) {
         userId = newUser?.user?.id
       }
 
-      if (isChallenge) {
-        // Challenge: ghi vào challenge_enrollments
-        const startedAt   = new Date()
-        const firstUnlock = getFirstUnlock(startedAt)
-        await supabaseAdmin.from('challenge_enrollments').insert({
-          user_id:          userId ?? null,
-          email:            email.toLowerCase(),
-          name,
-          order_code:       orderCode,
-          deposit_amount:   received,
-          started_at:       startedAt.toISOString(),
-          first_unlock_at:  firstUnlock.toISOString(),
-          status:           'active',
-        })
-
-        // Email chào challenge
-        const firstUnlockStr = firstUnlock.toLocaleString('vi-VN', {
-          hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric',
-        })
-        await sendEmail({
-          to:      email,
-          subject: `[DungHoang.com] Cọc ${formatVND(received)} đã nhận — Challenge bắt đầu!`,
-          html: `
-            <div style="font-family:sans-serif;max-width:540px;margin:0 auto;color:#0D2B1A;padding:20px">
-              <h2 style="color:#0D2B1A">Cọc đã nhận, ${name} ơi!</h2>
-              <p>Mình xác nhận đã nhận <strong>${formatVND(received)}</strong> cọc cho <strong>Bí Quyết 7 Ngày Đưa AI Vào Business</strong>.</p>
-              <p>Ngày 1 sẽ mở lúc: <strong>${firstUnlockStr}</strong></p>
-              <p>Vào khu học tại: <a href="${process.env.NEXT_PUBLIC_SITE_URL}/portal/thu-thach" style="color:#1D9E75">${process.env.NEXT_PUBLIC_SITE_URL}/portal/thu-thach</a></p>
-              <p><strong>Nhắc lại luật hoàn cọc:</strong> Nộp bài đúng hạn cả 7 ngày → mình hoàn đủ ${formatVND(received)} trong 48h sau ngày 7.</p>
-              <p>Câu hỏi? Telegram <a href="https://t.me/KentHoang">@KentHoang</a></p>
-              <p>Chúc bạn thành công,<br/>Dũng Hoàng</p>
-            </div>
-          `,
-        })
-      } else {
-        // Khóa học thường: ghi enrollment bình thường
-        if (userId && order.course_id) {
-          await supabaseAdmin.from('enrollments').upsert({
-            user_id:     userId,
-            course_id:   order.course_id,
-            enrolled_at: new Date().toISOString(),
-          }, { onConflict: 'user_id,course_id' })
-        }
-
-        if (order.course_id === 'meta-ai-agent') {
-          const welcome = getMetaAIAgentWelcome(name)
-          await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
-        } else if (order.course_id === 'landing-page') {
-          const welcome = getLandingEmailDay1(name)
-          await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
-        } else if (order.course_id === 'khoa-1' || order.course_id === 'khoa1_686') {
-          // Khóa 1 → dùng email onboarding riêng + khởi động chuỗi chăm sóc
-          const welcome = getKhoa1EmailDay1(name)
-          await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
-
-          // Đảm bảo subscriber tồn tại để gắn vào email_sequences
-          const { data: subRow } = await supabaseAdmin
-            .from('subscribers')
-            .upsert({ email: email.toLowerCase(), name }, { onConflict: 'email' })
-            .select('id')
-            .single()
-
-          const subscriberId = subRow?.id ?? order.subscriber_id
-          if (subscriberId) {
-            const enrolledAt = new Date().toISOString()
-            await supabaseAdmin.from('email_sequences').insert({
-              subscriber_id:  subscriberId,
-              sequence_name:  'khoa1_onboarding',
-              current_day:    1,           // Email 1 đã gửi ngay → cron xử lý email 2-5
-              status:         'active',
-              started_at:     enrolledAt,
-              last_sent_at:   enrolledAt,
-            })
-          }
-        } else {
-          // Các khóa khác: email welcome chung
-          const welcome = getWelcomeEmail(name, order.course_id, order.course_name)
-          await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
-        }
+      // Khóa học thường: ghi enrollment bình thường
+      if (userId && order.course_id) {
+        await supabaseAdmin.from('enrollments').upsert({
+          user_id:     userId,
+          course_id:   order.course_id,
+          enrolled_at: new Date().toISOString(),
+        }, { onConflict: 'user_id,course_id' })
       }
 
-      // Tag subscriber "đã mua" + dừng chuỗi challenge
+      if (order.course_id === 'meta-ai-agent') {
+        const welcome = getMetaAIAgentWelcome(name)
+        await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
+      } else if (order.course_id === 'landing-page') {
+        const welcome = getLandingEmailDay1(name)
+        await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
+      } else if (order.course_id === 'khoa-1' || order.course_id === 'khoa1_686') {
+        // Khóa 1 → dùng email onboarding riêng + khởi động chuỗi chăm sóc
+        const welcome = getKhoa1EmailDay1(name)
+        await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
+
+        // Đảm bảo subscriber tồn tại để gắn vào email_sequences
+        const { data: subRow } = await supabaseAdmin
+          .from('subscribers')
+          .upsert({ email: email.toLowerCase(), name }, { onConflict: 'email' })
+          .select('id')
+          .single()
+
+        const subscriberId = subRow?.id ?? order.subscriber_id
+        if (subscriberId) {
+          const enrolledAt = new Date().toISOString()
+          await supabaseAdmin.from('email_sequences').insert({
+            subscriber_id:  subscriberId,
+            sequence_name:  'khoa1_onboarding',
+            current_day:    1,           // Email 1 đã gửi ngay → cron xử lý email 2-5
+            status:         'active',
+            started_at:     enrolledAt,
+            last_sent_at:   enrolledAt,
+          })
+        }
+      } else {
+        // Các khóa khác: email welcome chung
+        const welcome = getWelcomeEmail(name, order.course_id, order.course_name)
+        await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
+      }
+
+      // Tag subscriber "đã mua"
       if (order.subscriber_id) {
         const tag = `da_mua_${order.course_id}`
         await supabaseAdmin.rpc('append_tag', { subscriber_id: order.subscriber_id, tag })
-        await supabaseAdmin
-          .from('email_sequences')
-          .update({ status: 'paused' })
-          .eq('subscriber_id', order.subscriber_id)
-          .eq('sequence_name', 'challenge_7ngay')
       }
     }
 

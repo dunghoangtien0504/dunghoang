@@ -17,7 +17,6 @@ type RealUser = {
 }
 
 const COURSE_OPTIONS = Object.entries(PRODUCTS)
-  .filter(([id]) => id !== 'challenge_368')
   .map(([id, p]) => ({ id, name: COURSE_NAMES[id] ?? p.name }))
 
 function fmtDate(iso: string | null) {
