@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
@@ -103,7 +104,6 @@ function packageSkills() {
     if (fs.existsSync(skillPath)) fs.unlinkSync(skillPath);
 
     // Use native tar tool to compress (works on Windows 10+ and Unix)
-    // tar -a -c -f output.zip -C parent_dir dir_name
     try {
       execSync(`tar -a -c -f "${zipPath}" -C "${f.tempPath}" "${f.skillName}"`, { stdio: 'inherit' });
       // Copy .zip to .skill
@@ -169,10 +169,85 @@ ${body}
   console.log(`\n🎉 Successfully installed ${count} Cursor Rules to ${cursorRulesDir}`);
 }
 
+// Function to install Claude Code agents
+function installClaudeAgents() {
+  const homeDir = os.homedir();
+  const claudeAgentsDir = path.join(homeDir, '.claude', 'agents');
+  
+  console.log(`📂 Creating Claude Code Agents directory: ${claudeAgentsDir}`);
+  fs.mkdirSync(claudeAgentsDir, { recursive: true });
+
+  const folders = getSkillFolders();
+  let count = 0;
+
+  for (const f of folders) {
+    const skillMdPath = path.join(f.skillPath, 'SKILL.md');
+    if (!fs.existsSync(skillMdPath)) {
+      console.warn(`⚠️ SKILL.md not found in ${f.skillPath}`);
+      continue;
+    }
+
+    try {
+      const { meta } = parseSkillFile(skillMdPath);
+      const name = meta.name || f.skillName;
+      const targetFilePath = path.join(claudeAgentsDir, `${name}.md`);
+
+      // Claude Code can read YAML frontmatter directly. So we just copy the raw SKILL.md.
+      fs.copyFileSync(skillMdPath, targetFilePath);
+      console.log(`✨ Copied Claude Agent: ${targetFilePath}`);
+      count++;
+    } catch (err) {
+      console.error(`❌ Failed to copy to Claude Code: ${f.skillName}:`, err.message);
+    }
+  }
+  console.log(`\n🎉 Successfully installed ${count} Claude Code Agents to ${claudeAgentsDir}`);
+}
+
+// Function to install Antigravity workspace skills
+function installAntigravitySkills(targetProjDir) {
+  const targetDir = path.resolve(targetProjDir || workspaceRoot);
+  const antigravitySkillsDir = path.join(targetDir, '.agents', 'skills');
+
+  console.log(`📂 Creating Antigravity Skills directory: ${antigravitySkillsDir}`);
+  fs.mkdirSync(antigravitySkillsDir, { recursive: true });
+
+  const folders = getSkillFolders();
+  let count = 0;
+
+  for (const f of folders) {
+    const skillMdPath = path.join(f.skillPath, 'SKILL.md');
+    if (!fs.existsSync(skillMdPath)) {
+      console.warn(`⚠️ SKILL.md not found in ${f.skillPath}`);
+      continue;
+    }
+
+    try {
+      const { meta } = parseSkillFile(skillMdPath);
+      const name = meta.name || f.skillName;
+      const skillDestFolder = path.join(antigravitySkillsDir, name);
+
+      // Clean existing skill folder if it exists
+      if (fs.existsSync(skillDestFolder)) {
+        fs.rmSync(skillDestFolder, { recursive: true, force: true });
+      }
+
+      // Copy the entire skill folder recursively (requires Node 16.7+)
+      fs.cpSync(f.skillPath, skillDestFolder, { recursive: true });
+      console.log(`✨ Copied Antigravity Skill: .agents/skills/${name}/`);
+      count++;
+    } catch (err) {
+      console.error(`❌ Failed to copy to Antigravity: ${f.skillName}:`, err.message);
+    }
+  }
+  console.log(`\n🎉 Successfully installed ${count} Antigravity Skills to ${antigravitySkillsDir}`);
+}
+
 // Main execution CLI
 const args = process.argv.slice(2);
 const isPack = args.includes('--pack');
 const isInstall = args.includes('--install');
+const isInstallClaude = args.includes('--install-claude');
+const isInstallAntigravity = args.includes('--install-antigravity');
 
 if (isPack) {
   packageSkills();
@@ -180,10 +255,18 @@ if (isPack) {
   const targetIndex = args.indexOf('--install') + 1;
   const targetDir = args[targetIndex] || '';
   installCursorRules(targetDir);
+} else if (isInstallClaude) {
+  installClaudeAgents();
+} else if (isInstallAntigravity) {
+  const targetIndex = args.indexOf('--install-antigravity') + 1;
+  const targetDir = args[targetIndex] || '';
+  installAntigravitySkills(targetDir);
 } else {
   console.log(`
 Usage:
-  node scripts/package-skills.mjs --pack      - Package temp_* folders into .zip & .skill files
-  node scripts/package-skills.mjs --install   - Generate Cursor rules (.mdc) into .cursor/rules/
+  node scripts/package-skills.mjs --pack                 - Package temp_* folders into .zip & .skill files
+  node scripts/package-skills.mjs --install [path]       - Generate Cursor rules (.mdc) into .cursor/rules/
+  node scripts/package-skills.mjs --install-claude       - Install agents for Claude Code (~/.claude/agents/)
+  node scripts/package-skills.mjs --install-antigravity  - Install workspace skills for Antigravity (.agents/skills/)
 `);
 }
