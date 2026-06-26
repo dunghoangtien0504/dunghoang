@@ -12,11 +12,11 @@ export const metadata = {
 
 const PRODUCTS = [
   {
-    badge: 'Mới · 199k',
+    badge: 'Mới · 99k',
     badgeColor: 'bg-[#E6F7F1] text-[#0D6E4D]',
     name: 'Setup Meta AI Agent',
     desc: 'Cài AI trả lời tự động cho Messenger Fanpage. Không cần code. Setup 30 phút, AI chạy 24/7.',
-    price: '199.000đ',
+    price: '99.000đ',
     cta: 'Xem chi tiết',
     href: '/meta-ai-agent',
     icon: <BookOpen className="w-5 h-5" />,
