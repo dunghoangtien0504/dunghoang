@@ -42,7 +42,7 @@ export const PRODUCTS: Record<string, Product> = {
   'meta-ai-agent': {
     id:         'meta-ai-agent',
     name:       'Setup Meta AI Agent',
-    price:      199000,
+    price:      99000,
     codePrefix: 'DH-MBA',
     successUrl: '/cam-on-meta-ai-agent',
   },

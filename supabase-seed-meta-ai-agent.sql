@@ -8,7 +8,7 @@ insert into course_products (id, name, price, description, is_active, commission
 values (
   'meta-ai-agent',
   'Setup Meta AI Agent',
-  199000,
+  99000,
   'Cài AI trả lời tự động cho Messenger / Instagram / WhatsApp Business. Không cần code. Setup 30 phút.',
   true,
   20

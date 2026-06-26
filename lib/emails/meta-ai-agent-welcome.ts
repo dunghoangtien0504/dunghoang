@@ -3,10 +3,10 @@ import { emailLayout } from './layout'
 export function getMetaAIAgentWelcome(name: string): { subject: string; html: string } {
   const subject = `${name} ơi — tài liệu Setup Meta AI Agent của bạn đây`
   const html = emailLayout(`
-<div class="day-badge">Setup Meta AI Agent · 199.000đ · Xác nhận đơn thành công</div>
+<div class="day-badge">Setup Meta AI Agent · 99.000đ · Xác nhận đơn thành công</div>
 <h1 class="subject-line">Mình nhận được rồi. Đây là bước tiếp theo của bạn.</h1>
 
-<p>Thanh toán 199.000đ đã xác nhận. Cảm ơn bạn đã tin tưởng.</p>
+<p>Thanh toán 99.000đ đã xác nhận. Cảm ơn bạn đã tin tưởng.</p>
 
 <p>Bây giờ bạn vào khu học để làm theo từng bước. Mình đã chuẩn bị sẵn 5 bài hướng dẫn — từ chuẩn bị thông tin shop, điền template, đến paste vào Meta và test AI trước khi bật cho khách.</p>
 

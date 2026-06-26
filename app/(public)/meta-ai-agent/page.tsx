@@ -47,7 +47,7 @@ export default function MetaAIAgentPage() {
 
       {/* ── [0] Announcement Bar — B.12 Scarcity ── */}
       <div className="bg-[#1D9E75] text-white text-center py-2.5 px-4 text-xs md:text-sm font-black tracking-wider uppercase shadow-md relative z-30">
-        ⚡ Ưu Đãi Ra Mắt 199.000đ · Giá Gốc 399.000đ (Bảo hoàn 14 ngày 100%)
+        ⚡ Ưu Đãi Ra Mắt 99.000đ · Giá Gốc 399.000đ (Bảo hoàn 14 ngày 100%)
       </div>
 
       {/* ── [1] Hero Section (Signature Forest Green Header) ── */}
@@ -488,7 +488,7 @@ export default function MetaAIAgentPage() {
         <div className="relative bg-white border-2 border-[#1D9E75] shadow-lg rounded-3xl p-8 md:p-12 text-center overflow-hidden">
           <div className="absolute -top-12 -right-12 w-28 h-28 bg-emerald-500/5 rounded-full blur-xl pointer-events-none" />
           <p className="text-xs uppercase tracking-widest text-[#1D9E75] font-black mb-2">ƯU ĐÃI ĐĂNG KÝ HÔM NAY</p>
-          <div className="text-5xl md:text-6xl font-black text-[#1D9E75] tracking-tight mb-2">199.000đ</div>
+          <div className="text-5xl md:text-6xl font-black text-[#1D9E75] tracking-tight mb-2">99.000đ</div>
           <p className="text-gray-500 text-xs mb-8 max-w-sm mx-auto leading-relaxed">
             Bằng chi phí một cốc nước cho nhân viên thử việc. Nhưng AI của bạn sẽ miệt mài làm việc trọn đời không nghỉ phép.
           </p>
@@ -500,7 +500,7 @@ export default function MetaAIAgentPage() {
                        active:scale-[0.98] text-white font-black py-4.5 px-8 rounded-2xl text-lg
                        transition-all duration-300 shadow-xl shadow-emerald-950/60 cursor-pointer"
           >
-            Đăng Ký Setup AI Ngay — 199.000đ →
+            Đăng Ký Setup AI Ngay — 99.000đ →
           </button>
           <p className="text-[11px] text-gray-405 mt-4">
             * Bảo bảo hoàn phí 100% trong 14 ngày · Thanh toán chuyển khoản QR tự động xác nhận sau 1 phút.
@@ -517,7 +517,7 @@ export default function MetaAIAgentPage() {
           <div>
             <h3 className="font-extrabold text-base text-[#0D2B1A] mb-2">Cam kết bảo hành hoàn phí 14 ngày</h3>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-              Mình không muốn nhận tiền nếu giải pháp này không giúp ích được cho shop của bạn. Bạn mua về cứ cài thử theo hướng dẫn. Nếu trong 14 ngày bạn thấy AI không thông minh như quảng cáo hoặc khó sử dụng, nhắn tin vào group Telegram hỗ trợ, mình sẽ hoàn trả đầy đủ 199.000đ ngay lập tức mà không hỏi thêm câu nào.
+              Mình không muốn nhận tiền nếu giải pháp này không giúp ích được cho shop của bạn. Bạn mua về cứ cài thử theo hướng dẫn. Nếu trong 14 ngày bạn thấy AI không thông minh như quảng cáo hoặc khó sử dụng, nhắn tin vào group Telegram hỗ trợ, mình sẽ hoàn trả đầy đủ 99.000đ ngay lập tức mà không hỏi thêm câu nào.
             </p>
           </div>
         </div>
@@ -583,7 +583,7 @@ export default function MetaAIAgentPage() {
             },
             {
               q: 'Meta AI Agent này có mất phí duy trì hàng tháng không?',
-              a: 'Không. Tính năng Meta AI được tích hợp sẵn miễn phí 100% bên trong Meta Business Suite của Facebook. Bạn chỉ cần trả phí 199.000đ cho gói tài liệu huấn luyện này một lần duy nhất để dùng trọn đời.',
+              a: 'Không. Tính năng Meta AI được tích hợp sẵn miễn phí 100% bên trong Meta Business Suite của Facebook. Bạn chỉ cần trả phí 99.000đ cho gói tài liệu huấn luyện này một lần duy nhất để dùng trọn đời.',
             },
             {
               q: 'Có setup được cho Instagram và WhatsApp Business không?',
@@ -723,7 +723,7 @@ export default function MetaAIAgentPage() {
         <div className="max-w-2xl mx-auto flex items-center justify-between gap-4 px-5 py-3.5">
           <div className="min-w-0">
             <p className="font-extrabold text-xs sm:text-sm text-[#0D2B1A] truncate">Setup Meta Business AI Agent</p>
-            <p className="text-[#1D9E75] text-xs font-black">199.000đ · Bảo hành 14 ngày</p>
+            <p className="text-[#1D9E75] text-xs font-black">99.000đ · Bảo hành 14 ngày</p>
           </div>
           <button
             onClick={buy}
