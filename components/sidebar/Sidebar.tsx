@@ -56,6 +56,7 @@ const navGroups: NavGroup[] = [
   {
     label: 'MARKETING',
     items: [
+      { href: '/admin/traffic',       icon: TrendingUp, label: 'Lưu lượng truy cập' },
       { href: '/admin/ads',           icon: Megaphone, label: 'Quảng cáo đầu trang' },
       { href: '/admin/featured',      icon: Star,      label: 'Khoá học nổi bật' },
       { href: '/admin/notifications', icon: Bell,      label: 'Thông báo' },
