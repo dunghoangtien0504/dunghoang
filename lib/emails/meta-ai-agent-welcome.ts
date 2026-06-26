@@ -28,7 +28,7 @@ export function getMetaAIAgentWelcome(name: string): { subject: string; html: st
 
 <p>Kẹt bước nào thì nhắn mình:</p>
 <p>
-  Telegram: <a href="https://t.me/KentHoang">@KentHoang</a><br/>
+  Group Telegram: <a href="https://web.telegram.org/a/#-5493805985">Group hỗ trợ 24/7</a><br/>
   Zalo: <a href="https://zalo.me/0938725413">0938725413</a>
 </p>
 
