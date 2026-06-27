@@ -2,6 +2,21 @@ import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
 import { PRODUCTS } from '@/lib/products'
 
+// GET — danh sách enrollment
+export async function GET() {
+  try {
+    const { data, error } = await supabaseAdmin
+      .from('enrollments')
+      .select('user_id, course_id, enrolled_at')
+      .order('enrolled_at', { ascending: false })
+    if (error) throw error
+    return NextResponse.json({ enrollments: data ?? [] })
+  } catch (err) {
+    console.error('[admin/enrollments GET]', err)
+    return NextResponse.json({ enrollments: [] })
+  }
+}
+
 // POST — kích hoạt khóa học thủ công (tìm/tạo user → upsert enrollment)
 export async function POST(req: NextRequest) {
   try {
