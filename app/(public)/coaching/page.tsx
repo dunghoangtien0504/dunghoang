@@ -463,6 +463,7 @@ export default function Khoa2Page() {
             <div className="divide-y divide-[#DDD8CB]">
               {[
                 { item: 'Gói 24 AI Agent for Business (đầy đủ Khóa 1)', value: '16.484.832đ' },
+                { item: 'Hội Đồng Cố Vấn AI — 5 skill giám đốc CEO/CFO/CMO/CCO/CHRO', value: '2.868.686đ' },
                 { item: 'Setup AI Agent riêng của bạn giống Tiểu Hà Mã (thị trường $3.000)', value: '75.000.000đ' },
                 { item: 'Buổi Soi Hệ Thống 1-kèm-1 (Video Call trực tiếp)', value: '1.000.000đ', bonus: true },
                 { item: 'Quà tặng 1: 489 Tiêu Đề Thu Hút Khách Hàng (Notion)', value: '686.000đ', bonus: true },
@@ -482,12 +483,12 @@ export default function Khoa2Page() {
             
             <div className="px-5 py-4 bg-[#FAF7F2] flex justify-between items-center text-sm">
               <p className="font-bold text-[#0D2B1A]">Tổng giá trị gói & quà tặng</p>
-              <p className="text-lg font-black text-gray-400 line-through">96.096.832đ</p>
+              <p className="text-lg font-black text-gray-400 line-through">98.965.518đ</p>
             </div>
             <div className="px-5 py-4 bg-[#EAF5EF] flex justify-between items-center">
               <div>
                 <p className="font-bold text-[#0D2B1A] text-sm">Đầu tư một lần, sở hữu mãi mãi</p>
-                <p className="text-xs text-[#3D6B4A]">Đã học Khóa 1 (868.686đ)? Chỉ cần đóng thêm 3.000.000đ</p>
+                <p className="text-xs text-[#3D6B4A]">Đã học Khóa 1 (868.686đ)? Chỉ thêm 3.000.000đ · Đã có Hội Đồng Cố Vấn (2.868.686đ)? Chỉ thêm 1.000.000đ</p>
               </div>
               <p className="text-2xl sm:text-3xl font-black text-[#0D2B1A]">3.868.686đ</p>
             </div>

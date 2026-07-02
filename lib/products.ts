@@ -38,6 +38,14 @@ export const PRODUCTS: Record<string, Product> = {
     codePrefix: 'DH-LP',
     successUrl: '/cam-on-landing-page',
   },
+  // ── HỘI ĐỒNG CỐ VẤN — 5 skill giám đốc AI (CEO/CFO/CMO/CCO/CHRO), nấc giữa Khóa 1 và Coaching ──
+  'hoi-dong-co-van': {
+    id:         'hoi-dong-co-van',
+    name:       'Hội Đồng Cố Vấn AI',
+    price:      2868686,
+    codePrefix: 'DH-HDCV',
+    successUrl: '/cam-on-hoi-dong-co-van',
+  },
   // ── META BUSINESS AI — skill setup AI cho Messenger/Instagram/WhatsApp ────────
   'meta-ai-agent': {
     id:         'meta-ai-agent',
@@ -58,6 +66,7 @@ export const COURSE_SHORT_NAMES: Record<string, string> = {
   '1kem1':       '1 Kèm 1',
   'landing-page':      'Landing Page Siêu Chuyển Đổi',
   'meta-ai-agent':     'Setup Meta AI Agent',
+  'hoi-dong-co-van':   'Hội Đồng Cố Vấn AI',
 }
 
 /** Lấy tên ngắn an toàn cho 1 course_id bất kỳ */
