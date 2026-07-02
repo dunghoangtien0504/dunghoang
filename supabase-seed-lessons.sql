@@ -618,7 +618,91 @@ Cách sử dụng:
 
 Gợi ý từ Dũng:
 Hỏi cụ thể sẽ được trả lời cụ thể. "Bị kẹt" không đủ thông tin. "Tôi đang làm Skill 10, bước 5, AI viết ra [X] nhưng chưa đúng vì [Y]" — đó mới là câu hỏi bot có thể giúp được.',
- 25, false, 15);
+ 25, false, 15),
+
+('khoa1_686', 'Skill 26 — Tối Ưu Website Cho AI (Agent-AOE-Web)',
+ 'Skill này làm gì:
+Cài đặt tệp llms.txt và robots.txt tối ưu để các chatbot AI (như ChatGPT, Perplexity, Claude) quét và đề xuất thương hiệu của bạn khi khách hàng tìm kiếm trên AI.
+
+Output bạn cầm được:
+File llms.txt và robots.txt chuẩn AI-aware được tải lên thư mục gốc website của bạn.
+
+Tự động tới đâu:
+AI đọc thông tin doanh nghiệp, tự viết file llms.txt và robots.txt. Bạn chỉ cần tải lên hosting/website.
+
+SOP từng bước:
+1. Sử dụng công cụ cài đặt tự động (install-rules.bat) để nạp Agent-AOE-Web vào Cursor/Claude.
+2. Gõ lệnh gọi @Agent-AOE-Web và cung cấp thông tin sản phẩm, dịch vụ, trang web của bạn.
+3. AI tự động sinh nội dung file llms.txt và file robots.txt tối ưu.
+4. Copy nội dung và tạo các file tương ứng trong thư mục gốc của dự án.
+5. Kiểm tra tính hợp lệ bằng các công cụ quét bot.
+
+Gợi ý từ Dũng:
+Đây là chuẩn SEO mới nhất của kỷ nguyên AI. Hãy thiết lập sớm để chatbot AI biết bạn là ai và giới thiệu khách cho bạn.',
+ 26, false, 25),
+
+('khoa1_686', 'Skill 27 — Bán Hàng Chủ Động B2B (Agent-Sales-B2B)',
+ 'Skill này làm gì:
+Xây dựng chiến dịch tìm kiếm khách hàng chủ động (outbound) qua Cold Email/Cold DM và chuẩn bị kịch bản cuộc gọi khám phá (Discovery Call) chất lượng cao để chốt đơn dịch vụ cao cấp.
+
+Output bạn cầm được:
+Mẫu tin nhắn tiếp cận cá nhân hóa + Kịch bản cuộc gọi SPIN Selling chuẩn chỉnh.
+
+Tự động tới đâu:
+AI soạn thảo tin nhắn, gợi ý bộ câu hỏi cuộc gọi dựa trên chân dung khách hàng của bạn. Bạn là người trực tiếp nhắn tin và gọi điện.
+
+SOP từng bước:
+1. Kích hoạt @Agent-Sales-B2B trong Cursor hoặc Claude.
+2. Cung cấp thông tin dịch vụ của bạn và tệp khách hàng mục tiêu.
+3. AI soạn thảo 2 mẫu tin nhắn tiếp cận lạnh có tính cá nhân hóa cao.
+4. AI tạo kịch bản cuộc gọi 15-30 phút gồm các câu hỏi Situational, Problem, Implication, Need-payoff.
+5. Thực hành gọi điện và điền checklist chất lượng cuộc gọi.
+
+Gợi ý từ Dũng:
+Đừng bán hàng ngay ở tin nhắn đầu tiên. Mục tiêu của tin nhắn tiếp cận chỉ là đặt được lịch cuộc gọi khám phá.',
+ 27, false, 45),
+
+('khoa1_686', 'Skill 28 — Thiết Kế Prompt Ảnh Quảng Cáo (Agent-image-prompt)',
+ 'Skill này làm gì:
+Thiết kế các dòng lệnh (prompt) tạo hình ảnh quảng cáo và bài đăng mạng xã hội chuyên nghiệp bằng Midjourney và DALL-E 3 để tự làm hình ảnh truyền thông đẹp mắt mà không tốn tiền thuê designer.
+
+Output bạn cầm được:
+Thư viện prompt tiếng Anh chi tiết kèm tham số kỹ thuật để tạo ảnh thật.
+
+Tự động tới đâu:
+AI viết prompt tiếng Anh chi tiết. Bạn dán vào Midjourney/DALL-E để nhận kết quả ảnh.
+
+SOP từng bước:
+1. Kích hoạt @Agent-image-prompt trong Cursor.
+2. Mô tả ý tưởng hình ảnh hoặc bối cảnh quảng cáo bạn muốn tạo.
+3. AI viết dòng prompt tiếng Anh chuẩn nhiếp ảnh: chủ thể, ánh sáng, góc máy, camera...
+4. Copy prompt dán vào Midjourney/DALL-E để tạo ảnh.
+5. Chọn ảnh đẹp nhất và tải về sử dụng.
+
+Gợi ý từ Dũng:
+Midjourney hiểu tiếng Anh tốt nhất. Dùng prompt tiếng Anh chuẩn nhiếp ảnh sẽ ra ảnh thật như studio chụp.',
+ 28, false, 30),
+
+('khoa1_686', 'Skill 29 — Trải Nghiệm Giữ Chân Khách Hàng (Agent-experience-customer)',
+ 'Skill này làm gì:
+Thiết kế trải nghiệm người dùng (UX) và các điểm kích hoạt hành vi (nudge) để giữ chân khách hàng sử dụng sản phẩm số hoặc hoàn thành khóa học của bạn.
+
+Output bạn cầm được:
+Bản kế hoạch chu trình kích hoạt người dùng (user onboarding) và các triggers nhắc nhở.
+
+Tự động tới đâu:
+AI đề xuất giải pháp tâm lý và thiết kế trải nghiệm. Bạn đưa vào sản phẩm và lập trình tự động gửi tin nhắn/email.
+
+SOP từng bước:
+1. Kích hoạt @Agent-experience-customer trong Cursor.
+2. Cung cấp sản phẩm của bạn và hành vi bạn muốn khách hàng thực hiện (ví dụ: làm bài tập).
+3. AI thiết kế chu trình Onboarding để tạo ra "Aha! Moment" nhanh nhất.
+4. AI soạn các mẫu tin nhắn nudge tự động dựa trên mô hình Fogg (B=MAP).
+5. Đưa các nudge và phần thưởng vào quy trình gửi tin nhắn tự động.
+
+Gợi ý từ Dũng:
+Để thay đổi hành vi, hãy làm cho hành động đầu tiên của khách hàng cực kỳ dễ dàng trước khi tăng động lực cho họ.',
+ 29, false, 35);
 
 -- ─── KHÓA 2 (2.768.686đ) — đủ 25 skill ─────────────────────────────────────
 -- Copy toàn bộ từ Khóa 1 + thêm Skill 23
@@ -640,7 +724,7 @@ Gõ chủ đề → AI viết đúng giọng → bấm 1 nút → lên Page.
 
 Tự động tới đâu:
 Sau khi cài xong: quy trình đăng bài gần như tự động (AI viết + 1 click đăng).
-Nhưng quá trình cài: nhiều bước kỹ thuật — đây là lý do skill này chỉ có ở Khóa 2 (cần được kèm sát).
+But quá trình cài: nhiều bước kỹ thuật — đây là lý do skill này chỉ có ở Khóa 2 (cần được kèm sát).
 
 SOP từng bước (cần Dũng kèm):
 1. Đăng ký Facebook Developer → tạo App → lấy Page Access Token
@@ -654,7 +738,7 @@ SOP từng bước (cần Dũng kèm):
 Lưu ý:
 Skill này yêu cầu Facebook Page hợp lệ, không vi phạm chính sách.
 Token Facebook cần gia hạn định kỳ. Dũng hướng dẫn cách tự gia hạn.',
- 26, false, 120);
+ 30, false, 120);
 
 -- ─── CONTENT SYSTEM (368.686đ) — bàn giao Notion workspace ──────────────────
 insert into lessons (course_id, title, description, sort_order, is_free, duration) values

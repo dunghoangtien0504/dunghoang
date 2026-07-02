@@ -47,4 +47,4 @@ SOP tổng quan (Dũng kèm từng bước):
 Gợi ý từ Dũng:
 Đừng cố build hết mọi thứ ngay. Chọn 1 việc đang tốn nhiều thời gian nhất → cài workflow cho việc đó trước.
 Sau khi chạy được 1 workflow → bạn sẽ thấy cách nhân rộng ra các việc khác rất nhanh.',
- 27, false, 180);
+ 31, false, 180);
