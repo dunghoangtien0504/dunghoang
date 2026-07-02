@@ -92,6 +92,10 @@ function packageSkills() {
   const folders = getSkillFolders();
   console.log(`🔍 Found ${folders.length} skills to package...`);
 
+  // Ensure public/skills directory exists
+  const publicSkillsDir = path.join(workspaceRoot, 'public', 'skills');
+  fs.mkdirSync(publicSkillsDir, { recursive: true });
+
   for (const f of folders) {
     console.log(`📦 Packaging ${f.skillName}...`);
     const zipName = `${f.skillName}.zip`;
@@ -109,6 +113,11 @@ function packageSkills() {
       // Copy .zip to .skill
       fs.copyFileSync(zipPath, skillPath);
       console.log(`✅ Packaged ${f.skillName} to .zip & .skill`);
+
+      // Copy to public/skills for website serving
+      fs.copyFileSync(zipPath, path.join(publicSkillsDir, zipName));
+      fs.copyFileSync(skillPath, path.join(publicSkillsDir, skillName));
+      console.log(`🚀 Copied ${f.skillName} to public/skills/`);
     } catch (err) {
       console.error(`❌ Failed to compress ${f.skillName} using tar:`, err.message);
       console.log(`Trying PowerShell Compress-Archive as fallback...`);
@@ -116,7 +125,11 @@ function packageSkills() {
         const psCommand = `powershell -Command "Compress-Archive -Path '${f.skillPath}' -DestinationPath '${zipPath}' -Force"`;
         execSync(psCommand, { stdio: 'inherit' });
         fs.copyFileSync(zipPath, skillPath);
-        console.log(`✅ Packaged ${f.skillName} using PowerShell`);
+        
+        // Copy to public/skills for website serving
+        fs.copyFileSync(zipPath, path.join(publicSkillsDir, zipName));
+        fs.copyFileSync(skillPath, path.join(publicSkillsDir, skillName));
+        console.log(`🚀 Copied ${f.skillName} to public/skills/ using PowerShell fallback`);
       } catch (psErr) {
         console.error(`❌ Fallback failed too:`, psErr.message);
       }
@@ -264,7 +277,7 @@ if (isPack) {
 } else {
   console.log(`
 Usage:
-  node scripts/package-skills.mjs --pack                 - Package temp_* folders into .zip & .skill files
+  node scripts/package-skills.mjs --pack                 - Package temp_* folders into .zip & .skill files, and copy to public/skills/
   node scripts/package-skills.mjs --install [path]       - Generate Cursor rules (.mdc) into .cursor/rules/
   node scripts/package-skills.mjs --install-claude       - Install agents for Claude Code (~/.claude/agents/)
   node scripts/package-skills.mjs --install-antigravity  - Install workspace skills for Antigravity (.agents/skills/)
