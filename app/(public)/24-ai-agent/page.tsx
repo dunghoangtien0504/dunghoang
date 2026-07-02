@@ -19,6 +19,10 @@ const FAQS = [
     a: 'Đây là nỗi sợ mình gặp nhiều nhất — và hoàn toàn hợp lý sau khi đã từng mua khóa học bỏ xó. Chính vì vậy mình thiết kế mỗi skill thành SOP 30-60 phút, có output nhìn thấy ngay hôm đó. Không xem video lý thuyết rồi tự mày mò. Và nếu sau 14 ngày bạn không thấy gì hữu ích — mình hoàn 100% không hỏi lý do. Rủi ro về phía mình hoàn toàn.',
   },
   {
+    q: 'Tôi có ChatGPT miễn phí rồi, sao phải mua khóa này?',
+    a: 'Câu này mình được hỏi nhiều nhất, và nó rất hợp lý. ChatGPT là công cụ hỏi-đáp: bạn hỏi hay thì nó trả lời hay, nhưng bạn vẫn là người phải biết hỏi gì, theo thứ tự nào, xử lý kết quả ra sao — tức vẫn là "người làm". 24 AI agent ở đây là quy trình giao việc hoàn chỉnh: mỗi agent đã được đóng gói sẵn từ câu hỏi, thứ tự bước, đến khung output — bạn chỉ nạp thông tin business của mình vào là ra thành phẩm. Vẫn chạy trên chính ChatGPT bạn đang có, không tốn thêm phí công cụ nào.',
+  },
+  {
     q: 'Ngoài kia có nhiều khóa AI rẻ hơn, sao chọn cái này?',
     a: 'Hầu hết khóa AI dạy cách viết prompt hay thao tác với ChatGPT. Khóa 1 khác ở chỗ: 24 AI agent là 24 quy trình đang chạy thật trong business của mình — mỗi agent cho bạn output dùng được ngay (trang bán hàng, email, content 30 ngày...). Bạn không học lý thuyết — bạn copy quy trình đã được test 2 năm thực chiến.',
   },
@@ -29,6 +33,10 @@ const FAQS = [
   {
     q: 'Mỗi skill mất bao lâu?',
     a: 'Khoảng 30-60 phút nếu làm theo SOP. Cuối mỗi skill là output cụ thể bạn cầm được và dùng được ngay — không phải bài tập nộp, không phải quiz. Skill BRAND_DNA thường xong trong 45 phút và được dùng cho tất cả skill viết chữ về sau.',
+  },
+  {
+    q: 'Thử Thách 7 Ngày có bắt buộc không? Lỡ dở giữa chừng thì sao?',
+    a: 'Không bắt buộc — đó là lộ trình gợi ý để bạn có kết quả nhanh nhất trong tuần đầu. Bận thì làm 7 thành quả trong 2-3 tuần cũng được, khu học mở trọn đời không ai giục. Nhưng mình khuyên thật: cứ theo đúng 7 ngày một lần — cảm giác ngày 7 nhìn lại thấy trang bán, content, email của mình đã chạy thật, nó khác hẳn việc học rải rác.',
   },
   {
     q: 'Bảo hành thế nào?',
@@ -304,7 +312,76 @@ export default function Khoa1Page() {
 
           <button onClick={open}
             className="w-full h-14 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors shadow-lg shadow-red-900/20">
-            Tôi Muốn Có 24 Skill Này — 868.686đ →
+            Sở Hữu Bộ 24 AI Agent — 868.686đ →
+          </button>
+        </div>
+      </section>
+
+      {/* [6.5] THỬ THÁCH 7 NGÀY — lộ trình output thật, không chấm điểm */}
+      <section className="bg-[#0D2B1A] px-4 py-14">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <div className="text-center space-y-2">
+            <p className="text-xs font-bold text-[#88860B] uppercase tracking-widest">Bắt đầu thế nào</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#F6F0E4] leading-tight">
+              Thử Thách 7 Ngày — 7 Thành Quả
+            </h2>
+            <p className="text-[#F6F0E4]/60 text-sm max-w-md mx-auto leading-relaxed">
+              Không bài kiểm tra, không điểm số. Mỗi ngày 45-60 phút, cuối ngày bạn cầm được một thứ thật.
+              Hết ngày 7: hệ thống bán hàng của bạn đang chạy.
+            </p>
+          </div>
+
+          <div className="space-y-2.5">
+            {[
+              { day: 1, skill: '#01', name: 'Chân Dung Khách Hàng',
+                old: 'Viết content xong không biết viết cho ai — đăng lên như nói vào khoảng không',
+                output: 'Bản mô tả khách hàng chi tiết, mọi bài viết từ nay có người nhận cụ thể' },
+              { day: 2, skill: '#02', name: 'Giọng Văn BRAND_DNA',
+                old: 'Nhờ AI viết thì ra toàn văn mẫu chung chung, đọc phát biết ngay máy viết',
+                output: 'File dạy AI viết đúng giọng bạn — dùng mãi cho mọi skill viết chữ về sau' },
+              { day: 3, skill: '#07', name: 'Thiết Kế Offer',
+                old: 'Sản phẩm tốt mà nói mãi khách vẫn không thấy khác gì chỗ bán rẻ hơn',
+                output: 'Một offer hoàn chỉnh khách khó từ chối, sẵn để đưa lên trang bán' },
+              { day: 4, skill: '#10', name: 'Dựng Landing Page + Thanh Toán Tự Động',
+                old: 'Thuê ngoài 5-10 triệu chờ cả tuần; khách chuyển khoản phải ngồi check tay từng đơn',
+                output: 'Trang bán hàng thật gắn QR Sepay — khách quét là tiền vào tài khoản, không cần check tay' },
+              { day: 5, skill: '#18', name: 'Hệ Thống Content',
+                old: 'Mỗi sáng ngồi cắn bút nghĩ "hôm nay đăng gì", cảm hứng lúc có lúc không',
+                output: 'Lịch content + bài viết sẵn cho 2 tuần đầu, chỉ việc duyệt và đăng' },
+              { day: 6, skill: '#15', name: 'Chuỗi Email Bán Hàng',
+                old: 'Khách để lại email rồi... để đó, quên luôn — tiền rơi mà không ai nhặt',
+                output: 'Bộ email tự động sẵn để dán vào công cụ gửi, khách được chăm không sót ai' },
+              { day: 7, skill: '#13', name: 'Lên Sóng + Báo Đơn Telegram',
+                old: 'Làm xong để trong máy, chần chừ mãi không dám đăng',
+                output: 'Bài đầu tiên lên sóng — và từ nay mỗi đơn thành công, Telegram của bạn "ting" một tiếng' },
+            ].map(d => (
+              <div key={d.day} className="flex items-start gap-3 bg-[#F6F0E4]/5 border border-[#F6F0E4]/10 rounded-xl px-4 py-3.5">
+                <span className="flex-shrink-0 w-9 h-9 rounded-lg bg-[#C0390E] text-white font-black text-sm flex items-center justify-center">
+                  N{d.day}
+                </span>
+                <div className="min-w-0 space-y-1">
+                  <p className="text-[#F6F0E4] font-bold text-sm">
+                    {d.name} <span className="text-[#88860B] text-xs font-mono ml-1">skill {d.skill}</span>
+                  </p>
+                  <p className="text-[#F6F0E4]/40 text-xs leading-relaxed">Cách cũ: {d.old}</p>
+                  <p className="text-[#8BC34A] text-xs leading-relaxed font-medium">Cuối ngày {d.day}: {d.output}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-[#88860B]/15 border border-[#88860B]/30 rounded-xl p-4 space-y-1.5">
+            <p className="text-[#F6F0E4] font-bold text-sm">Hoàn thành thử thách, bạn nhận thêm:</p>
+            <p className="text-[#F6F0E4]/70 text-xs leading-relaxed">
+              ✓ Thành quả được đưa lên Tường Thành Quả của khóa (nếu bạn đồng ý chia sẻ)<br/>
+              ✓ Được mở tài khoản Cộng Tác Viên — giới thiệu khóa nhận hoa hồng 10-20%<br/>
+              ✓ Còn 17 skill nữa để đào sâu theo nhu cầu riêng của bạn — không vội
+            </p>
+          </div>
+
+          <button onClick={open}
+            className="w-full h-14 bg-[#C0390E] hover:bg-[#a02e0a] text-white font-black rounded-2xl transition-colors text-base">
+            Bắt Đầu Ngày 1 Của Tôi →
           </button>
         </div>
       </section>
@@ -419,7 +496,7 @@ export default function Khoa1Page() {
           <div className="space-y-3">
             <button onClick={open}
               className="w-full h-16 bg-[#C0390E] hover:bg-[#a02e0a] text-white text-lg font-black rounded-2xl transition-colors shadow-xl shadow-red-900/25">
-              Đăng Ký Ngay — Còn Suất Đợt Này →
+              Sở Hữu Ngay Hôm Nay — 868.686đ →
             </button>
             <p className="text-center text-xs text-gray-400">Chuyển khoản · Xác nhận trong 5-10 phút · Bảo hành 14 ngày hoàn 100%</p>
           </div>
