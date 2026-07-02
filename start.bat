@@ -15,7 +15,6 @@ if not exist "node_modules" (
     npm install
 )
 
-echo.
-echo Mo trinh duyet tai: http://localhost:3000
+echo Mo trinh duyet tai: http://localhost:5000
 echo.
 npm run dev

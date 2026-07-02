@@ -15,7 +15,7 @@ npm install
 npm run dev
 ```
 
-Sau đó mở trình duyệt tại: **http://localhost:3000**
+Sau đó mở trình duyệt tại: **http://localhost:5000**
 
 ## Các trang có sẵn:
 
