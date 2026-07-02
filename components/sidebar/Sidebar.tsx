@@ -29,6 +29,8 @@ const navGroups: NavGroup[] = [
     items: [
       { href: '/admin',            icon: LayoutDashboard, label: 'Admin Panel',         exact: true },
       { href: '/admin/dashboard',  icon: Activity,        label: 'Dashboard của tôi' },
+      { href: '/admin/agents',     icon: Target,          label: 'Điều hành AI (E2E)' },
+      { href: '/admin/sales-plan', icon: TrendingUp,      label: 'Kế hoạch bán hàng' },
       { href: '/admin/sale-team',  icon: Users,           label: 'Tổng quan đội Sale' },
     ],
   },
