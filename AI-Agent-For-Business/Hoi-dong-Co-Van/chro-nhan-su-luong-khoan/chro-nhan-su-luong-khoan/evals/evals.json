@@ -1,0 +1,23 @@
+{
+  "skill_name": "chro-nhan-su-luong-khoan",
+  "evals": [
+    {
+      "id": 1,
+      "name": "turnover-cao-khong-hieu-sao",
+      "prompt": "Cty mình SaaS 45 người, năm qua nghỉ 14 người (turnover 31%), trong đó 6 người nghỉ trong 90 ngày đầu. Em là Founder kiêm HR. Em đã thử tăng lương 15-20% cho mọi người nhưng vẫn không giữ được. Đặc biệt 2 Senior Developer giỏi vừa nghỉ tháng trước - em sốc. Không hiểu sao.",
+      "expected_output": "Skill phải cảnh báo NGAY: tăng lương vá triệu chứng, không trị gốc. Phân tích 3 lý do thực sự nhân viên nghỉ (Sếp 60%, Việc 25%, Tiền 15%). Đề xuất Stay Interview với top 30% còn lại + Exit Interview với 14 người nghỉ + setup pulse survey + eNPS. Nói về 6 nghỉ trong 90 ngày = vấn đề onboarding hoặc tuyển sai. Hỏi về MTCV/KPI/lộ trình thăng tiến/sếp trực tiếp. Output bảng 5 đèn + toa 90 ngày."
+    },
+    {
+      "id": 2,
+      "name": "thiet-ke-quy-che-luong-khoan-sales",
+      "prompt": "Cty mình bán phần mềm quản lý phòng khám, 8 Sales rep, hiện đang ăn lương cứng 15tr + thưởng 1% trên doanh thu. Vấn đề: ai cũng ngại đi tìm khách mới, chỉ tập trung chăm khách cũ để renew. Khách rời sau 4-6 tháng nhiều. Em muốn thiết kế lại quy chế lương. Giúp em.",
+      "expected_output": "Skill phải nhận diện 2 vấn đề: (1) hoa hồng 1% phẳng không tạo động lực vượt KPI; (2) không phân biệt DT khách mới vs khách cũ - sales lười tìm mới. Đề xuất: chuyển sang 40% cứng + 60% khoán, bậc hoa hồng tăng dần (3-15% theo bậc đạt CCSD), quy đổi DT (khách mới = 1.0, khách renew = 0.5), giữ 40% hoa hồng chờ retention 3 tháng để chống deal rác. Cho ví dụ cụ thể tính 1 sales rep đạt 120%. Cảnh báo không đổi cả 1 lần - làm phased. Output bảng kê toa."
+    },
+    {
+      "id": 3,
+      "name": "khong-tuyen-duoc-truong-phong-marketing",
+      "prompt": "Cty mình tuyển Trưởng phòng Marketing 3 tháng nay, qua TopCV + LinkedIn, phỏng vấn 12 người mà không ai phù hợp. Lương offer 35-45tr. Cảm giác ứng viên giỏi không apply. Founder mình bắt đầu sốt ruột, muốn hạ tiêu chí. Em nên làm gì?",
+      "expected_output": "Skill phải cảnh báo KHÔNG hạ tiêu chí. Đánh giá time-to-fill 90 ngày = đèn đỏ → audit. Hỏi về JD (có bán dream outcome không?), lương vs market (35-45tr có đủ cho ngành SaaS không), source mix (chỉ TopCV + LinkedIn = thiếu referral + cold). Đề xuất: nâng cấp JD theo 'bán vị trí', dùng scorecard Ngũ lực Phật giáo (Tín-Tấn-Niệm-Định-Tuệ), thêm headhunt nếu vị trí cấp cao, cold outreach LinkedIn đến top 50 người làm Trưởng phòng MKT trong ngành. Cảnh báo nếu hạ tiêu chí giờ → 6 tháng sau hối tiếc. Output toa 90 ngày."
+    }
+  ]
+}

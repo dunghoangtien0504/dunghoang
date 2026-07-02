@@ -1,0 +1,50 @@
+# ============================================
+# AUDIT LOG — Hội đồng Cố vấn
+# Template chuẩn cho mỗi phiên họp
+# ============================================
+
+session_id: "<uuid>"
+project_id: "<project-name>"
+date: "<YYYY-MM-DD>"
+scope: "<Micro|Mini|Full>"
+plan_version: 1  # tăng mỗi vòng RETRY
+
+seats_invited:
+  - cco_marketing
+  - cco_sales
+  - coo
+  - chro
+  - cfo
+  - chairman
+
+scores:
+  cco_marketing:
+    score: 0
+    max: 20
+    notes: ""
+  cco_sales:
+    score: 0
+    max: 20
+    notes: ""
+  cfo:
+    score: 0
+    max: 20
+    notes: ""
+  coo:
+    score: 0
+    max: 15
+    notes: ""
+  chairman:
+    score: 0
+    max: 15
+    notes: ""
+  chro:
+    score: 0
+    max: 10
+    notes: ""
+
+total: "0/100"
+verdict: "<PASS|RETRY>"
+chairman_summary: ""
+issues_to_fix:
+  - ""

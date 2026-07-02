@@ -1,0 +1,33 @@
+# ============================================
+# FEEDBACK SUMMARY — Agent Raving Fan
+# Template lưu trữ đánh giá và thông tin giới thiệu
+# ============================================
+
+customer_id: "<customer-uuid>"
+customer_name: "<Tên khách hàng>"
+product_purchased: "<Tên sản phẩm/khóa học>"
+evaluation_date: "<YYYY-MM-DD>"
+
+nps_survey:
+  score: 10 # thang điểm từ 0-10
+  group: "promoter" # promoter | passive | detractor
+
+testimonial:
+  collected: false
+  content:
+    before_pain: ""
+    after_outcome: ""
+    favorite_feature: ""
+  testimonial_text_raw: ""
+
+referral_system:
+  invited: false
+  joined: false
+  affiliate_link: ""
+  coupon_code: ""
+  clicks_generated: 0
+  sales_generated: 0
+
+action_taken:
+  status: "completed" # completed | CEO_rescue_pending | follow_up
+  notes: ""

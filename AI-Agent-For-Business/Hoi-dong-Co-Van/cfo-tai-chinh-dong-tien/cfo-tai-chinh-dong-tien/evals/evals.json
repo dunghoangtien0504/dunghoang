@@ -1,0 +1,23 @@
+{
+  "skill_name": "cfo-tai-chinh-dong-tien",
+  "evals": [
+    {
+      "id": 1,
+      "name": "co-lai-ma-can-tien",
+      "prompt": "Cty mình bán thiết bị y tế cho phòng khám, năm 2025 doanh thu 35 tỷ, lợi nhuận trên sổ 2.8 tỷ (8%). Nhưng vừa rồi mình check tài khoản chỉ còn 600tr, trong khi phải trả 1.2 tỷ lương + NCC cuối tháng. Mình không hiểu sao có lãi mà luôn thiếu tiền? Có nên vay ngân hàng 3 tỷ vốn lưu động không?",
+      "expected_output": "Skill phải chẩn đoán đây là bẫy 'lãi mà cạn tiền'. Hỏi DSO/DIO/DPO + có CAPEX gì không + có trả nợ gốc nào không. Phân tích Cash Conversion Cycle. Cảnh báo KHÔNG vay ngân hàng cứu cấp mà chưa fix nguyên nhân gốc. Đề xuất 13-week cash flow forecast + audit công nợ + thanh lý tồn kho slow moving. Output bảng 6 đèn + toa 90 ngày."
+    },
+    {
+      "id": 2,
+      "name": "danh-gia-mo-rong-chi-nhanh",
+      "prompt": "Mình có 3 quán bún bò Huế, doanh thu mỗi quán 180tr/tháng, biên LN ròng 12%. Đang muốn mở quán 4 ở quận khác, đầu tư khoảng 850 triệu (decor, máy móc, cọc mặt bằng 6 tháng, marketing ra mắt). Có nên mở không? Vốn lấy từ tiền tiết kiệm của mình + vay bố mẹ 300 triệu.",
+      "expected_output": "Skill phải đi qua 5 bước suất đầu tư. Liệt kê thiếu vốn lưu động trong 850tr → cảnh báo. Dự phóng 3 kịch bản. Tính Payback / NPV / IRR ước lượng. So benchmark F&B (payback 2-4 năm). Cảnh báo nếu Payback >4 năm hoặc IRR <20%. Hỏi về sensitivity. Gợi ý có thể tăng biên ở 3 quán hiện tại trước. Output bảng tổng kết."
+    },
+    {
+      "id": 3,
+      "name": "chuan-bi-goi-von-series-a",
+      "prompt": "Cty mình SaaS B2B cho phòng khám nha khoa, MRR 800tr (ARR ~10 tỷ), 15 phòng khám trả phí, LTV/CAC ~4, biên gộp 75%, churn 3%/tháng. Đang định gọi Series A, raise 30-50 tỷ. Hỗ trợ mình chuẩn bị hồ sơ và định giá DN.",
+      "expected_output": "Skill xác nhận PMF đã có (LTV/CAC > 3, retention tốt). Tính định giá theo multiples SaaS (5-15x ARR cho early growth) → khoảng 50-150 tỷ pre-money. Cảnh báo churn 3%/tháng = 36%/năm hơi cao cho SaaS B2B. Liệt kê 10 tài liệu hồ sơ + cấu trúc pitch deck 8 slide. Cảnh báo 5 rủi ro nhà đầu tư sẽ hỏi. Đề xuất % cổ phần đổi (20-25%). Nhắc về term sheet."
+    }
+  ]
+}

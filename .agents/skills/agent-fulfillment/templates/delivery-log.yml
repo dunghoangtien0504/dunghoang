@@ -1,0 +1,29 @@
+# ============================================
+# DELIVERY LOG — Agent Fulfillment
+# Template lưu vết bàn giao tài nguyên cho khách
+# ============================================
+
+customer_id: "<customer-uuid>"
+customer_name: "<Tên khách hàng>"
+email: "<Email nhận bài học>"
+product_purchased: "<Tên sản phẩm/khóa học>"
+delivery_date: "<YYYY-MM-DD>"
+
+delivery_steps:
+  payment_verified: true
+  account_created: false
+  welcome_email_sent: false
+  community_invite_sent: false
+
+state:
+  access_status: "pending" # pending | active | suspended
+  onboarding_stage: "day_1" # day_1 | day_3 | day_7 | completed
+  completion_rate: 0 # phần trăm hoàn thành, từ 0 đến 100
+  last_login_date: "<YYYY-MM-DD>"
+  inactive_days: 0
+
+incident_reports:
+  - date: "<YYYY-MM-DD>"
+    issue_type: "<technical|communication>"
+    description: ""
+    resolved: false

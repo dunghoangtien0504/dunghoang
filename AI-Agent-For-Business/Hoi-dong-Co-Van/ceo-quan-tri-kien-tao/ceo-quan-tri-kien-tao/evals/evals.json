@@ -1,0 +1,23 @@
+{
+  "skill_name": "ceo-quan-tri-kien-tao",
+  "evals": [
+    {
+      "id": 1,
+      "name": "ceo-tac-nghen-tang-truong",
+      "prompt": "Em làm chủ chuỗi 3 quán cà phê nhỏ ở Hà Nội. Doanh thu tổng 450 triệu/tháng, chi phí 420 triệu, lợi nhuận chỉ 30 triệu chia 3 cửa hàng. Em đang định mở quán thứ 4 nhưng chồng em can. Em mệt vì ngày nào cũng phải qua từng quán, nhân viên cứ làm sai gì lại gọi em. Em nên làm gì tiếp theo?",
+      "expected_output": "Skill phải chẩn đoán DN đang ở giai đoạn 1.5 (giữa Sống sót và Chuẩn hóa), cảnh báo KHÔNG mở quán 4 vội, đề xuất ưu tiên xây quy trình + khoán cho 1 quản lý quán trước. Phải hỏi thêm về CAC/khách, AOV, kênh bán chính. Output bảng tổng kết theo template SKILL.md."
+    },
+    {
+      "id": 2,
+      "name": "offer-thieu-suc-canh-tranh",
+      "prompt": "Cty mình làm dịch vụ thiết kế web cho SMB, thu 15-25tr/website. Conversion từ tư vấn xuống ký HĐ chỉ 12%. Khách hay so sánh giá với freelancer Upwork (5-8tr). Mình muốn nâng giá lên 40-50tr nhưng sợ không bán được. Hỗ trợ mình thiết kế lại offer.",
+      "expected_output": "Skill phải dùng Value Equation phân tích 4 biến hiện tại của offer, đề xuất stack bonus + guarantee để tạo Grand Slam Offer, đề xuất naming + scarcity. Phải tính lại CAC payback. Cảnh báo nếu cố nâng giá mà không stack giá trị + guarantee thì conversion sẽ tệ hơn."
+    },
+    {
+      "id": 3,
+      "name": "scaling-CCSC-khoan-xuong",
+      "prompt": "DN mình bán SaaS cho phòng khám nha khoa, 80 người, doanh thu 4 tỷ/tháng, biên gộp 65%. Sắp gọi vốn vòng A. Mình muốn xây CCSC + khoán xuống các trưởng phòng để mình rút ra làm chiến lược + gọi vốn. Hướng dẫn mình.",
+      "expected_output": "Skill xác định DN ở giai đoạn 3 (Tối ưu). Đề xuất quy trình 3 bước xây CCSC từ số liệu 6 tháng, sau đó cài CAC/LTV/MRR vào CCSC. Đề xuất thứ tự khoán: Sales trước, Vận hành sau, Marketing cuối. Nhắc về CEO007 - Gọi vốn (NMT) cho phần định giá DN sau gọi vốn. Output bảng tổng kết với KPI tuần."
+    }
+  ]
+}

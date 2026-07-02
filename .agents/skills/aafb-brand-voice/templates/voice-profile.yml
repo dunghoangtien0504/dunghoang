@@ -1,0 +1,53 @@
+# ============================================
+# VOICE PROFILE TEMPLATE
+# Định dạng chuẩn đầu ra của Brand Voice Builder
+# ============================================
+
+brand_owner: "<Tên chủ thương hiệu>"
+last_updated: "<YYYY-MM-DD>"
+
+voice_summary:
+  one_sentence: "<Một câu tóm tắt cốt lõi của giọng văn>"
+  vibe: "<Cảm xúc chung mang lại cho người đọc>"
+
+character_scales:
+  formal_vs_informal: "informal" # hoặc formal / neutral
+  length_preference: "short" # câu ngắn, ngắt dòng nhiều
+  directness: "soft" # mềm mỏng kể chuyện hoặc thẳng thắn trực diện
+  authority: "humble" # khiêm nhường hoặc chuyên gia
+
+structure_rules:
+  intro:
+    style: "story_based" # bắt đầu bằng một cảnh đời thường cụ thể
+    forbidden: ["theoretical_definitions", "headlines_first"]
+  body:
+    formatting: "no_bold_headings" # không dùng heading to giữa bài
+    style: "conversational_paragraphs"
+    list_style: "newline_no_numbers" # xuống dòng viết liền, không đánh số
+  conclusion:
+    cta_style: "soft_invite" # mời nhẹ nhàng, không ra lệnh
+    sign_off: "<câu kết đặc trưng>"
+
+vocabulary:
+  pronouns:
+    self: "mình"
+    reader: "bạn"
+    group: "tụi mình"
+  allowed_colloquialisms:
+    - "kiểu"
+    - "thiệt tình"
+    - "tự nhiên"
+  brand_keywords:
+    - "liên tục tiến lên"
+    - "tử tế"
+    - "nhân duyên"
+  banned_words:
+    - "tối ưu hóa"
+    - "khai phá tiềm năng"
+    - "mấu chốt nằm ở đây"
+    - "đảm bảo rằng"
+
+channel_guidelines:
+  facebook: "<quy tắc riêng cho FB>"
+  email: "<quy tắc riêng cho email>"
+  video_script: "<quy tắc riêng cho kịch bản video>"

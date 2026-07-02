@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800;900&display=swap');
+  body { font-family: 'Be Vietnam Pro', sans-serif; background: #f8fafc; }
+  .card { max-width: 800px; margin: 32px auto; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.12); }
+  .item { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 10px; margin-bottom: 8px; }
+  .checkbox { width: 22px; height: 22px; border: 2px solid #cbd5e1; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- HEADER -->
+  <div style="background: linear-gradient(135deg, #ea580c, #c2410c); padding: 44px 40px; text-align: center;">
+    <div style="font-size: 2.5rem; margin-bottom: 12px;">✅</div>
+    <h1 style="color: white; font-size: 2rem; font-weight: 900; margin-bottom: 10px;">
+      TÊN CHECKLIST CỦA BẠN
+    </h1>
+    <p style="color: #fed7aa; font-size: 0.95rem;">Mô tả ngắn — dùng checklist này để [đạt được gì]</p>
+    <div style="margin-top: 16px; background: rgba(255,255,255,0.15); display: inline-block; padding: 8px 20px; border-radius: 20px;">
+      <span style="color: white; font-size: 0.85rem; font-weight: 700;">📋 15 điều cần kiểm tra</span>
+    </div>
+  </div>
+
+  <div style="background: white; padding: 36px 40px;">
+
+    <!-- SECTION 1 -->
+    <div style="margin-bottom: 28px;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+        <div style="background: linear-gradient(135deg, #ea580c, #c2410c); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem;">🎯</div>
+        <h2 style="color: #1e293b; font-size: 1.1rem; font-weight: 800;">NHÓM 1: Tên nhóm đầu tiên</h2>
+      </div>
+
+      <div class="item" style="background: #fff7ed;">
+        <div class="checkbox"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 1 — mô tả rõ ràng và cụ thể</span>
+      </div>
+      <div class="item" style="background: #fff7ed;">
+        <div class="checkbox"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 2</span>
+      </div>
+      <div class="item" style="background: #fef2f2; border-left: 3px solid #ef4444;">
+        <div class="checkbox" style="border-color: #ef4444;"></div>
+        <div>
+          <span style="color: #374151; font-size: 0.9rem; font-weight: 700;">⚠️ Điều quan trọng nhất — không được bỏ qua</span>
+          <p style="color: #9ca3af; font-size: 0.78rem; margin-top: 2px;">Ghi chú bổ sung nếu cần thiết</p>
+        </div>
+      </div>
+      <div class="item" style="background: #fff7ed;">
+        <div class="checkbox"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 4</span>
+      </div>
+      <div class="item" style="background: #fff7ed;">
+        <div class="checkbox"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 5</span>
+      </div>
+    </div>
+
+    <div style="border-top: 2px dashed #e2e8f0; margin: 20px 0;"></div>
+
+    <!-- SECTION 2 -->
+    <div style="margin-bottom: 28px;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+        <div style="background: linear-gradient(135deg, #0d9488, #0f766e); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem;">🔧</div>
+        <h2 style="color: #1e293b; font-size: 1.1rem; font-weight: 800;">NHÓM 2: Tên nhóm thứ hai</h2>
+      </div>
+
+      <div class="item" style="background: #f0fdfa;">
+        <div class="checkbox" style="border-color: #0d9488;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 6</span>
+      </div>
+      <div class="item" style="background: #f0fdfa;">
+        <div class="checkbox" style="border-color: #0d9488;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 7</span>
+      </div>
+      <div class="item" style="background: #f0fdfa;">
+        <div class="checkbox" style="border-color: #0d9488;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 8</span>
+      </div>
+      <div class="item" style="background: #f0fdfa;">
+        <div class="checkbox" style="border-color: #0d9488;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 9</span>
+      </div>
+    </div>
+
+    <div style="border-top: 2px dashed #e2e8f0; margin: 20px 0;"></div>
+
+    <!-- SECTION 3 -->
+    <div style="margin-bottom: 28px;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+        <div style="background: linear-gradient(135deg, #7c3aed, #4f46e5); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem;">🚀</div>
+        <h2 style="color: #1e293b; font-size: 1.1rem; font-weight: 800;">NHÓM 3: Tên nhóm thứ ba</h2>
+      </div>
+
+      <div class="item" style="background: #faf5ff;">
+        <div class="checkbox" style="border-color: #7c3aed;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 10</span>
+      </div>
+      <div class="item" style="background: #faf5ff;">
+        <div class="checkbox" style="border-color: #7c3aed;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 11</span>
+      </div>
+      <div class="item" style="background: #faf5ff;">
+        <div class="checkbox" style="border-color: #7c3aed;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 12</span>
+      </div>
+      <div class="item" style="background: #faf5ff;">
+        <div class="checkbox" style="border-color: #7c3aed;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 13</span>
+      </div>
+      <div class="item" style="background: #faf5ff;">
+        <div class="checkbox" style="border-color: #7c3aed;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 14</span>
+      </div>
+      <div class="item" style="background: #faf5ff;">
+        <div class="checkbox" style="border-color: #7c3aed;"></div>
+        <span style="color: #374151; font-size: 0.9rem; font-weight: 500;">Điều cần kiểm tra số 15</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RESULT BOX -->
+  <div style="background: linear-gradient(135deg, #1e293b, #0f172a); padding: 28px 40px; text-align: center;">
+    <p style="color: #94a3b8; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">🎯 SAU KHI HOÀN THÀNH CHECKLIST NÀY</p>
+    <p style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;">
+      Bạn sẽ đạt được [kết quả cụ thể] và sẵn sàng cho [bước tiếp theo]
+    </p>
+    <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+      <span style="background: #ea580c; color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">🌐 Website.com</span>
+      <span style="background: #1e3a5f; color: #93c5fd; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">📧 Email/Zalo/Telegram</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

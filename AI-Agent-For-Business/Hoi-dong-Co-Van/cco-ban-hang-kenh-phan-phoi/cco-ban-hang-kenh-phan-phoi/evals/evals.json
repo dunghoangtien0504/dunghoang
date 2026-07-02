@@ -1,0 +1,23 @@
+{
+  "skill_name": "cco-ban-hang-kenh-phan-phoi",
+  "evals": [
+    {
+      "id": 1,
+      "name": "sales-team-khong-chot-duoc",
+      "prompt": "Cty mình bán phần mềm quản lý phòng khám, có 8 sales rep, mỗi tháng CMO chuyển sang 400-500 lead nhưng tổng team chỉ ký được 15-20 deal. Conversion Lead → Won chỉ ~4%. Sales rep hay than 'lead rác'. Em không biết vấn đề ở sales hay lead. Giúp em phân tích.",
+      "expected_output": "Skill phải chẩn đoán theo pipeline 7 stage: tìm bottleneck cụ thể. Đặt câu hỏi conversion từng stage (MQL→SQL, SQL→Discovery, Proposal→Won). Đề xuất setup feedback loop với CMO tuần này để làm rõ SQL rate. Đề xuất audit: có script 'Sell like a doctor' + record call không? Đưa ra ngưỡng tham khảo (3-10% E2E là bình thường B2B). Nếu SQL rate < 30% thì vấn đề ở CMO/Lead Magnet. Nếu SQL rate > 40% mà Won thấp thì vấn đề ở Sales skill. Đề xuất SPIN + follow-up 5-7 lần. Output toa 90 ngày."
+    },
+    {
+      "id": 2,
+      "name": "khach-bo-di-sau-3-thang",
+      "prompt": "Cty SaaS mình bán CRM cho spa/salon, MRR 400tr với 200 khách. Nhưng 30 khách mới mỗi tháng, cũng có 25 khách nghỉ. Churn 12%/tháng. Không thấy tăng trưởng dù CAC vẫn ổn. Sales team lo giữ pipeline, không ai chăm khách cũ. Giải pháp?",
+      "expected_output": "Skill nhận diện vấn đề: không có Customer Success + Money Model thiếu Continuity. Cảnh báo churn 12% = 84% churn/năm - cực kỳ nghiêm trọng. Đề xuất: (1) Setup CS team tối thiểu với Health Score, (2) Onboarding 30 ngày chuẩn với first win < 7 ngày, (3) Thêm Continuity Bonus (unlock feature tháng 3, tháng 6), (4) Continuity Discount đóng năm giảm 20%, (5) QBR quarterly cho VIP tier, (6) Referral program. Cảnh báo phân tầng: VIP CSM riêng, SMB automation. Tính lại NRR mục tiêu. Output toa 90 ngày + timeline hồi phục 6 tháng."
+    },
+    {
+      "id": 3,
+      "name": "mo-kenh-dai-ly-thuc-pham-chuc-nang",
+      "prompt": "Cty mình sản xuất TPCN, DT 15 tỷ/năm qua web + Shopee. Muốn mở kênh đại lý cho nhà thuốc + cửa hàng mỹ phẩm. Định cho chiết khấu 25%, nhập tối thiểu 50tr/đợt. Nên chuẩn bị gì? Có ổn không?",
+      "expected_output": "Skill xác nhận chiết khấu 25% hợp lý (10-25% range NMT). Đưa 6 trục chính sách đại lý (phân cấp A/B/C, chiết khấu, công nợ, hỗ trợ Trade MKT, thưởng, phạt). Cảnh báo: cần Sales Rep đi thị trường + tránh bán phá giá kênh online (sẽ phá đại lý). Đề xuất cơ cấu tổ chức kênh GT (TP Sales GT + Giám sát vùng + Sales rep + Merchandiser). Đặt KPI đại lý (active rate, DIO, SKU active, công nợ). Đề xuất chương trình đại lý xuất sắc + referral trong GT. Nhắc phối hợp Trade MKT với CMO. Output checklist 5 việc trước khi launch + bảng tổng kết."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "skill_name": "cmo-marketing-thu-hut",
+  "evals": [
+    {
+      "id": 1,
+      "name": "ads-dot-tien-khong-ra-lead",
+      "prompt": "Em làm Trưởng phòng MKT cho DN bán khóa Excel cho kế toán. Chạy FB Ads 60tr/tháng, đăng bài Instagram hàng ngày, nhưng lead giảm dần từ 400/tháng xuống 180/tháng trong 3 tháng qua. CAC tăng từ 150k lên 330k. CEO đang doạ cắt ngân sách. Em nên làm gì?",
+      "expected_output": "Skill cảnh báo scale lỗ nếu CEO cắt vội. Chẩn đoán: CAC tăng 2x = có thể đã bão hòa audience hoặc creative fatigue. Đề xuất audit theo 3 trụ: Brand (có đầu tư truyền thông không?), Thu hút (chỉ dùng 2/4 Core Four - thiếu Warm + Cold), Funnel (conversion landing?). Đề xuất Lead Magnet (checklist 23 sai lầm kế toán). Đề xuất diversify Core Four thêm Google Search + Cold Email. Cảnh báo cần feedback loop với CCO xem SQL rate. Output toa 90 ngày."
+    },
+    {
+      "id": 2,
+      "name": "thiet-ke-grand-slam-offer-web-agency",
+      "prompt": "Cty mình làm dịch vụ thiết kế web cho SMB, thu 15-25tr/website. Khách hay so với freelancer Upwork 5-8tr. Conversion tư vấn → ký HĐ chỉ 12%. Em muốn thiết kế lại offer để có thể bán 40-50tr mà conversion tăng. Hỗ trợ em.",
+      "expected_output": "Skill dùng Value Equation phân tích offer hiện tại (yếu ở Likelihood + Effort). Đề xuất Grand Slam Offer: Dream Outcome cụ thể (website ra đơn trong 30 ngày), Likelihood (case study 47 khách + before/after), Time (2 tuần go-live thay vì 6 tuần), Effort (done-for-you 100%, không cần content). Stack: 5-7 bonus + Guarantee mạnh (không đạt X lead trong 30 ngày → free thêm 3 tháng optimize). Naming: đổi từ 'Web Design Service' sang 'Cỗ máy khách hàng tự động 30 ngày'. Tính lại CAC payback. Output 1 trang GSO sẵn sàng handoff sang CCO."
+    },
+    {
+      "id": 3,
+      "name": "khong-co-brand-chi-co-performance",
+      "prompt": "Cty SaaS mình bán CRM cho spa/salon, hoạt động 2 năm, doanh thu 400tr MRR. Từ ngày 1 chỉ chạy Facebook Ads + Google Ads, không có content, không có brand. Giờ CAC tăng 40% trong 6 tháng, không biết vì sao. CEO muốn tăng ngân sách ads thêm 30% để bù. Em nghĩ không đúng.",
+      "expected_output": "Skill xác nhận CMO đúng - vấn đề gốc là thiếu Brand (Truyền thông chưa đầu tư). Cảnh báo tăng ads spend sẽ khiến CAC tăng tiếp. Đề xuất chiến lược 6-12 tháng: (1) Xây phòng Truyền thông với Positioning Statement + Content Calendar, (2) Content marathon YouTube + Blog SEO cho ngành spa/salon, (3) Community private group cho chủ spa, (4) PR trên báo ngành (Đẹp365, Elle beauty), (5) Giữ ngân sách paid nhưng shift 30% sang Innovation test kênh mới (TikTok, KOL micro). Cảnh báo 3-6 tháng đầu CAC không giảm ngay - cần kiên nhẫn. Nhắc feedback loop với CCO. Output toa 90 ngày + timeline 12 tháng."
+    }
+  ]
+}

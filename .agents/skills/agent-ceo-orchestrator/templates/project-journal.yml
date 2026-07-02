@@ -1,0 +1,109 @@
+# ============================================
+# PROJECT JOURNAL — CEO Memory
+# Ghi 1 entry cho mỗi dự án hoàn thành
+# ============================================
+#
+# Hướng dẫn sử dụng:
+# - CEO Orchestrator ghi 1 entry sau mỗi dự án hoàn thành (Bước 6)
+# - File này là TEMPLATE — copy ra file mới cho mỗi dự án
+# - Đặt tên file: journal_<YYYY-MM-DD>_<tên-dự-án-viết-tắt>.yml
+# - Lưu tại: workspace/project-journals/
+# - KHÔNG được bỏ trống bất kỳ trường nào — ghi "N/A" nếu không áp dụng
+#
+# CEO đọc lại các entries này ở Bước 2 (Đọc memory)
+# để rút lessons learned trước khi lập kế hoạch mới.
+# ============================================
+
+# --- THÔNG TIN CƠ BẢN ---
+project: "<tên dự án — ví dụ: Ra mắt khóa AI Marketing>"
+date_started: "<YYYY-MM-DD>"
+date_ended: "<YYYY-MM-DD>"
+duration_days: 0  # số ngày từ start đến end
+
+# --- MỤC TIÊU & SCOPE ---
+goal: "<câu mục tiêu Boss giao — copy nguyên văn>"
+goal_smart: "<mục tiêu viết lại dạng SMART — cụ thể, đo lường, có deadline>"
+scope: "<Micro|Mini|Full>"
+scope_reason: "<lý do phân loại scope này — keyword override hay đếm deliverables>"
+
+# --- KẾ HOẠCH ĐÃ DUYỆT ---
+plan_summary: "<tóm tắt kế hoạch trong 2-3 câu>"
+strategy: "<chiến lược chính đã chọn>"
+routing_scenario: "<số kịch bản trong routing-map — ví dụ: Kịch bản 1>"
+
+# --- AGENTS ĐÃ SỬ DỤNG ---
+agents_used:
+  - agent_name: "<tên agent — ví dụ: avatar-builder>"
+    output_file: "<file output — ví dụ: avatar.md>"
+    quality_note: "<ghi chú chất lượng output — tốt/cần sửa/phải chạy lại>"
+  - agent_name: "<agent-2>"
+    output_file: "<file>"
+    quality_note: "<ghi chú>"
+  # Thêm agents nếu cần...
+
+# --- HỘI ĐỒNG CỐ VẤN ---
+council_score: "<X/100 — điểm Hội đồng chấm>"
+council_iterations: 1  # số vòng sửa (1 = pass ngay, 2 = sửa 1 lần, ...)
+council_issues_fixed:
+  - "<issue 1 Hội đồng nêu — đã sửa bằng cách nào>"
+  - "<issue 2>"
+  # Nếu pass ngay vòng 1: ghi "Passed first round — no issues"
+
+# --- QUYẾT ĐỊNH QUAN TRỌNG ---
+key_decisions:
+  - decision: "<quyết định quan trọng 1>"
+    rationale: "<lý do đưa ra quyết định này>"
+  - decision: "<quyết định quan trọng 2>"
+    rationale: "<lý do>"
+  # Ghi ít nhất 2 quyết định quan trọng nhất
+
+# --- KẾT QUẢ KINH DOANH ---
+business_result:
+  revenue: 0            # Doanh thu thực tế (VND)
+  cost: 0               # Chi phí thực tế (VND) — bao gồm ads, tools, nhân sự
+  profit: 0             # Lợi nhuận = revenue - cost
+  roi_percent: "0%"     # ROI = profit / cost × 100
+  kpis:
+    CAC: 0              # Chi phí thu 1 khách hàng (VND)
+    LTV: 0              # Giá trị vòng đời khách hàng (VND)
+    conversion_rate: "0%"   # Tỷ lệ chuyển đổi (lead → khách)
+    AOV: 0              # Giá trị đơn hàng trung bình (VND)
+    leads_generated: 0  # Số leads thu được
+    customers_acquired: 0  # Số khách hàng thực tế
+    # Thêm KPIs khác nếu cần...
+
+# --- KẾT QUẢ SO VỚI TARGET ---
+kpi_vs_target:
+  - kpi_name: "<tên KPI>"
+    target: "<giá trị target>"
+    actual: "<giá trị thực tế>"
+    gap: "<chênh lệch — ví dụ: +20% hoặc -15%>"
+    assessment: "<đạt/gần đạt/chưa đạt>"
+  # Liệt kê tất cả KPIs đã đặt trong kế hoạch
+
+# --- ANALYTICS VERDICT ---
+analytics_verdict: "<SCALE|RESCUE|HOLD>"
+analytics_reasoning: "<tại sao Analytics đưa ra verdict này — tóm tắt 1-2 câu>"
+action_taken: "<hành động CEO đã thực hiện sau verdict — ví dụ: tăng budget ads 50%>"
+
+# --- BÀI HỌC RÚT RA ---
+# Đây là phần QUAN TRỌNG NHẤT — CEO đọc phần này ở Bước 2
+# Ghi ít nhất 3 bài học, tối đa 5
+lessons_learned:
+  - category: "<strategy|execution|budget|timeline|messaging|technical>"
+    lesson: "<bài học 1 — cụ thể, actionable>"
+    apply_when: "<áp dụng khi nào — ví dụ: khi ra mắt khóa học tương tự>"
+  - category: "<category>"
+    lesson: "<bài học 2>"
+    apply_when: "<áp dụng khi nào>"
+  - category: "<category>"
+    lesson: "<bài học 3>"
+    apply_when: "<áp dụng khi nào>"
+
+# --- GHI CHÚ THÊM ---
+notes: "<bất kỳ ghi chú nào khác — context, edge cases, điều bất ngờ...>"
+
+# --- META ---
+journal_version: "1.0"
+created_by: "CEO Orchestrator"
+last_updated: "<YYYY-MM-DD HH:MM>"

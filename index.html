@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent For Business — Cẩm Nang & Trung Tâm Điều Hành</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-main: #080c14;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --bg-card-hover: rgba(26, 36, 57, 0.9);
+            --border-color: rgba(255, 255, 255, 0.06);
+            --border-hover: rgba(59, 130, 246, 0.3);
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --accent-orange: #f97316;
+            --accent-red: #ef4444;
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --font-heading: 'Outfit', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.07) 0px, transparent 40%),
+                radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.07) 0px, transparent 40%);
+        }
+
+        /* App Layout */
+        .app-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        aside {
+            background-color: rgba(11, 16, 27, 0.95);
+            border-right: 1px solid var(--border-color);
+            padding: 2.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.35);
+        }
+
+        .brand-name {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #ffffff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .menu-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.3);
+            margin: 1.5rem 0 0.5rem 0.5rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+        }
+
+        .nav-item:hover {
+            color: var(--text-primary);
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .nav-item.active {
+            color: var(--text-primary);
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.08) 0%, rgba(139, 92, 246, 0.03) 100%);
+            border-color: rgba(59, 130, 246, 0.15);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .nav-item svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .nav-item.active svg {
+            stroke: var(--accent-blue);
+        }
+
+        /* Main Area */
+        main {
+            padding: 3rem;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .header-title h1 {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 0.35rem;
+            background: linear-gradient(135deg, #ffffff, #d1d5db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-title p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Pages */
+        .page {
+            display: none;
+            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Grid System */
+        .grid-12 {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover {
+            background-color: var(--bg-card-hover);
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .col-3 { grid-column: span 3; }
+        .col-4 { grid-column: span 4; }
+        .col-5 { grid-column: span 5; }
+        .col-6 { grid-column: span 6; }
+        .col-7 { grid-column: span 7; }
+        .col-8 { grid-column: span 8; }
+        .col-12 { grid-column: span 12; }
+
+        /* Step Timeline */
+        .step-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .step-item:hover, .step-item.active {
+            border-color: var(--accent-blue);
+            background-color: rgba(59, 130, 246, 0.03);
+        }
+
+        .step-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            flex-shrink: 0;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s;
+        }
+
+        .step-item.active .step-num {
+            background-color: var(--accent-blue);
+            color: #fff;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+        }
+
+        .step-content h4 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .step-content p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Detail Visual panel */
+        .detail-panel {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.4) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 350px;
+        }
+
+        /* Agent Tiers */
+        .tier-section {
+            margin-bottom: 2rem;
+        }
+
+        .tier-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .tier-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .agent-list-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        .agent-mini-card {
+            background-color: rgba(255, 255, 255, 0.01);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.25rem;
+            transition: all 0.25s;
+        }
+
+        .agent-mini-card:hover {
+            border-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .agent-role {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .agent-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .agent-io {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 0.5rem;
+            border-radius: 6px;
+        }
+
+        .io-tag {
+            color: var(--accent-blue);
+        }
+
+        .io-tag-out {
+            color: var(--accent-green);
+        }
+
+        /* Flow Simulator Selector */
+        .routing-sim-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .sim-btn {
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            font-family: var(--font-main);
+            transition: all 0.3s;
+        }
+
+        .sim-btn:hover {
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .sim-btn.active {
+            background-color: var(--accent-blue);
+            color: #fff;
+            border-color: var(--accent-blue);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Flow Visual Grid */
+        .flow-visual-box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .visual-node {
+            background: linear-gradient(135deg, rgba(22, 28, 45, 0.8) 0%, rgba(10, 15, 30, 0.9) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .visual-node.highlighted {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .node-step {
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background-color: var(--accent-blue);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        /* Informative Callout box */
+        .info-callout {
+            background-color: rgba(59, 130, 246, 0.03);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Accordion style explanations */
+        .faq-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            background-color: rgba(255, 255, 255, 0.01);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-trigger {
+            padding: 1rem 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.005);
+            transition: background-color 0.2s;
+        }
+
+        .faq-trigger:hover {
+            background-color: rgba(255, 255, 255, 0.015);
+        }
+
+        .faq-panel {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-item.open .faq-panel {
+            padding: 1rem 1.25rem;
+            max-height: 400px;
+            border-color: var(--border-color);
+        }
+
+        .faq-trigger::after {
+            content: '+';
+            font-family: var(--font-mono);
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-trigger::after {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside>
+        <div>
+            <div class="brand">
+                <div class="brand-logo">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div class="brand-name">AAFB Control Panel</div>
+            </div>
+
+            <div class="menu-title">Bản đồ mô hình</div>
+            <ul class="nav-menu">
+                <li class="nav-item active" onclick="switchTab('howitworks', this)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                    Mô hình hoạt động (E2E)
+                </li>
+                <li class="nav-item" onclick="switchTab('agents', this)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Danh sách vai trò Agent
+                </li>
+                <li class="nav-item" onclick="switchTab('routing', this)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    Trình mô phỏng phễu
+                </li>
+                <li class="nav-item" onclick="switchTab('faq', this)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    Giải thích dễ hiểu
+                </li>
+            </ul>
+
+            <div class="menu-title">Triển khai</div>
+            <ul class="nav-menu">
+                <li class="nav-item" onclick="switchTab('paperclip', this)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                    Tích hợp Paperclip
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <div>Chủ doanh nghiệp: <strong>Dũng Hoàng (Kent)</strong></div>
+            <div class="tag-version">Version 1.0</div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Page Header -->
+        <header>
+            <div class="header-title">
+                <h1 id="page-heading">Mô hình hoạt động (E2E)</h1>
+                <p id="page-subheading">Xem từng bước đi của dòng công việc và dữ liệu trong doanh nghiệp tự động.</p>
+            </div>
+            <div class="tag-version" style="background-color: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.2); color: var(--accent-green);">
+                ● Ready to Deploy
+            </div>
+        </header>
+
+        <!-- ================= PAGE: HOW IT WORKS ================= -->
+        <div id="page-howitworks" class="page active">
+            <div class="grid-12">
+                <!-- Left: Stepper -->
+                <div class="card col-5">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 0.5rem;">Vòng lặp 7 bước khép kín</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem;">Click từng bước để trực quan hóa cách hệ thống làm việc.</p>
+                    
+                    <div class="step-timeline">
+                        <div class="step-item active" onclick="activateStep(1, this)">
+                            <div class="step-num">1</div>
+                            <div class="step-content">
+                                <h4>Boss giao mục tiêu</h4>
+                                <p>Nhập mục tiêu dạng tự nhiên vào Paperclip Ticket.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" onclick="activateStep(2, this)">
+                            <div class="step-num">2</div>
+                            <div class="step-content">
+                                <h4>CEO Orchestrator lập kế hoạch</h4>
+                                <p>CEO phân loại scope, chọn kịch bản routing phù hợp.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" onclick="activateStep(3, this)">
+                            <div class="step-num">3</div>
+                            <div class="step-content">
+                                <h4>Hội đồng Cố vấn phản biện</h4>
+                                <p>6 Cố vấn chấm điểm rubric nghiêm ngặt (PASS ≥ 80đ).</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" onclick="activateStep(4, this)">
+                            <div class="step-num">4</div>
+                            <div class="step-content">
+                                <h4>Chuỗi Agent ASSP thực thi</h4>
+                                <p>Sản xuất landing page, copywriting, email, VSL.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" onclick="activateStep(5, this)">
+                            <div class="step-num">5</div>
+                            <div class="step-content">
+                                <h4>Giao sản phẩm & Chăm sóc</h4>
+                                <p>Bàn giao tài nguyên, kích hoạt tài khoản & thu feedback.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" onclick="activateStep(6, this)">
+                            <div class="step-num">6</div>
+                            <div class="step-content">
+                                <h4>Đo lường & Phân tích số liệu</h4>
+                                <p>Gom số liệu, phân tích và đề xuất hướng tối ưu.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item" onclick="activateStep(7, this)">
+                            <div class="step-num">7</div>
+                            <div class="step-content">
+                                <h4>CEO học hỏi & Lưu trữ</h4>
+                                <p>Ghi chép bài học sâu sắc vào Project Journal để tự nâng cấp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual explanation -->
+                <div class="card col-7" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 1.5rem;" id="step-visual-title">Bước 1: Boss giao mục tiêu</h3>
+                    
+                    <div class="detail-panel" id="step-visual-panel">
+                        <!-- Dynamic visual structure generated by JS -->
+                        <div style='text-align:center;'>
+                            <div style='font-size:3.5rem; margin-bottom:1rem;'>👤</div>
+                            <h4 style='font-family:var(--font-heading); font-size:1.25rem; margin-bottom:0.5rem;'>Boss giao việc</h4>
+                            <p style='color:var(--text-secondary); font-size:0.9rem; max-width:400px; margin:0 auto;'>Người dùng con người (Boss) chỉ cần tạo 1 ticket mới trên Paperclip. Ví dụ: "Tôi muốn mở khóa học Landing Page, target 100 học viên". Không cần thao tác code hay nhắc nhở từng con bot.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-callout" id="step-visual-callout">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                        <div style="font-size:0.8rem; color:var(--text-secondary);">
+                            <strong>Ghi chú kỹ thuật:</strong> Paperclip Ticket System lưu trữ thông tin goal cha-con bền vững, giúp giữ nguyên mục tiêu xuyên suốt vòng đời.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: AGENTS ================= -->
+        <div id="page-agents" class="page">
+            <!-- Tier 1: Management -->
+            <div class="tier-section">
+                <div class="tier-header">
+                    <span style="font-size: 1.5rem;">🎯</span>
+                    <span class="tier-title">Lớp điều hành (Management Tier)</span>
+                </div>
+                <div class="agent-list-grid">
+                    <div class="agent-mini-card">
+                        <div class="agent-role" style="color: var(--accent-blue);">CEO Orchestrator</div>
+                        <div class="agent-desc">Tổng chỉ huy điều hành. Nhận goal, lập kế hoạch, điều phối Agent ASSP, đúc kết bài học.</div>
+                        <div class="agent-io">
+                            <div><span class="io-tag">IN:</span> Goal của Boss + Project Journal</div>
+                            <div><span class="io-tag-out">OUT:</span> Kế hoạch chi tiết (Plan)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 2: Advisors -->
+            <div class="tier-section">
+                <div class="tier-header">
+                    <span style="font-size: 1.5rem;">👑</span>
+                    <span class="tier-title">Lớp Cố vấn (Advisors - Governance)</span>
+                </div>
+                <div class="agent-list-grid">
+                    <div class="agent-mini-card">
+                        <div class="agent-role" style="color: var(--accent-purple);">Chủ Tịch Hội đồng</div>
+                        <div class="agent-desc">Chủ trì, hòa giải các ghế cố vấn, kiểm soát 3 rủi ro cốt lõi và ký duyệt kế hoạch.</div>
+                        <div class="agent-io">
+                            <div><span class="io-tag">IN:</span> Điểm nhận xét của 5 Cố vấn</div>
+                            <div><span class="io-tag-out">OUT:</span> Verdict (PASS/RETRY) + Audit Log</div>
+                        </div>
+                    </div>
+                    <div class="agent-mini-card">
+                        <div class="agent-role" style="color: var(--accent-purple);">5 Ghế Cố vấn chuyên môn</div>
+                        <div class="agent-desc">Cố vấn Marketing, Sales, Tài chính, Vận hành, Nhân sự chấm kế hoạch theo rubric riêng biệt.</div>
+                        <div class="agent-io">
+                            <div><span class="io-tag">IN:</span> Kế hoạch của CEO + Frameworks</div>
+                            <div><span class="io-tag-out">OUT:</span> Điểm số / 20 (hoặc / 15, / 10)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 3: Execution -->
+            <div class="tier-section">
+                <div class="tier-header">
+                    <span style="font-size: 1.5rem;">⚡</span>
+                    <span class="tier-title">Lớp Thực thi (Execution Tier - ASSP)</span>
+                </div>
+                <div class="agent-list-grid">
+                    <div class="agent-mini-card">
+                        <div class="agent-role" style="color: var(--accent-green);">01. Avatar Builder</div>
+                        <div class="agent-desc">Xác định chân dung khách hàng mơ ước (ICP) và các nỗi đau cốt lõi.</div>
+                        <div class="agent-io">
+                            <div><span class="io-tag">IN:</span> Mô tả sản phẩm thô</div>
+                            <div><span class="io-tag-out">OUT:</span> avatar.md (Pain points/Dream outcome)</div>
+                        </div>
+                    </div>
+                    <div class="agent-mini-card">
+                        <div class="agent-role" style="color: var(--accent-green);">02. Brand Voice Builder</div>
+                        <div class="agent-desc">Trích xuất DNA giọng viết mộc mạc cá nhân của Boss để làm hướng dẫn.</div>
+                        <div class="agent-io">
+                            <div><span class="io-tag">IN:</span> Bài mẫu của Boss</div>
+                            <div><span class="io-tag-out">OUT:</span> voice-profile.md (Thang đo/Từ cấm)</div>
+                        </div>
+                    </div>
+                    <div class="agent-mini-card">
+                        <div class="agent-role" style="color: var(--accent-green);">05. Offer Architect</div>
+                        <div class="agent-desc">Thiết kế Godfather Offer và định giá theo phương thức trị giá trị Hormozi.</div>
+                        <div class="agent-io">
+                            <div><span class="io-tag">IN:</span> avatar.md + sản phẩm</div>
+                            <div><span class="io-tag-out">OUT:</span> offer.md (Godfather Offer)</div>
+                        </div>
+                    </div>
+                    <div class="agent-mini-card">
+                        <div class="agent-role" style="color: var(--accent-green);">08. Ad Copy Machine</div>
+                        <div class="agent-desc">Sản xuất kịch bản viết bài quảng cáo, viết landing page, email.</div>
+                        <div class="agent-io">
+                            <div><span class="io-tag">IN:</span> offer.md + voice-profile.md</div>
+                            <div><span class="io-tag-out">OUT:</span> ads-copy.md / landing-copy.md</div>
+                        </div>
+                    </div>
+                    <div class="agent-mini-card">
+                        <div class="agent-role" style="color: var(--accent-green);">08B. Landing Page Builder</div>
+                        <div class="agent-desc">Tự động dựng landing page hoàn chỉnh có Sticky CTA dạng HTML.</div>
+                        <div class="agent-io">
+                            <div><span class="io-tag">IN:</span> landing-copy.md + CSS UI/UX</div>
+                            <div><span class="io-tag-out">OUT:</span> index.html (landing page bán hàng)</div>
+                        </div>
+                    </div>
+                    <div class="agent-mini-card">
+                        <div class="agent-role" style="color: var(--accent-green);">13 & 14. Vòng đời Khách hàng</div>
+                        <div class="agent-desc">Fulfillment bàn giao, cấp LMS & Raving Fan thu feedback, mời affiliate.</div>
+                        <div class="agent-io">
+                            <div><span class="io-tag">IN:</span> Mã đơn hàng thành công</div>
+                            <div><span class="io-tag-out">OUT:</span> NPS score + Testimonials</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: ROUTING ================= -->
+        <div id="page-routing" class="page">
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem;">Sơ đồ phễu & Thứ tự định tuyến</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Chọn chiến dịch để xem thứ tự các Agent phối hợp bàn giao tài nguyên cho nhau:</p>
+            
+            <div class="routing-sim-selector">
+                <button class="sim-btn active" onclick="activateSim('launch', this)">🚀 Ra mắt sản phẩm / Khóa học mới</button>
+                <button class="sim-btn" onclick="activateSim('ads', this)">📢 Viết quảng cáo cho Offer có sẵn</button>
+                <button class="sim-btn" onclick="activateSim('funnel', this)">🕸️ Dựng phễu bán hàng hoàn chỉnh</button>
+            </div>
+
+            <div class="flow-visual-box" id="flow-visual-box">
+                <!-- Inserted by JS -->
+            </div>
+
+            <div class="info-callout" style="background-color: rgba(16, 185, 129, 0.02); border-color: rgba(16, 185, 129, 0.1);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+                <div style="font-size:0.85rem; color:var(--text-secondary);">
+                    <strong>Nguyên tắc bàn giao (Input/Output Link):</strong> Đầu ra của Agent trước (ví dụ file `01-avatar.md` của Avatar Builder) sẽ tự động được làm nguyên liệu đầu vào cho Agent sau (ví dụ `05-offer-architect.md`). Quy trình diễn ra hoàn toàn khép kín tự động.
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: FAQ ================= -->
+        <div id="page-faq" class="page">
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem;">Giải thích dễ hiểu bằng văn nói</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Những câu hỏi thường gặp về cách vận hành hệ thống đa Agent.</p>
+
+            <div class="faq-section">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-trigger">Tại sao chúng ta không dùng một con chatbot duy nhất mà phải chia ra nhiều Agent?</div>
+                    <div class="faq-panel">
+                        Một con bot duy nhất khi làm nhiều việc sẽ bị quá tải ngữ cảnh (context window) dẫn đến hay bị quên mục tiêu hoặc trả lời sai lệch (hallucination). Chia nhỏ ra các Agent chuyên môn giống như mô hình công ty con người: mỗi bot chỉ làm một việc cực tốt (ví dụ: một bot chuyên nghiên cứu khách hàng, một bot chuyên thiết kế offer, một bot chuyên viết email). Sự phân vai này giúp đảm bảo độ sâu và chất lượng của từng tài nguyên được tạo ra.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-trigger">Hội đồng Cố vấn có nhiệm vụ gì, có trực tiếp code hay chạy ads không?</div>
+                    <div class="faq-panel">
+                        Hội đồng Cố vấn **không tự code hay chạy ads**. Vai trò của Hội đồng là **Governance (Giám sát rủi ro)**. Khi CEO lập kế hoạch chi phí ads 50tr, Cố vấn Tài chính sẽ nhảy vào kiểm tra xem LTV/CAC có đạt không, Cố vấn Vận hành kiểm tra xem quy trình giao hàng LMS có bị kẹt không. Điều này tương tự như một Ban quản trị doanh nghiệp: kiểm duyệt kế hoạch để tránh những sai lầm đốt tiền vô lý của AI trước khi cho chạy thực tế.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-trigger">Paperclip có vai trò gì trong hệ thống này?</div>
+                    <div class="faq-panel">
+                        Nếu các Agent và các skill là **"S Standard Operating Procedures (SOP)"** thì Paperclip là **"Văn phòng làm việc"** của chúng. Paperclip cung cấp: giao diện Web trực quan, hệ thống phân định Sơ đồ tổ chức (Org Chart), hệ thống Đặt hạn mức tokens/chi phí để bot không chạy quá ngân sách và cơ chế Heartbeat (đánh thức theo cron) để bot tự động thức dậy kiểm tra nhiệm vụ mỗi sáng.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-trigger">Cơ chế tự học (Project Journal) hoạt động thế nào?</div>
+                    <div class="faq-panel">
+                        Mỗi khi chiến dịch kết thúc, Agent Data gom số liệu thực tế gửi sang Agent Analytics phân tích. Nếu chiến dịch bán hàng đạt doanh số, CEO sẽ tự động đúc kết những bài học thành công và lưu lại vào file Project Journal. Khi Boss giao chiến dịch tiếp theo, CEO sẽ tự động đọc lại Project Journal để điều chỉnh chiến lược, giúp hệ thống thông minh hơn theo thời gian chạy dự án.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE: PAPERCLIP ================= -->
+        <div id="page-paperclip" class="page">
+            <div class="grid-12">
+                <div class="card col-8">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem;">Tích hợp & Khởi động</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Cài đặt môi trường để bắt đầu trải nghiệm dashboard thực tế của Paperclip.</p>
+                    
+                    <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem;">Bước 1: Cài đặt và Onboard Paperclip</h4>
+                    <div class="console-container" style="color: #fff; margin-bottom: 1.5rem; position: relative;">
+                        npx paperclipai onboard --yes
+                        <div style="position: absolute; right: 1rem; top: 0.75rem;">
+                            <button class="btn-copy" onclick="copyText('npx paperclipai onboard --yes', this)">Sao chép</button>
+                        </div>
+                    </div>
+
+                    <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem;">Bước 2: Import cấu hình doanh nghiệp AAFB</h4>
+                    <div class="console-container" style="color: #fff; position: relative;">
+                        npx paperclipai company import --from ./paperclip
+                        <div style="position: absolute; right: 1rem; top: 0.75rem;">
+                            <button class="btn-copy" onclick="copyText('npx paperclipai company import --from ./paperclip', this)">Sao chép</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-4">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 1rem;">Tài nguyên nạp</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Cấu trúc thư mục tích hợp đã sẵn sàng trong workspace của anh:</p>
+                    <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-blue); display: flex; flex-direction: column; gap: 0.4rem;">
+                        <div>📁 paperclip/</div>
+                        <div>├── 📄 COMPANY.md</div>
+                        <div>└── 📁 agents/</div>
+                        <div>    ├── 📁 ceo-orchestrator/</div>
+                        <div>    ├── 📁 council-of-advisors/</div>
+                        <div>    ├── 📁 chairman/</div>
+                        <div>    ├── 📁 data-analytics/</div>
+                        <div>    ├── 📁 agent-fulfillment/</div>
+                        <div>    └── 📁 agent-raving-fan/</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script>
+    // Tab switching logic
+    function switchTab(tabId, el) {
+        document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+        el.classList.add('active');
+
+        document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+        document.getElementById('page-' + tabId).classList.add('active');
+
+        const headings = {
+            'howitworks': { title: 'Mô hình hoạt động (E2E)', sub: 'Xem từng bước đi của dòng công việc và dữ liệu trong doanh nghiệp tự động.' },
+            'agents': { title: 'Danh sách vai trò Agent', sub: 'Tìm hiểu chức năng, dữ liệu đầu vào và đầu ra của mỗi Agent.' },
+            'routing': { title: 'Trình mô phỏng phễu', sub: 'Xem thứ tự làm việc của Agent cho từng loại chiến dịch bán hàng.' },
+            'faq': { title: 'Giải thích dễ hiểu', sub: 'Các câu hỏi thường gặp về cách vận hành hệ thống.' },
+            'paperclip': { title: 'Tích hợp Paperclip', sub: 'Triển khai công ty lên giao diện Dashboard quản lý.' }
+        };
+
+        document.getElementById('page-heading').innerText = headings[tabId].title;
+        document.getElementById('page-subheading').innerText = headings[tabId].sub;
+
+        if (tabId === 'routing') {
+            activateSim('launch');
+        }
+    }
+
+    // Step Visual details
+    const stepDetails = {
+        1: {
+            title: "Bước 1: Boss giao mục tiêu",
+            desc: "Người dùng (Boss) chỉ cần tạo 1 ticket mới trên Paperclip. Ví dụ: 'Tôi muốn mở khóa học Landing Page, target 100 học viên'. Không cần thao tác code hay nhắc nhở từng con bot.",
+            icon: "👤",
+            callout: "Paperclip Ticket System lưu trữ thông tin goal cha-con bền vững, giúp giữ nguyên mục tiêu xuyên suốt vòng đời."
+        },
+        2: {
+            title: "Bước 2: CEO Orchestrator lập kế hoạch",
+            desc: "CEO tự động nhận ticket của Boss, truy cập Project Journal (Bộ nhớ CEO) để tìm bài học cũ. Sau đó tự động phân loại scope (Micro/Mini/Full) và lập bản kế hoạch chi tiết.",
+            icon: "🎯",
+            callout: "CEO phân loại scope dựa trên bảng scope-classifier.md để tối ưu hóa nguồn lực: chỉ triệu tập những ghế cố vấn cần thiết."
+        },
+        3: {
+            title: "Bước 3: Hội đồng Cố vấn phản biện",
+            desc: "CEO gửi kế hoạch sang Hội đồng Cố vấn. Các cố vấn tự động phản biện dựa trên các checklist chuyên môn (Hormozi, Thầy Ngô Minh Tuấn) và chấm điểm. Phải đạt >= 80 điểm mới được chạy.",
+            icon: "⚖️",
+            callout: "Mọi cuộc họp của Hội đồng đều tự động tạo ra file audit-log.yml để Boss có thể kiểm duyệt và xem lý do cho điểm của từng cố vấn."
+        },
+        4: {
+            title: "Bước 4: Chuỗi Agent ASSP thực thi",
+            desc: "Sau khi kế hoạch PASS, CEO điều phối các Agent sản xuất tài nguyên theo đúng sơ đồ phễu: nghiên cứu chân dung khách hàng, định dạng giọng văn, viết landing page, dựng HTML...",
+            icon: "⚡",
+            callout: "Đầu ra của Agent trước là đầu vào của Agent sau, tạo ra chuỗi sản xuất khép kín không trùng lặp."
+        },
+        5: {
+            title: "Bước 5: Giao sản phẩm & Chăm sóc",
+            desc: "Đơn hàng phát sinh tự động kích hoạt Agent Fulfillment giao bài học, gửi Welcome Email đúng giọng viết và chạy Onboarding 7 ngày để học viên sử dụng tốt sản phẩm.",
+            icon: "📦",
+            callout: "Quy trình chăm sóc sau bán hàng giúp hạn chế tối đa tỷ lệ hoàn tiền (Refund Rate) và giữ chân khách hàng lâu dài."
+        },
+        6: {
+            title: "Bước 6: Đo lường & Phân tích số liệu",
+            desc: "Chiến dịch kết thúc, Agent Data thu gom số liệu thô gửi sang Agent Analytics phân tích 5 trạng thái hiệu suất và đề xuất phương án tối ưu (Scale/Rescue/Hold) trình lên CEO.",
+            icon: "📊",
+            callout: "Bộ phận Data & Analytics giúp loại bỏ các phán đoán cảm tính, đảm bảo chiến dịch được điều hướng bằng con số thực tế."
+        },
+        7: {
+            title: "Bước 7: CEO học hỏi & Lưu trữ",
+            desc: "CEO nhận đề xuất của Analytics, chọn phương án và tự rút ra 3 bài học kinh nghiệm sâu sắc để ghi nhận vào Project Journal. Vòng lặp mới bắt đầu thông minh hơn.",
+            icon: "🧠",
+            callout: "Cơ chế tự học (Self-learning) tích lũy bài học giúp hệ thống tự hoàn thiện, tránh lặp lại lỗi cũ ở các chiến dịch sau."
+        }
+    };
+
+    function activateStep(stepNum, el) {
+        document.querySelectorAll('.step-item').forEach(item => item.classList.remove('active'));
+        el.classList.add('active');
+
+        const details = stepDetails[stepNum];
+        document.getElementById('step-visual-title').innerText = details.title;
+        document.getElementById('step-visual-panel').innerHTML = `
+            <div style='text-align:center;'>
+                <div style='font-size:3.5rem; margin-bottom:1rem;'>${details.icon}</div>
+                <h4 style='font-family:var(--font-heading); font-size:1.25rem; margin-bottom:0.5rem;'>${details.title}</h4>
+                <p style='color:var(--text-secondary); font-size:0.9rem; max-width:400px; margin:0 auto;'>${details.desc}</p>
+            </div>
+        `;
+        document.getElementById('step-visual-callout').innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <div style="font-size:0.8rem; color:var(--text-secondary);">
+                <strong>Ghi chú kỹ thuật:</strong> ${details.callout}
+            </div>
+        `;
+    }
+
+    // Routing simulator logic
+    const routingFlows = {
+        'launch': [
+            'Avatar Builder', 'Brand Voice', 'Hero Mechanism', 'Money Model', 'Offer Architect', 
+            'HVCO Creator', 'Funnel Strategist', 'Ad Copy Machine', 'Landing Page Builder', 
+            'VSL Scriptwriter', 'Email Closer', 'Follow-up Engine', 'Sales Call Script', 
+            'Agent Fulfillment', 'Agent Raving Fan'
+        ],
+        'ads': [
+            'Avatar Builder', 'Ad Copy Machine', 'Landing Page Builder'
+        ],
+        'funnel': [
+            'Funnel Strategist', 'Ad Copy Machine', 'Landing Page Builder', 'Email Closer', 'Follow-up Engine'
+        ]
+    };
+
+    function activateSim(scenarioId) {
+        // Toggle button active class
+        const buttons = document.querySelectorAll('.sim-btn');
+        buttons.forEach(btn => {
+            if (btn.innerText.toLowerCase().includes(scenarioId === 'launch' ? 'ra mắt' : scenarioId === 'ads' ? 'quảng cáo' : 'phễu')) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        const flow = routingFlows[scenarioId];
+        const container = document.getElementById('flow-visual-box');
+        container.innerHTML = ''; // reset
+
+        flow.forEach((node, index) => {
+            const nodeEl = document.createElement('div');
+            nodeEl.className = 'visual-node highlighted';
+            nodeEl.innerHTML = `
+                <div class="node-step">${index + 1}</div>
+                <div style="font-weight:700; margin-top:0.25rem;">${node}</div>
+            `;
+            container.appendChild(nodeEl);
+        });
+    }
+
+    // FAQ Accordions
+    function toggleFaq(el) {
+        el.classList.toggle('open');
+    }
+
+    // Copy to clipboard helper
+    function copyText(text, btn) {
+        navigator.clipboard.writeText(text);
+        const originalText = btn.innerText;
+        btn.innerText = 'Đã chép!';
+        btn.style.backgroundColor = 'var(--accent-green)';
+        btn.style.borderColor = 'var(--accent-green)';
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.style.backgroundColor = '';
+            btn.style.borderColor = '';
+        }, 1500);
+    }
+</script>
+</body>
+</html>

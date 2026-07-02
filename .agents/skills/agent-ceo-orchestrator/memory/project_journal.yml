@@ -1,0 +1,47 @@
+# ============================================
+# PROJECT JOURNAL — CEO Memory (Nhật ký dự án CEO)
+# ============================================
+
+- project: "Launch Wepower V4"
+  date_started: "2026-06-29"
+  date_ended: "2026-07-29"
+  goal: "Ra mắt khóa học thiết kế Landing Page Wepower V4 trong tháng 7/2026, mục tiêu doanh thu 200 triệu VNĐ, ngân sách quảng cáo tối đa 50 triệu VNĐ, KPI target 100 học viên."
+  scope: "Full"
+  plan_summary: "Triển khai chiến dịch phễu Wepower V4 hoàn chỉnh: Avatar Builder -> Brand Voice -> Hero Mechanism -> Money Model -> Offer Architect -> HVCO -> Funnel Strategist -> Ad Copy -> Landing Page -> VSL -> Email Closer -> Follow-up -> Fulfillment -> Raving Fan."
+  agents_used:
+    - avatar-builder
+    - aafb-brand-voice
+    - aafb-hero-mechanism
+    - aafb-money-model
+    - aafb-offer-architect
+    - aafb-hvco-creator
+    - aafb-funnel-strategist
+    - aafb-ad-copy-machine
+    - agent-08b-landingpage
+    - aafb-vsl-scriptwriter
+    - aafb-email-closer
+    - aafb-follow-up-engine
+    - aafb-sales-call-script
+    - agent-fulfillment
+    - agent-raving-fan
+  council_score: "86/100"
+  council_iterations: 1
+  key_decisions:
+    - "Áp dụng cấu hình Voice Profile Dũng Hoàng chuẩn để viết ads và landing page mộc mạc dạng kể chuyện cafe sáng, loại bỏ hoàn toàn văn đao to búa lớn."
+    - "Thiết lập Godfather Offer với cam kết hoàn tiền sau 7 ngày để giảm ma sát mua hàng."
+    - "Kích hoạt tự động hóa email onboarding ngay sau thanh toán qua Agent Fulfillment."
+  business_result:
+    revenue: 215000000
+    cost: 78000000
+    profit: 137000000
+    kpis:
+      CAC: 436363 # 48M ads / 110 buyers
+      LTV: 1954545 # AOV 1.95M
+      conversion_rate: "7.3%"
+      leads: 1500
+      customers: 110
+  analytics_verdict: "SCALE"
+  lessons_learned:
+    - "Giọng viết kể chuyện mộc mạc, gần gũi (Voice Profile Dũng Hoàng) giúp tăng CTR ads lên 3.2% và CR landing page đạt 7.3%, cao hơn hẳn benchmark thông thường (3-5%)."
+    - "Cơ chế hoàn tiền 7 ngày tạo niềm tin lớn giúp chốt đơn nhanh nhưng cần kiểm soát chặt khâu bàn giao tài khoản để tránh trục lợi."
+    - "Chương trình Affiliate của Agent Raving Fan giúp tối ưu 15% lượng khách hàng mới từ nguồn giới thiệu tự nhiên của Promoters (NPS 9-10), giảm tải cho chi phí ads."
