@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
 
     // Tìm mã đơn hàng trong nội dung chuyển khoản
     // Prefix khớp với codePrefix trong lib/products.ts: DH-CT, DH-MINI, DH-K1, DH-K2
-    const orderCodeMatch = content?.match(/DH-(?:CT|MINI|K1|K2|LP|MBA)-[A-Z0-9]+/i)
+    const orderCodeMatch = content?.match(/DH-(?:CT|MINI|K1|K2|LP|MBA|HDCV)-[A-Z0-9]+/i)
     if (!orderCodeMatch) {
       console.log('[sepay] Không có mã DH trong nội dung:', content)
       return NextResponse.json({ message: 'Bỏ qua — không có mã đơn hàng' }, { status: 200 })
@@ -125,6 +125,15 @@ export async function POST(req: NextRequest) {
           course_id:   order.course_id,
           enrolled_at: new Date().toISOString(),
         }, { onConflict: 'user_id,course_id' })
+
+        // Hội Đồng Cố Vấn bao gồm trọn bộ Khóa 1 → mở khóa cả 24 agent
+        if (order.course_id === 'hoi-dong-co-van') {
+          await supabaseAdmin.from('enrollments').upsert({
+            user_id:     userId,
+            course_id:   'khoa-1',
+            enrolled_at: new Date().toISOString(),
+          }, { onConflict: 'user_id,course_id' })
+        }
       }
 
       if (order.course_id === 'meta-ai-agent') {

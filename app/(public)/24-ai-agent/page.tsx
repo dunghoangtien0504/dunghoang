@@ -44,7 +44,7 @@ const FAQS = [
   },
   {
     q: 'Đã mua Mini hoặc muốn nâng lên Khóa 2 thì sao?',
-    a: 'Đã mua Mini (368.686đ): số tiền đó trừ thẳng vào Khóa 1, chỉ cần thêm 500.000đ. Nhắn Telegram @KentHoang để mình áp dụng. Muốn lên Khóa 2: 868.686đ bạn trả hôm nay trừ vào Khóa 2 (3.868.686đ) — chỉ thêm 3.000.000đ là có thêm Tiểu Hà Mã kèm sát 24/7 và buổi Soi Hệ Thống 1-kèm-1.',
+    a: 'Đã mua Mini (368.686đ): số tiền đó trừ thẳng vào Khóa 1, chỉ cần thêm 500.000đ. Nhắn Telegram @KentHoang để mình áp dụng. Muốn lên cao hơn: 868.686đ bạn trả hôm nay trừ thẳng vào Hội Đồng Cố Vấn (2.868.686đ — thêm 5 giám đốc AI + quy trình vận hành, chỉ thêm 2.000.000đ) hoặc vào Khóa 2 Coaching (3.868.686đ — chỉ thêm 3.000.000đ, có Dũng kèm sát 1-1).',
   },
 ]
 
