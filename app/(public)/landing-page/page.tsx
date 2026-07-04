@@ -634,13 +634,6 @@ export default function KhoaLandingPage() {
         </div>
       )}
 
-      {/* Floating Zalo Chat */}
-      <a href="https://zalo.me/0938725413" target="_blank" rel="noopener noreferrer"
-        className="fixed right-6 bottom-20 z-50 w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95 group"
-        title="Hỗ trợ Zalo">
-        <span className="text-white font-bold text-xs uppercase tracking-wider group-hover:animate-pulse">Zalo</span>
-      </a>
-
       <CheckoutModal productId={product.id} open={showCheckout} onClose={() => setShowCheckout(false)} />
     </div>
   )
