@@ -330,14 +330,30 @@ export default function CoursePage() {
       setCourseName(cp?.name || '')
     }
 
-    const { data: lessonData } = await supabase!
-      .from('lessons')
-      .select('id, title, description, content_html, video_url, duration, sort_order, is_free, host_note')
-      .eq('course_id', slug)
-      .eq('is_published', true)
-      .order('sort_order')
-
-    setLessons((lessonData as unknown as Lesson[]) || [])
+    // Hội Đồng Cố Vấn bao gồm toàn bộ bài của Khóa 1 + bài riêng của Hội Đồng
+    if (slug === 'hoi-dong-co-van') {
+      const [{ data: khoa1Data }, { data: hdcvData }] = await Promise.all([
+        supabase!.from('lessons')
+          .select('id, title, description, content_html, video_url, duration, sort_order, is_free, host_note')
+          .eq('course_id', 'khoa-1').eq('is_published', true).order('sort_order'),
+        supabase!.from('lessons')
+          .select('id, title, description, content_html, video_url, duration, sort_order, is_free, host_note')
+          .eq('course_id', 'hoi-dong-co-van').eq('is_published', true).order('sort_order'),
+      ])
+      const merged = [
+        ...(khoa1Data || []).map(l => ({ ...l, _group: '24 AI Agent for Business' })),
+        ...(hdcvData  || []).map(l => ({ ...l, _group: 'Hội Đồng Cố Vấn AI' })),
+      ]
+      setLessons(merged as unknown as Lesson[])
+    } else {
+      const { data: lessonData } = await supabase!
+        .from('lessons')
+        .select('id, title, description, content_html, video_url, duration, sort_order, is_free, host_note')
+        .eq('course_id', slug)
+        .eq('is_published', true)
+        .order('sort_order')
+      setLessons((lessonData as unknown as Lesson[]) || [])
+    }
 
     if (isEnrolled) {
       const { data: prog } = await supabase!
@@ -410,17 +426,29 @@ export default function CoursePage() {
 
       {/* Days */}
       <div className="space-y-2">
-        {lessons.map((lesson, i) => (
-          <DayCard
-            key={lesson.id}
-            lesson={lesson}
-            index={i}
-            prog={progMap[lesson.id]}
-            enrolled={enrolled}
-            userId={userId}
-            onProgressChange={loadData}
-          />
-        ))}
+        {lessons.map((lesson, i) => {
+          const group = (lesson as unknown as { _group?: string })._group
+          const prevGroup = i > 0 ? (lessons[i - 1] as unknown as { _group?: string })._group : null
+          const showGroupHeader = group && group !== prevGroup
+          return (
+            <div key={lesson.id}>
+              {showGroupHeader && (
+                <div className={`flex items-center gap-3 px-1 ${i > 0 ? 'pt-4' : ''} pb-1`}>
+                  <span className="text-xs font-bold text-[#7A8C7E] uppercase tracking-widest">{group}</span>
+                  <div className="flex-1 h-px bg-[#DDD8CB]" />
+                </div>
+              )}
+              <DayCard
+                lesson={lesson}
+                index={i}
+                prog={progMap[lesson.id]}
+                enrolled={enrolled}
+                userId={userId}
+                onProgressChange={loadData}
+              />
+            </div>
+          )
+        })}
       </div>
 
       {/* Upsell if not enrolled */}

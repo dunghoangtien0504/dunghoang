@@ -52,6 +52,16 @@ const PRODUCTS = [
     icon: <BookOpen className="w-5 h-5" />,
   },
   {
+    badge: 'Hội Đồng AI',
+    badgeColor: 'bg-[#FFF8E0] text-[#88860B]',
+    name: 'Hội Đồng Cố Vấn AI',
+    desc: '5 giám đốc AI (CEO/CFO/CMO/CCO/CHRO) + 24 agent — họp chiến lược mỗi thứ 2, bộ máy tự chạy 90%.',
+    price: '2.868.686đ',
+    cta: 'Xem chi tiết',
+    href: '/hoi-dong-co-van',
+    icon: <Users className="w-5 h-5" />,
+  },
+  {
     badge: 'Có đội trưởng',
     badgeColor: 'bg-[#F0EDF8] text-[#5B3DA8]',
     name: 'Coaching — Cầm Tay Chỉ Việc',
@@ -131,7 +141,7 @@ export default function HomePage() {
 
         {/* Secondary: 4 others */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[3], PRODUCTS[4]].map((p, i) => (
+          {[PRODUCTS[0], PRODUCTS[1], PRODUCTS[3], PRODUCTS[4], PRODUCTS[5]].map((p, i) => (
             <div key={i}
               className="bg-white border border-[#DDD8CB] rounded-2xl p-4 space-y-3 hover:border-[#3D6B4A]/40 hover:shadow-sm transition-all flex flex-col">
               <span className={`text-xs font-semibold px-2.5 py-1 rounded-full self-start ${p.badgeColor}`}>{p.badge}</span>
