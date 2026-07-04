@@ -42,6 +42,11 @@ export default function CRMOverviewPage() {
 
   return (
     <div className="page-wrapper">
+      {/* Demo data banner */}
+      <div className="bg-brand-olive/10 border border-brand-olive/30 rounded-xl px-4 py-2.5 flex items-center gap-2 text-xs text-brand-olive font-medium">
+        <span>⚠️</span>
+        <span>Đang hiển thị dữ liệu mẫu — CRM chưa kết nối Supabase. Số liệu thật cần tích hợp API contacts.</span>
+      </div>
       <div className="page-header">
         <div>
           <h1 className="page-title">CRM Doanh so</h1>

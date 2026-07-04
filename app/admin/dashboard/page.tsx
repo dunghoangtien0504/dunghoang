@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { DollarSign, ShoppingCart, Users, TrendingUp, RefreshCw, ArrowRight, CheckCircle, Clock, AlertCircle } from 'lucide-react'
+import { courseShortName } from '@/lib/products'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
 type Stats = {
@@ -37,13 +38,6 @@ const STATUS_CFG: Record<string, { label: string; icon: React.ElementType; color
   refunded:  { label: 'Hoàn tiền',  icon: AlertCircle, color: 'text-danger',  bg: 'bg-danger/10' },
 }
 
-const COURSE_NAMES: Record<string, string> = {
-  'meta-ai-agent': 'Meta AI Agent',
-  'content_368':   'Content System',
-  'khoa-1':        '24 AI Agent',
-  'khoa2_2768':    'Coaching',
-  'landing-page':  'Landing Page',
-}
 
 export default function DashboardPage() {
   const [stats, setStats]   = useState<Stats | null>(null)
@@ -195,7 +189,7 @@ export default function DashboardPage() {
                     <div key={courseId}>
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-xs text-text-primary font-medium truncate">
-                          {COURSE_NAMES[courseId] ?? courseId}
+                          {courseShortName(courseId)}
                         </span>
                         <span className="text-xs font-mono text-text-muted ml-2">{fmtVND(rev)}</span>
                       </div>
@@ -249,7 +243,7 @@ export default function DashboardPage() {
                         <p className="text-[10px] text-text-muted">{o.email}</p>
                       </td>
                       <td className="table-cell text-xs text-text-secondary">
-                        {o.course_id ? (COURSE_NAMES[o.course_id] ?? o.course_id) : '—'}
+                        {o.course_id ? courseShortName(o.course_id) : '—'}
                       </td>
                       <td className="table-cell text-right font-mono font-semibold text-text-primary text-xs">
                         {fmtVND(o.amount)}
