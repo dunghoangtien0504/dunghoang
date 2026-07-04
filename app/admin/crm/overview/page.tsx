@@ -1,30 +1,18 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { BarChart3, TrendingUp, Users, DollarSign, Target, ArrowRight, CheckCircle, Clock, Zap } from 'lucide-react'
+import { TrendingUp, Users, DollarSign, Target, ArrowRight, CheckCircle, Clock, Zap, Loader2, RefreshCw } from 'lucide-react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import { DEALS, CONTACTS, KPI, DEAL_STAGE_CONFIG } from '@/lib/constants'
+import { DEAL_STAGE_CONFIG } from '@/lib/constants'
 
+// Dữ liệu mẫu cho các phần chưa có API thật
 const MONTHLY = [
-  { month: 'T1', revenue: 320 }, { month: 'T2', revenue: 485 },
   { month: 'T3', revenue: 390 }, { month: 'T4', revenue: 560 }, { month: 'T5', revenue: 809 },
+  { month: 'T6', revenue: 720 }, { month: 'T7', revenue: 0 },
 ]
-const SALE_TEAM = [
-  { name: 'Minh Tuan', deals: 28, revenue: 55720000, winRate: 72 },
-  { name: 'Thu Ha',    deals: 22, revenue: 43780000, winRate: 65 },
-  { name: 'Duc Anh',   deals: 15, revenue: 29850000, winRate: 58 },
-  { name: 'Lan Anh',   deals: 9,  revenue: 17910000, winRate: 45 },
-]
-const STAGE_COUNTS = Object.entries(DEAL_STAGE_CONFIG)
-  .filter(([k]) => k !== 'lost')
-  .map(([key, cfg]) => ({
-    label: cfg.label,
-    count: DEALS.filter(d => d.stage === key).length,
-    max:   DEALS.length,
-    color: cfg.border.replace('border-t-',''),
-  }))
 
-interface TT { active?: boolean; payload?: Array<{ value: number; name: string; color: string }>; label?: string }
+interface TT { active?: boolean; payload?: Array<{ value: number }>; label?: string }
 const CT = ({ active, payload, label }: TT) => {
   if (!active || !payload?.length) return null
   return (
@@ -35,41 +23,109 @@ const CT = ({ active, payload, label }: TT) => {
   )
 }
 
+type AdminStats = {
+  revenue: number
+  orders:  { total: number; completed: number; pending: number }
+  students: number
+}
+
+type ContactStats = {
+  total:   number
+  byStage: Record<string, number>
+}
+
+function fmtVND(n: number) {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M₫`
+  if (n >= 1_000)     return `${(n / 1_000).toFixed(0)}K₫`
+  return `${n}₫`
+}
+
 export default function CRMOverviewPage() {
-  const totalPV = DEALS.reduce((s, d) => s + d.value, 0)
-  const wonDeals = DEALS.filter(d => d.stage === 'won')
-  const winRate  = Math.round((wonDeals.length / DEALS.length) * 100)
+  const [stats,    setStats]    = useState<AdminStats | null>(null)
+  const [contacts, setContacts] = useState<ContactStats | null>(null)
+  const [loading,  setLoading]  = useState(true)
+
+  async function load() {
+    setLoading(true)
+    try {
+      const [sRes, cRes] = await Promise.all([
+        fetch('/api/admin/stats'),
+        fetch('/api/admin/contacts?pageSize=1'),
+      ])
+      const [s, c] = await Promise.all([sRes.json(), cRes.json()])
+      setStats(s)
+      setContacts({ total: c.total, byStage: c.byStage })
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => { load() }, [])
+
+  const totalContacts = contacts?.total ?? 0
+  const byStage       = contacts?.byStage ?? {}
+  const winRate       = stats
+    ? Math.round((stats.orders.completed / Math.max(stats.orders.total, 1)) * 100)
+    : 0
+
+  const STAGE_BARS = Object.entries(DEAL_STAGE_CONFIG)
+    .filter(([k]) => k !== 'lost')
+    .map(([key, cfg]) => ({
+      label: cfg.label,
+      count: key === 'won'
+        ? (stats?.orders.completed ?? 0)
+        : key === 'new'
+        ? (stats?.orders.pending ?? 0)
+        : 0,
+    }))
 
   return (
     <div className="page-wrapper">
-      {/* Demo data banner */}
-      <div className="bg-brand-olive/10 border border-brand-olive/30 rounded-xl px-4 py-2.5 flex items-center gap-2 text-xs text-brand-olive font-medium">
-        <span>⚠️</span>
-        <span>Đang hiển thị dữ liệu mẫu — CRM chưa kết nối Supabase. Số liệu thật cần tích hợp API contacts.</span>
-      </div>
       <div className="page-header">
         <div>
-          <h1 className="page-title">CRM Doanh so</h1>
-          <p className="page-subtitle">Tong quan hieu suat ban hang & pipeline</p>
+          <h1 className="page-title">CRM Doanh số</h1>
+          <p className="page-subtitle">Tổng quan — số liệu thật từ Supabase</p>
         </div>
         <div className="flex items-center gap-2">
+          <button onClick={load} disabled={loading} className="btn-secondary text-xs py-1.5">
+            <RefreshCw size={12} className={loading ? 'animate-spin' : ''} />Làm mới
+          </button>
           <Link href="/admin/crm/pipeline"  className="btn-secondary text-xs py-1.5"><TrendingUp size={12}/>Pipeline</Link>
-          <Link href="/admin/crm/contacts"  className="btn-primary text-xs py-1.5"><Users size={12}/>Khach hang</Link>
+          <Link href="/admin/crm/contacts"  className="btn-primary text-xs py-1.5"><Users size={12}/>Khách hàng</Link>
         </div>
       </div>
 
-      {/* KPIs */}
+      {/* KPIs — thật từ Supabase */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {[
-          { label:'Tong KH',          value: String(KPI.totalContacts),                         icon:Users,       color:'text-info',        bg:'bg-info-light',       sub:'+48 thang nay' },
-          { label:'Gia tri Pipeline', value:`${(totalPV/1_000_000).toFixed(0)}M`,                icon:DollarSign,  color:'text-brand-accent', bg:'bg-brand-accent/10',  sub:'6 deals dang mo' },
-          { label:'Win Rate',         value:`${winRate}%`,                                       icon:Target,      color:'text-success',      bg:'bg-success-light',    sub:'TB nganh 28%' },
-          { label:'Avg Deal',         value:`${(totalPV/DEALS.length/1_000_000).toFixed(1)}M`,  icon:TrendingUp,  color:'text-brand-border',  bg:'bg-brand-border/10',  sub:'Tren muc tieu' },
-        ].map(s=>{ const Icon=s.icon; return (
+          {
+            label: 'Tổng liên hệ',
+            value: loading ? '...' : String(totalContacts),
+            icon: Users, color: 'text-info', bg: 'bg-info-light',
+            sub: loading ? '' : `${byStage['Khách hàng'] ?? 0} đã mua`,
+          },
+          {
+            label: 'Doanh thu',
+            value: loading || !stats ? '...' : fmtVND(stats.revenue),
+            icon: DollarSign, color: 'text-brand-accent', bg: 'bg-brand-accent/10',
+            sub: loading || !stats ? '' : `${stats.orders.completed} đơn hoàn thành`,
+          },
+          {
+            label: 'Tỉ lệ chốt',
+            value: loading ? '...' : `${winRate}%`,
+            icon: Target, color: 'text-success', bg: 'bg-success-light',
+            sub: 'completed / total orders',
+          },
+          {
+            label: 'Học viên',
+            value: loading || !stats ? '...' : String(stats.students),
+            icon: TrendingUp, color: 'text-brand-border', bg: 'bg-brand-border/10',
+            sub: loading || !stats ? '' : `${stats.orders.pending} đơn chờ xử lý`,
+          },
+        ].map(s => { const Icon = s.icon; return (
           <div key={s.label} className="stat-card card-hover">
-            <div className="flex items-start justify-between">
-              <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${s.bg}`}><Icon size={16} className={s.color}/></div>
-              <span className="text-brand-olive text-[10px]">★ Moi</span>
+            <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${s.bg}`}>
+              {loading ? <Loader2 size={16} className="animate-spin text-text-muted" /> : <Icon size={16} className={s.color}/>}
             </div>
             <div>
               <p className="text-text-muted text-xs">{s.label}</p>
@@ -80,11 +136,47 @@ export default function CRMOverviewPage() {
         )})}
       </div>
 
-      {/* Charts */}
+      {/* Contacts theo giai đoạn (thật) + Monthly (mẫu) */}
       <div className="grid grid-cols-2 gap-4">
         <div className="card card-hover">
-          <h3 className="section-title mb-1">Doanh thu theo thang</h3>
-          <p className="text-text-muted text-xs mb-4">5 thang gan nhat (trieu dong)</p>
+          <h3 className="section-title mb-1">Khách hàng theo giai đoạn</h3>
+          <p className="text-text-muted text-xs mb-4">Số liệu thật từ bảng contacts</p>
+          {loading ? (
+            <div className="h-44 flex items-center justify-center">
+              <Loader2 size={20} className="animate-spin text-text-muted" />
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {[
+                { label: 'Hội viên',        key: 'Hội viên' },
+                { label: 'Khách hàng',      key: 'Khách hàng' },
+                { label: 'Người mua hàng',  key: 'Người mua hàng' },
+                { label: 'KH Tiềm năng',   key: 'KH Tiềm năng' },
+              ].map(({ label, key }) => {
+                const count = byStage[key] ?? 0
+                const max   = totalContacts || 1
+                return (
+                  <div key={key}>
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-text-secondary text-xs">{label}</span>
+                      <span className="text-text-primary text-xs font-mono font-semibold">{count}</span>
+                    </div>
+                    <div className="progress-bar">
+                      <div className="progress-fill bg-brand-accent" style={{ width:`${(count/max)*100}%` }}/>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          )}
+        </div>
+
+        <div className="card card-hover">
+          <div className="flex items-center justify-between mb-1">
+            <h3 className="section-title">Doanh thu theo tháng</h3>
+            <span className="chip text-[10px]">Dữ liệu mẫu</span>
+          </div>
+          <p className="text-text-muted text-xs mb-4">5 tháng gần nhất (triệu đồng)</p>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={MONTHLY} margin={{ top:4, right:4, left:-20, bottom:0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#DDD8CB" vertical={false}/>
@@ -95,68 +187,40 @@ export default function CRMOverviewPage() {
             </BarChart>
           </ResponsiveContainer>
         </div>
+      </div>
 
-        <div className="card card-hover">
-          <h3 className="section-title mb-1">Pipeline theo giai doan</h3>
-          <p className="text-text-muted text-xs mb-4">So deals hien tai moi giai doan</p>
+      {/* Đơn hàng pipeline + Hanh dong nhanh */}
+      <div className="grid grid-cols-3 gap-4">
+        <div className="col-span-2 card card-hover">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="section-title">Pipeline đơn hàng</h3>
+            <Link href="/admin/orders" className="btn-ghost text-xs">Xem tất cả <ArrowRight size={11}/></Link>
+          </div>
           <div className="space-y-3">
-            {STAGE_COUNTS.map((s,i)=>(
+            {STAGE_BARS.map(s => (
               <div key={s.label}>
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-text-secondary text-xs">{s.label}</span>
-                  <span className="text-text-primary text-xs font-mono font-semibold">{s.count} deals</span>
+                  <span className="text-text-primary text-xs font-mono font-semibold">{loading ? '—' : s.count} đơn</span>
                 </div>
                 <div className="progress-bar">
-                  <div className="progress-fill bg-brand-accent" style={{ width:`${(s.count/Math.max(...STAGE_COUNTS.map(x=>x.count)))*100}%`, opacity: 0.5+i*0.1 }}/>
+                  <div className="progress-fill bg-brand-accent"
+                    style={{ width: `${stats ? (s.count/Math.max(stats.orders.total,1))*100 : 0}%` }}/>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Sale team */}
-      <div className="grid grid-cols-3 gap-4">
-        <div className="col-span-2 card card-hover">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="section-title">Hieu suat Sale Team</h3>
-            <Link href="/admin/crm/performance" className="btn-ghost text-xs">Chi tiet <ArrowRight size={11}/></Link>
-          </div>
-          <table className="w-full">
-            <thead><tr>
-              <th className="table-header">#</th><th className="table-header">Sale</th>
-              <th className="table-header text-right">Deals</th><th className="table-header text-right">Doanh thu</th>
-              <th className="table-header text-right">Win Rate</th><th className="table-header">Hieu suat</th>
-            </tr></thead>
-            <tbody>{SALE_TEAM.map((s,i)=>(
-              <tr key={s.name} className="table-row">
-                <td className="table-cell"><span className={`text-xs font-bold font-mono ${i===0?'text-brand-olive':'text-text-muted'}`}>#{i+1}</span></td>
-                <td className="table-cell">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-full bg-brand-dark/10 border border-brand-dark/15 flex items-center justify-center">
-                      <span className="text-brand-dark text-[10px] font-bold">{s.name.charAt(0)}</span>
-                    </div>
-                    <span className="text-text-primary text-xs font-medium">{s.name}</span>
-                  </div>
-                </td>
-                <td className="table-cell text-right font-mono text-sm">{s.deals}</td>
-                <td className="table-cell text-right font-mono text-brand-accent text-xs">{(s.revenue/1_000_000).toFixed(1)}M</td>
-                <td className="table-cell text-right"><span className={`text-xs font-semibold ${s.winRate>=60?'text-success':s.winRate>=50?'text-brand-olive':'text-text-muted'}`}>{s.winRate}%</span></td>
-                <td className="table-cell w-24"><div className="progress-bar"><div className="progress-fill bg-brand-accent" style={{ width:`${s.winRate}%` }}/></div></td>
-              </tr>
-            ))}</tbody>
-          </table>
-        </div>
 
         <div className="space-y-3">
           <div className="card card-hover p-4">
-            <h3 className="section-title text-sm mb-3">Hanh dong nhanh</h3>
+            <h3 className="section-title text-sm mb-3">Hành động nhanh</h3>
             <div className="space-y-1.5">
               {[
-                { label:'Them khach hang', href:'/admin/crm/contacts', icon:Users },
-                { label:'Tao deal moi',    href:'/admin/crm/pipeline', icon:TrendingUp },
-                { label:'Can follow-up',   href:'/admin/crm/interested',icon:Clock },
-                { label:'Phan cong sale',  href:'/admin/crm/assign',   icon:Zap },
+                { label:'Thêm khách hàng', href:'/admin/crm/contacts', icon:Users },
+                { label:'Xem pipeline',    href:'/admin/crm/pipeline', icon:TrendingUp },
+                { label:'Theo dõi quan tâm',href:'/admin/crm/interested',icon:Clock },
+                { label:'Phân công sale',  href:'/admin/crm/assign',   icon:Zap },
               ].map(a=>{ const Icon=a.icon; return (
                 <Link key={a.href} href={a.href} className="sidebar-item w-full rounded-lg bg-surface-2 hover:bg-brand-dark/5 text-xs">
                   <Icon size={13} className="text-brand-border"/>{a.label}
@@ -166,12 +230,12 @@ export default function CRMOverviewPage() {
             </div>
           </div>
           <div className="card card-hover p-4 bg-brand-dark/2 border-brand-border/15">
-            <h3 className="section-title text-sm mb-2">Tong ket thang</h3>
+            <h3 className="section-title text-sm mb-2">Tổng kết</h3>
             <div className="space-y-2">
               {[
-                { label:'KH moi', value:'48', icon:CheckCircle, c:'text-success' },
-                { label:'Follow-up', value:'12', icon:Clock, c:'text-brand-olive' },
-                { label:'Sap het han', value:'3', icon:Target, c:'text-danger' },
+                { label:'Hội viên',        value: loading ? '—' : String(byStage['Hội viên'] ?? 0),       icon:CheckCircle, c:'text-success' },
+                { label:'Đơn chờ xử lý',  value: loading ? '—' : String(stats?.orders.pending ?? 0),     icon:Clock,       c:'text-brand-olive' },
+                { label:'Tiềm năng',       value: loading ? '—' : String(byStage['KH Tiềm năng'] ?? 0),  icon:Target,      c:'text-brand-border' },
               ].map(s=>{ const Icon=s.icon; return (
                 <div key={s.label} className="flex items-center justify-between text-xs">
                   <div className="flex items-center gap-1.5"><Icon size={11} className={s.c}/><span className="text-text-secondary">{s.label}</span></div>

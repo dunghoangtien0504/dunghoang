@@ -200,6 +200,29 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // Upsert contact — tạo mới nếu chưa có, upgrade stage nếu là Hội viên
+    if (email && email !== 'unknown@sepay.vn') {
+      const newStage = order.course_id === 'hoi-dong-co-van' ? 'Hội viên' : 'Khách hàng'
+      await supabaseAdmin.from('contacts').upsert(
+        {
+          email,
+          name,
+          stage:                newStage,
+          interested_course_id: order.course_id,
+          updated_at:           new Date().toISOString(),
+        },
+        { onConflict: 'email' }
+      )
+      // Nếu đã là Hội viên, không hạ xuống — chỉ update nếu stage cũ không cao hơn
+      if (newStage !== 'Hội viên') {
+        await supabaseAdmin
+          .from('contacts')
+          .update({ stage: newStage, updated_at: new Date().toISOString() })
+          .eq('email', email)
+          .in('stage', ['KH Tiềm năng', 'Người mua hàng'])
+      }
+    }
+
     console.log(`[sepay] ${orderCode} (${order.course_name}) — kích hoạt cho ${email}`)
 
     // Gửi Telegram báo thành công
