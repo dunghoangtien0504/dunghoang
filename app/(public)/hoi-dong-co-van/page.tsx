@@ -12,48 +12,48 @@ const product = PRODUCTS['hoi-dong-co-van']
 const ADVISORS = [
   {
     icon: <Crown className="w-5 h-5 text-[#88860B]" />,
-    role: 'CEO — Quản Trị Kiến Tạo',
+    role: 'CEO · Quản Trị Kiến Tạo',
     does: 'Chẩn đoán doanh nghiệp bạn đang ở giai đoạn nào, xây bộ điều khiển trung tâm, cùng bạn ra quyết định lớn: scale hay gọn lại, làm gì trước làm gì sau.',
-    ask:  '"Công ty mình càng làm càng đuối, không hiểu sao" — hỏi CEO.',
+    ask:  '"Công ty mình càng làm càng đuối, không hiểu sao", hỏi CEO.',
   },
   {
     icon: <Coins className="w-5 h-5 text-[#88860B]" />,
-    role: 'CFO — Tài Chính & Dòng Tiền',
+    role: 'CFO · Tài Chính & Dòng Tiền',
     does: 'Soi sức khỏe tài chính, kiểm soát dòng tiền, tính CAC/LTV, định giá sản phẩm, đánh giá có nên đầu tư mở rộng hay không.',
-    ask:  '"Có lãi mà không có tiền, nên vay 2 tỷ mở chi nhánh không?" — hỏi CFO.',
+    ask:  '"Có lãi mà không có tiền, nên vay 2 tỷ mở chi nhánh không?", hỏi CFO.',
   },
   {
     icon: <Megaphone className="w-5 h-5 text-[#88860B]" />,
-    role: 'CMO — Marketing Thu Hút',
+    role: 'CMO · Marketing Thu Hút',
     does: 'Lập kế hoạch marketing năm/quý, thiết kế offer thu hút, chọn kênh quảng cáo, đo CAC/CPL để biết tiền ads đi đâu.',
-    ask:  '"Chạy ads 50 triệu mà không thấy lead nào" — hỏi CMO.',
+    ask:  '"Chạy ads 50 triệu mà không thấy lead nào", hỏi CMO.',
   },
   {
     icon: <Handshake className="w-5 h-5 text-[#88860B]" />,
-    role: 'CCO — Bán Hàng & Kênh Phân Phối',
+    role: 'CCO · Bán Hàng & Kênh Phân Phối',
     does: 'Vận hành pipeline bán hàng, kịch bản chốt đơn kiểu "bán như bác sĩ", thiết kế upsell + giữ chân khách, chính sách đại lý nếu bạn bán qua kênh.',
-    ask:  '"Khách mua 1 lần rồi đi mất, không quay lại" — hỏi CCO.',
+    ask:  '"Khách mua 1 lần rồi đi mất, không quay lại", hỏi CCO.',
   },
   {
     icon: <UsersRound className="w-5 h-5 text-[#88860B]" />,
-    role: 'CHRO — Nhân Sự & Lương Khoán',
+    role: 'CHRO · Nhân Sự & Lương Khoán',
     does: 'Tuyển người đầu tiên đúng cách, viết mô tả công việc + KPI, 5 phương pháp chia lương khoán để nhân viên tự chạy theo kết quả.',
-    ask:  '"Muốn thuê người đầu tiên mà sợ trả lương xong không ra việc" — hỏi CHRO.',
+    ask:  '"Muốn thuê người đầu tiên mà sợ trả lương xong không ra việc", hỏi CHRO.',
   },
 ]
 
 const FAQS = [
   {
     q: 'Khác gì Khóa 1? Có cần mua cả hai không?',
-    a: 'Không cần mua cả hai — Hội Đồng Cố Vấn đã bao gồm trọn bộ 24 agent của Khóa 1 bên trong. Khác biệt là tầng trên: Khóa 1 cho bạn 24 nhân viên AI làm việc tay chân; Hội Đồng thêm 5 giám đốc quyết chiến lược + quy trình vận hành tuần nối hai tầng lại — giám đốc kê toa việc, nhân viên thực thi, bạn chỉ duyệt. Nếu đã mua Khóa 1 rồi thì số tiền đó trừ thẳng vào, chỉ thêm 2.000.000đ.',
+    a: 'Không cần mua cả hai. Hội Đồng Cố Vấn đã bao gồm trọn bộ 24 agent của Khóa 1 bên trong. Khác biệt là tầng trên: Khóa 1 cho bạn 24 nhân viên AI làm việc tay chân; Hội Đồng thêm 5 giám đốc quyết chiến lược + quy trình vận hành tuần nối hai tầng lại. Giám đốc kê toa việc, nhân viên thực thi, bạn chỉ duyệt. Nếu đã mua Khóa 1 rồi thì số tiền đó trừ thẳng vào, chỉ thêm 2.000.000đ.',
   },
   {
     q: '"90% tự động" nghĩa là sao? Tôi còn phải làm gì?',
-    a: 'Nghĩa đen: phần nghĩ (5 cố vấn phân tích, kê toa) và phần làm (24 agent viết content, email, trang bán, trả inbox) là AI. Phần của bạn gồm 2 việc không nên tự động: họp hội đồng 30 phút mỗi thứ 2 và duyệt thành phẩm 15 phút mỗi ngày trước khi đăng. AI không tự đăng bài, không tự gửi tiền, không tự quyết thay bạn — doanh nghiệp mang tên bạn, quyết định cuối là của bạn.',
+    a: 'Nghĩa đen: phần nghĩ (5 cố vấn phân tích, kê toa) và phần làm (24 agent viết content, email, trang bán, trả inbox) là AI. Phần của bạn gồm 2 việc không nên tự động: họp hội đồng 30 phút mỗi thứ 2 và duyệt thành phẩm 15 phút mỗi ngày trước khi đăng. AI không tự đăng bài, không tự gửi tiền, không tự quyết thay bạn. Doanh nghiệp mang tên bạn, quyết định cuối là của bạn.',
   },
   {
     q: 'AI cố vấn thì đáng tin đến đâu? Nó quyết thay tôi à?',
-    a: 'Không. Mỗi cố vấn là một quy trình hỏi đáp có cấu trúc: nó hỏi bạn số liệu thật, phân tích theo framework quản trị đã được đóng gói, rồi đưa ra phân tích + phương án kèm lý do. Người quyết vẫn là bạn. Giá trị của nó là bạn không còn quyết một mình trong bóng tối — có người phản biện trước khi bạn xuống tiền.',
+    a: 'Không. Mỗi cố vấn là một quy trình hỏi đáp có cấu trúc: nó hỏi bạn số liệu thật, phân tích theo framework quản trị đã được đóng gói, rồi đưa ra phân tích + phương án kèm lý do. Người quyết vẫn là bạn. Giá trị của nó là bạn không còn quyết một mình trong bóng tối: có người phản biện trước khi bạn xuống tiền.',
   },
   {
     q: 'Dùng thế nào cho đúng? Mỗi tuần mất bao lâu?',
@@ -61,11 +61,11 @@ const FAQS = [
   },
   {
     q: 'Bảo hành thế nào?',
-    a: '14 ngày hoàn 100% như mọi sản phẩm khác của mình. Thử ít nhất 2 buổi họp với 2 cố vấn — nếu không thấy quyết định nào sáng ra, nhắn mình hoàn tiền trong 24 giờ.',
+    a: '14 ngày hoàn 100% như mọi sản phẩm khác của mình. Thử ít nhất 2 buổi họp với 2 cố vấn, nếu không thấy quyết định nào sáng ra, nhắn mình hoàn tiền trong 24 giờ.',
   },
   {
     q: 'Muốn nâng lên Khóa 2 Coaching thì sao?',
-    a: 'Khóa 2 (3.868.686đ) = toàn bộ Hội Đồng Cố Vấn này + Dũng kèm sát 1-1 trong 30 ngày + Tiểu Hà Mã cài riêng cho business bạn. Nếu bạn mua Hội Đồng hôm nay rồi muốn lên Khóa 2, số tiền 2.868.686đ trừ thẳng vào — chỉ thêm 1.000.000đ. Nhắn Telegram @KentHoang để mình áp dụng.',
+    a: 'Khóa 2 (3.868.686đ) = toàn bộ Hội Đồng Cố Vấn này + Dũng kèm sát 1-1 trong 30 ngày + Tiểu Hà Mã cài riêng cho business bạn. Nếu bạn mua Hội Đồng hôm nay rồi muốn lên Khóa 2, số tiền 2.868.686đ trừ thẳng vào, chỉ thêm 1.000.000đ. Nhắn Telegram @KentHoang để mình áp dụng.',
   },
 ]
 
@@ -132,7 +132,7 @@ export default function HoiDongCoVanPage() {
 
             <p className="text-[#0D2B1A]/65 text-base sm:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
               Trọn bộ công ty AI: 5 giám đốc (CEO, CFO, CMO, CCO, CHRO) + 24 nhân viên AI + quy trình vận hành tuần.
-              Giám đốc kê toa, nhân viên thực thi — bạn họp 30 phút thứ 2 và duyệt 15 phút mỗi ngày.
+              Giám đốc kê toa, nhân viên thực thi. Bạn họp 30 phút thứ 2 và duyệt 15 phút mỗi ngày.
             </p>
 
             {/* Feature chips — thay cho đoạn text liệt kê thuần */}
@@ -191,12 +191,12 @@ export default function HoiDongCoVanPage() {
 
           <div className="space-y-3 text-gray-700 leading-relaxed">
             <p>Có nên tăng giá không? Tiền tháng này đi đâu mà không thấy dư? Thuê người đầu tiên bây giờ hay ráng thêm 6 tháng? Chạy ads tiếp hay dừng?</p>
-            <p>Mỗi câu hỏi đó, chủ doanh nghiệp lớn có cả ban giám đốc ngồi phản biện. Còn solopreneur thì tự hỏi, tự trả lời, tự chịu — nhiều khi quyết theo cảm tính lúc 11h đêm rồi sáng mai hối.</p>
+            <p>Mỗi câu hỏi đó, chủ doanh nghiệp lớn có cả ban giám đốc ngồi phản biện. Còn solopreneur thì tự hỏi, tự trả lời, tự chịu. Nhiều khi quyết theo cảm tính lúc 11h đêm rồi sáng mai hối.</p>
           </div>
 
           <div className="border-l-4 border-[#C0390E] pl-4 space-y-2">
             <p className="text-gray-700 leading-relaxed">
-              Sai một bài content, mất một buổi. Sai một quyết định giá, một kênh bán, một lần thuê người — mất vài tháng và vài chục triệu.
+              Sai một bài content, mất một buổi. Sai một quyết định giá, một kênh bán, một lần thuê người, mất vài tháng và vài chục triệu.
             </p>
             <p className="font-bold text-[#0D2B1A]">Hội Đồng Cố Vấn sinh ra để bạn không phải quyết một mình nữa.</p>
           </div>
@@ -213,7 +213,7 @@ export default function HoiDongCoVanPage() {
         <div className="max-w-3xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#88860B] uppercase tracking-widest">Ban giám đốc của bạn</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">5 cố vấn — 5 mảng bạn đang tự gánh</h2>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">5 cố vấn cho 5 mảng bạn đang tự gánh</h2>
             <p className="text-gray-500 text-sm">Phương pháp quản trị được đóng gói thành skill, hỏi là có người phân tích cùng</p>
           </div>
 
@@ -251,7 +251,7 @@ export default function HoiDongCoVanPage() {
 
           <button onClick={open}
             className="w-full h-14 bg-[#0D2B1A] hover:bg-[#153f27] active:scale-[0.98] text-white font-black rounded-2xl transition-all duration-200 text-base">
-            Tôi Muốn Cả 5 Người Này — 2.868.686đ →
+            Tôi Muốn Cả 5 Người Này · 2.868.686đ →
           </button>
         </div>
       </section>
@@ -261,7 +261,7 @@ export default function HoiDongCoVanPage() {
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#8BC34A] uppercase tracking-widest">Không nói suông</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Xem thử — cố vấn phân tích thật ra sao</h2>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">Xem thử: cố vấn phân tích thật ra sao</h2>
             <p className="text-gray-500 text-sm max-w-md mx-auto leading-relaxed">
               Đây là đúng khuôn "toa quản trị" mà cố vấn CEO xuất ra, chạy trên 1 tình huống ví dụ: agency marketing 25 người, doanh thu 800 triệu/tháng, lợi nhuận chỉ 30 triệu.
             </p>
@@ -274,7 +274,7 @@ export default function HoiDongCoVanPage() {
                 <Crown className="w-4 h-4 text-[#8BC34A]" />
               </span>
               <div>
-                <p className="text-[#F6F0E4] font-bold text-sm">Toa quản trị — Agency marketing (ví dụ)</p>
+                <p className="text-[#F6F0E4] font-bold text-sm">Toa quản trị · Agency marketing (ví dụ)</p>
                 <p className="text-[#8BC34A] text-[11px]">Cố vấn CEO · Quản trị kiến tạo</p>
               </div>
             </div>
@@ -299,7 +299,7 @@ export default function HoiDongCoVanPage() {
                 </div>
                 <div className="bg-red-50 rounded-lg p-3 mt-2.5">
                   <p className="text-xs text-red-700 leading-relaxed">
-                    <span className="font-bold">Điểm yếu lớn nhất:</span> doanh thu cao (800tr/tháng) nhưng lợi nhuận mỏng — offer đang bị ép giá, và CEO vẫn là nút thắt vận hành.
+                    <span className="font-bold">Điểm yếu lớn nhất:</span> doanh thu cao (800tr/tháng) nhưng lợi nhuận mỏng. Offer đang bị ép giá, và CEO vẫn là nút thắt vận hành.
                   </p>
                 </div>
               </div>
@@ -340,14 +340,14 @@ export default function HoiDongCoVanPage() {
 
               <div className="border-t border-[#DDD8CB] pt-3 flex items-center gap-2">
                 <CalendarCheck2 className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                <p className="text-xs text-gray-500">Tái khám sau 3 tuần — kiểm tra offer mới đã đẩy biên lợi nhuận lên chưa.</p>
+                <p className="text-xs text-gray-500">Tái khám sau 3 tuần: kiểm tra offer mới đã đẩy biên lợi nhuận lên chưa.</p>
               </div>
             </div>
           </div>
           </Reveal>
 
           <div className="bg-[#0D2B1A] rounded-xl p-4 text-sm text-[#F6F0E4]/75 leading-relaxed text-center">
-            Nói thẳng như FAQ bên dưới: cố vấn <span className="text-[#8BC34A] font-semibold">không quyết thay bạn</span> và không hứa doanh thu — nó chỉ ra đúng thứ tự ưu tiên, chặn bạn khỏi sai lầm nhảy cóc giai đoạn. Với dữ liệu thật của bạn, toa sẽ cụ thể như thế này.
+            Nói thẳng như FAQ bên dưới: cố vấn <span className="text-[#8BC34A] font-semibold">không quyết thay bạn</span> và không hứa doanh thu. Nó chỉ ra đúng thứ tự ưu tiên, chặn bạn khỏi sai lầm nhảy cóc giai đoạn. Với dữ liệu thật của bạn, toa sẽ cụ thể như thế này.
           </div>
         </div>
       </section>
@@ -357,16 +357,16 @@ export default function HoiDongCoVanPage() {
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Cách dùng</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Mỗi tuần một buổi họp hội đồng — 30 phút</h2>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">Mỗi tuần một buổi họp hội đồng, 30 phút</h2>
           </div>
           <div className="relative">
             {/* Đường nối — chỉ hiện ở desktop, tạo cảm giác quy trình liền mạch thay vì 3 ô rời rạc */}
             <div className="hidden sm:block absolute top-6 left-[16.5%] right-[16.5%] h-px bg-[#DDD8CB]" />
             <div className="grid sm:grid-cols-3 gap-6 sm:gap-4">
               {[
-                { icon: <CalendarClock className="w-5 h-5 text-[#F6F0E4]" />, step: '1', title: 'Chọn vấn đề nóng nhất', desc: 'Tuần này chuyện gì làm bạn mất ngủ? Giá, tiền, khách, người — mang đúng 1 chuyện.' },
+                { icon: <CalendarClock className="w-5 h-5 text-[#F6F0E4]" />, step: '1', title: 'Chọn vấn đề nóng nhất', desc: 'Tuần này chuyện gì làm bạn mất ngủ? Giá, tiền, khách, người. Mang đúng 1 chuyện.' },
                 { icon: <Bot className="w-5 h-5 text-[#F6F0E4]" />, step: '2', title: 'Hỏi đúng cố vấn', desc: 'Mở skill của giám đốc phụ trách. Cố vấn hỏi ngược lại số liệu thật của bạn rồi mới phân tích.' },
-                { icon: <ClipboardList className="w-5 h-5 text-[#F6F0E4]" />, step: '3', title: 'Nhận toa việc, giao agent thực thi', desc: 'Cuối buổi có toa việc ghi rõ giao agent nào. Dán lệnh theo bảng có sẵn — agent làm, bạn duyệt 15 phút mỗi ngày.' },
+                { icon: <ClipboardList className="w-5 h-5 text-[#F6F0E4]" />, step: '3', title: 'Nhận toa việc, giao agent thực thi', desc: 'Cuối buổi có toa việc ghi rõ giao agent nào. Dán lệnh theo bảng có sẵn. Agent làm, bạn duyệt 15 phút mỗi ngày.' },
               ].map((c, idx) => (
                 <Reveal key={c.step} delay={idx * 120} className="relative space-y-2.5">
                   <span className="relative z-10 w-12 h-12 rounded-2xl bg-[#0D2B1A] flex items-center justify-center shadow-sm">
@@ -381,7 +381,7 @@ export default function HoiDongCoVanPage() {
             </div>
           </div>
           <div className="bg-[#0D2B1A]/5 rounded-xl p-4 text-sm text-gray-600 leading-relaxed">
-            <p><strong className="text-[#0D2B1A]">Mình nói thẳng:</strong> cố vấn AI phân tích và đề xuất — không quyết thay bạn, không cam kết doanh thu. Giá trị thật của nó: trước mỗi quyết định lớn, bạn có người hỏi ngược "số liệu đâu?", "tính kỹ chưa?" — thứ mà solopreneur không bao giờ có.</p>
+            <p><strong className="text-[#0D2B1A]">Mình nói thẳng:</strong> cố vấn AI phân tích và đề xuất, không quyết thay bạn, không cam kết doanh thu. Giá trị thật của nó: trước mỗi quyết định lớn, bạn có người hỏi ngược "số liệu đâu?", "tính kỹ chưa?". Thứ mà solopreneur không bao giờ có.</p>
           </div>
         </div>
       </section>
@@ -399,11 +399,11 @@ export default function HoiDongCoVanPage() {
           <div className="bg-white border border-[#DDD8CB] rounded-2xl overflow-hidden">
             <div className="px-5 py-4 space-y-4">
               {[
-                { role: 'CEO / Cố vấn điều hành',    salary: '60 – 120 triệu', pct: 100 },
-                { role: 'CFO / Giám đốc tài chính',  salary: '40 – 80 triệu',  pct: 67 },
-                { role: 'CMO / Giám đốc marketing',  salary: '40 – 70 triệu',  pct: 58 },
-                { role: 'CCO / Giám đốc kinh doanh', salary: '40 – 70 triệu',  pct: 58 },
-                { role: 'CHRO / Giám đốc nhân sự',   salary: '30 – 60 triệu',  pct: 50 },
+                { role: 'CEO / Cố vấn điều hành',    salary: '60 đến 120 triệu', pct: 100 },
+                { role: 'CFO / Giám đốc tài chính',  salary: '40 đến 80 triệu',  pct: 67 },
+                { role: 'CMO / Giám đốc marketing',  salary: '40 đến 70 triệu',  pct: 58 },
+                { role: 'CCO / Giám đốc kinh doanh', salary: '40 đến 70 triệu',  pct: 58 },
+                { role: 'CHRO / Giám đốc nhân sự',   salary: '30 đến 60 triệu',  pct: 50 },
               ].map((r, i) => (
                 <div key={i} className="space-y-1.5">
                   <div className="flex justify-between items-baseline gap-3">
@@ -417,7 +417,7 @@ export default function HoiDongCoVanPage() {
             </div>
             <div className="px-5 py-4 bg-[#0D2B1A] flex justify-between items-center">
               <p className="font-bold text-[#F6F0E4] text-sm">Cả ban giám đốc</p>
-              <p className="text-xl sm:text-2xl font-black text-[#F6F0E4]">210 – 400 triệu<span className="text-[#F6F0E4]/50 text-sm font-normal">/tháng</span></p>
+              <p className="text-xl sm:text-2xl font-black text-[#F6F0E4]">210 đến 400 triệu<span className="text-[#F6F0E4]/50 text-sm font-normal">/tháng</span></p>
             </div>
           </div>
           </Reveal>
@@ -428,11 +428,11 @@ export default function HoiDongCoVanPage() {
               Chưa kể: tuyển được người giỏi mất 3-6 tháng, lương tháng 13, bảo hiểm, và rủi ro họ nghỉ việc mang theo kinh nghiệm.
             </p>
             <p className="text-[#F6F0E4] font-black text-lg">
-              Hội Đồng Cố Vấn AI: <span className="text-[#8BC34A]">2.868.686đ trả 1 lần</span> — bằng chưa tới 1 ngày lương của ban giám đốc thật.
+              Hội Đồng Cố Vấn AI: <span className="text-[#8BC34A]">2.868.686đ trả 1 lần</span>, bằng chưa tới 1 ngày lương của ban giám đốc thật.
             </p>
             <p className="text-[#F6F0E4]/50 text-xs leading-relaxed">
               Nói cho công bằng: cố vấn AI không thay được con người ở quan hệ và trách nhiệm pháp lý.
-              Nhưng ở phần phân tích, phản biện và framework ra quyết định — nó làm được phần lớn, với chi phí gần như bằng 0.
+              Nhưng ở phần phân tích, phản biện và framework ra quyết định, nó làm được phần lớn, với chi phí gần như bằng 0.
             </p>
           </div>
           </Reveal>
@@ -444,7 +444,7 @@ export default function HoiDongCoVanPage() {
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <p className="text-xs font-bold text-[#3D6B4A] uppercase tracking-widest">Đầu tư</p>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">2.868.686đ — thay vì 30-50 triệu/tháng thuê 1 cố vấn thật</h2>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">2.868.686đ, thay vì 30-50 triệu mỗi tháng thuê 1 cố vấn thật</h2>
           </div>
 
           <Reveal>
@@ -454,15 +454,15 @@ export default function HoiDongCoVanPage() {
             </div>
             <div className="divide-y divide-[#DDD8CB]">
               {[
-                { item: 'Skill CEO — Quản Trị Kiến Tạo',            value: '5.000.000đ' },
-                { item: 'Skill CFO — Tài Chính & Dòng Tiền',        value: '5.000.000đ' },
-                { item: 'Skill CMO — Marketing Thu Hút',            value: '5.000.000đ' },
-                { item: 'Skill CCO — Bán Hàng & Kênh Phân Phối',    value: '5.000.000đ' },
-                { item: 'Skill CHRO — Nhân Sự & Lương Khoán',       value: '5.000.000đ' },
+                { item: 'Skill CEO · Quản Trị Kiến Tạo',            value: '5.000.000đ' },
+                { item: 'Skill CFO · Tài Chính & Dòng Tiền',        value: '5.000.000đ' },
+                { item: 'Skill CMO · Marketing Thu Hút',            value: '5.000.000đ' },
+                { item: 'Skill CCO · Bán Hàng & Kênh Phân Phối',    value: '5.000.000đ' },
+                { item: 'Skill CHRO · Nhân Sự & Lương Khoán',       value: '5.000.000đ' },
                 { item: 'Trọn bộ 24 AI Agent for Business (nguyên Khóa 1)', value: '16.484.832đ' },
-                { item: 'Quy Trình Vận Hành Hội Đồng — SOP họp tuần + bảng giao việc 24 agent', value: '2.000.000đ' },
+                { item: 'Quy Trình Vận Hành Hội Đồng: SOP họp tuần + bảng giao việc 24 agent', value: '2.000.000đ' },
                 { item: 'Mẫu Biên Bản Họp Hội Đồng hàng tuần',       value: '499.000đ', bonus: true },
-                { item: 'Script Báo Cáo Tuần tự động — kéo số liệu từ hệ thống của bạn', value: '990.000đ', bonus: true },
+                { item: 'Script Báo Cáo Tuần tự động, kéo số liệu từ hệ thống của bạn', value: '990.000đ', bonus: true },
               ].map((r, i) => (
                 <div key={i} className={`px-5 py-3 flex justify-between items-center gap-3 ${r.bonus ? 'bg-[#EAF5EF]' : ''}`}>
                   <p className={`text-sm flex items-center gap-2 ${r.bonus ? 'font-semibold text-[#2D7A4F]' : 'text-gray-700'}`}>
@@ -479,7 +479,7 @@ export default function HoiDongCoVanPage() {
             <div className="px-5 py-5 bg-[#EAF5EF] flex justify-between items-center">
               <div>
                 <p className="font-bold text-[#0D2B1A]">Trọn bộ hôm nay</p>
-                <p className="text-xs text-[#3D6B4A] max-w-[180px] sm:max-w-none">Đã học Khóa 1? Trừ 868.686đ — chỉ thêm 2.000.000đ · Lên Khóa 2 chỉ thêm 1.000.000đ</p>
+                <p className="text-xs text-[#3D6B4A] max-w-[180px] sm:max-w-none">Đã học Khóa 1? Trừ 868.686đ, chỉ thêm 2.000.000đ · Lên Khóa 2 chỉ thêm 1.000.000đ</p>
               </div>
               <p className="text-3xl font-black text-[#0D2B1A] flex-shrink-0">2.868.686đ</p>
             </div>
@@ -488,8 +488,8 @@ export default function HoiDongCoVanPage() {
 
           <div className="bg-[#0D2B1A]/5 rounded-xl p-4 text-sm text-gray-700 leading-relaxed space-y-2">
             <p><strong className="text-[#0D2B1A]">So sánh thực tế:</strong></p>
-            <p>Thuê 1 cố vấn chiến lược thật: 30-50 triệu/tháng, và họ chỉ rành 1 mảng.</p>
-            <p>Hội Đồng Cố Vấn: 2.868.686đ trả 1 lần — 5 mảng, hỏi lúc 11h đêm cũng trả lời.</p>
+            <p>Thuê 1 cố vấn chiến lược thật: 30-50 triệu mỗi tháng, và họ chỉ rành 1 mảng.</p>
+            <p>Hội Đồng Cố Vấn: 2.868.686đ trả 1 lần. 5 mảng, hỏi lúc 11h đêm cũng trả lời.</p>
           </div>
 
           <div className="space-y-3">
@@ -510,7 +510,7 @@ export default function HoiDongCoVanPage() {
           </div>
           <div className="space-y-2">
             <h3 className="text-xl font-black text-[#0D2B1A]">Bảo Hành 14 Ngày</h3>
-            <p className="text-[#3D6B4A] text-sm font-semibold">Họp thử 2 buổi với 2 cố vấn — không thấy quyết định nào sáng ra → hoàn 100% trong 24h</p>
+            <p className="text-[#3D6B4A] text-sm font-semibold">Họp thử 2 buổi với 2 cố vấn, không thấy quyết định nào sáng ra thì hoàn 100% trong 24h</p>
             <p className="text-sm text-gray-600 leading-relaxed">
               Mình không muốn giữ tiền của người không thấy giá trị. Nhắn một tin là hoàn, không thủ tục rườm rà.
             </p>
@@ -537,9 +537,9 @@ export default function HoiDongCoVanPage() {
               <p className="font-bold text-gray-500 text-sm">KHÔNG PHẢI CHO:</p>
               <div className="space-y-2">
                 {[
-                  'Người chưa có sản phẩm hoặc chưa có đồng doanh thu nào — học Khóa 1 trước',
+                  'Người chưa có sản phẩm hoặc chưa có đồng doanh thu nào: học Khóa 1 trước',
                   'Người muốn AI quyết thay và cam kết kết quả doanh thu',
-                  'Người cần kèm sát 1-1 từng bước — đó là Khóa 2 Coaching',
+                  'Người cần kèm sát 1-1 từng bước: đó là Khóa 2 Coaching',
                 ].map((t, i) => <p key={i} className="text-sm text-gray-500 leading-snug flex gap-2"><span>✗</span> {t}</p>)}
               </div>
             </Reveal>
@@ -574,7 +574,7 @@ export default function HoiDongCoVanPage() {
           </h2>
           <button onClick={open}
             className="w-full h-16 bg-[#0D2B1A] hover:bg-[#153f27] active:scale-[0.97] hover:scale-[1.02] text-white text-base font-black rounded-2xl transition-all duration-200 shadow-xl shadow-[#0D2B1A]/20">
-            Lập Hội Đồng Của Tôi — 2.868.686đ →
+            Lập Hội Đồng Của Tôi · 2.868.686đ →
           </button>
           <div className="flex items-center justify-center gap-4 text-xs text-gray-400 flex-wrap">
             <span>✓ 5 giám đốc AI</span>

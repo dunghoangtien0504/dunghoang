@@ -45,54 +45,49 @@ export default function MetaAIAgentPage() {
         rel="stylesheet"
       />
 
-      {/* ── [0] Announcement Bar — B.12 Scarcity ── */}
-      <div className="bg-[#1D9E75] text-white text-center py-2.5 px-4 text-xs md:text-sm font-black tracking-wider uppercase shadow-md relative z-30">
-        ⚡ Ưu Đãi Ra Mắt 99.000đ · Giá Gốc 399.000đ (Bảo hoàn 14 ngày 100%)
+      {/* ── [0] Announcement Bar ── */}
+      <div className="bg-[#0D2B1A] text-[#F6F0E4] text-center py-2.5 px-4 text-xs md:text-sm font-bold tracking-wide relative z-30">
+        <Zap className="w-3.5 h-3.5 inline -mt-0.5 mr-1.5 text-[#3EE2A9]" />
+        Ưu đãi ra mắt 99.000đ · Giá gốc 399.000đ · Bảo hành hoàn tiền 14 ngày 100%
       </div>
 
-      {/* ── [1] Hero Section (Signature Forest Green Header) ── */}
-      <section className="relative bg-[#0D2B1A] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#173F28] via-[#0D2B1A] to-[#05150C] text-[#F6F0E4] px-5 pt-20 pb-24 text-center z-10 border-b border-[#1D9E75]/20">
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,_transparent_1px),_linear-gradient(90deg,_rgba(255,255,255,0.015)_1px,_transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
-        {/* Ambient glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
+      {/* ── [1] Hero Section — light ── */}
+      <section className="relative bg-[#FAF7F0] px-5 pt-14 pb-16 sm:pt-20 text-center z-10 border-b border-[#DDD8CB] overflow-hidden">
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#1D9E75]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto space-y-6">
-          <div className="inline-flex items-center gap-2 bg-[#1D9E75]/20 border border-[#1D9E75]/40
-                          text-[#3EE2A9] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest animate-pulse">
+          <div className="inline-flex items-center gap-2 bg-white border border-[#DDD8CB]
+                          text-[#1D9E75] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
             <Zap className="w-3.5 h-3.5 fill-current" />
             Meta AI Agent · Trực Page Thay Bạn 24/7
           </div>
 
-          {/* B.1 Headline: Max 2 lines & Extremely Hooking */}
-          <h1 className="text-3xl sm:text-5xl md:text-[3.25rem] font-black leading-[1.12] tracking-tight text-[#F6F0E4]">
+          <h1 className="text-3xl sm:text-5xl md:text-[3.25rem] font-black leading-[1.12] tracking-tight text-[#0D2B1A]">
             Mỗi đêm Fanpage nhận tin nhắn...<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7B7B] to-[#FFA2A2]">
+            <span className="text-[#C0390E]">
               Sáng ra, khách đã chốt đơn bên khác!
             </span>
           </h1>
 
-          {/* B.2 Sub-headline: Clarity & Trust */}
-          <p className="text-base sm:text-lg md:text-xl text-[#F6F0E4]/80 leading-relaxed max-w-2xl mx-auto">
-            Hơn <strong className="text-[#3EE2A9] font-black">600+ chủ shop</strong> đang dùng AI mặc định của Meta để tự tư vấn và chăm sóc khách hàng 24/7 — ngay cả khi đang ngủ. 
-            <span className="block mt-2 font-medium text-white/90">Setup chỉ 30 phút. Không cần biết code. Không mất phí duy trì hàng tháng.</span>
+          <p className="text-base sm:text-lg md:text-xl text-[#3D6B4A] leading-relaxed max-w-2xl mx-auto">
+            Hơn <strong className="text-[#1D9E75] font-black">600+ chủ shop</strong> đang dùng AI mặc định của Meta để tự tư vấn và chăm sóc khách 24/7, ngay cả khi đang ngủ.
+            <span className="block mt-2 font-medium text-gray-600">Setup chỉ 30 phút. Không cần biết code. Không mất phí duy trì hàng tháng.</span>
           </p>
 
-          {/* CTA L1 */}
           <div className="space-y-4 pt-4">
             <button
               onClick={buy}
-              className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#1D9E75] to-[#15825F] hover:from-[#22B385] hover:to-[#1B9C73]
-                         active:scale-[0.98] text-white font-extrabold py-4.5 px-10 rounded-2xl text-base md:text-lg
-                         transition-all duration-300 shadow-xl shadow-black/40 cursor-pointer"
+              className="group inline-flex items-center gap-3 bg-[#1D9E75] hover:bg-[#178a64]
+                         active:scale-[0.98] text-white font-extrabold py-4 px-10 rounded-2xl text-base md:text-lg
+                         transition-all duration-300 shadow-xl shadow-[#1D9E75]/25 cursor-pointer"
             >
               Tôi Muốn AI Trả Lời Thay Mình
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <div className="flex items-center justify-center gap-4 text-xs text-[#F6F0E4]/40">
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-[#3EE2A9]" /> Nhận file ngay sau thanh toán</span>
-              <span className="h-3 w-px bg-white/10" />
-              <span className="flex items-center gap-1"><Shield className="w-3.5 h-3.5 text-[#3EE2A9]" /> Bảo bảo hoàn tiền 14 ngày</span>
+            <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
+              <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-[#1D9E75]" /> Nhận file ngay sau thanh toán</span>
+              <span className="h-3 w-px bg-[#DDD8CB]" />
+              <span className="flex items-center gap-1"><Shield className="w-3.5 h-3.5 text-[#1D9E75]" /> Bảo hành hoàn tiền 14 ngày</span>
             </div>
           </div>
         </div>
@@ -134,7 +129,7 @@ export default function MetaAIAgentPage() {
             <div className="w-12 h-12 bg-[#E05C5C]/10 rounded-2xl flex items-center justify-center mb-5">
               <MessageCircle className="w-6 h-6 text-[#E05C5C]" />
             </div>
-            <h3 className="text-lg font-bold mb-3 text-[#0D2B1A]">Inbox dồn dập lúc nửa đêm — Sáng dậy khách đã đi mất</h3>
+            <h3 className="text-lg font-bold mb-3 text-[#0D2B1A]">Inbox dồn dập lúc nửa đêm. Sáng dậy khách đã đi mất.</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
               Khách hỏi mua lúc 11h, 12h đêm. Shop đi ngủ, không ai trả lời. Sáng ra bạn hí hửng vào reply thì nhận lại sự im lặng. Họ đã tìm thấy một shop khác phản hồi ngay lập tức để giải quyết nhu cầu tức thời.
             </p>
@@ -166,7 +161,7 @@ export default function MetaAIAgentPage() {
         {/* Lớp 2: Consequences */}
         <div className="bg-red-500/[0.02] border border-red-500/20 rounded-3xl p-8 mb-8">
           <p className="text-[#C0390E] font-black text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
-            <AlertCircle size={14} /> Hậu quả thực tế — Những con số biết nói
+            <AlertCircle size={14} /> Hậu quả thực tế: những con số biết nói
           </p>
           <div className="space-y-4">
             {[
@@ -189,8 +184,8 @@ export default function MetaAIAgentPage() {
           <p className="text-base md:text-lg text-gray-800 leading-relaxed italic font-serif pl-1">
             "Nhiều lúc đang ăn cơm với gia đình hay đi ngủ mà điện thoại cứ rung bần bật. Không trả lời thì xót đơn, mà trả lời thì mất hết thời gian riêng tư. Cảm giác page của mình bỏ hoang và thiếu chuyên nghiệp trước mắt khách..."
           </p>
-          <p className="text-xs text-gray-450 mt-4">
-            — Chia sẻ từ một chủ shop thời trang tại TP.HCM trước khi ứng dụng Meta AI Agent.
+          <p className="text-xs text-gray-400 mt-4">
+            Chia sẻ từ một chủ shop thời trang tại TP.HCM trước khi ứng dụng Meta AI Agent.
           </p>
         </div>
 
@@ -210,45 +205,43 @@ export default function MetaAIAgentPage() {
 
       {/* ── [4] Story / Solution Bridge (Dark Emerald Section as visual contrast) ── */}
       <section id="story" data-animate className={`max-w-4xl mx-auto px-5 py-12 ${animClass('story')}`}>
-        <div className="bg-gradient-to-br from-[#0D2B1A] to-[#05150C] border border-[#1D9E75]/20 text-[#F6F0E4] rounded-3xl p-8 md:p-12 relative shadow-lg">
-          <div className="absolute top-0 right-12 w-24 h-24 bg-[#1D9E75]/10 rounded-full blur-2xl pointer-events-none" />
-          
-          <p className="text-[#3EE2A9] text-xs font-bold uppercase tracking-widest mb-6">
+        <div className="bg-white border border-[#DDD8CB] rounded-3xl p-8 md:p-12 relative shadow-sm">
+          <p className="text-[#1D9E75] text-xs font-bold uppercase tracking-widest mb-6">
             CÂU CHUYỆN THỰC TẾ TỪ SHOP DŨNG HOÀNG
           </p>
 
-          <h3 className="text-xl md:text-2xl font-black text-[#F6F0E4] mb-5 leading-snug">
+          <h3 className="text-xl md:text-2xl font-black text-[#0D2B1A] mb-5 leading-snug">
             Hành trình tự động hóa quy trình trực page để rảnh tay làm việc lớn
           </h3>
-          
-          <div className="space-y-4 text-sm text-[#F6F0E4]/80 leading-relaxed">
+
+          <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
             <p>
               Là một solopreneur, mình tự vận hành mọi thứ từ Homestay, sản xuất khoá học cho tới viết content đa kênh. Trước đây, mình bị kẹt cứng vào chiếc điện thoại. Khách nhắn hỏi lúc đêm muộn mà không trả lời là sáng hôm sau mất đơn.
             </p>
             <p>
               Mình đã thử dùng nhiều phần mềm chatbot kéo thả phức tạp, nhưng chi phí hàng tháng khá đắt đỏ mà khách thì ghét bấm nút rẽ nhánh kiểu robot vô hồn. Sau đó, mình phát hiện ra Meta có tích hợp sẵn AI tự nhiên miễn phí ngay trên Business Suite, nhưng ngặt nỗi, không có tài liệu dạy thì nó sẽ nói chuyện ngô nghê.
             </p>
-            <p className="border-l-2 border-[#3EE2A9] pl-4 italic text-[#F6F0E4]/90">
+            <p className="border-l-2 border-[#1D9E75] pl-4 italic text-gray-700">
               "Mình quyết định ngồi mổ xẻ: AI của Meta cần thông tin theo cấu trúc chuẩn nào để trả lời tự nhiên như người thật? Sau hơn 1 tháng liên tục test, viết đi viết lại Custom Instructions và Business Info trên 6 ngành hàng khác nhau, mình đã tìm ra bộ khung hoàn hảo."
             </p>
             <p>
-              AI sau khi được nạp đúng tài liệu đã tự động chốt đơn, trả lời thông tin chi tiết và phản hồi siêu tốc 24/7. Mình đã đóng gói toàn bộ quy trình và các file template chuẩn hóa này lại để bạn chỉ cần điền thông tin và copy-paste vào Meta trong 30 phút là chạy được ngay.
+              AI sau khi được nạp đúng tài liệu đã tự động chốt đơn, trả lời thông tin chi tiết và phản hồi siêu tốc 24/7. Mình đã đóng gói toàn bộ quy trình và các file template chuẩn hóa này lại để bạn chỉ cần điền thông tin và copy dán vào Meta trong 30 phút là chạy được ngay.
             </p>
           </div>
 
           {/* Key Achievements */}
-          <div className="bg-[#1D9E75]/10 border border-[#1D9E75]/20 rounded-2xl p-6 mt-8">
-            <p className="text-[#3EE2A9] font-black text-sm mb-4">Lợi ích thực tế sau khi setup bộ file của mình:</p>
+          <div className="bg-[#1D9E75]/5 border border-[#1D9E75]/20 rounded-2xl p-6 mt-8">
+            <p className="text-[#1D9E75] font-black text-sm mb-4">Lợi ích thực tế sau khi setup bộ file của mình:</p>
             <div className="grid sm:grid-cols-3 gap-4">
               {[
                 { label: 'Tự động hóa', val: '80%', desc: 'câu hỏi thường gặp' },
                 { label: 'Phản hồi siêu tốc', val: '24/7', desc: 'tất cả các khung giờ' },
                 { label: 'Thời gian tiết kiệm', val: '2 Giờ', desc: 'mỗi ngày trực page' },
               ].map(({ label, val, desc }) => (
-                <div key={label} className="bg-white/[0.02] border border-white/[0.04] p-4 rounded-xl text-center">
-                  <span className="block text-2xl font-black text-[#3EE2A9] mb-1">{val}</span>
-                  <span className="block text-xs font-bold text-[#F6F0E4]/80">{label}</span>
-                  <span className="block text-[10px] text-[#F6F0E4]/40 mt-0.5">{desc}</span>
+                <div key={label} className="bg-white border border-[#DDD8CB] p-4 rounded-xl text-center">
+                  <span className="block text-2xl font-black text-[#1D9E75] mb-1">{val}</span>
+                  <span className="block text-xs font-bold text-[#0D2B1A]">{label}</span>
+                  <span className="block text-[10px] text-gray-400 mt-0.5">{desc}</span>
                 </div>
               ))}
             </div>
@@ -339,8 +332,8 @@ export default function MetaAIAgentPage() {
 
         {/* 6 Pre-built templates */}
         <div className="bg-white border border-[#DDD8CB] rounded-3xl p-6 md:p-8 shadow-sm">
-          <p className="text-xs font-bold uppercase tracking-wider text-[#1D9E75] mb-4 text-center sm:text-left">
-            🎯 Đã thiết kế sẵn Template ăn liền cho 6 ngành lớn:
+          <p className="text-xs font-bold uppercase tracking-wider text-[#1D9E75] mb-4 text-center sm:text-left flex items-center gap-1.5 justify-center sm:justify-start">
+            <CheckCircle2 size={14} /> Đã thiết kế sẵn Template ăn liền cho 6 ngành lớn:
           </p>
           <div className="flex flex-wrap gap-2.5 justify-center sm:justify-start">
             {['Thời trang / Phụ kiện', 'Mỹ phẩm / Skincare', 'Mẹ và Bé', 'Ẩm thực / F&B', 'Nội thất / Decor', 'Spa / Thẩm mỹ viện'].map(c => (
@@ -384,7 +377,7 @@ export default function MetaAIAgentPage() {
                 </div>
                 <div>
                   <p className="font-bold text-sm text-[#1D9E75] mb-1">{time}</p>
-                  <p className="text-xs sm:text-sm text-gray-650 leading-relaxed">{text}</p>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{text}</p>
                 </div>
               </div>
             ))}
@@ -392,7 +385,7 @@ export default function MetaAIAgentPage() {
 
           <div className="pt-8 border-t border-gray-100">
             <p className="text-xs sm:text-sm text-gray-500 mb-6">
-              Chỉ 30 phút setup hôm nay — Sở hữu trợ lý AI thông minh làm việc trọn đời.
+              Chỉ 30 phút setup hôm nay, sở hữu trợ lý AI làm việc trọn đời.
             </p>
             <button
               onClick={buy}
@@ -417,8 +410,8 @@ export default function MetaAIAgentPage() {
         {/* Side-by-side comparison */}
         <div className="grid sm:grid-cols-2 gap-6 mb-12">
           <div className="bg-red-500/[0.02] border border-red-500/10 rounded-3xl p-6 md:p-8">
-            <h3 className="text-red-650 font-extrabold text-base mb-5 flex items-center gap-2">
-              <XCircle size={18} className="text-red-550" /> Nếu tự trả lời tay
+            <h3 className="text-[#C0390E] font-extrabold text-base mb-5 flex items-center gap-2">
+              <XCircle size={18} className="text-[#C0390E]" /> Nếu tự trả lời tay
             </h3>
             <ul className="space-y-3.5 text-xs text-gray-600">
               <li className="flex gap-2.5 items-start">
@@ -474,7 +467,7 @@ export default function MetaAIAgentPage() {
             ].map(([title, val], idx) => (
               <div key={idx} className="px-6 py-4 flex justify-between text-xs sm:text-sm">
                 <span className="text-gray-700">{title}</span>
-                <span className="text-gray-405 line-through shrink-0 ml-4">{val}</span>
+                <span className="text-gray-400 line-through shrink-0 ml-4">{val}</span>
               </div>
             ))}
           </div>
@@ -496,14 +489,14 @@ export default function MetaAIAgentPage() {
           {/* CTA L4 */}
           <button
             onClick={buy}
-            className="w-full max-w-md bg-gradient-to-r from-[#1D9E75] to-[#15825F] hover:from-[#22B385] hover:to-[#1B9C73]
-                       active:scale-[0.98] text-white font-black py-4.5 px-8 rounded-2xl text-lg
-                       transition-all duration-300 shadow-xl shadow-emerald-950/60 cursor-pointer"
+            className="w-full max-w-md bg-[#1D9E75] hover:bg-[#178a64]
+                       active:scale-[0.98] text-white font-black py-4 px-8 rounded-2xl text-lg
+                       transition-all duration-300 shadow-xl shadow-[#1D9E75]/25 cursor-pointer"
           >
-            Đăng Ký Setup AI Ngay — 99.000đ →
+            Đăng Ký Setup AI Ngay · 99.000đ →
           </button>
-          <p className="text-[11px] text-gray-405 mt-4">
-            * Bảo bảo hoàn phí 100% trong 14 ngày · Thanh toán chuyển khoản QR tự động xác nhận sau 1 phút.
+          <p className="text-[11px] text-gray-400 mt-4">
+            Bảo hành hoàn phí 100% trong 14 ngày · Thanh toán chuyển khoản QR tự động xác nhận sau 1 phút.
           </p>
         </div>
       </section>
@@ -613,7 +606,7 @@ export default function MetaAIAgentPage() {
                 />
               </button>
               {openFaq === i && (
-                <div className="px-6 pb-6 text-xs sm:text-sm text-gray-650 leading-relaxed
+                <div className="px-6 pb-6 text-xs sm:text-sm text-gray-600 leading-relaxed
                                 border-t border-[#DDD8CB]/50 pt-4 bg-[#FAF7F2]">
                   {a}
                 </div>
@@ -641,7 +634,7 @@ export default function MetaAIAgentPage() {
               {
                 quote: 'Trước đây khách hỏi dồn dập trả lời không kịp cứ bị than phiền. Từ lúc bật AI Meta này lên, khách khen shop phản hồi nhanh thế, tỷ lệ chốt tăng rõ rệt.',
                 name: 'Anh Quốc Minh', role: 'Spa & Salon Tóc · Hà Nội',
-                initials: 'QM', bg: 'bg-amber-550/10 text-[#C0390E]'
+                initials: 'QM', bg: 'bg-[#C0390E]/10 text-[#C0390E]'
               },
             ].map(({ quote, name, role, initials, bg }) => (
               <div key={name} className="bg-[#FAF7F2] border border-[#DDD8CB]/50 rounded-2xl p-6 flex flex-col justify-between hover:border-[#1D9E75]/20 transition-colors">
@@ -666,7 +659,7 @@ export default function MetaAIAgentPage() {
             AI trực chiến trên page của bạn tối nay?
           </h2>
           <p className="text-gray-500 mb-10 leading-relaxed text-sm">
-            Chỉ với 30 phút thiết lập bằng tài liệu mẫu của mình, Fanpage của bạn sẽ tự động chăm sóc và chốt đơn 24/7. Bạn yên tâm đi ngủ — đơn hàng vẫn tự động về.
+            Chỉ với 30 phút thiết lập bằng tài liệu mẫu của mình, Fanpage của bạn sẽ tự động chăm sóc và chốt đơn 24/7. Bạn yên tâm đi ngủ, đơn hàng vẫn tự động về.
           </p>
           <button
             onClick={buy}
@@ -691,7 +684,7 @@ export default function MetaAIAgentPage() {
           <div className="text-center md:text-left">
             <h4 className="font-extrabold text-[#0D2B1A] text-base mb-1">Dũng Hoàng · Người đóng gói giải pháp</h4>
             <p className="text-xs text-[#1D9E75] font-semibold mb-4">Solopreneur & Trực Tiếp Vận Hành Homestay, Khóa Học Tự Động Hóa · Hơn 600+ Học Viên</p>
-            <p className="text-xs sm:text-sm text-gray-605 leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
               Mình không phải chuyên gia giảng dạy lý thuyết. Bản thân mình đang một mình vận hành toàn bộ hệ thống kinh doanh và mình triệt để ứng dụng AI giải phóng sức lao động tối đa. Bộ tài liệu setup AI này là công cụ mình đang sử dụng thực tế hàng ngày, được đóng gói chỉnh chu để bạn dùng được ngay mà không mất cả tháng trời mò mẫm thử sai.
             </p>
           </div>
@@ -735,21 +728,6 @@ export default function MetaAIAgentPage() {
           </button>
         </div>
       </div>
-
-      {/* ── Zalo Float Button ── */}
-      <a
-        href="https://zalo.me/0938725413"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat Zalo hỗ trợ"
-        className="fixed bottom-24 right-5 z-50 bg-[#0068FF] hover:bg-[#0057D9] hover:scale-110 active:scale-95
-                   text-white rounded-full w-12 h-12 flex items-center justify-center
-                   shadow-2xl transition-all duration-300 cursor-pointer"
-      >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
-        </svg>
-      </a>
 
       <CheckoutModal
         productId={product.id}
