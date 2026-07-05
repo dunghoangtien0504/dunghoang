@@ -4,6 +4,7 @@ import { getRecentPosts } from '@/lib/posts'
 import SiteNav from '@/components/SiteNav'
 import MetaPixel from '@/components/MetaPixel'
 import AffiliateTracker from '@/components/AffiliateTracker'
+import FloatingButtons from '@/components/FloatingButtons'
 
 export const metadata = {
   title: 'DungHoang.com — 24 AI Agent for Business',
@@ -294,6 +295,7 @@ export default function HomePage() {
         </div>
       </footer>
 
+      <FloatingButtons />
     </div>
   )
 }
