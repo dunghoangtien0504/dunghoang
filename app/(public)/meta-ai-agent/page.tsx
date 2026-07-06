@@ -292,30 +292,30 @@ export default function MetaAIAgentPage() {
       <section id="deliver" data-animate className={`max-w-4xl mx-auto px-5 py-20 border-t border-[#DDD8CB] ${animClass('deliver')}`}>
         <h2 className="text-3xl font-black text-center mb-3 tracking-tight text-[#0D2B1A]">Chi tiết gói giải pháp bạn nhận được</h2>
         <p className="text-center text-gray-500 mb-14 text-sm max-w-md mx-auto">
-          Bộ 4 tài liệu chuyên sâu được tối ưu để huấn luyện trí tuệ nhân tạo của Meta hoạt động trơn tru.
+          1 skill AI soạn nội dung + 4 Control chuẩn của Meta Business Agent (Knowledge, Personality, Audience, Handover) để AI hoạt động trơn tru.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-6 mb-8">
           {[
             {
               num: '01',
-              name: 'Tài liệu Business Info',
-              desc: 'Dạy cho AI thấu hiểu rõ về thương hiệu, danh mục sản phẩm, bảng giá và toàn bộ quy trình thanh toán/vận chuyển của shop.',
+              name: 'Skill AI soạn nội dung (file cài Claude/ChatGPT)',
+              desc: 'Chat với AI, trả lời vài câu hỏi về shop — AI tự soạn sẵn nội dung cho cả 4 Control bên dưới, không cần tự nghĩ câu chữ.',
             },
             {
               num: '02',
-              name: 'Tài liệu Custom Instructions',
-              desc: 'Định hình giọng văn, thái độ phản hồi (thân thiện, chuyên nghiệp) để AI giao tiếp tự nhiên giống như một nhân viên sales thực thụ.',
+              name: 'Control Knowledge — Kiến thức về shop',
+              desc: 'Dạy cho AI thấu hiểu rõ về thương hiệu, danh mục sản phẩm, bảng giá và toàn bộ quy trình thanh toán/vận chuyển của shop.',
             },
             {
               num: '03',
-              name: 'Tài liệu Avoid Topics',
-              desc: 'Danh sách các chủ đề nhạy cảm hoặc câu hỏi AI tuyệt đối không tự trả lời bừa (ví dụ: mặc cả giá, khiếu nại chất lượng) để chuyển cho bạn xử lý.',
+              name: 'Control Personality — Giọng nói thương hiệu',
+              desc: 'Định hình giọng văn, thái độ phản hồi (thân thiện, chuyên nghiệp) để AI giao tiếp tự nhiên giống như một nhân viên sales thực thụ.',
             },
             {
               num: '04',
-              name: 'Bộ 20+ Test Cases mẫu',
-              desc: 'Bộ câu hỏi test nhanh giúp bạn kiểm tra và đo lường độ chính xác của AI trên nhiều tình huống trước khi chính thức bấm nút kích hoạt.',
+              name: 'Control Handover — Chủ đề cần chuyển giao',
+              desc: 'Danh sách các chủ đề nhạy cảm hoặc câu hỏi AI tuyệt đối không tự trả lời bừa (ví dụ: mặc cả giá, khiếu nại chất lượng) để chuyển cho bạn xử lý.',
             },
           ].map(({ num, name, desc }) => (
             <div key={num} className="bg-white border border-[#DDD8CB] hover:border-[#1D9E75]/35 shadow-sm rounded-3xl p-6 transition-all duration-300">
@@ -458,10 +458,10 @@ export default function MetaAIAgentPage() {
           </div>
           <div className="divide-y divide-[#DDD8CB]">
             {[
-              ['Mẫu Business Info chuẩn hóa theo ngành', '200.000đ'],
-              ['Mẫu Custom Instructions định hình phong cách sales', '300.000đ'],
-              ['Mẫu Avoid Topics hạn chế AI lỗi thông tin', '150.000đ'],
-              ['Bộ câu hỏi kiểm tra độ nhạy AI (20+ Test Cases)', '150.000đ'],
+              ['Skill AI soạn nội dung 4 Control (file cài Claude/ChatGPT)', '300.000đ'],
+              ['Control Knowledge chuẩn hóa theo ngành', '200.000đ'],
+              ['Control Personality định hình phong cách sales', '150.000đ'],
+              ['Control Handover hạn chế AI trả lời bừa', '150.000đ'],
               ['Video & tài liệu hướng dẫn dán từng bước trực quan', '100.000đ'],
               ['Đặc quyền hỗ trợ 1-1 qua Telegram nếu kẹt', '200.000đ'],
             ].map(([title, val], idx) => (
@@ -576,11 +576,11 @@ export default function MetaAIAgentPage() {
             },
             {
               q: 'Meta AI Agent này có mất phí duy trì hàng tháng không?',
-              a: 'Không. Tính năng Meta AI được tích hợp sẵn miễn phí 100% bên trong Meta Business Suite của Facebook. Bạn chỉ cần trả phí 99.000đ cho gói tài liệu huấn luyện này một lần duy nhất để dùng trọn đời.',
+              a: 'Không, tính năng này (Meta gọi chính thức là Meta Business Agent, ra mắt toàn cầu 6/2026) hiện đang miễn phí 100% bên trong Meta Business Suite. Bạn chỉ trả 99.000đ một lần cho bộ tài liệu và skill hướng dẫn để cấu hình đúng cách. Riêng phần miễn phí từ Meta, họ có nói sẽ ra thêm gói trả phí sau — cứ dùng ngay khi còn miễn phí.',
             },
             {
               q: 'Có setup được cho Instagram và WhatsApp Business không?',
-              a: 'Hiện tại tài liệu này được tối ưu và thiết kế chuyên sâu nhất cho Messenger Fanpage. Gói hướng dẫn cho Instagram DM và WhatsApp sẽ được cập nhật miễn phí cho bạn ở các phiên bản sau.',
+              a: 'Có. Từ bản Meta Business Agent chính thức (6/2026), Meta đã mở luôn cho cả Messenger, Instagram DM và WhatsApp Business, quản lý tập trung ngay trong Meta Business Suite. Tài liệu và skill trong khóa áp dụng được cho cả 3 kênh.',
             },
             {
               q: 'Trường hợp làm theo tài liệu nhưng AI vẫn bị kẹt thì sao?',
