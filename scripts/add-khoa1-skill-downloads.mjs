@@ -35,6 +35,10 @@ const SKILL_FILES = {
   '19': 'marketing-pro.zip',
   '20': 'instagram-carousel.zip',
   '22': 'agent-meta-business-ai.zip',
+  '26': 'Agent-AOE-Web.zip',
+  '27': 'Agent-Sales-B2B.zip',
+  '28': 'Agent-image-prompt.zip',
+  '29': 'Agent-experience-customer.zip',
 }
 
 // Skill 21 (Tiêu Đề Thu Hút) không có file riêng — kỹ thuật này nằm trong skill Ad Copy Machine
