@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from 'react'
 import {
   CheckCircle2, XCircle, ChevronDown, MessageCircle,
-  Shield, Clock, Zap, Users, ArrowRight, BookOpen, Star, AlertCircle, HelpCircle
+  Shield, Clock, Zap, Users, ArrowRight, BookOpen, Star, AlertCircle, HelpCircle,
+  ArrowLeftRight, Heart, Tag
 } from 'lucide-react'
 import { PRODUCTS } from '@/lib/products'
 import CheckoutModal from '@/components/checkout/CheckoutModal'
@@ -247,6 +248,71 @@ export default function MetaAIAgentPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* ── [4.5] Real Screenshot Proof — chat thật từ chính homestay của Dũng ── */}
+      <section id="proof" data-animate className={`max-w-5xl mx-auto px-5 py-16 ${animClass('proof')}`}>
+        <p className="text-[#1D9E75] text-xs font-bold uppercase tracking-widest text-center mb-3">
+          KHÔNG PHẢI DEMO — ĐÂY LÀ CHAT THẬT
+        </p>
+        <h2 className="text-2xl md:text-3xl font-black text-center mb-3 tracking-tight text-[#0D2B1A]">
+          Ảnh chụp trực tiếp từ Fanpage Ta Thong Dong Homestay của mình
+        </h2>
+        <p className="text-center text-gray-500 mb-10 text-sm max-w-lg mx-auto">
+          Không dàn dựng, không voice-over. Đây là đúng những đoạn hội thoại AI đã tự xử lý cho khách trên chính Fanpage mình đang vận hành mỗi ngày.
+        </p>
+
+        <div className="grid sm:grid-cols-2 gap-6">
+          {[
+            {
+              src: '/images/meta-ai-agent/proof-1-greeting.jpg',
+              icon: Zap,
+              title: 'Trả lời tức thì ngay khi khách bấm quảng cáo',
+              desc: 'Khách vừa nhắn từ quảng cáo, AI đã chào và gửi ngay địa chỉ + vị trí — không để khách chờ dù chỉ 1 phút.',
+            },
+            {
+              src: '/images/meta-ai-agent/proof-2-pricing.jpg',
+              icon: Tag,
+              title: 'Báo giá chi tiết chính xác theo từng đêm',
+              desc: 'Khách hỏi giá 3 đêm, AI tự tính đúng bảng giá theo ngày thường/cuối tuần, cộng tổng, liệt kê cả phòng trống — không bịa số.',
+            },
+            {
+              src: '/images/meta-ai-agent/proof-3-empathy.jpg',
+              icon: Heart,
+              title: 'Xử lý từ chối khéo léo, không mất thiện cảm',
+              desc: 'Khách thấy xa nên còn cân nhắc, AI không nài ép mà khéo léo nêu lại lợi thế rồi để khách tự quyết — giữ cửa cho lần sau.',
+            },
+            {
+              src: '/images/meta-ai-agent/proof-4-handover.jpg',
+              icon: ArrowLeftRight,
+              title: 'Tự biết lúc nào cần chuyển cho người thật',
+              desc: 'Ngay dòng cuối: "AI agent đã chuyển đoạn chat này cho bạn vì khách đã sẵn sàng mua" — đúng chức năng Handover Control, AI không tự ý chốt đơn thay bạn.',
+            },
+          ].map((item, i) => {
+            const Icon = item.icon
+            return (
+              <div key={i} className="bg-white border border-[#DDD8CB] rounded-3xl overflow-hidden shadow-sm hover:border-[#1D9E75]/35 transition-all duration-300">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={item.src} alt={item.title} className="w-full h-64 object-cover object-top border-b border-[#DDD8CB]" />
+                <div className="p-5">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-xl bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon className="w-4 h-4 text-[#1D9E75]" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-sm text-[#0D2B1A] leading-snug">{item.title}</h3>
+                      <p className="text-xs text-gray-500 mt-1.5 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        <p className="text-center text-[11px] text-gray-400 mt-6 italic">
+          Đã che thông tin cá nhân của khách hàng để bảo mật danh tính. Nội dung hội thoại giữ nguyên gốc.
+        </p>
       </section>
 
       {/* ── [5] How It Works ── */}
