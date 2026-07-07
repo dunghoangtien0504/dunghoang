@@ -13,13 +13,24 @@ export async function GET(req: NextRequest) {
 
   const cleanEmail = decodeURIComponent(email).toLowerCase().trim()
 
-  const { error } = await supabaseAdmin
+  const { data: subRow, error } = await supabaseAdmin
     .from('subscribers')
-    .update({ status: 'unsubscribed', unsubscribed_at: new Date().toISOString() })
+    .select('id')
     .eq('email', cleanEmail)
+    .maybeSingle()
 
   if (error) {
     console.error('[unsubscribe]', error)
+  }
+
+  if (subRow?.id) {
+    await supabaseAdmin.rpc('append_tag', { subscriber_id: subRow.id, tag: 'unsubscribed' })
+
+    await supabaseAdmin
+      .from('email_sequences')
+      .update({ status: 'unsubscribed' })
+      .eq('subscriber_id', subRow.id)
+      .eq('status', 'active')
   }
 
   return new NextResponse(

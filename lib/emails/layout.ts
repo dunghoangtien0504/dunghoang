@@ -1,5 +1,10 @@
 // Layout HTML chung cho tất cả email
-export function emailLayout(content: string): string {
+// unsubscribeEmail: nếu truyền vào, link "Huỷ nhận email" trỏ thật tới /api/unsubscribe.
+// Không truyền → giữ hành vi cũ (href="#") để không phá vỡ các chuỗi email đang dùng layout này.
+export function emailLayout(content: string, unsubscribeEmail?: string): string {
+  const unsubHref = unsubscribeEmail
+    ? `https://dunghoang.com/api/unsubscribe?email=${encodeURIComponent(unsubscribeEmail)}`
+    : '#'
   return `<!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -34,7 +39,7 @@ export function emailLayout(content: string): string {
     <hr class="divider" />
     <div class="footer">
       Email này gửi tự động vì bạn đã đăng ký Thử Thách 7 Ngày AI Viết Bài.<br/>
-      <a href="#">Huỷ nhận email</a>
+      <a href="${unsubHref}">Huỷ nhận email</a>
     </div>
   </div>
 </div>

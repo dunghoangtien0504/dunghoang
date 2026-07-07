@@ -188,6 +188,38 @@ export async function POST(req: NextRequest) {
         await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
       }
 
+      // Chuỗi chăm sóc chéo "cross_sell_nurture" — chạy cho MỌI khách hàng,
+      // bất kể mua khóa nào. Đảm bảo subscriber tồn tại rồi khởi động chuỗi
+      // nếu chưa có (khách mua khóa thứ 2 trở đi không bị tạo trùng chuỗi).
+      const { data: nurtureSubRow } = await supabaseAdmin
+        .from('subscribers')
+        .upsert({ email: email.toLowerCase(), name }, { onConflict: 'email' })
+        .select('id')
+        .single()
+
+      const nurtureSubscriberId = nurtureSubRow?.id ?? order.subscriber_id
+      if (nurtureSubscriberId) {
+        const { data: existingNurture } = await supabaseAdmin
+          .from('email_sequences')
+          .select('id')
+          .eq('subscriber_id', nurtureSubscriberId)
+          .eq('sequence_name', 'cross_sell_nurture')
+          .eq('status', 'active')
+          .maybeSingle()
+
+        if (!existingNurture) {
+          const enrolledAt = new Date().toISOString()
+          await supabaseAdmin.from('email_sequences').insert({
+            subscriber_id: nurtureSubscriberId,
+            sequence_name: 'cross_sell_nurture',
+            current_day:   0,           // Email đầu tiên của chuỗi bắn sau 2 ngày qua cron
+            status:        'active',
+            started_at:    enrolledAt,
+            last_sent_at:  enrolledAt,
+          })
+        }
+      }
+
       // Tag subscriber "đã mua"
       if (order.subscriber_id) {
         const tag = `da_mua_${order.course_id}`
