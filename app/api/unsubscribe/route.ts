@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
+import { escapeHtml } from '@/lib/sanitize'
 
 export async function GET(req: NextRequest) {
   const email = req.nextUrl.searchParams.get('email')
@@ -24,7 +25,7 @@ export async function GET(req: NextRequest) {
   return new NextResponse(
     html(
       'Đã hủy đăng ký',
-      `Email <strong>${cleanEmail}</strong> đã được xóa khỏi danh sách. Bạn sẽ không nhận thêm email từ mình nữa.`
+      `Email <strong>${escapeHtml(cleanEmail)}</strong> đã được xóa khỏi danh sách. Bạn sẽ không nhận thêm email từ mình nữa.`
     ),
     { headers: { 'Content-Type': 'text/html; charset=utf-8' } }
   )

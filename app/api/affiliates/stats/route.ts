@@ -1,24 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
+import { verifyAffiliateToken } from '@/lib/affiliate-token'
+import { rateLimit, clientIp } from '@/lib/rate-limit'
 
 export async function GET(req: NextRequest) {
-  const code = req.nextUrl.searchParams.get('code')?.toUpperCase()
-  const email = req.nextUrl.searchParams.get('email')?.toLowerCase()
-  if (!code && !email) {
-    return NextResponse.json({ error: 'Thiếu mã CTV hoặc email' }, { status: 400 })
+  // Rate limit: chống dò token
+  const rl = rateLimit(`aff-stats:${clientIp(req)}`, 30, 60_000)
+  if (!rl.ok) {
+    return NextResponse.json({ error: 'Thử lại sau ít giây' }, { status: 429, headers: { 'Retry-After': String(rl.retryAfter) } })
   }
 
-  let query = supabaseAdmin
+  // Bắt buộc token có chữ ký — KHÔNG cho tra cứu bằng ref_code/email đoán được nữa
+  const token = req.nextUrl.searchParams.get('token')
+  if (!token) {
+    return NextResponse.json({ error: 'Thiếu token truy cập. Dùng đúng link trong email CTV của bạn.' }, { status: 401 })
+  }
+
+  const code = await verifyAffiliateToken(token)
+  if (!code) {
+    return NextResponse.json({ error: 'Token không hợp lệ hoặc đã hết hạn.' }, { status: 401 })
+  }
+
+  const { data: aff, error } = await supabaseAdmin
     .from('affiliates')
     .select('id, name, ref_code, commission_pct, total_referrals, total_revenue, total_commission, pending_commission, paid_commission, status, joined_at')
-
-  if (code) {
-    query = query.eq('ref_code', code)
-  } else if (email) {
-    query = query.eq('email', email)
-  }
-
-  const { data: aff, error } = await query.single()
+    .eq('ref_code', code)
+    .single()
 
   if (error || !aff) {
     return NextResponse.json({ error: 'Không tìm thấy tài khoản CTV' }, { status: 404 })

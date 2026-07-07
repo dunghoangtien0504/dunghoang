@@ -1,9 +1,19 @@
 import { NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 import { createToken } from '@/lib/auth-token'
+import { rateLimit, clientIp } from '@/lib/rate-limit'
 
 export async function POST(request: Request) {
   try {
+    // Chống brute-force: tối đa 5 lần thử / 5 phút / IP
+    const rl = rateLimit(`admin-login:${clientIp(request)}`, 5, 5 * 60_000)
+    if (!rl.ok) {
+      return NextResponse.json(
+        { success: false, error: `Bạn thử quá nhiều lần. Đợi ${rl.retryAfter} giây rồi thử lại.` },
+        { status: 429, headers: { 'Retry-After': String(rl.retryAfter) } }
+      )
+    }
+
     const { username, password } = await request.json()
 
     const expectedUsername = process.env.ADMIN_USERNAME

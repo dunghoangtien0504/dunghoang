@@ -45,8 +45,8 @@ function CopyBtn({ value }: { value: string }) {
 }
 
 // ── Payout modal ──────────────────────────────────────────────────────────────
-function PayoutModal({ code, pending, onClose, onDone }: {
-  code: string; pending: number; onClose: () => void; onDone: () => void
+function PayoutModal({ token, pending, onClose, onDone }: {
+  token: string; pending: number; onClose: () => void; onDone: () => void
 }) {
   const [bank_name,    setBankName]    = useState('')
   const [bank_account, setBankAccount] = useState('')
@@ -62,7 +62,7 @@ function PayoutModal({ code, pending, onClose, onDone }: {
     try {
       const res  = await fetch('/api/affiliates/payout', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code, bank_name: bank_name.trim(), bank_account: bank_account.trim() }),
+        body: JSON.stringify({ token, bank_name: bank_name.trim(), bank_account: bank_account.trim() }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error)
@@ -137,7 +137,7 @@ function PayoutModal({ code, pending, onClose, onDone }: {
 function Dashboard() {
   const params  = useSearchParams()
   const router  = useRouter()
-  const code    = params.get('code')?.toUpperCase() ?? ''
+  const token   = params.get('token') ?? ''
 
   const [aff,     setAff]     = useState<Affiliate | null>(null)
   const [orders,  setOrders]  = useState<Order[]>([])
@@ -149,9 +149,9 @@ function Dashboard() {
   const SITE = typeof window !== 'undefined' ? window.location.origin : 'https://dunghoang.com'
 
   async function fetchStats() {
-    if (!code) { setErr('Không có mã CTV trong URL.'); setLoading(false); return }
+    if (!token) { setErr('Link không hợp lệ. Dùng đúng link trong email CTV của bạn.'); setLoading(false); return }
     try {
-      const res  = await fetch(`/api/affiliates/stats?code=${code}`)
+      const res  = await fetch(`/api/affiliates/stats?token=${encodeURIComponent(token)}`)
       const data = await res.json()
       if (!res.ok) throw new Error(data.error)
       setAff(data.affiliate); setOrders(data.orders); setPayouts(data.payouts)
@@ -160,7 +160,7 @@ function Dashboard() {
     } finally { setLoading(false) }
   }
 
-  useEffect(() => { fetchStats() }, [code]) // eslint-disable-line
+  useEffect(() => { fetchStats() }, [token]) // eslint-disable-line
 
   if (loading) return (
     <div className="flex items-center justify-center py-32">
@@ -301,7 +301,7 @@ function Dashboard() {
 
       {showPayout && (
         <PayoutModal
-          code={aff.ref_code}
+          token={token}
           pending={aff.pending_commission}
           onClose={() => setShowPayout(false)}
           onDone={fetchStats}

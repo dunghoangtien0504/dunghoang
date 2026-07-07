@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
 import { sendEmail } from '@/lib/resend'
+import { createAffiliateToken } from '@/lib/affiliate-token'
+import { escapeHtml } from '@/lib/sanitize'
+import { rateLimit, clientIp } from '@/lib/rate-limit'
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dunghoang.com'
 
@@ -16,6 +19,12 @@ function genRefCode(name: string): string {
 
 export async function POST(req: NextRequest) {
   try {
+    // Rate limit: chống spam đăng ký CTV
+    const rl = rateLimit(`aff-register:${clientIp(req)}`, 5, 60 * 60_000)
+    if (!rl.ok) {
+      return NextResponse.json({ error: `Thử lại sau ${rl.retryAfter} giây` }, { status: 429, headers: { 'Retry-After': String(rl.retryAfter) } })
+    }
+
     const { name, email, note } = await req.json()
     if (!name?.trim() || !email?.trim()) {
       return NextResponse.json({ error: 'Thiếu tên hoặc email' }, { status: 400 })
@@ -32,7 +41,8 @@ export async function POST(req: NextRequest) {
       .single()
 
     if (existing) {
-      const dashUrl = `${SITE}/cong-tac-vien/bao-cao?code=${existing.ref_code}`
+      const token   = await createAffiliateToken(existing.ref_code)
+      const dashUrl = `${SITE}/cong-tac-vien/bao-cao?token=${token}`
       return NextResponse.json({ ok: true, ref_code: existing.ref_code, dashboard_url: dashUrl, existing: true })
     }
 
@@ -60,7 +70,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Không tạo được tài khoản' }, { status: 500 })
     }
 
-    const dashUrl = `${SITE}/cong-tac-vien/bao-cao?code=${aff.ref_code}`
+    const token   = await createAffiliateToken(aff.ref_code)
+    const dashUrl = `${SITE}/cong-tac-vien/bao-cao?token=${token}`
 
     // Gửi email chào mừng kèm link dashboard
     await sendEmail({
@@ -72,7 +83,7 @@ export async function POST(req: NextRequest) {
             <span style="color:#F6F0E4;font-weight:900;font-size:14px;font-family:monospace;">DH · Cộng Tác Viên</span>
           </div>
           <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #DDD8CB;">
-            <p style="margin:0 0 12px;">Chào ${cleanName},</p>
+            <p style="margin:0 0 12px;">Chào ${escapeHtml(cleanName)},</p>
             <p style="margin:0 0 16px;">Mình đã tạo tài khoản cộng tác viên cho bạn rồi. Đây là thông tin của bạn:</p>
 
             <div style="background:#EAF5EF;border-radius:12px;padding:16px 20px;margin:0 0 20px;">

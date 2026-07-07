@@ -1,9 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { supabaseAdmin } from '@/lib/supabase-admin'
+import { rateLimit, clientIp } from '@/lib/rate-limit'
 
 export async function POST(req: NextRequest) {
   try {
+    // Chống spam đăng ký tài khoản: 10 lần / giờ / IP
+    const rl = rateLimit(`auth-register:${clientIp(req)}`, 10, 60 * 60_000)
+    if (!rl.ok) {
+      return NextResponse.json({ error: `Bạn thao tác quá nhiều. Thử lại sau ${rl.retryAfter} giây.` }, { status: 429, headers: { 'Retry-After': String(rl.retryAfter) } })
+    }
+
     const { name, email, password } = await req.json()
 
     if (!name?.trim() || !email?.trim() || !password?.trim()) {

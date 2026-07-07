@@ -1,9 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
 import { PRODUCTS, genOrderCode, vietQRUrl } from '@/lib/products'
+import { rateLimit, clientIp } from '@/lib/rate-limit'
 
 export async function POST(req: NextRequest) {
   try {
+    // Chống spam tạo đơn: 20 đơn / 10 phút / IP (đủ cho người mua thật, chặn bot)
+    const rl = rateLimit(`orders-create:${clientIp(req)}`, 20, 10 * 60_000)
+    if (!rl.ok) {
+      return NextResponse.json({ error: `Thử lại sau ${rl.retryAfter} giây` }, { status: 429, headers: { 'Retry-After': String(rl.retryAfter) } })
+    }
+
     const { productId, name, email, refCode } = await req.json()
 
     if (!productId || !name?.trim() || !email?.trim()) {

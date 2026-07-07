@@ -1,8 +1,15 @@
 import { NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
+import { rateLimit, clientIp } from '@/lib/rate-limit'
 
 export async function POST(req: Request) {
   try {
+    // Chống bơm page_views: 60 lượt / phút / IP (thoải mái cho người duyệt thật)
+    const rl = rateLimit(`track:${clientIp(req)}`, 60, 60_000)
+    if (!rl.ok) {
+      return NextResponse.json({ ok: false }, { status: 429 })
+    }
+
     const body = await req.json()
     const { path, referrer, device, sessionId } = body ?? {}
 
