@@ -76,12 +76,14 @@ export default function CheckoutModal({ productId, open, onClose, prefillEmail =
           // Đã đăng nhập → prefill từ user metadata
           setName(user.user_metadata?.name || prefillName)
           setEmail(user.email || prefillEmail)
-          setStep('form')
-        } else {
-          setStep('register')
         }
+        // Guest checkout: KHÔNG bắt tạo tài khoản trước.
+        // Khách điền tên + email là mua được ngay. Tài khoản khu học được
+        // tạo tự động khi thanh toán thành công (webhook Sepay), kèm link
+        // truy cập 1 chạm gửi qua email.
+        setStep('form')
       } catch {
-        setStep('register')
+        setStep('form')
       }
     }
     checkAuth()
@@ -320,7 +322,7 @@ export default function CheckoutModal({ productId, open, onClose, prefillEmail =
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="bg-[#EAF5EF] border border-[#2D7A4F]/20 rounded-2xl p-4 text-sm text-[#3D6B4A] leading-relaxed">
                 Điền tên + email, mình tạo mã đơn riêng cho bạn. Sau khi chuyển khoản đúng mã,
-                hệ thống tự kích hoạt trong 1–2 phút.
+                hệ thống tự kích hoạt và gửi link vào khu học trong 1–2 phút. Không cần tạo tài khoản trước.
               </div>
 
               <div className="space-y-3">
@@ -435,8 +437,9 @@ export default function CheckoutModal({ productId, open, onClose, prefillEmail =
               <div className="space-y-1">
                 <p className="font-bold text-[#0D2B1A] text-lg">Nhận được tiền rồi ^^</p>
                 <p className="text-[#3D6B4A] text-sm leading-relaxed">
-                  Mình vừa gửi email kích hoạt khoá học về <strong>{email}</strong>.
-                  Kiểm tra inbox (và thư mục spam) nha.
+                  Mình vừa gửi email về <strong>{email}</strong> — trong đó có
+                  <strong> link 1 chạm vào thẳng khu học</strong> (không cần nhớ mật khẩu).
+                  Kiểm tra inbox và cả thư mục spam nha.
                 </p>
               </div>
               <div className="bg-[#FAF7F2] border border-[#DDD8CB] rounded-xl p-4 text-sm text-[#7A8C7E]">

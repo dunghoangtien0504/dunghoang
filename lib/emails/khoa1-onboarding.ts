@@ -11,7 +11,8 @@ function k1Layout(content: string): string {
 type EmailContent = { subject: string; html: string }
 
 // ─── EMAIL 1 — Gửi ngay sau thanh toán (Ngày 0) ─────────────────────
-export function getKhoa1EmailDay1(name: string): EmailContent {
+export function getKhoa1EmailDay1(name: string, accessUrl?: string): EmailContent {
+  const portalLink = accessUrl || 'https://dunghoang.com/portal'
   const subject = `${name} ơi — đơn của bạn xác nhận rồi, đây là bước tiếp theo`
   const html = k1Layout(`
 <div class="day-badge">Khóa 1 · 24 AI Agent for Business · Chào mừng</div>
@@ -21,13 +22,13 @@ export function getKhoa1EmailDay1(name: string): EmailContent {
 
 <p>868.686đ không phải số tiền nhỏ với một người đang tự làm mọi thứ một mình. Mình biết điều đó. Cảm ơn bạn đã tin.</p>
 
-<p>Đây là link khu học của bạn:</p>
+<p>Bấm nút dưới để vào thẳng khu học — lần đầu đặt mật khẩu 1 lần là xong:</p>
 
 <div class="cta-block">
-  <a href="https://dunghoang.com/portal" class="cta-btn">Vào Khu Học Ngay →</a>
+  <a href="${portalLink}" class="cta-btn">Vào Khu Học Ngay →</a>
 </div>
 
-<p>Đăng nhập bằng email này. Nếu quên mật khẩu, bấm "Quên mật khẩu" là hệ thống gửi về ngay.</p>
+<p>Sau đó bạn đăng nhập bằng chính email này bất cứ lúc nào.</p>
 
 <hr class="divider" />
 

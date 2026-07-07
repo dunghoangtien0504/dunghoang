@@ -1,6 +1,7 @@
 import { emailLayout } from './layout'
 
-export function getMetaAIAgentWelcome(name: string): { subject: string; html: string } {
+export function getMetaAIAgentWelcome(name: string, accessUrl?: string): { subject: string; html: string } {
+  const portalLink = accessUrl || 'https://dunghoang.com/portal/meta-ai-agent'
   const subject = `${name} ơi — tài liệu Setup Meta AI Agent của bạn đây`
   const html = emailLayout(`
 <div class="day-badge">Setup Meta AI Agent · 99.000đ · Xác nhận đơn thành công</div>
@@ -11,10 +12,10 @@ export function getMetaAIAgentWelcome(name: string): { subject: string; html: st
 <p>Bây giờ bạn vào khu học để làm theo từng bước. Mình đã chuẩn bị sẵn 5 bài hướng dẫn — từ chuẩn bị thông tin shop, điền template, đến paste vào Meta và test AI trước khi bật cho khách.</p>
 
 <div class="cta-block">
-  <a href="https://dunghoang.com/portal/meta-ai-agent" class="cta-btn">Vào Khu Học Ngay →</a>
+  <a href="${portalLink}" class="cta-btn">Vào Khu Học Ngay →</a>
 </div>
 
-<p>Đăng nhập bằng email này. Nếu lần đầu vào, bấm <strong>"Quên mật khẩu"</strong> để tạo mật khẩu mới — hệ thống gửi link về email ngay.</p>
+<p>Bấm nút trên là vào thẳng — lần đầu bạn chỉ cần đặt mật khẩu 1 lần, sau đó đăng nhập bằng email này bất cứ lúc nào.</p>
 
 <hr class="divider" />
 

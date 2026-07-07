@@ -136,15 +136,31 @@ export async function POST(req: NextRequest) {
         }
       }
 
+      // Guest checkout: tạo link 1 chạm vào khu học. Khách mua không cần
+      // tài khoản trước; link recovery cho họ đặt mật khẩu lần đầu rồi vào thẳng.
+      // Bọc try/catch để không bao giờ làm hỏng xác nhận thanh toán.
+      const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dunghoang.com'
+      let accessUrl: string | undefined
+      try {
+        const { data: linkData } = await supabaseAdmin.auth.admin.generateLink({
+          type:    'recovery',
+          email,
+          options: { redirectTo: `${SITE_URL}/portal/dat-lai-mat-khau` },
+        })
+        accessUrl = linkData?.properties?.action_link ?? undefined
+      } catch (e) {
+        console.error('[sepay] generateLink lỗi:', e)
+      }
+
       if (order.course_id === 'meta-ai-agent') {
-        const welcome = getMetaAIAgentWelcome(name)
+        const welcome = getMetaAIAgentWelcome(name, accessUrl)
         await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
       } else if (order.course_id === 'landing-page') {
-        const welcome = getLandingEmailDay1(name)
+        const welcome = getLandingEmailDay1(name, accessUrl)
         await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
       } else if (order.course_id === 'khoa-1' || order.course_id === 'khoa1_686') {
         // Khóa 1 → dùng email onboarding riêng + khởi động chuỗi chăm sóc
-        const welcome = getKhoa1EmailDay1(name)
+        const welcome = getKhoa1EmailDay1(name, accessUrl)
         await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
 
         // Đảm bảo subscriber tồn tại để gắn vào email_sequences
@@ -168,7 +184,7 @@ export async function POST(req: NextRequest) {
         }
       } else {
         // Các khóa khác: email welcome chung
-        const welcome = getWelcomeEmail(name, order.course_id, order.course_name)
+        const welcome = getWelcomeEmail(name, order.course_id, order.course_name, accessUrl)
         await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
       }
 

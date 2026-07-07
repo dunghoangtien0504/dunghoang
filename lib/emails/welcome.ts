@@ -10,17 +10,18 @@ const COURSE_INFO: Record<string, { name: string; drive_link: string; telegram_l
   '1kem1':      { name: '1 Kèm 1 — Dũng Cầm Tay Chỉ Việc',     drive_link: 'https://dunghoang.com/portal', telegram_link: 'https://t.me/KentHoang' },
 }
 
-export function getWelcomeEmail(name: string, courseId: string, courseName?: string): { subject: string; html: string } {
+export function getWelcomeEmail(name: string, courseId: string, courseName?: string, accessUrl?: string): { subject: string; html: string } {
   const info = COURSE_INFO[courseId] || COURSE_INFO['khoa1_686']
   const displayName = courseName || info.name
+  const portalLink = accessUrl || info.drive_link
 
   const subject = `Cảm ơn ${name} - Link khu học của bạn đây`
   const html = emailLayout(`
 <h1 class="subject-line">Mình nhận được thanh toán rồi nhaaa ${name} ^^</h1>
 <p>Cảm ơn bạn đã tin tưởng đăng ký <strong>${displayName}</strong>.</p>
-<p>Đây là link vào khu học của bạn:</p>
+<p>Bấm nút dưới để vào thẳng khu học — lần đầu bạn đặt mật khẩu 1 lần, sau đó vào lại bất cứ lúc nào:</p>
 <div class="cta-block">
-  <a class="cta-btn" href="${info.drive_link}">Vào khu học ngay</a>
+  <a class="cta-btn" href="${portalLink}">Vào khu học ngay</a>
 </div>
 <p>Và đây là link nhóm Telegram để hỏi Tiểu Hà Mã khi kẹt bất cứ lúc nào:</p>
 <div class="cta-block">

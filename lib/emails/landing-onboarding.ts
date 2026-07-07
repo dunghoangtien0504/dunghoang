@@ -7,7 +7,8 @@ function lpLayout(content: string): string {
   )
 }
 
-export function getLandingEmailDay1(name: string): { subject: string; html: string } {
+export function getLandingEmailDay1(name: string, accessUrl?: string): { subject: string; html: string } {
+  const portalLink = accessUrl || 'https://dunghoang.com/portal'
   const subject = `${name} ơi — đơn xác nhận rồi, đây là bước tiếp theo`
   const html = lpLayout(`
 <div class="day-badge">Khóa Landing Page · Tạo Landing Page Chuyển Đổi Cao · Chào mừng</div>
@@ -15,15 +16,15 @@ export function getLandingEmailDay1(name: string): { subject: string; html: stri
 
 <p>Mình vừa thấy đơn của bạn được xác nhận.</p>
 
-<p>1.868.000đ không phải số tiền nhỏ với người đang tự làm mọi thứ một mình. Mình hiểu điều đó. Cảm ơn bạn đã tin.</p>
+<p>686.868đ không phải số tiền nhỏ với người đang tự làm mọi thứ một mình. Mình hiểu điều đó. Cảm ơn bạn đã tin.</p>
 
-<p>Đây là link khu học của bạn:</p>
+<p>Bấm nút dưới để vào thẳng khu học — lần đầu đặt mật khẩu 1 lần là xong:</p>
 
 <div class="cta-block">
-  <a href="https://dunghoang.com/portal" class="cta-btn">Vào Khu Học Ngay →</a>
+  <a href="${portalLink}" class="cta-btn">Vào Khu Học Ngay →</a>
 </div>
 
-<p>Đăng nhập bằng email này. Nếu quên mật khẩu, bấm "Quên mật khẩu" là hệ thống gửi về ngay.</p>
+<p>Sau đó bạn đăng nhập bằng chính email này bất cứ lúc nào.</p>
 
 <hr class="divider" />
 
