@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import {
-  Users, Send, Zap, Search, Mail, CheckCircle, XCircle, Clock, RefreshCw,
+  Users, Send, Zap, Search, Mail, CheckCircle, XCircle, Clock, RefreshCw, Download,
 } from 'lucide-react'
 
 const tabs = ['Tổng quan', 'Subscribers', 'Automations', 'Email Logs']
@@ -226,6 +226,13 @@ export default function EmailPage() {
         <div className="card card-hover">
           <div className="flex items-center justify-between mb-3">
             <h3 className="section-title">Danh sách subscribers ({subTotal})</h3>
+            <a
+              href={`/api/admin/email/subscribers/export${subSearch ? `?search=${encodeURIComponent(subSearch)}` : ''}`}
+              className="btn-secondary text-xs py-1.5"
+            >
+              <Download size={13} />
+              Tải CSV
+            </a>
           </div>
           <div className="relative mb-3">
             <Search size={12} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" />
