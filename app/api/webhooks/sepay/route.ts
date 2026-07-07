@@ -189,16 +189,24 @@ export async function POST(req: NextRequest) {
       }
 
       // Chuỗi chăm sóc chéo "cross_sell_nurture" — chạy cho MỌI khách hàng,
-      // bất kể mua khóa nào. Đảm bảo subscriber tồn tại rồi khởi động chuỗi
-      // nếu chưa có (khách mua khóa thứ 2 trở đi không bị tạo trùng chuỗi).
+      // bất kể mua khóa nào. Mỗi đơn hàng mới = 1 lượt quan tâm mới, nên kể cả
+      // khách đã từng huỷ đăng ký, mua thêm khóa tiếp theo vẫn tự động bật lại.
       const { data: nurtureSubRow } = await supabaseAdmin
         .from('subscribers')
         .upsert({ email: email.toLowerCase(), name }, { onConflict: 'email' })
-        .select('id')
+        .select('id, tags')
         .single()
 
       const nurtureSubscriberId = nurtureSubRow?.id ?? order.subscriber_id
       if (nurtureSubscriberId) {
+        // Gỡ tag "unsubscribed" cũ — khách vừa mua nghĩa là chủ động quan tâm lại
+        if (nurtureSubRow?.tags?.includes('unsubscribed')) {
+          await supabaseAdmin
+            .from('subscribers')
+            .update({ tags: nurtureSubRow.tags.filter((t: string) => t !== 'unsubscribed') })
+            .eq('id', nurtureSubscriberId)
+        }
+
         // (subscriber_id, sequence_name) là unique — phải kiểm tra bản ghi đã có
         // (bất kể status) trước khi insert, nếu không sẽ vi phạm constraint.
         const { data: existingNurture } = await supabaseAdmin
@@ -218,14 +226,13 @@ export async function POST(req: NextRequest) {
             started_at:    enrolledAt,
             last_sent_at:  enrolledAt,
           })
-        } else if (existingNurture.status !== 'active' && existingNurture.status !== 'unsubscribed') {
-          // Đã có chuỗi nhưng bị paused/completed (không phải do khách chủ động huỷ) → bật lại
+        } else if (existingNurture.status !== 'active') {
+          // Đã có chuỗi nhưng đang paused/completed/unsubscribed → bật lại từ đầu
           await supabaseAdmin
             .from('email_sequences')
-            .update({ status: 'active', last_sent_at: new Date().toISOString() })
+            .update({ status: 'active', current_day: 0, last_sent_at: new Date().toISOString() })
             .eq('id', existingNurture.id)
         }
-        // Nếu status là 'unsubscribed' → tôn trọng lựa chọn huỷ của khách, không tự bật lại
       }
 
       // Tag subscriber "đã mua"
