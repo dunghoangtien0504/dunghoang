@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { Share2, DollarSign, Users, CheckCircle, Clock, Copy, RefreshCw, AlertTriangle } from 'lucide-react'
+import { Share2, DollarSign, Users, CheckCircle, Clock, Copy, RefreshCw, AlertTriangle, Link2 } from 'lucide-react'
 
 const TAX_THRESHOLD = 2_000_000
 const TAX_RATE      = 0.10
@@ -25,6 +25,7 @@ type Affiliate = {
   bank_account: string | null
   bank_name: string | null
   phone: string | null
+  dashboard_url: string
 }
 
 function fmtVND(n: number) {
@@ -58,6 +59,12 @@ export default function AffiliatePage() {
   function copyCode(code: string) {
     navigator.clipboard.writeText(code)
     setCopied(code)
+    setTimeout(() => setCopied(null), 1500)
+  }
+
+  function copyDashboardLink(id: string, url: string) {
+    navigator.clipboard.writeText(url)
+    setCopied(`dash-${id}`)
     setTimeout(() => setCopied(null), 1500)
   }
 
@@ -160,18 +167,19 @@ export default function AffiliatePage() {
               <th className="table-header text-right">Đã trả</th>
               <th className="table-header text-right">Chờ TT</th>
               <th className="table-header text-center">Trạng thái</th>
+              <th className="table-header text-center">Dashboard</th>
             </tr>
           </thead>
           <tbody>
             {loading ? (
               <tr>
-                <td colSpan={8} className="py-10 text-center text-text-muted text-xs">
+                <td colSpan={9} className="py-10 text-center text-text-muted text-xs">
                   <RefreshCw size={16} className="animate-spin mx-auto mb-2" />Đang tải...
                 </td>
               </tr>
             ) : filtered.length === 0 ? (
               <tr>
-                <td colSpan={8} className="py-10 text-center">
+                <td colSpan={9} className="py-10 text-center">
                   <p className="text-text-muted text-sm">Chưa có affiliate nào</p>
                   <p className="text-text-muted text-xs mt-1">Affiliate sẽ xuất hiện khi học viên đăng ký qua trang CTV</p>
                 </td>
@@ -235,6 +243,16 @@ export default function AffiliatePage() {
                       <span className={`badge text-[10px] ${a.status === 'active' ? 'badge-success' : 'badge-gray'}`}>
                         {a.status === 'active' ? 'Active' : 'Tạm dừng'}
                       </span>
+                    </td>
+                    <td className="table-cell text-center">
+                      <button
+                        onClick={() => copyDashboardLink(a.id, a.dashboard_url)}
+                        className="inline-flex items-center gap-1 text-[10px] text-brand-dark hover:text-brand-accent border border-border rounded-lg px-2 py-1 transition-colors"
+                        title="Copy link dashboard CTV (kèm token đăng nhập)"
+                      >
+                        <Link2 size={11} />
+                        {copied === `dash-${a.id}` ? 'Đã copy!' : 'Copy link'}
+                      </button>
                     </td>
                   </tr>
                 )
