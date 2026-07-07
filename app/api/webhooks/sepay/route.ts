@@ -199,12 +199,13 @@ export async function POST(req: NextRequest) {
 
       const nurtureSubscriberId = nurtureSubRow?.id ?? order.subscriber_id
       if (nurtureSubscriberId) {
+        // (subscriber_id, sequence_name) là unique — phải kiểm tra bản ghi đã có
+        // (bất kể status) trước khi insert, nếu không sẽ vi phạm constraint.
         const { data: existingNurture } = await supabaseAdmin
           .from('email_sequences')
-          .select('id')
+          .select('id, status')
           .eq('subscriber_id', nurtureSubscriberId)
           .eq('sequence_name', 'cross_sell_nurture')
-          .eq('status', 'active')
           .maybeSingle()
 
         if (!existingNurture) {
@@ -217,7 +218,14 @@ export async function POST(req: NextRequest) {
             started_at:    enrolledAt,
             last_sent_at:  enrolledAt,
           })
+        } else if (existingNurture.status !== 'active' && existingNurture.status !== 'unsubscribed') {
+          // Đã có chuỗi nhưng bị paused/completed (không phải do khách chủ động huỷ) → bật lại
+          await supabaseAdmin
+            .from('email_sequences')
+            .update({ status: 'active', last_sent_at: new Date().toISOString() })
+            .eq('id', existingNurture.id)
         }
+        // Nếu status là 'unsubscribed' → tôn trọng lựa chọn huỷ của khách, không tự bật lại
       }
 
       // Tag subscriber "đã mua"
