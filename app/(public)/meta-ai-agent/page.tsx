@@ -182,7 +182,7 @@ export default function MetaAIAgentPage() {
         <div className="relative bg-white border border-[#DDD8CB] border-l-4 border-l-[#E05C5C] rounded-r-3xl p-6 md:p-8 overflow-hidden shadow-sm">
           <div className="absolute right-4 top-4 text-gray-200/50 text-8xl font-serif pointer-events-none">“</div>
           <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-3">Sự mệt mỏi từ sâu thẳm tâm lý</p>
-          <p className="text-base md:text-lg text-gray-800 leading-relaxed italic font-serif pl-1">
+          <p className="text-base md:text-lg text-gray-800 leading-relaxed italic pl-1">
             "Nhiều lúc đang ăn cơm với gia đình hay đi ngủ mà điện thoại cứ rung bần bật. Không trả lời thì xót đơn, mà trả lời thì mất hết thời gian riêng tư. Cảm giác page của mình bỏ hoang và thiếu chuyên nghiệp trước mắt khách..."
           </p>
           <p className="text-xs text-gray-400 mt-4">
