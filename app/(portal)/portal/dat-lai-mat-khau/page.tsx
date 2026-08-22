@@ -20,9 +20,11 @@ export default function DatLaiMatKhauPage() {
       setHasSession(!!session)
     })
 
-    // Lắng nghe event khi Supabase tự exchange token từ URL hash
-    const { data: { subscription } } = supabase!.auth.onAuthStateChange((event) => {
-      if (event === 'PASSWORD_RECOVERY') setHasSession(true)
+    // Lắng nghe mọi event có kèm session, không chỉ PASSWORD_RECOVERY.
+    // Tuỳ luồng, Supabase có thể bắn INITIAL_SESSION hoặc SIGNED_IN —
+    // nếu chỉ bắt PASSWORD_RECOVERY thì trang treo ở "Đang xác minh link...".
+    const { data: { subscription } } = supabase!.auth.onAuthStateChange((_event, session) => {
+      if (session) setHasSession(true)
     })
     return () => subscription.unsubscribe()
   }, [])

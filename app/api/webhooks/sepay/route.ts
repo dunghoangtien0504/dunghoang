@@ -99,46 +99,82 @@ export async function POST(req: NextRequest) {
     }
 
     // ── Đủ tiền → kích hoạt ──────────────────────────────────────────
+    // THỨ TỰ QUAN TRỌNG: chỉ đánh dấu completed SAU KHI đã tạo xong tài khoản
+    // và enrollment. Nếu đánh dấu trước mà giữa chừng lỗi, Sepay retry sẽ thấy
+    // "đã xử lý rồi" và bỏ qua → khách trả tiền nhưng không vào được khu học.
+    if (!email) {
+      await sendTelegramAlert(
+        `⚠️ <b>ĐƠN KHÔNG CÓ EMAIL</b>\n- Mã đơn: <code>${orderCode}</code>\n` +
+        `- Số tiền: <b>${formatVND(received)}</b>`
+      )
+      return NextResponse.json({ error: `Đơn ${orderCode} không có email` }, { status: 500 })
+    }
+
+    // ── 1. Tạo hoặc lấy Supabase Auth user — BẮT BUỘC thành công ──────
+    let userId = await findUserIdByEmail(email)
+
+    if (!userId) {
+      const { data: newUser, error: createErr } = await supabaseAdmin.auth.admin.createUser({
+        email,
+        email_confirm: true,
+        user_metadata: { name },
+      })
+      userId = newUser?.user?.id
+
+      if (!userId) {
+        // Không tạo được tài khoản → KHÔNG đánh dấu completed, để Sepay retry
+        console.error('[sepay] createUser lỗi:', createErr)
+        await sendTelegramAlert(
+          `🚨 <b>KÍCH HOẠT THẤT BẠI — KHÔNG TẠO ĐƯỢC TÀI KHOẢN</b>\n` +
+          `- Mã đơn: <code>${orderCode}</code>\n- Email: ${email}\n` +
+          `- Số tiền: <b>${formatVND(received)}</b>\n- Lỗi: ${createErr?.message ?? 'không rõ'}\n` +
+          `👉 Cần kích hoạt tay cho khách.`
+        )
+        return NextResponse.json({ error: 'Không tạo được tài khoản' }, { status: 500 })
+      }
+    }
+
+    // ── 2. Ghi enrollment — BẮT BUỘC thành công ───────────────────────
+    if (order.course_id) {
+      const { error: enrErr } = await supabaseAdmin.from('enrollments').upsert({
+        user_id:     userId,
+        course_id:   order.course_id,
+        enrolled_at: new Date().toISOString(),
+      }, { onConflict: 'user_id,course_id' })
+
+      if (enrErr) {
+        console.error('[sepay] enrollment lỗi:', enrErr)
+        await sendTelegramAlert(
+          `🚨 <b>KÍCH HOẠT THẤT BẠI — KHÔNG GHI ĐƯỢC ENROLLMENT</b>\n` +
+          `- Mã đơn: <code>${orderCode}</code>\n- Email: ${email}\n` +
+          `- Khóa: ${order.course_id}\n- Lỗi: ${enrErr.message}\n` +
+          `👉 Cần kích hoạt tay cho khách.`
+        )
+        return NextResponse.json({ error: 'Không ghi được enrollment' }, { status: 500 })
+      }
+
+      // Hội Đồng Cố Vấn bao gồm trọn bộ Khóa 1 → mở khóa cả 24 agent
+      if (order.course_id === 'hoi-dong-co-van') {
+        await supabaseAdmin.from('enrollments').upsert({
+          user_id:     userId,
+          course_id:   'khoa-1',
+          enrolled_at: new Date().toISOString(),
+        }, { onConflict: 'user_id,course_id' })
+      }
+    }
+
+    // ── 3. Khách đã chắc chắn có quyền truy cập → đánh dấu completed ──
     await supabaseAdmin
       .from('orders')
       .update({ status: 'completed', paid_at: new Date().toISOString(), sepay_ref: referenceCode || sepayId })
       .eq('order_code', orderCode)
 
-    if (email) {
-      // Tạo hoặc lấy Supabase Auth user
-      const { data: existingUsers } = await supabaseAdmin.auth.admin.listUsers({ perPage: 1000 })
-      let userId = existingUsers?.users.find(u => u.email === email)?.id
-
-      if (!userId) {
-        const { data: newUser } = await supabaseAdmin.auth.admin.createUser({
-          email,
-          email_confirm: true,
-          user_metadata: { name },
-        })
-        userId = newUser?.user?.id
-      }
-
-      // Khóa học thường: ghi enrollment bình thường
-      if (userId && order.course_id) {
-        await supabaseAdmin.from('enrollments').upsert({
-          user_id:     userId,
-          course_id:   order.course_id,
-          enrolled_at: new Date().toISOString(),
-        }, { onConflict: 'user_id,course_id' })
-
-        // Hội Đồng Cố Vấn bao gồm trọn bộ Khóa 1 → mở khóa cả 24 agent
-        if (order.course_id === 'hoi-dong-co-van') {
-          await supabaseAdmin.from('enrollments').upsert({
-            user_id:     userId,
-            course_id:   'khoa-1',
-            enrolled_at: new Date().toISOString(),
-          }, { onConflict: 'user_id,course_id' })
-        }
-      }
-
+    // ── 4. Việc phụ: email, chuỗi chăm sóc, affiliate ─────────────────
+    // Từ đây trở xuống lỗi không được phép chặn việc kích hoạt. Mỗi phần
+    // bọc riêng để một phần hỏng không kéo theo phần còn lại.
+    {
       // Guest checkout: tạo link 1 chạm vào khu học. Khách mua không cần
       // tài khoản trước; link recovery cho họ đặt mật khẩu lần đầu rồi vào thẳng.
-      // Bọc try/catch để không bao giờ làm hỏng xác nhận thanh toán.
       const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://dunghoang.com'
       let accessUrl: string | undefined
       try {
@@ -152,6 +188,7 @@ export async function POST(req: NextRequest) {
         console.error('[sepay] generateLink lỗi:', e)
       }
 
+      await safe('gửi email chào mừng', async () => {
       if (order.course_id === 'meta-ai-agent') {
         const welcome = getMetaAIAgentWelcome(name, accessUrl)
         await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
@@ -187,10 +224,12 @@ export async function POST(req: NextRequest) {
         const welcome = getWelcomeEmail(name, order.course_id, order.course_name, accessUrl)
         await sendEmail({ to: email, subject: welcome.subject, html: welcome.html })
       }
+      })
 
       // Chuỗi chăm sóc chéo "cross_sell_nurture" — chạy cho MỌI khách hàng,
       // bất kể mua khóa nào. Mỗi đơn hàng mới = 1 lượt quan tâm mới, nên kể cả
       // khách đã từng huỷ đăng ký, mua thêm khóa tiếp theo vẫn tự động bật lại.
+      await safe('chuỗi chăm sóc chéo', async () => {
       const { data: nurtureSubRow } = await supabaseAdmin
         .from('subscribers')
         .upsert({ email: email.toLowerCase(), name }, { onConflict: 'email' })
@@ -234,16 +273,20 @@ export async function POST(req: NextRequest) {
             .eq('id', existingNurture.id)
         }
       }
+      })
 
       // Tag subscriber "đã mua"
-      if (order.subscriber_id) {
-        const tag = `da_mua_${order.course_id}`
-        await supabaseAdmin.rpc('append_tag', { subscriber_id: order.subscriber_id, tag })
-      }
+      await safe('gắn tag đã mua', async () => {
+        if (order.subscriber_id) {
+          const tag = `da_mua_${order.course_id}`
+          await supabaseAdmin.rpc('append_tag', { subscriber_id: order.subscriber_id, tag })
+        }
+      })
     }
 
     // Hoa hồng affiliate
-    if (order.affiliate_code) {
+    await safe('hoa hồng affiliate', async () => {
+      if (!order.affiliate_code) return
       const { data: affRow } = await supabaseAdmin
         .from('affiliates')
         .select('id, commission_pct')
@@ -261,10 +304,11 @@ export async function POST(req: NextRequest) {
           p_amount:       commissionAmt,
         })
       }
-    }
+    })
 
     // Upsert contact — tạo mới nếu chưa có, upgrade stage nếu là Hội viên
-    if (email && email !== 'unknown@sepay.vn') {
+    await safe('cập nhật contact', async () => {
+      if (email === 'unknown@sepay.vn') return
       const newStage = order.course_id === 'hoi-dong-co-van' ? 'Hội viên' : 'Khách hàng'
       await supabaseAdmin.from('contacts').upsert(
         {
@@ -284,7 +328,7 @@ export async function POST(req: NextRequest) {
           .eq('email', email)
           .in('stage', ['KH Tiềm năng', 'Người mua hàng'])
       }
-    }
+    })
 
     console.log(`[sepay] ${orderCode} (${order.course_name}) — kích hoạt cho ${email}`)
 
@@ -303,6 +347,40 @@ export async function POST(req: NextRequest) {
     console.error('[sepay-webhook]', err)
     return NextResponse.json({ error: 'Server error' }, { status: 500 })
   }
+}
+
+/**
+ * Chạy một việc phụ sau khi đơn đã kích hoạt xong. Lỗi chỉ ghi log,
+ * không bao giờ ném ra ngoài — khách đã có quyền truy cập rồi, một email
+ * hay một bản ghi CRM hỏng không được phép làm webhook trả về 500.
+ */
+async function safe(label: string, fn: () => Promise<void>) {
+  try {
+    await fn()
+  } catch (err) {
+    console.error(`[sepay] ${label} lỗi:`, err)
+  }
+}
+
+/**
+ * Tìm user theo email. Duyệt hết các trang thay vì chỉ lấy 1000 user đầu —
+ * nếu bỏ sót user đã tồn tại, createUser sẽ fail và khách mất quyền truy cập.
+ */
+async function findUserIdByEmail(email: string): Promise<string | undefined> {
+  const target = email.toLowerCase()
+  const PER_PAGE = 1000
+  for (let page = 1; page <= 50; page++) {
+    const { data, error } = await supabaseAdmin.auth.admin.listUsers({ page, perPage: PER_PAGE })
+    if (error) {
+      console.error('[sepay] listUsers lỗi:', error)
+      return undefined
+    }
+    const users = data?.users ?? []
+    const found = users.find(u => u.email?.toLowerCase() === target)
+    if (found) return found.id
+    if (users.length < PER_PAGE) return undefined   // đã hết trang
+  }
+  return undefined
 }
 
 async function sendTelegramAlert(message: string) {

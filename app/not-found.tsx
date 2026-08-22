@@ -1,7 +1,12 @@
+'use client'
+
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Home, ArrowLeft, Search } from 'lucide-react'
 
 export default function NotFound() {
+  const router = useRouter()
+
   return (
     <div className="min-h-dvh bg-background flex items-center justify-center p-6">
       <div className="text-center max-w-md space-y-6">
@@ -18,30 +23,30 @@ export default function NotFound() {
         </div>
 
         <div className="space-y-2">
-          <h1 className="text-text-primary font-bold text-2xl">Trang khong tim thay</h1>
+          <h1 className="text-text-primary font-bold text-2xl">Không tìm thấy trang này</h1>
           <p className="text-text-secondary text-sm leading-relaxed">
-            Trang ban dang tim khong ton tai hoac da duoc chuyen den dia chi khac.
+            Trang bạn tìm không còn ở đây nữa, hoặc đường dẫn bị gõ sai một chút.
           </p>
         </div>
 
         <div className="flex items-center justify-center gap-3">
-          <Link href="/admin" className="btn-primary text-sm py-2.5 px-5">
-            <Home size={14} /> Ve Dashboard
+          <Link href="/" className="btn-primary text-sm py-2.5 px-5">
+            <Home size={14} /> Về trang chủ
           </Link>
-          <Link href="javascript:history.back()" className="btn-secondary text-sm py-2.5 px-5">
-            <ArrowLeft size={14} /> Quay lai
-          </Link>
+          <button onClick={() => router.back()} className="btn-secondary text-sm py-2.5 px-5">
+            <ArrowLeft size={14} /> Quay lại
+          </button>
         </div>
 
         {/* Quick links */}
         <div className="pt-4 border-t border-border">
-          <p className="text-text-muted text-xs mb-3">Cac trang pho bien</p>
+          <p className="text-text-muted text-xs mb-3">Có thể bạn đang tìm</p>
           <div className="flex flex-wrap justify-center gap-2">
             {[
-              { label: 'Khoa hoc', href: '/admin/courses' },
-              { label: 'Don hang', href: '/admin/orders' },
-              { label: 'Khach hang', href: '/admin/crm/contacts' },
-              { label: 'Email', href: '/admin/email' },
+              { label: 'Khoá học',        href: '/#khoa-hoc' },
+              { label: 'Meta AI Agent',   href: '/meta-ai-agent' },
+              { label: 'Khu học viên',    href: '/portal' },
+              { label: 'Cộng tác viên',   href: '/portal/cong-tac-vien' },
             ].map(l => (
               <Link key={l.href} href={l.href}
                 className="badge badge-gray hover:bg-brand-dark/10 hover:text-brand-dark hover:border-brand-border/30 transition-all text-xs px-3 py-1">
