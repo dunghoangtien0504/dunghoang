@@ -17,6 +17,18 @@ const nextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return [
+      {
+        source: '/Airbnb',
+        destination: 'https://airbnb-coaching.vercel.app',
+      },
+      {
+        source: '/Airbnb/:path*',
+        destination: 'https://airbnb-coaching.vercel.app/:path*',
+      },
+    ]
+  },
 }
 
 export default nextConfig
