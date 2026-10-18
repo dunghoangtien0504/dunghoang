@@ -650,25 +650,25 @@ export default function Khoa1Page() {
       <section className="px-4 py-20 bg-[#FAF7F0]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-1">
-            <span className="inline-block text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 border border-[#3D6B4A]/15 px-3 py-1 rounded-full">Người học chia sẻ</span>
-            <h2 className="text-2xl font-black text-[#0D2B1A]">Không phải nghe mình kể. Nghe từ họ.</h2>
+            <span className="inline-block text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 border border-[#3D6B4A]/15 px-3 py-1 rounded-full">Nói thật với bạn</span>
+            <h2 className="text-2xl font-black text-[#0D2B1A]">Khóa còn mới. Mình chưa có lời chứng thực, và mình không bịa.</h2>
           </div>
 
           <div className="space-y-3">
             <div className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-2">
-              <p className="text-xs text-[#88860B] font-bold uppercase tracking-wider">Kết quả nhanh</p>
-              <p className="text-sm text-gray-700 leading-relaxed italic">"Skill BRAND_DNA xong trong 1 buổi. Tuần sau mình giao AI viết content, đọc lại thấy đúng giọng mình hơn cả khi tự viết. Lần đầu tiên không sợ hết ý tưởng."</p>
-              <p className="text-xs font-bold text-[#0D2B1A]">Chủ shop thời trang online · Skill #02 BRAND_DNA</p>
+              <p className="text-xs text-[#88860B] font-bold uppercase tracking-wider">Đang chạy thật</p>
+              <p className="text-sm text-gray-700 leading-relaxed italic">24 AI agent này mình dùng mỗi ngày để vận hành homestay, khóa học và tư vấn, một mình. Bạn học đúng thứ đang chạy, không phải bản làm ra để dạy.</p>
+              <p className="text-xs font-bold text-[#0D2B1A]">Dũng Hoàng</p>
             </div>
             <div className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-2">
-              <p className="text-xs text-[#3D6B4A] font-bold uppercase tracking-wider">Thay đổi hẳn cách làm</p>
-              <p className="text-sm text-gray-700 leading-relaxed italic">"Trước đây trả lời inbox mất 3-4 tiếng mỗi ngày. Sau khi học skill chatbot và cài chatbot Zalo, 70% câu hỏi bot xử lý hết. Mình chỉ xử lý những case phức tạp, tiết kiệm được 2 tiếng rưỡi mỗi ngày."</p>
-              <p className="text-xs font-bold text-[#0D2B1A]">Coach sức khỏe freelance · Skill #22 Chatbot</p>
+              <p className="text-xs text-[#3D6B4A] font-bold uppercase tracking-wider">Không hợp thì hoàn tiền</p>
+              <p className="text-sm text-gray-700 leading-relaxed italic">Làm theo mà thấy không hợp với business của bạn, nhắn mình trong 14 ngày đầu. Mình hoàn 100%, không hỏi vặn.</p>
+              <p className="text-xs font-bold text-[#0D2B1A]">Bảo hành 14 ngày</p>
             </div>
             <div className="bg-white border border-[#DDD8CB] rounded-2xl p-5 space-y-2">
-              <p className="text-xs text-[#C0390E] font-bold uppercase tracking-wider">Vượt qua nghi ngờ ban đầu</p>
-              <p className="text-sm text-gray-700 leading-relaxed italic">"Mình từng nghĩ AI viết content sẽ ra toàn mẫu chung chung, không ai đọc. Nhưng sau khi làm BRAND_DNA đúng cách, AI viết ra bài 400 chữ trong 5 phút. Mình đăng lên và học viên nhắn 'bài hôm nay hay quá, cảm giác như đang ngồi nghe bạn kể chuyện'."</p>
-              <p className="text-xs font-bold text-[#0D2B1A]">Solopreneur bán khóa học kỹ năng mềm · Skill #18 Content</p>
+              <p className="text-xs text-[#C0390E] font-bold uppercase tracking-wider">Lời chứng thực thật sẽ lên ở đây</p>
+              <p className="text-sm text-gray-700 leading-relaxed italic">Khi những học viên đầu tiên đồng ý chia sẻ kết quả, mình sẽ đăng kèm tên thật. Không ẩn danh, không phóng đại.</p>
+              <p className="text-xs font-bold text-[#0D2B1A]">Cam kết của mình</p>
             </div>
           </div>
 
