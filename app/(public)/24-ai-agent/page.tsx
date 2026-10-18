@@ -15,7 +15,7 @@ const product = PRODUCTS['khoa-1']
 const FAQS = [
   {
     q: 'Tôi không phải dân công nghệ, học được không?',
-    a: 'Mình hiểu lo lắng đó, vì bản thân mình cũng không phải dân tech. Và đây chính xác là người mình viết SOP này cho. Mỗi skill là quy trình từng bước cụ thể, bạn chỉ cần máy tính và ChatGPT miễn phí. 605 học viên, phần lớn chủ shop và coach không rành công nghệ, đã làm được. Bạn cũng sẽ làm được.',
+    a: 'Mình hiểu lo lắng đó, vì bản thân mình cũng không phải dân tech. Và đây chính xác là người mình viết SOP này cho. Mỗi skill là quy trình từng bước cụ thể, bạn chỉ cần máy tính và ChatGPT miễn phí. Mình cũng từng không rành, và làm được nhờ chia nhỏ từng bước. Bạn cũng sẽ làm được.',
   },
   {
     q: 'Tôi sợ mua rồi để đó, không làm được gì.',
@@ -90,7 +90,7 @@ export default function Khoa1Page() {
       {/* [0] ANNOUNCEMENT BAR */}
       <div className="bg-[#0D2B1A] text-[#F6F0E4] text-center py-2.5 px-4 text-xs sm:text-sm font-semibold tracking-wide relative z-20">
         <Gift size={14} className="inline -mt-0.5 mr-1.5 text-[#8BC34A]" />
-        Bonus file BRAND_DNA + Content 30 ngày kèm theo · 605+ học viên đã tiết kiệm 4-5h/ngày
+        Bonus file BRAND_DNA + Content 30 ngày kèm theo · Bảo hành 14 ngày hoàn 100%
       </div>
 
       {/* [1] HERO — light, 2 cột trên desktop */}
@@ -115,7 +115,7 @@ export default function Khoa1Page() {
             </p>
 
             <p className="text-sm text-gray-500 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              605 solopreneur đã tiết kiệm 4-5 tiếng mỗi ngày bằng bộ SOP này.
+              Bộ SOP này giúp mình tiết kiệm 4-5 tiếng mỗi ngày.
               Bạn copy quy trình, AI làm phần nặng, bạn chỉ duyệt và đăng.
             </p>
 
@@ -142,7 +142,7 @@ export default function Khoa1Page() {
             <div className="bg-white border border-[#DDD8CB] rounded-3xl shadow-xl shadow-[#0D2B1A]/5 overflow-hidden">
               <div className="bg-[#0D2B1A] px-6 py-4 flex items-center justify-between">
                 <p className="text-[#F6F0E4] font-bold text-sm">24 AI Agent for Business</p>
-                <span className="text-[10px] font-bold text-[#8BC34A] bg-[#8BC34A]/10 border border-[#8BC34A]/25 px-2 py-0.5 rounded-full">605+ HỌC VIÊN</span>
+                <span className="text-[10px] font-bold text-[#8BC34A] bg-[#8BC34A]/10 border border-[#8BC34A]/25 px-2 py-0.5 rounded-full">DÙNG THẬT 2 NĂM</span>
               </div>
               <div className="p-6 space-y-4">
                 {[
@@ -181,7 +181,7 @@ export default function Khoa1Page() {
       <section className="bg-white border-b border-[#DDD8CB]/80 py-6 px-4">
         <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           {[
-            { icon: Users,       n:'605+', label:'solopreneur đã học' },
+            { icon: Users,       n:'1 người', label:'vận hành cả business' },
             { icon: Bot,         n:'24',   label:'AI agent thực chiến' },
             { icon: Clock,       n:'4-5h', label:'tiết kiệm mỗi ngày' },
             { icon: ShieldCheck, n:'14 ngày', label:'bảo hành hoàn 100%' },
@@ -275,7 +275,7 @@ export default function Khoa1Page() {
           </p>
 
           <p className="text-[#0D2B1A] text-sm sm:text-base leading-relaxed font-semibold">
-            Sau 2 năm: tiết kiệm 4-5 tiếng mỗi ngày. 605 học viên đã áp dụng và làm được điều tương tự. Business chạy được cả khi mình đang trên máy bay đi Đà Lạt.
+            Sau 2 năm: tiết kiệm 4-5 tiếng mỗi ngày. Business chạy được cả khi mình đang trên máy bay đi Đà Lạt.
           </p>
 
           <p className="text-gray-500 text-sm italic leading-relaxed">
@@ -488,7 +488,7 @@ export default function Khoa1Page() {
           <div className="space-y-3">
             {[
               { icon: Home,         text:'Mình vận hành homestay + khóa học + tư vấn AI một mình. 24 AI agent này đang chạy thật trong business mình mỗi ngày.' },
-              { icon: Users,        text:'605 học viên từ chủ shop, coach, freelancer đến solopreneur nhiều ngành đã học và áp dụng được.' },
+              { icon: Users,        text:'Viết cho chủ shop, coach, freelancer, solopreneur không rành công nghệ. Từng bước đều làm theo được.' },
               { icon: FlaskConical, text:'SOP được test 2 năm thực chiến. Không phải viết từ sách, không copy từ guru nước ngoài.' },
               { icon: RefreshCw,    text:'Khóa 1 là nền tảng. Mua xong muốn kèm sát, 868.686đ trừ thẳng vào Khóa 2 (3.868.686đ).' },
             ].map((a, i) => {
@@ -650,7 +650,7 @@ export default function Khoa1Page() {
       <section className="px-4 py-20 bg-[#FAF7F0]">
         <div className="max-w-2xl mx-auto space-y-6">
           <div className="text-center space-y-1">
-            <span className="inline-block text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 border border-[#3D6B4A]/15 px-3 py-1 rounded-full">605+ người đã làm được</span>
+            <span className="inline-block text-xs font-bold text-[#3D6B4A] uppercase tracking-widest bg-[#3D6B4A]/5 border border-[#3D6B4A]/15 px-3 py-1 rounded-full">Người học chia sẻ</span>
             <h2 className="text-2xl font-black text-[#0D2B1A]">Không phải nghe mình kể. Nghe từ họ.</h2>
           </div>
 

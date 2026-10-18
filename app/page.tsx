@@ -124,7 +124,7 @@ export default function HomePage() {
               <div className="flex-1 space-y-2">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold bg-[#C0390E] text-white px-2.5 py-1 rounded-full">{p.badge}</span>
-                  <span className="text-[#88860B] text-xs font-semibold">— 605+ học viên đã học</span>
+                  <span className="text-[#88860B] text-xs font-semibold">— SOP mình đang dùng thật mỗi ngày</span>
                 </div>
                 <p className="font-black text-[#F6F0E4] text-xl leading-snug">{p.name}</p>
                 <p className="text-sm text-[#C8D5C9] leading-relaxed max-w-md">{p.desc}</p>

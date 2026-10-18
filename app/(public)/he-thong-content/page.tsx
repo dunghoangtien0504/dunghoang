@@ -352,7 +352,7 @@ export default function HeThongContentPage() {
           <div className="space-y-3">
             {[
               { icon: BadgeCheck, text:'Đây là workspace mình đang dùng thật hằng ngày, không phải làm ra để dạy' },
-              { icon: Dna,        text:'Brand DNA đã được kiểm chứng qua 605+ học viên. AI viết đúng giọng người thật, không phải giọng AI generic' },
+              { icon: Dna,        text:'Brand DNA rút ra từ chính cách mình viết mỗi ngày. AI viết đúng giọng người thật, không phải giọng AI generic' },
               { icon: BarChart3,  text:'Quy trình rút từ hàng trăm bài phân tích. Ma trận content, hook library, viral score đều dựa trên data thật' },
               { icon: Package,    text:'Bàn giao cả workspace đang chạy. Bạn duplicate về và bắt đầu trong 5 phút, không cần setup từ đầu' },
             ].map((a, i) => {

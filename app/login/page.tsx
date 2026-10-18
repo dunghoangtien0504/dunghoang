@@ -12,8 +12,8 @@ const FEATURES = [
 ]
 
 const STATS = [
-  { value: '605+', label: 'Học viên' },
-  { value: '809M', label: 'Doanh thu' },
+  { value: '24',   label: 'AI agent' },
+  { value: '2 năm', label: 'Dùng thật' },
   { value: '5',    label: 'Khoá học' },
 ]
 
